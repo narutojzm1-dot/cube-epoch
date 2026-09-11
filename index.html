@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>方块纪元 · Cube Epoch</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%231a1520'/%3E%3Crect x='3' y='3' width='10' height='10' fill='%23e8c040'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23f5e08a'/%3E%3Crect x='3' y='10' width='10' height='3' fill='%23b8860b'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <section id="screen-title" class="screen">
+      <div class="title-wrap">
+        <p class="eyebrow">像素沙盒小游戏</p>
+        <h1>方块纪元</h1>
+        <p class="tagline">白天采集、围栅栏、点火把。夜里守住篝火。撑过两夜，天亮把方块之心送到祭坛。</p>
+        <ol class="how-to">
+          <li><b>1</b> 砍树挖矿，点 1/2/3 选栅栏、火把或田</li>
+          <li><b>2</b> 对着空地左键放下，把营地围起来</li>
+          <li><b>3</b> 夜里守篝火，别让火灭</li>
+          <li><b>4</b> 合成方块之心，天亮后送到北边祭坛</li>
+        </ol>
+      </div>
+
+      <div class="class-grid" id="class-grid">
+        <button class="class-card" data-class="miner" type="button">
+          <img src="assets/miner.jpg" alt="矿工阿石" />
+          <div class="class-meta">
+            <h2>矿工 · 阿石</h2>
+            <p>挖得快，栅栏更便宜。适合先围墙再出远门挖金。</p>
+            <ul>
+              <li>开采加速</li>
+              <li>栅栏省木</li>
+              <li>技能：矿脉感应</li>
+            </ul>
+          </div>
+        </button>
+        <button class="class-card" data-class="farmer" type="button">
+          <img src="assets/farmer.jpg" alt="农夫麦麦" />
+          <div class="class-meta">
+            <h2>农夫 · 麦麦</h2>
+            <p>开田不耗木头，麦熟得快。夜里靠粮食回血。</p>
+            <ul>
+              <li>免费开田</li>
+              <li>收麦回血</li>
+              <li>技能：丰收术</li>
+            </ul>
+          </div>
+        </button>
+        <button class="class-card" data-class="mage" type="button">
+          <img src="assets/mage.jpg" alt="法师星萤" />
+          <div class="class-meta">
+            <h2>法师 · 星萤</h2>
+            <p>远程清波。火把更便宜，夜里站在光里打。</p>
+            <ul>
+              <li>远程法术</li>
+              <li>火把省料</li>
+              <li>技能：星爆</li>
+            </ul>
+          </div>
+        </button>
+        <button class="class-card" data-class="knight" type="button">
+          <img src="assets/knight.jpg" alt="骑士方盾" />
+          <div class="class-meta">
+            <h2>骑士 · 方盾</h2>
+            <p>血厚能抗，开局自带两段栅栏。适合卡在营门口。</p>
+            <ul>
+              <li>高生命值</li>
+              <li>开局栅栏</li>
+              <li>技能：冲锋</li>
+            </ul>
+          </div>
+        </button>
+      </div>
+
+      <div class="title-actions">
+        <button id="btn-start" class="btn-primary" type="button" disabled>先选一个角色</button>
+        <p class="hint">进场后会带你走完第一局。随时按 Esc 查看操作说明。</p>
+      </div>
+    </section>
+
+    <section id="screen-game" class="screen hidden">
+      <header class="hud">
+        <div class="hud-left">
+          <div class="hp-wrap">
+            <span id="hp-label">生命</span>
+            <div class="bar"><i id="hp-bar"></i></div>
+            <b id="hp-text">100</b>
+          </div>
+          <div class="hp-wrap mana hidden" id="mana-wrap">
+            <span>法力</span>
+            <div class="bar mana"><i id="mana-bar"></i></div>
+            <b id="mana-text">8</b>
+          </div>
+          <div class="hp-wrap" id="camp-wrap">
+            <span>篝火</span>
+            <div class="bar camp"><i id="camp-bar"></i></div>
+            <b id="camp-text">100</b>
+          </div>
+        </div>
+        <div class="hud-center">
+          <div id="clock" class="clock">白天 0:48</div>
+          <div id="objective" class="objective">采集木头、石头、金矿和小麦</div>
+        </div>
+        <div class="hud-right">
+          <button id="btn-help" type="button">怎么玩</button>
+          <button id="btn-pause" type="button">暂停</button>
+        </div>
+      </header>
+
+      <div class="stage">
+        <canvas id="game" width="640" height="384"></canvas>
+        <aside id="guide" class="guide">
+          <div class="guide-head">
+            <strong id="guide-title">第一步：走起来</strong>
+            <button type="button" id="btn-skip-guide">跳过</button>
+          </div>
+          <p id="guide-body">用 WASD 或方向键移动，走到附近的树旁边。</p>
+          <ol id="guide-steps" class="guide-steps">
+            <li data-step="move">走动</li>
+            <li data-step="chop">砍树</li>
+            <li data-step="build">围营</li>
+            <li data-step="night">守夜</li>
+            <li data-step="offer">献祭</li>
+          </ol>
+        </aside>
+        <div id="prompt" class="prompt hidden"></div>
+        <div id="toast" class="toast hidden"></div>
+        <p id="keys-hint" class="keys-hint">WASD 移动 · 点树砍树 · 1/2/3 后点空地建造 · 自己能穿过栅栏 · E 交互 · Q 技能</p>
+      </div>
+
+      <footer class="dock">
+        <div class="inv" id="inv">
+          <span class="item" data-k="wood">木 <b>0</b></span>
+          <span class="item" data-k="stone">石 <b>0</b></span>
+          <span class="item" data-k="gold">金 <b>0</b></span>
+          <span class="item eat" data-k="wheat" title="点击吃掉，回复生命">麦 <b>0</b></span>
+          <span class="item" data-k="seed">种 <b>0</b></span>
+          <span class="item build" data-k="fence" data-build="fence" title="1 键：2木放一段栅栏（矿工1木）">栏 <b>0</b></span>
+          <span class="item build" data-k="torch" data-build="torch" title="2 键：1木1石放火把（法师免石）">火 <b>0</b></span>
+          <span class="item build" data-k="plot" data-build="plot" title="3 键：1木开一块田（农夫免费）">田 <b>0</b></span>
+          <span class="item heart" data-k="heart">心 <b>0</b></span>
+        </div>
+        <div class="skill-dock">
+          <kbd>Q</kbd>
+          <span id="skill-name">技能</span>
+          <span id="skill-cd">就绪</span>
+        </div>
+        <div class="need">
+          心：木5石5金3麦3　栏2木　火1木1石　田1木
+        </div>
+      </footer>
+    </section>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="panel" id="overlay-panel">
+        <h2 id="overlay-title">暂停</h2>
+        <p id="overlay-body"></p>
+        <div class="overlay-actions" id="overlay-actions"></div>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
