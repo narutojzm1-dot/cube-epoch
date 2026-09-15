@@ -1,19 +1,16 @@
 ---
 name: ship-gate
 description: >-
-  Mandatory test-then-review gate before claiming Cube Epoch (or similar
-  personal web-game) work is done. Use when finishing a feature, about to
-  commit/push cube-epoch, after playtesting, or when the user mentions 审查,
-  测试环节, ship, or quality gate. Slash command: /ship-gate.
+  Mandatory test, review, GitHub PR, and CI gate before Cube Epoch ships.
+  Use when finishing a feature, about to commit/push cube-epoch, after
+  playtesting, or when the user mentions 审查, 测试, PR, CI, CD, or /ship-gate.
 ---
 
 # Ship gate
 
-Do not say a change is done, and do not `git push`, until both steps below have passing evidence in this turn.
+Do not push `origin main`. Do not say the change is live until the PR is merged and Pages has deployed.
 
-## 1. Test
-
-From the cube-epoch repo:
+## 1. Local test
 
 ```bash
 node --check game.js
@@ -21,19 +18,33 @@ node tests/static.mjs
 node tests/e2e.mjs
 ```
 
-If Playwright WebKit is missing, set `PLAYWRIGHT_WEBKIT_EXECUTABLE` or install the matching browser. Static checks are not enough by themselves when UI/camera/audio/combat changed — run e2e too.
-
-Add or extend a test when you introduce a new player-visible rule (camera, audio, intro, briefing, build, combat).
+Add or extend a test when you add a player-visible rule.
 
 ## 2. Review
 
-Spawn an independent reviewer subagent (description prefix `[reviewer]`) on the files you changed. It must not be the same pass that wrote the code.
+Spawn an independent reviewer subagent (`description` prefix `[reviewer]`) on the changed files. Same-pass self-review does not count.
 
-- Severity `bug` must be fixed, then re-test, before push.
-- `suggestion` / `nit`: fix if cheap, otherwise record why you skipped.
+- `bug`: fix, re-test, then continue
+- `suggestion` / `nit`: fix if cheap, otherwise say why you skipped
 
-## 3. Only then
+## 3. Pull request
 
-Commit, push, wait for Pages **and** the Test workflow. Report test output and review outcome to the user.
+```bash
+git checkout -b <topic>
+git push -u origin HEAD
+gh pr create --base main --fill
+```
 
-Skip this gate only if the user explicitly says not to test or not to review.
+Wait for the `Test` checks (`static` and `e2e`) to go green. Then:
+
+```bash
+gh pr merge --squash --delete-branch
+```
+
+Do not `git push origin main`.
+
+## 4. CD
+
+After merge, wait for **Test** and **Deploy Pages** on `main`. Confirm `https://narutojzm1-dot.github.io/cube-epoch/` serves the new commit.
+
+Skip this gate only if the user explicitly says not to use PR/CI.
