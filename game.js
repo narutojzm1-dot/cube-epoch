@@ -818,6 +818,8 @@
         const dx = m.x - p.x;
         const dy = m.y - p.y;
         const len = Math.hypot(dx, dy) || 1;
+        if (isResource(tx, ty)) return { tx, ty, dx: dx / len, dy: dy / len };
+        if (state.build) return { tx, ty, dx: dx / len, dy: dy / len };
         if (isMineable(tx, ty)) return { tx, ty, dx: dx / len, dy: dy / len };
         const toward = facingTile();
         if (isMineable(toward.tx, toward.ty)) return toward;
