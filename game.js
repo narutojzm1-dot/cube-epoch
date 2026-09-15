@@ -9,6 +9,7 @@
   const NEED = { wood: 5, stone: 5, gold: 3, wheat: 3 };
   const WIN_NIGHTS = 2;
   const CAMP_MAX = 100;
+  const FENCE_MAX = 40;
 
   const T = {
     GRASS: 1,
@@ -104,6 +105,8 @@
   const guideTitle = document.getElementById("guide-title");
   const guideBody = document.getElementById("guide-body");
   const promptEl = document.getElementById("prompt");
+  const buildBanner = document.getElementById("build-banner");
+  const waveBanner = document.getElementById("wave-banner");
 
   const GUIDE = [
     { id: "move", title: "第一步：走起来", body: "用 WASD 移动。先走到附近的树旁边。" },
@@ -268,6 +271,8 @@
       dashVx: 0,
       dashVy: 0,
       sense: 0,
+      slashDx: 1,
+      slashDy: 0,
     };
   }
 
@@ -312,6 +317,13 @@
       over: false,
       win: false,
       spawnAcc: 0,
+      toSpawn: 0,
+      wave: 0,
+      wavesTotal: 0,
+      waveWait: 0,
+      slash: 0,
+      slashDx: 1,
+      slashDy: 0,
       kills: 0,
       nightWarned: false,
       labelsUntil: 16,
@@ -485,8 +497,14 @@
     if (!state || state.over) return;
     state.build = state.build === kind ? null : kind;
     const names = { fence: "栅栏", torch: "火把", plot: "田" };
-    if (state.build) toast(`已选${names[kind]}。点空地放下；点树仍是砍，不会变成放栅栏。`);
+    if (state.build) toast(`建造${names[kind]}。点空地放下，点坏掉的栅栏可修好。点树仍是砍。`);
     syncHud();
+  }
+
+  function costText(kind) {
+    const cost = buildCost(kind);
+    const bits = Object.entries(cost).filter(([, n]) => n > 0).map(([k, n]) => `${n}${labelOf(k)}`);
+    return bits.length ? bits.join("") : "免费";
   }
 
   function placeable(tx, ty) {
@@ -507,6 +525,24 @@
   function tryPlace(tx, ty) {
     const kind = state.build;
     if (!kind) return false;
+    if (kind === "fence" && tileAt(tx, ty) === T.FENCE) {
+      const key = `${tx},${ty}`;
+      const hp = state.fenceHp.get(key) || FENCE_MAX;
+      if (hp >= FENCE_MAX - 0.5) {
+        toast("这段栅栏还很结实。");
+        return true;
+      }
+      if ((state.inv.wood || 0) < 1) {
+        toast("修墙需要 1 木。");
+        return true;
+      }
+      state.inv.wood -= 1;
+      state.fenceHp.set(key, FENCE_MAX);
+      burst(tx * TILE + 8, ty * TILE + 8, "#c4a06a", 6);
+      toast("栅栏修好了。");
+      beep(360, 0.05, "triangle", 0.04);
+      return true;
+    }
     if (!placeable(tx, ty)) {
       toast("这里放不下。对着草地、泥土或土路。");
       return true;
@@ -524,7 +560,7 @@
     }
     if (kind === "fence") {
       setTile(tx, ty, T.FENCE);
-      state.fenceHp.set(`${tx},${ty}`, 36);
+      state.fenceHp.set(`${tx},${ty}`, FENCE_MAX);
     } else if (kind === "torch") {
       setTile(tx, ty, T.TORCH);
     } else {
@@ -802,21 +838,28 @@
   function meleeAttack() {
     const p = state.player;
     const f = facingTile();
-    const reach = p.cls === "knight" ? 26 : 22;
+    const reach = p.cls === "knight" ? 34 : p.cls === "miner" ? 26 : 22;
     const dmg = CLASSES[p.cls].melee;
-    p.attack = 0.18;
-    beep(240, 0.05, "square", 0.03);
+    p.attack = 0.2;
+    p.slashDx = f.dx;
+    p.slashDy = f.dy;
+    beep(240, 0.05, "square", 0.035);
+    let hits = 0;
     for (const e of state.enemies) {
       const dx = e.x - p.x;
       const dy = e.y - p.y;
-      if (Math.hypot(dx, dy) < reach + 6 && dx * f.dx + dy * f.dy > 0) {
+      const d = Math.hypot(dx, dy);
+      if (d < reach + 8 && dx * f.dx + dy * f.dy > -4) {
         e.hp -= dmg;
-        e.vx += f.dx * 50;
-        e.vy += f.dy * 50;
-        burst(e.x, e.y, "#fff", 5);
+        e.flash = 0.14;
+        e.vx += f.dx * 110;
+        e.vy += f.dy * 110;
+        burst(e.x, e.y, "#fff4b0", 8);
         floatText(e.x, e.y - 12, String(dmg), "#fff");
+        hits += 1;
       }
     }
+    if (hits > 1) floatText(p.x, p.y - 22, `连击x${hits}`, "#ffe27a");
     const t = tileAt(f.tx, f.ty);
     if (t === T.TREE || t === T.STONE || t === T.GOLD || t === T.CROP || t === T.FENCE || t === T.TORCH) {
       startMine(f.tx, f.ty);
@@ -840,7 +883,7 @@
     p.mana -= 1;
     const f = facingTile();
     state.bolts.push({
-      x: p.x, y: p.y - 6, vx: f.dx * 130, vy: f.dy * 130, life: 0.9, dmg: CLASSES.mage.ranged, nova: false,
+      x: p.x, y: p.y - 6, vx: f.dx * 150, vy: f.dy * 150, life: 0.95, dmg: CLASSES.mage.ranged, nova: false, pierce: 2,
     });
     beep(720, 0.06, "sine", 0.04);
   }
@@ -867,7 +910,7 @@
       for (let i = 0; i < 8; i++) {
         const a = (Math.PI * 2 * i) / 8;
         state.bolts.push({
-          x: p.x, y: p.y - 6, vx: Math.cos(a) * 110, vy: Math.sin(a) * 110, life: 0.55, dmg: 16, nova: true,
+          x: p.x, y: p.y - 6, vx: Math.cos(a) * 120, vy: Math.sin(a) * 120, life: 0.6, dmg: 18, nova: true, pierce: 1,
         });
       }
       beep(900, 0.12, "sine", 0.05);
@@ -899,17 +942,17 @@
       let kind = "slime";
       if (nights >= 2 && Math.random() < 0.5) kind = "bat";
       if (nights >= 3 && Math.random() < 0.22) kind = "cube";
-      const hp = kind === "slime" ? 28 : kind === "bat" ? 20 : 58;
-      const spd = kind === "slime" ? 24 : kind === "bat" ? 42 : 28;
-      const dmg = kind === "slime" ? 9 : kind === "bat" ? 8 : 15;
-      state.enemies.push({ kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd, dmg, hit: 0, bob: Math.random() });
+      const hp = kind === "slime" ? 32 : kind === "bat" ? 22 : 64;
+      const spd = kind === "slime" ? 26 : kind === "bat" ? 44 : 30;
+      const dmg = kind === "slime" ? 9 : kind === "bat" ? 8 : 16;
+      state.enemies.push({ kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd, dmg, hit: 0, flash: 0, bob: Math.random() });
       return;
     }
   }
 
   function hitFence(tx, ty, dmg) {
     const key = `${tx},${ty}`;
-    const hp = (state.fenceHp.get(key) || 36) - dmg;
+    const hp = (state.fenceHp.get(key) || FENCE_MAX) - dmg;
     if (hp <= 0) {
       setTile(tx, ty, T.GRASS);
       state.fenceHp.delete(key);
@@ -925,15 +968,36 @@
     return e.kind === "bat" ? flySolid(tx, ty) : groundSolid(tx, ty);
   }
 
+  function startNightWaves() {
+    state.wave = 0;
+    state.wavesTotal = state.nights === 1 ? 2 : 3;
+    state.toSpawn = 0;
+    state.waveWait = 2.2;
+  }
+
+  function beginWave() {
+    state.wave += 1;
+    state.toSpawn = 3 + state.nights + state.wave;
+    state.spawnAcc = 0;
+    state.waveWait = 0;
+    toast(`第 ${state.nights} 夜 · 第 ${state.wave}/${state.wavesTotal} 波来了！`, 2.4);
+    beep(180, 0.1, "sawtooth", 0.05);
+  }
+
   function updateEnemies(dt) {
     const p = state.player;
-    const cap = state.nights <= 1 ? 2 : 3 + state.nights * 2;
-    const grace = state.nights === 1 && state.cycle < 6;
-    if (!state.day && !grace && state.enemies.length < cap) {
-      state.spawnAcc += dt;
-      if (state.spawnAcc > Math.max(1.15, 2.5 - state.nights * 0.25)) {
-        state.spawnAcc = 0;
-        spawnEnemy();
+    const grace = state.nights === 1 && state.cycle < 5;
+    if (!state.day && !grace) {
+      if (state.toSpawn > 0) {
+        state.spawnAcc += dt;
+        if (state.spawnAcc > 0.42) {
+          state.spawnAcc = 0;
+          spawnEnemy();
+          state.toSpawn -= 1;
+        }
+      } else if (state.wave < state.wavesTotal && state.enemies.length === 0) {
+        state.waveWait += dt;
+        if (state.waveWait > 2.2) beginWave();
       }
     }
     for (const e of state.enemies) {
@@ -974,6 +1038,7 @@
         if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 18 * dt);
       }
       e.hit = Math.max(0, e.hit - dt);
+      e.flash = Math.max(0, (e.flash || 0) - dt);
       if (dPlayer < 12 && e.hit <= 0) {
         e.hit = 0.85;
         let dmg = e.dmg;
@@ -1037,10 +1102,15 @@
       b.y += b.vy * dt;
       b.life -= dt;
       for (const e of state.enemies) {
-        if (dist(b.x, b.y, e.x, e.y) < 10) {
+        if (dist(b.x, b.y, e.x, e.y) < 11) {
           e.hp -= b.dmg;
-          burst(e.x, e.y, "#4ee8ff", 6);
-          b.life = 0;
+          e.flash = 0.12;
+          burst(e.x, e.y, "#4ee8ff", 7);
+          const spd = Math.hypot(b.vx, b.vy) || 1;
+          b.x += (b.vx / spd) * 14;
+          b.y += (b.vy / spd) * 14;
+          b.pierce = (b.pierce || 1) - 1;
+          if (b.pierce <= 0) b.life = 0;
         }
       }
       const tx = Math.floor(b.x / TILE);
@@ -1149,9 +1219,10 @@
       state.day = !state.day;
       if (!state.day) {
         state.nights += 1;
+        startNightWaves();
         toast(state.nights === 1
-          ? "第一夜：怪朝篝火来。站在栅栏后打，蝙蝠会飞进来。"
-          : `第 ${state.nights} 夜。守住篝火，灭了就失败。`, 3.2);
+          ? "第一夜：怪分波朝篝火来。站在墙后打，蝙蝠会飞进来。"
+          : `第 ${state.nights} 夜，共 ${state.wavesTotal} 波。守住篝火。`, 3.2);
         beep(140, 0.16, "sawtooth", 0.05);
       } else {
         const extra = survivedNights()
@@ -1256,6 +1327,22 @@
     objectiveEl.textContent = objectiveText();
     skillCdEl.textContent = p.skillCd > 0 ? `${p.skillCd.toFixed(1)}s` : "就绪";
     skillDock.classList.toggle("ready", p.skillCd <= 0);
+    if (state.build) {
+      const names = { fence: "栅栏", torch: "火把", plot: "田" };
+      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)} · 点空地放下 / 点坏墙修理 · 再按键取消`;
+      buildBanner.classList.remove("hidden");
+    } else {
+      buildBanner.classList.add("hidden");
+    }
+    if (!state.day && state.wavesTotal) {
+      const rest = state.wave >= state.wavesTotal && state.toSpawn <= 0 && state.enemies.length === 0;
+      waveBanner.textContent = rest
+        ? "这一夜的波次结束，守到天亮"
+        : `第 ${state.nights} 夜  波次 ${Math.max(1, state.wave)}/${state.wavesTotal}  剩余 ${state.toSpawn + state.enemies.length}`;
+      waveBanner.classList.remove("hidden");
+    } else {
+      waveBanner.classList.add("hidden");
+    }
     for (const el of document.querySelectorAll(".item")) {
       const k = el.dataset.k;
       el.querySelector("b").textContent = state.inv[k] || 0;
@@ -1306,9 +1393,19 @@
       px(c, x + 5, y + 2, 3, 3, "#7be06a");
     } else if (t === T.FENCE) {
       px(c, x, y, 16, 16, "#3d9344");
-      px(c, x + 2, y + 2, 12, 12, "#6b4424");
-      px(c, x + 3, y + 3, 10, 3, "#8b5a2b");
-      px(c, x + 6, y + 1, 4, 14, "#5a3a20");
+      const n = tileAt(tx, ty - 1) === T.FENCE;
+      const s = tileAt(tx, ty + 1) === T.FENCE;
+      const e = tileAt(tx + 1, ty) === T.FENCE;
+      const w = tileAt(tx - 1, ty) === T.FENCE;
+      px(c, x + 6, y + 6, 4, 4, "#5a3a20");
+      if (n || s || (!e && !w)) px(c, x + 7, y + (n ? 0 : 4), 2, n && s ? 16 : 8, "#8b5a2b");
+      if (e || w || (!n && !s)) px(c, x + (w ? 0 : 4), y + 7, e && w ? 16 : 8, 2, "#a06a38");
+      px(c, x + 6, y + 6, 4, 2, "#c48870");
+      const hp = state.fenceHp.get(`${tx},${ty}`) || FENCE_MAX;
+      if (hp < FENCE_MAX) {
+        px(c, x + 2, y, 12, 2, "#111");
+        px(c, x + 2, y, 12 * clamp(hp / FENCE_MAX, 0, 1), 2, "#e8c040");
+      }
     } else if (t === T.TORCH) {
       px(c, x, y, 16, 16, "#3d9344");
       px(c, x + 7, y + 8, 2, 7, "#6b4424");
@@ -1377,7 +1474,11 @@
       px(c, -6, -11 + bob, 3, 3, pal.lamp);
     }
     if (p.attack > 0 && p.cls !== "mage") {
-      px(c, 6, -16, 8, 2, p.cls === "miner" ? "#c5c9d0" : "#d0d4dc");
+      const ang = Math.atan2(p.slashDy || 1, p.slashDx || 0);
+      c.rotate(ang);
+      px(c, 8, -2, 10, 2, p.cls === "knight" ? "#e8eef4" : "#c5c9d0");
+      px(c, 12, -5, 6, 2, "#fff");
+      px(c, 12, 1, 6, 2, "#fff");
     }
     c.restore();
   }
@@ -1386,6 +1487,7 @@
     const x = Math.round(e.x - cam.x);
     const y = Math.round(e.y - cam.y);
     const bob = Math.sin(state.time * 6 + e.bob) * 1;
+    if (e.flash > 0) c.globalAlpha = 0.55;
     px(c, x - 5, y - 1, 10, 3, "rgba(0,0,0,.3)");
     if (e.kind === "slime") {
       px(c, x - 6, y - 10 + bob, 12, 10, "#5dcf5a");
@@ -1400,6 +1502,11 @@
       px(c, x - 6, y - 12 + bob, 12, 3, "#ffe27a");
       px(c, x - 2, y - 8 + bob, 2, 2, "#3a2a10");
       px(c, x + 2, y - 8 + bob, 2, 2, "#3a2a10");
+    }
+    c.globalAlpha = 1;
+    if (e.hp < e.maxHp) {
+      px(c, x - 6, y - 16 + bob, 12, 2, "#111");
+      px(c, x - 6, y - 16 + bob, 12 * clamp(e.hp / e.maxHp, 0, 1), 2, "#d4454a");
     }
   }
 
