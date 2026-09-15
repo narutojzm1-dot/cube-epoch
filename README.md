@@ -25,18 +25,23 @@ python3 -m http.server 8765
 
 点树一定是砍，不会变成放栅栏。自己能穿过栅栏，怪不能。祭坛只在天亮、且守过两夜后才能献。
 
-## 测试与审查
+## 测试、PR 与发布
 
-改完先测再审，通过才能 push。
+改完先本地测，再开 PR。`main` 只接受合入；CI 绿了才能合并，合并后 GitHub Pages 自动部署。
 
 ```bash
 npm install
 npm test
+git checkout -b <topic>
+git push -u origin HEAD
+gh pr create --base main
 ```
 
-`tests/static.mjs` 不需要浏览器。`tests/e2e.mjs` 需要本机 Playwright WebKit。
+GitHub Actions：`Test`（static + e2e）跑在 PR 和 `main` 上；`Deploy Pages` 只在 `main`。
 
-发布闸门：`.grok/skills/ship-gate/SKILL.md`
+`tests/static.mjs` 不需要浏览器。`tests/e2e.mjs` 需要 Playwright WebKit。
+
+闸门：`.grok/skills/ship-gate/SKILL.md`
 
 ## 文件
 
