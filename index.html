@@ -103,6 +103,7 @@
           <div id="objective" class="objective">采集木头、石头、金矿和小麦</div>
         </div>
         <div class="hud-right">
+          <button id="btn-mute" type="button">声音开</button>
           <button id="btn-help" type="button">怎么玩</button>
           <button id="btn-pause" type="button">暂停</button>
         </div>
@@ -128,19 +129,19 @@
         <div id="wave-banner" class="wave-banner hidden"></div>
         <div id="prompt" class="prompt hidden"></div>
         <div id="toast" class="toast hidden"></div>
-        <p id="keys-hint" class="keys-hint">WASD 移动 · 点树砍树 · 1/2/3 点空地建造 · 点坏墙可修 · 穿过栅栏近战 · Q 技能</p>
+        <p id="keys-hint" class="keys-hint">WASD 移动 · 空格砍面前的树 · 1栏 2火 3田 · 点空地建造 · Q 技能</p>
       </div>
 
       <footer class="dock">
         <div class="inv" id="inv">
+          <span class="item build" data-k="fence" data-build="fence" title="按 1：放下栅栏"> <kbd>1</kbd> 栏 <b>0</b></span>
+          <span class="item build" data-k="torch" data-build="torch" title="按 2：放下火把"> <kbd>2</kbd> 火 <b>0</b></span>
+          <span class="item build" data-k="plot" data-build="plot" title="按 3：开田"> <kbd>3</kbd> 田 <b>0</b></span>
           <span class="item" data-k="wood">木 <b>0</b></span>
           <span class="item" data-k="stone">石 <b>0</b></span>
           <span class="item" data-k="gold">金 <b>0</b></span>
           <span class="item eat" data-k="wheat" title="点击吃掉，回复生命">麦 <b>0</b></span>
           <span class="item" data-k="seed">种 <b>0</b></span>
-          <span class="item build" data-k="fence" data-build="fence" title="1 键：2木放一段栅栏（矿工1木）">栏 <b>0</b></span>
-          <span class="item build" data-k="torch" data-build="torch" title="2 键：1木1石放火把（法师免石）">火 <b>0</b></span>
-          <span class="item build" data-k="plot" data-build="plot" title="3 键：1木开一块田（农夫免费）">田 <b>0</b></span>
           <span class="item heart" data-k="heart">心 <b>0</b></span>
         </div>
         <div class="skill-dock">

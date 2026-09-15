@@ -100,6 +100,7 @@
   const btnStart = document.getElementById("btn-start");
   const btnPause = document.getElementById("btn-pause");
   const btnHelp = document.getElementById("btn-help");
+  const btnMute = document.getElementById("btn-mute");
   const btnSkipGuide = document.getElementById("btn-skip-guide");
   const guideEl = document.getElementById("guide");
   const guideTitle = document.getElementById("guide-title");
@@ -110,7 +111,7 @@
 
   const GUIDE = [
     { id: "move", title: "第一步：走起来", body: "用 WASD 移动。先走到附近的树旁边。" },
-    { id: "chop", title: "第二步：砍木头", body: "对准树按住左键。木头会用来围栅栏、点火把，也是合成材料。" },
+    { id: "chop", title: "第二步：砍木头", body: "走到树前面按空格，或对准树按住左键。木头用来围栅栏、点火把。" },
     { id: "build", title: "第三步：围营地", body: "按 1 选栅栏，再点空地放下。点树仍是砍树。你能穿过自己的栅栏，怪不能。" },
     { id: "night", title: "第四步：守住篝火", body: "怪会朝篝火走。栅栏能挡住它们，蝙蝠会飞过来。别让篝火熄灭。" },
     { id: "offer", title: "第五步：天亮献祭", body: "凑齐材料在工作台按 E 合成方块之心。撑过两夜，天亮后送到北边祭坛。" },
@@ -143,8 +144,22 @@
     c.fillRect(x | 0, y | 0, w, h);
   }
 
+  let musicOn = true;
+  let musicGain = null;
+
+  function ensureAudio() {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!audioCtx) audioCtx = new AC();
+    if (audioCtx.state === "suspended") audioCtx.resume();
+    if (!musicGain) {
+      musicGain = audioCtx.createGain();
+      musicGain.gain.value = musicOn ? 0.055 : 0;
+      musicGain.connect(audioCtx.destination);
+    }
+  }
+
   function beep(freq, dur, type, vol) {
-    if (!audioCtx) return;
+    if (!audioCtx || !musicOn) return;
     const o = audioCtx.createOscillator();
     const g = audioCtx.createGain();
     o.type = type || "square";
@@ -155,6 +170,83 @@
     g.connect(audioCtx.destination);
     o.start();
     o.stop(audioCtx.currentTime + dur);
+  }
+
+  function noise(dur, vol, freq) {
+    if (!audioCtx || !musicOn) return;
+    const n = Math.max(1, Math.floor(audioCtx.sampleRate * dur));
+    const buf = audioCtx.createBuffer(1, n, audioCtx.sampleRate);
+    const data = buf.getChannelData(0);
+    for (let i = 0; i < n; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / n);
+    const src = audioCtx.createBufferSource();
+    src.buffer = buf;
+    const f = audioCtx.createBiquadFilter();
+    f.type = "lowpass";
+    f.frequency.value = freq || 900;
+    const g = audioCtx.createGain();
+    g.gain.value = vol || 0.08;
+    src.connect(f);
+    f.connect(g);
+    g.connect(audioCtx.destination);
+    src.start();
+  }
+
+  function footstep() {
+    noise(0.05, 0.045, 500);
+    beep(90 + rand(30), 0.04, "square", 0.02);
+  }
+
+  function chopSound() {
+    noise(0.08, 0.1, 1400);
+    beep(180, 0.06, "sawtooth", 0.05);
+    beep(320, 0.08, "triangle", 0.04);
+  }
+
+  function hitSound() {
+    noise(0.05, 0.07, 1800);
+    beep(140, 0.05, "square", 0.045);
+  }
+
+  function playMusicPulse() {
+    if (!audioCtx || !musicOn || !state || state.paused || state.over) return;
+    const day = [262, 330, 392, 330, 392, 523, 392, 330];
+    const night = [196, 233, 262, 196, 247, 294, 233, 196];
+    const seq = state.day ? day : night;
+    const step = (state.musicStep || 0) % seq.length;
+    const o = audioCtx.createOscillator();
+    const g = audioCtx.createGain();
+    o.type = "triangle";
+    o.frequency.value = seq[step];
+    g.gain.value = 0.04;
+    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.22);
+    o.connect(g);
+    g.connect(musicGain);
+    o.start();
+    o.stop(audioCtx.currentTime + 0.22);
+    if (step % 2 === 0) {
+      const b = audioCtx.createOscillator();
+      const bg = audioCtx.createGain();
+      b.type = "square";
+      b.frequency.value = (state.day ? 131 : 98);
+      bg.gain.value = 0.018;
+      bg.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.18);
+      b.connect(bg);
+      bg.connect(musicGain);
+      b.start();
+      b.stop(audioCtx.currentTime + 0.18);
+    }
+  }
+
+  function setMuted(next) {
+    musicOn = !next;
+    if (musicGain) musicGain.gain.value = musicOn ? 0.055 : 0;
+    if (btnMute) btnMute.textContent = musicOn ? "声音开" : "声音关";
+  }
+
+  function punch(mag, stop) {
+    if (!state) return;
+    state.shake = Math.max(state.shake || 0, mag);
+    if (stop) state.hitstop = Math.max(state.hitstop || 0, stop);
   }
 
   function toast(text, ms) {
@@ -321,9 +413,11 @@
       wave: 0,
       wavesTotal: 0,
       waveWait: 0,
-      slash: 0,
-      slashDx: 1,
-      slashDy: 0,
+      shake: 0,
+      hitstop: 0,
+      footAcc: 0,
+      musicAcc: 0,
+      musicStep: 0,
       kills: 0,
       nightWarned: false,
       labelsUntil: 16,
@@ -468,8 +562,9 @@
       "白天围营，夜里守火。撑过两夜，天亮把方块之心送到北边祭坛。",
       "",
       "WASD  移动",
-      "1 栅栏　2 火把　3 田；点空地放下，点树仍是砍",
-      "按住左键  砍树、挖矿、收麦、攻击（自己能穿过栅栏）",
+      "空格  砍/挖/打面前的东西",
+      "1 栅栏　2 火把　3 田（背包最左三格）",
+      "点空地放下，点树仍是砍。自己能穿过栅栏。",
       "E  工作台合成 / 祭坛献祭 / 播种",
       "Q 或右键  职业技能",
       "点「麦」或 H  回血",
@@ -613,6 +708,14 @@
     return { tx: Math.floor(x / TILE), ty: Math.floor(y / TILE), dx: dx / len, dy: dy / len };
   }
 
+  function frontTile() {
+    const p = state.player;
+    const dir = [[0, 1], [-1, 0], [1, 0], [0, -1]][p.dir] || [0, 1];
+    const ptx = Math.floor(p.x / TILE);
+    const pty = Math.floor(p.y / TILE);
+    return { tx: ptx + dir[0], ty: pty + dir[1], dx: dir[0], dy: dir[1] };
+  }
+
   function isMineable(tx, ty) {
     const t = tileAt(tx, ty);
     return t === T.TREE || t === T.STONE || t === T.GOLD || t === T.FENCE || t === T.TORCH
@@ -724,8 +827,10 @@
       setTile(tx, ty, T.DIRT);
       addDrop("wood", cx, cy, 2 + rand(2));
       state.flags.chopped = true;
-      burst(cx, cy, "#6bcf6b", 10);
-      beep(320, 0.05, "triangle", 0.04);
+      burst(cx, cy, "#6bcf6b", 16);
+      burst(cx, cy, "#8b5a2b", 8);
+      punch(3.2, 0.045);
+      chopSound();
     } else if (t === T.STONE) {
       setTile(tx, ty, T.DIRT);
       addDrop("stone", cx, cy, 2 + rand(2));
@@ -856,6 +961,8 @@
         e.vy += f.dy * 110;
         burst(e.x, e.y, "#fff4b0", 8);
         floatText(e.x, e.y - 12, String(dmg), "#fff");
+        punch(2.4, 0.035);
+        hitSound();
         hits += 1;
       }
     }
@@ -1160,6 +1267,15 @@
       p.dash -= dt;
     }
     tryMove(p, dt);
+    if (moving) {
+      state.footAcc += dt;
+      if (state.footAcc > 0.27) {
+        state.footAcc = 0;
+        footstep();
+      }
+    } else {
+      state.footAcc = 0.2;
+    }
     p.anim += dt * (moving ? 8 : 3);
     p.frame = Math.floor(p.anim) % 2;
     p.atkCd = Math.max(0, p.atkCd - dt);
@@ -1169,8 +1285,9 @@
     p.sense = Math.max(0, p.sense - dt);
     if (p.cls === "mage") p.mana = Math.min(p.maxMana, p.mana + dt * 1.35);
 
-    const wantAct = mouse.down || keys.has("Space") || keys.has("KeyJ");
-    const f = aimTile();
+    const usingSpace = keys.has("Space") || keys.has("KeyJ");
+    const wantAct = mouse.down || usingSpace;
+    const f = usingSpace ? frontTile() : aimTile();
     const t = tileAt(f.tx, f.ty);
     const mineable = isMineable(f.tx, f.ty);
     const clickPlace = mouse.pressed || keys.has("KeyR");
@@ -1243,6 +1360,17 @@
   function update(dt) {
     if (!state || state.paused) return;
     dt = Math.min(dt, 0.05);
+    if (state.hitstop > 0) {
+      state.hitstop -= dt;
+      state.shake = Math.max(0, (state.shake || 0) - dt * 20);
+      return;
+    }
+    state.musicAcc += dt;
+    if (state.musicAcc > 0.3) {
+      state.musicAcc = 0;
+      state.musicStep = (state.musicStep || 0) + 1;
+      playMusicPulse();
+    }
     updatePlayer(dt);
     updateEnemies(dt);
     updateDrops(dt);
@@ -1267,7 +1395,7 @@
       else prompt = "先去工作台合成方块之心";
     } else if (state.build && placeable(f.tx, f.ty)) {
       prompt = state.build === "fence" ? "左键放下栅栏" : state.build === "torch" ? "左键放下火把" : "左键开田";
-    } else if (t === T.TREE) prompt = "按住左键砍树";
+    } else if (t === T.TREE || tileAt(frontTile().tx, frontTile().ty) === T.TREE) prompt = "空格或按住左键砍树";
     else if (t === T.GOLD) prompt = "按住左键挖金矿";
     else if (t === T.STONE) prompt = "按住左键挖石头";
     else if (t === T.FENCE) prompt = "按住左键拆除栅栏";
@@ -1536,6 +1664,10 @@
     const cam = camera();
     ctx.setTransform(scale, 0, 0, scale, 0, 0);
     ctx.imageSmoothingEnabled = false;
+    if (state.shake > 0) {
+      ctx.translate((Math.random() - 0.5) * state.shake, (Math.random() - 0.5) * state.shake);
+      state.shake = Math.max(0, state.shake - 0.45);
+    }
     ctx.fillStyle = "#16351c";
     ctx.fillRect(0, 0, VIEW_W * TILE, VIEW_H * TILE);
 
@@ -1721,9 +1853,10 @@
   });
   btnStart.addEventListener("click", () => {
     if (!selectedClass) return;
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    ensureAudio();
     startGame(selectedClass);
   });
+  btnMute.addEventListener("click", () => setMuted(musicOn));
   btnPause.addEventListener("click", togglePause);
   btnHelp.addEventListener("click", () => {
     if (!state || state.over) return;
@@ -1743,16 +1876,17 @@
 
   window.addEventListener("keydown", (e) => {
     keys.add(e.code);
-    if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.code)) e.preventDefault();
+    if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Digit1", "Digit2", "Digit3"].includes(e.code)) e.preventDefault();
     if (!state) return;
     if (e.code === "Escape") togglePause();
+    if (e.code === "KeyM") setMuted(musicOn);
     if (state.paused || e.repeat) return;
     if (e.code === "KeyE" || e.code === "KeyF") interact();
     if (e.code === "KeyQ") useSkill();
     if (e.code === "KeyH") eatWheat();
-    if (e.code === "Digit1" || e.code === "Numpad1") setBuild("fence");
-    if (e.code === "Digit2" || e.code === "Numpad2") setBuild("torch");
-    if (e.code === "Digit3" || e.code === "Numpad3") setBuild("plot");
+    if (e.key === "1" || e.code === "Digit1" || e.code === "Numpad1") setBuild("fence");
+    if (e.key === "2" || e.code === "Digit2" || e.code === "Numpad2") setBuild("torch");
+    if (e.key === "3" || e.code === "Digit3" || e.code === "Numpad3") setBuild("plot");
   });
   window.addEventListener("keyup", (e) => keys.delete(e.code));
   canvas.addEventListener("mousemove", (e) => {

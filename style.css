@@ -196,8 +196,18 @@ h1 {
   margin-top: 4px;
 }
 .hud-right { text-align: right; display: flex; justify-content: flex-end; gap: 8px; }
-#btn-pause, #btn-help { padding: 6px 12px; font-size: 12px; }
+#btn-pause, #btn-help, #btn-mute { padding: 6px 12px; font-size: 12px; }
 #btn-help { background: #e8dcc8; }
+#btn-mute { background: #cde8d4; }
+.item kbd {
+  display: inline-block;
+  min-width: 14px;
+  margin-right: 4px;
+  padding: 0 3px;
+  background: #111;
+  color: var(--gold);
+  font-size: 11px;
+}
 
 .stage {
   position: relative;
