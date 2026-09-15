@@ -6,7 +6,7 @@
   const ROWS = 36;
   const VIEW_W = 20;
   const VIEW_H = 12;
-  const NEED = { wood: 5, stone: 5, gold: 3, wheat: 3 };
+  const NEED = { wood: 4, stone: 5, gold: 3, wheat: 3 };
   const WIN_NIGHTS = 2;
   const CAMP_MAX = 100;
   const FENCE_MAX = 80;
@@ -112,8 +112,8 @@
   const GUIDE = [
     { id: "move", title: "第一步：走起来", body: "用 WASD 移动。先走到附近的树旁边。" },
     { id: "chop", title: "第二步：砍木头", body: "走到树前面按空格，或对准树按住左键。木头用来围栅栏、点火把。" },
-    { id: "build", title: "第三步：围营地", body: "按 1 选栅栏，再点空地放下。点树仍是砍树。你能穿过自己的栅栏，怪不能。" },
-    { id: "night", title: "第四步：守住篝火", body: "怪会朝篝火走。栅栏能挡住它们，蝙蝠会飞过来。别让篝火熄灭。" },
+    { id: "build", title: "第三步：围营地", body: "按 1 选栅栏，把篝火上下左右四格围上。发光的格子就是缺口。木头还要留给方块之心。" },
+    { id: "night", title: "第四步：守住篝火", body: "怪朝篝火走，站在墙后打，缺口要补。第二夜才有蝙蝠飞进来。" },
     { id: "offer", title: "第五步：天亮献祭", body: "凑齐材料在工作台按 E 合成方块之心。撑过两夜，天亮后送到北边祭坛。" },
   ];
   const nightFx = document.createElement("canvas");
@@ -288,6 +288,13 @@
       ty: Math.floor(state.camp.y / TILE),
     };
   }
+  function campRing() {
+    const c = campTile();
+    return [[c.tx, c.ty - 1], [c.tx - 1, c.ty], [c.tx + 1, c.ty], [c.tx, c.ty + 1]];
+  }
+  function campWalled() {
+    return campRing().every(([tx, ty]) => tileAt(tx, ty) === T.FENCE);
+  }
   function groundSolid(tx, ty) {
     if (solid(tx, ty) || tileAt(tx, ty) === T.FENCE) return true;
     const c = campTile();
@@ -339,7 +346,7 @@
     for (let i = 0; i < 28; i++) stamp(6 + (i % 7), 8 + Math.floor(i / 5), T.TREE);
     stamp(8, 10, T.GRASS);
     stamp(9, 11, T.GRASS);
-    const nearTrees = [[18, 18], [19, 16], [16, 20], [17, 22], [21, 17], [20, 23], [27, 18], [28, 20]];
+    const nearTrees = [[18, 18], [19, 16], [16, 20], [17, 22], [21, 17], [20, 23], [23, 18], [25, 22], [27, 18], [28, 20]];
     for (const [x, y] of nearTrees) stamp(x, y, T.TREE);
     for (let i = 0; i < 22; i++) stamp(34 + (i % 6), 10 + Math.floor(i / 6), T.STONE);
     stamp(36, 12, T.GOLD);
@@ -425,6 +432,7 @@
       campHp: CAMP_MAX,
       fenceHp: new Map(),
       campHurtWarn: false,
+      campHurtCd: 0,
       campPull: 0,
       campFlash: 0,
       fenceBreakWarn: false,
@@ -490,7 +498,7 @@
     if (!state || state.skippedGuide) return null;
     if (!state.flags.moved) return GUIDE[0];
     if (!state.flags.chopped) return GUIDE[1];
-    if (!state.flags.built) return GUIDE[2];
+    if (!campWalled()) return GUIDE[2];
     if (state.nights < WIN_NIGHTS) return GUIDE[3];
     if (!state.win) return GUIDE[4];
     return null;
@@ -502,7 +510,7 @@
     const done = {
       move: state.flags.moved,
       chop: state.flags.chopped,
-      build: state.flags.built,
+      build: campWalled(),
       night: state.nights >= WIN_NIGHTS,
       offer: !!state.win,
     };
@@ -549,24 +557,41 @@
     return best;
   }
 
+  function approachTile(tx, ty) {
+    const p = state.player;
+    let best = null;
+    let bestD = 1e9;
+    for (const [dx, dy] of [[0, 1], [0, -1], [1, 0], [-1, 0]]) {
+      const ax = tx + dx;
+      const ay = ty + dy;
+      if (!inBounds(ax, ay) || solid(ax, ay)) continue;
+      const d = dist(p.x, p.y, ax * TILE + 8, ay * TILE + 8);
+      if (d < bestD) {
+        bestD = d;
+        best = { x: ax * TILE + 8, y: ay * TILE + 8, tx: ax, ty: ay };
+      }
+    }
+    return best;
+  }
+
   function currentTarget() {
     if (!state) return null;
     if (canOffer()) return { x: state.altar.x, y: state.altar.y, kind: "altar" };
     if (!state.day) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
     if (state.inv.heart > 0 && !survivedNights()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
     if (materialsReady() && !state.inv.heart) return { x: state.bench.x, y: state.bench.y, kind: "bench" };
-    if (!state.flags.built) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
+    if (!campWalled()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
     if (state.inv.wood < NEED.wood) {
       const t = nearestOf((tile) => tile === T.TREE);
-      if (t) return { ...t, kind: "tree" };
+      if (t) return { ...(approachTile(t.tx, t.ty) || t), kind: "tree" };
     }
     if (state.inv.gold < NEED.gold) {
       const t = nearestOf((tile) => tile === T.GOLD);
-      if (t) return { ...t, kind: "gold" };
+      if (t) return { ...(approachTile(t.tx, t.ty) || t), kind: "gold" };
     }
     if (state.inv.stone < NEED.stone) {
       const t = nearestOf((tile) => tile === T.STONE);
-      if (t) return { ...t, kind: "stone" };
+      if (t) return { ...(approachTile(t.tx, t.ty) || t), kind: "stone" };
     }
     if (state.inv.wheat < NEED.wheat) {
       const crop = nearestOf((tile, tx, ty) => tile === T.CROP && (state.crops.get(`${tx},${ty}`)?.stage || 0) >= 2);
@@ -604,6 +629,7 @@
       "空格  砍/挖/打面前的东西",
       "1 栅栏　2 火把　3 田（按 0 取消）",
       "点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。",
+      "先把篝火四边围上，再留木头合成方块之心。",
       "E  工作台合成 / 祭坛献祭 / 播种",
       "Q 或右键  职业技能",
       "点「麦」或 H  回血",
@@ -613,7 +639,7 @@
   }
 
   function buildCost(kind) {
-    if (kind === "fence") return { wood: state.cls === "miner" ? 1 : 2 };
+    if (kind === "fence") return { wood: (state.cls === "miner" || state.cls === "knight") ? 1 : 2 };
     if (kind === "torch") return { wood: 1, stone: state.cls === "mage" ? 0 : 1 };
     if (kind === "plot") return { wood: state.cls === "farmer" ? 0 : 1 };
     return {};
@@ -704,6 +730,7 @@
       toast("材料不够：" + miss.join("、"));
       return true;
     }
+    const openBefore = kind === "fence" && !campWalled();
     if (kind === "fence") {
       setTile(tx, ty, T.FENCE);
       state.fenceHp.set(`${tx},${ty}`, FENCE_MAX);
@@ -715,6 +742,9 @@
     state.flags.built = true;
     burst(tx * TILE + 8, ty * TILE + 8, "#ffe27a", 8);
     beep(400, 0.05, "square", 0.04);
+    if (openBefore && campWalled()) {
+      toast("四边围好了。再砍两棵树，木头还要留给方块之心。", 3);
+    }
     return true;
   }
 
@@ -911,7 +941,7 @@
     const cy = ty * TILE + 8;
     if (t === T.TREE) {
       setTile(tx, ty, T.DIRT);
-      addDrop("wood", cx, cy, 2 + rand(2));
+      addDrop("wood", cx, cy, 3 + rand(2));
       if (!state.flags.chopped) state.benchHint = 8;
       state.flags.chopped = true;
       burst(cx, cy, "#6bcf6b", 16);
@@ -1134,7 +1164,7 @@
       if (dist(x, y, state.camp.x, state.camp.y) < 80) continue;
       const nights = state.nights;
       let kind = "slime";
-      if (nights >= 2 && Math.random() < 0.5) kind = "bat";
+      if (nights >= 2 && state.wave >= 2 && Math.random() < 0.45) kind = "bat";
       if (nights >= 3 && Math.random() < 0.22) kind = "cube";
       const hp = kind === "slime" ? 32 : kind === "bat" ? 22 : 64;
       const spd = kind === "slime" ? 26 : kind === "bat" ? 44 : 30;
@@ -1253,12 +1283,21 @@
           if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt);
         }
       }
-      if (dPlayer < 12 && e.hit <= 0) {
+      if (dPlayer < 14 && e.hit <= 0) {
         e.hit = 0.85;
         let dmg = e.dmg;
         if (p.cls === "knight") dmg *= 1 - CLASSES.knight.dr;
         hurt(p, dmg, e);
       } else if (canHitCamp(e) && e.hit <= 0 && state.campHp > 0) {
+        const home = dist(p.x, p.y, state.camp.x, state.camp.y) < 28;
+        if (home && dPlayer < 24) {
+          e.hit = 0.85;
+          let dmg = e.dmg;
+          if (p.cls === "knight") dmg *= 1 - CLASSES.knight.dr;
+          hurt(p, dmg, e);
+          continue;
+        }
+        if (home) continue;
         e.hit = 0.7;
         state.campHp = Math.max(0, state.campHp - e.dmg * 0.85);
         state.campFlash = 0.4;
@@ -1273,6 +1312,10 @@
         if (!state.campHurtWarn) {
           state.campHurtWarn = true;
           toast(campOnScreen ? "篝火在掉血！守住它，灭了就失败。" : "篝火在掉血！镜头拉过去了，快回去。", 2.8);
+        } else if (dist(p.x, p.y, state.camp.x, state.camp.y) > 70 && (state.campHurtCd || 0) <= 0) {
+          state.campHurtCd = 3.5;
+          state.campPull = Math.max(state.campPull || 0, 1.6);
+          toast("篝火还在挨打！别追太远。", 2.2);
         }
         if (state.campHp <= 0) {
           die("篝火熄灭");
@@ -1286,6 +1329,7 @@
       state.kills += 1;
       if (Math.random() < 0.45) addDrop("wheat", e.x, e.y, 1);
       if (Math.random() < 0.16) addDrop("gold", e.x, e.y, 1);
+      if (Math.random() < 0.22) addDrop("wood", e.x, e.y, 1);
       if (Math.random() < 0.2) addDrop("seed", e.x, e.y, 1);
       return false;
     });
@@ -1386,7 +1430,10 @@
       p.vy = p.dashVy;
       p.dash -= dt;
     }
+    const ox = p.x;
+    const oy = p.y;
     tryMove(p, dt);
+    const bumpRes = !!(moving && Math.hypot(p.x - ox, p.y - oy) < 0.5 && isResource(frontTile().tx, frontTile().ty));
     if (moving) {
       state.footAcc += dt;
       if (state.footAcc > 0.27) {
@@ -1407,7 +1454,7 @@
 
     const usingSpace = keys.has("Space") || keys.has("KeyJ");
     const wantAct = mouse.down || usingSpace;
-    const f = usingSpace ? frontTile() : aimTile();
+    const f = (usingSpace || bumpRes) ? frontTile() : aimTile();
     const t = tileAt(f.tx, f.ty);
     const resource = isResource(f.tx, f.ty);
     const dismantle = isDismantle(f.tx, f.ty);
@@ -1432,7 +1479,7 @@
       p.mineTx = -1;
       tryPlace(f.tx, f.ty);
       p.blockMine = true;
-    } else if (usingSpace && (resource || dismantle)) {
+    } else if ((usingSpace || bumpRes) && (resource || (usingSpace && dismantle))) {
       doMine();
     } else if (wantAct && enemyNear && !resource) {
       p.mine = 0;
@@ -1486,9 +1533,11 @@
           : `第 ${state.nights} 夜，共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`, 3.2);
         beep(140, 0.16, "sawtooth", 0.05);
       } else {
-        const extra = survivedNights()
-          ? (state.inv.heart ? "可以去北边祭坛献祭了。" : "材料齐了就去工作台合成，再到祭坛。")
-          : `还要再守 ${WIN_NIGHTS - state.nights} 夜。白天补墙、凑材料。`;
+        const extra = !campWalled()
+          ? "先把发光的缺口补上，再去凑材料。"
+          : survivedNights()
+            ? (state.inv.heart ? "可以去北边祭坛献祭了。" : "材料齐了就去工作台合成，再到祭坛。")
+            : `还要再守 ${WIN_NIGHTS - state.nights} 夜。白天补墙、凑材料。`;
         toast("天亮了。" + extra, 3);
         beep(620, 0.1, "square", 0.04);
         state.enemies = [];
@@ -1518,6 +1567,7 @@
     }
     state.campPull = Math.max(0, (state.campPull || 0) - dt);
     state.campFlash = Math.max(0, (state.campFlash || 0) - dt);
+    state.campHurtCd = Math.max(0, (state.campHurtCd || 0) - dt);
     state.campHint = Math.max(0, (state.campHint || 0) - dt);
     state.benchHint = Math.max(0, (state.benchHint || 0) - dt);
     state.musicAcc += dt;
@@ -1556,9 +1606,9 @@
     else if (t === T.STONE) prompt = "按住左键挖石头";
     else if (t === T.FENCE) {
       const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || FENCE_MAX;
-      prompt = (state.build === "fence" && hp < FENCE_MAX - 0.5)
-        ? "左键修理栅栏（1木）"
-        : "空格或按住左键拆除栅栏";
+      if (state.build === "fence" && hp < FENCE_MAX - 0.5) prompt = "左键修理栅栏（1木）";
+      else if (state.build === "fence" && !campWalled()) prompt = "这段好了。点发光的空地继续围";
+      else prompt = "空格拆除栅栏";
     }
     else if (t === T.CROP && (state.crops.get(`${f.tx},${f.ty}`)?.stage || 0) >= 2) prompt = "按住左键收麦";
     else if (t === T.FARM) prompt = "按 E 或左键播种（要有种子）";
@@ -1588,7 +1638,7 @@
     if (canOffer()) return "天亮了。把方块之心送到北边祭坛（按 E）";
     if (state.inv.heart > 0 && !survivedNights()) return `先再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献祭`;
     if (materialsReady() && !state.inv.heart) return "去工作台按 E 合成方块之心";
-    if (!state.flags.built) return "按 1 选栅栏，在篝火旁放下，把缺口围上";
+    if (!campWalled()) return "按 1，把篝火上下左右四边的发光格围上";
     const miss = [];
     if (state.inv.wood < NEED.wood) miss.push(`木 ${state.inv.wood}/${NEED.wood}`);
     if (state.inv.stone < NEED.stone) miss.push(`石 ${state.inv.stone}/${NEED.stone}`);
@@ -1928,6 +1978,18 @@
       ctx.fillText("工作台 按E", state.bench.x - cam.x, state.bench.y - cam.y - 16);
     }
 
+    if (!campWalled() && (state.flags.chopped || state.build === "fence")) {
+      const pulse = 0.3 + 0.3 * Math.sin(state.time * 5);
+      for (const [tx, ty] of campRing()) {
+        if (tileAt(tx, ty) === T.FENCE) continue;
+        ctx.globalAlpha = pulse;
+        ctx.fillStyle = "#e8c040";
+        ctx.fillRect(tx * TILE - cam.x + 3, ty * TILE - cam.y + 3, 10, 10);
+        ctx.globalAlpha = 1;
+        ctx.strokeStyle = "rgba(255, 226, 122, 0.85)";
+        ctx.strokeRect(tx * TILE - cam.x + 1, ty * TILE - cam.y + 1, 14, 14);
+      }
+    }
     if (state.build) {
       const f = aimTile();
       if (placeable(f.tx, f.ty) && !isMineable(f.tx, f.ty)) {
