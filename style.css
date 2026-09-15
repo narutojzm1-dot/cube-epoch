@@ -180,6 +180,7 @@ h1 {
 .bar.mana > i { background: linear-gradient(#9adaff, var(--mana)); }
 .bar.camp { background: #2a1a10; }
 .bar.camp > i { background: linear-gradient(#ffb020, #ff6a20); }
+.bar.camp.hurt > i { background: linear-gradient(#ffe27a, #ff3a20); }
 .item.build { cursor: pointer; }
 .item.build.on { outline: 2px solid var(--gold); color: var(--gold); }
 .clock {

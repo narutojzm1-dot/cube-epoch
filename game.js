@@ -282,8 +282,25 @@
     const t = tileAt(tx, ty);
     return t === T.WATER || t === T.STONE || t === T.GOLD || t === T.TREE;
   }
+  function campTile() {
+    return {
+      tx: Math.floor(state.camp.x / TILE),
+      ty: Math.floor(state.camp.y / TILE),
+    };
+  }
   function groundSolid(tx, ty) {
-    return solid(tx, ty) || tileAt(tx, ty) === T.FENCE;
+    if (solid(tx, ty) || tileAt(tx, ty) === T.FENCE) return true;
+    const c = campTile();
+    return tx === c.tx && ty === c.ty;
+  }
+  function canHitCamp(e) {
+    const dCamp = dist(e.x, e.y, state.camp.x, state.camp.y);
+    if (e.kind === "bat") return dCamp < 16;
+    const c = campTile();
+    const etx = Math.floor(e.x / TILE);
+    const ety = Math.floor(e.y / TILE);
+    if (tileAt(etx, ety) === T.FENCE) return false;
+    return Math.abs(etx - c.tx) + Math.abs(ety - c.ty) === 1;
   }
   function flySolid(tx, ty) {
     const t = tileAt(tx, ty);
@@ -409,6 +426,8 @@
       fenceHp: new Map(),
       campHurtWarn: false,
       campPull: 0,
+      campFlash: 0,
+      fenceBreakWarn: false,
       campHint: 6,
       benchHint: 0,
       rLatch: false,
@@ -657,7 +676,6 @@
       const key = `${tx},${ty}`;
       const hp = state.fenceHp.get(key) || FENCE_MAX;
       if (hp >= FENCE_MAX - 0.5) {
-        toast("这段栅栏还很结实。");
         return true;
       }
       if ((state.inv.wood || 0) < 1) {
@@ -729,6 +747,25 @@
     const scale = Number(canvas.dataset.scale || 3);
     const cam = camera();
     return { x: cam.x + mouse.x / scale, y: cam.y + mouse.y / scale };
+  }
+
+  function aimVec() {
+    const p = state.player;
+    if (mouse.inside) {
+      const m = mouseWorld();
+      const dx = m.x - p.x;
+      const dy = m.y - p.y;
+      const l = Math.hypot(dx, dy);
+      if (l > 6) return { dx: dx / l, dy: dy / l };
+    }
+    const dir = [[0, 1], [-1, 0], [1, 0], [0, -1]][p.dir] || [0, 1];
+    return { dx: dir[0], dy: dir[1] };
+  }
+
+  function faceVec(v) {
+    const p = state.player;
+    if (Math.abs(v.dx) > Math.abs(v.dy)) p.dir = v.dx < 0 ? 1 : 2;
+    else p.dir = v.dy < 0 ? 3 : 0;
   }
 
   function facingTile() {
@@ -990,7 +1027,8 @@
 
   function meleeAttack() {
     const p = state.player;
-    const f = facingTile();
+    const f = aimVec();
+    faceVec(f);
     const reach = p.cls === "knight" ? 34 : p.cls === "miner" ? 26 : 22;
     const dmg = CLASSES[p.cls].melee;
     p.attack = 0.2;
@@ -1005,8 +1043,9 @@
       if (d < reach + 8 && dx * f.dx + dy * f.dy > -4) {
         e.hp -= dmg;
         e.flash = 0.14;
-        e.vx += f.dx * 110;
-        e.vy += f.dy * 110;
+        e.stun = Math.max(e.stun || 0, 0.2);
+        e.vx = f.dx * 140;
+        e.vy = f.dy * 140;
         burst(e.x, e.y, "#fff4b0", 8);
         floatText(e.x, e.y - 12, String(dmg), "#fff");
         punch(2.4, 0.035);
@@ -1015,10 +1054,6 @@
       }
     }
     if (hits > 1) floatText(p.x, p.y - 22, `连击x${hits}`, "#ffe27a");
-    const t = tileAt(f.tx, f.ty);
-    if (t === T.TREE || t === T.STONE || t === T.GOLD || t === T.CROP || t === T.FENCE || t === T.TORCH) {
-      startMine(f.tx, f.ty);
-    }
   }
 
   function startMine(tx, ty) {
@@ -1036,9 +1071,10 @@
       return;
     }
     p.mana -= 1;
-    const f = facingTile();
+    const f = aimVec();
+    faceVec(f);
     state.bolts.push({
-      x: p.x, y: p.y - 6, vx: f.dx * 150, vy: f.dy * 150, life: 0.95, dmg: CLASSES.mage.ranged, nova: false, pierce: 2,
+      x: p.x, y: p.y - 6, vx: f.dx * 150, vy: f.dy * 150, life: 0.95, dmg: CLASSES.mage.ranged, nova: false, pierce: 2, hit: new Set(),
     });
     beep(720, 0.06, "sine", 0.04);
   }
@@ -1065,12 +1101,13 @@
       for (let i = 0; i < 8; i++) {
         const a = (Math.PI * 2 * i) / 8;
         state.bolts.push({
-          x: p.x, y: p.y - 6, vx: Math.cos(a) * 120, vy: Math.sin(a) * 120, life: 0.6, dmg: 18, nova: true, pierce: 1,
+          x: p.x, y: p.y - 6, vx: Math.cos(a) * 120, vy: Math.sin(a) * 120, life: 0.6, dmg: 18, nova: true, pierce: 1, hit: new Set(),
         });
       }
       beep(900, 0.12, "sine", 0.05);
     } else if (p.cls === "knight") {
-      const f = facingTile();
+      const f = aimVec();
+      faceVec(f);
       p.dash = 0.22;
       p.dashVx = f.dx * 220;
       p.dashVy = f.dy * 220;
@@ -1112,6 +1149,12 @@
       setTile(tx, ty, T.GRASS);
       state.fenceHp.delete(key);
       burst(tx * TILE + 8, ty * TILE + 8, "#8b5a2b", 8);
+      punch(3, 0.04);
+      noise(0.08, 0.09, 700);
+      if (!state.fenceBreakWarn) {
+        state.fenceBreakWarn = true;
+        toast("栅栏破了！按 1 点空地补上。", 2.2);
+      }
     } else {
       state.fenceHp.set(key, hp);
     }
@@ -1157,51 +1200,66 @@
     }
     for (const e of state.enemies) {
       const dPlayer = dist(e.x, e.y, p.x, p.y);
-      const dCamp = dist(e.x, e.y, state.camp.x, state.camp.y);
-      if (state.player.dash > 0 && dPlayer < 16) {
+      if (state.player.dash > 0 && dPlayer < 16 && !e.dashHit) {
+        e.dashHit = true;
         e.hp -= 14;
+        e.stun = Math.max(e.stun || 0, 0.18);
         const dx = e.x - p.x;
         const dy = e.y - p.y;
         const l = Math.hypot(dx, dy) || 1;
-        e.vx += (dx / l) * 80;
-        e.vy += (dy / l) * 80;
+        e.vx = (dx / l) * 160;
+        e.vy = (dy / l) * 160;
+        e.flash = 0.12;
+        burst(e.x, e.y, "#fff4b0", 6);
       }
-      const aimPlayer = e.kind === "bat" || dPlayer < 28;
-      const tx = aimPlayer ? p.x : state.camp.x;
-      const ty = aimPlayer ? p.y : state.camp.y;
-      const dx = tx - e.x;
-      const dy = ty - e.y;
-      const len = Math.hypot(dx, dy) || 1;
-      let spd = e.spd;
-      const etx = Math.floor(e.x / TILE);
-      const ety = Math.floor(e.y / TILE);
-      if (tileAt(etx, ety) === T.TORCH) spd *= 0.7;
-      e.vx = (dx / len) * spd;
-      e.vy = (dy / len) * spd;
-      const nx = e.x + e.vx * dt;
-      const ny = e.y + e.vy * dt;
-      if (!enemyBlocked(e, nx, e.y)) e.x = nx;
-      else {
-        const ftx = Math.floor(nx / TILE);
-        const fty = Math.floor(e.y / TILE);
-        if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt);
-      }
-      if (!enemyBlocked(e, e.x, ny)) e.y = ny;
-      else {
-        const ftx = Math.floor(e.x / TILE);
-        const fty = Math.floor(ny / TILE);
-        if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt);
-      }
+      if (state.player.dash <= 0) e.dashHit = false;
       e.hit = Math.max(0, e.hit - dt);
       e.flash = Math.max(0, (e.flash || 0) - dt);
+      if ((e.stun || 0) > 0) {
+        e.stun -= dt;
+        const nx = e.x + e.vx * dt;
+        const ny = e.y + e.vy * dt;
+        if (!enemyBlocked(e, nx, e.y)) e.x = nx;
+        if (!enemyBlocked(e, e.x, ny)) e.y = ny;
+        e.vx *= Math.pow(0.04, dt);
+        e.vy *= Math.pow(0.04, dt);
+      } else {
+        const aimPlayer = e.kind === "bat" || dPlayer < 28;
+        const tx = aimPlayer ? p.x : state.camp.x;
+        const ty = aimPlayer ? p.y : state.camp.y;
+        const dx = tx - e.x;
+        const dy = ty - e.y;
+        const len = Math.hypot(dx, dy) || 1;
+        let spd = e.spd;
+        const etx = Math.floor(e.x / TILE);
+        const ety = Math.floor(e.y / TILE);
+        if (tileAt(etx, ety) === T.TORCH) spd *= 0.7;
+        e.vx = (dx / len) * spd;
+        e.vy = (dy / len) * spd;
+        const nx = e.x + e.vx * dt;
+        const ny = e.y + e.vy * dt;
+        if (!enemyBlocked(e, nx, e.y)) e.x = nx;
+        else {
+          const ftx = Math.floor(nx / TILE);
+          const fty = Math.floor(e.y / TILE);
+          if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt);
+        }
+        if (!enemyBlocked(e, e.x, ny)) e.y = ny;
+        else {
+          const ftx = Math.floor(e.x / TILE);
+          const fty = Math.floor(ny / TILE);
+          if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt);
+        }
+      }
       if (dPlayer < 12 && e.hit <= 0) {
         e.hit = 0.85;
         let dmg = e.dmg;
         if (p.cls === "knight") dmg *= 1 - CLASSES.knight.dr;
         hurt(p, dmg, e);
-      } else if (dCamp < 14 && e.hit <= 0 && state.campHp > 0) {
+      } else if (canHitCamp(e) && e.hit <= 0 && state.campHp > 0) {
         e.hit = 0.7;
         state.campHp = Math.max(0, state.campHp - e.dmg * 0.85);
+        state.campFlash = 0.4;
         burst(state.camp.x, state.camp.y - 8, "#ff6a20", 5);
         state.campPull = Math.max(state.campPull || 0, 1.2);
         punch(2.4, 0.03);
@@ -1221,6 +1279,7 @@
     }
     state.enemies = state.enemies.filter((e) => {
       if (e.hp > 0) return true;
+      punch(2.6, 0.045);
       burst(e.x, e.y, "#8dff9a", 8);
       state.kills += 1;
       if (Math.random() < 0.45) addDrop("wheat", e.x, e.y, 1);
@@ -1241,11 +1300,11 @@
       }
       d.life -= dt;
       const dd = dist(d.x, d.y, p.x, p.y);
-      if (dd < 40 && dd > 1) {
-        d.x += (p.x - d.x) * 6 * dt;
-        d.y += (p.y - d.y) * 6 * dt;
+      if (dd < 56 && dd > 1) {
+        d.x += (p.x - d.x) * 11 * dt;
+        d.y += (p.y - d.y) * 11 * dt;
       }
-      if (dd < 16) {
+      if (dd < 18) {
         state.inv[d.kind] = (state.inv[d.kind] || 0) + 1;
         d.life = 0;
         beep(660, 0.04, "square", 0.03);
@@ -1263,10 +1322,14 @@
       b.x += b.vx * dt;
       b.y += b.vy * dt;
       b.life -= dt;
+      if (!b.hit) b.hit = new Set();
       for (const e of state.enemies) {
+        if (b.hit.has(e)) continue;
         if (dist(b.x, b.y, e.x, e.y) < 11) {
+          b.hit.add(e);
           e.hp -= b.dmg;
           e.flash = 0.12;
+          e.stun = Math.max(e.stun || 0, 0.12);
           burst(e.x, e.y, "#4ee8ff", 7);
           const spd = Math.hypot(b.vx, b.vy) || 1;
           b.x += (b.vx / spd) * 14;
@@ -1351,16 +1414,8 @@
     if (rTap) state.rLatch = true;
     const clickPlace = mouse.pressed || rTap;
     if (!mouse.down && !usingSpace) p.blockMine = false;
-    if (clickPlace && state.build === "fence" && t === T.FENCE) {
-      p.mine = 0;
-      p.mineTx = -1;
-      tryPlace(f.tx, f.ty);
-      p.blockMine = true;
-    } else if (clickPlace && state.build && !resource && t !== T.FARM && t !== T.FENCE) {
-      p.mine = 0;
-      p.mineTx = -1;
-      tryPlace(f.tx, f.ty);
-    } else if (wantAct && (resource || (dismantle && !p.blockMine))) {
+    const enemyNear = state.enemies.some((e) => dist(e.x, e.y, p.x, p.y) < 42);
+    const doMine = () => {
       if (p.mineTx !== f.tx || p.mineTy !== f.ty) startMine(f.tx, f.ty);
       const hard = t === T.GOLD ? 1.35 : t === T.STONE ? 1.05 : t === T.TREE ? 0.85 : 0.35;
       p.mine += dt * def.mine / hard;
@@ -1369,6 +1424,28 @@
         p.mine = 0;
         p.mineTx = -1;
       }
+    };
+    if (clickPlace && state.build === "fence" && t === T.FENCE) {
+      p.mine = 0;
+      p.mineTx = -1;
+      tryPlace(f.tx, f.ty);
+      p.blockMine = true;
+    } else if (usingSpace && (resource || dismantle)) {
+      doMine();
+    } else if (wantAct && enemyNear && !resource) {
+      p.mine = 0;
+      p.mineTx = -1;
+      if (p.atkCd <= 0) {
+        p.atkCd = p.cls === "mage" ? 0.32 : 0.42;
+        if (p.cls === "mage") shoot();
+        else meleeAttack();
+      }
+    } else if (clickPlace && state.build && !resource && t !== T.FARM && t !== T.FENCE) {
+      p.mine = 0;
+      p.mineTx = -1;
+      tryPlace(f.tx, f.ty);
+    } else if (wantAct && (resource || (dismantle && !p.blockMine))) {
+      doMine();
     } else if (wantAct && t === T.FARM) {
       p.mine = 0;
       p.mineTx = -1;
@@ -1403,8 +1480,8 @@
         state.nights += 1;
         startNightWaves();
         toast(state.nights === 1
-          ? "第一夜：怪分波朝篝火来。站在墙后打，蝙蝠会飞进来。"
-          : `第 ${state.nights} 夜，共 ${state.wavesTotal} 波。守住篝火。`, 3.2);
+          ? "第一夜：怪分波朝篝火来。站在墙后打。"
+          : `第 ${state.nights} 夜，共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`, 3.2);
         beep(140, 0.16, "sawtooth", 0.05);
       } else {
         const extra = survivedNights()
@@ -1414,6 +1491,7 @@
         beep(620, 0.1, "square", 0.04);
         state.enemies = [];
         state.nightWarned = false;
+        state.fenceBreakWarn = false;
       }
     }
     if (state.day && !state.nightWarned && state.cycle > state.dayLen - 8) {
@@ -1437,6 +1515,7 @@
       return;
     }
     state.campPull = Math.max(0, (state.campPull || 0) - dt);
+    state.campFlash = Math.max(0, (state.campFlash || 0) - dt);
     state.campHint = Math.max(0, (state.campHint || 0) - dt);
     state.benchHint = Math.max(0, (state.benchHint || 0) - dt);
     state.musicAcc += dt;
@@ -1466,6 +1545,8 @@
       else if (!survivedNights()) prompt = `再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献`;
       else if (state.inv.heart > 0) prompt = "按 E 献上方块之心";
       else prompt = "先去工作台合成方块之心";
+    } else if (!state.day && state.enemies.some((e) => dist(e.x, e.y, p.x, p.y) < 42)) {
+      prompt = "左键攻击 · Q 技能 · 点坏墙修理";
     } else if (state.build && placeable(f.tx, f.ty)) {
       prompt = state.build === "fence" ? "左键放下栅栏" : state.build === "torch" ? "左键放下火把" : "左键开田";
     } else if (t === T.TREE || tileAt(frontTile().tx, frontTile().ty) === T.TREE) prompt = "空格或按住左键砍树";
@@ -1525,6 +1606,7 @@
     }
     campBar.style.width = `${clamp((state.campHp / CAMP_MAX) * 100, 0, 100)}%`;
     campText.textContent = `${Math.max(0, Math.ceil(state.campHp))}/${CAMP_MAX}`;
+    if (campBar.parentElement) campBar.parentElement.classList.toggle("hurt", (state.campFlash || 0) > 0);
     const remain = Math.max(0, (state.day ? state.dayLen : state.nightLen) - state.cycle);
     const m = Math.floor(remain / 60);
     const s = String(Math.floor(remain % 60)).padStart(2, "0");
@@ -1851,6 +1933,12 @@
         ctx.fillStyle = state.build === "fence" ? "#6b4424" : state.build === "torch" ? "#ffb020" : "#6b4424";
         ctx.fillRect(f.tx * TILE - cam.x + 3, f.ty * TILE - cam.y + 3, 10, 10);
         ctx.globalAlpha = 1;
+      } else if (state.build === "fence" && tileAt(f.tx, f.ty) === T.FENCE) {
+        const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || FENCE_MAX;
+        if (hp < FENCE_MAX - 0.5) {
+          ctx.strokeStyle = "#8dff9a";
+          ctx.strokeRect(f.tx * TILE - cam.x + 1, f.ty * TILE - cam.y + 1, 14, 14);
+        }
       }
     }
 
