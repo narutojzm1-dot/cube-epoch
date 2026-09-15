@@ -25,9 +25,23 @@ python3 -m http.server 8765
 
 点树一定是砍，不会变成放栅栏。自己能穿过栅栏，怪不能。祭坛只在天亮、且守过两夜后才能献。
 
+## 测试与审查
+
+改完先测再审，通过才能 push。
+
+```bash
+npm install
+npm test
+```
+
+`tests/static.mjs` 不需要浏览器。`tests/e2e.mjs` 需要本机 Playwright WebKit。
+
+发布闸门：`.grok/skills/ship-gate/SKILL.md`
+
 ## 文件
 
 纯前端，没有后端。
 
 - `index.html` / `style.css` / `game.js`
 - `assets/` 四张角色立绘
+- `tests/` 静态契约 + 进游戏 e2e

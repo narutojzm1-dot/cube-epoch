@@ -134,6 +134,7 @@
   let audioCtx = null;
   let state = null;
   let last = 0;
+  let looping = false;
   let toastTimer = 0;
   const keys = new Set();
   const mouse = { x: 0, y: 0, down: false, pressed: false, right: false, inside: false };
@@ -716,7 +717,10 @@
     last = performance.now();
     if (briefOn) startBriefing();
     else toast("先走到树旁边，按空格砍木头。", 3.2);
-    requestAnimationFrame(loop);
+    if (!looping) {
+      looping = true;
+      requestAnimationFrame(loop);
+    }
   }
 
   function materialsReady() {
@@ -2320,6 +2324,7 @@
     if (state && !state.paused && !state.over) update(dt);
     render();
     if (state && !state.over) requestAnimationFrame(loop);
+    else looping = false;
   }
 
   function showOverlay(title, body, actions) {
