@@ -108,6 +108,11 @@
   const promptEl = document.getElementById("prompt");
   const buildBanner = document.getElementById("build-banner");
   const waveBanner = document.getElementById("wave-banner");
+  const screenIntro = document.getElementById("screen-intro");
+  const introText = document.getElementById("intro-text");
+  const introCursor = document.getElementById("intro-cursor");
+  const introBox = document.getElementById("intro-box");
+  const btnSkipIntro = document.getElementById("btn-skip-intro");
 
   const GUIDE = [
     { id: "move", title: "第一步：走起来", body: "用 WASD 移动。先走到附近的树旁边。" },
@@ -409,7 +414,127 @@
     };
   }
 
+  const intro = {
+    active: false,
+    pages: [],
+    page: 0,
+    shown: 0,
+    delay: 38,
+    last: 0,
+    raf: 0,
+    cls: null,
+  };
+
+  function introPages(cls) {
+    const name = CLASSES[cls].name;
+    const flavor = {
+      miner: "你的镐，听得见表层下面的金。",
+      farmer: "口袋里还有种子。麦子会救人。",
+      mage: "袖中藏着星。夜里不要离开光。",
+      knight: "盾比夜更厚。站在营门口。",
+    }[cls];
+    return [
+      "很久很久以前——\n世界还是一块完整的立方。",
+      "光与暗在缝里裂开。\n白昼碎成了余烬。",
+      "人们围着最后的篝火。\n说：只要火还在，\n纪元就不会结束。",
+      "北方有一座沉睡的祭坛。\n要把「方块之心」献上，\n黎明才会再来。",
+      `${name}啊。\n${flavor}\n到篝火旁边去。`,
+      "围起栅栏。守过两夜。\n把心，送到北边。\n\n……出发吧。",
+    ];
+  }
+
+  function playIntroTheme() {
+    if (!audioCtx || !musicOn) return;
+    const notes = [392, 523, 392, 330, 392, 523, 659, 784];
+    notes.forEach((freq, i) => {
+      const t0 = audioCtx.currentTime + i * 0.26;
+      const o = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      o.type = "triangle";
+      o.frequency.value = freq;
+      g.gain.value = 0.05;
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.34);
+      o.connect(g);
+      g.connect(musicGain || audioCtx.destination);
+      o.start(t0);
+      o.stop(t0 + 0.34);
+    });
+  }
+
+  function renderIntroText() {
+    const full = intro.pages[intro.page] || "";
+    introText.textContent = full.slice(0, intro.shown);
+    introCursor.classList.toggle("hidden", intro.shown < full.length);
+  }
+
+  function tickIntro(now) {
+    if (!intro.active) return;
+    const full = intro.pages[intro.page] || "";
+    if (intro.shown < full.length && now - intro.last >= intro.delay) {
+      intro.shown += 1;
+      intro.last = now;
+      const ch = full[intro.shown - 1] || "";
+      intro.delay = /[。、！？…—\n]/.test(ch) ? 170 : 36;
+      renderIntroText();
+      if (ch && ch !== " " && ch !== "\n") beep(780, 0.016, "square", 0.016);
+    }
+    intro.raf = requestAnimationFrame(tickIntro);
+  }
+
+  function showIntroPage() {
+    intro.shown = 0;
+    intro.delay = 80;
+    intro.last = performance.now();
+    renderIntroText();
+  }
+
+  function advanceIntro() {
+    if (!intro.active) return;
+    const full = intro.pages[intro.page] || "";
+    if (intro.shown < full.length) {
+      intro.shown = full.length;
+      renderIntroText();
+      return;
+    }
+    intro.page += 1;
+    if (intro.page >= intro.pages.length) {
+      finishIntro();
+      return;
+    }
+    beep(520, 0.05, "square", 0.03);
+    showIntroPage();
+  }
+
+  function finishIntro() {
+    if (!intro.active) return;
+    intro.active = false;
+    if (intro.raf) cancelAnimationFrame(intro.raf);
+    intro.raf = 0;
+    screenIntro.classList.add("hidden");
+    const cls = intro.cls;
+    intro.cls = null;
+    startGame(cls);
+  }
+
+  function playIntro(cls) {
+    intro.cls = cls;
+    intro.pages = introPages(cls);
+    intro.page = 0;
+    intro.active = true;
+    screenTitle.classList.add("hidden");
+    screenIntro.classList.remove("hidden");
+    playIntroTheme();
+    showIntroPage();
+    intro.raf = requestAnimationFrame(tickIntro);
+  }
+
   function startGame(cls) {
+    if (intro.active) {
+      intro.active = false;
+      if (intro.raf) cancelAnimationFrame(intro.raf);
+      intro.raf = 0;
+      screenIntro.classList.add("hidden");
+    }
     const world = genWorld();
     const def = CLASSES[cls];
     state = {
@@ -2092,7 +2217,15 @@
   btnStart.addEventListener("click", () => {
     if (!selectedClass) return;
     ensureAudio();
-    startGame(selectedClass);
+    playIntro(selectedClass);
+  });
+  btnSkipIntro.addEventListener("click", (e) => {
+    e.stopPropagation();
+    finishIntro();
+  });
+  introBox.addEventListener("click", () => advanceIntro());
+  screenIntro.addEventListener("click", (e) => {
+    if (e.target === screenIntro) advanceIntro();
   });
   btnMute.addEventListener("click", cycleAudio);
   btnPause.addEventListener("click", togglePause);
@@ -2113,6 +2246,13 @@
   });
 
   window.addEventListener("keydown", (e) => {
+    if (intro.active) {
+      if (["Space", "Enter", "Escape"].includes(e.code) || e.key === "Enter") e.preventDefault();
+      if (e.repeat) return;
+      if (e.code === "Escape") finishIntro();
+      else if (e.code === "Space" || e.code === "Enter" || e.key === "Enter") advanceIntro();
+      return;
+    }
     keys.add(e.code);
     if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Digit0", "Digit1", "Digit2", "Digit3"].includes(e.code)) e.preventDefault();
     if (!state) return;
@@ -2148,6 +2288,8 @@
   window.CUBE = {
     getState: () => state,
     start: (cls) => startGame(cls || "miner"),
+    playIntro,
+    skipIntro: finishIntro,
     gather: (tx, ty) => gatherTile(tx, ty),
     setBuild,
     place: (tx, ty) => tryPlace(tx, ty),
