@@ -158,6 +158,29 @@
   let musicOn = true;
   let sfxOn = true;
   let musicGain = null;
+  let musicPad = null;
+  let musicPadGain = null;
+
+  function ensureMusicPad() {
+    if (!audioCtx || !musicGain || musicPad) return;
+    const filter = audioCtx.createBiquadFilter();
+    filter.type = "lowpass";
+    filter.frequency.value = 480;
+    musicPad = audioCtx.createOscillator();
+    musicPadGain = audioCtx.createGain();
+    musicPad.type = "sine";
+    musicPad.frequency.value = 131;
+    musicPadGain.gain.value = musicOn ? 0.05 : 0;
+    musicPad.connect(filter);
+    filter.connect(musicPadGain);
+    musicPadGain.connect(musicGain);
+    musicPad.start();
+  }
+
+  function setMusicLevel() {
+    if (musicGain) musicGain.gain.value = musicOn ? 0.26 : 0;
+    if (musicPadGain) musicPadGain.gain.value = musicOn ? 0.05 : 0;
+  }
 
   function ensureAudio() {
     const AC = window.AudioContext || window.webkitAudioContext;
@@ -165,9 +188,10 @@
     if (audioCtx.state === "suspended") audioCtx.resume();
     if (!musicGain) {
       musicGain = audioCtx.createGain();
-      musicGain.gain.value = musicOn ? 0.055 : 0;
+      musicGain.gain.value = musicOn ? 0.26 : 0;
       musicGain.connect(audioCtx.destination);
     }
+    ensureMusicPad();
   }
 
   function beep(freq, dur, type, vol) {
@@ -221,32 +245,34 @@
 
   function playMusicPulse() {
     if (!audioCtx || !musicOn || !state || state.paused || state.over) return;
-    const day = [262, 330, 392, 330, 392, 523, 392, 330];
-    const night = [196, 233, 262, 196, 247, 294, 233, 196];
+    ensureMusicPad();
+    const day = [262, 330, 392, 330, 392, 523, 494, 392];
+    const night = [196, 233, 262, 247, 220, 196, 175, 196];
     const seq = state.day ? day : night;
     const step = (state.musicStep || 0) % seq.length;
+    if (musicPad) {
+      musicPad.frequency.setTargetAtTime(state.day ? 131 : 98, audioCtx.currentTime, 0.12);
+    }
     const o = audioCtx.createOscillator();
     const g = audioCtx.createGain();
     o.type = "triangle";
     o.frequency.value = seq[step];
-    g.gain.value = 0.04;
-    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.22);
+    g.gain.setValueAtTime(0.12, audioCtx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.58);
     o.connect(g);
     g.connect(musicGain);
     o.start();
-    o.stop(audioCtx.currentTime + 0.22);
-    if (step % 2 === 0) {
-      const b = audioCtx.createOscillator();
-      const bg = audioCtx.createGain();
-      b.type = "square";
-      b.frequency.value = (state.day ? 131 : 98);
-      bg.gain.value = 0.018;
-      bg.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.18);
-      b.connect(bg);
-      bg.connect(musicGain);
-      b.start();
-      b.stop(audioCtx.currentTime + 0.18);
-    }
+    o.stop(audioCtx.currentTime + 0.58);
+    const b = audioCtx.createOscillator();
+    const bg = audioCtx.createGain();
+    b.type = "square";
+    b.frequency.value = (state.day ? 131 : 98) * (step % 4 === 2 ? 0.75 : 1);
+    bg.gain.setValueAtTime(0.035, audioCtx.currentTime);
+    bg.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.42);
+    b.connect(bg);
+    bg.connect(musicGain);
+    b.start();
+    b.stop(audioCtx.currentTime + 0.42);
   }
 
   function audioLabel() {
@@ -266,7 +292,7 @@
       musicOn = true;
       sfxOn = true;
     }
-    if (musicGain) musicGain.gain.value = musicOn ? 0.055 : 0;
+    setMusicLevel();
     if (btnMute) btnMute.textContent = audioLabel();
   }
 
@@ -434,36 +460,37 @@
   function introPages(cls) {
     const name = CLASSES[cls].name;
     const flavor = {
-      miner: "你的镐，听得见表层下面的金。",
-      farmer: "口袋里还有种子。麦子会救人。",
-      mage: "袖中藏着星。夜里不要离开光。",
-      knight: "盾比夜更厚。站在营门口。",
+      miner: "你的镐还热着。地底的金会轻轻响，像有谁在土里敲门。",
+      farmer: "口袋里的种子还活着。麦香能把人从黑里拽回来。",
+      mage: "袖管里藏着没熄的星。夜里，光就是路，也是牙。",
+      knight: "盾比夜更厚。你站在门口，火就还敢亮。",
     }[cls];
     return [
-      "很久很久以前——\n世界还是一块完整的立方。",
-      "光与暗在缝里裂开。\n白昼碎成了余烬。",
-      "人们围着最后的篝火。\n说：只要火还在，\n纪元就不会结束。",
-      "北方有一座沉睡的祭坛。\n要把「方块之心」献上，\n黎明才会再来。",
-      `${name}啊。\n${flavor}\n到篝火旁边去。`,
-      "围起栅栏。守过两夜。\n把心，送到北边。\n\n……出发吧。",
+      "很久很久以前——\n天地还是一块温热的立方。\n日头嵌在顶上，像一颗不肯落的心。",
+      "后来缝里钻进了风。\n光一块块剥落，白昼碎成余烬。\n人们这才发现：夜，是会走路的。",
+      "最后一堆篝火还在营地中央跳。\n老人说，火在，纪元就在。\n火灭了，名字也会一起冷掉。",
+      "北方祭坛沉睡着。\n要有人把「方块之心」捧去，\n黎明才会肯再睁眼。",
+      `${name}啊。\n${flavor}\n篝火在等你。别让它先睡着。`,
+      "围起栅栏，像给火围一条被子。\n守过两夜。把那颗心，送到北边去。\n\n……出发吧。",
     ];
   }
 
   function playIntroTheme() {
-    if (!audioCtx || !musicOn) return;
-    const notes = [392, 523, 392, 330, 392, 523, 659, 784];
+    if (!audioCtx || !musicOn || !musicGain) return;
+    ensureMusicPad();
+    const notes = [392, 523, 587, 523, 392, 330, 392, 523, 659, 784, 659, 523];
     notes.forEach((freq, i) => {
-      const t0 = audioCtx.currentTime + i * 0.26;
+      const t0 = audioCtx.currentTime + i * 0.32;
       const o = audioCtx.createOscillator();
       const g = audioCtx.createGain();
       o.type = "triangle";
       o.frequency.value = freq;
-      g.gain.value = 0.05;
-      g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.34);
+      g.gain.setValueAtTime(0.1, t0);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.5);
       o.connect(g);
-      g.connect(musicGain || audioCtx.destination);
+      g.connect(musicGain);
       o.start(t0);
-      o.stop(t0 + 0.34);
+      o.stop(t0 + 0.5);
     });
   }
 
@@ -535,11 +562,11 @@
   }
 
   const BRIEF = [
-    { focus: "camp", title: "要保护的", text: "这就是最后的篝火。\n夜里怪会来灭它。火灭了，这一局就结束。" },
-    { focus: "bench", title: "合成之心", text: "这是工作台。\n凑齐木、石、金、麦，按 E 合成方块之心。" },
-    { focus: "altar", title: "送到这里", text: "北边，沉睡的祭坛。\n守过两夜，天亮把心送到这里。" },
-    { focus: "camp", title: "白天先做", text: "先砍附近的树，把篝火四边围上。\n木头还要留给方块之心。" },
-    { focus: "player", title: "出发", text: "预演到此。\n……正式开始。" },
+    { focus: "camp", title: "要保护的", text: "看见了吗？这簇还在跳的火。\n夜里所有的牙，都会朝它来。它灭了，这一局的太阳也就灭了。" },
+    { focus: "bench", title: "合成之心", text: "这张旧台子还温着。\n木、石、金、麦凑齐，按 E。方块之心会在这里醒来。" },
+    { focus: "altar", title: "送到这里", text: "顺着土路一直向北。\n那座沉睡的祭坛，才是心要回家的地方。守过两夜，天亮再献。" },
+    { focus: "camp", title: "白天先做", text: "先去砍树。把火的上下左右围死。\n记得留木头——心也是要吃木头的。" },
+    { focus: "player", title: "出发", text: "预演到此。风已经在等了。\n……正式开始。" },
   ];
   const brief = { shown: 0, acc: 0 };
 
@@ -974,7 +1001,7 @@
     const p = state.player;
     let fx = p.x;
     let fy = p.y;
-    if (state.briefing || (state.look && Math.hypot(state.look.x - p.x, state.look.y - p.y) > 2)) {
+    if (state.briefing) {
       fx = state.look.x;
       fy = state.look.y;
     } else if (state.campPull > 0) {
@@ -1788,7 +1815,7 @@
         if (brief.shown >= full.length) briefingCursor.classList.remove("hidden");
       }
       state.musicAcc += dt;
-      if (state.musicAcc > 0.3) {
+      if (state.musicAcc > 0.28) {
         state.musicAcc = 0;
         state.musicStep = (state.musicStep || 0) + 1;
         playMusicPulse();
@@ -1813,7 +1840,7 @@
     state.campHint = Math.max(0, (state.campHint || 0) - dt);
     state.benchHint = Math.max(0, (state.benchHint || 0) - dt);
     state.musicAcc += dt;
-    if (state.musicAcc > 0.3) {
+    if (state.musicAcc > 0.28) {
       state.musicAcc = 0;
       state.musicStep = (state.musicStep || 0) + 1;
       playMusicPulse();
@@ -2428,6 +2455,7 @@
     playIntro,
     skipIntro: finishIntro,
     skipBrief: endBriefing,
+    cam: () => camera(),
     gather: (tx, ty) => gatherTile(tx, ty),
     setBuild,
     place: (tx, ty) => tryPlace(tx, ty),
