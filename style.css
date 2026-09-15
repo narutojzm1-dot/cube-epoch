@@ -240,7 +240,7 @@ h1 {
   font-size: 12px;
   line-height: 1.5;
   box-shadow: 0 0 0 2px #000, 0 0 0 4px var(--gold);
-  pointer-events: auto;
+  pointer-events: none;
   z-index: 3;
 }
 .guide-head {
@@ -252,6 +252,7 @@ h1 {
 }
 .guide-head strong { color: var(--gold); }
 #btn-skip-guide {
+  pointer-events: auto;
   appearance: none;
   border: 0;
   background: #3a2d36;

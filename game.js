@@ -9,7 +9,7 @@
   const NEED = { wood: 5, stone: 5, gold: 3, wheat: 3 };
   const WIN_NIGHTS = 2;
   const CAMP_MAX = 100;
-  const FENCE_MAX = 40;
+  const FENCE_MAX = 80;
 
   const T = {
     GRASS: 1,
@@ -145,6 +145,7 @@
   }
 
   let musicOn = true;
+  let sfxOn = true;
   let musicGain = null;
 
   function ensureAudio() {
@@ -159,7 +160,7 @@
   }
 
   function beep(freq, dur, type, vol) {
-    if (!audioCtx || !musicOn) return;
+    if (!audioCtx || !sfxOn) return;
     const o = audioCtx.createOscillator();
     const g = audioCtx.createGain();
     o.type = type || "square";
@@ -173,7 +174,7 @@
   }
 
   function noise(dur, vol, freq) {
-    if (!audioCtx || !musicOn) return;
+    if (!audioCtx || !sfxOn) return;
     const n = Math.max(1, Math.floor(audioCtx.sampleRate * dur));
     const buf = audioCtx.createBuffer(1, n, audioCtx.sampleRate);
     const data = buf.getChannelData(0);
@@ -237,10 +238,25 @@
     }
   }
 
-  function setMuted(next) {
-    musicOn = !next;
+  function audioLabel() {
+    if (musicOn && sfxOn) return "声音开";
+    if (sfxOn) return "仅音效";
+    return "静音";
+  }
+
+  function cycleAudio() {
+    if (musicOn && sfxOn) {
+      musicOn = false;
+      sfxOn = true;
+    } else if (!musicOn && sfxOn) {
+      musicOn = false;
+      sfxOn = false;
+    } else {
+      musicOn = true;
+      sfxOn = true;
+    }
     if (musicGain) musicGain.gain.value = musicOn ? 0.055 : 0;
-    if (btnMute) btnMute.textContent = musicOn ? "声音开" : "声音关";
+    if (btnMute) btnMute.textContent = audioLabel();
   }
 
   function punch(mag, stop) {
@@ -365,6 +381,7 @@
       sense: 0,
       slashDx: 1,
       slashDy: 0,
+      blockMine: false,
     };
   }
 
@@ -391,6 +408,10 @@
       campHp: CAMP_MAX,
       fenceHp: new Map(),
       campHurtWarn: false,
+      campPull: 0,
+      campHint: 6,
+      benchHint: 0,
+      rLatch: false,
       enemies: [],
       drops: [],
       bolts: [],
@@ -420,7 +441,6 @@
       musicStep: 0,
       kills: 0,
       nightWarned: false,
-      labelsUntil: 16,
       skippedGuide: false,
       flags: { moved: false, chopped: false, gathered: false, crafted: false, offered: false, planted: false, sawWheat: false, built: false },
     };
@@ -429,7 +449,7 @@
     skillName.textContent = def.skill;
     manaWrap.classList.toggle("hidden", cls !== "mage");
     resize();
-    toast("先砍木头。按 1 选栅栏，对着空地左键围住篝火。", 3.8);
+    toast("先走到树旁边，按空格砍木头。", 3.2);
     beep(520, 0.08, "square", 0.05);
     syncGuide();
     last = performance.now();
@@ -452,7 +472,7 @@
     if (!state.flags.moved) return GUIDE[0];
     if (!state.flags.chopped) return GUIDE[1];
     if (!state.flags.built) return GUIDE[2];
-    if (state.nights < 1) return GUIDE[3];
+    if (state.nights < WIN_NIGHTS) return GUIDE[3];
     if (!state.win) return GUIDE[4];
     return null;
   }
@@ -464,7 +484,7 @@
       move: state.flags.moved,
       chop: state.flags.chopped,
       build: state.flags.built,
-      night: state.nights >= 1,
+      night: state.nights >= WIN_NIGHTS,
       offer: !!state.win,
     };
     for (const li of document.querySelectorAll("#guide-steps li")) {
@@ -563,8 +583,8 @@
       "",
       "WASD  移动",
       "空格  砍/挖/打面前的东西",
-      "1 栅栏　2 火把　3 田（背包最左三格）",
-      "点空地放下，点树仍是砍。自己能穿过栅栏。",
+      "1 栅栏　2 火把　3 田（按 0 取消）",
+      "点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。",
       "E  工作台合成 / 祭坛献祭 / 播种",
       "Q 或右键  职业技能",
       "点「麦」或 H  回血",
@@ -588,11 +608,24 @@
     for (const [k, n] of Object.entries(cost)) state.inv[k] -= n;
   }
 
-  function setBuild(kind) {
+  function setBuild(kind, opts) {
     if (!state || state.over) return;
-    state.build = state.build === kind ? null : kind;
-    const names = { fence: "栅栏", torch: "火把", plot: "田" };
-    if (state.build) toast(`建造${names[kind]}。点空地放下，点坏掉的栅栏可修好。点树仍是砍。`);
+    if (!kind) {
+      state.build = null;
+      syncHud();
+      return;
+    }
+    if (opts && opts.toggle && state.build === kind) {
+      state.build = null;
+      syncHud();
+      return;
+    }
+    const changed = state.build !== kind;
+    state.build = kind;
+    if (changed) {
+      const names = { fence: "栅栏", torch: "火把", plot: "田" };
+      toast(`建造${names[kind]}。点空地放下，点坏墙修好。空格拆除。`);
+    }
     syncHud();
   }
 
@@ -677,11 +710,18 @@
 
   function camera() {
     const p = state.player;
+    let fx = p.x;
+    let fy = p.y;
+    if (state.campPull > 0) {
+      const k = Math.min(1, state.campPull);
+      fx = p.x + (state.camp.x - p.x) * 0.42 * k;
+      fy = p.y + (state.camp.y - p.y) * 0.42 * k;
+    }
     const vw = VIEW_W * TILE;
     const vh = VIEW_H * TILE;
     return {
-      x: clamp(p.x - vw / 2, 0, COLS * TILE - vw),
-      y: clamp(p.y - vh / 2, 0, ROWS * TILE - vh),
+      x: clamp(fx - vw / 2, 0, COLS * TILE - vw),
+      y: clamp(fy - vh / 2, 0, ROWS * TILE - vh),
     };
   }
 
@@ -716,10 +756,17 @@
     return { tx: ptx + dir[0], ty: pty + dir[1], dx: dir[0], dy: dir[1] };
   }
 
-  function isMineable(tx, ty) {
+  function isResource(tx, ty) {
     const t = tileAt(tx, ty);
-    return t === T.TREE || t === T.STONE || t === T.GOLD || t === T.FENCE || t === T.TORCH
+    return t === T.TREE || t === T.STONE || t === T.GOLD
       || (t === T.CROP && (state.crops.get(`${tx},${ty}`)?.stage || 0) >= 2);
+  }
+  function isDismantle(tx, ty) {
+    const t = tileAt(tx, ty);
+    return t === T.FENCE || t === T.TORCH;
+  }
+  function isMineable(tx, ty) {
+    return isResource(tx, ty) || isDismantle(tx, ty);
   }
 
   function aimTile() {
@@ -826,6 +873,7 @@
     if (t === T.TREE) {
       setTile(tx, ty, T.DIRT);
       addDrop("wood", cx, cy, 2 + rand(2));
+      if (!state.flags.chopped) state.benchHint = 8;
       state.flags.chopped = true;
       burst(cx, cy, "#6bcf6b", 16);
       burst(cx, cy, "#8b5a2b", 8);
@@ -1136,13 +1184,13 @@
       else {
         const ftx = Math.floor(nx / TILE);
         const fty = Math.floor(e.y / TILE);
-        if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 18 * dt);
+        if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt);
       }
       if (!enemyBlocked(e, e.x, ny)) e.y = ny;
       else {
         const ftx = Math.floor(e.x / TILE);
         const fty = Math.floor(ny / TILE);
-        if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 18 * dt);
+        if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt);
       }
       e.hit = Math.max(0, e.hit - dt);
       e.flash = Math.max(0, (e.flash || 0) - dt);
@@ -1155,9 +1203,16 @@
         e.hit = 0.7;
         state.campHp = Math.max(0, state.campHp - e.dmg * 0.85);
         burst(state.camp.x, state.camp.y - 8, "#ff6a20", 5);
-        if (!state.campHurtWarn && state.campHp < 45) {
+        state.campPull = Math.max(state.campPull || 0, 1.2);
+        punch(2.4, 0.03);
+        const cam = camera();
+        const vw = VIEW_W * TILE;
+        const vh = VIEW_H * TILE;
+        const campOnScreen = state.camp.x >= cam.x && state.camp.x <= cam.x + vw
+          && state.camp.y >= cam.y && state.camp.y <= cam.y + vh;
+        if (!state.campHurtWarn) {
           state.campHurtWarn = true;
-          toast("篝火在掉血！守住它，灭了就失败。", 2.8);
+          toast(campOnScreen ? "篝火在掉血！守住它，灭了就失败。" : "篝火在掉血！镜头拉过去了，快回去。", 2.8);
         }
         if (state.campHp <= 0) {
           die("篝火熄灭");
@@ -1289,13 +1344,23 @@
     const wantAct = mouse.down || usingSpace;
     const f = usingSpace ? frontTile() : aimTile();
     const t = tileAt(f.tx, f.ty);
-    const mineable = isMineable(f.tx, f.ty);
-    const clickPlace = mouse.pressed || keys.has("KeyR");
-    if (clickPlace && state.build && !mineable && t !== T.FARM) {
+    const resource = isResource(f.tx, f.ty);
+    const dismantle = isDismantle(f.tx, f.ty);
+    if (!keys.has("KeyR")) state.rLatch = false;
+    const rTap = keys.has("KeyR") && !state.rLatch;
+    if (rTap) state.rLatch = true;
+    const clickPlace = mouse.pressed || rTap;
+    if (!mouse.down && !usingSpace) p.blockMine = false;
+    if (clickPlace && state.build === "fence" && t === T.FENCE) {
       p.mine = 0;
       p.mineTx = -1;
       tryPlace(f.tx, f.ty);
-    } else if (wantAct && mineable) {
+      p.blockMine = true;
+    } else if (clickPlace && state.build && !resource && t !== T.FARM && t !== T.FENCE) {
+      p.mine = 0;
+      p.mineTx = -1;
+      tryPlace(f.tx, f.ty);
+    } else if (wantAct && (resource || (dismantle && !p.blockMine))) {
       if (p.mineTx !== f.tx || p.mineTy !== f.ty) startMine(f.tx, f.ty);
       const hard = t === T.GOLD ? 1.35 : t === T.STONE ? 1.05 : t === T.TREE ? 0.85 : 0.35;
       p.mine += dt * def.mine / hard;
@@ -1363,8 +1428,17 @@
     if (state.hitstop > 0) {
       state.hitstop -= dt;
       state.shake = Math.max(0, (state.shake || 0) - dt * 20);
+      if (toastTimer > 0) {
+        toastTimer -= dt;
+        if (toastTimer <= 0) toastEl.classList.add("hidden");
+      }
+      mouse.pressed = false;
+      syncHud();
       return;
     }
+    state.campPull = Math.max(0, (state.campPull || 0) - dt);
+    state.campHint = Math.max(0, (state.campHint || 0) - dt);
+    state.benchHint = Math.max(0, (state.benchHint || 0) - dt);
     state.musicAcc += dt;
     if (state.musicAcc > 0.3) {
       state.musicAcc = 0;
@@ -1381,12 +1455,11 @@
       state.player.hp = Math.min(state.player.maxHp, state.player.hp + 5 * dt);
       state.campHp = Math.min(CAMP_MAX, state.campHp + 8 * dt);
     }
-    state.labelsUntil = Math.max(0, state.labelsUntil - dt);
     const f = aimTile();
     const t = tileAt(f.tx, f.ty);
     const p = state.player;
     let prompt = "";
-    if (dist(p.x, p.y, state.bench.x, state.bench.y) < 26) {
+    if (dist(p.x, p.y, state.bench.x, state.bench.y) < 26 && (state.flags.chopped || materialsReady() || state.inv.heart)) {
       prompt = materialsReady() || state.inv.heart ? "按 E 合成方块之心" : "按 E 查看还差哪些材料";
     } else if (dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
       if (!state.day) prompt = "祭坛夜里封着，先守篝火";
@@ -1398,7 +1471,12 @@
     } else if (t === T.TREE || tileAt(frontTile().tx, frontTile().ty) === T.TREE) prompt = "空格或按住左键砍树";
     else if (t === T.GOLD) prompt = "按住左键挖金矿";
     else if (t === T.STONE) prompt = "按住左键挖石头";
-    else if (t === T.FENCE) prompt = "按住左键拆除栅栏";
+    else if (t === T.FENCE) {
+      const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || FENCE_MAX;
+      prompt = (state.build === "fence" && hp < FENCE_MAX - 0.5)
+        ? "左键修理栅栏（1木）"
+        : "空格或按住左键拆除栅栏";
+    }
     else if (t === T.CROP && (state.crops.get(`${f.tx},${f.ty}`)?.stage || 0) >= 2) prompt = "按住左键收麦";
     else if (t === T.FARM) prompt = "按 E 或左键播种（要有种子）";
     else if (!state.day && state.enemies.length) prompt = "守住篝火 · 左键攻击 · Q 技能";
@@ -1457,16 +1535,19 @@
     skillDock.classList.toggle("ready", p.skillCd <= 0);
     if (state.build) {
       const names = { fence: "栅栏", torch: "火把", plot: "田" };
-      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)} · 点空地放下 / 点坏墙修理 · 再按键取消`;
+      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)} · 点空地放下 / 点坏墙修理 · 按 0 取消`;
       buildBanner.classList.remove("hidden");
     } else {
       buildBanner.classList.add("hidden");
     }
     if (!state.day && state.wavesTotal) {
-      const rest = state.wave >= state.wavesTotal && state.toSpawn <= 0 && state.enemies.length === 0;
-      waveBanner.textContent = rest
-        ? "这一夜的波次结束，守到天亮"
-        : `第 ${state.nights} 夜  波次 ${Math.max(1, state.wave)}/${state.wavesTotal}  剩余 ${state.toSpawn + state.enemies.length}`;
+      if (state.wave === 0) {
+        waveBanner.textContent = `第 ${state.nights} 夜  波次准备中`;
+      } else if (state.wave >= state.wavesTotal && state.toSpawn <= 0 && state.enemies.length === 0) {
+        waveBanner.textContent = "这一夜的波次结束，守到天亮";
+      } else {
+        waveBanner.textContent = `第 ${state.nights} 夜  波次 ${state.wave}/${state.wavesTotal}  剩余 ${state.toSpawn + state.enemies.length}`;
+      }
       waveBanner.classList.remove("hidden");
     } else {
       waveBanner.classList.add("hidden");
@@ -1525,10 +1606,16 @@
       const s = tileAt(tx, ty + 1) === T.FENCE;
       const e = tileAt(tx + 1, ty) === T.FENCE;
       const w = tileAt(tx - 1, ty) === T.FENCE;
-      px(c, x + 6, y + 6, 4, 4, "#5a3a20");
-      if (n || s || (!e && !w)) px(c, x + 7, y + (n ? 0 : 4), 2, n && s ? 16 : 8, "#8b5a2b");
-      if (e || w || (!n && !s)) px(c, x + (w ? 0 : 4), y + 7, e && w ? 16 : 8, 2, "#a06a38");
-      px(c, x + 6, y + 6, 4, 2, "#c48870");
+      px(c, x + 5, y + 5, 6, 6, "#4a2e16");
+      if (n || s || (!e && !w)) {
+        px(c, x + 5, y + (n ? 0 : 3), 6, n && s ? 16 : 11, "#6b4424");
+        px(c, x + 6, y + (n ? 0 : 3), 4, n && s ? 16 : 11, "#8b5a2b");
+      }
+      if (e || w || (!n && !s)) {
+        px(c, x + (w ? 0 : 3), y + 5, e && w ? 16 : 11, 6, "#6b4424");
+        px(c, x + (w ? 0 : 3), y + 6, e && w ? 16 : 11, 4, "#a06a38");
+      }
+      px(c, x + 5, y + 5, 6, 3, "#c48870");
       const hp = state.fenceHp.get(`${tx},${ty}`) || FENCE_MAX;
       if (hp < FENCE_MAX) {
         px(c, x + 2, y, 12, 2, "#111");
@@ -1747,15 +1834,14 @@
       }
     }
 
-    if (state.labelsUntil > 0) {
-      ctx.font = "8px monospace";
-      ctx.textAlign = "center";
-      ctx.fillStyle = "#ffe27a";
-      ctx.fillText("工作台 按E", state.bench.x - cam.x, state.bench.y - cam.y - 16);
+    ctx.font = "8px monospace";
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#ffe27a";
+    if (state.campHint > 0) {
       ctx.fillText("篝火回血", state.camp.x - cam.x, state.camp.y - cam.y - 14);
-      ctx.fillText("祭坛", state.altar.x - cam.x, state.altar.y - cam.y - 18);
-      ctx.fillText("→矿山", VIEW_W * TILE - 24, 20);
-      ctx.fillText("↓农田", 80, VIEW_H * TILE - 20);
+    }
+    if (state.benchHint > 0) {
+      ctx.fillText("工作台 按E", state.bench.x - cam.x, state.bench.y - cam.y - 16);
     }
 
     if (state.build) {
@@ -1856,7 +1942,7 @@
     ensureAudio();
     startGame(selectedClass);
   });
-  btnMute.addEventListener("click", () => setMuted(musicOn));
+  btnMute.addEventListener("click", cycleAudio);
   btnPause.addEventListener("click", togglePause);
   btnHelp.addEventListener("click", () => {
     if (!state || state.over) return;
@@ -1871,19 +1957,20 @@
     const item = e.target.closest(".item");
     if (!item) return;
     if (item.dataset.k === "wheat") eatWheat();
-    if (item.dataset.build) setBuild(item.dataset.build);
+    if (item.dataset.build) setBuild(item.dataset.build, { toggle: true });
   });
 
   window.addEventListener("keydown", (e) => {
     keys.add(e.code);
-    if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Digit1", "Digit2", "Digit3"].includes(e.code)) e.preventDefault();
+    if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Digit0", "Digit1", "Digit2", "Digit3"].includes(e.code)) e.preventDefault();
     if (!state) return;
     if (e.code === "Escape") togglePause();
-    if (e.code === "KeyM") setMuted(musicOn);
+    if (e.code === "KeyM") cycleAudio();
     if (state.paused || e.repeat) return;
     if (e.code === "KeyE" || e.code === "KeyF") interact();
     if (e.code === "KeyQ") useSkill();
     if (e.code === "KeyH") eatWheat();
+    if (e.key === "0" || e.code === "Digit0" || e.code === "Numpad0") setBuild(null);
     if (e.key === "1" || e.code === "Digit1" || e.code === "Numpad1") setBuild("fence");
     if (e.key === "2" || e.code === "Digit2" || e.code === "Numpad2") setBuild("torch");
     if (e.key === "3" || e.code === "Digit3" || e.code === "Numpad3") setBuild("plot");
