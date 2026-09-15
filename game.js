@@ -113,6 +113,12 @@
   const introCursor = document.getElementById("intro-cursor");
   const introBox = document.getElementById("intro-box");
   const btnSkipIntro = document.getElementById("btn-skip-intro");
+  const briefingEl = document.getElementById("briefing");
+  const briefingBox = document.getElementById("briefing-box");
+  const briefingTitle = document.getElementById("briefing-title");
+  const briefingText = document.getElementById("briefing-text");
+  const briefingCursor = document.getElementById("briefing-cursor");
+  const btnSkipBrief = document.getElementById("btn-skip-brief");
 
   const GUIDE = [
     { id: "move", title: "第一步：走起来", body: "用 WASD 移动。先走到附近的树旁边。" },
@@ -513,7 +519,7 @@
     screenIntro.classList.add("hidden");
     const cls = intro.cls;
     intro.cls = null;
-    startGame(cls);
+    startGame(cls, { brief: true });
   }
 
   function playIntro(cls) {
@@ -528,13 +534,86 @@
     intro.raf = requestAnimationFrame(tickIntro);
   }
 
-  function startGame(cls) {
+  const BRIEF = [
+    { focus: "camp", title: "要保护的", text: "这就是最后的篝火。\n夜里怪会来灭它。火灭了，这一局就结束。" },
+    { focus: "bench", title: "合成之心", text: "这是工作台。\n凑齐木、石、金、麦，按 E 合成方块之心。" },
+    { focus: "altar", title: "送到这里", text: "北边，沉睡的祭坛。\n守过两夜，天亮把心送到这里。" },
+    { focus: "camp", title: "白天先做", text: "先砍附近的树，把篝火四边围上。\n木头还要留给方块之心。" },
+    { focus: "player", title: "出发", text: "预演到此。\n……正式开始。" },
+  ];
+  const brief = { shown: 0, acc: 0 };
+
+  function briefFocus(step) {
+    if (!state || !step) return { x: 0, y: 0 };
+    if (step.focus === "camp") return state.camp;
+    if (step.focus === "bench") return state.bench;
+    if (step.focus === "altar") return state.altar;
+    return state.player;
+  }
+
+  function setBriefStep(i) {
+    state.briefStep = i;
+    brief.shown = 0;
+    brief.acc = 0;
+    const step = BRIEF[i];
+    briefingTitle.textContent = step.title;
+    briefingText.textContent = "";
+    briefingCursor.classList.add("hidden");
+    const target = briefFocus(step);
+    state.lookTo.x = target.x;
+    state.lookTo.y = target.y;
+  }
+
+  function startBriefing() {
+    state.briefing = true;
+    state.look.x = state.player.x;
+    state.look.y = state.player.y;
+    briefingEl.classList.remove("hidden");
+    guideEl.classList.add("hidden");
+    setBriefStep(0);
+    syncHud();
+  }
+
+  function advanceBrief() {
+    if (!state || !state.briefing) return;
+    const step = BRIEF[state.briefStep];
+    if (brief.shown < step.text.length) {
+      brief.shown = step.text.length;
+      briefingText.textContent = step.text;
+      briefingCursor.classList.remove("hidden");
+      return;
+    }
+    if (state.briefStep + 1 >= BRIEF.length) {
+      endBriefing();
+      return;
+    }
+    beep(520, 0.05, "square", 0.03);
+    setBriefStep(state.briefStep + 1);
+  }
+
+  function endBriefing() {
+    if (!state || !state.briefing) return;
+    state.briefing = false;
+    state.look.x = state.player.x;
+    state.look.y = state.player.y;
+    state.lookTo.x = state.player.x;
+    state.lookTo.y = state.player.y;
+    briefingEl.classList.add("hidden");
+    guideEl.classList.remove("hidden");
+    toast("先走到树旁边，按空格砍木头。", 3.2);
+    last = performance.now();
+    syncGuide();
+    syncHud();
+  }
+
+  function startGame(cls, opts) {
     if (intro.active) {
       intro.active = false;
       if (intro.raf) cancelAnimationFrame(intro.raf);
       intro.raf = 0;
       screenIntro.classList.add("hidden");
     }
+    const briefOn = !!(opts && opts.brief);
     const world = genWorld();
     const def = CLASSES[cls];
     state = {
@@ -564,6 +643,10 @@
       campHint: 6,
       benchHint: 0,
       rLatch: false,
+      briefing: false,
+      briefStep: 0,
+      look: { x: 24 * TILE + 8, y: 21 * TILE + 8 },
+      lookTo: { x: 22 * TILE + 8, y: 21 * TILE + 8 },
       enemies: [],
       drops: [],
       bolts: [],
@@ -601,10 +684,11 @@
     skillName.textContent = def.skill;
     manaWrap.classList.toggle("hidden", cls !== "mage");
     resize();
-    toast("先走到树旁边，按空格砍木头。", 3.2);
     beep(520, 0.08, "square", 0.05);
     syncGuide();
     last = performance.now();
+    if (briefOn) startBriefing();
+    else toast("先走到树旁边，按空格砍木头。", 3.2);
     requestAnimationFrame(loop);
   }
 
@@ -701,6 +785,11 @@
 
   function currentTarget() {
     if (!state) return null;
+    if (state.briefing) {
+      const step = BRIEF[state.briefStep];
+      const t = briefFocus(step);
+      return { x: t.x, y: t.y, kind: step.focus };
+    }
     if (canOffer()) return { x: state.altar.x, y: state.altar.y, kind: "altar" };
     if (!state.day) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
     if (state.inv.heart > 0 && !survivedNights()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
@@ -885,7 +974,10 @@
     const p = state.player;
     let fx = p.x;
     let fy = p.y;
-    if (state.campPull > 0) {
+    if (state.briefing || (state.look && Math.hypot(state.look.x - p.x, state.look.y - p.y) > 2)) {
+      fx = state.look.x;
+      fy = state.look.y;
+    } else if (state.campPull > 0) {
       const k = Math.min(1, state.campPull);
       fx = p.x + (state.camp.x - p.x) * 0.42 * k;
       fy = p.y + (state.camp.y - p.y) * 0.42 * k;
@@ -1679,6 +1771,31 @@
   function update(dt) {
     if (!state || state.paused) return;
     dt = Math.min(dt, 0.05);
+    if (state.briefing) {
+      state.time += dt;
+      state.look.x += (state.lookTo.x - state.look.x) * Math.min(1, 5.5 * dt);
+      state.look.y += (state.lookTo.y - state.look.y) * Math.min(1, 5.5 * dt);
+      const step = BRIEF[state.briefStep];
+      const full = step.text;
+      brief.acc += dt;
+      const ch = full[brief.shown] || "";
+      const wait = /[。、！？…—\n]/.test(ch) ? 0.16 : 0.034;
+      if (brief.shown < full.length && brief.acc >= wait) {
+        brief.acc = 0;
+        brief.shown += 1;
+        briefingText.textContent = full.slice(0, brief.shown);
+        if (ch && ch !== " " && ch !== "\n") beep(780, 0.016, "square", 0.016);
+        if (brief.shown >= full.length) briefingCursor.classList.remove("hidden");
+      }
+      state.musicAcc += dt;
+      if (state.musicAcc > 0.3) {
+        state.musicAcc = 0;
+        state.musicStep = (state.musicStep || 0) + 1;
+        playMusicPulse();
+      }
+      syncHud();
+      return;
+    }
     if (state.hitstop > 0) {
       state.hitstop -= dt;
       state.shake = Math.max(0, (state.shake || 0) - dt * 20);
@@ -1759,6 +1876,7 @@
   }
 
   function objectiveText() {
+    if (state.briefing) return "预演：看清要守的火，和最后要送到的祭坛";
     if (!state.day) return "守住篝火！怪从地图边缘朝营地来";
     if (canOffer()) return "天亮了。把方块之心送到北边祭坛（按 E）";
     if (state.inv.heart > 0 && !survivedNights()) return `先再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献祭`;
@@ -2096,11 +2214,14 @@
     ctx.font = "8px monospace";
     ctx.textAlign = "center";
     ctx.fillStyle = "#ffe27a";
-    if (state.campHint > 0) {
-      ctx.fillText("篝火回血", state.camp.x - cam.x, state.camp.y - cam.y - 14);
+    if (state.briefing || state.campHint > 0) {
+      ctx.fillText(state.briefing ? "篝火 · 要保护" : "篝火回血", state.camp.x - cam.x, state.camp.y - cam.y - 14);
     }
-    if (state.benchHint > 0) {
+    if (state.briefing || state.benchHint > 0) {
       ctx.fillText("工作台 按E", state.bench.x - cam.x, state.bench.y - cam.y - 16);
+    }
+    if (state.briefing) {
+      ctx.fillText("祭坛 · 送到这里", state.altar.x - cam.x, state.altar.y - cam.y - 18);
     }
 
     if (!campWalled() && (state.flags.chopped || state.build === "fence")) {
@@ -2188,7 +2309,7 @@
   }
 
   function togglePause() {
-    if (!state || state.over) return;
+    if (!state || state.over || state.briefing) return;
     state.paused = !state.paused;
     if (state.paused) {
       showOverlay("暂停", helpText(), [
@@ -2227,6 +2348,11 @@
   screenIntro.addEventListener("click", (e) => {
     if (e.target === screenIntro) advanceIntro();
   });
+  btnSkipBrief.addEventListener("click", (e) => {
+    e.stopPropagation();
+    endBriefing();
+  });
+  briefingBox.addEventListener("click", () => advanceBrief());
   btnMute.addEventListener("click", cycleAudio);
   btnPause.addEventListener("click", togglePause);
   btnHelp.addEventListener("click", () => {
@@ -2251,6 +2377,13 @@
       if (e.repeat) return;
       if (e.code === "Escape") finishIntro();
       else if (e.code === "Space" || e.code === "Enter" || e.key === "Enter") advanceIntro();
+      return;
+    }
+    if (state && state.briefing) {
+      if (["Space", "Enter", "Escape"].includes(e.code)) e.preventDefault();
+      if (e.repeat) return;
+      if (e.code === "Escape") endBriefing();
+      else if (e.code === "Space" || e.code === "Enter" || e.key === "Enter") advanceBrief();
       return;
     }
     keys.add(e.code);
@@ -2278,6 +2411,10 @@
   });
   canvas.addEventListener("mouseleave", () => { mouse.inside = false; mouse.down = false; });
   canvas.addEventListener("mousedown", (e) => {
+    if (state && state.briefing) {
+      if (e.button === 0) advanceBrief();
+      return;
+    }
     if (e.button === 0) { mouse.down = true; mouse.pressed = true; }
     if (e.button === 2) mouse.right = true;
   });
@@ -2290,6 +2427,7 @@
     start: (cls) => startGame(cls || "miner"),
     playIntro,
     skipIntro: finishIntro,
+    skipBrief: endBriefing,
     gather: (tx, ty) => gatherTile(tx, ty),
     setBuild,
     place: (tx, ty) => tryPlace(tx, ty),

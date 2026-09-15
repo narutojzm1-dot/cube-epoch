@@ -457,6 +457,71 @@ h1 {
 }
 #btn-skip-intro:hover { color: var(--gold); }
 
+.briefing {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px 26px;
+  pointer-events: none;
+  background: linear-gradient(transparent, rgba(0, 0, 12, .62) 45%);
+}
+.briefing-box {
+  pointer-events: auto;
+  position: relative;
+  width: min(500px, calc(100% - 24px));
+  min-height: 108px;
+  padding: 14px 20px 28px;
+  background: #000018;
+  color: #f4efe4;
+  cursor: pointer;
+  box-shadow:
+    0 0 0 2px #000,
+    0 0 0 4px #e8c040,
+    0 0 0 6px #000,
+    0 0 0 8px #8a6418,
+    0 0 0 10px #000;
+}
+#briefing-title {
+  display: block;
+  color: var(--gold);
+  letter-spacing: .2em;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+#briefing-text {
+  font-family: "Songti SC", "STSong", "PMingLiU", "Noto Serif SC", serif;
+  font-size: 16px;
+  line-height: 1.85;
+  letter-spacing: .1em;
+  white-space: pre-wrap;
+  min-height: 54px;
+}
+.briefing-hint {
+  color: #8a7a68;
+  font-size: 11px;
+  letter-spacing: .16em;
+}
+#btn-skip-brief {
+  pointer-events: auto;
+  align-self: flex-end;
+  appearance: none;
+  border: 0;
+  background: #2a2230;
+  color: var(--muted);
+  font: inherit;
+  font-size: 12px;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #000;
+}
+#btn-skip-brief:hover { color: var(--gold); }
+
 .overlay {
   position: fixed;
   inset: 0;
