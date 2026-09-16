@@ -7,10 +7,11 @@ const logs = [];
 page.on("pageerror", (e) => logs.push(e.message));
 
 await page.goto(origin, { waitUntil: "domcontentloaded" });
+await page.evaluate(() => localStorage.removeItem("cube-epoch-seen"));
 await page.locator('.class-card[data-class="knight"]').click();
 await page.locator("#btn-start").click();
 await page.waitForSelector("#screen-intro:not(.hidden)");
-await page.waitForTimeout(280);
+await page.waitForFunction(() => (document.getElementById("intro-text")?.innerText || "").includes("很久"));
 const crawl = await page.locator("#intro-text").innerText();
 if (!crawl.includes("很久")) throw new Error("intro crawl missing, got " + crawl);
 await page.locator("#btn-skip-intro").click();
@@ -23,9 +24,13 @@ await page.waitForTimeout(200);
 
 const firstAim = await page.evaluate(() => {
   const t = window.CUBE.currentTarget();
-  return t && t.kind;
+  const st = window.CUBE.getState();
+  const tx = Math.floor(t.x / 16);
+  const ty = Math.floor(t.y / 16);
+  return { kind: t && t.kind, tile: st.tiles[ty * 48 + tx] };
 });
-if (firstAim !== "tree") throw new Error("first target should be tree, got " + firstAim);
+if (firstAim.kind !== "tree") throw new Error("first target should be tree, got " + firstAim.kind);
+if (firstAim.tile !== 6) throw new Error("gold frame should sit on a tree tile, got " + firstAim.tile);
 
 const dayLen = await page.evaluate(() => window.CUBE.getState().dayLen);
 if (dayLen < 70) throw new Error("first day should be longer, dayLen=" + dayLen);
@@ -53,6 +58,19 @@ await page.evaluate(() => {
   window.CUBE.getState().player.x = 24 * 16 + 8;
 });
 
+const woodBefore = await page.evaluate(() => window.CUBE.getState().inv.wood);
+await page.evaluate(() => {
+  window.CUBE.getState().flags.gathered = false;
+  window.CUBE.gather(25, 22);
+});
+await page.waitForTimeout(500);
+const gathered = await page.evaluate(() => {
+  const st = window.CUBE.getState();
+  return { wood: st.inv.wood, gathered: st.flags.gathered };
+});
+if (!gathered.gathered) throw new Error("first wood pickup should set gathered");
+if (gathered.wood <= woodBefore) throw new Error("gather should add wood, " + woodBefore + " -> " + gathered.wood);
+
 await page.evaluate(() => {
   const st = window.CUBE.getState();
   st.flags.chopped = true;
@@ -60,15 +78,6 @@ await page.evaluate(() => {
 });
 const gapAim = await page.evaluate(() => window.CUBE.currentTarget().kind);
 if (gapAim !== "gap") throw new Error("after wood, target should be gap, got " + gapAim);
-
-await page.evaluate(() => window.CUBE.gather(25, 22));
-await page.waitForTimeout(500);
-const gathered = await page.evaluate(() => {
-  const st = window.CUBE.getState();
-  return { wood: st.inv.wood, gathered: st.flags.gathered };
-});
-if (!gathered.gathered) throw new Error("first wood pickup should set gathered");
-if (gathered.wood < 8) throw new Error("gather should add wood, wood=" + gathered.wood);
 
 await page.evaluate(() => {
   window.CUBE.setBuild("fence");
@@ -108,6 +117,13 @@ await page.evaluate(() => {
   st.inv.wood = 40;
   C.setBuild("fence");
   for (const [tx, ty] of [[22, 20], [21, 21], [23, 21], [22, 22]]) C.place(tx, ty);
+});
+const afterWall = await page.evaluate(() => window.CUBE.currentTarget().kind);
+if (afterWall === "gap" || afterWall === "tree") {
+  throw new Error("walled camp should not still aim at gap/tree, got " + afterWall);
+}
+await page.evaluate(() => {
+  const st = window.CUBE.getState();
   st.day = false;
   st.nights = 1;
   st.wavesTotal = 2;
@@ -126,7 +142,19 @@ const wall = await page.evaluate(() => {
 if (wall.camp < 99.5) throw new Error("walled camp should not take damage, " + wall.camp);
 if (!(wall.north < 80)) throw new Error("north fence should take damage, " + wall.north);
 
-if (logs.length) throw new Error("page errors: " + logs.join(" | "));
+await page.reload({ waitUntil: "domcontentloaded" });
+await page.locator('.class-card[data-class="knight"]').click();
+await page.locator("#btn-start").click();
+await page.waitForSelector("#screen-game:not(.hidden)");
+const skipped = await page.evaluate(() => ({
+  intro: document.getElementById("screen-intro").classList.contains("hidden"),
+  brief: document.getElementById("briefing").classList.contains("hidden"),
+}));
+if (!skipped.intro) throw new Error("returning player should skip intro");
+if (!skipped.brief) throw new Error("returning player should skip briefing");
+
+const realLogs = logs.filter((m) => !/audio device/i.test(m));
+if (realLogs.length) throw new Error("page errors: " + realLogs.join(" | "));
 await browser.close();
 server.close();
 console.log("E2E_OK");

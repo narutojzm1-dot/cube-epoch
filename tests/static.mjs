@@ -28,6 +28,7 @@ const must = [
   ["cube-epoch-seen", js],
   ["flags.gathered = true", js],
   ["kind: \"gap\"", js],
+  ["markSeenWorld()", js],
 ];
 
 for (const [needle, src] of must) {

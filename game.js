@@ -14,7 +14,7 @@
   const DAY_LEN = 62;
   // 第一天多给十几秒，够砍树围营再出门
   const FIRST_DAY_LEN = 76;
-  // 再玩的人跳过开场爬字
+  // 再玩的人跳过开场爬字和营地预演；第一次预演结束才写入
   const SEEN_KEY = "cube-epoch-seen";
 
   const T = {
@@ -172,6 +172,7 @@
 
   function ensureMusicPad() {
     if (!audioCtx || !musicGain || musicPad) return;
+    try {
     const filter = audioCtx.createBiquadFilter();
     filter.type = "lowpass";
     filter.frequency.value = 480;
@@ -184,6 +185,7 @@
     filter.connect(musicPadGain);
     musicPadGain.connect(musicGain);
     musicPad.start();
+    } catch (_) { /* 无音频输出时保持静音 */ }
   }
 
   function setMusicLevel() {
@@ -192,19 +194,24 @@
   }
 
   function ensureAudio() {
-    const AC = window.AudioContext || window.webkitAudioContext;
-    if (!audioCtx) audioCtx = new AC();
-    if (audioCtx.state === "suspended") audioCtx.resume();
-    if (!musicGain) {
-      musicGain = audioCtx.createGain();
-      musicGain.gain.value = musicOn ? 0.26 : 0;
-      musicGain.connect(audioCtx.destination);
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!audioCtx) audioCtx = new AC();
+      if (audioCtx.state === "suspended") audioCtx.resume();
+      if (!musicGain) {
+        musicGain = audioCtx.createGain();
+        musicGain.gain.value = musicOn ? 0.26 : 0;
+        musicGain.connect(audioCtx.destination);
+      }
+      ensureMusicPad();
+    } catch (_) {
+      // 无音频设备时保持静音，别把页面打挂
     }
-    ensureMusicPad();
   }
 
   function beep(freq, dur, type, vol) {
     if (!audioCtx || !sfxOn) return;
+    try {
     const o = audioCtx.createOscillator();
     const g = audioCtx.createGain();
     o.type = type || "square";
@@ -215,10 +222,12 @@
     g.connect(audioCtx.destination);
     o.start();
     o.stop(audioCtx.currentTime + dur);
+    } catch (_) { /* 无音频输出时保持静音 */ }
   }
 
   function noise(dur, vol, freq) {
     if (!audioCtx || !sfxOn) return;
+    try {
     const n = Math.max(1, Math.floor(audioCtx.sampleRate * dur));
     const buf = audioCtx.createBuffer(1, n, audioCtx.sampleRate);
     const data = buf.getChannelData(0);
@@ -234,6 +243,7 @@
     f.connect(g);
     g.connect(audioCtx.destination);
     src.start();
+    } catch (_) { /* 无音频输出时保持静音 */ }
   }
 
   function footstep() {
@@ -254,6 +264,7 @@
 
   function playMusicPulse() {
     if (!audioCtx || !musicOn || !state || state.paused || state.over) return;
+    try {
     ensureMusicPad();
     const day = [262, 330, 392, 330, 392, 523, 494, 392];
     const night = [196, 233, 262, 247, 220, 196, 175, 196];
@@ -282,6 +293,7 @@
     bg.connect(musicGain);
     b.start();
     b.stop(audioCtx.currentTime + 0.42);
+    } catch (_) { /* 无音频输出时保持静音 */ }
   }
 
   function audioLabel() {
@@ -511,6 +523,7 @@
 
   function playIntroTheme() {
     if (!audioCtx || !musicOn || !musicGain) return;
+    try {
     ensureMusicPad();
     const notes = [392, 523, 587, 523, 392, 330, 392, 523, 659, 784, 659, 523];
     notes.forEach((freq, i) => {
@@ -526,6 +539,7 @@
       o.start(t0);
       o.stop(t0 + 0.5);
     });
+    } catch (_) { /* 无音频输出时保持静音 */ }
   }
 
   function renderIntroText() {
@@ -661,6 +675,7 @@
     state.lookTo.y = state.player.y;
     briefingEl.classList.add("hidden");
     guideEl.classList.remove("hidden");
+    markSeenWorld();
     // 预演结束：金框改指树，别再让人盯着篝火
     toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
     last = performance.now();
@@ -751,9 +766,12 @@
     beep(520, 0.08, "square", 0.05);
     syncGuide();
     last = performance.now();
-    markSeenWorld();
     if (briefOn) startBriefing();
-    else toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
+    else {
+      // 再玩或直接进场：这时才算看过世界
+      markSeenWorld();
+      toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
+    }
     if (!looping) {
       looping = true;
       requestAnimationFrame(loop);
@@ -814,7 +832,7 @@
   function syncKeysHint(step) {
     if (!keysHintEl) return;
     if (!step) {
-      keysHintEl.textContent = "WASD 移动 · 空格砍/挖/打 · 1栏 2火 3田 · 点空地建造 · Q 技能 · H 吃麦";
+      keysHintEl.textContent = "WASD 移动 · 空格砍/挖/打 · 1栏 2火 3田 · 点空地建造 / 点坏墙修理 · Q 技能 · H 吃麦";
       return;
     }
     if (step.id === "move") keysHintEl.textContent = "此刻：WASD 或方向键，走到金框的树旁边";
@@ -891,12 +909,16 @@
     if (canOffer()) return { x: state.altar.x, y: state.altar.y, kind: "altar" };
     if (!state.day) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
     if (state.inv.heart > 0 && !survivedNights()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
-    if (materialsReady() && !state.inv.heart) return { x: state.bench.x, y: state.bench.y, kind: "bench" };
     // 没围营时：先指树，够料再指缺口——别再让新手盯着篝火
+    // 围营优先于工作台，免得先挖齐材料的人被拉去合成
     if (!campWalled()) {
       if (!state.flags.chopped || !canAffordNextFence()) {
         const t = nearestOf((tile) => tile === T.TREE);
-        if (t) return { ...(approachTile(t.tx, t.ty) || t), kind: "tree" };
+        if (t) {
+          // 第一棵树框树本身，别框旁边的空地（空格会砍错）
+          if (!state.flags.chopped) return { x: t.x, y: t.y, kind: "tree" };
+          return { ...(approachTile(t.tx, t.ty) || t), kind: "tree" };
+        }
       }
       const p = state.player;
       let best = null;
@@ -911,6 +933,7 @@
       if (best) return best;
       return { x: state.camp.x, y: state.camp.y, kind: "camp" };
     }
+    if (materialsReady() && !state.inv.heart) return { x: state.bench.x, y: state.bench.y, kind: "bench" };
     if (state.inv.wood < NEED.wood) {
       const t = nearestOf((tile) => tile === T.TREE);
       if (t) return { ...(approachTile(t.tx, t.ty) || t), kind: "tree" };
@@ -1282,6 +1305,7 @@
       addDrop("wood", cx, cy, 3 + rand(2));
       if (!state.flags.chopped) state.benchHint = 8;
       state.flags.chopped = true;
+      // 树倒当下给一个字，拾取时还会再飘一次进包
       floatText(cx, cy - 14, "+木", "#e8c040");
       burst(cx, cy, "#6bcf6b", 16);
       burst(cx, cy, "#8b5a2b", 8);
@@ -1666,6 +1690,7 @@
       punch(2.6, 0.045);
       burst(e.x, e.y, "#8dff9a", 8);
       state.kills += 1;
+      // 第一击杀：告诉人掉落能吃、别追太远
       if (state.kills === 1) {
         toast("干掉一只！掉的麦可以点背包回血。夜里别离篝火太远。", 2.6);
       }
@@ -1700,9 +1725,8 @@
         floatText(d.x, d.y - 12, "+" + labelOf(d.kind), d.kind === "gold" ? "#ffe27a" : "#e8dcc8");
         if (d.kind === "wood" && !state.flags.gathered) {
           state.flags.gathered = true;
-          toast(canAffordNextFence()
-            ? "木头进背包了。按 1 选栅栏，再点篝火旁发光格。"
-            : "木头进背包了。还不够围营，再砍一棵。", 3.4);
+          // 第一批木头还在飞，不按当前一颗判断够不够
+          toast("木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。", 3.4);
         }
         if (d.kind === "wheat" && !state.flags.sawWheat) {
           state.flags.sawWheat = true;
