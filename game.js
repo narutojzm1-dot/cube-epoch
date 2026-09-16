@@ -7,7 +7,8 @@
   const VIEW_W = 20;
   const VIEW_H = 12;
   const NEED = { wood: 4, stone: 5, gold: 3, wheat: 3 };
-  const WIN_NIGHTS = 2;
+  // 以前是 2；第一夜当教学，第三夜才出金色立方
+  const WIN_NIGHTS = 3;
   const CAMP_MAX = 100;
   const FENCE_MAX = 80;
   // 后几天仍用原来的白天长度
@@ -131,8 +132,8 @@
     { id: "chop", title: "第二步：砍木头", body: "对准金框的树，按空格或按住左键。木头会飞进背包，用来围栅栏。" },
     // 围营正文会按缺口/木料在 wallGuideBody 里重写；原句留下当兜底
     { id: "build", title: "第三步：围营地", body: "按 1 选栅栏，把篝火上下左右四格围上。发光的格子就是缺口。木头还要留给方块之心。" },
-    { id: "night", title: "第四步：守住篝火", body: "怪朝篝火走，站在墙后打，缺口要补。第二夜才有蝙蝠飞进来。" },
-    { id: "offer", title: "第五步：天亮献祭", body: "凑齐材料在工作台按 E 合成方块之心。撑过两夜，天亮后送到北边祭坛。" },
+    { id: "night", title: "第四步：守住篝火", body: "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。" },
+    { id: "offer", title: "第五步：天亮献祭", body: "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。" },
   ];
   const keysHintEl = document.getElementById("keys-hint");
   const nightFx = document.createElement("canvas");
@@ -517,7 +518,7 @@
       "最后一堆篝火还在营地中央跳。\n老人说，火在，纪元就在。\n火灭了，名字也会一起冷掉。",
       "北方祭坛沉睡着。\n要有人把「方块之心」捧去，\n黎明才会肯再睁眼。",
       `${name}啊。\n${flavor}\n篝火在等你。别让它先睡着。`,
-      "围起栅栏，像给火围一条被子。\n守过两夜。把那颗心，送到北边去。\n\n……出发吧。",
+      "围起栅栏，像给火围一条被子。\n守过三夜。把那颗心，送到北边去。\n\n……出发吧。",
     ];
   }
 
@@ -612,7 +613,7 @@
   const BRIEF = [
     { focus: "camp", title: "要保护的", text: "看见了吗？这簇还在跳的火。\n夜里所有的牙，都会朝它来。它灭了，这一局的太阳也就灭了。" },
     { focus: "bench", title: "合成之心", text: "这张旧台子还温着。\n木、石、金、麦凑齐，按 E。方块之心会在这里醒来。" },
-    { focus: "altar", title: "送到这里", text: "顺着土路一直向北。\n那座沉睡的祭坛，才是心要回家的地方。守过两夜，天亮再献。" },
+    { focus: "altar", title: "送到这里", text: "顺着土路一直向北。\n那座沉睡的祭坛，才是心要回家的地方。守过三夜，天亮再献。" },
     { focus: "camp", title: "白天先做", text: "先去砍树。把火的上下左右围死。\n记得留木头——心也是要吃木头的。" },
     { focus: "player", title: "出发", text: "预演到此。风已经在等了。\n……正式开始。" },
   ];
@@ -976,7 +977,7 @@
 
   function helpText() {
     return [
-      "白天围营，夜里守火。撑过两夜，天亮把方块之心送到北边祭坛。",
+      "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。",
       "金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。",
       "",
       "WASD  移动",
@@ -988,7 +989,7 @@
       "Q 或右键  职业技能",
       "点「麦」或 H  回血",
       "",
-      "栅栏挡地面怪，挡不住蝙蝠。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过两夜才能献。",
+      "栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
     ].join("\n");
   }
 
@@ -1412,7 +1413,7 @@
     burst(state.bench.x, state.bench.y - 8, "#fff4b0", 16);
     toast(survivedNights() && state.day
       ? "合成成功！沿土路向北，天亮把心放到祭坛。"
-      : "合成成功！先守过两夜，天亮再到北边祭坛。", 3.2);
+      : "合成成功！先守过三夜，天亮再到北边祭坛。", 3.2);
     beep(880, 0.1, "square", 0.06);
   }
 
@@ -1529,6 +1530,8 @@
       let kind = "slime";
       if (nights >= 2 && state.wave >= 2 && Math.random() < 0.45) kind = "bat";
       if (nights >= 3 && Math.random() < 0.22) kind = "cube";
+      // 第三夜后段必出立方，不然两夜就赢时这行几乎摸不到
+      if (nights >= 3 && state.wave >= 3) kind = "cube";
       const hp = kind === "slime" ? 32 : kind === "bat" ? 22 : 64;
       const spd = kind === "slime" ? 26 : kind === "bat" ? 44 : 30;
       const dmg = kind === "slime" ? 9 : kind === "bat" ? 8 : 16;
@@ -1563,7 +1566,10 @@
 
   function startNightWaves() {
     state.wave = 0;
-    state.wavesTotal = state.nights === 1 ? 2 : 3;
+    // 第一夜 2 波教学；第二夜 3 波蝙蝠；第三夜 4 波立方
+    state.wavesTotal = state.nights === 1 ? 2 : state.nights === 2 ? 3 : 4;
+    // 第三夜多撑几秒
+    state.nightLen = state.nights >= 3 ? 32 : 26;
     state.toSpawn = 0;
     state.waveWait = 2.2;
   }
@@ -1904,7 +1910,9 @@
         startNightWaves();
         toast(state.nights === 1
           ? "第一夜：怪分波朝篝火来。站在墙后打。"
-          : `第 ${state.nights} 夜，共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`, 3.2);
+          : state.nights === 2
+            ? `第二夜：共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`
+            : `第 ${state.nights} 夜：金色立方来了，共 ${state.wavesTotal} 波。墙挡不住全部。`, 3.2);
         beep(140, 0.16, "sawtooth", 0.05);
       } else {
         const extra = !campWalled()
@@ -2612,6 +2620,8 @@
     currentTarget,
     campGaps,
     canAffordNextFence,
+    spawnEnemy,
+    canOffer,
   };
 
   const qa = new URLSearchParams(location.search).get("qa");

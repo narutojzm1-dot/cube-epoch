@@ -142,6 +142,50 @@ const wall = await page.evaluate(() => {
 if (wall.camp < 99.5) throw new Error("walled camp should not take damage, " + wall.camp);
 if (!(wall.north < 80)) throw new Error("north fence should take damage, " + wall.north);
 
+const cubes = await page.evaluate(() => {
+  const C = window.CUBE;
+  const st = C.getState();
+  st.day = false;
+  st.nights = 3;
+  st.wave = 3;
+  st.enemies = [];
+  for (let i = 0; i < 10; i++) C.spawnEnemy();
+  return st.enemies.filter((e) => e.kind === "cube").length;
+});
+if (cubes < 1) throw new Error("night 3 wave 3 should spawn cubes, got " + cubes);
+
+await page.evaluate(() => {
+  const st = window.CUBE.getState();
+  st.day = true;
+  st.over = false;
+  st.win = false;
+  st.paused = false;
+  st.enemies = [];
+  st.nights = 2;
+  st.inv.heart = 1;
+  st.player.hp = st.player.maxHp;
+  st.player.x = st.altar.x;
+  st.player.y = st.altar.y + 12;
+});
+if (await page.evaluate(() => window.CUBE.canOffer())) {
+  throw new Error("two nights should not allow offer");
+}
+await page.keyboard.press("KeyE");
+await page.waitForTimeout(80);
+if (await page.evaluate(() => window.CUBE.getState().win)) {
+  throw new Error("offering at two nights should not win");
+}
+
+await page.evaluate(() => { window.CUBE.getState().nights = 3; });
+if (!(await page.evaluate(() => window.CUBE.canOffer()))) {
+  throw new Error("three nights should allow offer");
+}
+await page.keyboard.press("KeyE");
+await page.waitForTimeout(80);
+if (!(await page.evaluate(() => window.CUBE.getState().win))) {
+  throw new Error("three nights offer should win");
+}
+
 await page.reload({ waitUntil: "domcontentloaded" });
 await page.locator('.class-card[data-class="knight"]').click();
 await page.locator("#btn-start").click();
