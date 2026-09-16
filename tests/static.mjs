@@ -22,6 +22,12 @@ const must = [
   ["id=\"briefing\"", html],
   ["id=\"btn-skip-intro\"", html],
   ["id=\"btn-skip-brief\"", html],
+  ["function campGaps", js],
+  ["function canAffordNextFence", js],
+  ["FIRST_DAY_LEN", js],
+  ["cube-epoch-seen", js],
+  ["flags.gathered = true", js],
+  ["kind: \"gap\"", js],
 ];
 
 for (const [needle, src] of must) {

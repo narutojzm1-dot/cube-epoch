@@ -21,6 +21,21 @@ await page.locator("#btn-skip-brief").click();
 await page.waitForSelector("#screen-game:not(.hidden)");
 await page.waitForTimeout(200);
 
+const firstAim = await page.evaluate(() => {
+  const t = window.CUBE.currentTarget();
+  return t && t.kind;
+});
+if (firstAim !== "tree") throw new Error("first target should be tree, got " + firstAim);
+
+const dayLen = await page.evaluate(() => window.CUBE.getState().dayLen);
+if (dayLen < 70) throw new Error("first day should be longer, dayLen=" + dayLen);
+
+const startWood = await page.evaluate(() => window.CUBE.getState().inv.wood);
+if (startWood < 2) throw new Error("starter wood should be 2, got " + startWood);
+
+const obj = await page.locator("#objective").innerText();
+if (!obj.includes("树")) throw new Error("objective should mention tree, got " + obj);
+
 await page.keyboard.press("Digit1");
 await page.waitForTimeout(60);
 await page.keyboard.press("1");
@@ -37,6 +52,23 @@ if (cam.x < 400) throw new Error("camera should follow player, cam.x=" + cam.x);
 await page.evaluate(() => {
   window.CUBE.getState().player.x = 24 * 16 + 8;
 });
+
+await page.evaluate(() => {
+  const st = window.CUBE.getState();
+  st.flags.chopped = true;
+  st.inv.wood = 8;
+});
+const gapAim = await page.evaluate(() => window.CUBE.currentTarget().kind);
+if (gapAim !== "gap") throw new Error("after wood, target should be gap, got " + gapAim);
+
+await page.evaluate(() => window.CUBE.gather(25, 22));
+await page.waitForTimeout(500);
+const gathered = await page.evaluate(() => {
+  const st = window.CUBE.getState();
+  return { wood: st.inv.wood, gathered: st.flags.gathered };
+});
+if (!gathered.gathered) throw new Error("first wood pickup should set gathered");
+if (gathered.wood < 8) throw new Error("gather should add wood, wood=" + gathered.wood);
 
 await page.evaluate(() => {
   window.CUBE.setBuild("fence");
