@@ -30,7 +30,7 @@ const must = [
   ["kind: \"gap\"", js],
   ["markSeenWorld()", js],
   ["WIN_NIGHTS = 3", js],
-  ["state.wave >= 3) kind = \"cube\"", js],
+  ["state.wave >= 2) kind = \"cube\"", js],
 ];
 
 for (const [needle, src] of must) {

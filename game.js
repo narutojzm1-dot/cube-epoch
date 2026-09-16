@@ -1530,8 +1530,8 @@
       let kind = "slime";
       if (nights >= 2 && state.wave >= 2 && Math.random() < 0.45) kind = "bat";
       if (nights >= 3 && Math.random() < 0.22) kind = "cube";
-      // 第三夜后段必出立方，不然两夜就赢时这行几乎摸不到
-      if (nights >= 3 && state.wave >= 3) kind = "cube";
+      // 第三夜从第 2 波起必出立方（32 秒夜里第 3 波经常走不到）
+      if (nights >= 3 && state.wave >= 2) kind = "cube";
       const hp = kind === "slime" ? 32 : kind === "bat" ? 22 : 64;
       const spd = kind === "slime" ? 26 : kind === "bat" ? 44 : 30;
       const dmg = kind === "slime" ? 9 : kind === "bat" ? 8 : 16;
@@ -1912,7 +1912,7 @@
           ? "第一夜：怪分波朝篝火来。站在墙后打。"
           : state.nights === 2
             ? `第二夜：共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`
-            : `第 ${state.nights} 夜：金色立方来了，共 ${state.wavesTotal} 波。墙挡不住全部。`, 3.2);
+            : `第 ${state.nights} 夜：金色立方来了，共 ${state.wavesTotal} 波。它更肉，站在墙后打。`, 3.2);
         beep(140, 0.16, "sawtooth", 0.05);
       } else {
         const extra = !campWalled()

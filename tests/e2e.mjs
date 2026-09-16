@@ -147,12 +147,12 @@ const cubes = await page.evaluate(() => {
   const st = C.getState();
   st.day = false;
   st.nights = 3;
-  st.wave = 3;
+  st.wave = 2;
   st.enemies = [];
   for (let i = 0; i < 10; i++) C.spawnEnemy();
   return st.enemies.filter((e) => e.kind === "cube").length;
 });
-if (cubes < 1) throw new Error("night 3 wave 3 should spawn cubes, got " + cubes);
+if (cubes < 8) throw new Error("night 3 wave 2 should be cubes, got " + cubes);
 
 await page.evaluate(() => {
   const st = window.CUBE.getState();
