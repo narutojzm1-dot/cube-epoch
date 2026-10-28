@@ -541,7 +541,7 @@ h1 {
 }
 .panel h2 { margin-bottom: 10px; }
 .panel p { color: var(--muted); line-height: 1.6; white-space: pre-wrap; }
-.overlay-actions { margin-top: 18px; display: flex; gap: 10px; }
+.overlay-actions { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
 
 @media (max-width: 980px) {
   .class-grid { grid-template-columns: 1fr 1fr; }
@@ -551,3 +551,15 @@ h1 {
   .hud-right { text-align: left; justify-content: flex-start; }
   .keys-hint { white-space: normal; text-align: center; width: calc(100% - 16px); }
 }
+
+.overlay-actions.choices { flex-direction: column; }
+.overlay-actions button.choice {
+  text-align: left;
+  background: #3a2e3e;
+  color: var(--ink);
+  border-left: 6px solid var(--gold);
+}
+.overlay-actions button.choice.blessing { border-left-color: var(--grass); }
+.overlay-actions button.choice.mutation { border-left-color: var(--hp); }
+.overlay-actions button.choice:hover,
+.overlay-actions button.choice:focus-visible { background: #4a3a50; }

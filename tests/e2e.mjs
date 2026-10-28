@@ -10,7 +10,7 @@ await page.goto(origin, { waitUntil: "domcontentloaded" });
 await page.locator('.class-card[data-class="knight"]').click();
 await page.locator("#btn-start").click();
 await page.waitForSelector("#screen-intro:not(.hidden)");
-await page.waitForTimeout(280);
+await page.waitForFunction(() => document.getElementById("intro-text").textContent.includes("很久"), null, { timeout: 3000 }).catch(() => {});
 const crawl = await page.locator("#intro-text").innerText();
 if (!crawl.includes("很久")) throw new Error("intro crawl missing, got " + crawl);
 await page.locator("#btn-skip-intro").click();

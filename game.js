@@ -669,6 +669,13 @@ import {
       musicAcc: 0,
       musicStep: 0,
       kills: 0,
+      era: 1,
+      eraStart: 0,
+      relics: [],
+      picks: [],
+      choosing: false,
+      howlPending: false,
+      howl: 0,
       nightWarned: false,
       skippedGuide: false,
       flags: { moved: false, chopped: false, gathered: false, crafted: false, offered: false, planted: false, sawWheat: false, built: false },
@@ -693,8 +700,29 @@ import {
     return Object.entries(NEED).every(([k, n]) => (state.inv[k] || 0) >= n);
   }
 
+  function eraNights() {
+    return WIN_NIGHTS + (state.era - 1) * ERA_NIGHTS_STEP;
+  }
+  function nightsLeft() {
+    return Math.max(0, eraNights() - (state.nights - state.eraStart));
+  }
   function survivedNights() {
-    return state.nights >= WIN_NIGHTS;
+    return nightsLeft() <= 0;
+  }
+  function eraMul() {
+    return Math.pow(ERA_SCALING, state.era - 1);
+  }
+  function eraName(n) {
+    return ERA_NAMES[n - 1] || `第${n}纪元`;
+  }
+  function has(id) {
+    return state.relics.includes(id);
+  }
+  function dmgMul() {
+    return (has("whetstone") ? RELIC_FX.whetstoneDmg : 1) * (has("glass_cannon") ? RELIC_FX.glassCannonDmg : 1);
+  }
+  function fenceMax() {
+    return FENCE_MAX * (has("iron_hoops") ? RELIC_FX.ironHoopsFence : 1);
   }
   function canOffer() {
     return state.day && survivedNights() && state.inv.heart > 0;
@@ -705,7 +733,7 @@ import {
     if (!state.flags.moved) return GUIDE[0];
     if (!state.flags.chopped) return GUIDE[1];
     if (!campWalled()) return GUIDE[2];
-    if (state.nights < WIN_NIGHTS) return GUIDE[3];
+    if (!survivedNights()) return GUIDE[3];
     if (!state.win) return GUIDE[4];
     return null;
   }
@@ -717,7 +745,7 @@ import {
       move: state.flags.moved,
       chop: state.flags.chopped,
       build: campWalled(),
-      night: state.nights >= WIN_NIGHTS,
+      night: survivedNights() || !!state.win,
       offer: !!state.win,
     };
     for (const li of document.querySelectorAll("#guide-steps li")) {
@@ -727,7 +755,7 @@ import {
     }
     if (state.skippedGuide || !step) {
       guideEl.classList.add("compact");
-      guideTitle.textContent = state.win ? "方块之心已点亮" : "当前目标";
+      guideTitle.textContent = state.era > 1 ? `${eraName(state.era)} · 当前目标` : "当前目标";
       guideBody.textContent = objectiveText();
       return;
     }
@@ -824,7 +852,7 @@ import {
       return;
     }
     state.inv.wheat -= 1;
-    const heal = state.cls === "farmer" ? 22 : 14;
+    const heal = (state.cls === "farmer" ? 22 : 14) + (has("harvest_charm") ? RELIC_FX.harvestCharmHeal : 0);
     state.player.hp = Math.min(state.player.maxHp, state.player.hp + heal);
     floatText(state.player.x, state.player.y - 18, `+${heal}`, "#8dff9a");
     toast(`吃掉一束麦，回复 ${heal} 生命。`);
@@ -835,6 +863,8 @@ import {
   function helpText() {
     return [
       "白天围营，夜里守火。撑过两夜，天亮把方块之心送到北边祭坛。",
+      "每撑过一夜，天亮可从三份「黎明的馈赠」里挑一份：遗物、祝福或变异。",
+      "献祭后可点亮祭坛进入下一纪元：多守一夜，怪更强。随时可以收手结算，复制战绩。",
       "",
       "WASD  移动",
       "空格  砍/挖/打面前的东西",
@@ -911,8 +941,8 @@ import {
     if (!kind) return false;
     if (kind === "fence" && tileAt(tx, ty) === T.FENCE) {
       const key = `${tx},${ty}`;
-      const hp = state.fenceHp.get(key) || FENCE_MAX;
-      if (hp >= FENCE_MAX - 0.5) {
+      const hp = state.fenceHp.get(key) || fenceMax();
+      if (hp >= fenceMax() - 0.5) {
         return true;
       }
       if ((state.inv.wood || 0) < 1) {
@@ -920,7 +950,7 @@ import {
         return true;
       }
       state.inv.wood -= 1;
-      state.fenceHp.set(key, FENCE_MAX);
+      state.fenceHp.set(key, fenceMax());
       burst(tx * TILE + 8, ty * TILE + 8, "#c4a06a", 6);
       toast("栅栏修好了。");
       beep(360, 0.05, "triangle", 0.04);
@@ -944,7 +974,7 @@ import {
     const openBefore = kind === "fence" && !campWalled();
     if (kind === "fence") {
       setTile(tx, ty, T.FENCE);
-      state.fenceHp.set(`${tx},${ty}`, FENCE_MAX);
+      state.fenceHp.set(`${tx},${ty}`, fenceMax());
     } else if (kind === "torch") {
       setTile(tx, ty, T.TORCH);
     } else {
@@ -1124,29 +1154,162 @@ import {
     }
   }
 
-  function die(reason) {
-    if (state.over) return;
+  function shareText() {
+    const names = state.picks.map((id) => RELICS.find((r) => r.id === id).name);
+    return `方块纪元·种子 ${state.seed} · ${eraName(state.era)} · 第${state.nights}夜 · 击杀${state.kills} · 遗物[${names.join(",")}]`;
+  }
+
+  function copyText(text) {
+    const fallback = () => {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      let ok = false;
+      try {
+        ok = document.execCommand("copy");
+      } catch {
+        ok = false;
+      }
+      ta.remove();
+      toast(ok ? "战绩已复制，发给朋友吧。" : "复制失败，请手动选中上面的文字。");
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => toast("战绩已复制，发给朋友吧。"), fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  function showResult(title, body) {
     state.over = true;
     state.paused = true;
-    showOverlay(reason || "营地失守", `你撑过了 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。\n栅栏能挡地面的怪，夜里站在火把旁边打。`, [
-      ["回到选角", () => location.reload()],
+    state.choosing = false;
+    state.share = shareText();
+    showOverlay(title, `${body}\n\n${state.share}`, [
+      ["复制战绩", () => copyText(state.share), { id: "btn-copy-share" }],
+      ["同种子再来", () => {
+        const u = new URL(location.href);
+        u.searchParams.set("seed", state.seed);
+        location.href = u.toString();
+      }],
+      ["再玩一局", () => {
+        const u = new URL(location.href);
+        u.searchParams.delete("seed");
+        location.href = u.toString();
+      }],
     ]);
+  }
+
+  function die(reason) {
+    if (state.over) return;
+    overlay.classList.add("hidden");
+    showResult(reason || "营地失守", `${eraName(state.era)}，你撑过了 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。\n栅栏能挡地面的怪，夜里站在火把旁边打。`);
+  }
+
+  function runTime() {
+    const t = Math.floor(state.time);
+    return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`;
   }
 
   function win() {
     state.win = true;
-    state.over = true;
     state.paused = true;
-    const t = Math.floor(state.time);
+    state.choosing = true;
+    const done = eraName(state.era);
+    const next = eraName(state.era + 1);
     showOverlay(
-      "方块之心已点亮",
-      `${CLASSES[state.cls].name} 把方块之心放上祭坛。\n用时 ${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}，度过 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。`,
+      `${done}落幕 · 方块之心已点亮`,
+      `${CLASSES[state.cls].name} 把方块之心放上祭坛。\n用时 ${runTime()}，度过 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。\n\n点亮祭坛进入${next}：要多守 ${ERA_NIGHTS_STEP} 夜，怪物生命与伤害 ×${ERA_SCALING}，每夜多 ${WAVES.perEra} 波。`,
       [
-        ["再玩一局", () => location.reload()],
+        ["点亮祭坛 · 进入下一纪元", () => nextEra(), { id: "btn-next-era" }],
+        ["就此收手 · 结算", () => showResult("纪元传说", `${CLASSES[state.cls].name} 在${done}后放下了火把。\n用时 ${runTime()}，度过 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。`), { id: "btn-end-run" }],
       ]
     );
     beep(660, 0.12, "square", 0.06);
     setTimeout(() => beep(880, 0.18, "square", 0.05), 120);
+  }
+
+  function nextEra() {
+    state.era += 1;
+    state.eraStart = state.nights;
+    state.choosing = false;
+    state.paused = false;
+    state.skippedGuide = true;
+    overlay.classList.add("hidden");
+    last = performance.now();
+    burst(state.altar.x, state.altar.y, "#ffe27a", 24);
+    toast(`${eraName(state.era)}开始。再守 ${eraNights()} 夜，怪物更强了。`, 3.4);
+    beep(330, 0.2, "sawtooth", 0.05);
+    syncGuide();
+    syncHud();
+  }
+
+  function rollDawn() {
+    const pool = RELICS.filter((r) => r.type === "blessing" || !state.relics.includes(r.id));
+    const out = [];
+    while (out.length < DAWN_CHOICES && pool.length) {
+      const total = pool.reduce((s, r) => s + r.weight, 0);
+      let roll = rnd("event") * total;
+      let i = 0;
+      while (i < pool.length - 1 && roll >= pool[i].weight) {
+        roll -= pool[i].weight;
+        i += 1;
+      }
+      out.push(pool.splice(i, 1)[0]);
+    }
+    return out;
+  }
+
+  function offerDawn() {
+    if (state.over) return;
+    const choices = rollDawn();
+    if (!choices.length) return;
+    state.paused = true;
+    state.choosing = true;
+    keys.clear();
+    mouse.down = false;
+    showOverlay(
+      "黎明的馈赠",
+      `撑过了第 ${state.nights} 夜。选一份馈赠带进今天：`,
+      choices.map((r) => [
+        `【${RELIC_TYPE_LABEL[r.type]}】${r.name} · ${r.desc}`,
+        () => pickRelic(r.id),
+        { cls: `choice ${r.type}`, data: { relic: r.id } },
+      ]),
+      { choices: true }
+    );
+    beep(700, 0.1, "triangle", 0.05);
+  }
+
+  function pickRelic(id) {
+    const r = RELICS.find((x) => x.id === id);
+    if (!r || !state.choosing) return;
+    state.picks.push(id);
+    if (r.type !== "blessing") state.relics.push(id);
+    const p = state.player;
+    if (id === "supply_cache") {
+      state.inv.wood += RELIC_FX.supplyWood;
+      state.inv.stone += RELIC_FX.supplyStone;
+    } else if (id === "hearth_song") {
+      state.campHp = CAMP_MAX;
+      p.hp = p.maxHp;
+    } else if (id === "wolf_howl") {
+      state.howlPending = true;
+    } else if (id === "glass_cannon") {
+      p.maxHp = Math.round(p.maxHp * RELIC_FX.glassCannonHp);
+      p.hp = Math.min(p.hp, p.maxHp);
+    }
+    state.choosing = false;
+    state.paused = false;
+    overlay.classList.add("hidden");
+    last = performance.now();
+    toast(`获得${RELIC_TYPE_LABEL[r.type]}「${r.name}」：${r.desc}`, 3);
+    beep(880, 0.08, "square", 0.05);
+    syncHud();
   }
 
   function gatherTile(tx, ty) {
@@ -1227,7 +1390,7 @@ import {
       if (!state.day) {
         toast("祭坛夜里封着。先守住篝火，天亮再献。");
       } else if (!survivedNights()) {
-        toast(`还要再守 ${WIN_NIGHTS - state.nights} 夜。天亮后才能献祭。`);
+        toast(`还要再守 ${nightsLeft()} 夜。天亮后才能献祭。`);
       } else if (state.inv.heart > 0) {
         state.inv.heart -= 1;
         burst(state.altar.x, state.altar.y, "#ffe27a", 24);
@@ -1263,7 +1426,7 @@ import {
     burst(state.bench.x, state.bench.y - 8, "#fff4b0", 16);
     toast(survivedNights() && state.day
       ? "合成成功！沿土路向北，天亮把心放到祭坛。"
-      : "合成成功！先守过两夜，天亮再到北边祭坛。", 3.2);
+      : `合成成功！先再守 ${nightsLeft()} 夜，天亮再到北边祭坛。`, 3.2);
     beep(880, 0.1, "square", 0.06);
   }
 
@@ -1276,7 +1439,7 @@ import {
     const f = aimVec();
     faceVec(f);
     const reach = p.cls === "knight" ? 34 : p.cls === "miner" ? 26 : 22;
-    const dmg = CLASSES[p.cls].melee;
+    const dmg = Math.round(CLASSES[p.cls].melee * dmgMul());
     p.attack = 0.2;
     p.slashDx = f.dx;
     p.slashDy = f.dy;
@@ -1320,7 +1483,7 @@ import {
     const f = aimVec();
     faceVec(f);
     state.bolts.push({
-      x: p.x, y: p.y - 6, vx: f.dx * 150, vy: f.dy * 150, life: 0.95, dmg: CLASSES.mage.ranged, nova: false, pierce: 2, hit: new Set(),
+      x: p.x, y: p.y - 6, vx: f.dx * 150, vy: f.dy * 150, life: 0.95, dmg: Math.round(CLASSES.mage.ranged * dmgMul()), nova: false, pierce: 2, hit: new Set(),
     });
     beep(720, 0.06, "sine", 0.04);
   }
@@ -1347,7 +1510,7 @@ import {
       for (let i = 0; i < 8; i++) {
         const a = (Math.PI * 2 * i) / 8;
         state.bolts.push({
-          x: p.x, y: p.y - 6, vx: Math.cos(a) * 120, vy: Math.sin(a) * 120, life: 0.6, dmg: 18, nova: true, pierce: 1, hit: new Set(),
+          x: p.x, y: p.y - 6, vx: Math.cos(a) * 120, vy: Math.sin(a) * 120, life: 0.6, dmg: Math.round(18 * dmgMul()), nova: true, pierce: 1, hit: new Set(),
         });
       }
       beep(900, 0.12, "sine", 0.05);
@@ -1381,17 +1544,21 @@ import {
         if (state.nights >= row.minNight && state.wave >= row.minWave && rnd("event") < row.chance) kind = row.kind;
       }
       const def = ENEMIES[kind];
-      const hp = def.hp;
+      const hp = Math.round(def.hp * eraMul() * (has("blood_moon") ? RELIC_FX.bloodMoonHp : 1));
       const spd = def.spd;
-      const dmg = def.dmg;
+      const dmg = def.dmg * eraMul();
       state.enemies.push({ kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd, dmg, hit: 0, flash: 0, bob: rnd("fx") });
       return;
     }
   }
 
-  function hitFence(tx, ty, dmg) {
+  function hitFence(tx, ty, dmg, e, dt) {
+    if (e && has("thorn_fence")) {
+      e.hp -= RELIC_FX.thornFenceDps * dt;
+      e.flash = Math.max(e.flash || 0, 0.05);
+    }
     const key = `${tx},${ty}`;
-    const hp = (state.fenceHp.get(key) || FENCE_MAX) - dmg;
+    const hp = (state.fenceHp.get(key) || fenceMax()) - dmg;
     if (hp <= 0) {
       setTile(tx, ty, T.GRASS);
       state.fenceHp.delete(key);
@@ -1415,7 +1582,7 @@ import {
 
   function startNightWaves() {
     state.wave = 0;
-    state.wavesTotal = state.nights === 1 ? WAVES.firstNight : WAVES.later;
+    state.wavesTotal = (state.nights === 1 ? WAVES.firstNight : WAVES.later) + (state.era - 1) * WAVES.perEra;
     state.toSpawn = 0;
     state.waveWait = 2.2;
   }
@@ -1445,11 +1612,13 @@ import {
         if (state.waveWait > 2.2) beginWave();
       }
     }
+    if (!state.day && state.howl > 0) state.howl = Math.max(0, state.howl - dt);
     for (const e of state.enemies) {
       const dPlayer = dist(e.x, e.y, p.x, p.y);
+      if (state.howl > 0) e.hp -= RELIC_FX.wolfHowlDps * dt;
       if (state.player.dash > 0 && dPlayer < 16 && !e.dashHit) {
         e.dashHit = true;
-        e.hp -= 14;
+        e.hp -= 14 * dmgMul();
         e.stun = Math.max(e.stun || 0, 0.18);
         const dx = e.x - p.x;
         const dy = e.y - p.y;
@@ -1481,6 +1650,8 @@ import {
         const etx = Math.floor(e.x / TILE);
         const ety = Math.floor(e.y / TILE);
         if (tileAt(etx, ety) === T.TORCH) spd *= 0.7;
+        if (has("wind_chime") && dist(e.x, e.y, state.camp.x, state.camp.y) < RELIC_FX.windChimeRadius) spd *= RELIC_FX.windChimeSlow;
+        if (state.howl > 0) spd *= RELIC_FX.wolfHowlSlow;
         e.vx = (dx / len) * spd;
         e.vy = (dy / len) * spd;
         const nx = e.x + e.vx * dt;
@@ -1489,13 +1660,13 @@ import {
         else {
           const ftx = Math.floor(nx / TILE);
           const fty = Math.floor(e.y / TILE);
-          if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt);
+          if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt, e, dt);
         }
         if (!enemyBlocked(e, e.x, ny)) e.y = ny;
         else {
           const ftx = Math.floor(e.x / TILE);
           const fty = Math.floor(ny / TILE);
-          if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt);
+          if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt, e, dt);
         }
       }
       if (dPlayer < 14 && e.hit <= 0) {
@@ -1514,7 +1685,7 @@ import {
         }
         if (home) continue;
         e.hit = 0.7;
-        state.campHp = Math.max(0, state.campHp - e.dmg * 0.85);
+        state.campHp = Math.max(0, state.campHp - e.dmg * 0.85 * (has("ember_core") ? RELIC_FX.emberCoreCamp : 1));
         state.campFlash = 0.4;
         burst(state.camp.x, state.camp.y - 8, "#ff6a20", 5);
         state.campPull = Math.max(state.campPull || 0, 1.2);
@@ -1542,8 +1713,10 @@ import {
       punch(2.6, 0.045);
       burst(e.x, e.y, "#8dff9a", 8);
       state.kills += 1;
+      const luck = has("lucky_coin") ? RELIC_FX.luckyCoinDrop : 1;
+      const n = has("blood_moon") ? RELIC_FX.bloodMoonDrop : 1;
       for (const d of ENEMY_DROPS) {
-        if (rnd("event") < d.chance) addDrop(d.kind, e.x, e.y, 1);
+        if (rnd("event") < d.chance * luck) addDrop(d.kind, e.x, e.y, n);
       }
       return false;
     });
@@ -1631,8 +1804,9 @@ import {
     if (moving) state.flags.moved = true;
     if (moving) {
       const l = Math.hypot(ix, iy);
-      p.vx = (ix / l) * def.speed;
-      p.vy = (iy / l) * def.speed;
+      const speed = def.speed * (has("light_boots") ? RELIC_FX.lightBootsSpeed : 1);
+      p.vx = (ix / l) * speed;
+      p.vy = (iy / l) * speed;
       if (Math.abs(ix) > Math.abs(iy)) p.dir = ix < 0 ? 1 : 2;
       else p.dir = iy < 0 ? 3 : 0;
     } else {
@@ -1681,7 +1855,8 @@ import {
     const doMine = () => {
       if (p.mineTx !== f.tx || p.mineTy !== f.ty) startMine(f.tx, f.ty);
       const hard = t === T.GOLD ? 1.35 : t === T.STONE ? 1.05 : t === T.TREE ? 0.85 : 0.35;
-      p.mine += dt * def.mine / hard;
+      const axe = t === T.TREE && has("flint_axe") ? RELIC_FX.flintAxeChop : 1;
+      p.mine += dt * def.mine * axe / hard;
       if (p.mine >= 1) {
         gatherTile(f.tx, f.ty);
         p.mine = 0;
@@ -1742,6 +1917,10 @@ import {
       if (!state.day) {
         state.nights += 1;
         startNightWaves();
+        if (state.howlPending) {
+          state.howlPending = false;
+          state.howl = RELIC_FX.wolfHowlSecs;
+        }
         toast(state.nights === 1
           ? "第一夜：怪分波朝篝火来。站在墙后打。"
           : `第 ${state.nights} 夜，共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`, 3.2);
@@ -1751,12 +1930,18 @@ import {
           ? "先把发光的缺口补上，再去凑材料。"
           : survivedNights()
             ? (state.inv.heart ? "可以去北边祭坛献祭了。" : "材料齐了就去工作台合成，再到祭坛。")
-            : `还要再守 ${WIN_NIGHTS - state.nights} 夜。白天补墙、凑材料。`;
+            : `还要再守 ${nightsLeft()} 夜。白天补墙、凑材料。`;
         toast("天亮了。" + extra, 3);
         beep(620, 0.1, "square", 0.04);
         state.enemies = [];
+        state.howl = 0;
         state.nightWarned = false;
         state.fenceBreakWarn = false;
+        if (has("greedy_hearth")) {
+          state.inv.gold += RELIC_FX.greedyHearthGold;
+          floatText(state.camp.x, state.camp.y - 18, `+${RELIC_FX.greedyHearthGold}金`, "#e8c040");
+        }
+        offerDawn();
       }
     }
     if (state.day && !state.nightWarned && state.cycle > state.dayLen - 8) {
@@ -1823,7 +2008,7 @@ import {
     updateCycle(dt);
     if (state.day && state.campHp > 0 && dist(state.player.x, state.player.y, state.camp.x, state.camp.y) < 30) {
       state.player.hp = Math.min(state.player.maxHp, state.player.hp + 5 * dt);
-      state.campHp = Math.min(CAMP_MAX, state.campHp + 8 * dt);
+      if (!has("greedy_hearth")) state.campHp = Math.min(CAMP_MAX, state.campHp + 8 * dt);
     }
     const f = aimTile();
     const t = tileAt(f.tx, f.ty);
@@ -1833,7 +2018,7 @@ import {
       prompt = materialsReady() || state.inv.heart ? "按 E 合成方块之心" : "按 E 查看还差哪些材料";
     } else if (dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
       if (!state.day) prompt = "祭坛夜里封着，先守篝火";
-      else if (!survivedNights()) prompt = `再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献`;
+      else if (!survivedNights()) prompt = `再守 ${nightsLeft()} 夜，天亮才能献`;
       else if (state.inv.heart > 0) prompt = "按 E 献上方块之心";
       else prompt = "先去工作台合成方块之心";
     } else if (!state.day && state.enemies.some((e) => dist(e.x, e.y, p.x, p.y) < 42)) {
@@ -1844,8 +2029,8 @@ import {
     else if (t === T.GOLD) prompt = "按住左键挖金矿";
     else if (t === T.STONE) prompt = "按住左键挖石头";
     else if (t === T.FENCE) {
-      const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || FENCE_MAX;
-      if (state.build === "fence" && hp < FENCE_MAX - 0.5) prompt = "左键修理栅栏（1木）";
+      const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || fenceMax();
+      if (state.build === "fence" && hp < fenceMax() - 0.5) prompt = "左键修理栅栏（1木）";
       else if (state.build === "fence" && !campWalled()) prompt = "这段好了。点发光的空地继续围";
       else prompt = "空格拆除栅栏";
     }
@@ -1876,7 +2061,7 @@ import {
     if (state.briefing) return "预演：看清要守的火，和最后要送到的祭坛";
     if (!state.day) return "守住篝火！怪从地图边缘朝营地来";
     if (canOffer()) return "天亮了。把方块之心送到北边祭坛（按 E）";
-    if (state.inv.heart > 0 && !survivedNights()) return `先再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献祭`;
+    if (state.inv.heart > 0 && !survivedNights()) return `先再守 ${nightsLeft()} 夜，天亮才能献祭`;
     if (materialsReady() && !state.inv.heart) return "去工作台按 E 合成方块之心";
     if (!campWalled()) return "按 1，把篝火上下左右四边的发光格围上";
     const miss = [];
@@ -1902,7 +2087,7 @@ import {
     const remain = Math.max(0, (state.day ? state.dayLen : state.nightLen) - state.cycle);
     const m = Math.floor(remain / 60);
     const s = String(Math.floor(remain % 60)).padStart(2, "0");
-    clockEl.textContent = `${state.day ? "白天" : "夜晚"} ${m}:${s}`;
+    clockEl.textContent = `${state.era > 1 ? eraName(state.era) + " · " : ""}${state.day ? "白天" : "夜晚"} ${m}:${s}`;
     clockEl.className = "clock " + (state.day ? "day" : "night");
     objectiveEl.textContent = objectiveText();
     skillCdEl.textContent = p.skillCd > 0 ? `${p.skillCd.toFixed(1)}s` : "就绪";
@@ -1990,10 +2175,10 @@ import {
         px(c, x + (w ? 0 : 3), y + 6, e && w ? 16 : 11, 4, "#a06a38");
       }
       px(c, x + 5, y + 5, 6, 3, "#c48870");
-      const hp = state.fenceHp.get(`${tx},${ty}`) || FENCE_MAX;
-      if (hp < FENCE_MAX) {
+      const hp = state.fenceHp.get(`${tx},${ty}`) || fenceMax();
+      if (hp < fenceMax()) {
         px(c, x + 2, y, 12, 2, "#111");
-        px(c, x + 2, y, 12 * clamp(hp / FENCE_MAX, 0, 1), 2, "#e8c040");
+        px(c, x + 2, y, 12 * clamp(hp / fenceMax(), 0, 1), 2, "#e8c040");
       }
     } else if (t === T.TORCH) {
       px(c, x, y, 16, 16, "#3d9344");
@@ -2241,8 +2426,8 @@ import {
         ctx.fillRect(f.tx * TILE - cam.x + 3, f.ty * TILE - cam.y + 3, 10, 10);
         ctx.globalAlpha = 1;
       } else if (state.build === "fence" && tileAt(f.tx, f.ty) === T.FENCE) {
-        const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || FENCE_MAX;
-        if (hp < FENCE_MAX - 0.5) {
+        const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || fenceMax();
+        if (hp < fenceMax() - 0.5) {
           ctx.strokeStyle = "#8dff9a";
           ctx.strokeRect(f.tx * TILE - cam.x + 1, f.ty * TILE - cam.y + 1, 14, 14);
         }
@@ -2259,7 +2444,7 @@ import {
       nightCtx.fillRect(0, 0, vw, vh);
       nightCtx.globalCompositeOperation = "destination-out";
       const lights = [
-        { x: state.player.x - cam.x, y: state.player.y - cam.y, r: CLASSES[state.player.cls].light },
+        { x: state.player.x - cam.x, y: state.player.y - cam.y, r: CLASSES[state.player.cls].light + (has("miner_lamp") ? RELIC_FX.minerLampLight : 0) },
         { x: state.camp.x - cam.x, y: state.camp.y - cam.y, r: state.campHp > 0 ? 56 : 8 },
       ];
       for (let ty = y0; ty < y1; ty++) {
@@ -2293,13 +2478,18 @@ import {
     else looping = false;
   }
 
-  function showOverlay(title, body, actions) {
+  function showOverlay(title, body, actions, opts) {
     overlayTitle.textContent = title;
     overlayBody.textContent = body;
     overlayActions.innerHTML = "";
-    for (const [label, fn] of actions) {
+    overlayActions.classList.toggle("choices", !!(opts && opts.choices));
+    for (const [label, fn, attrs] of actions) {
       const b = document.createElement("button");
+      b.type = "button";
       b.textContent = label;
+      if (attrs && attrs.id) b.id = attrs.id;
+      if (attrs && attrs.cls) b.className = attrs.cls;
+      if (attrs && attrs.data) Object.assign(b.dataset, attrs.data);
       b.addEventListener("click", fn);
       overlayActions.appendChild(b);
     }
@@ -2307,7 +2497,7 @@ import {
   }
 
   function togglePause() {
-    if (!state || state.over || state.briefing) return;
+    if (!state || state.over || state.briefing || state.choosing) return;
     state.paused = !state.paused;
     if (state.paused) {
       showOverlay("暂停", helpText(), [
@@ -2422,7 +2612,10 @@ import {
 
   window.CUBE = {
     getState: () => state,
-    start: (cls) => startGame(cls || "miner"),
+    start: (cls, seed) => startGame(cls || "miner", { seed }),
+    rollDawn: () => rollDawn().map((r) => r.id),
+    pickRelic,
+    shareText: () => shareText(),
     playIntro,
     skipIntro: finishIntro,
     skipBrief: endBriefing,

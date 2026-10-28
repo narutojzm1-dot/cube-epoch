@@ -18,6 +18,13 @@ const must = [
   ["<script type=\"module\" src=\"game.js\">", html],
   ["function mulberry32", js],
   ["const RNG_STREAMS = [\"world\", \"event\", \"loot\", \"fx\"]", js],
+  ["ERA_SCALING = 1.35", data],
+  ["ERA_NIGHTS_STEP = 1", data],
+  ["DAWN_CHOICES = 3", data],
+  ["export const RELICS = [", data],
+  ["function offerDawn", js],
+  ["function nextEra", js],
+  ["function shareText", js],
   ["function ensureMusicPad", js],
   ["musicOn ? 0.26", js],
   ["if (state.briefing) {", js],
@@ -36,6 +43,12 @@ for (const [needle, src] of must) {
 
 if (/Math\.random\(\)/.test(js.replace("Math.floor(Math.random() * 1e9)", ""))) {
   throw new Error("gameplay/fx randomness must go through seeded rand(stream, n) / rnd(stream)");
+}
+
+const relicCount = (data.match(/\{ id: "[a-z_]+", type: "(relic|blessing|mutation)"/g) || []).length;
+if (relicCount < 12) throw new Error("need at least 12 dawn gifts, got " + relicCount);
+for (const m of data.matchAll(/\{ id: "([a-z_]+)", type: "(relic|mutation)"/g)) {
+  if (!js.includes(`has("${m[1]}")`)) throw new Error("relic has no effect hook: " + m[1]);
 }
 
 if (js.includes("state.look && Math.hypot(state.look.x - p.x")) {

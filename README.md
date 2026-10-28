@@ -4,7 +4,12 @@
 
 四个角色：矿工阿石、农夫麦麦、法师星萤、骑士方盾。
 
-> 正在策划大改造：见 [docs/REMAKE_PLAN.md](docs/REMAKE_PLAN.md)（肉鸽化 · 无尽纪元 · 每日挑战）。
+> 正在按 [docs/REMAKE_PLAN.md](docs/REMAKE_PLAN.md) 改造（肉鸽化 · 无尽纪元 · 每日挑战）。M0 已落地：
+>
+> - **黎明的馈赠**：每撑过一夜，天亮三选一——遗物（被动）、祝福（一次性）、变异（双刃剑）
+> - **无尽纪元**：献祭后可点亮祭坛进入下一纪元，多守一夜，怪物生命/伤害 ×1.35，每夜多一波
+> - **战绩**：结算页生成一行战绩文本（种子/纪元/夜数/击杀/遗物），一键复制
+> - **种子**：`?seed=xxx` 固定种子，同种子同事件序列
 
 ## 怎么玩
 
@@ -41,7 +46,7 @@ gh pr create --base main
 
 GitHub Actions：`Test`（static + e2e）跑在 PR 和 `main` 上；`Deploy Pages` 只在 `main`。
 
-`tests/static.mjs` 不需要浏览器。`tests/e2e.mjs` 需要 Playwright WebKit。
+`tests/static.mjs` 不需要浏览器。`tests/e2e.mjs`、`tests/roguelite.mjs` 需要 Playwright WebKit。
 
 闸门：`.grok/skills/ship-gate/SKILL.md`
 
@@ -50,5 +55,6 @@ GitHub Actions：`Test`（static + e2e）跑在 PR 和 `main` 上；`Deploy Page
 纯前端，没有后端。
 
 - `index.html` / `style.css` / `game.js`
+- `data.js` 全部玩法数值（职业、敌人、波次、纪元、遗物），调平衡只改这里
 - `assets/` 四张角色立绘
 - `tests/` 静态契约 + 进游戏 e2e
