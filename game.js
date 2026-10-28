@@ -1,5 +1,5 @@
 import {
-  TILE, COLS, ROWS, VIEW_W, VIEW_H, NEED, AP_BASE, AP_COST, BUILDINGS, BUILD_FX, BIOME_SLOTS, BIOME_FX, WIN_NIGHTS, CAMP_MAX, FENCE_MAX, T, CLASSES,
+  TILE, COLS, ROWS, VIEW_W, VIEW_H, NEED, AP_BASE, AP_COST, BUILDINGS, BUILD_FX, BIOME_SLOTS, BIOME_FX, DAY_EVENT_CHANCE, DAY_EVENTS, DAY_EVENT_FX, TRADES, WIN_NIGHTS, CAMP_MAX, FENCE_MAX, T, CLASSES,
   ENEMIES, SPAWN_TABLE, ENEMY_DROPS, WAVES, ERA_SCALING, ERA_NIGHTS_STEP, ERA_NAMES,
   RELICS, RELIC_TYPE_LABEL, DAWN_CHOICES, RELIC_FX, BOSSES, ENEMY_FX,
 } from "./data.js";
@@ -782,6 +782,8 @@ import {
       apWarn: 0,
       lastPlace: null,
       towerCd: new Map(),
+      dayEvent: null,
+      eventLog: [],
       biomes: world.biomes,
       nightWarned: false,
       skippedGuide: false,
@@ -1580,6 +1582,7 @@ import {
 
   function interact() {
     const p = state.player;
+    if (tradeCaravan()) return;
     if (dist(p.x, p.y, state.bench.x, state.bench.y) < 22) {
       craft();
       return;
@@ -2086,6 +2089,197 @@ import {
     state.drops = state.drops.filter((d) => d.life > 0);
   }
 
+  function dayRng() {
+    return mulberry32(hashSeed(`${state.seed}:day:${state.nights}`));
+  }
+
+  function dirName(x, y) {
+    const a = Math.atan2(y - state.camp.y, x - state.camp.x);
+    const names = ["东", "东南", "南", "西南", "西", "西北", "北", "东北"];
+    return names[(Math.round(a / (Math.PI / 4)) + 8) % 8];
+  }
+
+  function rollDayEvent() {
+    state.dayEvent = null;
+    if (state.nights < 1) return null;
+    const r = dayRng();
+    if (r() >= DAY_EVENT_CHANCE) {
+      state.eventLog.push(`${state.nights}:-`);
+      return null;
+    }
+    const total = DAY_EVENTS.reduce((s, e) => s + e.weight, 0);
+    let roll = r() * total;
+    let def = DAY_EVENTS[0];
+    for (const e of DAY_EVENTS) {
+      roll -= e.weight;
+      if (roll < 0) {
+        def = e;
+        break;
+      }
+    }
+    const ev = { id: def.id, name: def.name, delay: DAY_EVENT_FX.startDelay, started: false, x: 0, y: 0, tiles: [], trades: 0, trade: null, wait: 0 };
+    if (def.id === "caravan") {
+      ev.trade = TRADES[Math.floor(r() * TRADES.length)];
+      ev.x = state.camp.x + 6 * TILE;
+      ev.y = state.camp.y - 2 * TILE;
+    } else if (def.id === "meteor") {
+      for (let k = 0; k < 60; k++) {
+        const tx = 3 + Math.floor(r() * (COLS - 6));
+        const ty = 3 + Math.floor(r() * (ROWS - 6));
+        if (Math.hypot(tx * TILE + 8 - state.camp.x, ty * TILE + 8 - state.camp.y) < 9 * TILE) continue;
+        let ok = true;
+        for (let y = ty - 1; y <= ty + 1 && ok; y++) {
+          for (let x = tx - 1; x <= tx + 1; x++) {
+            const t = tileAt(x, y);
+            if (t !== T.GRASS && t !== T.DIRT) ok = false;
+          }
+        }
+        if (!ok) continue;
+        ev.x = tx * TILE + 8;
+        ev.y = ty * TILE + 8;
+        const cells = [];
+        for (let y = ty - 1; y <= ty + 1; y++) for (let x = tx - 1; x <= tx + 1; x++) cells.push([x, y]);
+        const gold = new Set([4]);
+        while (gold.size < DAY_EVENT_FX.meteorGold) gold.add(Math.floor(r() * cells.length));
+        ev.tiles = cells.map(([x, y], i) => ({ x, y, t: gold.has(i) ? T.GOLD : T.STONE }));
+        break;
+      }
+      if (!ev.tiles.length) return null;
+    } else if (def.id === "migration") {
+      const side = Math.floor(r() * 4);
+      ev.side = side;
+      ev.x = side === 0 ? 3 * TILE : side === 1 ? (COLS - 3) * TILE : state.camp.x;
+      ev.y = side === 2 ? 3 * TILE : side === 3 ? (ROWS - 3) * TILE : state.camp.y;
+      ev.wait = DAY_EVENT_FX.migrationDelay;
+    }
+    state.dayEvent = ev;
+    state.eventLog.push(`${state.nights}:${def.id}`);
+    return ev;
+  }
+
+  function startDayEvent(ev) {
+    ev.started = true;
+    const where = dirName(ev.x, ev.y);
+    if (ev.id === "caravan") {
+      const give = Object.entries(ev.trade.give).map(([k, n]) => `${n}${labelOf(k)}`).join("");
+      const get = Object.entries(ev.trade.get).map(([k, n]) => `${n}${labelOf(k)}`).join("");
+      toast(`商队路过营地${where}边！走过去按 E：${give} 换 ${get}（限 ${DAY_EVENT_FX.caravanTrades} 次）。`, 4);
+      beep(660, 0.08, "triangle", 0.04);
+    } else if (ev.id === "meteor") {
+      const ptx = Math.floor(state.player.x / TILE);
+      const pty = Math.floor(state.player.y / TILE);
+      ev.tiles = ev.tiles.filter((c) => !(c.x === ptx && c.y === pty));
+      for (const c of ev.tiles) setTile(c.x, c.y, c.t);
+      burst(ev.x, ev.y, "#ffb020", 30);
+      punch(6, 0.08);
+      noise(0.3, 0.12, 300);
+      toast(`陨石坠落在${where}边！里面有金，天黑前会冷却碎掉。`, 4);
+    } else if (ev.id === "migration") {
+      toast(`兽群从${where}边迁徙过来，${Math.ceil(ev.wait)} 秒后到。提前守好篝火！`, 4);
+      beep(180, 0.14, "sawtooth", 0.05);
+    }
+  }
+
+  function endDayEvent() {
+    const ev = state.dayEvent;
+    state.dayEvent = null;
+    if (!ev || !ev.started) return;
+    if (ev.id === "meteor") {
+      for (const c of ev.tiles) {
+        const t = tileAt(c.x, c.y);
+        if (t === T.GOLD || t === T.STONE) setTile(c.x, c.y, T.DIRT);
+      }
+    }
+  }
+
+  function updateDayEvent(dt) {
+    const ev = state.dayEvent;
+    if (!ev || !state.day) return;
+    if (!ev.started) {
+      ev.delay -= dt;
+      if (ev.delay <= 0) startDayEvent(ev);
+      return;
+    }
+    if (ev.id === "migration" && ev.wait > 0) {
+      ev.wait -= dt;
+      if (ev.wait <= 0) {
+        const n = DAY_EVENT_FX.migrationCount + (state.era - 1);
+        for (let k = 0; k < n; k++) {
+          const off = (k - (n - 1) / 2) * 20;
+          const horiz = ev.side === 0 || ev.side === 1;
+          let x = ev.x + (horiz ? 0 : off);
+          let y = ev.y + (horiz ? off : 0);
+          if (solid(Math.floor(x / TILE), Math.floor(y / TILE))) {
+            x = ev.x;
+            y = ev.y;
+          }
+          state.enemies.push(makeEnemy(k % 3 === 2 ? "bat" : "slime", x, y));
+        }
+        toast("兽群到了！", 2);
+        punch(3, 0.04);
+      }
+    }
+  }
+
+  function tradeCaravan() {
+    const ev = state.dayEvent;
+    if (!ev || ev.id !== "caravan" || !ev.started) return false;
+    if (dist(state.player.x, state.player.y, ev.x, ev.y) > 26) return false;
+    if (ev.trades >= DAY_EVENT_FX.caravanTrades) {
+      toast("商队：今天的货换完了，下次再见。");
+      return true;
+    }
+    const miss = Object.entries(ev.trade.give).filter(([k, n]) => (state.inv[k] || 0) < n);
+    if (miss.length) {
+      toast("商队：你的货不够——还差" + miss.map(([k, n]) => `${labelOf(k)}${n - (state.inv[k] || 0)}`).join("、"));
+      return true;
+    }
+    for (const [k, n] of Object.entries(ev.trade.give)) state.inv[k] -= n;
+    for (const [k, n] of Object.entries(ev.trade.get)) state.inv[k] = (state.inv[k] || 0) + n;
+    ev.trades += 1;
+    burst(ev.x, ev.y - 6, "#e8c040", 10);
+    toast(`成交！（${ev.trades}/${DAY_EVENT_FX.caravanTrades}）`);
+    beep(880, 0.06, "square", 0.04);
+    syncHud();
+    return true;
+  }
+
+  function drawDayEvent(c, cam) {
+    const ev = state.dayEvent;
+    if (!ev || !ev.started || !state.day) return;
+    if (ev.id === "migration" && ev.wait <= 0) return;
+    const sx = ev.x - cam.x;
+    const sy = ev.y - cam.y;
+    if (ev.id === "caravan") {
+      px(c, sx - 10, sy - 2, 14, 8, "#8b5a2b");
+      px(c, sx - 10, sy - 6, 14, 4, "#e8dcc8");
+      px(c, sx - 9, sy + 6, 3, 3, "#2a2a32");
+      px(c, sx + 0, sy + 6, 3, 3, "#2a2a32");
+      px(c, sx + 6, sy - 6, 4, 4, "#f0c8a0");
+      px(c, sx + 5, sy - 2, 6, 7, "#4a7ad8");
+      px(c, sx + 6, sy - 8, 4, 2, "#c04040");
+    }
+    const vw = VIEW_W * TILE;
+    const vh = VIEW_H * TILE;
+    const pulse = 0.5 + 0.5 * Math.sin(state.time * 6);
+    if (sx >= 0 && sx <= vw && sy >= 0 && sy <= vh) {
+      c.globalAlpha = 0.5 + pulse * 0.5;
+      px(c, sx - 2, sy - 22 - pulse * 2, 4, 6, "#ffe27a");
+      px(c, sx - 1, sy - 14 - pulse * 2, 2, 2, "#ffe27a");
+      c.globalAlpha = 1;
+    } else {
+      const cx = clamp(sx, 10, vw - 10);
+      const cy = clamp(sy, 18, vh - 10);
+      c.globalAlpha = 0.6 + pulse * 0.4;
+      px(c, cx - 4, cy - 4, 8, 8, ev.id === "migration" ? "#ff6a6a" : "#ffe27a");
+      c.globalAlpha = 1;
+      c.font = "7px monospace";
+      c.textAlign = "center";
+      c.fillStyle = "#fff";
+      c.fillText(ev.name, clamp(cx, 20, vw - 20), cy + (cy > vh / 2 ? -8 : 14));
+    }
+  }
+
   function updateBuildings(dt) {
     const p = state.player;
     for (const [key, cd] of state.towerCd) state.towerCd.set(key, cd - dt);
@@ -2307,6 +2501,7 @@ import {
       state.day = !state.day;
       if (!state.day) {
         state.nights += 1;
+        endDayEvent();
         startNightWaves();
         if (state.howlPending) {
           state.howlPending = false;
@@ -2333,6 +2528,7 @@ import {
         state.fenceBreakWarn = false;
         state.ap = apMax();
         state.lastPlace = null;
+        rollDayEvent();
         if (has("greedy_hearth")) {
           state.inv.gold += RELIC_FX.greedyHearthGold;
           floatText(state.camp.x, state.camp.y - 18, `+${RELIC_FX.greedyHearthGold}金`, "#e8c040");
@@ -2400,6 +2596,7 @@ import {
     updateEnemies(dt);
     updateDrops(dt);
     updateBuildings(dt);
+    updateDayEvent(dt);
     updateBolts(dt);
     updateRocks(dt);
     updateCrops(dt);
@@ -2412,7 +2609,10 @@ import {
     const t = tileAt(f.tx, f.ty);
     const p = state.player;
     let prompt = "";
-    if (dist(p.x, p.y, state.bench.x, state.bench.y) < 26 && (state.flags.chopped || materialsReady() || state.inv.heart)) {
+    const ev = state.dayEvent;
+    if (ev && ev.id === "caravan" && ev.started && state.day && dist(p.x, p.y, ev.x, ev.y) < 26) {
+      prompt = ev.trades < DAY_EVENT_FX.caravanTrades ? "按 E 和商队交易" : "商队的货换完了";
+    } else if (dist(p.x, p.y, state.bench.x, state.bench.y) < 26 && (state.flags.chopped || materialsReady() || state.inv.heart)) {
       prompt = materialsReady() || state.inv.heart ? "按 E 合成方块之心" : "按 E 查看还差哪些材料";
     } else if (dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
       if (!state.day) prompt = "祭坛夜里封着，先守篝火";
@@ -2841,6 +3041,7 @@ import {
       px(ctx, r.x - cam.x - 3, r.y - cam.y - 3, 6, 6, "#6d727a");
       px(ctx, r.x - cam.x - 3, r.y - cam.y - 3, 6, 2, "#9aa0a8");
     }
+    drawDayEvent(ctx, cam);
     drawHuman(ctx, state.player, cam, scale);
     for (const b of state.bolts) {
       if (b.arrow) px(ctx, b.x - cam.x - 1, b.y - cam.y - 1, 3, 3, "#f0d8a0");
@@ -3144,6 +3345,7 @@ import {
     setBuild,
     place: (tx, ty) => tryPlace(tx, ty),
     undo: () => undoPlace(),
+    rollDayEvent: () => rollDayEvent(),
     spawn: (kind, tx, ty) => {
       const e = makeEnemy(kind, tx * TILE + 8, ty * TILE + 8);
       state.enemies.push(e);

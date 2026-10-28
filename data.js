@@ -243,3 +243,25 @@ export const BIOME_FX = {
   sporeNearMushroom: 0.6,
   mushroomLight: 28,
 };
+
+// 白天随机事件：天亮后（第一夜之后）按概率触发 0~1 个。每天用独立子流 `${seed}:day:${n}` 抽取，不受玩家操作影响。
+export const DAY_EVENT_CHANCE = 0.6;
+export const DAY_EVENTS = [
+  { id: "caravan", name: "商队路过", weight: 4 },
+  { id: "meteor", name: "陨石坠落", weight: 3 },
+  { id: "migration", name: "兽群迁徙", weight: 3 },
+];
+export const DAY_EVENT_FX = {
+  startDelay: 3.5,
+  caravanTrades: 2,
+  meteorGold: 3,
+  migrationDelay: 10,
+  migrationCount: 4,
+};
+export const TRADES = [
+  { give: { wood: 4 }, get: { gold: 1 } },
+  { give: { gold: 1 }, get: { stone: 4 } },
+  { give: { wheat: 2 }, get: { wood: 5 } },
+  { give: { stone: 3 }, get: { seed: 2 } },
+  { give: { wood: 3 }, get: { wheat: 2 } },
+];

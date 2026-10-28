@@ -171,7 +171,7 @@ const builds = await page.evaluate(async () => {
   const spring = st.tiles[30 * 48 + 38];
   C.spawn("slime", 33, 12);
   const slime = st.enemies[st.enemies.length - 1];
-  slime.speed = 0;
+  slime.spd = 0;
   const hp0 = slime.hp;
   st.player.hp = 10;
   st.player.x = 38 * 16 + 8;
@@ -189,7 +189,7 @@ const spikeHit = await page.evaluate(async () => {
   st.enemies = [];
   C.spawn("slime", 31, 13);
   const s = st.enemies[0];
-  s.speed = 0;
+  s.spd = 0;
   const hp0 = s.hp;
   await new Promise((r) => setTimeout(r, 400));
   return hp0 - s.hp;
@@ -236,6 +236,86 @@ const statue = await page.evaluate(() => {
   return { woke: st.enemies.length, tile: st.tiles[5 * 48 + 30] };
 });
 if (!statue.woke || statue.tile === 19) throw new Error("mining gold near a statue should eventually wake it: " + JSON.stringify(statue));
+
+// 白天随机事件：同种子同一天抽到同一事件；商队可交易、陨石限时、兽群提前来
+const events = await page.evaluate(() => {
+  const C = window.CUBE;
+  C.start("miner", "events");
+  const st = C.getState();
+  st.skippedGuide = true;
+  const seq = () => {
+    const out = [];
+    for (let n = 1; n <= 20; n += 1) {
+      st.nights = n;
+      const ev = C.rollDayEvent();
+      out.push(ev ? ev.id : "-");
+    }
+    return out.join(",");
+  };
+  const a = seq();
+  const b = seq();
+  return { a, b };
+});
+if (events.a !== events.b) throw new Error("day events must be deterministic per seed/day");
+for (const id of ["caravan", "meteor", "migration", "-"]) {
+  if (!events.a.split(",").includes(id)) throw new Error(`20 days should include ${id}: ${events.a}`);
+}
+const dayOf = (id) => events.a.split(",").indexOf(id) + 1;
+const startEvent = (n) => page.evaluate(async (night) => {
+  const C = window.CUBE;
+  const st = C.getState();
+  st.paused = false;
+  st.day = true;
+  st.cycle = 1;
+  st.dayLen = 999;
+  st.enemies = [];
+  st.nights = night;
+  const ev = C.rollDayEvent();
+  ev.delay = 0;
+  await new Promise((r) => setTimeout(r, 200));
+  return { id: ev.id, started: ev.started, x: ev.x, y: ev.y, trade: ev.trade, tiles: ev.tiles };
+}, n);
+
+const caravan = await startEvent(dayOf("caravan"));
+const traded = await page.evaluate((ev) => {
+  const C = window.CUBE;
+  const st = C.getState();
+  st.player.x = ev.x;
+  st.player.y = ev.y + 8;
+  for (const k of Object.keys(st.inv)) st.inv[k] = 20;
+  C.interact();
+  const want = Object.entries(ev.trade.get).every(([k, n]) => st.inv[k] === 20 + n);
+  const paid = Object.entries(ev.trade.give).every(([k, n]) => st.inv[k] === 20 - n);
+  C.interact();
+  C.interact();
+  const capped = st.dayEvent.trades;
+  return { want, paid, capped };
+}, caravan);
+if (!caravan.started || !traded.want || !traded.paid || traded.capped !== 2) throw new Error("caravan trade broken: " + JSON.stringify(traded));
+
+const meteor = await startEvent(dayOf("meteor"));
+const meteorTiles = await page.evaluate(async (ev) => {
+  const st = window.CUBE.getState();
+  const at = (c) => st.tiles[c.y * 48 + c.x];
+  const placed = ev.tiles.filter((c) => at(c) === c.t).length;
+  const gold = ev.tiles.filter((c) => at(c) === 5).length;
+  st.cycle = st.dayLen - 0.02;
+  await new Promise((r) => setTimeout(r, 200));
+  const left = ev.tiles.filter((c) => at(c) === 4 || at(c) === 5).length;
+  return { placed, gold, left, night: !st.day };
+}, meteor);
+if (meteorTiles.placed < 8 || meteorTiles.gold < 3 || !meteorTiles.night || meteorTiles.left !== 0) {
+  throw new Error("meteor event broken: " + JSON.stringify(meteorTiles));
+}
+
+const migration = await startEvent(dayOf("migration"));
+const herd = await page.evaluate(async () => {
+  const st = window.CUBE.getState();
+  st.dayEvent.wait = 0.05;
+  await new Promise((r) => setTimeout(r, 300));
+  return st.enemies.length;
+});
+if (migration.id !== "migration" || herd < 4) throw new Error("migration should bring a daytime mini-wave, got " + herd);
 
 if (logs.length) throw new Error("page errors: " + logs.join(" | "));
 await browser.close();
