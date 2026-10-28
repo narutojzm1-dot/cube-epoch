@@ -288,3 +288,30 @@ export const ACHIEVEMENTS = [
 
 export const DAILY_PREFIX = "daily-";
 export const STORE_PREFIX = "cube-epoch:v1:";
+
+// 粒子预设：burst(x, y, color, n, preset) 读取这里的参数。gravity > 0 下坠，< 0 上飘。
+export const PARTICLES = {
+  default: { speed: 18, speedVar: 40, life: 0.4, lifeVar: 0.3, gravity: 0, size: 2 },
+  debris: { speed: 30, speedVar: 50, life: 0.5, lifeVar: 0.3, gravity: 160, size: 2 },
+  smoke: { speed: 6, speedVar: 14, life: 0.8, lifeVar: 0.5, gravity: -40, size: 3 },
+  spark: { speed: 50, speedVar: 70, life: 0.25, lifeVar: 0.2, gravity: 0, size: 1 },
+  boss: { speed: 40, speedVar: 90, life: 0.9, lifeVar: 0.5, gravity: 30, size: 3 },
+};
+
+// 昼夜过渡与表现参数。
+export const SKY_FX = {
+  duskSecs: 8,
+  dawnSecs: 5,
+  nightFadeSecs: 4,
+  nightDark: 0.78,
+  hurtArrowSecs: 0.7,
+  bossBannerSecs: 2.8,
+};
+
+// 每纪元的音乐变化：transpose 为半音移调，progression 为每 8 拍的和弦根音倍率走向。
+export const ERA_MUSIC = [
+  { transpose: 0, progression: [1, 1, 1, 1] },
+  { transpose: -2, progression: [1, 1.189, 0.891, 1] },
+  { transpose: 3, progression: [1, 0.749, 0.891, 1.122] },
+  { transpose: -5, progression: [1, 1.335, 1.189, 0.891] },
+];

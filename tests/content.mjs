@@ -95,6 +95,7 @@ await page.evaluate(() => {
   st.waveWait = 3;
 });
 await page.waitForFunction(() => window.CUBE.getState().enemies.some((e) => e.kind === "slime_king"), null, { timeout: 4000 });
+if (!(await page.evaluate(() => window.CUBE.getState().bossBanner))) throw new Error("boss entrance should show a banner");
 const split = await page.evaluate(async () => {
   const st = window.CUBE.getState();
   const boss = st.enemies.find((e) => e.kind === "slime_king");
@@ -316,6 +317,39 @@ const herd = await page.evaluate(async () => {
   return st.enemies.length;
 });
 if (migration.id !== "migration" || herd < 4) throw new Error("migration should bring a daytime mini-wave, got " + herd);
+
+// 表现层：受击方向指示、昼夜过渡渐变
+const feel = await page.evaluate(async () => {
+  const C = window.CUBE;
+  C.start("knight", "feel");
+  const st = C.getState();
+  st.skippedGuide = true;
+  st.day = true;
+  st.dayLen = 999;
+  st.cycle = 10;
+  const noon = C.sky().tintAlpha;
+  st.cycle = 999 - 2;
+  const dusk = C.sky().tintAlpha;
+  st.day = false;
+  st.nightLen = 30;
+  st.cycle = 0.2;
+  const early = C.sky().dark;
+  st.cycle = 15;
+  const deep = C.sky().dark;
+  st.day = true;
+  st.cycle = 10;
+  st.enemies = [];
+  C.spawn("slime", Math.floor(st.player.x / 16) + 1, Math.floor(st.player.y / 16));
+  let hurtSeen = false;
+  for (let i = 0; i < 30 && !hurtSeen; i += 1) {
+    await new Promise((r) => setTimeout(r, 50));
+    hurtSeen = !!st.hurtDir;
+  }
+  return { noon, dusk, early, deep, hurtSeen };
+});
+if (!(feel.noon === 0 && feel.dusk > 0.2)) throw new Error("dusk should tint the sky: " + JSON.stringify(feel));
+if (!(feel.early < feel.deep)) throw new Error("night should fade in: " + JSON.stringify(feel));
+if (!feel.hurtSeen) throw new Error("getting hit should show a hurt-direction indicator");
 
 if (logs.length) throw new Error("page errors: " + logs.join(" | "));
 await browser.close();

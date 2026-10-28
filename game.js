@@ -1,5 +1,5 @@
 import {
-  TILE, COLS, ROWS, VIEW_W, VIEW_H, NEED, AP_BASE, AP_COST, BUILDINGS, BUILD_FX, BIOME_SLOTS, BIOME_FX, DAY_EVENT_CHANCE, DAY_EVENTS, DAY_EVENT_FX, TRADES, ACHIEVEMENTS, DAILY_PREFIX, STORE_PREFIX, WIN_NIGHTS, CAMP_MAX, FENCE_MAX, T, CLASSES,
+  TILE, COLS, ROWS, VIEW_W, VIEW_H, NEED, AP_BASE, AP_COST, BUILDINGS, BUILD_FX, BIOME_SLOTS, BIOME_FX, DAY_EVENT_CHANCE, DAY_EVENTS, DAY_EVENT_FX, TRADES, ACHIEVEMENTS, DAILY_PREFIX, STORE_PREFIX, PARTICLES, SKY_FX, ERA_MUSIC, WIN_NIGHTS, CAMP_MAX, FENCE_MAX, T, CLASSES,
   ENEMIES, SPAWN_TABLE, ENEMY_DROPS, WAVES, ERA_SCALING, ERA_NIGHTS_STEP, ERA_NAMES,
   RELICS, RELIC_TYPE_LABEL, DAWN_CHOICES, RELIC_FX, BOSSES, ENEMY_FX,
 } from "./data.js";
@@ -252,13 +252,17 @@ import {
     const night = [196, 233, 262, 247, 220, 196, 175, 196];
     const seq = state.day ? day : night;
     const step = (state.musicStep || 0) % seq.length;
+    const em = ERA_MUSIC[(state.era - 1) % ERA_MUSIC.length];
+    const bar = Math.floor((state.musicStep || 0) / seq.length) % em.progression.length;
+    const shift = Math.pow(2, em.transpose / 12) * em.progression[bar];
+    const root = (state.day ? 131 : 98) * shift;
     if (musicPad) {
-      musicPad.frequency.setTargetAtTime(state.day ? 131 : 98, audioCtx.currentTime, 0.12);
+      musicPad.frequency.setTargetAtTime(root, audioCtx.currentTime, 0.12);
     }
     const o = audioCtx.createOscillator();
     const g = audioCtx.createGain();
     o.type = "triangle";
-    o.frequency.value = seq[step];
+    o.frequency.value = seq[step] * shift;
     g.gain.setValueAtTime(0.12, audioCtx.currentTime);
     g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.58);
     o.connect(g);
@@ -268,7 +272,7 @@ import {
     const b = audioCtx.createOscillator();
     const bg = audioCtx.createGain();
     b.type = "square";
-    b.frequency.value = (state.day ? 131 : 98) * (step % 4 === 2 ? 0.75 : 1);
+    b.frequency.value = root * (step % 4 === 2 ? 0.75 : 1);
     bg.gain.setValueAtTime(0.035, audioCtx.currentTime);
     bg.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.42);
     b.connect(bg);
@@ -1322,12 +1326,13 @@ import {
       });
     }
   }
-  function burst(x, y, color, n) {
+  function burst(x, y, color, n, preset) {
+    const P = PARTICLES[preset] || PARTICLES.default;
     for (let i = 0; i < (n || 8); i++) {
       const a = rnd("fx") * Math.PI * 2;
-      const s = 18 + rand("fx", 40);
+      const s = P.speed + rnd("fx") * P.speedVar;
       state.particles.push({
-        x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s, life: 0.4 + rnd("fx") * 0.3, color,
+        x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s, life: P.life + rnd("fx") * P.lifeVar, color, g: P.gravity, size: P.size,
       });
     }
   }
@@ -1354,6 +1359,7 @@ import {
       state.player.invuln = 0.7;
       const dx = ent.x - (src ? src.x : ent.x);
       const dy = ent.y - (src ? src.y : ent.y);
+      if (src && (dx || dy)) state.hurtDir = { a: Math.atan2(-dy, -dx), t: SKY_FX.hurtArrowSecs };
       const l = Math.hypot(dx, dy) || 1;
       ent.vx += (dx / l) * 40;
       ent.vy += (dy / l) * 40;
@@ -1638,7 +1644,7 @@ import {
       if (!state.flags.chopped) state.benchHint = 8;
       state.flags.chopped = true;
       burst(cx, cy, "#6bcf6b", 16);
-      burst(cx, cy, "#8b5a2b", 8);
+      burst(cx, cy, "#8b5a2b", 8, "debris");
       punch(3.2, 0.045);
       chopSound();
     } else if (t === T.STONE) {
@@ -1972,6 +1978,7 @@ import {
   function announceBoss(kind) {
     const name = ENEMIES[kind].name;
     state.bossName = name;
+    state.bossBanner = { name, t: SKY_FX.bossBannerSecs };
     toast(`⚠ 纪元 Boss · ${name} 破夜而来！`, 3.6);
     punch(6, 0.12);
     beep(90, 0.5, "sawtooth", 0.07);
@@ -2208,7 +2215,8 @@ import {
       if (def.boss) {
         state.bossKills = (state.bossKills || 0) + 1;
         state.bossName = "";
-        burst(e.x, e.y, "#ffe27a", 30);
+        burst(e.x, e.y, "#ffe27a", 30, "boss");
+        burst(e.x, e.y, "#fff4b0", 16, "spark");
         punch(7, 0.14);
         toast(`${def.name} 倒下了！`, 3);
         beep(523, 0.2, "square", 0.06);
@@ -2327,7 +2335,8 @@ import {
       ev.tiles = ev.tiles.filter((c) => !(c.x === ptx && c.y === pty));
       for (const c of ev.tiles) setTile(c.x, c.y, c.t);
       state.meteorSeen = true;
-      burst(ev.x, ev.y, "#ffb020", 30);
+      burst(ev.x, ev.y, "#ffb020", 30, "boss");
+      burst(ev.x, ev.y, "#6d727a", 14, "smoke");
       punch(6, 0.08);
       noise(0.3, 0.12, 300);
       toast(`陨石坠落在${where}边！里面有金，天黑前会冷却碎掉。`, 4);
@@ -2759,6 +2768,14 @@ import {
     updateBuildings(dt);
     updateDayEvent(dt);
     updateAch(dt);
+    if (state.hurtDir) {
+      state.hurtDir.t -= dt;
+      if (state.hurtDir.t <= 0) state.hurtDir = null;
+    }
+    if (state.bossBanner) {
+      state.bossBanner.t -= dt;
+      if (state.bossBanner.t <= 0) state.bossBanner = null;
+    }
     updateBolts(dt);
     updateRocks(dt);
     updateCrops(dt);
@@ -2804,6 +2821,7 @@ import {
     setPrompt(prompt);
     syncGuide();
     for (const pt of state.particles) {
+      pt.vy += (pt.g || 0) * dt;
       pt.x += pt.vx * dt;
       pt.y += pt.vy * dt;
       pt.life -= dt;
@@ -3212,7 +3230,7 @@ import {
     }
     for (const pt of state.particles) {
       ctx.globalAlpha = clamp(pt.life * 2, 0, 1);
-      px(ctx, pt.x - cam.x, pt.y - cam.y, 2, 2, pt.color);
+      px(ctx, pt.x - cam.x, pt.y - cam.y, pt.size || 2, pt.size || 2, pt.color);
       ctx.globalAlpha = 1;
     }
     ctx.font = "8px monospace";
@@ -3299,13 +3317,25 @@ import {
       }
     }
 
+    const sky = skyTint();
+    if (sky.tint) {
+      const vw = VIEW_W * TILE;
+      const vh = VIEW_H * TILE;
+      const grad = ctx.createLinearGradient(0, 0, 0, vh);
+      grad.addColorStop(0, sky.tint[0]);
+      grad.addColorStop(1, sky.tint[1]);
+      ctx.globalAlpha = sky.tintAlpha;
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, vw, vh);
+      ctx.globalAlpha = 1;
+    }
     if (!state.day) {
       const vw = VIEW_W * TILE;
       const vh = VIEW_H * TILE;
       if (nightFx.width !== vw) nightFx.width = vw;
       if (nightFx.height !== vh) nightFx.height = vh;
       nightCtx.clearRect(0, 0, vw, vh);
-      nightCtx.fillStyle = "rgba(6,8,18,0.78)";
+      nightCtx.fillStyle = `rgba(6,8,18,${sky.dark.toFixed(3)})`;
       nightCtx.fillRect(0, 0, vw, vh);
       nightCtx.globalCompositeOperation = "destination-out";
       const lights = [
@@ -3346,6 +3376,72 @@ import {
       ctx.textAlign = "center";
       ctx.fillStyle = "#ffe27a";
       ctx.fillText(edef(boss).name, vw / 2, 19);
+    }
+    drawOverlayFx(ctx, cam);
+  }
+
+  function skyTint() {
+    if (state.day) {
+      const toDusk = state.dayLen - state.cycle;
+      if (toDusk < SKY_FX.duskSecs) {
+        const k = 1 - toDusk / SKY_FX.duskSecs;
+        return { dark: 0, tint: ["#ff8a3a", "#5a2a6a"], tintAlpha: 0.38 * k };
+      }
+      if (state.nights > 0 && state.cycle < SKY_FX.dawnSecs) {
+        const k = 1 - state.cycle / SKY_FX.dawnSecs;
+        return { dark: 0, tint: ["#ffb0c0", "#ffe27a"], tintAlpha: 0.32 * k };
+      }
+      return { dark: 0, tint: null, tintAlpha: 0 };
+    }
+    const k = clamp(state.cycle / SKY_FX.nightFadeSecs, 0, 1);
+    const toDawn = state.nightLen - state.cycle;
+    const morning = clamp(toDawn / SKY_FX.nightFadeSecs, 0, 1);
+    return { dark: SKY_FX.nightDark * (0.45 + 0.55 * Math.min(k, morning)), tint: null, tintAlpha: 0 };
+  }
+
+  function drawOverlayFx(c, cam) {
+    const vw = VIEW_W * TILE;
+    const vh = VIEW_H * TILE;
+    const hd = state.hurtDir;
+    if (hd) {
+      const sx = state.player.x - cam.x;
+      const sy = state.player.y - cam.y;
+      const alpha = clamp(hd.t / SKY_FX.hurtArrowSecs, 0, 1);
+      c.globalAlpha = alpha;
+      for (let k = 0; k < 5; k++) {
+        const r = 22 + k * 3;
+        const spread = (2 - Math.abs(k - 2)) * 0.12;
+        for (const off of [-spread, spread]) {
+          px(c, sx + Math.cos(hd.a + off) * r - 1, sy - 6 + Math.sin(hd.a + off) * r - 1, 3, 3, "#ff4040");
+        }
+      }
+      c.globalAlpha = alpha * 0.35;
+      const ex = clamp(vw / 2 + Math.cos(hd.a) * vw, 0, vw);
+      const ey = clamp(vh / 2 + Math.sin(hd.a) * vh, 0, vh);
+      const g = c.createRadialGradient(ex, ey, 0, ex, ey, 90);
+      g.addColorStop(0, "#ff2020");
+      g.addColorStop(1, "rgba(255,32,32,0)");
+      c.fillStyle = g;
+      c.fillRect(0, 0, vw, vh);
+      c.globalAlpha = 1;
+    }
+    const bb = state.bossBanner;
+    if (bb) {
+      const life = SKY_FX.bossBannerSecs;
+      const k = Math.min(1, (life - bb.t) / 0.3, bb.t / 0.5);
+      const bar = Math.round(28 * k);
+      px(c, 0, 0, vw, bar, "#000");
+      px(c, 0, vh - bar, vw, bar, "#000");
+      c.globalAlpha = clamp(k, 0, 1);
+      px(c, 0, vh / 2 - 20, vw, 40, "rgba(40,0,0,0.75)");
+      c.font = "bold 18px monospace";
+      c.textAlign = "center";
+      c.fillStyle = "#ff5a5a";
+      c.fillText(`⚠ ${bb.name} ⚠`, vw / 2, vh / 2 + 2);
+      c.font = "8px monospace";
+      c.fillStyle = "#ffe27a";
+      c.fillText(`${eraName(state.era)} · 纪元 Boss 破夜而来`, vw / 2, vh / 2 + 14);
+      c.globalAlpha = 1;
     }
   }
 
@@ -3525,6 +3621,7 @@ import {
     dailySeed: () => dailySeed(),
     meta: () => meta,
     codexText: () => codexText(),
+    sky: () => skyTint(),
     spawn: (kind, tx, ty) => {
       const e = makeEnemy(kind, tx * TILE + 8, ty * TILE + 8);
       state.enemies.push(e);
