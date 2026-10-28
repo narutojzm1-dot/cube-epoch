@@ -9,16 +9,22 @@ page.on("pageerror", (e) => logs.push(e.message));
 // Poll observable game outcomes, not wall-clock sleeps: slow headless frames and
 // hitstop can leave the simulation unchanged for several hundred milliseconds.
 await page.addInitScript(() => {
-  window.waitForTestCondition = (predicate, label) => new Promise((resolve, reject) => {
+  window.waitForTestCondition = (predicate, label, simulationBudget) => new Promise((resolve, reject) => {
+    const start = window.CUBE?.getState().time;
+    // Movement/attack budgets are game seconds. Retain a separate wall-clock
+    // watchdog so a paused or stalled simulation still fails rather than hangs.
     let frame;
     const timer = setTimeout(() => {
       cancelAnimationFrame(frame);
       reject(new Error(`Timed out waiting for ${label}`));
-    }, 10000);
+    }, simulationBudget === undefined ? 10000 : 45000);
     const check = () => {
       try {
         if (predicate()) { clearTimeout(timer); resolve(); }
-        else frame = requestAnimationFrame(check);
+        else if (simulationBudget !== undefined && window.CUBE.getState().time - start >= simulationBudget) {
+          clearTimeout(timer);
+          reject(new Error(`${label} exceeded ${simulationBudget} simulation seconds`));
+        } else frame = requestAnimationFrame(check);
       } catch (error) {
         clearTimeout(timer);
         reject(error);
@@ -64,7 +70,7 @@ await page.evaluate(() => {
 });
 const under0 = await page.evaluate(() => window.CUBE.getState().enemies[0].under);
 if (!under0) throw new Error("burrower should start underground");
-await page.waitForFunction(() => window.CUBE.getState().campHp < 100, null, { timeout: 8000 });
+await page.evaluate(() => window.waitForTestCondition(() => window.CUBE.getState().campHp < 100, "burrower reaches camp", 8));
 const fenceN = await page.evaluate(() => window.CUBE.getState().fenceHp.get("22,20"));
 if (fenceN !== 80) throw new Error("burrower must dig under fences, fence hp=" + fenceN);
 
@@ -100,7 +106,7 @@ await page.evaluate(() => {
   C.getState().fenceHp.set("22,20", 80);
   C.spawn("thrower", 22, 13);
 });
-await page.waitForFunction(() => (window.CUBE.getState().fenceHp.get("22,20") ?? 0) < 80, null, { timeout: 9000 });
+await page.evaluate(() => window.waitForTestCondition(() => (window.CUBE.getState().fenceHp.get("22,20") ?? 0) < 80, "thrower hits fence", 9));
 const throwerPos = await page.evaluate(() => {
   const st = window.CUBE.getState();
   const e = st.enemies[0];

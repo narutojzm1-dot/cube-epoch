@@ -31,7 +31,7 @@ await page.evaluate(() => {
   const st = window.CUBE.getState();
   st.player.x = 40 * 16 + 8;
 });
-await page.waitForTimeout(40);
+await page.waitForFunction(() => window.CUBE.cam().x >= 400);
 const cam = await page.evaluate(() => window.CUBE.cam());
 if (cam.x < 400) throw new Error("camera should follow player, cam.x=" + cam.x);
 await page.evaluate(() => {
@@ -47,6 +47,8 @@ await page.evaluate(() => {
   st.fenceHp.set("23,21", 20);
   st.inv.wood = Math.max(2, st.inv.wood);
 });
+// Do not send the repair click while hitstop discards pending input.
+await page.waitForFunction(() => window.CUBE.getState().hitstop <= 0);
 await page.evaluate(() => {
   const canvas = document.getElementById("game");
   const scale = Number(canvas.dataset.scale || 3);
@@ -64,13 +66,15 @@ await page.evaluate(() => {
   canvas.dispatchEvent(new MouseEvent("mousemove", { clientX, clientY, bubbles: true }));
   canvas.dispatchEvent(new MouseEvent("mousedown", { clientX, clientY, button: 0, bubbles: true }));
 });
-await page.waitForTimeout(40);
-await page.evaluate(() => window.dispatchEvent(new MouseEvent("mouseup", { button: 0, bubbles: true })));
-await page.waitForTimeout(40);
+try {
+  await page.waitForFunction(() => window.CUBE.getState().fenceHp.get("23,21") === 80);
+} finally {
+  await page.evaluate(() => window.dispatchEvent(new MouseEvent("mouseup", { button: 0, bubbles: true })));
+}
 const hp = await page.evaluate(() => window.CUBE.getState().fenceHp.get("23,21"));
 if (hp !== 80) throw new Error("click repair should fill fence, hp=" + hp);
 
-await page.evaluate(() => {
+const wallStart = await page.evaluate(() => {
   const C = window.CUBE;
   const st = C.getState();
   st.inv.wood = 40;
@@ -85,8 +89,11 @@ await page.evaluate(() => {
     kind: "slime", x: 22 * 16 + 8, y: 18 * 16 + 8,
     vx: 0, vy: 0, hp: 32, maxHp: 32, spd: 40, dmg: 9, hit: 0, flash: 0, bob: 0,
   }];
+  return st.time;
 });
-await page.waitForTimeout(1600);
+// Observe the entire defence interval, not just its first successful hit.
+await page.waitForFunction((start) => window.CUBE.getState().time - start >= 1.6,
+  wallStart, { timeout: 10000 });
 const wall = await page.evaluate(() => {
   const st = window.CUBE.getState();
   return { camp: st.campHp, north: st.fenceHp.get("22,20") };
