@@ -4,17 +4,24 @@ import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const js = await readFile(join(ROOT, "game.js"), "utf8");
+const MODULES = ["core", "audio", "ui", "render", "world", "meta", "build", "combat", "game"].map((m) => m + ".js");
+const sources = {};
+for (const f of MODULES) sources[f] = await readFile(join(ROOT, f), "utf8");
+const js = MODULES.map((f) => sources[f]).join("\n");
 const data = await readFile(join(ROOT, "data.js"), "utf8");
 const html = await readFile(join(ROOT, "index.html"), "utf8");
 
-execFileSync("node", ["--check", join(ROOT, "game.js")], { stdio: "pipe" });
+for (const f of MODULES) execFileSync("node", ["--check", join(ROOT, f)], { stdio: "pipe" });
 execFileSync("node", ["--check", join(ROOT, "data.js")], { stdio: "pipe" });
 
 const must = [
   ["FENCE_MAX = 80", data],
   ["NEED = { wood: 4", data],
   ["from \"./data.js\"", js],
+  ["from \"./core.js\"", sources["game.js"]],
+  ["export function startGame", sources["game.js"]],
+  ["export function genWorld", sources["world.js"]],
+  ["export function render", sources["render.js"]],
   ["<script type=\"module\" src=\"game.js\">", html],
   ["function mulberry32", js],
   ["const RNG_STREAMS = [\"world\", \"event\", \"loot\", \"fx\"]", js],
@@ -78,7 +85,7 @@ for (const m of data.matchAll(/\{ id: "([a-z_]+)", type: "(relic|mutation)"/g)) 
 const achIds = [...data.matchAll(/\{ id: "([a-z_0-9]+)", name: "[^"]+", desc: "[^"]+" \}/g)].map((m) => m[1]);
 if (achIds.length < 12 || achIds.length > 16) throw new Error("need 12~16 achievements, got " + achIds.length);
 for (const id of achIds) {
-  if (!js.includes(`    ${id}: (s`)) throw new Error("achievement has no ACH_CHECK rule: " + id);
+  if (!js.includes(`  ${id}: (s`)) throw new Error("achievement has no ACH_CHECK rule: " + id);
 }
 
 if (js.includes("state.look && Math.hypot(state.look.x - p.x")) {

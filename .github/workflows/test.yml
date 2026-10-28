@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: node --check game.js && node --check data.js
+      - run: for f in data core audio ui render world meta build combat game; do node --check $f.js; done
       - run: node tests/static.mjs
 
   e2e:

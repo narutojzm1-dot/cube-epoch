@@ -13,7 +13,7 @@ Do not push `origin main`. Do not say the change is live until the PR is merged 
 ## 1. Local test
 
 ```bash
-node --check game.js
+for f in *.js; do node --check $f; done
 node tests/static.mjs
 node tests/e2e.mjs
 ```

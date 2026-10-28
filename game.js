@@ -1,3646 +1,825 @@
-import {
-  TILE, COLS, ROWS, VIEW_W, VIEW_H, NEED, AP_BASE, AP_COST, BUILDINGS, BUILD_FX, BIOME_SLOTS, BIOME_FX, DAY_EVENT_CHANCE, DAY_EVENTS, DAY_EVENT_FX, TRADES, ACHIEVEMENTS, DAILY_PREFIX, STORE_PREFIX, PARTICLES, SKY_FX, ERA_MUSIC, WIN_NIGHTS, CAMP_MAX, FENCE_MAX, T, CLASSES,
-  ENEMIES, SPAWN_TABLE, ENEMY_DROPS, WAVES, ERA_SCALING, ERA_NIGHTS_STEP, ERA_NAMES,
-  RELICS, RELIC_TYPE_LABEL, DAWN_CHOICES, RELIC_FX, BOSSES, ENEMY_FX,
-} from "./data.js";
+import { AP_BASE, BUILDINGS, CAMP_MAX, CLASSES, DAWN_CHOICES, DAY_EVENT_FX, ERA_NIGHTS_STEP, ERA_SCALING, RELICS, RELIC_FX, RELIC_TYPE_LABEL, T, TILE, WAVES, WIN_NIGHTS } from "./data.js";
+import { beep, cycleAudio, ensureAudio, footstep, playMusicPulse } from "./audio.js";
+import { apCostOfTile, apMax, apShort, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
+import { makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
+import { burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, last, looping, makeStreams, materialsReady, mouse, newSeed, nightsLeft, pendingSeed, rnd, selectedClass, setLast, setLooping, setPendingSeed, setRng, setSelectedClass, setState, setToastTimer, state, survivedNights, tileAt, toastTimer, tryMove, urlSeed } from "./core.js";
+import { checkAch, codexAdd, codexText, dailySeed, meta, openCodex, recordRun, shareText, titleStatsText, updateAch } from "./meta.js";
+import { render, skyTint } from "./render.js";
+import { BRIEF, advanceBrief, advanceIntro, brief, briefingBox, briefingCursor, briefingText, btnCodex, btnDaily, btnHelp, btnMute, btnPause, btnSkipBrief, btnSkipGuide, btnSkipIntro, btnStart, camera, canvas, copyText, endBriefing, finishIntro, intro, introBox, manaWrap, overlay, playIntro, resize, screenGame, screenIntro, screenTitle, setPrompt, showOverlay, skillName, startBriefing, syncGuide, syncHud, titleStats, toast, toastEl, togglePause } from "./ui.js";
+import { endDayEvent, genWorld, makePlayer, rollDayEvent, tradeCaravan, updateDayEvent } from "./world.js";
 
-(() => {
-  "use strict";
-
-  const canvas = document.getElementById("game");
-  const ctx = canvas.getContext("2d");
-  const screenTitle = document.getElementById("screen-title");
-  const screenGame = document.getElementById("screen-game");
-  const overlay = document.getElementById("overlay");
-  const overlayTitle = document.getElementById("overlay-title");
-  const overlayBody = document.getElementById("overlay-body");
-  const overlayActions = document.getElementById("overlay-actions");
-  const toastEl = document.getElementById("toast");
-  const hpBar = document.getElementById("hp-bar");
-  const hpText = document.getElementById("hp-text");
-  const manaWrap = document.getElementById("mana-wrap");
-  const manaBar = document.getElementById("mana-bar");
-  const manaText = document.getElementById("mana-text");
-  const campBar = document.getElementById("camp-bar");
-  const campText = document.getElementById("camp-text");
-  const clockEl = document.getElementById("clock");
-  const objectiveEl = document.getElementById("objective");
-  const apEl = document.getElementById("ap");
-  const skillName = document.getElementById("skill-name");
-  const skillCdEl = document.getElementById("skill-cd");
-  const skillDock = document.querySelector(".skill-dock");
-  const btnStart = document.getElementById("btn-start");
-  const btnPause = document.getElementById("btn-pause");
-  const btnHelp = document.getElementById("btn-help");
-  const btnMute = document.getElementById("btn-mute");
-  const btnSkipGuide = document.getElementById("btn-skip-guide");
-  const guideEl = document.getElementById("guide");
-  const guideTitle = document.getElementById("guide-title");
-  const guideBody = document.getElementById("guide-body");
-  const promptEl = document.getElementById("prompt");
-  const buildBanner = document.getElementById("build-banner");
-  const waveBanner = document.getElementById("wave-banner");
-  const screenIntro = document.getElementById("screen-intro");
-  const introText = document.getElementById("intro-text");
-  const introCursor = document.getElementById("intro-cursor");
-  const introBox = document.getElementById("intro-box");
-  const btnSkipIntro = document.getElementById("btn-skip-intro");
-  const briefingEl = document.getElementById("briefing");
-  const briefingBox = document.getElementById("briefing-box");
-  const briefingTitle = document.getElementById("briefing-title");
-  const briefingText = document.getElementById("briefing-text");
-  const briefingCursor = document.getElementById("briefing-cursor");
-  const btnSkipBrief = document.getElementById("btn-skip-brief");
-  const btnDaily = document.getElementById("btn-daily");
-  const btnCodex = document.getElementById("btn-codex");
-  const titleStats = document.getElementById("title-stats");
-
-  const GUIDE = [
-    { id: "move", title: "第一步：走起来", body: "用 WASD 移动。先走到附近的树旁边。" },
-    { id: "chop", title: "第二步：砍木头", body: "走到树前面按空格，或对准树按住左键。木头用来围栅栏、点火把。" },
-    { id: "build", title: "第三步：围营地", body: "按 1 选栅栏，把篝火上下左右四格围上。发光的格子就是缺口。木头还要留给方块之心。" },
-    { id: "night", title: "第四步：守住篝火", body: "怪朝篝火走，站在墙后打，缺口要补。第二夜才有蝙蝠飞进来。" },
-    { id: "offer", title: "第五步：天亮献祭", body: "凑齐材料在工作台按 E 合成方块之心。撑过两夜，天亮后送到北边祭坛。" },
-  ];
-  const nightFx = document.createElement("canvas");
-  const nightCtx = nightFx.getContext("2d");
-
-  let selectedClass = null;
-  let pendingSeed = "";
-  let audioCtx = null;
-  let state = null;
-  let last = 0;
-  let looping = false;
-  let toastTimer = 0;
-  const keys = new Set();
-  const mouse = { x: 0, y: 0, down: false, pressed: false, right: false, inside: false };
-
-  // 种子化 PRNG：按用途拆成四条独立随机流，互不干扰。
-  // world: 地图生成 · event: 波次/敌种/掉落判定/黎明三选一 · loot: 局内掉落微调 · fx: 音画表现
-  function mulberry32(a) {
-    return function next() {
-      a = (a + 0x6d2b79f5) | 0;
-      let t = Math.imul(a ^ (a >>> 15), 1 | a);
-      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    };
-  }
-  function hashSeed(str) {
-    let h = 2166136261 >>> 0;
-    for (let i = 0; i < str.length; i++) {
-      h ^= str.charCodeAt(i);
-      h = Math.imul(h, 16777619);
-    }
-    return h >>> 0;
-  }
-  const RNG_STREAMS = ["world", "event", "loot", "fx"];
-  const urlSeed = (new URLSearchParams(location.search).get("seed") || "").replace(/[^\w-]/g, "").slice(0, 32);
-  let rng = makeStreams(newSeed());
-  function newSeed() {
-    return String(Math.floor(Math.random() * 1e9)).padStart(9, "0");
-  }
-  function makeStreams(seed) {
-    const s = {};
-    for (const name of RNG_STREAMS) s[name] = mulberry32(hashSeed(`${seed}:${name}`));
-    return s;
-  }
-  function rnd(stream) {
-    return rng[stream]();
-  }
-  function rand(stream, n) {
-    return Math.floor(rng[stream]() * n);
-  }
-  function loadStore(key, fallback) {
-    try {
-      const raw = localStorage.getItem(STORE_PREFIX + key);
-      const v = raw ? JSON.parse(raw) : null;
-      return v && typeof v === "object" ? { ...fallback, ...v } : fallback;
-    } catch {
-      return fallback;
-    }
-  }
-  function saveStore(key, value) {
-    try {
-      localStorage.setItem(STORE_PREFIX + key, JSON.stringify(value));
-    } catch {
-      // 隐私模式或存储已满：静默忽略，游戏照常运行。
-    }
-  }
-  const meta = {
-    ach: loadStore("ach", {}),
-    codex: loadStore("codex", { enemies: [], relics: [] }),
-    stats: loadStore("stats", { runs: 0, wins: 0, bestNights: 0, bestEra: 1, kills: 0, daily: {} }),
-  };
-  if (!Array.isArray(meta.codex.enemies)) meta.codex.enemies = [];
-  if (!Array.isArray(meta.codex.relics)) meta.codex.relics = [];
-  if (!meta.stats.daily || typeof meta.stats.daily !== "object") meta.stats.daily = {};
-
-  function dailySeed(date) {
-    const d = date || new Date();
-    return `${DAILY_PREFIX}${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
-  }
-  function isDaily(seed) {
-    return /^daily-\d{8}$/.test(seed || "");
-  }
-
-  function clamp(v, a, b) {
-    return Math.max(a, Math.min(b, v));
-  }
-  function dist(ax, ay, bx, by) {
-    return Math.hypot(ax - bx, ay - by);
-  }
-  function inBounds(tx, ty) {
-    return tx >= 0 && ty >= 0 && tx < COLS && ty < ROWS;
-  }
-  function px(c, x, y, w, h, color) {
-    c.fillStyle = color;
-    c.fillRect(x | 0, y | 0, w, h);
-  }
-
-  let musicOn = true;
-  let sfxOn = true;
-  let musicGain = null;
-  let musicPad = null;
-  let musicPadGain = null;
-
-  function ensureMusicPad() {
-    if (!audioCtx || !musicGain || musicPad) return;
-    const filter = audioCtx.createBiquadFilter();
-    filter.type = "lowpass";
-    filter.frequency.value = 480;
-    musicPad = audioCtx.createOscillator();
-    musicPadGain = audioCtx.createGain();
-    musicPad.type = "sine";
-    musicPad.frequency.value = 131;
-    musicPadGain.gain.value = musicOn ? 0.05 : 0;
-    musicPad.connect(filter);
-    filter.connect(musicPadGain);
-    musicPadGain.connect(musicGain);
-    musicPad.start();
-  }
-
-  function setMusicLevel() {
-    if (musicGain) musicGain.gain.value = musicOn ? 0.26 : 0;
-    if (musicPadGain) musicPadGain.gain.value = musicOn ? 0.05 : 0;
-  }
-
-  function ensureAudio() {
-    const AC = window.AudioContext || window.webkitAudioContext;
-    if (!audioCtx) audioCtx = new AC();
-    if (audioCtx.state === "suspended") audioCtx.resume();
-    if (!musicGain) {
-      musicGain = audioCtx.createGain();
-      musicGain.gain.value = musicOn ? 0.26 : 0;
-      musicGain.connect(audioCtx.destination);
-    }
-    ensureMusicPad();
-  }
-
-  function beep(freq, dur, type, vol) {
-    if (!audioCtx || !sfxOn) return;
-    const o = audioCtx.createOscillator();
-    const g = audioCtx.createGain();
-    o.type = type || "square";
-    o.frequency.value = freq;
-    g.gain.value = vol || 0.04;
-    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + dur);
-    o.connect(g);
-    g.connect(audioCtx.destination);
-    o.start();
-    o.stop(audioCtx.currentTime + dur);
-  }
-
-  function noise(dur, vol, freq) {
-    if (!audioCtx || !sfxOn) return;
-    const n = Math.max(1, Math.floor(audioCtx.sampleRate * dur));
-    const buf = audioCtx.createBuffer(1, n, audioCtx.sampleRate);
-    const data = buf.getChannelData(0);
-    for (let i = 0; i < n; i++) data[i] = (rnd("fx") * 2 - 1) * (1 - i / n);
-    const src = audioCtx.createBufferSource();
-    src.buffer = buf;
-    const f = audioCtx.createBiquadFilter();
-    f.type = "lowpass";
-    f.frequency.value = freq || 900;
-    const g = audioCtx.createGain();
-    g.gain.value = vol || 0.08;
-    src.connect(f);
-    f.connect(g);
-    g.connect(audioCtx.destination);
-    src.start();
-  }
-
-  function footstep() {
-    noise(0.05, 0.045, 500);
-    beep(90 + rand("fx", 30), 0.04, "square", 0.02);
-  }
-
-  function chopSound() {
-    noise(0.08, 0.1, 1400);
-    beep(180, 0.06, "sawtooth", 0.05);
-    beep(320, 0.08, "triangle", 0.04);
-  }
-
-  function hitSound() {
-    noise(0.05, 0.07, 1800);
-    beep(140, 0.05, "square", 0.045);
-  }
-
-  function playMusicPulse() {
-    if (!audioCtx || !musicOn || !state || state.paused || state.over) return;
-    ensureMusicPad();
-    const day = [262, 330, 392, 330, 392, 523, 494, 392];
-    const night = [196, 233, 262, 247, 220, 196, 175, 196];
-    const seq = state.day ? day : night;
-    const step = (state.musicStep || 0) % seq.length;
-    const em = ERA_MUSIC[(state.era - 1) % ERA_MUSIC.length];
-    const bar = Math.floor((state.musicStep || 0) / seq.length) % em.progression.length;
-    const shift = Math.pow(2, em.transpose / 12) * em.progression[bar];
-    const root = (state.day ? 131 : 98) * shift;
-    if (musicPad) {
-      musicPad.frequency.setTargetAtTime(root, audioCtx.currentTime, 0.12);
-    }
-    const o = audioCtx.createOscillator();
-    const g = audioCtx.createGain();
-    o.type = "triangle";
-    o.frequency.value = seq[step] * shift;
-    g.gain.setValueAtTime(0.12, audioCtx.currentTime);
-    g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.58);
-    o.connect(g);
-    g.connect(musicGain);
-    o.start();
-    o.stop(audioCtx.currentTime + 0.58);
-    const b = audioCtx.createOscillator();
-    const bg = audioCtx.createGain();
-    b.type = "square";
-    b.frequency.value = root * (step % 4 === 2 ? 0.75 : 1);
-    bg.gain.setValueAtTime(0.035, audioCtx.currentTime);
-    bg.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.42);
-    b.connect(bg);
-    bg.connect(musicGain);
-    b.start();
-    b.stop(audioCtx.currentTime + 0.42);
-  }
-
-  function audioLabel() {
-    if (musicOn && sfxOn) return "声音开";
-    if (sfxOn) return "仅音效";
-    return "静音";
-  }
-
-  function cycleAudio() {
-    if (musicOn && sfxOn) {
-      musicOn = false;
-      sfxOn = true;
-    } else if (!musicOn && sfxOn) {
-      musicOn = false;
-      sfxOn = false;
-    } else {
-      musicOn = true;
-      sfxOn = true;
-    }
-    setMusicLevel();
-    if (btnMute) btnMute.textContent = audioLabel();
-  }
-
-  function punch(mag, stop) {
-    if (!state) return;
-    state.shake = Math.max(state.shake || 0, mag);
-    if (stop) state.hitstop = Math.max(state.hitstop || 0, stop);
-  }
-
-  function toast(text, ms) {
-    toastEl.textContent = text;
-    toastEl.classList.remove("hidden");
-    toastTimer = ms || 2.2;
-  }
-
-  function tileAt(tx, ty) {
-    if (!inBounds(tx, ty)) return T.WATER;
-    return state.tiles[ty * COLS + tx];
-  }
-  function setTile(tx, ty, v) {
-    state.tiles[ty * COLS + tx] = v;
-  }
-  function solid(tx, ty) {
-    const t = tileAt(tx, ty);
-    return t === T.WATER || t === T.STONE || t === T.GOLD || t === T.TREE
-      || t === T.TOWER || t === T.STATUE || t === T.RUBBLE;
-  }
-  function campTile() {
-    return {
-      tx: Math.floor(state.camp.x / TILE),
-      ty: Math.floor(state.camp.y / TILE),
-    };
-  }
-  function campRing() {
-    const c = campTile();
-    return [[c.tx, c.ty - 1], [c.tx - 1, c.ty], [c.tx + 1, c.ty], [c.tx, c.ty + 1]];
-  }
-  function campWalled() {
-    return campRing().every(([tx, ty]) => tileAt(tx, ty) === T.FENCE);
-  }
-  function groundSolid(tx, ty) {
-    if (solid(tx, ty) || tileAt(tx, ty) === T.FENCE) return true;
-    const c = campTile();
-    return tx === c.tx && ty === c.ty;
-  }
-  function edef(e) {
-    return ENEMIES[e.kind] || ENEMIES.slime;
-  }
-  function isFlying(e) {
-    return !!edef(e).flying;
-  }
-  function targetable(e) {
-    return !e.under;
-  }
-  function burrowRevealed(e) {
-    if (dist(e.x, e.y, state.camp.x, state.camp.y) < ENEMY_FX.burrowCampRadius) return "camp";
-    const r = ENEMY_FX.burrowTorchRadius;
-    const etx = Math.floor(e.x / TILE);
-    const ety = Math.floor(e.y / TILE);
-    const span = Math.ceil(r / TILE);
-    for (let ty = ety - span; ty <= ety + span; ty++) {
-      for (let tx = etx - span; tx <= etx + span; tx++) {
-        if (tileAt(tx, ty) === T.TORCH && dist(e.x, e.y, tx * TILE + 8, ty * TILE + 8) < r) return "torch";
-      }
-    }
-    return "";
-  }
-  function canHitCamp(e) {
-    const dCamp = dist(e.x, e.y, state.camp.x, state.camp.y);
-    if (isFlying(e)) return dCamp < 16;
-    if (e.kind === "thrower" || e.under) return false;
-    const c = campTile();
-    const etx = Math.floor(e.x / TILE);
-    const ety = Math.floor(e.y / TILE);
-    if (tileAt(etx, ety) === T.FENCE && !edef(e).burrow) return false;
-    return Math.abs(etx - c.tx) + Math.abs(ety - c.ty) === 1;
-  }
-  function damageCamp(amount) {
-    if (state.campHp <= 0 || state.over) return;
-    state.campHp = Math.max(0, state.campHp - amount * (has("ember_core") ? RELIC_FX.emberCoreCamp : 1));
-    state.campFlash = 0.4;
-    state.nightCampHit = true;
-    burst(state.camp.x, state.camp.y - 8, "#ff6a20", 5);
-    state.campPull = Math.max(state.campPull || 0, 1.2);
-    punch(2.4, 0.03);
-    const p = state.player;
-    const cam = camera();
-    const vw = VIEW_W * TILE;
-    const vh = VIEW_H * TILE;
-    const campOnScreen = state.camp.x >= cam.x && state.camp.x <= cam.x + vw
-      && state.camp.y >= cam.y && state.camp.y <= cam.y + vh;
-    if (!state.campHurtWarn) {
-      state.campHurtWarn = true;
-      toast(campOnScreen ? "篝火在掉血！守住它，灭了就失败。" : "篝火在掉血！镜头拉过去了，快回去。", 2.8);
-    } else if (dist(p.x, p.y, state.camp.x, state.camp.y) > 70 && (state.campHurtCd || 0) <= 0) {
-      state.campHurtCd = 3.5;
-      state.campPull = Math.max(state.campPull || 0, 1.6);
-      toast("篝火还在挨打！别追太远。", 2.2);
-    }
-    if (state.campHp <= 0) die("篝火熄灭");
-  }
-  function flySolid(tx, ty) {
-    const t = tileAt(tx, ty);
-    return t === T.WATER || t === T.STONE || t === T.GOLD || t === T.TREE;
-  }
-  function walkablePixel(x, y) {
-    const tx = Math.floor(x / TILE);
-    const ty = Math.floor(y / TILE);
-    return !solid(tx, ty);
-  }
-  function canStand(x, y) {
-    const r = 4;
-    return walkablePixel(x - r, y) && walkablePixel(x + r, y) && walkablePixel(x, y + 2) && walkablePixel(x, y - 3);
-  }
-
-  function genWorld() {
-    const tiles = new Uint8Array(COLS * ROWS);
-    const crops = new Map();
-    for (let y = 0; y < ROWS; y++) {
-      for (let x = 0; x < COLS; x++) {
-        tiles[y * COLS + x] = T.GRASS;
-        if ((x * 13 + y * 7) % 17 === 0) tiles[y * COLS + x] = T.DIRT;
-      }
-    }
-    function stamp(x, y, t) {
-      if (inBounds(x, y) && tiles[y * COLS + x] !== T.WATER) tiles[y * COLS + x] = t;
-    }
-    const order = BIOME_SLOTS.map((_, i) => i);
-    for (let i = order.length - 1; i > 0; i--) {
-      const j = rand("world", i + 1);
-      [order[i], order[j]] = [order[j], order[i]];
-    }
-    const biomes = ["lake", "forest", "quarry", "rubble"].map((kind, i) => {
-      const slot = BIOME_SLOTS[order[i]];
-      let variant = kind;
-      if (kind === "forest" && rnd("world") < BIOME_FX.mushroomChance) variant = "mushroom";
-      if (kind === "quarry" && rnd("world") < BIOME_FX.crystalChance) variant = "crystal";
-      return { kind: variant, x: slot.x, y: slot.y, name: slot.name };
-    });
-    for (const b of biomes) {
-      if (b.kind === "lake") {
-        const r = 4 + rand("world", 2);
-        for (let y = b.y - r - 2; y <= b.y + r + 2; y++) {
-          for (let x = b.x - r - 2; x <= b.x + r + 2; x++) {
-            if (!inBounds(x, y)) continue;
-            const d = Math.hypot(x - b.x, y - b.y);
-            if (d < r) tiles[y * COLS + x] = T.WATER;
-            else if (d < r + 1.4) tiles[y * COLS + x] = T.SAND;
-          }
-        }
-      } else if (b.kind === "forest" || b.kind === "mushroom") {
-        for (let dy = -3; dy <= 3; dy++) {
-          for (let dx = -4; dx <= 4; dx++) {
-            const roll = rnd("world");
-            if (roll < 0.7) stamp(b.x + dx, b.y + dy, T.TREE);
-            else if (b.kind === "mushroom" && roll < 0.92) stamp(b.x + dx, b.y + dy, T.MUSHROOM);
-          }
-        }
-        stamp(b.x, b.y, T.GRASS);
-        stamp(b.x + 1, b.y + 1, T.GRASS);
-      } else if (b.kind === "quarry" || b.kind === "crystal") {
-        const cells = [];
-        for (let dy = -2; dy <= 3; dy++) {
-          for (let dx = -3; dx <= 3; dx++) {
-            if (rnd("world") < 0.8) {
-              stamp(b.x + dx, b.y + dy, T.STONE);
-              cells.push([b.x + dx, b.y + dy]);
-            }
-          }
-        }
-        const golds = b.kind === "crystal" ? BIOME_FX.crystalGold : BIOME_FX.quarryGold;
-        for (let k = 0; k < golds && cells.length; k++) {
-          const [x, y] = cells.splice(rand("world", cells.length), 1)[0];
-          stamp(x, y, T.GOLD);
-        }
-        if (b.kind === "crystal") {
-          const ring = [[-5, -1], [5, 0], [0, -4], [-4, 4], [4, 4], [0, 5]];
-          for (let k = 0; k < BIOME_FX.statues; k++) {
-            const [dx, dy] = ring.splice(rand("world", ring.length), 1)[0];
-            stamp(b.x + dx, b.y + dy, T.STATUE);
-          }
-        }
-      } else if (b.kind === "rubble") {
-        for (let k = 0; k < BIOME_FX.rubbleCount; k++) {
-          const x = b.x - 5 + rand("world", 11);
-          const y = b.y - 4 + rand("world", 9);
-          if (tiles[y * COLS + x] === T.GRASS || tiles[y * COLS + x] === T.DIRT) stamp(x, y, T.RUBBLE);
-        }
-        stamp(b.x, b.y, T.STONE);
-        stamp(b.x + 2, b.y - 1, T.STONE);
-      }
-    }
-    const nearTrees = [[18, 18], [19, 16], [16, 20], [17, 22], [21, 17], [20, 23], [23, 18], [25, 22], [27, 18], [28, 20]];
-    for (const [x, y] of nearTrees) stamp(x, y, T.TREE);
-    for (let y = 26; y <= 29; y++) {
-      for (let x = 20; x <= 27; x++) stamp(x, y, T.FARM);
-    }
-    stamp(21, 27, T.CROP);
-    stamp(24, 28, T.CROP);
-    stamp(26, 27, T.CROP);
-    crops.set("21,27", { stage: 2, grow: 0 });
-    crops.set("24,28", { stage: 2, grow: 0 });
-    crops.set("26,27", { stage: 2, grow: 0 });
-    for (let y = 7; y <= 21; y++) stamp(24, y, T.PATH);
-    for (let y = 4; y <= 8; y++) {
-      for (let x = 21; x <= 27; x++) {
-        if (x === 21 || x === 27 || y === 4 || y === 8) stamp(x, y, T.BRICK);
-      }
-    }
-    stamp(24, 6, T.PATH);
-    stamp(24, 5, T.PATH);
-    stamp(23, 6, T.PATH);
-    stamp(25, 6, T.PATH);
-    return { tiles, crops, biomes };
-  }
-
-  function makePlayer(cls) {
-    const def = CLASSES[cls];
-    return {
-      cls,
-      x: 24 * TILE + 8,
-      y: 21 * TILE + 8,
-      vx: 0,
-      vy: 0,
-      dir: 0,
-      frame: 0,
-      anim: 0,
-      hp: def.hp,
-      maxHp: def.hp,
-      mana: def.mana || 0,
-      maxMana: def.mana || 0,
-      invuln: 0,
-      atkCd: 0,
-      attack: 0,
-      skillCd: 0,
-      mine: 0,
-      mineTx: -1,
-      mineTy: -1,
-      dash: 0,
-      dashVx: 0,
-      dashVy: 0,
-      sense: 0,
-      slashDx: 1,
-      slashDy: 0,
-      blockMine: false,
-    };
-  }
-
-  const intro = {
-    active: false,
-    pages: [],
-    page: 0,
-    shown: 0,
-    delay: 38,
-    last: 0,
-    raf: 0,
-    cls: null,
-  };
-
-  function introPages(cls) {
-    const name = CLASSES[cls].name;
-    const flavor = {
-      miner: "你的镐还热着。地底的金会轻轻响，像有谁在土里敲门。",
-      farmer: "口袋里的种子还活着。麦香能把人从黑里拽回来。",
-      mage: "袖管里藏着没熄的星。夜里，光就是路，也是牙。",
-      knight: "盾比夜更厚。你站在门口，火就还敢亮。",
-    }[cls];
-    return [
-      "很久很久以前——\n天地还是一块温热的立方。\n日头嵌在顶上，像一颗不肯落的心。",
-      "后来缝里钻进了风。\n光一块块剥落，白昼碎成余烬。\n人们这才发现：夜，是会走路的。",
-      "最后一堆篝火还在营地中央跳。\n老人说，火在，纪元就在。\n火灭了，名字也会一起冷掉。",
-      "北方祭坛沉睡着。\n要有人把「方块之心」捧去，\n黎明才会肯再睁眼。",
-      `${name}啊。\n${flavor}\n篝火在等你。别让它先睡着。`,
-      "围起栅栏，像给火围一条被子。\n守过两夜。把那颗心，送到北边去。\n\n……出发吧。",
-    ];
-  }
-
-  function playIntroTheme() {
-    if (!audioCtx || !musicOn || !musicGain) return;
-    ensureMusicPad();
-    const notes = [392, 523, 587, 523, 392, 330, 392, 523, 659, 784, 659, 523];
-    notes.forEach((freq, i) => {
-      const t0 = audioCtx.currentTime + i * 0.32;
-      const o = audioCtx.createOscillator();
-      const g = audioCtx.createGain();
-      o.type = "triangle";
-      o.frequency.value = freq;
-      g.gain.setValueAtTime(0.1, t0);
-      g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.5);
-      o.connect(g);
-      g.connect(musicGain);
-      o.start(t0);
-      o.stop(t0 + 0.5);
-    });
-  }
-
-  function renderIntroText() {
-    const full = intro.pages[intro.page] || "";
-    introText.textContent = full.slice(0, intro.shown);
-    introCursor.classList.toggle("hidden", intro.shown < full.length);
-  }
-
-  function tickIntro(now) {
-    if (!intro.active) return;
-    const full = intro.pages[intro.page] || "";
-    if (intro.shown < full.length && now - intro.last >= intro.delay) {
-      intro.shown += 1;
-      intro.last = now;
-      const ch = full[intro.shown - 1] || "";
-      intro.delay = /[。、！？…—\n]/.test(ch) ? 170 : 36;
-      renderIntroText();
-      if (ch && ch !== " " && ch !== "\n") beep(780, 0.016, "square", 0.016);
-    }
-    intro.raf = requestAnimationFrame(tickIntro);
-  }
-
-  function showIntroPage() {
-    intro.shown = 0;
-    intro.delay = 80;
-    intro.last = performance.now();
-    renderIntroText();
-  }
-
-  function advanceIntro() {
-    if (!intro.active) return;
-    const full = intro.pages[intro.page] || "";
-    if (intro.shown < full.length) {
-      intro.shown = full.length;
-      renderIntroText();
-      return;
-    }
-    intro.page += 1;
-    if (intro.page >= intro.pages.length) {
-      finishIntro();
-      return;
-    }
-    beep(520, 0.05, "square", 0.03);
-    showIntroPage();
-  }
-
-  function finishIntro() {
-    if (!intro.active) return;
+export function startGame(cls, opts) {
+  if (intro.active) {
     intro.active = false;
     if (intro.raf) cancelAnimationFrame(intro.raf);
     intro.raf = 0;
     screenIntro.classList.add("hidden");
-    const cls = intro.cls;
-    intro.cls = null;
-    startGame(cls, { brief: true });
   }
+  const briefOn = !!(opts && opts.brief);
+  const seed = String((opts && opts.seed) || pendingSeed || urlSeed || newSeed());
+  setPendingSeed("");
+  setRng(makeStreams(seed));
+  const world = genWorld();
+  const def = CLASSES[cls];
+  setState({
+    cls,
+    seed,
+    tiles: world.tiles,
+    crops: world.crops,
+    player: makePlayer(cls),
+    inv: {
+      wood: cls === "miner" ? 2 : 0,
+      stone: 0,
+      gold: 0,
+      wheat: 0,
+      seed: def.seeds || 2,
+      fence: cls === "knight" ? 2 : 0,
+      torch: cls === "mage" ? 1 : 0,
+      plot: cls === "farmer" ? 1 : 0,
+      heart: 0,
+    },
+    build: null,
+    campHp: CAMP_MAX,
+    fenceHp: new Map(),
+    campHurtWarn: false,
+    campHurtCd: 0,
+    campPull: 0,
+    campFlash: 0,
+    fenceBreakWarn: false,
+    campHint: 6,
+    benchHint: 0,
+    rLatch: false,
+    briefing: false,
+    briefStep: 0,
+    look: { x: 24 * TILE + 8, y: 21 * TILE + 8 },
+    lookTo: { x: 22 * TILE + 8, y: 21 * TILE + 8 },
+    enemies: [],
+    drops: [],
+    bolts: [],
+    rocks: [],
+    particles: [],
+    floats: [],
+    bench: { x: 24 * TILE + 8, y: 19 * TILE + 8 },
+    altar: { x: 24 * TILE + 8, y: 6 * TILE + 8 },
+    camp: { x: 22 * TILE + 8, y: 21 * TILE + 8 },
+    day: true,
+    cycle: 0,
+    dayLen: 62,
+    nightLen: 26,
+    nights: 0,
+    time: 0,
+    paused: false,
+    over: false,
+    win: false,
+    spawnAcc: 0,
+    toSpawn: 0,
+    wave: 0,
+    wavesTotal: 0,
+    waveWait: 0,
+    shake: 0,
+    hitstop: 0,
+    footAcc: 0,
+    musicAcc: 0,
+    musicStep: 0,
+    kills: 0,
+    era: 1,
+    eraStart: 0,
+    relics: [],
+    picks: [],
+    choosing: false,
+    howlPending: false,
+    howl: 0,
+    bossPending: false,
+    bossName: "",
+    bossKills: 0,
+    nightKills: 0,
+    nightCampHit: false,
+    ap: AP_BASE,
+    apWarn: 0,
+    lastPlace: null,
+    towerCd: new Map(),
+    dayEvent: null,
+    eventLog: [],
+    repairs: 0,
+    heals: {},
+    towersBuilt: 0,
+    statueWoke: false,
+    meteorSeen: false,
+    recorded: false,
+    achQueue: [],
+    achAcc: 0,
+    biomes: world.biomes,
+    nightWarned: false,
+    skippedGuide: false,
+    flags: { moved: false, chopped: false, gathered: false, crafted: false, offered: false, planted: false, sawWheat: false, built: false },
+  });
+  screenTitle.classList.add("hidden");
+  screenGame.classList.remove("hidden");
+  skillName.textContent = def.skill;
+  manaWrap.classList.toggle("hidden", cls !== "mage");
+  resize();
+  beep(520, 0.08, "square", 0.05);
+  syncGuide();
+  setLast(performance.now());
+  if (briefOn) startBriefing();
+  else toast("先走到树旁边，按空格砍木头。", 3.2);
+  if (!looping) {
+    setLooping(true);
+    requestAnimationFrame(loop);
+  }
+}
 
-  function playIntro(cls) {
-    intro.cls = cls;
-    intro.pages = introPages(cls);
-    intro.page = 0;
-    intro.active = true;
-    screenTitle.classList.add("hidden");
-    screenIntro.classList.remove("hidden");
-    playIntroTheme();
-    showIntroPage();
-    intro.raf = requestAnimationFrame(tickIntro);
-  }
+function mouseWorld() {
+  const scale = Number(canvas.dataset.scale || 3);
+  const cam = camera();
+  return { x: cam.x + mouse.x / scale, y: cam.y + mouse.y / scale };
+}
 
-  const BRIEF = [
-    { focus: "camp", title: "要保护的", text: "看见了吗？这簇还在跳的火。\n夜里所有的牙，都会朝它来。它灭了，这一局的太阳也就灭了。" },
-    { focus: "bench", title: "合成之心", text: "这张旧台子还温着。\n木、石、金、麦凑齐，按 E。方块之心会在这里醒来。" },
-    { focus: "altar", title: "送到这里", text: "顺着土路一直向北。\n那座沉睡的祭坛，才是心要回家的地方。守过两夜，天亮再献。" },
-    { focus: "camp", title: "白天先做", text: "先去砍树。把火的上下左右围死。\n记得留木头——心也是要吃木头的。" },
-    { focus: "player", title: "出发", text: "预演到此。风已经在等了。\n……正式开始。" },
-  ];
-  const brief = { shown: 0, acc: 0 };
-
-  function briefFocus(step) {
-    if (!state || !step) return { x: 0, y: 0 };
-    if (step.focus === "camp") return state.camp;
-    if (step.focus === "bench") return state.bench;
-    if (step.focus === "altar") return state.altar;
-    return state.player;
-  }
-
-  function setBriefStep(i) {
-    state.briefStep = i;
-    brief.shown = 0;
-    brief.acc = 0;
-    const step = BRIEF[i];
-    briefingTitle.textContent = step.title;
-    briefingText.textContent = "";
-    briefingCursor.classList.add("hidden");
-    const target = briefFocus(step);
-    state.lookTo.x = target.x;
-    state.lookTo.y = target.y;
-  }
-
-  function startBriefing() {
-    state.briefing = true;
-    state.look.x = state.player.x;
-    state.look.y = state.player.y;
-    briefingEl.classList.remove("hidden");
-    guideEl.classList.add("hidden");
-    setBriefStep(0);
-    syncHud();
-  }
-
-  function advanceBrief() {
-    if (!state || !state.briefing) return;
-    const step = BRIEF[state.briefStep];
-    if (brief.shown < step.text.length) {
-      brief.shown = step.text.length;
-      briefingText.textContent = step.text;
-      briefingCursor.classList.remove("hidden");
-      return;
-    }
-    if (state.briefStep + 1 >= BRIEF.length) {
-      endBriefing();
-      return;
-    }
-    beep(520, 0.05, "square", 0.03);
-    setBriefStep(state.briefStep + 1);
-  }
-
-  function endBriefing() {
-    if (!state || !state.briefing) return;
-    state.briefing = false;
-    state.look.x = state.player.x;
-    state.look.y = state.player.y;
-    state.lookTo.x = state.player.x;
-    state.lookTo.y = state.player.y;
-    briefingEl.classList.add("hidden");
-    guideEl.classList.remove("hidden");
-    toast("先走到树旁边，按空格砍木头。", 3.2);
-    last = performance.now();
-    syncGuide();
-    syncHud();
-  }
-
-  function startGame(cls, opts) {
-    if (intro.active) {
-      intro.active = false;
-      if (intro.raf) cancelAnimationFrame(intro.raf);
-      intro.raf = 0;
-      screenIntro.classList.add("hidden");
-    }
-    const briefOn = !!(opts && opts.brief);
-    const seed = String((opts && opts.seed) || pendingSeed || urlSeed || newSeed());
-    pendingSeed = "";
-    rng = makeStreams(seed);
-    const world = genWorld();
-    const def = CLASSES[cls];
-    state = {
-      cls,
-      seed,
-      tiles: world.tiles,
-      crops: world.crops,
-      player: makePlayer(cls),
-      inv: {
-        wood: cls === "miner" ? 2 : 0,
-        stone: 0,
-        gold: 0,
-        wheat: 0,
-        seed: def.seeds || 2,
-        fence: cls === "knight" ? 2 : 0,
-        torch: cls === "mage" ? 1 : 0,
-        plot: cls === "farmer" ? 1 : 0,
-        heart: 0,
-      },
-      build: null,
-      campHp: CAMP_MAX,
-      fenceHp: new Map(),
-      campHurtWarn: false,
-      campHurtCd: 0,
-      campPull: 0,
-      campFlash: 0,
-      fenceBreakWarn: false,
-      campHint: 6,
-      benchHint: 0,
-      rLatch: false,
-      briefing: false,
-      briefStep: 0,
-      look: { x: 24 * TILE + 8, y: 21 * TILE + 8 },
-      lookTo: { x: 22 * TILE + 8, y: 21 * TILE + 8 },
-      enemies: [],
-      drops: [],
-      bolts: [],
-      rocks: [],
-      particles: [],
-      floats: [],
-      bench: { x: 24 * TILE + 8, y: 19 * TILE + 8 },
-      altar: { x: 24 * TILE + 8, y: 6 * TILE + 8 },
-      camp: { x: 22 * TILE + 8, y: 21 * TILE + 8 },
-      day: true,
-      cycle: 0,
-      dayLen: 62,
-      nightLen: 26,
-      nights: 0,
-      time: 0,
-      paused: false,
-      over: false,
-      win: false,
-      spawnAcc: 0,
-      toSpawn: 0,
-      wave: 0,
-      wavesTotal: 0,
-      waveWait: 0,
-      shake: 0,
-      hitstop: 0,
-      footAcc: 0,
-      musicAcc: 0,
-      musicStep: 0,
-      kills: 0,
-      era: 1,
-      eraStart: 0,
-      relics: [],
-      picks: [],
-      choosing: false,
-      howlPending: false,
-      howl: 0,
-      bossPending: false,
-      bossName: "",
-      bossKills: 0,
-      nightKills: 0,
-      nightCampHit: false,
-      ap: AP_BASE,
-      apWarn: 0,
-      lastPlace: null,
-      towerCd: new Map(),
-      dayEvent: null,
-      eventLog: [],
-      repairs: 0,
-      heals: {},
-      towersBuilt: 0,
-      statueWoke: false,
-      meteorSeen: false,
-      recorded: false,
-      achQueue: [],
-      achAcc: 0,
-      biomes: world.biomes,
-      nightWarned: false,
-      skippedGuide: false,
-      flags: { moved: false, chopped: false, gathered: false, crafted: false, offered: false, planted: false, sawWheat: false, built: false },
-    };
-    screenTitle.classList.add("hidden");
-    screenGame.classList.remove("hidden");
-    skillName.textContent = def.skill;
-    manaWrap.classList.toggle("hidden", cls !== "mage");
-    resize();
-    beep(520, 0.08, "square", 0.05);
-    syncGuide();
-    last = performance.now();
-    if (briefOn) startBriefing();
-    else toast("先走到树旁边，按空格砍木头。", 3.2);
-    if (!looping) {
-      looping = true;
-      requestAnimationFrame(loop);
-    }
-  }
-
-  function materialsReady() {
-    return Object.entries(NEED).every(([k, n]) => (state.inv[k] || 0) >= n);
-  }
-
-  function eraNights() {
-    return WIN_NIGHTS + (state.era - 1) * ERA_NIGHTS_STEP;
-  }
-  function nightsLeft() {
-    return Math.max(0, eraNights() - (state.nights - state.eraStart));
-  }
-  function survivedNights() {
-    return nightsLeft() <= 0;
-  }
-  function eraMul() {
-    return Math.pow(ERA_SCALING, state.era - 1);
-  }
-  function eraName(n) {
-    return ERA_NAMES[n - 1] || `第${n}纪元`;
-  }
-  function has(id) {
-    return state.relics.includes(id);
-  }
-  function dmgMul() {
-    return (has("whetstone") ? RELIC_FX.whetstoneDmg : 1) * (has("glass_cannon") ? RELIC_FX.glassCannonDmg : 1);
-  }
-  function fenceMax() {
-    return FENCE_MAX * (has("iron_hoops") ? RELIC_FX.ironHoopsFence : 1);
-  }
-  function canOffer() {
-    return state.day && survivedNights() && state.inv.heart > 0;
-  }
-
-  function currentGuide() {
-    if (!state || state.skippedGuide) return null;
-    if (!state.flags.moved) return GUIDE[0];
-    if (!state.flags.chopped) return GUIDE[1];
-    if (!campWalled()) return GUIDE[2];
-    if (!survivedNights()) return GUIDE[3];
-    if (!state.win) return GUIDE[4];
-    return null;
-  }
-
-  function syncGuide() {
-    if (!state) return;
-    const step = currentGuide();
-    const done = {
-      move: state.flags.moved,
-      chop: state.flags.chopped,
-      build: campWalled(),
-      night: survivedNights() || !!state.win,
-      offer: !!state.win,
-    };
-    for (const li of document.querySelectorAll("#guide-steps li")) {
-      const id = li.dataset.step;
-      li.classList.toggle("done", !!done[id]);
-      li.classList.toggle("now", step && step.id === id);
-    }
-    if (state.skippedGuide || !step) {
-      guideEl.classList.add("compact");
-      guideTitle.textContent = state.era > 1 ? `${eraName(state.era)} · 当前目标` : "当前目标";
-      guideBody.textContent = objectiveText();
-      return;
-    }
-    guideEl.classList.remove("compact");
-    guideTitle.textContent = step.title;
-    guideBody.textContent = step.body;
-  }
-
-  function setPrompt(text) {
-    if (!text) {
-      promptEl.classList.add("hidden");
-      promptEl.textContent = "";
-      return;
-    }
-    promptEl.textContent = text;
-    promptEl.classList.remove("hidden");
-  }
-
-  function nearestOf(pred) {
-    let best = null;
-    let bestD = 1e9;
-    const p = state.player;
-    for (let ty = 0; ty < ROWS; ty++) {
-      for (let tx = 0; tx < COLS; tx++) {
-        if (!pred(tileAt(tx, ty), tx, ty)) continue;
-        const d = dist(p.x, p.y, tx * TILE + 8, ty * TILE + 8);
-        if (d < bestD) {
-          bestD = d;
-          best = { x: tx * TILE + 8, y: ty * TILE + 8, tx, ty };
-        }
-      }
-    }
-    return best;
-  }
-
-  function approachTile(tx, ty) {
-    const p = state.player;
-    let best = null;
-    let bestD = 1e9;
-    for (const [dx, dy] of [[0, 1], [0, -1], [1, 0], [-1, 0]]) {
-      const ax = tx + dx;
-      const ay = ty + dy;
-      if (!inBounds(ax, ay) || solid(ax, ay)) continue;
-      const d = dist(p.x, p.y, ax * TILE + 8, ay * TILE + 8);
-      if (d < bestD) {
-        bestD = d;
-        best = { x: ax * TILE + 8, y: ay * TILE + 8, tx: ax, ty: ay };
-      }
-    }
-    return best;
-  }
-
-  function currentTarget() {
-    if (!state) return null;
-    if (state.briefing) {
-      const step = BRIEF[state.briefStep];
-      const t = briefFocus(step);
-      return { x: t.x, y: t.y, kind: step.focus };
-    }
-    if (canOffer()) return { x: state.altar.x, y: state.altar.y, kind: "altar" };
-    if (!state.day) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
-    if (state.inv.heart > 0 && !survivedNights()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
-    if (materialsReady() && !state.inv.heart) return { x: state.bench.x, y: state.bench.y, kind: "bench" };
-    if (!campWalled()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
-    if (state.inv.wood < NEED.wood) {
-      const t = nearestOf((tile) => tile === T.TREE);
-      if (t) return { ...(approachTile(t.tx, t.ty) || t), kind: "tree" };
-    }
-    if (state.inv.gold < NEED.gold) {
-      const t = nearestOf((tile) => tile === T.GOLD);
-      if (t) return { ...(approachTile(t.tx, t.ty) || t), kind: "gold" };
-    }
-    if (state.inv.stone < NEED.stone) {
-      const t = nearestOf((tile) => tile === T.STONE);
-      if (t) return { ...(approachTile(t.tx, t.ty) || t), kind: "stone" };
-    }
-    if (state.inv.wheat < NEED.wheat) {
-      const crop = nearestOf((tile, tx, ty) => tile === T.CROP && (state.crops.get(`${tx},${ty}`)?.stage || 0) >= 2);
-      if (crop) return { ...crop, kind: "crop" };
-      const farm = nearestOf((tile) => tile === T.FARM);
-      if (farm) return { ...farm, kind: "farm" };
-    }
-    return { x: state.bench.x, y: state.bench.y, kind: "bench" };
-  }
-
-  function eatWheat() {
-    if (!state || state.paused || state.over) return;
-    if ((state.inv.wheat || 0) <= 0) {
-      toast("没有麦子。去南边农田收，或夜里打怪有时会掉。");
-      return;
-    }
-    if (state.player.hp >= state.player.maxHp - 0.2) {
-      toast("生命已满，先留着麦子。");
-      return;
-    }
-    state.inv.wheat -= 1;
-    state.heals.wheat = true;
-    const heal = (state.cls === "farmer" ? 22 : 14) + (has("harvest_charm") ? RELIC_FX.harvestCharmHeal : 0);
-    state.player.hp = Math.min(state.player.maxHp, state.player.hp + heal);
-    floatText(state.player.x, state.player.y - 18, `+${heal}`, "#8dff9a");
-    toast(`吃掉一束麦，回复 ${heal} 生命。`);
-    beep(520, 0.06, "triangle", 0.04);
-    syncHud();
-  }
-
-  function helpText() {
-    return [
-      "白天围营，夜里守火。撑过两夜，天亮把方块之心送到北边祭坛。",
-      "每撑过一夜，天亮可从三份「黎明的馈赠」里挑一份：遗物、祝福或变异。",
-      "献祭后可点亮祭坛进入下一纪元：多守一夜，怪更强。随时可以收手结算，复制战绩。",
-      "",
-      "WASD  移动",
-      "空格  砍/挖/打面前的东西",
-      "1 栅栏　2 火把　3 田　4 箭塔　5 尖刺　6 圣泉（按 0 取消）",
-      "箭塔自动射怪；尖刺让踩上的地面怪掉血；圣泉旁边慢慢回血。",
-      "点空地放下；点坏墙修理。空格拆除。Z 撤销上一次建造。自己能穿过栅栏。",
-      "白天的日晷有限：砍树、挖矿、建造、修墙各耗 1 点，天亮回满。收麦、拆除和夜里行动不耗点。",
-      "先把篝火四边围上，再留木头合成方块之心。",
-      "E  工作台合成 / 祭坛献祭 / 播种",
-      "Q 或右键  职业技能",
-      "点「麦」或 H  回血",
-      "",
-      "栅栏挡地面怪，挡不住蝙蝠。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过两夜才能献。",
-    ].join("\n");
-  }
-
-  function apMax() {
-    return AP_BASE + (has("sundial_shard") ? RELIC_FX.sundialAp : 0);
-  }
-
-  function apCostOfTile(t) {
-    if (!state.day) return 0;
-    if (t === T.TREE) return AP_COST.chop;
-    if (t === T.STONE || t === T.GOLD) return AP_COST.mine;
-    return 0;
-  }
-
-  function apShort(n, what) {
-    if (!state.day || state.ap >= n) return false;
-    if (state.apWarn <= 0) {
-      toast(`日晷用尽：今天不能再${what}。收麦、拆除和夜里的行动不耗点。`, 2.6);
-      beep(160, 0.08, "square", 0.03);
-      state.apWarn = 2.4;
-    }
-    return true;
-  }
-
-  function spendAp(n) {
-    if (!state.day || n <= 0) return;
-    state.ap = Math.max(0, state.ap - n);
-    syncHud();
-  }
-
-  function undoPlace() {
-    const u = state.lastPlace;
-    state.lastPlace = null;
-    if (!u || u.day !== state.nights || !state.day || tileAt(u.tx, u.ty) !== u.tile) {
-      toast("没有可以撤销的建造。");
-      return false;
-    }
-    setTile(u.tx, u.ty, u.prev);
-    if (u.tile === T.FENCE) state.fenceHp.delete(`${u.tx},${u.ty}`);
-    if (u.stored) state.inv[u.stored] += 1;
-    else for (const [k, n] of Object.entries(u.paid)) state.inv[k] = (state.inv[k] || 0) + n;
-    state.ap = Math.min(apMax(), state.ap + u.ap);
-    burst(u.tx * TILE + 8, u.ty * TILE + 8, "#c0c4cc", 6);
-    toast("撤销了上一次建造，材料和日晷点已退回。");
-    beep(300, 0.05, "triangle", 0.03);
-    syncHud();
-    return true;
-  }
-
-  function buildCost(kind) {
-    const def = BUILDINGS[kind];
-    if (!def) return {};
-    return { ...def.cost, ...((def.classCost && def.classCost[state.cls]) || {}) };
-  }
-
-  function canPay(cost) {
-    return Object.entries(cost).every(([k, n]) => (state.inv[k] || 0) >= n);
-  }
-
-  function pay(cost) {
-    for (const [k, n] of Object.entries(cost)) state.inv[k] -= n;
-  }
-
-  function setBuild(kind, opts) {
-    if (!state || state.over) return;
-    if (!kind) {
-      state.build = null;
-      syncHud();
-      return;
-    }
-    if (opts && opts.toggle && state.build === kind) {
-      state.build = null;
-      syncHud();
-      return;
-    }
-    if (!BUILDINGS[kind]) return;
-    const changed = state.build !== kind;
-    state.build = kind;
-    if (changed) {
-      const def = BUILDINGS[kind];
-      toast(`建造${def.name}（${costText(kind)}）。${def.desc ? def.desc : "点空地放下，点坏墙修好。"}空格拆除。`);
-    }
-    syncHud();
-  }
-
-  function costText(kind) {
-    const cost = buildCost(kind);
-    const bits = Object.entries(cost).filter(([, n]) => n > 0).map(([k, n]) => `${n}${labelOf(k)}`);
-    return bits.length ? bits.join("") : "免费";
-  }
-
-  function placeable(tx, ty) {
-    if (!inBounds(tx, ty)) return false;
-    const t = tileAt(tx, ty);
-    if (!(t === T.GRASS || t === T.DIRT || t === T.PATH || t === T.SAND)) return false;
-    const px0 = tx * TILE + 8;
-    const py0 = ty * TILE + 8;
-    if (dist(px0, py0, state.bench.x, state.bench.y) < 16) return false;
-    if (dist(px0, py0, state.altar.x, state.altar.y) < 16) return false;
-    if (dist(px0, py0, state.camp.x, state.camp.y) < 16) return false;
-    const ptx = Math.floor(state.player.x / TILE);
-    const pty = Math.floor(state.player.y / TILE);
-    if (tx === ptx && ty === pty) return false;
-    return true;
-  }
-
-  function tryPlace(tx, ty) {
-    const kind = state.build;
-    if (!kind) return false;
-    if (kind === "fence" && tileAt(tx, ty) === T.FENCE) {
-      const key = `${tx},${ty}`;
-      const hp = state.fenceHp.get(key) || fenceMax();
-      if (hp >= fenceMax() - 0.5) {
-        return true;
-      }
-      if ((state.inv.wood || 0) < 1) {
-        toast("修墙需要 1 木。");
-        return true;
-      }
-      if (apShort(AP_COST.repair, "修墙")) return true;
-      spendAp(AP_COST.repair);
-      state.repairs += 1;
-      state.inv.wood -= 1;
-      state.fenceHp.set(key, fenceMax());
-      burst(tx * TILE + 8, ty * TILE + 8, "#c4a06a", 6);
-      toast("栅栏修好了。");
-      beep(360, 0.05, "triangle", 0.04);
-      return true;
-    }
-    if (!placeable(tx, ty)) {
-      toast("这里放不下。对着草地、泥土或土路。");
-      return true;
-    }
-    const cost = buildCost(kind);
-    const def = BUILDINGS[kind];
-    const stored = def.stored || null;
-    const hasStored = !!stored && (state.inv[stored] || 0) > 0;
-    if (!hasStored && !canPay(cost)) {
-      const miss = Object.entries(cost).filter(([k, n]) => (state.inv[k] || 0) < n).map(([k, n]) => `${labelOf(k)}${n}`);
-      toast("材料不够：" + miss.join("、"));
-      return true;
-    }
-    if (apShort(AP_COST.build, "建造")) return true;
-    const apPaid = state.day ? AP_COST.build : 0;
-    spendAp(apPaid);
-    const prev = tileAt(tx, ty);
-    if (hasStored) state.inv[stored] -= 1;
-    else pay(cost);
-    const openBefore = kind === "fence" && !campWalled();
-    setTile(tx, ty, T[def.tile]);
-    if (kind === "fence") state.fenceHp.set(`${tx},${ty}`, fenceMax());
-    if (kind === "tower") state.towersBuilt += 1;
-    state.lastPlace = { tx, ty, prev, tile: tileAt(tx, ty), stored: hasStored ? stored : null, paid: hasStored ? {} : cost, ap: apPaid, day: state.nights };
-    state.flags.built = true;
-    burst(tx * TILE + 8, ty * TILE + 8, "#ffe27a", 8);
-    beep(400, 0.05, "square", 0.04);
-    if (openBefore && campWalled()) {
-      toast("四边围好了。再砍两棵树，木头还要留给方块之心。", 3);
-    }
-    return true;
-  }
-
-  function resize() {
-    const scale = Math.max(2, Math.min(4, Math.floor((window.innerWidth - 48) / (VIEW_W * TILE))));
-    canvas.width = VIEW_W * TILE * scale;
-    canvas.height = VIEW_H * TILE * scale;
-    ctx.imageSmoothingEnabled = false;
-    canvas.dataset.scale = String(scale);
-  }
-
-  function camera() {
-    const p = state.player;
-    let fx = p.x;
-    let fy = p.y;
-    if (state.briefing) {
-      fx = state.look.x;
-      fy = state.look.y;
-    } else if (state.campPull > 0) {
-      const k = Math.min(1, state.campPull);
-      fx = p.x + (state.camp.x - p.x) * 0.42 * k;
-      fy = p.y + (state.camp.y - p.y) * 0.42 * k;
-    }
-    const vw = VIEW_W * TILE;
-    const vh = VIEW_H * TILE;
-    return {
-      x: clamp(fx - vw / 2, 0, COLS * TILE - vw),
-      y: clamp(fy - vh / 2, 0, ROWS * TILE - vh),
-    };
-  }
-
-  function mouseWorld() {
-    const scale = Number(canvas.dataset.scale || 3);
-    const cam = camera();
-    return { x: cam.x + mouse.x / scale, y: cam.y + mouse.y / scale };
-  }
-
-  function aimVec() {
-    const p = state.player;
-    if (mouse.inside) {
-      const m = mouseWorld();
-      const dx = m.x - p.x;
-      const dy = m.y - p.y;
-      const l = Math.hypot(dx, dy);
-      if (l > 6) return { dx: dx / l, dy: dy / l };
-    }
-    const dir = [[0, 1], [-1, 0], [1, 0], [0, -1]][p.dir] || [0, 1];
-    return { dx: dir[0], dy: dir[1] };
-  }
-
-  function faceVec(v) {
-    const p = state.player;
-    if (Math.abs(v.dx) > Math.abs(v.dy)) p.dir = v.dx < 0 ? 1 : 2;
-    else p.dir = v.dy < 0 ? 3 : 0;
-  }
-
-  function facingTile() {
-    const p = state.player;
+export function aimVec() {
+  const p = state.player;
+  if (mouse.inside) {
     const m = mouseWorld();
-    let dx = m.x - p.x;
-    let dy = m.y - p.y;
-    if (!mouse.inside || (Math.abs(dx) + Math.abs(dy) < 2)) {
-      if (p.dir === 0) dy = 1;
-      if (p.dir === 1) dx = -1;
-      if (p.dir === 2) dx = 1;
-      if (p.dir === 3) dy = -1;
-    }
-    const len = Math.hypot(dx, dy) || 1;
-    const x = p.x + (dx / len) * 14;
-    const y = p.y + (dy / len) * 14;
-    return { tx: Math.floor(x / TILE), ty: Math.floor(y / TILE), dx: dx / len, dy: dy / len };
+    const dx = m.x - p.x;
+    const dy = m.y - p.y;
+    const l = Math.hypot(dx, dy);
+    if (l > 6) return { dx: dx / l, dy: dy / l };
   }
+  const dir = [[0, 1], [-1, 0], [1, 0], [0, -1]][p.dir] || [0, 1];
+  return { dx: dir[0], dy: dir[1] };
+}
 
-  function frontTile() {
-    const p = state.player;
-    const dir = [[0, 1], [-1, 0], [1, 0], [0, -1]][p.dir] || [0, 1];
+export function faceVec(v) {
+  const p = state.player;
+  if (Math.abs(v.dx) > Math.abs(v.dy)) p.dir = v.dx < 0 ? 1 : 2;
+  else p.dir = v.dy < 0 ? 3 : 0;
+}
+
+function facingTile() {
+  const p = state.player;
+  const m = mouseWorld();
+  let dx = m.x - p.x;
+  let dy = m.y - p.y;
+  if (!mouse.inside || (Math.abs(dx) + Math.abs(dy) < 2)) {
+    if (p.dir === 0) dy = 1;
+    if (p.dir === 1) dx = -1;
+    if (p.dir === 2) dx = 1;
+    if (p.dir === 3) dy = -1;
+  }
+  const len = Math.hypot(dx, dy) || 1;
+  const x = p.x + (dx / len) * 14;
+  const y = p.y + (dy / len) * 14;
+  return { tx: Math.floor(x / TILE), ty: Math.floor(y / TILE), dx: dx / len, dy: dy / len };
+}
+
+function frontTile() {
+  const p = state.player;
+  const dir = [[0, 1], [-1, 0], [1, 0], [0, -1]][p.dir] || [0, 1];
+  const ptx = Math.floor(p.x / TILE);
+  const pty = Math.floor(p.y / TILE);
+  return { tx: ptx + dir[0], ty: pty + dir[1], dx: dir[0], dy: dir[1] };
+}
+
+export function aimTile() {
+  const p = state.player;
+  if (mouse.inside) {
+    const m = mouseWorld();
+    const tx = Math.floor(m.x / TILE);
+    const ty = Math.floor(m.y / TILE);
     const ptx = Math.floor(p.x / TILE);
     const pty = Math.floor(p.y / TILE);
-    return { tx: ptx + dir[0], ty: pty + dir[1], dx: dir[0], dy: dir[1] };
-  }
-
-  function isResource(tx, ty) {
-    const t = tileAt(tx, ty);
-    return t === T.TREE || t === T.STONE || t === T.GOLD || t === T.RUBBLE
-      || (t === T.CROP && (state.crops.get(`${tx},${ty}`)?.stage || 0) >= 2);
-  }
-  function isDismantle(tx, ty) {
-    const t = tileAt(tx, ty);
-    return t === T.FENCE || t === T.TORCH || t === T.SPORE || t === T.TOWER || t === T.SPIKE || t === T.SPRING;
-  }
-  function isMineable(tx, ty) {
-    return isResource(tx, ty) || isDismantle(tx, ty);
-  }
-
-  function aimTile() {
-    const p = state.player;
-    if (mouse.inside) {
-      const m = mouseWorld();
-      const tx = Math.floor(m.x / TILE);
-      const ty = Math.floor(m.y / TILE);
-      const ptx = Math.floor(p.x / TILE);
-      const pty = Math.floor(p.y / TILE);
-      if (inBounds(tx, ty) && Math.max(Math.abs(tx - ptx), Math.abs(ty - pty)) <= 2) {
-        const dx = m.x - p.x;
-        const dy = m.y - p.y;
-        const len = Math.hypot(dx, dy) || 1;
-        if (isResource(tx, ty)) return { tx, ty, dx: dx / len, dy: dy / len };
-        if (state.build) return { tx, ty, dx: dx / len, dy: dy / len };
-        if (isMineable(tx, ty)) return { tx, ty, dx: dx / len, dy: dy / len };
-        const toward = facingTile();
-        if (isMineable(toward.tx, toward.ty)) return toward;
-        return { tx, ty, dx: dx / len, dy: dy / len };
-      }
-    }
-    return facingTile();
-  }
-
-  function addDrop(kind, x, y, n) {
-    for (let i = 0; i < (n || 1); i++) {
-      state.drops.push({
-        kind,
-        x: x + rand("fx", 7) - 3,
-        y: y + rand("fx", 7) - 3,
-        z: 6 + rand("fx", 6),
-        vz: -40,
-        life: 18,
-      });
+    if (inBounds(tx, ty) && Math.max(Math.abs(tx - ptx), Math.abs(ty - pty)) <= 2) {
+      const dx = m.x - p.x;
+      const dy = m.y - p.y;
+      const len = Math.hypot(dx, dy) || 1;
+      if (isResource(tx, ty)) return { tx, ty, dx: dx / len, dy: dy / len };
+      if (state.build) return { tx, ty, dx: dx / len, dy: dy / len };
+      if (isMineable(tx, ty)) return { tx, ty, dx: dx / len, dy: dy / len };
+      const toward = facingTile();
+      if (isMineable(toward.tx, toward.ty)) return toward;
+      return { tx, ty, dx: dx / len, dy: dy / len };
     }
   }
-  function burst(x, y, color, n, preset) {
-    const P = PARTICLES[preset] || PARTICLES.default;
-    for (let i = 0; i < (n || 8); i++) {
-      const a = rnd("fx") * Math.PI * 2;
-      const s = P.speed + rnd("fx") * P.speedVar;
-      state.particles.push({
-        x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s, life: P.life + rnd("fx") * P.lifeVar, color, g: P.gravity, size: P.size,
-      });
+  return facingTile();
+}
+
+function showResult(title, body) {
+  state.over = true;
+  state.paused = true;
+  state.choosing = false;
+  recordRun();
+  state.share = shareText();
+  showOverlay(title, `${body}\n\n${state.share}`, [
+    ["复制战绩", () => copyText(state.share), { id: "btn-copy-share" }],
+    ["同种子再来", () => {
+      const u = new URL(location.href);
+      u.searchParams.set("seed", state.seed);
+      location.href = u.toString();
+    }],
+    ["再玩一局", () => {
+      const u = new URL(location.href);
+      u.searchParams.delete("seed");
+      location.href = u.toString();
+    }],
+  ]);
+}
+
+export function die(reason) {
+  if (state.over) return;
+  overlay.classList.add("hidden");
+  showResult(reason || "营地失守", `${eraName(state.era)}，你撑过了 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。\n栅栏能挡地面的怪，夜里站在火把旁边打。`);
+}
+
+function runTime() {
+  const t = Math.floor(state.time);
+  return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`;
+}
+
+function win() {
+  state.win = true;
+  state.paused = true;
+  state.choosing = true;
+  const done = eraName(state.era);
+  const next = eraName(state.era + 1);
+  showOverlay(
+    `${done}落幕 · 方块之心已点亮`,
+    `${CLASSES[state.cls].name} 把方块之心放上祭坛。\n用时 ${runTime()}，度过 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。\n\n点亮祭坛进入${next}：要多守 ${ERA_NIGHTS_STEP} 夜，怪物生命与伤害 ×${ERA_SCALING}，每夜多 ${WAVES.perEra} 波。`,
+    [
+      ["点亮祭坛 · 进入下一纪元", () => nextEra(), { id: "btn-next-era" }],
+      ["就此收手 · 结算", () => showResult("纪元传说", `${CLASSES[state.cls].name} 在${done}后放下了火把。\n用时 ${runTime()}，度过 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。`), { id: "btn-end-run" }],
+    ]
+  );
+  beep(660, 0.12, "square", 0.06);
+  setTimeout(() => beep(880, 0.18, "square", 0.05), 120);
+}
+
+function nextEra() {
+  state.era += 1;
+  state.eraStart = state.nights;
+  state.choosing = false;
+  state.paused = false;
+  state.skippedGuide = true;
+  overlay.classList.add("hidden");
+  setLast(performance.now());
+  burst(state.altar.x, state.altar.y, "#ffe27a", 24);
+  toast(`${eraName(state.era)}开始。再守 ${eraNights()} 夜，怪物更强了。`, 3.4);
+  beep(330, 0.2, "sawtooth", 0.05);
+  syncGuide();
+  syncHud();
+}
+
+function rollDawn() {
+  const pool = RELICS.filter((r) => r.type === "blessing" || !state.relics.includes(r.id));
+  const out = [];
+  while (out.length < DAWN_CHOICES && pool.length) {
+    const total = pool.reduce((s, r) => s + r.weight, 0);
+    let roll = rnd("event") * total;
+    let i = 0;
+    while (i < pool.length - 1 && roll >= pool[i].weight) {
+      roll -= pool[i].weight;
+      i += 1;
     }
+    out.push(pool.splice(i, 1)[0]);
   }
-  function floatText(x, y, text, color) {
-    state.floats.push({ x, y, text, color, life: 0.9 });
-  }
+  return out;
+}
 
-  function tryMove(ent, dt) {
-    const nx = ent.x + ent.vx * dt;
-    const ny = ent.y + ent.vy * dt;
-    if (canStand(nx, ent.y)) ent.x = nx;
-    if (canStand(ent.x, ny)) ent.y = ny;
-    ent.x = clamp(ent.x, 8, COLS * TILE - 8);
-    ent.y = clamp(ent.y, 8, ROWS * TILE - 8);
-  }
+function offerDawn() {
+  if (state.over) return;
+  const choices = rollDawn();
+  if (!choices.length) return;
+  for (const r of choices) codexAdd("relics", r.id);
+  state.paused = true;
+  state.choosing = true;
+  keys.clear();
+  mouse.down = false;
+  showOverlay(
+    "黎明的馈赠",
+    `撑过了第 ${state.nights} 夜。选一份馈赠带进今天：`,
+    choices.map((r) => [
+      `【${RELIC_TYPE_LABEL[r.type]}】${r.name} · ${r.desc}`,
+      () => pickRelic(r.id),
+      { cls: `choice ${r.type}`, data: { relic: r.id } },
+    ]),
+    { choices: true }
+  );
+  beep(700, 0.1, "triangle", 0.05);
+}
 
-  function hurt(ent, dmg, src) {
-    if (ent === state.player && state.player.invuln > 0) return;
-    ent.hp -= dmg;
-    burst(ent.x, ent.y - 8, "#f07070", 6);
-    floatText(ent.x, ent.y - 16, String(Math.ceil(dmg)), "#ffd0d0");
-    beep(180, 0.07, "sawtooth", 0.04);
-    if (ent === state.player) {
-      state.player.invuln = 0.7;
-      const dx = ent.x - (src ? src.x : ent.x);
-      const dy = ent.y - (src ? src.y : ent.y);
-      if (src && (dx || dy)) state.hurtDir = { a: Math.atan2(-dy, -dx), t: SKY_FX.hurtArrowSecs };
-      const l = Math.hypot(dx, dy) || 1;
-      ent.vx += (dx / l) * 40;
-      ent.vy += (dy / l) * 40;
-      if (ent.hp <= 0) die();
+function pickRelic(id) {
+  const r = RELICS.find((x) => x.id === id);
+  if (!r || !state.choosing) return;
+  state.picks.push(id);
+  if (r.type !== "blessing") state.relics.push(id);
+  const p = state.player;
+  if (id === "supply_cache") {
+    state.inv.wood += RELIC_FX.supplyWood;
+    state.inv.stone += RELIC_FX.supplyStone;
+  } else if (id === "hearth_song") {
+    if (p.hp < p.maxHp) state.heals.blessing = true;
+    state.campHp = CAMP_MAX;
+    p.hp = p.maxHp;
+  } else if (id === "wolf_howl") {
+    state.howlPending = true;
+  } else if (id === "sundial_shard" && state.day) {
+    state.ap += RELIC_FX.sundialAp;
+  } else if (id === "glass_cannon") {
+    p.maxHp = Math.round(p.maxHp * RELIC_FX.glassCannonHp);
+    p.hp = Math.min(p.hp, p.maxHp);
+  }
+  state.choosing = false;
+  state.paused = false;
+  overlay.classList.add("hidden");
+  setLast(performance.now());
+  toast(`获得${RELIC_TYPE_LABEL[r.type]}「${r.name}」：${r.desc}`, 3);
+  beep(880, 0.08, "square", 0.05);
+  syncHud();
+}
+
+function interact() {
+  const p = state.player;
+  if (tradeCaravan()) return;
+  if (dist(p.x, p.y, state.bench.x, state.bench.y) < 22) {
+    craft();
+    return;
+  }
+  if (dist(p.x, p.y, state.altar.x, state.altar.y) < 22) {
+    if (!state.day) {
+      toast("祭坛夜里封着。先守住篝火，天亮再献。");
+    } else if (!survivedNights()) {
+      toast(`还要再守 ${nightsLeft()} 夜。天亮后才能献祭。`);
+    } else if (state.inv.heart > 0) {
+      state.inv.heart -= 1;
+      burst(state.altar.x, state.altar.y, "#ffe27a", 24);
+      win();
+    } else toast("祭坛还空着。先去工作台合成方块之心。");
+    return;
+  }
+  const f = facingTile();
+  if (plant(f.tx, f.ty)) return;
+  toast("靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。");
+}
+
+function updatePlayer(dt) {
+  const p = state.player;
+  const def = CLASSES[p.cls];
+  let ix = 0;
+  let iy = 0;
+  if (keys.has("KeyW") || keys.has("ArrowUp")) iy -= 1;
+  if (keys.has("KeyS") || keys.has("ArrowDown")) iy += 1;
+  if (keys.has("KeyA") || keys.has("ArrowLeft")) ix -= 1;
+  if (keys.has("KeyD") || keys.has("ArrowRight")) ix += 1;
+  const moving = ix || iy;
+  if (moving) state.flags.moved = true;
+  if (moving) {
+    const l = Math.hypot(ix, iy);
+    const speed = def.speed * (has("light_boots") ? RELIC_FX.lightBootsSpeed : 1);
+    p.vx = (ix / l) * speed;
+    p.vy = (iy / l) * speed;
+    if (Math.abs(ix) > Math.abs(iy)) p.dir = ix < 0 ? 1 : 2;
+    else p.dir = iy < 0 ? 3 : 0;
+  } else {
+    p.vx *= 0.7;
+    p.vy *= 0.7;
+  }
+  if (p.dash > 0) {
+    p.vx = p.dashVx;
+    p.vy = p.dashVy;
+    p.dash -= dt;
+  }
+  const ox = p.x;
+  const oy = p.y;
+  tryMove(p, dt);
+  const bumpRes = !!(moving && Math.hypot(p.x - ox, p.y - oy) < 0.5 && isResource(frontTile().tx, frontTile().ty));
+  if (moving) {
+    state.footAcc += dt;
+    if (state.footAcc > 0.27) {
+      state.footAcc = 0;
+      footstep();
     }
+  } else {
+    state.footAcc = 0.2;
   }
+  p.anim += dt * (moving ? 8 : 3);
+  p.frame = Math.floor(p.anim) % 2;
+  p.atkCd = Math.max(0, p.atkCd - dt);
+  p.skillCd = Math.max(0, p.skillCd - dt);
+  p.invuln = Math.max(0, p.invuln - dt);
+  p.attack = Math.max(0, p.attack - dt);
+  p.sense = Math.max(0, p.sense - dt);
+  if (p.cls === "mage") p.mana = Math.min(p.maxMana, p.mana + dt * 1.35);
 
-  function codexAdd(kind, id) {
-    const list = meta.codex[kind];
-    if (list.includes(id)) return;
-    list.push(id);
-    saveStore("codex", meta.codex);
-  }
-
-  const ACH_CHECK = {
-    first_night: (s, ev) => ev === "dawn" && s.nights >= 1,
-    first_heart: (s) => s.flags.crafted,
-    era_one: (s) => s.win,
-    era_three: (s) => s.era >= 3,
-    no_repair: (s) => s.win && s.repairs === 0,
-    farm_only: (s) => s.win && (s.heals.wheat || s.heals.harvest) && !s.heals.camp && !s.heals.spring && !s.heals.blessing,
-    full_camp: (s, ev) => ev === "dawn" && s.nights >= 1 && !s.nightCampHit,
-    night_30: (s) => s.nightKills >= 30,
-    boss_slayer: (s) => s.bossKills >= 1,
-    tower_three: (s) => s.towersBuilt >= 3,
-    trader: (s) => !!(s.dayEvent && s.dayEvent.id === "caravan" && s.dayEvent.trades >= DAY_EVENT_FX.caravanTrades),
-    stargazer: (s) => s.meteorSeen,
-    statue_wake: (s) => s.statueWoke,
-    relic_five: (s) => s.relics.filter((id) => RELICS.find((r) => r.id === id && r.type === "relic")).length >= 5,
-    mutant: (s) => s.relics.some((id) => RELICS.find((r) => r.id === id && r.type === "mutation")),
-    daily: (s, ev) => ev === "end" && isDaily(s.seed),
-  };
-
-  function checkAch(ev) {
-    if (!state) return;
-    for (const a of ACHIEVEMENTS) {
-      if (meta.ach[a.id]) continue;
-      const fn = ACH_CHECK[a.id];
-      if (!fn || !fn(state, ev)) continue;
-      meta.ach[a.id] = new Date().toISOString().slice(0, 10);
-      saveStore("ach", meta.ach);
-      state.achQueue.push(a);
-    }
-  }
-
-  function updateAch(dt) {
-    state.achAcc += dt;
-    if (state.achAcc >= 0.5) {
-      state.achAcc = 0;
-      checkAch("tick");
-    }
-    if (state.achQueue.length && toastTimer <= 0) {
-      const a = state.achQueue.shift();
-      toast(`成就解锁「${a.name}」：${a.desc}`, 2.6);
-      beep(990, 0.08, "triangle", 0.05);
-    }
-  }
-
-  function recordRun() {
-    if (state.recorded) return;
-    state.recorded = true;
-    const st = meta.stats;
-    st.runs += 1;
-    st.kills += state.kills;
-    st.bestNights = Math.max(st.bestNights, state.nights);
-    st.bestEra = Math.max(st.bestEra, state.era);
-    if (state.win || state.era > 1) st.wins += 1;
-    if (isDaily(state.seed)) st.daily[state.seed] = Math.max(st.daily[state.seed] || 0, state.nights);
-    const keys = Object.keys(st.daily).sort();
-    while (keys.length > 30) delete st.daily[keys.shift()];
-    saveStore("stats", st);
-    checkAch("end");
-  }
-
-  function titleStatsText() {
-    const st = meta.stats;
-    const got = ACHIEVEMENTS.filter((a) => meta.ach[a.id]).length;
-    const today = st.daily[dailySeed()];
-    if (!st.runs) return `成就 ${got}/${ACHIEVEMENTS.length} · 还没有战绩，先来一局吧`;
-    return `已玩 ${st.runs} 局 · 最远第${st.bestNights}夜 · 最高${eraName(st.bestEra)} · 累计击杀 ${st.kills} · 成就 ${got}/${ACHIEVEMENTS.length}`
-      + (today !== undefined ? ` · 今日挑战最佳第${today}夜` : "");
-  }
-
-  function codexText() {
-    const lines = [];
-    const enemies = Object.entries(ENEMIES);
-    lines.push(`【敌人图鉴】${meta.codex.enemies.length}/${enemies.length}`);
-    lines.push(enemies.map(([id, e]) => (meta.codex.enemies.includes(id) ? e.name : "？？？")).join(" · "));
-    lines.push("");
-    lines.push(`【遗物图鉴】${RELICS.filter((r) => meta.codex.relics.includes(r.id)).length}/${RELICS.length}`);
-    for (const r of RELICS) {
-      lines.push(meta.codex.relics.includes(r.id) ? `${r.name}（${RELIC_TYPE_LABEL[r.type]}）：${r.desc}` : "？？？");
-    }
-    lines.push("");
-    lines.push(`【成就】${ACHIEVEMENTS.filter((a) => meta.ach[a.id]).length}/${ACHIEVEMENTS.length}`);
-    for (const a of ACHIEVEMENTS) {
-      lines.push(meta.ach[a.id] ? `★ ${a.name}：${a.desc}` : `☆ ？？？：${a.desc}`);
-    }
-    return lines.join("\n");
-  }
-
-  function openCodex() {
-    showOverlay("图鉴 / 成就", codexText(), [["关闭", () => overlay.classList.add("hidden")]]);
-    overlay.classList.add("codex");
-  }
-
-  function shareText() {
-    const names = state.picks.map((id) => RELICS.find((r) => r.id === id).name);
-    const tail = `第${state.nights}夜 · 击杀${state.kills} · 遗物[${names.join(",")}]`;
-    if (isDaily(state.seed)) return `方块纪元·每日 ${state.seed.slice(-4)} · ${eraName(state.era)} · ${tail}`;
-    return `方块纪元·种子 ${state.seed} · ${eraName(state.era)} · ${tail}`;
-  }
-
-  function copyText(text) {
-    const fallback = () => {
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      ta.setAttribute("readonly", "");
-      ta.style.position = "fixed";
-      ta.style.opacity = "0";
-      document.body.appendChild(ta);
-      ta.select();
-      let ok = false;
-      try {
-        ok = document.execCommand("copy");
-      } catch {
-        ok = false;
-      }
-      ta.remove();
-      toast(ok ? "战绩已复制，发给朋友吧。" : "复制失败，请手动选中上面的文字。");
-    };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(() => toast("战绩已复制，发给朋友吧。"), fallback);
-    } else {
-      fallback();
-    }
-  }
-
-  function showResult(title, body) {
-    state.over = true;
-    state.paused = true;
-    state.choosing = false;
-    recordRun();
-    state.share = shareText();
-    showOverlay(title, `${body}\n\n${state.share}`, [
-      ["复制战绩", () => copyText(state.share), { id: "btn-copy-share" }],
-      ["同种子再来", () => {
-        const u = new URL(location.href);
-        u.searchParams.set("seed", state.seed);
-        location.href = u.toString();
-      }],
-      ["再玩一局", () => {
-        const u = new URL(location.href);
-        u.searchParams.delete("seed");
-        location.href = u.toString();
-      }],
-    ]);
-  }
-
-  function die(reason) {
-    if (state.over) return;
-    overlay.classList.add("hidden");
-    showResult(reason || "营地失守", `${eraName(state.era)}，你撑过了 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。\n栅栏能挡地面的怪，夜里站在火把旁边打。`);
-  }
-
-  function runTime() {
-    const t = Math.floor(state.time);
-    return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`;
-  }
-
-  function win() {
-    state.win = true;
-    state.paused = true;
-    state.choosing = true;
-    const done = eraName(state.era);
-    const next = eraName(state.era + 1);
-    showOverlay(
-      `${done}落幕 · 方块之心已点亮`,
-      `${CLASSES[state.cls].name} 把方块之心放上祭坛。\n用时 ${runTime()}，度过 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。\n\n点亮祭坛进入${next}：要多守 ${ERA_NIGHTS_STEP} 夜，怪物生命与伤害 ×${ERA_SCALING}，每夜多 ${WAVES.perEra} 波。`,
-      [
-        ["点亮祭坛 · 进入下一纪元", () => nextEra(), { id: "btn-next-era" }],
-        ["就此收手 · 结算", () => showResult("纪元传说", `${CLASSES[state.cls].name} 在${done}后放下了火把。\n用时 ${runTime()}，度过 ${state.nights} 个夜晚，击败 ${state.kills} 只怪物。`), { id: "btn-end-run" }],
-      ]
-    );
-    beep(660, 0.12, "square", 0.06);
-    setTimeout(() => beep(880, 0.18, "square", 0.05), 120);
-  }
-
-  function nextEra() {
-    state.era += 1;
-    state.eraStart = state.nights;
-    state.choosing = false;
-    state.paused = false;
-    state.skippedGuide = true;
-    overlay.classList.add("hidden");
-    last = performance.now();
-    burst(state.altar.x, state.altar.y, "#ffe27a", 24);
-    toast(`${eraName(state.era)}开始。再守 ${eraNights()} 夜，怪物更强了。`, 3.4);
-    beep(330, 0.2, "sawtooth", 0.05);
-    syncGuide();
-    syncHud();
-  }
-
-  function rollDawn() {
-    const pool = RELICS.filter((r) => r.type === "blessing" || !state.relics.includes(r.id));
-    const out = [];
-    while (out.length < DAWN_CHOICES && pool.length) {
-      const total = pool.reduce((s, r) => s + r.weight, 0);
-      let roll = rnd("event") * total;
-      let i = 0;
-      while (i < pool.length - 1 && roll >= pool[i].weight) {
-        roll -= pool[i].weight;
-        i += 1;
-      }
-      out.push(pool.splice(i, 1)[0]);
-    }
-    return out;
-  }
-
-  function offerDawn() {
-    if (state.over) return;
-    const choices = rollDawn();
-    if (!choices.length) return;
-    for (const r of choices) codexAdd("relics", r.id);
-    state.paused = true;
-    state.choosing = true;
-    keys.clear();
-    mouse.down = false;
-    showOverlay(
-      "黎明的馈赠",
-      `撑过了第 ${state.nights} 夜。选一份馈赠带进今天：`,
-      choices.map((r) => [
-        `【${RELIC_TYPE_LABEL[r.type]}】${r.name} · ${r.desc}`,
-        () => pickRelic(r.id),
-        { cls: `choice ${r.type}`, data: { relic: r.id } },
-      ]),
-      { choices: true }
-    );
-    beep(700, 0.1, "triangle", 0.05);
-  }
-
-  function pickRelic(id) {
-    const r = RELICS.find((x) => x.id === id);
-    if (!r || !state.choosing) return;
-    state.picks.push(id);
-    if (r.type !== "blessing") state.relics.push(id);
-    const p = state.player;
-    if (id === "supply_cache") {
-      state.inv.wood += RELIC_FX.supplyWood;
-      state.inv.stone += RELIC_FX.supplyStone;
-    } else if (id === "hearth_song") {
-      if (p.hp < p.maxHp) state.heals.blessing = true;
-      state.campHp = CAMP_MAX;
-      p.hp = p.maxHp;
-    } else if (id === "wolf_howl") {
-      state.howlPending = true;
-    } else if (id === "sundial_shard" && state.day) {
-      state.ap += RELIC_FX.sundialAp;
-    } else if (id === "glass_cannon") {
-      p.maxHp = Math.round(p.maxHp * RELIC_FX.glassCannonHp);
-      p.hp = Math.min(p.hp, p.maxHp);
-    }
-    state.choosing = false;
-    state.paused = false;
-    overlay.classList.add("hidden");
-    last = performance.now();
-    toast(`获得${RELIC_TYPE_LABEL[r.type]}「${r.name}」：${r.desc}`, 3);
-    beep(880, 0.08, "square", 0.05);
-    syncHud();
-  }
-
-  function gatherTile(tx, ty) {
-    const t = tileAt(tx, ty);
-    const cx = tx * TILE + 8;
-    const cy = ty * TILE + 8;
+  const usingSpace = keys.has("Space") || keys.has("KeyJ");
+  const wantAct = mouse.down || usingSpace;
+  const f = (usingSpace || bumpRes) ? frontTile() : aimTile();
+  const t = tileAt(f.tx, f.ty);
+  const resource = isResource(f.tx, f.ty);
+  const dismantle = isDismantle(f.tx, f.ty);
+  if (!keys.has("KeyR")) state.rLatch = false;
+  const rTap = keys.has("KeyR") && !state.rLatch;
+  if (rTap) state.rLatch = true;
+  const clickPlace = mouse.pressed || rTap;
+  if (!mouse.down && !usingSpace) p.blockMine = false;
+  const enemyNear = state.enemies.some((e) => targetable(e) && dist(e.x, e.y, p.x, p.y) < 42);
+  const doMine = () => {
     const apCost = apCostOfTile(t);
-    if (apCost && apShort(apCost, t === T.TREE ? "砍树" : "挖矿")) return false;
-    spendAp(apCost);
-    if (t === T.TREE) {
-      setTile(tx, ty, T.DIRT);
-      addDrop("wood", cx, cy, 3 + rand("loot", 2));
-      if (!state.flags.chopped) state.benchHint = 8;
-      state.flags.chopped = true;
-      burst(cx, cy, "#6bcf6b", 16);
-      burst(cx, cy, "#8b5a2b", 8, "debris");
-      punch(3.2, 0.045);
-      chopSound();
-    } else if (t === T.STONE) {
-      setTile(tx, ty, T.DIRT);
-      addDrop("stone", cx, cy, 2 + rand("loot", 2));
-      burst(cx, cy, "#c0c4cc", 10);
-      beep(200, 0.05, "square", 0.04);
-    } else if (t === T.GOLD) {
-      setTile(tx, ty, T.STONE);
-      addDrop("gold", cx, cy, 1 + (state.cls === "miner" ? 1 : 0) + rand("loot", 2));
-      burst(cx, cy, "#e8c040", 12);
-      beep(740, 0.08, "square", 0.05);
-      wakeStatue(tx, ty);
-    } else if (t === T.RUBBLE) {
-      setTile(tx, ty, T.GRASS);
-      addDrop("stone", cx, cy, BIOME_FX.rubbleStone);
-      burst(cx, cy, "#a8acb4", 6);
-      beep(240, 0.04, "square", 0.03);
-    } else if (t === T.TOWER || t === T.SPIKE || t === T.SPRING) {
-      setTile(tx, ty, T.GRASS);
-      const back = t === T.TOWER ? ["stone", 2] : t === T.SPIKE ? ["wood", 1] : ["stone", 1];
-      addDrop(back[0], cx, cy, back[1]);
-      burst(cx, cy, "#c0c4cc", 8);
-      beep(220, 0.05, "square", 0.03);
-    } else if (t === T.CROP) {
-      const key = `${tx},${ty}`;
-      const c = state.crops.get(key);
-      if (c && c.stage >= 2) {
-        setTile(tx, ty, T.FARM);
-        state.crops.delete(key);
-        addDrop("wheat", cx, cy, 1 + (state.cls === "farmer" ? 1 : 0));
-        addDrop("seed", cx, cy, 1);
-        if (state.cls === "farmer") {
-          state.player.hp = Math.min(state.player.maxHp, state.player.hp + 18);
-          floatText(cx, cy - 10, "+18", "#8dff9a");
-          state.heals.harvest = true;
-        }
-        burst(cx, cy, "#e8c040", 8);
-        beep(500, 0.06, "triangle", 0.04);
-      }
-    } else if (t === T.FENCE) {
-      setTile(tx, ty, T.GRASS);
-      state.fenceHp.delete(`${tx},${ty}`);
-      addDrop("wood", cx, cy, 1);
-      burst(cx, cy, "#8b5a2b", 6);
-      beep(220, 0.05, "square", 0.03);
-    } else if (t === T.TORCH) {
-      setTile(tx, ty, T.GRASS);
-      addDrop("wood", cx, cy, 1);
-      burst(cx, cy, "#ffb020", 8);
-    } else if (t === T.SPORE) {
-      setTile(tx, ty, T.DIRT);
-      burst(cx, cy, "#b77ad8", 8);
-      beep(260, 0.05, "triangle", 0.03);
-    }
-  }
-
-  function wakeStatue(tx, ty) {
-    const r = BIOME_FX.statueWakeRadius;
-    let best = null;
-    for (let y = ty - r; y <= ty + r; y++) {
-      for (let x = tx - r; x <= tx + r; x++) {
-        if (tileAt(x, y) !== T.STATUE) continue;
-        const d = Math.hypot(x - tx, y - ty);
-        if (d <= r && (!best || d < best.d)) best = { x, y, d };
-      }
-    }
-    if (!best || rnd("loot") >= BIOME_FX.statueWakeChance) return null;
-    setTile(best.x, best.y, T.GRASS);
-    state.statueWoke = true;
-    const e = makeEnemy("cube", best.x * TILE + 8, best.y * TILE + 8);
-    state.enemies.push(e);
-    burst(e.x, e.y, "#9aa0ff", 16);
-    punch(4, 0.06);
-    toast("挖金的声音吵醒了石像！", 2.4);
-    beep(110, 0.18, "sawtooth", 0.05);
-    return e;
-  }
-
-  function plant(tx, ty) {
-    if (tileAt(tx, ty) !== T.FARM) return false;
-    if (state.inv.seed <= 0) {
-      toast("没有种子了。收麦可以再拿到种子。");
-      return false;
-    }
-    state.inv.seed -= 1;
-    setTile(tx, ty, T.CROP);
-    state.crops.set(`${tx},${ty}`, { stage: 0, grow: 0 });
-    if (!state.flags.planted) {
-      state.flags.planted = true;
-      toast(state.cls === "farmer" ? "播下了。你种的麦熟得更快。" : "播下了。长大后按住左键收。");
-    }
-    beep(400, 0.05, "triangle", 0.04);
-    return true;
-  }
-
-  function interact() {
-    const p = state.player;
-    if (tradeCaravan()) return;
-    if (dist(p.x, p.y, state.bench.x, state.bench.y) < 22) {
-      craft();
+    if (apCost && apShort(apCost, t === T.TREE ? "砍树" : "挖矿")) {
+      p.mine = 0;
+      p.mineTx = -1;
       return;
     }
-    if (dist(p.x, p.y, state.altar.x, state.altar.y) < 22) {
-      if (!state.day) {
-        toast("祭坛夜里封着。先守住篝火，天亮再献。");
-      } else if (!survivedNights()) {
-        toast(`还要再守 ${nightsLeft()} 夜。天亮后才能献祭。`);
-      } else if (state.inv.heart > 0) {
-        state.inv.heart -= 1;
-        burst(state.altar.x, state.altar.y, "#ffe27a", 24);
-        win();
-      } else toast("祭坛还空着。先去工作台合成方块之心。");
-      return;
+    if (p.mineTx !== f.tx || p.mineTy !== f.ty) startMine(f.tx, f.ty);
+    const hard = t === T.GOLD ? 1.35 : t === T.STONE ? 1.05 : t === T.TREE ? 0.85 : t === T.TOWER ? 0.8 : 0.35;
+    const axe = t === T.TREE && has("flint_axe") ? RELIC_FX.flintAxeChop : 1;
+    p.mine += dt * def.mine * axe / hard;
+    if (p.mine >= 1) {
+      gatherTile(f.tx, f.ty);
+      p.mine = 0;
+      p.mineTx = -1;
     }
-    const f = facingTile();
-    if (plant(f.tx, f.ty)) return;
-    toast("靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。");
-  }
-
-  function craft() {
-    const inv = state.inv;
-    if (inv.heart > 0) {
-      toast("方块之心已经在背包里。送到北边祭坛。");
-      return;
-    }
-    const miss = [];
-    for (const [k, n] of Object.entries(NEED)) {
-      if (inv[k] < n) miss.push(`${labelOf(k)} ${n - inv[k]}`);
-    }
-    if (miss.length) {
-      toast("还差：" + miss.join("、"));
-      return;
-    }
-    inv.wood -= NEED.wood;
-    inv.stone -= NEED.stone;
-    inv.gold -= NEED.gold;
-    inv.wheat -= NEED.wheat;
-    inv.heart += 1;
-    state.flags.crafted = true;
-    burst(state.bench.x, state.bench.y - 8, "#fff4b0", 16);
-    toast(survivedNights() && state.day
-      ? "合成成功！沿土路向北，天亮把心放到祭坛。"
-      : `合成成功！先再守 ${nightsLeft()} 夜，天亮再到北边祭坛。`, 3.2);
-    beep(880, 0.1, "square", 0.06);
-  }
-
-  function labelOf(k) {
-    return { wood: "木", stone: "石", gold: "金", wheat: "麦", seed: "种", heart: "心", fence: "栏", torch: "火", plot: "田" }[k] || k;
-  }
-
-  function meleeAttack() {
-    const p = state.player;
-    const f = aimVec();
-    faceVec(f);
-    const reach = p.cls === "knight" ? 34 : p.cls === "miner" ? 26 : 22;
-    const dmg = Math.round(CLASSES[p.cls].melee * dmgMul());
-    p.attack = 0.2;
-    p.slashDx = f.dx;
-    p.slashDy = f.dy;
-    beep(240, 0.05, "square", 0.035);
-    let hits = 0;
-    for (const e of state.enemies) {
-      if (!targetable(e)) continue;
-      const dx = e.x - p.x;
-      const dy = e.y - p.y;
-      const d = Math.hypot(dx, dy);
-      if (d < reach + (edef(e).boss ? 14 : 8) && dx * f.dx + dy * f.dy > -4) {
-        e.hp -= dmg;
-        e.flash = 0.14;
-        e.stun = Math.max(e.stun || 0, 0.2);
-        e.vx = f.dx * 140;
-        e.vy = f.dy * 140;
-        burst(e.x, e.y, "#fff4b0", 8);
-        floatText(e.x, e.y - 12, String(dmg), "#fff");
-        punch(2.4, 0.035);
-        hitSound();
-        hits += 1;
-      }
-    }
-    if (hits > 1) floatText(p.x, p.y - 22, `连击x${hits}`, "#ffe27a");
-  }
-
-  function startMine(tx, ty) {
-    const p = state.player;
-    if (p.mineTx === tx && p.mineTy === ty) return;
-    p.mineTx = tx;
-    p.mineTy = ty;
+  };
+  if (clickPlace && state.build === "fence" && t === T.FENCE) {
     p.mine = 0;
-  }
-
-  function shoot() {
-    const p = state.player;
-    if (p.mana < 1) {
-      toast("法力不足");
-      return;
+    p.mineTx = -1;
+    tryPlace(f.tx, f.ty);
+    p.blockMine = true;
+  } else if ((usingSpace || bumpRes) && (resource || (usingSpace && dismantle))) {
+    doMine();
+  } else if (wantAct && enemyNear && !resource) {
+    p.mine = 0;
+    p.mineTx = -1;
+    if (p.atkCd <= 0) {
+      p.atkCd = p.cls === "mage" ? 0.32 : 0.42;
+      if (p.cls === "mage") shoot();
+      else meleeAttack();
     }
-    p.mana -= 1;
-    const f = aimVec();
-    faceVec(f);
-    state.bolts.push({
-      x: p.x, y: p.y - 6, vx: f.dx * 150, vy: f.dy * 150, life: 0.95, dmg: Math.round(CLASSES.mage.ranged * dmgMul()), nova: false, pierce: 2, hit: new Set(),
-    });
-    beep(720, 0.06, "sine", 0.04);
-  }
-
-  function useSkill() {
-    const p = state.player;
-    if (p.skillCd > 0) return;
-    p.skillCd = CLASSES[p.cls].skillCd;
-    if (p.cls === "miner") {
-      p.sense = 6;
-      const q = (state.biomes || []).find((b) => b.kind === "quarry" || b.kind === "crystal");
-      toast(q ? `矿脉在发亮。去${q.name}的${q.kind === "crystal" ? "晶洞" : "采石场"}看看。` : "矿脉在发亮。");
-      beep(480, 0.1, "square", 0.05);
-    } else if (p.cls === "farmer") {
-      for (const [key, c] of state.crops) {
-        c.stage = 2;
-        c.grow = 0;
-        const [tx, ty] = key.split(",").map(Number);
-        burst(tx * TILE + 8, ty * TILE + 8, "#8dff9a", 8);
-      }
-      p.hp = Math.min(p.maxHp, p.hp + 24);
-      toast("田里的麦子一下熟了。");
-      beep(560, 0.1, "triangle", 0.05);
-    } else if (p.cls === "mage") {
-      for (let i = 0; i < 8; i++) {
-        const a = (Math.PI * 2 * i) / 8;
-        state.bolts.push({
-          x: p.x, y: p.y - 6, vx: Math.cos(a) * 120, vy: Math.sin(a) * 120, life: 0.6, dmg: Math.round(18 * dmgMul()), nova: true, pierce: 1, hit: new Set(),
-        });
-      }
-      beep(900, 0.12, "sine", 0.05);
-    } else if (p.cls === "knight") {
-      const f = aimVec();
-      faceVec(f);
-      p.dash = 0.22;
-      p.dashVx = f.dx * 220;
-      p.dashVy = f.dy * 220;
-      p.invuln = 0.28;
-      beep(160, 0.08, "sawtooth", 0.04);
+  } else if (clickPlace && state.build && !resource && t !== T.FARM && t !== T.FENCE) {
+    p.mine = 0;
+    p.mineTx = -1;
+    tryPlace(f.tx, f.ty);
+  } else if (wantAct && (resource || (dismantle && !p.blockMine))) {
+    doMine();
+  } else if (wantAct && t === T.FARM) {
+    p.mine = 0;
+    p.mineTx = -1;
+    if (p.atkCd <= 0) {
+      p.atkCd = 0.25;
+      plant(f.tx, f.ty);
+    }
+  } else {
+    p.mine = 0;
+    p.mineTx = -1;
+    if (wantAct && p.atkCd <= 0) {
+      p.atkCd = p.cls === "mage" ? 0.32 : 0.42;
+      if (p.cls === "mage") shoot();
+      else meleeAttack();
     }
   }
-
-  function makeEnemy(kind, x, y) {
-    const def = ENEMIES[kind];
-    codexAdd("enemies", kind);
-    const hp = Math.round(def.hp * eraMul() * (has("blood_moon") ? RELIC_FX.bloodMoonHp : 1));
-    return {
-      kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd: def.spd, dmg: def.dmg * eraMul(),
-      hit: 0, flash: 0, bob: rnd("fx"), under: !!def.burrow, throwT: ENEMY_FX.throwCd * 0.5,
-    };
+  if (mouse.right) {
+    mouse.right = false;
+    useSkill();
   }
+  mouse.pressed = false;
+}
 
-  function bossNight() {
-    return state.nights - state.eraStart === eraNights();
-  }
-
-  function spawnEnemy() {
-    const edges = [];
-    for (let x = 1; x < COLS - 1; x++) {
-      edges.push([x, 1], [x, ROWS - 2]);
-    }
-    for (let y = 2; y < ROWS - 2; y++) {
-      edges.push([1, y], [COLS - 2, y]);
-    }
-    for (let k = 0; k < 24; k++) {
-      const [tx, ty] = edges[rand("event", edges.length)];
-      if (solid(tx, ty)) continue;
-      const x = tx * TILE + 8;
-      const y = ty * TILE + 8;
-      if (dist(x, y, state.camp.x, state.camp.y) < 80) continue;
-      let kind = "slime";
-      for (const row of SPAWN_TABLE) {
-        if (state.era >= row.minEra && state.nights >= row.minNight && state.wave >= row.minWave && rnd("event") < row.chance) kind = row.kind;
+function updateCycle(dt) {
+  state.time += dt;
+  state.apWarn = Math.max(0, state.apWarn - dt);
+  state.cycle += dt;
+  const len = state.day ? state.dayLen : state.nightLen;
+  if (state.cycle >= len) {
+    state.cycle = 0;
+    state.day = !state.day;
+    if (!state.day) {
+      state.nights += 1;
+      state.nightKills = 0;
+      state.nightCampHit = false;
+      endDayEvent();
+      startNightWaves();
+      if (state.howlPending) {
+        state.howlPending = false;
+        state.howl = RELIC_FX.wolfHowlSecs;
       }
-      if (state.bossPending) {
-        state.bossPending = false;
-        kind = BOSSES[(state.era - 1) % BOSSES.length];
-        announceBoss(kind);
-      }
-      const grove = kind === "spore" && (state.biomes || []).find((b) => b.kind === "mushroom");
-      if (grove && rnd("event") < BIOME_FX.sporeNearMushroom) {
-        const gx = grove.x - 4 + rand("event", 9);
-        const gy = grove.y - 3 + rand("event", 7);
-        if (!solid(gx, gy)) {
-          const e = makeEnemy(kind, gx * TILE + 8, gy * TILE + 8);
-          state.enemies.push(e);
-          return e;
-        }
-      }
-      const e = makeEnemy(kind, x, y);
-      state.enemies.push(e);
-      return e;
-    }
-  }
-
-  function hitFence(tx, ty, dmg, e, dt) {
-    if (e && has("thorn_fence")) {
-      e.hp -= RELIC_FX.thornFenceDps * dt;
-      e.flash = Math.max(e.flash || 0, 0.05);
-    }
-    const key = `${tx},${ty}`;
-    const hp = (state.fenceHp.get(key) || fenceMax()) - dmg;
-    if (hp <= 0) {
-      setTile(tx, ty, T.GRASS);
-      state.fenceHp.delete(key);
-      burst(tx * TILE + 8, ty * TILE + 8, "#8b5a2b", 8);
-      punch(3, 0.04);
-      noise(0.08, 0.09, 700);
-      if (!state.fenceBreakWarn) {
-        state.fenceBreakWarn = true;
-        toast("栅栏破了！按 1 点空地补上。", 2.2);
-      }
+      toast(state.nights === 1
+        ? "第一夜：怪分波朝篝火来。站在墙后打。"
+        : `第 ${state.nights} 夜，共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`, 3.2);
+      beep(140, 0.16, "sawtooth", 0.05);
     } else {
-      state.fenceHp.set(key, hp);
+      const extra = !campWalled()
+        ? "先把发光的缺口补上，再去凑材料。"
+        : survivedNights()
+          ? (state.inv.heart ? "可以去北边祭坛献祭了。" : "材料齐了就去工作台合成，再到祭坛。")
+          : `还要再守 ${nightsLeft()} 夜。白天补墙、凑材料。`;
+      toast("天亮了。" + extra, 3);
+      checkAch("dawn");
+      beep(620, 0.1, "square", 0.04);
+      state.enemies = [];
+      state.rocks = [];
+      state.bossPending = false;
+      state.bossName = "";
+      state.howl = 0;
+      state.nightWarned = false;
+      state.fenceBreakWarn = false;
+      state.ap = apMax();
+      state.lastPlace = null;
+      rollDayEvent();
+      if (has("greedy_hearth")) {
+        state.inv.gold += RELIC_FX.greedyHearthGold;
+        floatText(state.camp.x, state.camp.y - 18, `+${RELIC_FX.greedyHearthGold}金`, "#e8c040");
+      }
+      offerDawn();
     }
   }
-
-  function enemyBlocked(e, x, y) {
-    const tx = Math.floor(x / TILE);
-    const ty = Math.floor(y / TILE);
-    if (isFlying(e)) return flySolid(tx, ty);
-    if (edef(e).burrow) {
-      const c = campTile();
-      return solid(tx, ty) || (tx === c.tx && ty === c.ty);
-    }
-    return groundSolid(tx, ty);
+  if (state.day && !state.nightWarned && state.cycle > state.dayLen - 8) {
+    state.nightWarned = true;
+    toast("天快黑了。回篝火旁边，检查栅栏和火把。", 2.8);
   }
+}
 
-  function announceBoss(kind) {
-    const name = ENEMIES[kind].name;
-    state.bossName = name;
-    state.bossBanner = { name, t: SKY_FX.bossBannerSecs };
-    toast(`⚠ 纪元 Boss · ${name} 破夜而来！`, 3.6);
-    punch(6, 0.12);
-    beep(90, 0.5, "sawtooth", 0.07);
-    setTimeout(() => beep(70, 0.6, "sawtooth", 0.07), 220);
-  }
-
-  function bossPhase(e) {
-    if (e.phase2 || e.hp > e.maxHp * ENEMY_FX.bossPhaseAt) return;
-    e.phase2 = true;
-    punch(4, 0.08);
-    if (e.kind === "slime_king") {
-      for (let i = 0; i < ENEMY_FX.kingSplit; i++) {
-        const a = (Math.PI * 2 * i) / ENEMY_FX.kingSplit;
-        const s = makeEnemy("slime", e.x + Math.cos(a) * 12, e.y + Math.sin(a) * 12);
-        s.stun = 0.3;
-        s.vx = Math.cos(a) * 120;
-        s.vy = Math.sin(a) * 120;
-        state.enemies.push(s);
-      }
-      toast("巨史莱姆王裂开了！", 2.4);
-    } else {
-      e.spd *= ENEMY_FX.knightEnrageSpd;
-      e.dmg *= ENEMY_FX.knightEnrageDmg;
-      toast("暗影骑士狂暴了！", 2.4);
-    }
-    burst(e.x, e.y, "#d4454a", 20);
-  }
-
-  function corrupt(tx, ty) {
-    const r = ENEMY_FX.sporeRadius;
-    for (let y = ty - r; y <= ty + r; y++) {
-      for (let x = tx - r; x <= tx + r; x++) {
-        const t = tileAt(x, y);
-        const center = x === tx && y === ty;
-        if (t === T.FARM || t === T.CROP || (center && (t === T.GRASS || t === T.DIRT || t === T.SAND || t === T.PATH))) {
-          const c = campTile();
-          if (x === c.tx && y === c.ty) continue;
-          state.crops.delete(`${x},${y}`);
-          setTile(x, y, T.SPORE);
-        }
-      }
-    }
-    burst(tx * TILE + 8, ty * TILE + 8, "#b77ad8", 14);
-  }
-
-  function nearSpore(tx, ty) {
-    for (let y = ty - 1; y <= ty + 1; y++) {
-      for (let x = tx - 1; x <= tx + 1; x++) {
-        if (tileAt(x, y) === T.SPORE) return true;
-      }
-    }
-    return false;
-  }
-
-  function throwRock(e) {
-    const dx = state.camp.x - e.x;
-    const dy = state.camp.y - e.y;
-    const l = Math.hypot(dx, dy) || 1;
-    state.rocks.push({
-      x: e.x, y: e.y - 6, vx: (dx / l) * ENEMY_FX.rockSpeed, vy: (dy / l) * ENEMY_FX.rockSpeed, dmg: e.dmg, life: 2,
-    });
-    beep(120, 0.05, "square", 0.03);
-  }
-
-  function updateRocks(dt) {
-    const p = state.player;
-    for (const r of state.rocks) {
-      r.x += r.vx * dt;
-      r.y += r.vy * dt;
-      r.life -= dt;
-      const tx = Math.floor(r.x / TILE);
-      const ty = Math.floor(r.y / TILE);
-      const t = tileAt(tx, ty);
-      if (t === T.FENCE) {
-        hitFence(tx, ty, ENEMY_FX.rockFenceDmg);
-        burst(r.x, r.y, "#9aa0a8", 6);
-        r.life = 0;
-      } else if (solid(tx, ty)) {
-        r.life = 0;
-      } else if (dist(r.x, r.y, p.x, p.y) < 9) {
-        hurt(p, r.dmg * (p.cls === "knight" ? 1 - CLASSES.knight.dr : 1), r);
-        r.life = 0;
-      } else if (dist(r.x, r.y, state.camp.x, state.camp.y) < 9) {
-        damageCamp(r.dmg * ENEMY_FX.rockCampMul);
-        r.life = 0;
-      }
-    }
-    state.rocks = state.rocks.filter((r) => r.life > 0);
-  }
-
-  function startNightWaves() {
-    state.wave = 0;
-    state.wavesTotal = (state.nights === 1 ? WAVES.firstNight : WAVES.later) + (state.era - 1) * WAVES.perEra;
-    state.toSpawn = 0;
-    state.waveWait = 2.2;
-  }
-
-  function beginWave() {
-    state.wave += 1;
-    state.toSpawn = WAVES.baseSpawn + state.nights + state.wave;
-    if (bossNight() && state.wave === state.wavesTotal) {
-      state.bossPending = true;
-      state.toSpawn += 1;
-    }
-    state.spawnAcc = 0;
-    state.waveWait = 0;
-    toast(`第 ${state.nights} 夜 · 第 ${state.wave}/${state.wavesTotal} 波来了！`, 2.4);
-    beep(180, 0.1, "sawtooth", 0.05);
-  }
-
-  function updateEnemies(dt) {
-    const p = state.player;
-    const grace = state.nights === 1 && state.cycle < 5;
-    if (!state.day && !grace) {
-      if (state.toSpawn > 0) {
-        state.spawnAcc += dt;
-        if (state.spawnAcc > 0.42) {
-          state.spawnAcc = 0;
-          spawnEnemy();
-          state.toSpawn -= 1;
-        }
-      } else if (state.wave < state.wavesTotal && state.enemies.length === 0) {
-        state.waveWait += dt;
-        if (state.waveWait > 2.2) beginWave();
-      }
-    }
-    if (!state.day && state.howl > 0) state.howl = Math.max(0, state.howl - dt);
-    for (const e of state.enemies) {
-      const dPlayer = dist(e.x, e.y, p.x, p.y);
-      if (state.howl > 0) e.hp -= RELIC_FX.wolfHowlDps * dt;
-      const def = edef(e);
-      let revealed = "";
-      if (def.burrow) {
-        revealed = burrowRevealed(e);
-        const wasUnder = e.under;
-        e.under = !revealed;
-        if (wasUnder && !e.under) burst(e.x, e.y, "#8b5a2b", 6);
-      }
-      if (def.boss) bossPhase(e);
-      if (state.player.dash > 0 && dPlayer < 16 && !e.dashHit && targetable(e)) {
-        e.dashHit = true;
-        e.hp -= 14 * dmgMul();
-        e.stun = Math.max(e.stun || 0, 0.18);
-        const dx = e.x - p.x;
-        const dy = e.y - p.y;
-        const l = Math.hypot(dx, dy) || 1;
-        e.vx = (dx / l) * 160;
-        e.vy = (dy / l) * 160;
-        e.flash = 0.12;
-        burst(e.x, e.y, "#fff4b0", 6);
-      }
-      if (state.player.dash <= 0) e.dashHit = false;
-      e.hit = Math.max(0, e.hit - dt);
-      e.flash = Math.max(0, (e.flash || 0) - dt);
-      if ((e.stun || 0) > 0) {
-        e.stun -= dt;
-        const nx = e.x + e.vx * dt;
-        const ny = e.y + e.vy * dt;
-        if (!enemyBlocked(e, nx, e.y)) e.x = nx;
-        if (!enemyBlocked(e, e.x, ny)) e.y = ny;
-        e.vx *= Math.pow(0.04, dt);
-        e.vy *= Math.pow(0.04, dt);
-      } else {
-        const aimPlayer = (isFlying(e) || dPlayer < 28) && !e.under && e.kind !== "thrower";
-        const tx = aimPlayer ? p.x : state.camp.x;
-        const ty = aimPlayer ? p.y : state.camp.y;
-        const dx = tx - e.x;
-        const dy = ty - e.y;
-        const len = Math.hypot(dx, dy) || 1;
-        let spd = e.spd;
-        const etx = Math.floor(e.x / TILE);
-        const ety = Math.floor(e.y / TILE);
-        if (tileAt(etx, ety) === T.TORCH) spd *= 0.7;
-        if (has("wind_chime") && dist(e.x, e.y, state.camp.x, state.camp.y) < RELIC_FX.windChimeRadius) spd *= RELIC_FX.windChimeSlow;
-        if (state.howl > 0) spd *= RELIC_FX.wolfHowlSlow;
-        if (revealed === "torch") spd *= ENEMY_FX.burrowRevealSlow;
-        if (e.kind === "thrower" && dist(e.x, e.y, state.camp.x, state.camp.y) < ENEMY_FX.throwRange) {
-          spd = 0;
-          e.throwT -= dt;
-          if (e.throwT <= 0) {
-            e.throwT = ENEMY_FX.throwCd;
-            throwRock(e);
-          }
-        }
-        e.vx = (dx / len) * spd;
-        e.vy = (dy / len) * spd;
-        const nx = e.x + e.vx * dt;
-        const ny = e.y + e.vy * dt;
-        if (!enemyBlocked(e, nx, e.y)) e.x = nx;
-        else {
-          const ftx = Math.floor(nx / TILE);
-          const fty = Math.floor(e.y / TILE);
-          if (!isFlying(e) && !def.burrow && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, ENEMY_FX.fenceDps * (def.fenceMul || 1) * dt, e, dt);
-        }
-        if (!enemyBlocked(e, e.x, ny)) e.y = ny;
-        else {
-          const ftx = Math.floor(e.x / TILE);
-          const fty = Math.floor(ny / TILE);
-          if (!isFlying(e) && !def.burrow && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, ENEMY_FX.fenceDps * (def.fenceMul || 1) * dt, e, dt);
-        }
-      }
-      if (dPlayer < (def.boss ? 20 : 14) && e.hit <= 0 && !e.under) {
-        e.hit = 0.85;
-        let dmg = e.dmg;
-        if (p.cls === "knight") dmg *= 1 - CLASSES.knight.dr;
-        hurt(p, dmg, e);
-      } else if (canHitCamp(e) && e.hit <= 0 && state.campHp > 0) {
-        const home = dist(p.x, p.y, state.camp.x, state.camp.y) < 28;
-        if (home && dPlayer < 24) {
-          e.hit = 0.85;
-          let dmg = e.dmg;
-          if (p.cls === "knight") dmg *= 1 - CLASSES.knight.dr;
-          hurt(p, dmg, e);
-          continue;
-        }
-        if (home) continue;
-        e.hit = 0.7;
-        damageCamp(e.dmg * 0.85);
-      }
-    }
-    state.enemies = state.enemies.filter((e) => {
-      if (e.hp > 0) return true;
-      punch(2.6, 0.045);
-      burst(e.x, e.y, "#8dff9a", 8);
-      state.kills += 1;
-      state.nightKills = (state.nightKills || 0) + 1;
-      const def = edef(e);
-      if (def.spore) corrupt(Math.floor(e.x / TILE), Math.floor(e.y / TILE));
-      const luck = has("lucky_coin") ? RELIC_FX.luckyCoinDrop : 1;
-      const n = (has("blood_moon") ? RELIC_FX.bloodMoonDrop : 1) * (def.boss ? 4 : 1);
-      for (const d of ENEMY_DROPS) {
-        if (rnd("loot") < d.chance * luck) addDrop(d.kind, e.x, e.y, n);
-      }
-      if (def.boss) {
-        state.bossKills = (state.bossKills || 0) + 1;
-        state.bossName = "";
-        burst(e.x, e.y, "#ffe27a", 30, "boss");
-        burst(e.x, e.y, "#fff4b0", 16, "spark");
-        punch(7, 0.14);
-        toast(`${def.name} 倒下了！`, 3);
-        beep(523, 0.2, "square", 0.06);
-      }
-      return false;
-    });
-  }
-
-  function updateDrops(dt) {
-    const p = state.player;
-    for (const d of state.drops) {
-      d.vz += 180 * dt;
-      d.z -= d.vz * dt;
-      if (d.z < 0) {
-        d.z = 0;
-        d.vz *= -0.3;
-      }
-      d.life -= dt;
-      const dd = dist(d.x, d.y, p.x, p.y);
-      if (dd < 56 && dd > 1) {
-        d.x += (p.x - d.x) * 11 * dt;
-        d.y += (p.y - d.y) * 11 * dt;
-      }
-      if (dd < 18) {
-        state.inv[d.kind] = (state.inv[d.kind] || 0) + 1;
-        d.life = 0;
-        beep(660, 0.04, "square", 0.03);
-        if (d.kind === "wheat" && !state.flags.sawWheat) {
-          state.flags.sawWheat = true;
-          toast("点背包里的「麦」或按 H，可以吃掉回血。", 2.8);
-        }
-      }
-    }
-    state.drops = state.drops.filter((d) => d.life > 0);
-  }
-
-  function dayRng() {
-    return mulberry32(hashSeed(`${state.seed}:day:${state.nights}`));
-  }
-
-  function dirName(x, y) {
-    const a = Math.atan2(y - state.camp.y, x - state.camp.x);
-    const names = ["东", "东南", "南", "西南", "西", "西北", "北", "东北"];
-    return names[(Math.round(a / (Math.PI / 4)) + 8) % 8];
-  }
-
-  function rollDayEvent() {
-    state.dayEvent = null;
-    if (state.nights < 1) return null;
-    const r = dayRng();
-    if (r() >= DAY_EVENT_CHANCE) {
-      state.eventLog.push(`${state.nights}:-`);
-      return null;
-    }
-    const total = DAY_EVENTS.reduce((s, e) => s + e.weight, 0);
-    let roll = r() * total;
-    let def = DAY_EVENTS[0];
-    for (const e of DAY_EVENTS) {
-      roll -= e.weight;
-      if (roll < 0) {
-        def = e;
-        break;
-      }
-    }
-    const ev = { id: def.id, name: def.name, delay: DAY_EVENT_FX.startDelay, started: false, x: 0, y: 0, tiles: [], trades: 0, trade: null, wait: 0 };
-    if (def.id === "caravan") {
-      ev.trade = TRADES[Math.floor(r() * TRADES.length)];
-      ev.x = state.camp.x + 6 * TILE;
-      ev.y = state.camp.y - 2 * TILE;
-    } else if (def.id === "meteor") {
-      for (let k = 0; k < 60; k++) {
-        const tx = 3 + Math.floor(r() * (COLS - 6));
-        const ty = 3 + Math.floor(r() * (ROWS - 6));
-        if (Math.hypot(tx * TILE + 8 - state.camp.x, ty * TILE + 8 - state.camp.y) < 9 * TILE) continue;
-        let ok = true;
-        for (let y = ty - 1; y <= ty + 1 && ok; y++) {
-          for (let x = tx - 1; x <= tx + 1; x++) {
-            const t = tileAt(x, y);
-            if (t !== T.GRASS && t !== T.DIRT) ok = false;
-          }
-        }
-        if (!ok) continue;
-        ev.x = tx * TILE + 8;
-        ev.y = ty * TILE + 8;
-        const cells = [];
-        for (let y = ty - 1; y <= ty + 1; y++) for (let x = tx - 1; x <= tx + 1; x++) cells.push([x, y]);
-        const gold = new Set([4]);
-        while (gold.size < DAY_EVENT_FX.meteorGold) gold.add(Math.floor(r() * cells.length));
-        ev.tiles = cells.map(([x, y], i) => ({ x, y, t: gold.has(i) ? T.GOLD : T.STONE }));
-        break;
-      }
-      if (!ev.tiles.length) return null;
-    } else if (def.id === "migration") {
-      const side = Math.floor(r() * 4);
-      ev.side = side;
-      ev.x = side === 0 ? 3 * TILE : side === 1 ? (COLS - 3) * TILE : state.camp.x;
-      ev.y = side === 2 ? 3 * TILE : side === 3 ? (ROWS - 3) * TILE : state.camp.y;
-      ev.wait = DAY_EVENT_FX.migrationDelay;
-    }
-    state.dayEvent = ev;
-    state.eventLog.push(`${state.nights}:${def.id}`);
-    return ev;
-  }
-
-  function startDayEvent(ev) {
-    ev.started = true;
-    const where = dirName(ev.x, ev.y);
-    if (ev.id === "caravan") {
-      const give = Object.entries(ev.trade.give).map(([k, n]) => `${n}${labelOf(k)}`).join("");
-      const get = Object.entries(ev.trade.get).map(([k, n]) => `${n}${labelOf(k)}`).join("");
-      toast(`商队路过营地${where}边！走过去按 E：${give} 换 ${get}（限 ${DAY_EVENT_FX.caravanTrades} 次）。`, 4);
-      beep(660, 0.08, "triangle", 0.04);
-    } else if (ev.id === "meteor") {
-      const ptx = Math.floor(state.player.x / TILE);
-      const pty = Math.floor(state.player.y / TILE);
-      ev.tiles = ev.tiles.filter((c) => !(c.x === ptx && c.y === pty));
-      for (const c of ev.tiles) setTile(c.x, c.y, c.t);
-      state.meteorSeen = true;
-      burst(ev.x, ev.y, "#ffb020", 30, "boss");
-      burst(ev.x, ev.y, "#6d727a", 14, "smoke");
-      punch(6, 0.08);
-      noise(0.3, 0.12, 300);
-      toast(`陨石坠落在${where}边！里面有金，天黑前会冷却碎掉。`, 4);
-    } else if (ev.id === "migration") {
-      toast(`兽群从${where}边迁徙过来，${Math.ceil(ev.wait)} 秒后到。提前守好篝火！`, 4);
-      beep(180, 0.14, "sawtooth", 0.05);
-    }
-  }
-
-  function endDayEvent() {
-    const ev = state.dayEvent;
-    state.dayEvent = null;
-    if (!ev || !ev.started) return;
-    if (ev.id === "meteor") {
-      for (const c of ev.tiles) {
-        const t = tileAt(c.x, c.y);
-        if (t === T.GOLD || t === T.STONE) setTile(c.x, c.y, T.DIRT);
-      }
-    }
-  }
-
-  function updateDayEvent(dt) {
-    const ev = state.dayEvent;
-    if (!ev || !state.day) return;
-    if (!ev.started) {
-      ev.delay -= dt;
-      if (ev.delay <= 0) startDayEvent(ev);
-      return;
-    }
-    if (ev.id === "migration" && ev.wait > 0) {
-      ev.wait -= dt;
-      if (ev.wait <= 0) {
-        const n = DAY_EVENT_FX.migrationCount + (state.era - 1);
-        for (let k = 0; k < n; k++) {
-          const off = (k - (n - 1) / 2) * 20;
-          const horiz = ev.side === 0 || ev.side === 1;
-          let x = ev.x + (horiz ? 0 : off);
-          let y = ev.y + (horiz ? off : 0);
-          if (solid(Math.floor(x / TILE), Math.floor(y / TILE))) {
-            x = ev.x;
-            y = ev.y;
-          }
-          state.enemies.push(makeEnemy(k % 3 === 2 ? "bat" : "slime", x, y));
-        }
-        toast("兽群到了！", 2);
-        punch(3, 0.04);
-      }
-    }
-  }
-
-  function tradeCaravan() {
-    const ev = state.dayEvent;
-    if (!ev || ev.id !== "caravan" || !ev.started) return false;
-    if (dist(state.player.x, state.player.y, ev.x, ev.y) > 26) return false;
-    if (ev.trades >= DAY_EVENT_FX.caravanTrades) {
-      toast("商队：今天的货换完了，下次再见。");
-      return true;
-    }
-    const miss = Object.entries(ev.trade.give).filter(([k, n]) => (state.inv[k] || 0) < n);
-    if (miss.length) {
-      toast("商队：你的货不够——还差" + miss.map(([k, n]) => `${labelOf(k)}${n - (state.inv[k] || 0)}`).join("、"));
-      return true;
-    }
-    for (const [k, n] of Object.entries(ev.trade.give)) state.inv[k] -= n;
-    for (const [k, n] of Object.entries(ev.trade.get)) state.inv[k] = (state.inv[k] || 0) + n;
-    ev.trades += 1;
-    burst(ev.x, ev.y - 6, "#e8c040", 10);
-    toast(`成交！（${ev.trades}/${DAY_EVENT_FX.caravanTrades}）`);
-    beep(880, 0.06, "square", 0.04);
-    syncHud();
-    return true;
-  }
-
-  function drawDayEvent(c, cam) {
-    const ev = state.dayEvent;
-    if (!ev || !ev.started || !state.day) return;
-    if (ev.id === "migration" && ev.wait <= 0) return;
-    const sx = ev.x - cam.x;
-    const sy = ev.y - cam.y;
-    if (ev.id === "caravan") {
-      px(c, sx - 10, sy - 2, 14, 8, "#8b5a2b");
-      px(c, sx - 10, sy - 6, 14, 4, "#e8dcc8");
-      px(c, sx - 9, sy + 6, 3, 3, "#2a2a32");
-      px(c, sx + 0, sy + 6, 3, 3, "#2a2a32");
-      px(c, sx + 6, sy - 6, 4, 4, "#f0c8a0");
-      px(c, sx + 5, sy - 2, 6, 7, "#4a7ad8");
-      px(c, sx + 6, sy - 8, 4, 2, "#c04040");
-    }
-    const vw = VIEW_W * TILE;
-    const vh = VIEW_H * TILE;
-    const pulse = 0.5 + 0.5 * Math.sin(state.time * 6);
-    if (sx >= 0 && sx <= vw && sy >= 0 && sy <= vh) {
-      c.globalAlpha = 0.5 + pulse * 0.5;
-      px(c, sx - 2, sy - 22 - pulse * 2, 4, 6, "#ffe27a");
-      px(c, sx - 1, sy - 14 - pulse * 2, 2, 2, "#ffe27a");
-      c.globalAlpha = 1;
-    } else {
-      const cx = clamp(sx, 10, vw - 10);
-      const cy = clamp(sy, 18, vh - 10);
-      c.globalAlpha = 0.6 + pulse * 0.4;
-      px(c, cx - 4, cy - 4, 8, 8, ev.id === "migration" ? "#ff6a6a" : "#ffe27a");
-      c.globalAlpha = 1;
-      c.font = "7px monospace";
-      c.textAlign = "center";
-      c.fillStyle = "#fff";
-      c.fillText(ev.name, clamp(cx, 20, vw - 20), cy + (cy > vh / 2 ? -8 : 14));
-    }
-  }
-
-  function updateBuildings(dt) {
-    const p = state.player;
-    for (const [key, cd] of state.towerCd) state.towerCd.set(key, cd - dt);
-    for (let ty = 0; ty < ROWS; ty++) {
-      for (let tx = 0; tx < COLS; tx++) {
-        const t = tileAt(tx, ty);
-        if (t !== T.TOWER && t !== T.SPRING) continue;
-        const cx = tx * TILE + 8;
-        const cy = ty * TILE + 8;
-        if (t === T.SPRING) {
-          if (dist(p.x, p.y, cx, cy) < BUILD_FX.springRadius && p.hp < p.maxHp) {
-            state.heals.spring = true;
-            p.hp = Math.min(p.maxHp, p.hp + BUILD_FX.springHeal * dt);
-          }
-          continue;
-        }
-        const key = `${tx},${ty}`;
-        if ((state.towerCd.get(key) || 0) > 0) continue;
-        let target = null;
-        let best = BUILD_FX.towerRange;
-        for (const e of state.enemies) {
-          if (!targetable(e)) continue;
-          const d = dist(e.x, e.y, cx, cy);
-          if (d < best) {
-            best = d;
-            target = e;
-          }
-        }
-        if (!target) continue;
-        state.towerCd.set(key, BUILD_FX.towerCd);
-        const dx = (target.x - cx) / (best || 1);
-        const dy = (target.y - cy) / (best || 1);
-        state.bolts.push({
-          x: cx, y: cy - 6, vx: dx * BUILD_FX.towerBoltSpeed, vy: dy * BUILD_FX.towerBoltSpeed,
-          life: BUILD_FX.towerRange / BUILD_FX.towerBoltSpeed + 0.2, dmg: BUILD_FX.towerDmg, arrow: true, pierce: 1, hit: new Set(),
-        });
-        beep(980, 0.03, "triangle", 0.02);
-      }
-    }
-    for (const e of state.enemies) {
-      if (isFlying(e) || e.under) continue;
-      if (tileAt(Math.floor(e.x / TILE), Math.floor(e.y / TILE)) === T.SPIKE) {
-        e.hp -= BUILD_FX.spikeDps * dt;
-        e.flash = Math.max(e.flash || 0, 0.05);
-      }
-    }
-  }
-
-  function updateBolts(dt) {
-    for (const b of state.bolts) {
-      b.x += b.vx * dt;
-      b.y += b.vy * dt;
-      b.life -= dt;
-      if (!b.hit) b.hit = new Set();
-      for (const e of state.enemies) {
-        if (b.hit.has(e) || !targetable(e)) continue;
-        if (dist(b.x, b.y, e.x, e.y) < (edef(e).boss ? 17 : 11)) {
-          b.hit.add(e);
-          e.hp -= b.dmg;
-          e.flash = 0.12;
-          e.stun = Math.max(e.stun || 0, 0.12);
-          burst(e.x, e.y, "#4ee8ff", 7);
-          const spd = Math.hypot(b.vx, b.vy) || 1;
-          b.x += (b.vx / spd) * 14;
-          b.y += (b.vy / spd) * 14;
-          b.pierce = (b.pierce || 1) - 1;
-          if (b.pierce <= 0) b.life = 0;
-        }
-      }
-      const tx = Math.floor(b.x / TILE);
-      const ty = Math.floor(b.y / TILE);
-      if (!b.arrow && solid(tx, ty)) b.life = 0;
-    }
-    state.bolts = state.bolts.filter((b) => b.life > 0);
-  }
-
-  function updateCrops(dt) {
-    const growMul = state.cls === "farmer" ? CLASSES.farmer.grow : 1;
-    for (const [key, c] of state.crops) {
-      if (c.stage >= 2) continue;
-      const [tx, ty] = key.split(",").map(Number);
-      c.grow += dt * growMul * (nearSpore(tx, ty) ? ENEMY_FX.sporeGrowMul : 1);
-      const need = c.stage === 0 ? 7 : 8;
-      if (c.grow >= need) {
-        c.grow = 0;
-        c.stage += 1;
-      }
-    }
-  }
-
-  function updatePlayer(dt) {
-    const p = state.player;
-    const def = CLASSES[p.cls];
-    let ix = 0;
-    let iy = 0;
-    if (keys.has("KeyW") || keys.has("ArrowUp")) iy -= 1;
-    if (keys.has("KeyS") || keys.has("ArrowDown")) iy += 1;
-    if (keys.has("KeyA") || keys.has("ArrowLeft")) ix -= 1;
-    if (keys.has("KeyD") || keys.has("ArrowRight")) ix += 1;
-    const moving = ix || iy;
-    if (moving) state.flags.moved = true;
-    if (moving) {
-      const l = Math.hypot(ix, iy);
-      const speed = def.speed * (has("light_boots") ? RELIC_FX.lightBootsSpeed : 1);
-      p.vx = (ix / l) * speed;
-      p.vy = (iy / l) * speed;
-      if (Math.abs(ix) > Math.abs(iy)) p.dir = ix < 0 ? 1 : 2;
-      else p.dir = iy < 0 ? 3 : 0;
-    } else {
-      p.vx *= 0.7;
-      p.vy *= 0.7;
-    }
-    if (p.dash > 0) {
-      p.vx = p.dashVx;
-      p.vy = p.dashVy;
-      p.dash -= dt;
-    }
-    const ox = p.x;
-    const oy = p.y;
-    tryMove(p, dt);
-    const bumpRes = !!(moving && Math.hypot(p.x - ox, p.y - oy) < 0.5 && isResource(frontTile().tx, frontTile().ty));
-    if (moving) {
-      state.footAcc += dt;
-      if (state.footAcc > 0.27) {
-        state.footAcc = 0;
-        footstep();
-      }
-    } else {
-      state.footAcc = 0.2;
-    }
-    p.anim += dt * (moving ? 8 : 3);
-    p.frame = Math.floor(p.anim) % 2;
-    p.atkCd = Math.max(0, p.atkCd - dt);
-    p.skillCd = Math.max(0, p.skillCd - dt);
-    p.invuln = Math.max(0, p.invuln - dt);
-    p.attack = Math.max(0, p.attack - dt);
-    p.sense = Math.max(0, p.sense - dt);
-    if (p.cls === "mage") p.mana = Math.min(p.maxMana, p.mana + dt * 1.35);
-
-    const usingSpace = keys.has("Space") || keys.has("KeyJ");
-    const wantAct = mouse.down || usingSpace;
-    const f = (usingSpace || bumpRes) ? frontTile() : aimTile();
-    const t = tileAt(f.tx, f.ty);
-    const resource = isResource(f.tx, f.ty);
-    const dismantle = isDismantle(f.tx, f.ty);
-    if (!keys.has("KeyR")) state.rLatch = false;
-    const rTap = keys.has("KeyR") && !state.rLatch;
-    if (rTap) state.rLatch = true;
-    const clickPlace = mouse.pressed || rTap;
-    if (!mouse.down && !usingSpace) p.blockMine = false;
-    const enemyNear = state.enemies.some((e) => targetable(e) && dist(e.x, e.y, p.x, p.y) < 42);
-    const doMine = () => {
-      const apCost = apCostOfTile(t);
-      if (apCost && apShort(apCost, t === T.TREE ? "砍树" : "挖矿")) {
-        p.mine = 0;
-        p.mineTx = -1;
-        return;
-      }
-      if (p.mineTx !== f.tx || p.mineTy !== f.ty) startMine(f.tx, f.ty);
-      const hard = t === T.GOLD ? 1.35 : t === T.STONE ? 1.05 : t === T.TREE ? 0.85 : t === T.TOWER ? 0.8 : 0.35;
-      const axe = t === T.TREE && has("flint_axe") ? RELIC_FX.flintAxeChop : 1;
-      p.mine += dt * def.mine * axe / hard;
-      if (p.mine >= 1) {
-        gatherTile(f.tx, f.ty);
-        p.mine = 0;
-        p.mineTx = -1;
-      }
-    };
-    if (clickPlace && state.build === "fence" && t === T.FENCE) {
-      p.mine = 0;
-      p.mineTx = -1;
-      tryPlace(f.tx, f.ty);
-      p.blockMine = true;
-    } else if ((usingSpace || bumpRes) && (resource || (usingSpace && dismantle))) {
-      doMine();
-    } else if (wantAct && enemyNear && !resource) {
-      p.mine = 0;
-      p.mineTx = -1;
-      if (p.atkCd <= 0) {
-        p.atkCd = p.cls === "mage" ? 0.32 : 0.42;
-        if (p.cls === "mage") shoot();
-        else meleeAttack();
-      }
-    } else if (clickPlace && state.build && !resource && t !== T.FARM && t !== T.FENCE) {
-      p.mine = 0;
-      p.mineTx = -1;
-      tryPlace(f.tx, f.ty);
-    } else if (wantAct && (resource || (dismantle && !p.blockMine))) {
-      doMine();
-    } else if (wantAct && t === T.FARM) {
-      p.mine = 0;
-      p.mineTx = -1;
-      if (p.atkCd <= 0) {
-        p.atkCd = 0.25;
-        plant(f.tx, f.ty);
-      }
-    } else {
-      p.mine = 0;
-      p.mineTx = -1;
-      if (wantAct && p.atkCd <= 0) {
-        p.atkCd = p.cls === "mage" ? 0.32 : 0.42;
-        if (p.cls === "mage") shoot();
-        else meleeAttack();
-      }
-    }
-    if (mouse.right) {
-      mouse.right = false;
-      useSkill();
-    }
-    mouse.pressed = false;
-  }
-
-  function updateCycle(dt) {
+function update(dt) {
+  if (!state || state.paused) return;
+  dt = Math.min(dt, 0.05);
+  if (state.briefing) {
     state.time += dt;
-    state.apWarn = Math.max(0, state.apWarn - dt);
-    state.cycle += dt;
-    const len = state.day ? state.dayLen : state.nightLen;
-    if (state.cycle >= len) {
-      state.cycle = 0;
-      state.day = !state.day;
-      if (!state.day) {
-        state.nights += 1;
-        state.nightKills = 0;
-        state.nightCampHit = false;
-        endDayEvent();
-        startNightWaves();
-        if (state.howlPending) {
-          state.howlPending = false;
-          state.howl = RELIC_FX.wolfHowlSecs;
-        }
-        toast(state.nights === 1
-          ? "第一夜：怪分波朝篝火来。站在墙后打。"
-          : `第 ${state.nights} 夜，共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`, 3.2);
-        beep(140, 0.16, "sawtooth", 0.05);
-      } else {
-        const extra = !campWalled()
-          ? "先把发光的缺口补上，再去凑材料。"
-          : survivedNights()
-            ? (state.inv.heart ? "可以去北边祭坛献祭了。" : "材料齐了就去工作台合成，再到祭坛。")
-            : `还要再守 ${nightsLeft()} 夜。白天补墙、凑材料。`;
-        toast("天亮了。" + extra, 3);
-        checkAch("dawn");
-        beep(620, 0.1, "square", 0.04);
-        state.enemies = [];
-        state.rocks = [];
-        state.bossPending = false;
-        state.bossName = "";
-        state.howl = 0;
-        state.nightWarned = false;
-        state.fenceBreakWarn = false;
-        state.ap = apMax();
-        state.lastPlace = null;
-        rollDayEvent();
-        if (has("greedy_hearth")) {
-          state.inv.gold += RELIC_FX.greedyHearthGold;
-          floatText(state.camp.x, state.camp.y - 18, `+${RELIC_FX.greedyHearthGold}金`, "#e8c040");
-        }
-        offerDawn();
-      }
+    state.look.x += (state.lookTo.x - state.look.x) * Math.min(1, 5.5 * dt);
+    state.look.y += (state.lookTo.y - state.look.y) * Math.min(1, 5.5 * dt);
+    const step = BRIEF[state.briefStep];
+    const full = step.text;
+    brief.acc += dt;
+    const ch = full[brief.shown] || "";
+    const wait = /[。、！？…—\n]/.test(ch) ? 0.16 : 0.034;
+    if (brief.shown < full.length && brief.acc >= wait) {
+      brief.acc = 0;
+      brief.shown += 1;
+      briefingText.textContent = full.slice(0, brief.shown);
+      if (ch && ch !== " " && ch !== "\n") beep(780, 0.016, "square", 0.016);
+      if (brief.shown >= full.length) briefingCursor.classList.remove("hidden");
     }
-    if (state.day && !state.nightWarned && state.cycle > state.dayLen - 8) {
-      state.nightWarned = true;
-      toast("天快黑了。回篝火旁边，检查栅栏和火把。", 2.8);
-    }
-  }
-
-  function update(dt) {
-    if (!state || state.paused) return;
-    dt = Math.min(dt, 0.05);
-    if (state.briefing) {
-      state.time += dt;
-      state.look.x += (state.lookTo.x - state.look.x) * Math.min(1, 5.5 * dt);
-      state.look.y += (state.lookTo.y - state.look.y) * Math.min(1, 5.5 * dt);
-      const step = BRIEF[state.briefStep];
-      const full = step.text;
-      brief.acc += dt;
-      const ch = full[brief.shown] || "";
-      const wait = /[。、！？…—\n]/.test(ch) ? 0.16 : 0.034;
-      if (brief.shown < full.length && brief.acc >= wait) {
-        brief.acc = 0;
-        brief.shown += 1;
-        briefingText.textContent = full.slice(0, brief.shown);
-        if (ch && ch !== " " && ch !== "\n") beep(780, 0.016, "square", 0.016);
-        if (brief.shown >= full.length) briefingCursor.classList.remove("hidden");
-      }
-      state.musicAcc += dt;
-      if (state.musicAcc > 0.28) {
-        state.musicAcc = 0;
-        state.musicStep = (state.musicStep || 0) + 1;
-        playMusicPulse();
-      }
-      syncHud();
-      return;
-    }
-    if (state.hitstop > 0) {
-      state.hitstop -= dt;
-      state.shake = Math.max(0, (state.shake || 0) - dt * 20);
-      if (toastTimer > 0) {
-        toastTimer -= dt;
-        if (toastTimer <= 0) toastEl.classList.add("hidden");
-      }
-      mouse.pressed = false;
-      syncHud();
-      return;
-    }
-    state.campPull = Math.max(0, (state.campPull || 0) - dt);
-    state.campFlash = Math.max(0, (state.campFlash || 0) - dt);
-    state.campHurtCd = Math.max(0, (state.campHurtCd || 0) - dt);
-    state.campHint = Math.max(0, (state.campHint || 0) - dt);
-    state.benchHint = Math.max(0, (state.benchHint || 0) - dt);
     state.musicAcc += dt;
     if (state.musicAcc > 0.28) {
       state.musicAcc = 0;
       state.musicStep = (state.musicStep || 0) + 1;
       playMusicPulse();
     }
-    updatePlayer(dt);
-    updateEnemies(dt);
-    updateDrops(dt);
-    updateBuildings(dt);
-    updateDayEvent(dt);
-    updateAch(dt);
-    if (state.hurtDir) {
-      state.hurtDir.t -= dt;
-      if (state.hurtDir.t <= 0) state.hurtDir = null;
-    }
-    if (state.bossBanner) {
-      state.bossBanner.t -= dt;
-      if (state.bossBanner.t <= 0) state.bossBanner = null;
-    }
-    updateBolts(dt);
-    updateRocks(dt);
-    updateCrops(dt);
-    updateCycle(dt);
-    if (state.day && state.campHp > 0 && dist(state.player.x, state.player.y, state.camp.x, state.camp.y) < 30) {
-      if (state.player.hp < state.player.maxHp) state.heals.camp = true;
-      state.player.hp = Math.min(state.player.maxHp, state.player.hp + 5 * dt);
-      if (!has("greedy_hearth")) state.campHp = Math.min(CAMP_MAX, state.campHp + 8 * dt);
-    }
-    const f = aimTile();
-    const t = tileAt(f.tx, f.ty);
-    const p = state.player;
-    let prompt = "";
-    const ev = state.dayEvent;
-    if (ev && ev.id === "caravan" && ev.started && state.day && dist(p.x, p.y, ev.x, ev.y) < 26) {
-      prompt = ev.trades < DAY_EVENT_FX.caravanTrades ? "按 E 和商队交易" : "商队的货换完了";
-    } else if (dist(p.x, p.y, state.bench.x, state.bench.y) < 26 && (state.flags.chopped || materialsReady() || state.inv.heart)) {
-      prompt = materialsReady() || state.inv.heart ? "按 E 合成方块之心" : "按 E 查看还差哪些材料";
-    } else if (dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
-      if (!state.day) prompt = "祭坛夜里封着，先守篝火";
-      else if (!survivedNights()) prompt = `再守 ${nightsLeft()} 夜，天亮才能献`;
-      else if (state.inv.heart > 0) prompt = "按 E 献上方块之心";
-      else prompt = "先去工作台合成方块之心";
-    } else if (!state.day && state.enemies.some((e) => dist(e.x, e.y, p.x, p.y) < 42)) {
-      prompt = "左键攻击 · Q 技能 · 点坏墙修理";
-    } else if (state.build && placeable(f.tx, f.ty)) {
-      prompt = state.build === "plot" ? `左键开田（${costText("plot")}）` : `左键放下${BUILDINGS[state.build].name}（${costText(state.build)}${state.day ? " + 1 日晷" : ""}）`;
-    } else if (t === T.TREE || tileAt(frontTile().tx, frontTile().ty) === T.TREE) prompt = "空格或按住左键砍树";
-    else if (t === T.GOLD) prompt = "按住左键挖金矿";
-    else if (t === T.RUBBLE) prompt = "按住左键捡碎石（不耗日晷）";
-    else if (t === T.STATUE) prompt = "沉睡的石像。在它附近挖金会吵醒它";
-    else if (t === T.TOWER || t === T.SPIKE || t === T.SPRING) prompt = "空格拆除，退回部分材料";
-    else if (t === T.STONE) prompt = "按住左键挖石头";
-    else if (t === T.FENCE) {
-      const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || fenceMax();
-      if (state.build === "fence" && hp < fenceMax() - 0.5) prompt = "左键修理栅栏（1木）";
-      else if (state.build === "fence" && !campWalled()) prompt = "这段好了。点发光的空地继续围";
-      else prompt = "空格拆除栅栏";
-    }
-    else if (t === T.CROP && (state.crops.get(`${f.tx},${f.ty}`)?.stage || 0) >= 2) prompt = "按住左键收麦";
-    else if (t === T.FARM) prompt = "按 E 或左键播种（要有种子）";
-    else if (!state.day && state.enemies.length) prompt = "守住篝火 · 左键攻击 · Q 技能";
-    setPrompt(prompt);
-    syncGuide();
-    for (const pt of state.particles) {
-      pt.vy += (pt.g || 0) * dt;
-      pt.x += pt.vx * dt;
-      pt.y += pt.vy * dt;
-      pt.life -= dt;
-    }
-    state.particles = state.particles.filter((p) => p.life > 0);
-    for (const f of state.floats) {
-      f.y -= 18 * dt;
-      f.life -= dt;
-    }
-    state.floats = state.floats.filter((f) => f.life > 0);
+    syncHud();
+    return;
+  }
+  if (state.hitstop > 0) {
+    state.hitstop -= dt;
+    state.shake = Math.max(0, (state.shake || 0) - dt * 20);
     if (toastTimer > 0) {
-      toastTimer -= dt;
+      setToastTimer(toastTimer - dt);
       if (toastTimer <= 0) toastEl.classList.add("hidden");
     }
+    mouse.pressed = false;
     syncHud();
+    return;
   }
-
-  function objectiveText() {
-    if (state.briefing) return "预演：看清要守的火，和最后要送到的祭坛";
-    if (!state.day) return "守住篝火！怪从地图边缘朝营地来";
-    if (canOffer()) return "天亮了。把方块之心送到北边祭坛（按 E）";
-    if (state.inv.heart > 0 && !survivedNights()) return `先再守 ${nightsLeft()} 夜，天亮才能献祭`;
-    if (materialsReady() && !state.inv.heart) return "去工作台按 E 合成方块之心";
-    if (!campWalled()) return "按 1，把篝火上下左右四边的发光格围上";
-    const miss = [];
-    if (state.inv.wood < NEED.wood) miss.push(`木 ${state.inv.wood}/${NEED.wood}`);
-    if (state.inv.stone < NEED.stone) miss.push(`石 ${state.inv.stone}/${NEED.stone}`);
-    if (state.inv.gold < NEED.gold) miss.push(`金 ${state.inv.gold}/${NEED.gold}`);
-    if (state.inv.wheat < NEED.wheat) miss.push(`麦 ${state.inv.wheat}/${NEED.wheat}`);
-    if (!miss.length) return "材料齐了。去工作台按 E 合成";
-    return "采集 " + miss.join("  ") + "，顺手补墙";
+  state.campPull = Math.max(0, (state.campPull || 0) - dt);
+  state.campFlash = Math.max(0, (state.campFlash || 0) - dt);
+  state.campHurtCd = Math.max(0, (state.campHurtCd || 0) - dt);
+  state.campHint = Math.max(0, (state.campHint || 0) - dt);
+  state.benchHint = Math.max(0, (state.benchHint || 0) - dt);
+  state.musicAcc += dt;
+  if (state.musicAcc > 0.28) {
+    state.musicAcc = 0;
+    state.musicStep = (state.musicStep || 0) + 1;
+    playMusicPulse();
   }
-
-  function syncHud() {
-    const p = state.player;
-    hpBar.style.width = `${clamp((p.hp / p.maxHp) * 100, 0, 100)}%`;
-    hpText.textContent = `${Math.max(0, Math.ceil(p.hp))}/${p.maxHp}`;
-    if (p.maxMana) {
-      manaBar.style.width = `${(p.mana / p.maxMana) * 100}%`;
-      manaText.textContent = `${p.mana.toFixed(0)}/${p.maxMana}`;
-    }
-    campBar.style.width = `${clamp((state.campHp / CAMP_MAX) * 100, 0, 100)}%`;
-    campText.textContent = `${Math.max(0, Math.ceil(state.campHp))}/${CAMP_MAX}`;
-    if (campBar.parentElement) campBar.parentElement.classList.toggle("hurt", (state.campFlash || 0) > 0);
-    const remain = Math.max(0, (state.day ? state.dayLen : state.nightLen) - state.cycle);
-    const m = Math.floor(remain / 60);
-    const s = String(Math.floor(remain % 60)).padStart(2, "0");
-    clockEl.textContent = `${state.era > 1 ? eraName(state.era) + " · " : ""}${state.day ? "白天" : "夜晚"} ${m}:${s}`;
-    clockEl.className = "clock " + (state.day ? "day" : "night");
-    objectiveEl.textContent = objectiveText();
-    if (apEl) {
-      apEl.textContent = state.day ? `日晷 ${state.ap}/${apMax()}` : "日晷 · 夜里不耗点";
-      apEl.classList.toggle("empty", state.day && state.ap <= 0);
-    }
-    skillCdEl.textContent = p.skillCd > 0 ? `${p.skillCd.toFixed(1)}s` : "就绪";
-    skillDock.classList.toggle("ready", p.skillCd <= 0);
-    if (state.build) {
-      buildBanner.textContent = `建造${BUILDINGS[state.build].name} · ${costText(state.build)}${state.day ? " + 1 日晷" : ""} · 点空地放下 / 点坏墙修理 · Z 撤销 · 按 0 取消`;
-      buildBanner.classList.remove("hidden");
-    } else {
-      buildBanner.classList.add("hidden");
-    }
-    if (!state.day && state.wavesTotal) {
-      if (state.wave === 0) {
-        waveBanner.textContent = `第 ${state.nights} 夜  波次准备中`;
-      } else if (state.wave >= state.wavesTotal && state.toSpawn <= 0 && state.enemies.length === 0) {
-        waveBanner.textContent = "这一夜的波次结束，守到天亮";
-      } else {
-        waveBanner.textContent = `第 ${state.nights} 夜  波次 ${state.wave}/${state.wavesTotal}  剩余 ${state.toSpawn + state.enemies.length}`;
-      }
-      waveBanner.classList.remove("hidden");
-    } else {
-      waveBanner.classList.add("hidden");
-    }
-    for (const el of document.querySelectorAll(".item")) {
-      const k = el.dataset.k;
-      const b = el.querySelector("b");
-      if (b && k) b.textContent = state.inv[k] || 0;
-      el.classList.toggle("ready", k === "heart" && state.inv.heart > 0);
-      el.classList.toggle("on", el.dataset.build && state.build === el.dataset.build);
-    }
+  updatePlayer(dt);
+  updateEnemies(dt);
+  updateDrops(dt);
+  updateBuildings(dt);
+  updateDayEvent(dt);
+  updateAch(dt);
+  if (state.hurtDir) {
+    state.hurtDir.t -= dt;
+    if (state.hurtDir.t <= 0) state.hurtDir = null;
   }
-
-  function drawTile(c, t, x, y, tx, ty, time) {
-    const n = ((tx * 374761393) ^ (ty * 668265263)) >>> 0;
-    if (t === T.GRASS) {
-      px(c, x, y, 16, 16, "#3d9344");
-      px(c, x + 1, y + 1, 14, 14, n % 4 === 0 ? "#36863e" : "#419b48");
-      if (n % 3 === 0) px(c, x + (n % 12), y + 4, 2, 3, "#6ad25f");
-      if (n % 5 === 0) px(c, x + 9, y + 7, 2, 2, "#d8c45a");
-    } else if (t === T.DIRT || t === T.FARM) {
-      px(c, x, y, 16, 16, t === T.FARM ? "#6b4424" : "#7a5230");
-      px(c, x + (n % 10), y + (n % 8), 2, 2, "#5a3a20");
-      if (t === T.FARM) px(c, x, y + 8, 16, 2, "#4a2e16");
-    } else if (t === T.SAND) {
-      px(c, x, y, 16, 16, "#d2c07a");
-      px(c, x + 4, y + 6, 2, 2, "#e8d9a0");
-    } else if (t === T.PATH) {
-      px(c, x, y, 16, 16, "#c4a06a");
-      px(c, x + 1, y + 1, 14, 14, "#b08950");
-    } else if (t === T.BRICK) {
-      px(c, x, y, 16, 16, "#8a5a48");
-      px(c, x, y + 7, 16, 2, "#6e4034");
-      px(c, x + 7, y, 2, 16, "#6e4034");
-      px(c, x + 2, y + 2, 3, 2, "#c48870");
-    } else if (t === T.WATER) {
-      const w = 0.5 + 0.5 * Math.sin(time * 2 + tx * 0.4 + ty * 0.3);
-      px(c, x, y, 16, 16, w > 0.55 ? "#3aa0c8" : "#2b7eaa");
-      px(c, x + 3, y + 4 + ((time * 6 + tx) % 3 | 0), 5, 1, "#b8ecff");
-    } else if (t === T.STONE || t === T.GOLD) {
-      px(c, x, y, 16, 16, "#8b9098");
-      px(c, x + 1, y + 1, 14, 14, "#6d727a");
-      px(c, x + 3, y + 3, 4, 3, "#c5c9d0");
-      if (t === T.GOLD) {
-        px(c, x + 6, y + 6, 4, 4, "#e8c040");
-        px(c, x + 9, y + 10, 3, 3, "#ffe27a");
-      }
-    } else if (t === T.TREE) {
-      px(c, x, y, 16, 16, "#3d9344");
-      px(c, x + 6, y + 9, 4, 7, "#6b4424");
-      px(c, x + 1, y - 2, 14, 13, "#176a2c");
-      px(c, x + 3, y, 10, 10, "#1f8a38");
-      px(c, x + 5, y + 2, 3, 3, "#7be06a");
-    } else if (t === T.FENCE) {
-      px(c, x, y, 16, 16, "#3d9344");
-      const n = tileAt(tx, ty - 1) === T.FENCE;
-      const s = tileAt(tx, ty + 1) === T.FENCE;
-      const e = tileAt(tx + 1, ty) === T.FENCE;
-      const w = tileAt(tx - 1, ty) === T.FENCE;
-      px(c, x + 5, y + 5, 6, 6, "#4a2e16");
-      if (n || s || (!e && !w)) {
-        px(c, x + 5, y + (n ? 0 : 3), 6, n && s ? 16 : 11, "#6b4424");
-        px(c, x + 6, y + (n ? 0 : 3), 4, n && s ? 16 : 11, "#8b5a2b");
-      }
-      if (e || w || (!n && !s)) {
-        px(c, x + (w ? 0 : 3), y + 5, e && w ? 16 : 11, 6, "#6b4424");
-        px(c, x + (w ? 0 : 3), y + 6, e && w ? 16 : 11, 4, "#a06a38");
-      }
-      px(c, x + 5, y + 5, 6, 3, "#c48870");
-      const hp = state.fenceHp.get(`${tx},${ty}`) || fenceMax();
-      if (hp < fenceMax()) {
-        px(c, x + 2, y, 12, 2, "#111");
-        px(c, x + 2, y, 12 * clamp(hp / fenceMax(), 0, 1), 2, "#e8c040");
-      }
-    } else if (t === T.TORCH) {
-      px(c, x, y, 16, 16, "#3d9344");
-      px(c, x + 7, y + 8, 2, 7, "#6b4424");
-      const flick = Math.floor(time * 9 + tx + ty) % 2;
-      px(c, x + 6, y + 3 - flick, 4, 6, flick ? "#ffb020" : "#ff6a20");
-      px(c, x + 7, y + 2 - flick, 2, 2, "#ffe27a");
-    } else if (t === T.CROP) {
-      px(c, x, y, 16, 16, "#6b4424");
-      const st = state.crops.get(`${tx},${ty}`)?.stage || 0;
-      if (st === 0) {
-        px(c, x + 7, y + 10, 2, 4, "#7dba4a");
-      } else if (st === 1) {
-        px(c, x + 5, y + 6, 2, 8, "#5aa33a");
-        px(c, x + 9, y + 7, 2, 7, "#5aa33a");
-      } else {
-        px(c, x + 4, y + 4, 2, 10, "#c6a43a");
-        px(c, x + 7, y + 3, 2, 11, "#e8c040");
-        px(c, x + 10, y + 5, 2, 9, "#c6a43a");
-      }
-    } else if (t === T.TOWER) {
-      px(c, x, y, 16, 16, "#3d9344");
-      px(c, x + 3, y + 4, 10, 12, "#7a7e88");
-      px(c, x + 4, y + 5, 8, 10, "#9aa0aa");
-      px(c, x + 2, y + 1, 12, 4, "#5a5e68");
-      px(c, x + 3, y, 2, 2, "#5a5e68");
-      px(c, x + 7, y, 2, 2, "#5a5e68");
-      px(c, x + 11, y, 2, 2, "#5a5e68");
-      px(c, x + 7, y + 8, 2, 4, "#2a2a32");
-      px(c, x + 6, y + 2, 4, 2, "#e8c040");
-    } else if (t === T.SPIKE) {
-      px(c, x, y, 16, 16, "#7a5230");
-      for (let k = 0; k < 4; k++) {
-        px(c, x + 1 + k * 4, y + 9, 2, 5, "#8b5a2b");
-        px(c, x + 1 + k * 4, y + 5, 2, 4, "#d8d8e0");
-        px(c, x + 3 + (k % 3) * 4, y + 2, 2, 3, "#c0c4cc");
-      }
-    } else if (t === T.SPRING) {
-      px(c, x, y, 16, 16, "#3d9344");
-      px(c, x + 2, y + 3, 12, 11, "#8a8e98");
-      px(c, x + 3, y + 4, 10, 9, "#3a8ad8");
-      const ripple = Math.floor(time * 3 + tx) % 3;
-      px(c, x + 4 + ripple * 2, y + 7, 3, 1, "#a8e0ff");
-      px(c, x + 7, y + 1, 2, 2, "#8dff9a");
-    } else if (t === T.MUSHROOM) {
-      px(c, x, y, 16, 16, "#2f7a3a");
-      px(c, x + 1, y + 1, 14, 14, n % 2 ? "#2a6e36" : "#327e3e");
-      px(c, x + 7, y + 8, 2, 6, "#e8dcc8");
-      px(c, x + 4, y + 5, 8, 4, n % 3 ? "#b77ad8" : "#4ee8ff");
-      px(c, x + 5, y + 6, 2, 1, "#ffffff");
-      if (n % 2) {
-        px(c, x + 11, y + 11, 1, 3, "#e8dcc8");
-        px(c, x + 10, y + 10, 3, 2, "#b77ad8");
-      }
-    } else if (t === T.STATUE) {
-      px(c, x, y, 16, 16, "#5a5e68");
-      px(c, x + 3, y + 2, 10, 13, "#8a8ea0");
-      px(c, x + 4, y + 3, 8, 6, "#a0a4b8");
-      px(c, x + 5, y + 5, 2, 2, "#2a2a40");
-      px(c, x + 9, y + 5, 2, 2, "#2a2a40");
-      px(c, x + 3, y + 14, 10, 2, "#4a4e58");
-    } else if (t === T.RUBBLE) {
-      px(c, x, y, 16, 16, "#3d9344");
-      px(c, x + 2, y + 8, 5, 4, "#9aa0aa");
-      px(c, x + 8, y + 5, 6, 5, "#a8acb4");
-      px(c, x + 6, y + 11, 4, 3, "#8a8e98");
-      px(c, x + 9, y + 6, 2, 1, "#c8ccd4");
-    } else if (t === T.SPORE) {
-      px(c, x, y, 16, 16, "#4a2a58");
-      px(c, x + 1, y + 1, 14, 14, n % 2 ? "#5a3270" : "#523068");
-      px(c, x + (n % 9) + 2, y + 4, 3, 3, "#b77ad8");
-      px(c, x + ((n >> 3) % 9) + 3, y + 10, 2, 2, "#d8a8f0");
-    }
+  if (state.bossBanner) {
+    state.bossBanner.t -= dt;
+    if (state.bossBanner.t <= 0) state.bossBanner = null;
   }
-
-  function drawHuman(c, p, cam, scale) {
-    const x = Math.round(p.x - cam.x);
-    const y = Math.round(p.y - cam.y);
-    const bob = p.frame ? 1 : 0;
-    const pal = {
-      miner: { hat: "#8b5a2b", cloth: "#3a6b8c", accent: "#7a4e2a", pants: "#6b5344", lamp: "#ffb020" },
-      farmer: { hat: "#d4b06a", cloth: "#3d9a4a", accent: "#e8dcc8", pants: "#3d9a4a", lamp: "#d4b06a" },
-      mage: { hat: "#3a2a6b", cloth: "#2e6b5e", accent: "#4ee8ff", pants: "#2c3a6b", lamp: "#4ee8ff" },
-      knight: { hat: "#8a9aaa", cloth: "#a8b4c0", accent: "#c4303a", pants: "#4a5560", lamp: "#e8c040" },
-    }[p.cls];
-    c.save();
-    c.translate(x, y);
-    if (p.dir === 1) c.scale(-1, 1);
-    if (p.invuln > 0 && Math.floor(p.invuln * 20) % 2 === 0) c.globalAlpha = 0.45;
-    px(c, -5, -1, 10, 3, "rgba(0,0,0,.35)");
-    px(c, -3, -8 + bob, 3, 6, pal.pants);
-    px(c, 1, -8 + bob, 3, 6, pal.pants);
-    px(c, -4, -14 + bob, 8, 7, pal.cloth);
-    px(c, -5, -13 + bob, 2, 5, pal.accent);
-    px(c, -4, -20 + bob, 8, 7, "#e8b896");
-    if (p.cls === "farmer") px(c, -4, -21 + bob, 8, 3, "#e07030");
-    if (p.cls === "miner") px(c, -4, -21 + bob, 8, 3, "#6b4423");
-    if (p.cls === "mage") px(c, -4, -21 + bob, 8, 3, "#2a2438");
-    if (p.cls === "knight") px(c, -4, -21 + bob, 8, 3, "#4a4038");
-    if (p.dir !== 3) {
-      px(c, -2, -18 + bob, 2, 2, "#1a120c");
-      px(c, 1, -18 + bob, 2, 2, "#1a120c");
-    }
-    if (p.cls === "miner") {
-      px(c, -5, -23 + bob, 10, 4, pal.hat);
-      px(c, -1, -23 + bob, 3, 3, pal.lamp);
-    } else if (p.cls === "farmer") {
-      px(c, -6, -23 + bob, 12, 3, pal.hat);
-      px(c, -4, -24 + bob, 8, 3, "#c49a58");
-    } else if (p.cls === "mage") {
-      px(c, -5, -26 + bob, 10, 8, pal.hat);
-      px(c, 2, -26 + bob, 2, 2, "#e8c040");
-      px(c, 5, -18 + bob, 2, 12, pal.accent);
-      px(c, 4, -20 + bob, 4, 4, "#b8f6ff");
-    } else {
-      px(c, -5, -24 + bob, 10, 5, pal.hat);
-      px(c, -6, -16 + bob, 3, 8, pal.accent);
-      px(c, -7, -12 + bob, 5, 7, "#8b5a2b");
-      px(c, -6, -11 + bob, 3, 3, pal.lamp);
-    }
-    if (p.attack > 0 && p.cls !== "mage") {
-      const ang = Math.atan2(p.slashDy || 1, p.slashDx || 0);
-      c.rotate(ang);
-      px(c, 8, -2, 10, 2, p.cls === "knight" ? "#e8eef4" : "#c5c9d0");
-      px(c, 12, -5, 6, 2, "#fff");
-      px(c, 12, 1, 6, 2, "#fff");
-    }
-    c.restore();
+  updateBolts(dt);
+  updateRocks(dt);
+  updateCrops(dt);
+  updateCycle(dt);
+  if (state.day && state.campHp > 0 && dist(state.player.x, state.player.y, state.camp.x, state.camp.y) < 30) {
+    if (state.player.hp < state.player.maxHp) state.heals.camp = true;
+    state.player.hp = Math.min(state.player.maxHp, state.player.hp + 5 * dt);
+    if (!has("greedy_hearth")) state.campHp = Math.min(CAMP_MAX, state.campHp + 8 * dt);
   }
-
-  function drawEnemy(c, e, cam) {
-    const x = Math.round(e.x - cam.x);
-    const y = Math.round(e.y - cam.y);
-    const bob = Math.sin(state.time * 6 + e.bob) * 1;
-    if (e.under) {
-      const wob = Math.floor(state.time * 10 + e.bob * 7) % 2;
-      px(c, x - 5, y - 2, 10, 4, "#5a3a20");
-      px(c, x - 3 + wob, y - 4, 3, 2, "#8b5a2b");
-      px(c, x + 1 - wob, y - 3, 2, 2, "#6b4424");
-      return;
-    }
-    if (e.flash > 0) c.globalAlpha = 0.55;
-    px(c, x - 5, y - 1, 10, 3, "rgba(0,0,0,.3)");
-    if (e.kind === "slime_king") {
-      px(c, x - 13, y - 22 + bob, 26, 22, "#3fae3c");
-      px(c, x - 13, y - 22 + bob, 26, 4, "#7ae276");
-      px(c, x - 8, y - 28 + bob, 16, 5, "#e8c040");
-      px(c, x - 8, y - 31 + bob, 3, 3, "#e8c040");
-      px(c, x - 1, y - 31 + bob, 3, 3, "#e8c040");
-      px(c, x + 5, y - 31 + bob, 3, 3, "#e8c040");
-      px(c, x - 7, y - 15 + bob, 4, 4, "#143318");
-      px(c, x + 3, y - 15 + bob, 4, 4, "#143318");
-    } else if (e.kind === "shadow_knight") {
-      px(c, x - 8, y - 24 + bob, 16, 22, e.phase2 ? "#4a1c2c" : "#2a2238");
-      px(c, x - 7, y - 26 + bob, 14, 8, "#3c3450");
-      px(c, x - 5, y - 22 + bob, 10, 2, e.phase2 ? "#ff4040" : "#b06cff");
-      px(c, x + 8, y - 22 + bob, 3, 18, "#c5c9d0");
-      px(c, x - 12, y - 18 + bob, 4, 10, "#5a5068");
-    } else if (e.kind === "burrower") {
-      px(c, x - 6, y - 7 + bob, 12, 7, "#a0703c");
-      px(c, x - 6, y - 7 + bob, 12, 2, "#c89058");
-      px(c, x - 4, y - 6 + bob, 2, 2, "#1a0f08");
-      px(c, x + 2, y - 6 + bob, 2, 2, "#1a0f08");
-      px(c, x + 5, y - 4 + bob, 3, 2, "#e8eef4");
-    } else if (e.kind === "thrower") {
-      px(c, x - 6, y - 14 + bob, 12, 14, "#6d727a");
-      px(c, x - 6, y - 14 + bob, 12, 3, "#9aa0a8");
-      px(c, x - 4, y - 10 + bob, 2, 2, "#ff6a20");
-      px(c, x + 2, y - 10 + bob, 2, 2, "#ff6a20");
-      px(c, x + 5, y - 18 + bob, 5, 5, "#8b9098");
-    } else if (e.kind === "spore") {
-      px(c, x - 1, y - 6 + bob, 2, 6, "#3a6a2a");
-      px(c, x - 6, y - 13 + bob, 12, 7, "#9a4ac0");
-      px(c, x - 4, y - 12 + bob, 2, 2, "#e8c0ff");
-      px(c, x + 2, y - 11 + bob, 2, 2, "#e8c0ff");
-    } else if (e.kind === "slime") {
-      px(c, x - 6, y - 10 + bob, 12, 10, "#5dcf5a");
-      px(c, x - 4, y - 8 + bob, 3, 3, "#143318");
-      px(c, x + 1, y - 8 + bob, 3, 3, "#143318");
-    } else if (e.kind === "bat") {
-      px(c, x - 8, y - 10 + bob, 5, 3, "#3a2a58");
-      px(c, x + 3, y - 10 + bob, 5, 3, "#3a2a58");
-      px(c, x - 3, y - 9 + bob, 6, 5, "#2a1c40");
-    } else if (e.kind === "cube") {
-      px(c, x - 6, y - 12 + bob, 12, 12, "#e8c040");
-      px(c, x - 6, y - 12 + bob, 12, 3, "#ffe27a");
-      px(c, x - 2, y - 8 + bob, 2, 2, "#3a2a10");
-      px(c, x + 2, y - 8 + bob, 2, 2, "#3a2a10");
-    }
-    c.globalAlpha = 1;
-    if (e.hp < e.maxHp && !edef(e).boss) {
-      px(c, x - 6, y - 16 + bob, 12, 2, "#111");
-      px(c, x - 6, y - 16 + bob, 12 * clamp(e.hp / e.maxHp, 0, 1), 2, "#d4454a");
-    }
+  const f = aimTile();
+  const t = tileAt(f.tx, f.ty);
+  const p = state.player;
+  let prompt = "";
+  const ev = state.dayEvent;
+  if (ev && ev.id === "caravan" && ev.started && state.day && dist(p.x, p.y, ev.x, ev.y) < 26) {
+    prompt = ev.trades < DAY_EVENT_FX.caravanTrades ? "按 E 和商队交易" : "商队的货换完了";
+  } else if (dist(p.x, p.y, state.bench.x, state.bench.y) < 26 && (state.flags.chopped || materialsReady() || state.inv.heart)) {
+    prompt = materialsReady() || state.inv.heart ? "按 E 合成方块之心" : "按 E 查看还差哪些材料";
+  } else if (dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
+    if (!state.day) prompt = "祭坛夜里封着，先守篝火";
+    else if (!survivedNights()) prompt = `再守 ${nightsLeft()} 夜，天亮才能献`;
+    else if (state.inv.heart > 0) prompt = "按 E 献上方块之心";
+    else prompt = "先去工作台合成方块之心";
+  } else if (!state.day && state.enemies.some((e) => dist(e.x, e.y, p.x, p.y) < 42)) {
+    prompt = "左键攻击 · Q 技能 · 点坏墙修理";
+  } else if (state.build && placeable(f.tx, f.ty)) {
+    prompt = state.build === "plot" ? `左键开田（${costText("plot")}）` : `左键放下${BUILDINGS[state.build].name}（${costText(state.build)}${state.day ? " + 1 日晷" : ""}）`;
+  } else if (t === T.TREE || tileAt(frontTile().tx, frontTile().ty) === T.TREE) prompt = "空格或按住左键砍树";
+  else if (t === T.GOLD) prompt = "按住左键挖金矿";
+  else if (t === T.RUBBLE) prompt = "按住左键捡碎石（不耗日晷）";
+  else if (t === T.STATUE) prompt = "沉睡的石像。在它附近挖金会吵醒它";
+  else if (t === T.TOWER || t === T.SPIKE || t === T.SPRING) prompt = "空格拆除，退回部分材料";
+  else if (t === T.STONE) prompt = "按住左键挖石头";
+  else if (t === T.FENCE) {
+    const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || fenceMax();
+    if (state.build === "fence" && hp < fenceMax() - 0.5) prompt = "左键修理栅栏（1木）";
+    else if (state.build === "fence" && !campWalled()) prompt = "这段好了。点发光的空地继续围";
+    else prompt = "空格拆除栅栏";
   }
-
-  function drawProp(c, kind, x, y, cam, time) {
-    const px0 = Math.round(x - cam.x);
-    const py0 = Math.round(y - cam.y);
-    if (kind === "bench") {
-      px(c, px0 - 8, py0 - 8, 16, 10, "#6b4424");
-      px(c, px0 - 8, py0 - 8, 16, 3, "#8b5a2b");
-      px(c, px0 - 7, py0 - 12, 5, 5, "#8b9098");
-      px(c, px0 + 1, py0 - 11, 6, 3, "#e8c040");
-    } else if (kind === "altar") {
-      px(c, px0 - 8, py0 - 6, 16, 8, "#6d727a");
-      px(c, px0 - 4, py0 - 14, 8, 10, "#8b9098");
-      const glow = 0.5 + 0.5 * Math.sin(time * 3);
-      px(c, px0 - 2, py0 - 16, 4, 4, glow > 0.5 ? "#ffe27a" : "#e8c040");
-    } else if (kind === "camp") {
-      px(c, px0 - 5, py0 - 3, 10, 4, "#5a3a20");
-      const f = Math.floor(time * 8) % 2;
-      px(c, px0 - 2, py0 - 10 - f, 4, 8, f ? "#ffb020" : "#ff6a20");
-    }
+  else if (t === T.CROP && (state.crops.get(`${f.tx},${f.ty}`)?.stage || 0) >= 2) prompt = "按住左键收麦";
+  else if (t === T.FARM) prompt = "按 E 或左键播种（要有种子）";
+  else if (!state.day && state.enemies.length) prompt = "守住篝火 · 左键攻击 · Q 技能";
+  setPrompt(prompt);
+  syncGuide();
+  for (const pt of state.particles) {
+    pt.vy += (pt.g || 0) * dt;
+    pt.x += pt.vx * dt;
+    pt.y += pt.vy * dt;
+    pt.life -= dt;
   }
-
-  function render() {
-    if (!state) return;
-    const scale = Number(canvas.dataset.scale || 3);
-    const cam = camera();
-    ctx.setTransform(scale, 0, 0, scale, 0, 0);
-    ctx.imageSmoothingEnabled = false;
-    if (state.shake > 0) {
-      ctx.translate((rnd("fx") - 0.5) * state.shake, (rnd("fx") - 0.5) * state.shake);
-      state.shake = Math.max(0, state.shake - 0.45);
-    }
-    ctx.fillStyle = "#16351c";
-    ctx.fillRect(0, 0, VIEW_W * TILE, VIEW_H * TILE);
-
-    const x0 = Math.max(0, Math.floor(cam.x / TILE) - 1);
-    const y0 = Math.max(0, Math.floor(cam.y / TILE) - 1);
-    const x1 = Math.min(COLS, x0 + VIEW_W + 3);
-    const y1 = Math.min(ROWS, y0 + VIEW_H + 3);
-    for (let ty = y0; ty < y1; ty++) {
-      for (let tx = x0; tx < x1; tx++) {
-        const t = tileAt(tx, ty);
-        drawTile(ctx, t, tx * TILE - cam.x, ty * TILE - cam.y, tx, ty, state.time);
-        if (state.player.sense > 0 && t === T.GOLD) {
-          ctx.strokeStyle = "#ffe27a";
-          ctx.strokeRect(tx * TILE - cam.x + 1, ty * TILE - cam.y + 1, 14, 14);
-        }
-      }
-    }
-
-    drawProp(ctx, "bench", state.bench.x, state.bench.y, cam, state.time);
-    drawProp(ctx, "altar", state.altar.x, state.altar.y, cam, state.time);
-    drawProp(ctx, "camp", state.camp.x, state.camp.y, cam, state.time);
-
-    for (const d of state.drops) {
-      const colors = { wood: "#8b5a2b", stone: "#9aa0a8", gold: "#e8c040", wheat: "#e8c040", seed: "#7dba4a", heart: "#ff6a8a" };
-      px(ctx, d.x - cam.x - 2, d.y - cam.y - 2 - d.z, 4, 4, colors[d.kind] || "#fff");
-    }
-    for (const e of state.enemies) drawEnemy(ctx, e, cam);
-    for (const r of state.rocks) {
-      px(ctx, r.x - cam.x - 3, r.y - cam.y - 3, 6, 6, "#6d727a");
-      px(ctx, r.x - cam.x - 3, r.y - cam.y - 3, 6, 2, "#9aa0a8");
-    }
-    drawDayEvent(ctx, cam);
-    drawHuman(ctx, state.player, cam, scale);
-    for (const b of state.bolts) {
-      if (b.arrow) px(ctx, b.x - cam.x - 1, b.y - cam.y - 1, 3, 3, "#f0d8a0");
-      else px(ctx, b.x - cam.x - 2, b.y - cam.y - 2, 4, 4, b.nova ? "#c8f6ff" : "#4ee8ff");
-    }
-    for (const pt of state.particles) {
-      ctx.globalAlpha = clamp(pt.life * 2, 0, 1);
-      px(ctx, pt.x - cam.x, pt.y - cam.y, pt.size || 2, pt.size || 2, pt.color);
-      ctx.globalAlpha = 1;
-    }
-    ctx.font = "8px monospace";
-    ctx.textAlign = "center";
-    for (const f of state.floats) {
-      ctx.globalAlpha = clamp(f.life * 1.4, 0, 1);
-      ctx.fillStyle = f.color;
-      ctx.fillText(f.text, f.x - cam.x, f.y - cam.y);
-      ctx.globalAlpha = 1;
-    }
-
-    if (state.player.mine > 0) {
-      const p = state.player;
-      const bx = p.mineTx * TILE - cam.x;
-      const by = p.mineTy * TILE - cam.y - 4;
-      px(ctx, bx + 2, by, 12, 3, "#111");
-      px(ctx, bx + 2, by, 12 * p.mine, 3, "#ffe27a");
-    }
-
-    const target = currentTarget();
-    if (target) {
-      const tx = target.x - cam.x;
-      const ty = target.y - cam.y;
-      const pulse = 0.5 + 0.5 * Math.sin(state.time * 6);
-      ctx.strokeStyle = `rgba(255, 226, 122, ${0.45 + pulse * 0.45})`;
-      ctx.strokeRect(tx - 10, ty - 10, 20, 20);
-      const vw = VIEW_W * TILE;
-      const vh = VIEW_H * TILE;
-      const cx = vw / 2;
-      const cy = vh / 2;
-      let ax = clamp(tx, 10, vw - 10);
-      let ay = clamp(ty, 10, vh - 10);
-      if (tx < 0 || tx > vw || ty < 0 || ty > vh) {
-        const ang = Math.atan2(ty - cy, tx - cx);
-        ax = cx + Math.cos(ang) * (Math.min(vw, vh) * 0.42);
-        ay = cy + Math.sin(ang) * (Math.min(vw, vh) * 0.38);
-        ctx.fillStyle = "#ffe27a";
-        ctx.beginPath();
-        ctx.moveTo(ax, ay);
-        ctx.lineTo(ax - Math.cos(ang) * 8 + Math.sin(ang) * 4, ay - Math.sin(ang) * 8 - Math.cos(ang) * 4);
-        ctx.lineTo(ax - Math.cos(ang) * 8 - Math.sin(ang) * 4, ay - Math.sin(ang) * 8 + Math.cos(ang) * 4);
-        ctx.fill();
-      }
-    }
-
-    ctx.font = "8px monospace";
-    ctx.textAlign = "center";
-    ctx.fillStyle = "#ffe27a";
-    if (state.briefing || state.campHint > 0) {
-      ctx.fillText(state.briefing ? "篝火 · 要保护" : "篝火回血", state.camp.x - cam.x, state.camp.y - cam.y - 14);
-    }
-    if (state.briefing || state.benchHint > 0) {
-      ctx.fillText("工作台 按E", state.bench.x - cam.x, state.bench.y - cam.y - 16);
-    }
-    if (state.briefing) {
-      ctx.fillText("祭坛 · 送到这里", state.altar.x - cam.x, state.altar.y - cam.y - 18);
-    }
-
-    if (!campWalled() && (state.flags.chopped || state.build === "fence")) {
-      const pulse = 0.3 + 0.3 * Math.sin(state.time * 5);
-      for (const [tx, ty] of campRing()) {
-        if (tileAt(tx, ty) === T.FENCE) continue;
-        ctx.globalAlpha = pulse;
-        ctx.fillStyle = "#e8c040";
-        ctx.fillRect(tx * TILE - cam.x + 3, ty * TILE - cam.y + 3, 10, 10);
-        ctx.globalAlpha = 1;
-        ctx.strokeStyle = "rgba(255, 226, 122, 0.85)";
-        ctx.strokeRect(tx * TILE - cam.x + 1, ty * TILE - cam.y + 1, 14, 14);
-      }
-    }
-    if (state.build) {
-      const f = aimTile();
-      if (placeable(f.tx, f.ty) && !isMineable(f.tx, f.ty)) {
-        ctx.globalAlpha = 0.45;
-        ctx.fillStyle = state.build === "fence" ? "#6b4424" : state.build === "torch" ? "#ffb020" : "#6b4424";
-        ctx.fillRect(f.tx * TILE - cam.x + 3, f.ty * TILE - cam.y + 3, 10, 10);
-        ctx.globalAlpha = 1;
-      } else if (state.build === "fence" && tileAt(f.tx, f.ty) === T.FENCE) {
-        const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || fenceMax();
-        if (hp < fenceMax() - 0.5) {
-          ctx.strokeStyle = "#8dff9a";
-          ctx.strokeRect(f.tx * TILE - cam.x + 1, f.ty * TILE - cam.y + 1, 14, 14);
-        }
-      }
-    }
-
-    const sky = skyTint();
-    if (sky.tint) {
-      const vw = VIEW_W * TILE;
-      const vh = VIEW_H * TILE;
-      const grad = ctx.createLinearGradient(0, 0, 0, vh);
-      grad.addColorStop(0, sky.tint[0]);
-      grad.addColorStop(1, sky.tint[1]);
-      ctx.globalAlpha = sky.tintAlpha;
-      ctx.fillStyle = grad;
-      ctx.fillRect(0, 0, vw, vh);
-      ctx.globalAlpha = 1;
-    }
-    if (!state.day) {
-      const vw = VIEW_W * TILE;
-      const vh = VIEW_H * TILE;
-      if (nightFx.width !== vw) nightFx.width = vw;
-      if (nightFx.height !== vh) nightFx.height = vh;
-      nightCtx.clearRect(0, 0, vw, vh);
-      nightCtx.fillStyle = `rgba(6,8,18,${sky.dark.toFixed(3)})`;
-      nightCtx.fillRect(0, 0, vw, vh);
-      nightCtx.globalCompositeOperation = "destination-out";
-      const lights = [
-        { x: state.player.x - cam.x, y: state.player.y - cam.y, r: CLASSES[state.player.cls].light + (has("miner_lamp") ? RELIC_FX.minerLampLight : 0) },
-        { x: state.camp.x - cam.x, y: state.camp.y - cam.y, r: state.campHp > 0 ? 56 : 8 },
-      ];
-      for (let ty = y0; ty < y1; ty++) {
-        for (let tx = x0; tx < x1; tx++) {
-          const lt = tileAt(tx, ty);
-          if (lt === T.TORCH) {
-            lights.push({ x: tx * TILE + 8 - cam.x, y: ty * TILE + 8 - cam.y, r: 54 });
-          } else if (lt === T.MUSHROOM) {
-            lights.push({ x: tx * TILE + 8 - cam.x, y: ty * TILE + 8 - cam.y, r: BIOME_FX.mushroomLight });
-          }
-        }
-      }
-      for (const L of lights) {
-        const g = nightCtx.createRadialGradient(L.x, L.y, 6, L.x, L.y, L.r);
-        g.addColorStop(0, "rgba(0,0,0,0.95)");
-        g.addColorStop(0.5, "rgba(0,0,0,0.45)");
-        g.addColorStop(1, "rgba(0,0,0,0)");
-        nightCtx.fillStyle = g;
-        nightCtx.beginPath();
-        nightCtx.arc(L.x, L.y, L.r, 0, Math.PI * 2);
-        nightCtx.fill();
-      }
-      nightCtx.globalCompositeOperation = "source-over";
-      ctx.drawImage(nightFx, 0, 0);
-    }
-    const boss = state.enemies.find((e) => edef(e).boss);
-    if (boss) {
-      const vw = VIEW_W * TILE;
-      const w = vw * 0.6;
-      const bx = (vw - w) / 2;
-      px(ctx, bx - 1, 5, w + 2, 6, "#111");
-      px(ctx, bx, 6, w * clamp(boss.hp / boss.maxHp, 0, 1), 4, boss.phase2 ? "#ff4040" : "#d4454a");
-      ctx.font = "7px monospace";
-      ctx.textAlign = "center";
-      ctx.fillStyle = "#ffe27a";
-      ctx.fillText(edef(boss).name, vw / 2, 19);
-    }
-    drawOverlayFx(ctx, cam);
+  state.particles = state.particles.filter((p) => p.life > 0);
+  for (const f of state.floats) {
+    f.y -= 18 * dt;
+    f.life -= dt;
   }
-
-  function skyTint() {
-    if (state.day) {
-      const toDusk = state.dayLen - state.cycle;
-      if (toDusk < SKY_FX.duskSecs) {
-        const k = 1 - toDusk / SKY_FX.duskSecs;
-        return { dark: 0, tint: ["#ff8a3a", "#5a2a6a"], tintAlpha: 0.38 * k };
-      }
-      if (state.nights > 0 && state.cycle < SKY_FX.dawnSecs) {
-        const k = 1 - state.cycle / SKY_FX.dawnSecs;
-        return { dark: 0, tint: ["#ffb0c0", "#ffe27a"], tintAlpha: 0.32 * k };
-      }
-      return { dark: 0, tint: null, tintAlpha: 0 };
-    }
-    const k = clamp(state.cycle / SKY_FX.nightFadeSecs, 0, 1);
-    const toDawn = state.nightLen - state.cycle;
-    const morning = clamp(toDawn / SKY_FX.nightFadeSecs, 0, 1);
-    return { dark: SKY_FX.nightDark * (0.45 + 0.55 * Math.min(k, morning)), tint: null, tintAlpha: 0 };
+  state.floats = state.floats.filter((f) => f.life > 0);
+  if (toastTimer > 0) {
+    setToastTimer(toastTimer - dt);
+    if (toastTimer <= 0) toastEl.classList.add("hidden");
   }
+  syncHud();
+}
 
-  function drawOverlayFx(c, cam) {
-    const vw = VIEW_W * TILE;
-    const vh = VIEW_H * TILE;
-    const hd = state.hurtDir;
-    if (hd) {
-      const sx = state.player.x - cam.x;
-      const sy = state.player.y - cam.y;
-      const alpha = clamp(hd.t / SKY_FX.hurtArrowSecs, 0, 1);
-      c.globalAlpha = alpha;
-      for (let k = 0; k < 5; k++) {
-        const r = 22 + k * 3;
-        const spread = (2 - Math.abs(k - 2)) * 0.12;
-        for (const off of [-spread, spread]) {
-          px(c, sx + Math.cos(hd.a + off) * r - 1, sy - 6 + Math.sin(hd.a + off) * r - 1, 3, 3, "#ff4040");
-        }
-      }
-      c.globalAlpha = alpha * 0.35;
-      const ex = clamp(vw / 2 + Math.cos(hd.a) * vw, 0, vw);
-      const ey = clamp(vh / 2 + Math.sin(hd.a) * vh, 0, vh);
-      const g = c.createRadialGradient(ex, ey, 0, ex, ey, 90);
-      g.addColorStop(0, "#ff2020");
-      g.addColorStop(1, "rgba(255,32,32,0)");
-      c.fillStyle = g;
-      c.fillRect(0, 0, vw, vh);
-      c.globalAlpha = 1;
-    }
-    const bb = state.bossBanner;
-    if (bb) {
-      const life = SKY_FX.bossBannerSecs;
-      const k = Math.min(1, (life - bb.t) / 0.3, bb.t / 0.5);
-      const bar = Math.round(28 * k);
-      px(c, 0, 0, vw, bar, "#000");
-      px(c, 0, vh - bar, vw, bar, "#000");
-      c.globalAlpha = clamp(k, 0, 1);
-      px(c, 0, vh / 2 - 20, vw, 40, "rgba(40,0,0,0.75)");
-      c.font = "bold 18px monospace";
-      c.textAlign = "center";
-      c.fillStyle = "#ff5a5a";
-      c.fillText(`⚠ ${bb.name} ⚠`, vw / 2, vh / 2 + 2);
-      c.font = "8px monospace";
-      c.fillStyle = "#ffe27a";
-      c.fillText(`${eraName(state.era)} · 纪元 Boss 破夜而来`, vw / 2, vh / 2 + 14);
-      c.globalAlpha = 1;
-    }
-  }
+function loop(now) {
+  const dt = (now - last) / 1000;
+  setLast(now);
+  if (state && !state.paused && !state.over) update(dt);
+  render();
+  if (state && !state.over) requestAnimationFrame(loop);
+  else setLooping(false);
+}
 
-  function loop(now) {
-    const dt = (now - last) / 1000;
-    last = now;
-    if (state && !state.paused && !state.over) update(dt);
-    render();
-    if (state && !state.over) requestAnimationFrame(loop);
-    else looping = false;
-  }
-
-  function showOverlay(title, body, actions, opts) {
-    overlayTitle.textContent = title;
-    overlayBody.textContent = body;
-    overlayActions.innerHTML = "";
-    overlayActions.classList.toggle("choices", !!(opts && opts.choices));
-    overlay.classList.remove("codex");
-    for (const [label, fn, attrs] of actions) {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.textContent = label;
-      if (attrs && attrs.id) b.id = attrs.id;
-      if (attrs && attrs.cls) b.className = attrs.cls;
-      if (attrs && attrs.data) Object.assign(b.dataset, attrs.data);
-      b.addEventListener("click", fn);
-      overlayActions.appendChild(b);
-    }
-    overlay.classList.remove("hidden");
-  }
-
-  function togglePause() {
-    if (!state || state.over || state.briefing || state.choosing) return;
-    state.paused = !state.paused;
-    if (state.paused) {
-      showOverlay("暂停", helpText(), [
-        ["继续", () => {
-          overlay.classList.add("hidden");
-          state.paused = false;
-          last = performance.now();
-        }],
-        ["回选角", () => location.reload()],
-      ]);
-    } else {
-      overlay.classList.add("hidden");
-      last = performance.now();
-    }
-  }
-
-  document.querySelectorAll(".class-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      document.querySelectorAll(".class-card").forEach((c) => c.classList.remove("selected"));
-      card.classList.add("selected");
-      selectedClass = card.dataset.class;
-      btnStart.disabled = false;
-      btnStart.textContent = `以${CLASSES[selectedClass].name}进入世界`;
-      if (btnDaily) btnDaily.disabled = false;
-    });
+document.querySelectorAll(".class-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    document.querySelectorAll(".class-card").forEach((c) => c.classList.remove("selected"));
+    card.classList.add("selected");
+    setSelectedClass(card.dataset.class);
+    btnStart.disabled = false;
+    btnStart.textContent = `以${CLASSES[selectedClass].name}进入世界`;
+    if (btnDaily) btnDaily.disabled = false;
   });
-  btnStart.addEventListener("click", () => {
+});
+btnStart.addEventListener("click", () => {
+  if (!selectedClass) return;
+  ensureAudio();
+  playIntro(selectedClass);
+});
+if (btnDaily) {
+  btnDaily.textContent = `今日挑战 · ${dailySeed().slice(-4, -2)}月${dailySeed().slice(-2)}日`;
+  btnDaily.addEventListener("click", () => {
     if (!selectedClass) return;
+    setPendingSeed(dailySeed());
     ensureAudio();
     playIntro(selectedClass);
   });
-  if (btnDaily) {
-    btnDaily.textContent = `今日挑战 · ${dailySeed().slice(-4, -2)}月${dailySeed().slice(-2)}日`;
-    btnDaily.addEventListener("click", () => {
-      if (!selectedClass) return;
-      pendingSeed = dailySeed();
-      ensureAudio();
-      playIntro(selectedClass);
-    });
+}
+if (btnCodex) btnCodex.addEventListener("click", () => openCodex());
+if (titleStats) titleStats.textContent = titleStatsText();
+btnSkipIntro.addEventListener("click", (e) => {
+  e.stopPropagation();
+  finishIntro();
+});
+introBox.addEventListener("click", () => advanceIntro());
+screenIntro.addEventListener("click", (e) => {
+  if (e.target === screenIntro) advanceIntro();
+});
+btnSkipBrief.addEventListener("click", (e) => {
+  e.stopPropagation();
+  endBriefing();
+});
+briefingBox.addEventListener("click", () => advanceBrief());
+btnMute.addEventListener("click", cycleAudio);
+btnPause.addEventListener("click", togglePause);
+btnHelp.addEventListener("click", () => {
+  if (!state || state.over) return;
+  if (!state.paused) togglePause();
+});
+btnSkipGuide.addEventListener("click", () => {
+  if (!state) return;
+  state.skippedGuide = true;
+  syncGuide();
+});
+document.getElementById("inv").addEventListener("click", (e) => {
+  const item = e.target.closest(".item");
+  if (!item) return;
+  if (item.dataset.k === "wheat") eatWheat();
+  if (item.dataset.build) setBuild(item.dataset.build, { toggle: true });
+});
+
+window.addEventListener("keydown", (e) => {
+  if (intro.active) {
+    if (["Space", "Enter", "Escape"].includes(e.code) || e.key === "Enter") e.preventDefault();
+    if (e.repeat) return;
+    if (e.code === "Escape") finishIntro();
+    else if (e.code === "Space" || e.code === "Enter" || e.key === "Enter") advanceIntro();
+    return;
   }
-  if (btnCodex) btnCodex.addEventListener("click", () => openCodex());
-  if (titleStats) titleStats.textContent = titleStatsText();
-  btnSkipIntro.addEventListener("click", (e) => {
-    e.stopPropagation();
-    finishIntro();
-  });
-  introBox.addEventListener("click", () => advanceIntro());
-  screenIntro.addEventListener("click", (e) => {
-    if (e.target === screenIntro) advanceIntro();
-  });
-  btnSkipBrief.addEventListener("click", (e) => {
-    e.stopPropagation();
-    endBriefing();
-  });
-  briefingBox.addEventListener("click", () => advanceBrief());
-  btnMute.addEventListener("click", cycleAudio);
-  btnPause.addEventListener("click", togglePause);
-  btnHelp.addEventListener("click", () => {
-    if (!state || state.over) return;
-    if (!state.paused) togglePause();
-  });
-  btnSkipGuide.addEventListener("click", () => {
-    if (!state) return;
-    state.skippedGuide = true;
-    syncGuide();
-  });
-  document.getElementById("inv").addEventListener("click", (e) => {
-    const item = e.target.closest(".item");
-    if (!item) return;
-    if (item.dataset.k === "wheat") eatWheat();
-    if (item.dataset.build) setBuild(item.dataset.build, { toggle: true });
-  });
-
-  window.addEventListener("keydown", (e) => {
-    if (intro.active) {
-      if (["Space", "Enter", "Escape"].includes(e.code) || e.key === "Enter") e.preventDefault();
-      if (e.repeat) return;
-      if (e.code === "Escape") finishIntro();
-      else if (e.code === "Space" || e.code === "Enter" || e.key === "Enter") advanceIntro();
-      return;
-    }
-    if (state && state.briefing) {
-      if (["Space", "Enter", "Escape"].includes(e.code)) e.preventDefault();
-      if (e.repeat) return;
-      if (e.code === "Escape") endBriefing();
-      else if (e.code === "Space" || e.code === "Enter" || e.key === "Enter") advanceBrief();
-      return;
-    }
-    keys.add(e.code);
-    if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Digit0", "Digit1", "Digit2", "Digit3", "Digit4", "Digit5", "Digit6"].includes(e.code)) e.preventDefault();
-    if (!state) return;
-    if (e.code === "Escape") togglePause();
-    if (e.code === "KeyM") cycleAudio();
-    if (state.paused || e.repeat) return;
-    if (e.code === "KeyE" || e.code === "KeyF") interact();
-    if (e.code === "KeyQ") useSkill();
-    if (e.code === "KeyH") eatWheat();
-    if (e.key === "0" || e.code === "Digit0" || e.code === "Numpad0") setBuild(null);
-    for (const [kind, def] of Object.entries(BUILDINGS)) {
-      if (e.key === def.key || e.code === `Digit${def.key}` || e.code === `Numpad${def.key}`) setBuild(kind);
-    }
-    if (e.code === "KeyZ" || e.code === "Backspace") {
-      e.preventDefault();
-      undoPlace();
-    }
-  });
-  window.addEventListener("keyup", (e) => keys.delete(e.code));
-  canvas.addEventListener("mousemove", (e) => {
-    const r = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / r.width;
-    const scaleY = canvas.height / r.height;
-    mouse.x = (e.clientX - r.left) * scaleX;
-    mouse.y = (e.clientY - r.top) * scaleY;
-    mouse.inside = true;
-  });
-  canvas.addEventListener("mouseleave", () => { mouse.inside = false; mouse.down = false; });
-  canvas.addEventListener("mousedown", (e) => {
-    if (state && state.briefing) {
-      if (e.button === 0) advanceBrief();
-      return;
-    }
-    if (e.button === 0) { mouse.down = true; mouse.pressed = true; }
-    if (e.button === 2) mouse.right = true;
-  });
-  window.addEventListener("mouseup", () => { mouse.down = false; });
-  canvas.addEventListener("contextmenu", (e) => e.preventDefault());
-  window.addEventListener("resize", () => { if (state) resize(); });
-
-  window.CUBE = {
-    getState: () => state,
-    start: (cls, seed) => startGame(cls || "miner", { seed }),
-    rollDawn: () => rollDawn().map((r) => r.id),
-    pickRelic,
-    shareText: () => shareText(),
-    playIntro,
-    skipIntro: finishIntro,
-    skipBrief: endBriefing,
-    cam: () => camera(),
-    gather: (tx, ty) => gatherTile(tx, ty),
-    setBuild,
-    place: (tx, ty) => tryPlace(tx, ty),
-    undo: () => undoPlace(),
-    rollDayEvent: () => rollDayEvent(),
-    dailySeed: () => dailySeed(),
-    meta: () => meta,
-    codexText: () => codexText(),
-    sky: () => skyTint(),
-    spawn: (kind, tx, ty) => {
-      const e = makeEnemy(kind, tx * TILE + 8, ty * TILE + 8);
-      state.enemies.push(e);
-      return state.enemies.length - 1;
-    },
-    interact,
-  };
-
-  const qa = new URLSearchParams(location.search).get("qa");
-  if (qa === "win") {
-    selectedClass = "miner";
-    startGame("miner");
-    Object.assign(state.inv, { wood: 5, stone: 5, gold: 3, wheat: 3, heart: 1 });
-    state.player.x = state.altar.x;
-    state.player.y = state.altar.y + 16;
-    state.nights = WIN_NIGHTS;
-    state.day = true;
-    state.skippedGuide = true;
-    syncHud();
-    syncGuide();
+  if (state && state.briefing) {
+    if (["Space", "Enter", "Escape"].includes(e.code)) e.preventDefault();
+    if (e.repeat) return;
+    if (e.code === "Escape") endBriefing();
+    else if (e.code === "Space" || e.code === "Enter" || e.key === "Enter") advanceBrief();
+    return;
   }
-})();
+  keys.add(e.code);
+  if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Digit0", "Digit1", "Digit2", "Digit3", "Digit4", "Digit5", "Digit6"].includes(e.code)) e.preventDefault();
+  if (!state) return;
+  if (e.code === "Escape") togglePause();
+  if (e.code === "KeyM") cycleAudio();
+  if (state.paused || e.repeat) return;
+  if (e.code === "KeyE" || e.code === "KeyF") interact();
+  if (e.code === "KeyQ") useSkill();
+  if (e.code === "KeyH") eatWheat();
+  if (e.key === "0" || e.code === "Digit0" || e.code === "Numpad0") setBuild(null);
+  for (const [kind, def] of Object.entries(BUILDINGS)) {
+    if (e.key === def.key || e.code === `Digit${def.key}` || e.code === `Numpad${def.key}`) setBuild(kind);
+  }
+  if (e.code === "KeyZ" || e.code === "Backspace") {
+    e.preventDefault();
+    undoPlace();
+  }
+});
+window.addEventListener("keyup", (e) => keys.delete(e.code));
+canvas.addEventListener("mousemove", (e) => {
+  const r = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / r.width;
+  const scaleY = canvas.height / r.height;
+  mouse.x = (e.clientX - r.left) * scaleX;
+  mouse.y = (e.clientY - r.top) * scaleY;
+  mouse.inside = true;
+});
+canvas.addEventListener("mouseleave", () => { mouse.inside = false; mouse.down = false; });
+canvas.addEventListener("mousedown", (e) => {
+  if (state && state.briefing) {
+    if (e.button === 0) advanceBrief();
+    return;
+  }
+  if (e.button === 0) { mouse.down = true; mouse.pressed = true; }
+  if (e.button === 2) mouse.right = true;
+});
+window.addEventListener("mouseup", () => { mouse.down = false; });
+canvas.addEventListener("contextmenu", (e) => e.preventDefault());
+window.addEventListener("resize", () => { if (state) resize(); });
+
+window.CUBE = {
+  getState: () => state,
+  start: (cls, seed) => startGame(cls || "miner", { seed }),
+  rollDawn: () => rollDawn().map((r) => r.id),
+  pickRelic,
+  shareText: () => shareText(),
+  playIntro,
+  skipIntro: finishIntro,
+  skipBrief: endBriefing,
+  cam: () => camera(),
+  gather: (tx, ty) => gatherTile(tx, ty),
+  setBuild,
+  place: (tx, ty) => tryPlace(tx, ty),
+  undo: () => undoPlace(),
+  rollDayEvent: () => rollDayEvent(),
+  dailySeed: () => dailySeed(),
+  meta: () => meta,
+  codexText: () => codexText(),
+  sky: () => skyTint(),
+  spawn: (kind, tx, ty) => {
+    const e = makeEnemy(kind, tx * TILE + 8, ty * TILE + 8);
+    state.enemies.push(e);
+    return state.enemies.length - 1;
+  },
+  interact,
+};
+
+const qa = new URLSearchParams(location.search).get("qa");
+if (qa === "win") {
+  setSelectedClass("miner");
+  startGame("miner");
+  Object.assign(state.inv, { wood: 5, stone: 5, gold: 3, wheat: 3, heart: 1 });
+  state.player.x = state.altar.x;
+  state.player.y = state.altar.y + 16;
+  state.nights = WIN_NIGHTS;
+  state.day = true;
+  state.skippedGuide = true;
+  syncHud();
+  syncGuide();
+}

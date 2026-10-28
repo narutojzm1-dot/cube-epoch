@@ -10,6 +10,15 @@
 > - **无尽纪元**：献祭后可点亮祭坛进入下一纪元，多守一夜，怪物生命/伤害 ×1.35，每夜多一波
 > - **战绩**：结算页生成一行战绩文本（种子/纪元/夜数/击杀/遗物），一键复制
 > - **种子**：`?seed=xxx` 固定种子，同种子同事件序列
+>
+> M1 / M2 也已落地：
+>
+> - **新敌人与 Boss**：钻地虫、投石怪、孢子怪；史莱姆王、暗影骑士
+> - **日晷行动点（AP）**：白天砍/挖/建/修各耗 1 点，天亮回满；`Z` / `Backspace` 撤销本日建造
+> - **新建筑**：`4` 箭塔、`5` 地刺、`6` 泉水；地图按种子分出湖泊、蘑菇林、矿场（雕像）、废墟
+> - **白天事件**：商队（E 交易）、流星、兽群迁徙
+> - **每日挑战 · 图鉴 · 成就 · 战绩统计**（标题页；存在 localStorage）
+> - 数值与理由见 [docs/BALANCE.md](docs/BALANCE.md)
 
 ## 怎么玩
 
@@ -25,7 +34,8 @@ python3 -m http.server 8765
 | --- | --- |
 | 移动 | WASD / 方向键 |
 | 砍树、挖矿、攻击 | 对准目标，按住左键 |
-| 栅栏 / 火把 / 田 | `1` `2` `3`，再点空地；点坏墙可修 |
+| 栅栏 / 火把 / 田 / 箭塔 / 地刺 / 泉水 | `1`–`6`，再点空地；点坏墙可修 |
+| 撤销本日建造 | Z / Backspace |
 | 合成、献祭、播种 | E |
 | 技能 | Q 或右键 |
 | 吃麦回血 | 点背包「麦」或 H |
@@ -44,9 +54,9 @@ git push -u origin HEAD
 gh pr create --base main
 ```
 
-GitHub Actions：`Test`（static + e2e）跑在 PR 和 `main` 上；`Deploy Pages` 只在 `main`。
+GitHub Actions：`Test`（static + e2e + roguelite + content + meta）跑在 PR 和 `main` 上；`Deploy Pages` 只在 `main`。
 
-`tests/static.mjs` 不需要浏览器。`tests/e2e.mjs`、`tests/roguelite.mjs` 需要 Playwright WebKit。
+`tests/static.mjs` 不需要浏览器。`tests/e2e.mjs`、`roguelite.mjs`、`content.mjs`、`meta.mjs` 需要 Playwright WebKit（`npx playwright install --with-deps webkit`）。
 
 闸门：`.grok/skills/ship-gate/SKILL.md`
 
@@ -54,7 +64,9 @@ GitHub Actions：`Test`（static + e2e）跑在 PR 和 `main` 上；`Deploy Page
 
 纯前端，没有后端。
 
-- `index.html` / `style.css` / `game.js`
+- `index.html` / `style.css`
+- `game.js` 入口（开局、黎明/纪元、交互、主循环、输入、`window.CUBE` 测试接口）
+- `core.js` 状态、种子 RNG、地块与通用工具；`audio.js` 音效音乐；`ui.js` DOM/HUD/引导/开场；`render.js` 绘制；`world.js` 地图生成与白天事件；`build.js` 采集/建造/AP；`combat.js` 敌人/波次/战斗；`meta.js` 每日/图鉴/成就/存档
 - `data.js` 全部玩法数值（职业、敌人、波次、纪元、遗物），调平衡只改这里
 - `assets/` 四张角色立绘
-- `tests/` 静态契约 + 进游戏 e2e
+- `tests/` 静态契约 + 进游戏 e2e（roguelite / content / meta）
