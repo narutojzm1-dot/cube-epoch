@@ -24,6 +24,7 @@ export const T = {
   BRICK: 11,
   FENCE: 12,
   TORCH: 13,
+  SPORE: 14,
 };
 
 export const CLASSES = {
@@ -76,17 +77,48 @@ export const CLASSES = {
 };
 
 // 敌人基础属性。纪元越高，hp/dmg 按 ERA_SCALING 指数放大。
+// flying: 飞越栅栏 · burrow: 地下穿行栅栏，火把/篝火旁显形 · ranged: 远程投石 · spore: 死后腐蚀地块 · boss: 纪元 Boss
 export const ENEMIES = {
   slime: { name: "史莱姆", hp: 32, spd: 26, dmg: 9 },
   bat: { name: "蝙蝠", hp: 22, spd: 44, dmg: 8, flying: true },
   cube: { name: "方块", hp: 64, spd: 30, dmg: 16 },
+  burrower: { name: "掘地虫", hp: 26, spd: 30, dmg: 10, burrow: true },
+  thrower: { name: "投石魔", hp: 40, spd: 22, dmg: 12, ranged: true },
+  spore: { name: "孢子花", hp: 30, spd: 18, dmg: 6, spore: true },
+  slime_king: { name: "巨史莱姆王", hp: 420, spd: 18, dmg: 20, boss: true, fenceMul: 3 },
+  shadow_knight: { name: "暗影骑士", hp: 360, spd: 30, dmg: 22, boss: true, fenceMul: 3 },
 };
 
-// 敌种抽取表：按顺序判定，满足夜数/波次门槛且掷中概率则覆盖为该敌种；都不中则为 slime。
+// 敌种抽取表：按顺序判定，满足纪元/夜数/波次门槛且掷中概率则覆盖为该敌种；都不中则为 slime。
 export const SPAWN_TABLE = [
-  { kind: "bat", minNight: 2, minWave: 2, chance: 0.45 },
-  { kind: "cube", minNight: 3, minWave: 0, chance: 0.22 },
+  { kind: "bat", minEra: 1, minNight: 2, minWave: 2, chance: 0.45 },
+  { kind: "burrower", minEra: 1, minNight: 2, minWave: 1, chance: 0.14 },
+  { kind: "spore", minEra: 1, minNight: 2, minWave: 3, chance: 0.16 },
+  { kind: "thrower", minEra: 2, minNight: 0, minWave: 1, chance: 0.16 },
+  { kind: "cube", minEra: 1, minNight: 3, minWave: 0, chance: 0.22 },
 ];
+
+// 纪元 Boss：每纪元最后一夜的最后一波登场，按纪元轮换。
+export const BOSSES = ["slime_king", "shadow_knight"];
+
+// 新敌种机制数值。
+export const ENEMY_FX = {
+  burrowTorchRadius: 54,
+  burrowCampRadius: 26,
+  burrowRevealSlow: 0.5,
+  throwRange: 72,
+  throwCd: 2.2,
+  rockSpeed: 90,
+  rockFenceDmg: 22,
+  rockCampMul: 0.6,
+  sporeRadius: 1,
+  sporeGrowMul: 0.5,
+  bossPhaseAt: 0.5,
+  kingSplit: 4,
+  knightEnrageSpd: 1.6,
+  knightEnrageDmg: 1.2,
+  fenceDps: 10,
+};
 
 // 怪物死亡掉落概率（每项独立判定）。
 export const ENEMY_DROPS = [

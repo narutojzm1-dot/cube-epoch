@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/static.mjs && node tests/e2e.mjs && node tests/roguelite.mjs",
+    "test": "node tests/static.mjs && node tests/e2e.mjs && node tests/roguelite.mjs && node tests/content.mjs",
     "test:static": "node tests/static.mjs",
-    "test:e2e": "node tests/e2e.mjs && node tests/roguelite.mjs"
+    "test:e2e": "node tests/e2e.mjs && node tests/roguelite.mjs && node tests/content.mjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

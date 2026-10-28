@@ -1,7 +1,7 @@
 import {
   TILE, COLS, ROWS, VIEW_W, VIEW_H, NEED, WIN_NIGHTS, CAMP_MAX, FENCE_MAX, T, CLASSES,
   ENEMIES, SPAWN_TABLE, ENEMY_DROPS, WAVES, ERA_SCALING, ERA_NIGHTS_STEP, ERA_NAMES,
-  RELICS, RELIC_TYPE_LABEL, DAWN_CHOICES, RELIC_FX,
+  RELICS, RELIC_TYPE_LABEL, DAWN_CHOICES, RELIC_FX, BOSSES, ENEMY_FX,
 } from "./data.js";
 
 (() => {
@@ -301,14 +301,61 @@ import {
     const c = campTile();
     return tx === c.tx && ty === c.ty;
   }
+  function edef(e) {
+    return ENEMIES[e.kind] || ENEMIES.slime;
+  }
+  function isFlying(e) {
+    return !!edef(e).flying;
+  }
+  function targetable(e) {
+    return !e.under;
+  }
+  function burrowRevealed(e) {
+    if (dist(e.x, e.y, state.camp.x, state.camp.y) < ENEMY_FX.burrowCampRadius) return "camp";
+    const r = ENEMY_FX.burrowTorchRadius;
+    const etx = Math.floor(e.x / TILE);
+    const ety = Math.floor(e.y / TILE);
+    const span = Math.ceil(r / TILE);
+    for (let ty = ety - span; ty <= ety + span; ty++) {
+      for (let tx = etx - span; tx <= etx + span; tx++) {
+        if (tileAt(tx, ty) === T.TORCH && dist(e.x, e.y, tx * TILE + 8, ty * TILE + 8) < r) return "torch";
+      }
+    }
+    return "";
+  }
   function canHitCamp(e) {
     const dCamp = dist(e.x, e.y, state.camp.x, state.camp.y);
-    if (e.kind === "bat") return dCamp < 16;
+    if (isFlying(e)) return dCamp < 16;
+    if (e.kind === "thrower" || e.under) return false;
     const c = campTile();
     const etx = Math.floor(e.x / TILE);
     const ety = Math.floor(e.y / TILE);
-    if (tileAt(etx, ety) === T.FENCE) return false;
+    if (tileAt(etx, ety) === T.FENCE && !edef(e).burrow) return false;
     return Math.abs(etx - c.tx) + Math.abs(ety - c.ty) === 1;
+  }
+  function damageCamp(amount) {
+    if (state.campHp <= 0 || state.over) return;
+    state.campHp = Math.max(0, state.campHp - amount * (has("ember_core") ? RELIC_FX.emberCoreCamp : 1));
+    state.campFlash = 0.4;
+    state.nightCampHit = true;
+    burst(state.camp.x, state.camp.y - 8, "#ff6a20", 5);
+    state.campPull = Math.max(state.campPull || 0, 1.2);
+    punch(2.4, 0.03);
+    const p = state.player;
+    const cam = camera();
+    const vw = VIEW_W * TILE;
+    const vh = VIEW_H * TILE;
+    const campOnScreen = state.camp.x >= cam.x && state.camp.x <= cam.x + vw
+      && state.camp.y >= cam.y && state.camp.y <= cam.y + vh;
+    if (!state.campHurtWarn) {
+      state.campHurtWarn = true;
+      toast(campOnScreen ? "篝火在掉血！守住它，灭了就失败。" : "篝火在掉血！镜头拉过去了，快回去。", 2.8);
+    } else if (dist(p.x, p.y, state.camp.x, state.camp.y) > 70 && (state.campHurtCd || 0) <= 0) {
+      state.campHurtCd = 3.5;
+      state.campPull = Math.max(state.campPull || 0, 1.6);
+      toast("篝火还在挨打！别追太远。", 2.2);
+    }
+    if (state.campHp <= 0) die("篝火熄灭");
   }
   function flySolid(tx, ty) {
     const t = tileAt(tx, ty);
@@ -644,6 +691,7 @@ import {
       enemies: [],
       drops: [],
       bolts: [],
+      rocks: [],
       particles: [],
       floats: [],
       bench: { x: 24 * TILE + 8, y: 19 * TILE + 8 },
@@ -676,6 +724,11 @@ import {
       choosing: false,
       howlPending: false,
       howl: 0,
+      bossPending: false,
+      bossName: "",
+      bossKills: 0,
+      nightKills: 0,
+      nightCampHit: false,
       nightWarned: false,
       skippedGuide: false,
       flags: { moved: false, chopped: false, gathered: false, crafted: false, offered: false, planted: false, sawWheat: false, built: false },
@@ -1074,7 +1127,7 @@ import {
   }
   function isDismantle(tx, ty) {
     const t = tileAt(tx, ty);
-    return t === T.FENCE || t === T.TORCH;
+    return t === T.FENCE || t === T.TORCH || t === T.SPORE;
   }
   function isMineable(tx, ty) {
     return isResource(tx, ty) || isDismantle(tx, ty);
@@ -1360,6 +1413,10 @@ import {
       setTile(tx, ty, T.GRASS);
       addDrop("wood", cx, cy, 1);
       burst(cx, cy, "#ffb020", 8);
+    } else if (t === T.SPORE) {
+      setTile(tx, ty, T.DIRT);
+      burst(cx, cy, "#b77ad8", 8);
+      beep(260, 0.05, "triangle", 0.03);
     }
   }
 
@@ -1446,10 +1503,11 @@ import {
     beep(240, 0.05, "square", 0.035);
     let hits = 0;
     for (const e of state.enemies) {
+      if (!targetable(e)) continue;
       const dx = e.x - p.x;
       const dy = e.y - p.y;
       const d = Math.hypot(dx, dy);
-      if (d < reach + 8 && dx * f.dx + dy * f.dy > -4) {
+      if (d < reach + (edef(e).boss ? 14 : 8) && dx * f.dx + dy * f.dy > -4) {
         e.hp -= dmg;
         e.flash = 0.14;
         e.stun = Math.max(e.stun || 0, 0.2);
@@ -1525,6 +1583,19 @@ import {
     }
   }
 
+  function makeEnemy(kind, x, y) {
+    const def = ENEMIES[kind];
+    const hp = Math.round(def.hp * eraMul() * (has("blood_moon") ? RELIC_FX.bloodMoonHp : 1));
+    return {
+      kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd: def.spd, dmg: def.dmg * eraMul(),
+      hit: 0, flash: 0, bob: rnd("fx"), under: !!def.burrow, throwT: ENEMY_FX.throwCd * 0.5,
+    };
+  }
+
+  function bossNight() {
+    return state.nights - state.eraStart === eraNights();
+  }
+
   function spawnEnemy() {
     const edges = [];
     for (let x = 1; x < COLS - 1; x++) {
@@ -1541,14 +1612,16 @@ import {
       if (dist(x, y, state.camp.x, state.camp.y) < 80) continue;
       let kind = "slime";
       for (const row of SPAWN_TABLE) {
-        if (state.nights >= row.minNight && state.wave >= row.minWave && rnd("event") < row.chance) kind = row.kind;
+        if (state.era >= row.minEra && state.nights >= row.minNight && state.wave >= row.minWave && rnd("event") < row.chance) kind = row.kind;
       }
-      const def = ENEMIES[kind];
-      const hp = Math.round(def.hp * eraMul() * (has("blood_moon") ? RELIC_FX.bloodMoonHp : 1));
-      const spd = def.spd;
-      const dmg = def.dmg * eraMul();
-      state.enemies.push({ kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd, dmg, hit: 0, flash: 0, bob: rnd("fx") });
-      return;
+      if (state.bossPending) {
+        state.bossPending = false;
+        kind = BOSSES[(state.era - 1) % BOSSES.length];
+        announceBoss(kind);
+      }
+      const e = makeEnemy(kind, x, y);
+      state.enemies.push(e);
+      return e;
     }
   }
 
@@ -1577,7 +1650,105 @@ import {
   function enemyBlocked(e, x, y) {
     const tx = Math.floor(x / TILE);
     const ty = Math.floor(y / TILE);
-    return e.kind === "bat" ? flySolid(tx, ty) : groundSolid(tx, ty);
+    if (isFlying(e)) return flySolid(tx, ty);
+    if (edef(e).burrow) {
+      const c = campTile();
+      return solid(tx, ty) || (tx === c.tx && ty === c.ty);
+    }
+    return groundSolid(tx, ty);
+  }
+
+  function announceBoss(kind) {
+    const name = ENEMIES[kind].name;
+    state.bossName = name;
+    toast(`⚠ 纪元 Boss · ${name} 破夜而来！`, 3.6);
+    punch(6, 0.12);
+    beep(90, 0.5, "sawtooth", 0.07);
+    setTimeout(() => beep(70, 0.6, "sawtooth", 0.07), 220);
+  }
+
+  function bossPhase(e) {
+    if (e.phase2 || e.hp > e.maxHp * ENEMY_FX.bossPhaseAt) return;
+    e.phase2 = true;
+    punch(4, 0.08);
+    if (e.kind === "slime_king") {
+      for (let i = 0; i < ENEMY_FX.kingSplit; i++) {
+        const a = (Math.PI * 2 * i) / ENEMY_FX.kingSplit;
+        const s = makeEnemy("slime", e.x + Math.cos(a) * 12, e.y + Math.sin(a) * 12);
+        s.stun = 0.3;
+        s.vx = Math.cos(a) * 120;
+        s.vy = Math.sin(a) * 120;
+        state.enemies.push(s);
+      }
+      toast("巨史莱姆王裂开了！", 2.4);
+    } else {
+      e.spd *= ENEMY_FX.knightEnrageSpd;
+      e.dmg *= ENEMY_FX.knightEnrageDmg;
+      toast("暗影骑士狂暴了！", 2.4);
+    }
+    burst(e.x, e.y, "#d4454a", 20);
+  }
+
+  function corrupt(tx, ty) {
+    const r = ENEMY_FX.sporeRadius;
+    for (let y = ty - r; y <= ty + r; y++) {
+      for (let x = tx - r; x <= tx + r; x++) {
+        const t = tileAt(x, y);
+        const center = x === tx && y === ty;
+        if (t === T.FARM || t === T.CROP || (center && (t === T.GRASS || t === T.DIRT || t === T.SAND || t === T.PATH))) {
+          const c = campTile();
+          if (x === c.tx && y === c.ty) continue;
+          state.crops.delete(`${x},${y}`);
+          setTile(x, y, T.SPORE);
+        }
+      }
+    }
+    burst(tx * TILE + 8, ty * TILE + 8, "#b77ad8", 14);
+  }
+
+  function nearSpore(tx, ty) {
+    for (let y = ty - 1; y <= ty + 1; y++) {
+      for (let x = tx - 1; x <= tx + 1; x++) {
+        if (tileAt(x, y) === T.SPORE) return true;
+      }
+    }
+    return false;
+  }
+
+  function throwRock(e) {
+    const dx = state.camp.x - e.x;
+    const dy = state.camp.y - e.y;
+    const l = Math.hypot(dx, dy) || 1;
+    state.rocks.push({
+      x: e.x, y: e.y - 6, vx: (dx / l) * ENEMY_FX.rockSpeed, vy: (dy / l) * ENEMY_FX.rockSpeed, dmg: e.dmg, life: 2,
+    });
+    beep(120, 0.05, "square", 0.03);
+  }
+
+  function updateRocks(dt) {
+    const p = state.player;
+    for (const r of state.rocks) {
+      r.x += r.vx * dt;
+      r.y += r.vy * dt;
+      r.life -= dt;
+      const tx = Math.floor(r.x / TILE);
+      const ty = Math.floor(r.y / TILE);
+      const t = tileAt(tx, ty);
+      if (t === T.FENCE) {
+        hitFence(tx, ty, ENEMY_FX.rockFenceDmg);
+        burst(r.x, r.y, "#9aa0a8", 6);
+        r.life = 0;
+      } else if (solid(tx, ty)) {
+        r.life = 0;
+      } else if (dist(r.x, r.y, p.x, p.y) < 9) {
+        hurt(p, r.dmg * (p.cls === "knight" ? 1 - CLASSES.knight.dr : 1), r);
+        r.life = 0;
+      } else if (dist(r.x, r.y, state.camp.x, state.camp.y) < 9) {
+        damageCamp(r.dmg * ENEMY_FX.rockCampMul);
+        r.life = 0;
+      }
+    }
+    state.rocks = state.rocks.filter((r) => r.life > 0);
   }
 
   function startNightWaves() {
@@ -1590,6 +1761,10 @@ import {
   function beginWave() {
     state.wave += 1;
     state.toSpawn = WAVES.baseSpawn + state.nights + state.wave;
+    if (bossNight() && state.wave === state.wavesTotal) {
+      state.bossPending = true;
+      state.toSpawn += 1;
+    }
     state.spawnAcc = 0;
     state.waveWait = 0;
     toast(`第 ${state.nights} 夜 · 第 ${state.wave}/${state.wavesTotal} 波来了！`, 2.4);
@@ -1616,7 +1791,16 @@ import {
     for (const e of state.enemies) {
       const dPlayer = dist(e.x, e.y, p.x, p.y);
       if (state.howl > 0) e.hp -= RELIC_FX.wolfHowlDps * dt;
-      if (state.player.dash > 0 && dPlayer < 16 && !e.dashHit) {
+      const def = edef(e);
+      let revealed = "";
+      if (def.burrow) {
+        revealed = burrowRevealed(e);
+        const wasUnder = e.under;
+        e.under = !revealed;
+        if (wasUnder && !e.under) burst(e.x, e.y, "#8b5a2b", 6);
+      }
+      if (def.boss) bossPhase(e);
+      if (state.player.dash > 0 && dPlayer < 16 && !e.dashHit && targetable(e)) {
         e.dashHit = true;
         e.hp -= 14 * dmgMul();
         e.stun = Math.max(e.stun || 0, 0.18);
@@ -1640,7 +1824,7 @@ import {
         e.vx *= Math.pow(0.04, dt);
         e.vy *= Math.pow(0.04, dt);
       } else {
-        const aimPlayer = e.kind === "bat" || dPlayer < 28;
+        const aimPlayer = (isFlying(e) || dPlayer < 28) && !e.under && e.kind !== "thrower";
         const tx = aimPlayer ? p.x : state.camp.x;
         const ty = aimPlayer ? p.y : state.camp.y;
         const dx = tx - e.x;
@@ -1652,6 +1836,15 @@ import {
         if (tileAt(etx, ety) === T.TORCH) spd *= 0.7;
         if (has("wind_chime") && dist(e.x, e.y, state.camp.x, state.camp.y) < RELIC_FX.windChimeRadius) spd *= RELIC_FX.windChimeSlow;
         if (state.howl > 0) spd *= RELIC_FX.wolfHowlSlow;
+        if (revealed === "torch") spd *= ENEMY_FX.burrowRevealSlow;
+        if (e.kind === "thrower" && dist(e.x, e.y, state.camp.x, state.camp.y) < ENEMY_FX.throwRange) {
+          spd = 0;
+          e.throwT -= dt;
+          if (e.throwT <= 0) {
+            e.throwT = ENEMY_FX.throwCd;
+            throwRock(e);
+          }
+        }
         e.vx = (dx / len) * spd;
         e.vy = (dy / len) * spd;
         const nx = e.x + e.vx * dt;
@@ -1660,16 +1853,16 @@ import {
         else {
           const ftx = Math.floor(nx / TILE);
           const fty = Math.floor(e.y / TILE);
-          if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt, e, dt);
+          if (!isFlying(e) && !def.burrow && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, ENEMY_FX.fenceDps * (def.fenceMul || 1) * dt, e, dt);
         }
         if (!enemyBlocked(e, e.x, ny)) e.y = ny;
         else {
           const ftx = Math.floor(e.x / TILE);
           const fty = Math.floor(ny / TILE);
-          if (e.kind !== "bat" && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, 10 * dt, e, dt);
+          if (!isFlying(e) && !def.burrow && tileAt(ftx, fty) === T.FENCE) hitFence(ftx, fty, ENEMY_FX.fenceDps * (def.fenceMul || 1) * dt, e, dt);
         }
       }
-      if (dPlayer < 14 && e.hit <= 0) {
+      if (dPlayer < (def.boss ? 20 : 14) && e.hit <= 0 && !e.under) {
         e.hit = 0.85;
         let dmg = e.dmg;
         if (p.cls === "knight") dmg *= 1 - CLASSES.knight.dr;
@@ -1685,27 +1878,7 @@ import {
         }
         if (home) continue;
         e.hit = 0.7;
-        state.campHp = Math.max(0, state.campHp - e.dmg * 0.85 * (has("ember_core") ? RELIC_FX.emberCoreCamp : 1));
-        state.campFlash = 0.4;
-        burst(state.camp.x, state.camp.y - 8, "#ff6a20", 5);
-        state.campPull = Math.max(state.campPull || 0, 1.2);
-        punch(2.4, 0.03);
-        const cam = camera();
-        const vw = VIEW_W * TILE;
-        const vh = VIEW_H * TILE;
-        const campOnScreen = state.camp.x >= cam.x && state.camp.x <= cam.x + vw
-          && state.camp.y >= cam.y && state.camp.y <= cam.y + vh;
-        if (!state.campHurtWarn) {
-          state.campHurtWarn = true;
-          toast(campOnScreen ? "篝火在掉血！守住它，灭了就失败。" : "篝火在掉血！镜头拉过去了，快回去。", 2.8);
-        } else if (dist(p.x, p.y, state.camp.x, state.camp.y) > 70 && (state.campHurtCd || 0) <= 0) {
-          state.campHurtCd = 3.5;
-          state.campPull = Math.max(state.campPull || 0, 1.6);
-          toast("篝火还在挨打！别追太远。", 2.2);
-        }
-        if (state.campHp <= 0) {
-          die("篝火熄灭");
-        }
+        damageCamp(e.dmg * 0.85);
       }
     }
     state.enemies = state.enemies.filter((e) => {
@@ -1713,10 +1886,21 @@ import {
       punch(2.6, 0.045);
       burst(e.x, e.y, "#8dff9a", 8);
       state.kills += 1;
+      state.nightKills = (state.nightKills || 0) + 1;
+      const def = edef(e);
+      if (def.spore) corrupt(Math.floor(e.x / TILE), Math.floor(e.y / TILE));
       const luck = has("lucky_coin") ? RELIC_FX.luckyCoinDrop : 1;
-      const n = has("blood_moon") ? RELIC_FX.bloodMoonDrop : 1;
+      const n = (has("blood_moon") ? RELIC_FX.bloodMoonDrop : 1) * (def.boss ? 4 : 1);
       for (const d of ENEMY_DROPS) {
-        if (rnd("event") < d.chance * luck) addDrop(d.kind, e.x, e.y, n);
+        if (rnd("loot") < d.chance * luck) addDrop(d.kind, e.x, e.y, n);
+      }
+      if (def.boss) {
+        state.bossKills = (state.bossKills || 0) + 1;
+        state.bossName = "";
+        burst(e.x, e.y, "#ffe27a", 30);
+        punch(7, 0.14);
+        toast(`${def.name} 倒下了！`, 3);
+        beep(523, 0.2, "square", 0.06);
       }
       return false;
     });
@@ -1757,8 +1941,8 @@ import {
       b.life -= dt;
       if (!b.hit) b.hit = new Set();
       for (const e of state.enemies) {
-        if (b.hit.has(e)) continue;
-        if (dist(b.x, b.y, e.x, e.y) < 11) {
+        if (b.hit.has(e) || !targetable(e)) continue;
+        if (dist(b.x, b.y, e.x, e.y) < (edef(e).boss ? 17 : 11)) {
           b.hit.add(e);
           e.hp -= b.dmg;
           e.flash = 0.12;
@@ -1780,9 +1964,10 @@ import {
 
   function updateCrops(dt) {
     const growMul = state.cls === "farmer" ? CLASSES.farmer.grow : 1;
-    for (const c of state.crops.values()) {
+    for (const [key, c] of state.crops) {
       if (c.stage >= 2) continue;
-      c.grow += dt * growMul;
+      const [tx, ty] = key.split(",").map(Number);
+      c.grow += dt * growMul * (nearSpore(tx, ty) ? ENEMY_FX.sporeGrowMul : 1);
       const need = c.stage === 0 ? 7 : 8;
       if (c.grow >= need) {
         c.grow = 0;
@@ -1851,7 +2036,7 @@ import {
     if (rTap) state.rLatch = true;
     const clickPlace = mouse.pressed || rTap;
     if (!mouse.down && !usingSpace) p.blockMine = false;
-    const enemyNear = state.enemies.some((e) => dist(e.x, e.y, p.x, p.y) < 42);
+    const enemyNear = state.enemies.some((e) => targetable(e) && dist(e.x, e.y, p.x, p.y) < 42);
     const doMine = () => {
       if (p.mineTx !== f.tx || p.mineTy !== f.ty) startMine(f.tx, f.ty);
       const hard = t === T.GOLD ? 1.35 : t === T.STONE ? 1.05 : t === T.TREE ? 0.85 : 0.35;
@@ -1934,6 +2119,9 @@ import {
         toast("天亮了。" + extra, 3);
         beep(620, 0.1, "square", 0.04);
         state.enemies = [];
+        state.rocks = [];
+        state.bossPending = false;
+        state.bossName = "";
         state.howl = 0;
         state.nightWarned = false;
         state.fenceBreakWarn = false;
@@ -2004,6 +2192,7 @@ import {
     updateEnemies(dt);
     updateDrops(dt);
     updateBolts(dt);
+    updateRocks(dt);
     updateCrops(dt);
     updateCycle(dt);
     if (state.day && state.campHp > 0 && dist(state.player.x, state.player.y, state.camp.x, state.camp.y) < 30) {
@@ -2199,6 +2388,11 @@ import {
         px(c, x + 7, y + 3, 2, 11, "#e8c040");
         px(c, x + 10, y + 5, 2, 9, "#c6a43a");
       }
+    } else if (t === T.SPORE) {
+      px(c, x, y, 16, 16, "#4a2a58");
+      px(c, x + 1, y + 1, 14, 14, n % 2 ? "#5a3270" : "#523068");
+      px(c, x + (n % 9) + 2, y + 4, 3, 3, "#b77ad8");
+      px(c, x + ((n >> 3) % 9) + 3, y + 10, 2, 2, "#d8a8f0");
     }
   }
 
@@ -2261,9 +2455,48 @@ import {
     const x = Math.round(e.x - cam.x);
     const y = Math.round(e.y - cam.y);
     const bob = Math.sin(state.time * 6 + e.bob) * 1;
+    if (e.under) {
+      const wob = Math.floor(state.time * 10 + e.bob * 7) % 2;
+      px(c, x - 5, y - 2, 10, 4, "#5a3a20");
+      px(c, x - 3 + wob, y - 4, 3, 2, "#8b5a2b");
+      px(c, x + 1 - wob, y - 3, 2, 2, "#6b4424");
+      return;
+    }
     if (e.flash > 0) c.globalAlpha = 0.55;
     px(c, x - 5, y - 1, 10, 3, "rgba(0,0,0,.3)");
-    if (e.kind === "slime") {
+    if (e.kind === "slime_king") {
+      px(c, x - 13, y - 22 + bob, 26, 22, "#3fae3c");
+      px(c, x - 13, y - 22 + bob, 26, 4, "#7ae276");
+      px(c, x - 8, y - 28 + bob, 16, 5, "#e8c040");
+      px(c, x - 8, y - 31 + bob, 3, 3, "#e8c040");
+      px(c, x - 1, y - 31 + bob, 3, 3, "#e8c040");
+      px(c, x + 5, y - 31 + bob, 3, 3, "#e8c040");
+      px(c, x - 7, y - 15 + bob, 4, 4, "#143318");
+      px(c, x + 3, y - 15 + bob, 4, 4, "#143318");
+    } else if (e.kind === "shadow_knight") {
+      px(c, x - 8, y - 24 + bob, 16, 22, e.phase2 ? "#4a1c2c" : "#2a2238");
+      px(c, x - 7, y - 26 + bob, 14, 8, "#3c3450");
+      px(c, x - 5, y - 22 + bob, 10, 2, e.phase2 ? "#ff4040" : "#b06cff");
+      px(c, x + 8, y - 22 + bob, 3, 18, "#c5c9d0");
+      px(c, x - 12, y - 18 + bob, 4, 10, "#5a5068");
+    } else if (e.kind === "burrower") {
+      px(c, x - 6, y - 7 + bob, 12, 7, "#a0703c");
+      px(c, x - 6, y - 7 + bob, 12, 2, "#c89058");
+      px(c, x - 4, y - 6 + bob, 2, 2, "#1a0f08");
+      px(c, x + 2, y - 6 + bob, 2, 2, "#1a0f08");
+      px(c, x + 5, y - 4 + bob, 3, 2, "#e8eef4");
+    } else if (e.kind === "thrower") {
+      px(c, x - 6, y - 14 + bob, 12, 14, "#6d727a");
+      px(c, x - 6, y - 14 + bob, 12, 3, "#9aa0a8");
+      px(c, x - 4, y - 10 + bob, 2, 2, "#ff6a20");
+      px(c, x + 2, y - 10 + bob, 2, 2, "#ff6a20");
+      px(c, x + 5, y - 18 + bob, 5, 5, "#8b9098");
+    } else if (e.kind === "spore") {
+      px(c, x - 1, y - 6 + bob, 2, 6, "#3a6a2a");
+      px(c, x - 6, y - 13 + bob, 12, 7, "#9a4ac0");
+      px(c, x - 4, y - 12 + bob, 2, 2, "#e8c0ff");
+      px(c, x + 2, y - 11 + bob, 2, 2, "#e8c0ff");
+    } else if (e.kind === "slime") {
       px(c, x - 6, y - 10 + bob, 12, 10, "#5dcf5a");
       px(c, x - 4, y - 8 + bob, 3, 3, "#143318");
       px(c, x + 1, y - 8 + bob, 3, 3, "#143318");
@@ -2271,14 +2504,14 @@ import {
       px(c, x - 8, y - 10 + bob, 5, 3, "#3a2a58");
       px(c, x + 3, y - 10 + bob, 5, 3, "#3a2a58");
       px(c, x - 3, y - 9 + bob, 6, 5, "#2a1c40");
-    } else {
+    } else if (e.kind === "cube") {
       px(c, x - 6, y - 12 + bob, 12, 12, "#e8c040");
       px(c, x - 6, y - 12 + bob, 12, 3, "#ffe27a");
       px(c, x - 2, y - 8 + bob, 2, 2, "#3a2a10");
       px(c, x + 2, y - 8 + bob, 2, 2, "#3a2a10");
     }
     c.globalAlpha = 1;
-    if (e.hp < e.maxHp) {
+    if (e.hp < e.maxHp && !edef(e).boss) {
       px(c, x - 6, y - 16 + bob, 12, 2, "#111");
       px(c, x - 6, y - 16 + bob, 12 * clamp(e.hp / e.maxHp, 0, 1), 2, "#d4454a");
     }
@@ -2341,6 +2574,10 @@ import {
       px(ctx, d.x - cam.x - 2, d.y - cam.y - 2 - d.z, 4, 4, colors[d.kind] || "#fff");
     }
     for (const e of state.enemies) drawEnemy(ctx, e, cam);
+    for (const r of state.rocks) {
+      px(ctx, r.x - cam.x - 3, r.y - cam.y - 3, 6, 6, "#6d727a");
+      px(ctx, r.x - cam.x - 3, r.y - cam.y - 3, 6, 2, "#9aa0a8");
+    }
     drawHuman(ctx, state.player, cam, scale);
     for (const b of state.bolts) {
       px(ctx, b.x - cam.x - 2, b.y - cam.y - 2, 4, 4, b.nova ? "#c8f6ff" : "#4ee8ff");
@@ -2466,6 +2703,18 @@ import {
       }
       nightCtx.globalCompositeOperation = "source-over";
       ctx.drawImage(nightFx, 0, 0);
+    }
+    const boss = state.enemies.find((e) => edef(e).boss);
+    if (boss) {
+      const vw = VIEW_W * TILE;
+      const w = vw * 0.6;
+      const bx = (vw - w) / 2;
+      px(ctx, bx - 1, 5, w + 2, 6, "#111");
+      px(ctx, bx, 6, w * clamp(boss.hp / boss.maxHp, 0, 1), 4, boss.phase2 ? "#ff4040" : "#d4454a");
+      ctx.font = "7px monospace";
+      ctx.textAlign = "center";
+      ctx.fillStyle = "#ffe27a";
+      ctx.fillText(edef(boss).name, vw / 2, 19);
     }
   }
 
@@ -2623,6 +2872,11 @@ import {
     gather: (tx, ty) => gatherTile(tx, ty),
     setBuild,
     place: (tx, ty) => tryPlace(tx, ty),
+    spawn: (kind, tx, ty) => {
+      const e = makeEnemy(kind, tx * TILE + 8, ty * TILE + 8);
+      state.enemies.push(e);
+      return state.enemies.length - 1;
+    },
     interact,
   };
 
