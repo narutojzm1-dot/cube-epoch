@@ -192,8 +192,9 @@ h1 {
 .clock.day { color: var(--lamp); }
 .objective {
   text-align: center;
-  color: var(--muted);
-  font-size: 12px;
+  color: #f0e6d2;
+  font-size: 13px;
+  font-weight: 600;
   margin-top: 4px;
 }
 .ap {
@@ -577,3 +578,9 @@ h1 {
 #btn-daily:disabled { opacity: 0.55; cursor: not-allowed; }
 .title-stats { text-align: center; color: var(--muted); font-size: 12px; margin-top: 8px; min-height: 1em; }
 .overlay.codex #overlay-body { max-height: 60vh; overflow-y: auto; text-align: left; font-size: 13px; line-height: 1.6; }
+
+.item.pop { animation: inv-pop .35s ease; }
+@keyframes inv-pop {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); outline: 2px solid var(--gold); }
+}

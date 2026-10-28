@@ -15,6 +15,13 @@ for (const f of MODULES) execFileSync("node", ["--check", join(ROOT, f)], { stdi
 execFileSync("node", ["--check", join(ROOT, "data.js")], { stdio: "pipe" });
 
 const must = [
+  ["WIN_NIGHTS = 3", data],
+  ["FIRST_DAY_LEN = 76", data],
+  ["DAY_LEN = 62", data],
+  ["cube-epoch-seen", data],
+  ["flags.gathered = true", js],
+  ["export function campGaps", js],
+  ["state.era === 1 && state.nights === 3 && state.wave >= 2", sources["combat.js"]],
   ["FENCE_MAX = 80", data],
   ["NEED = { wood: 4", data],
   ["from \"./data.js\"", js],

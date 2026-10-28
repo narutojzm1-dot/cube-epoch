@@ -1,11 +1,11 @@
-import { AP_BASE, BUILDINGS, CAMP_MAX, CLASSES, DAWN_CHOICES, DAY_EVENT_FX, ERA_NIGHTS_STEP, ERA_SCALING, RELICS, RELIC_FX, RELIC_TYPE_LABEL, T, TILE, WAVES, WIN_NIGHTS } from "./data.js";
+import { DAY_LEN, FIRST_DAY_LEN, AP_BASE, BUILDINGS, CAMP_MAX, CLASSES, DAWN_CHOICES, DAY_EVENT_FX, ERA_NIGHTS_STEP, ERA_SCALING, RELICS, RELIC_FX, RELIC_TYPE_LABEL, T, TILE, WAVES, WIN_NIGHTS } from "./data.js";
 import { beep, cycleAudio, ensureAudio, footstep, playMusicPulse } from "./audio.js";
 import { apCostOfTile, apMax, apShort, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
-import { makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
-import { burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, last, looping, makeStreams, materialsReady, mouse, newSeed, nightsLeft, pendingSeed, rnd, selectedClass, setLast, setLooping, setPendingSeed, setRng, setSelectedClass, setState, setToastTimer, state, survivedNights, tileAt, toastTimer, tryMove, urlSeed } from "./core.js";
+import { spawnEnemy, makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
+import { hasSeenWorld, markSeenWorld, burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, last, looping, makeStreams, materialsReady, mouse, newSeed, nightsLeft, pendingSeed, rnd, selectedClass, setLast, setLooping, setPendingSeed, setRng, setSelectedClass, setState, setToastTimer, state, survivedNights, tileAt, toastTimer, tryMove, urlSeed } from "./core.js";
 import { checkAch, codexAdd, codexText, dailySeed, meta, openCodex, recordRun, shareText, titleStatsText, updateAch } from "./meta.js";
 import { render, skyTint } from "./render.js";
-import { BRIEF, advanceBrief, advanceIntro, brief, briefingBox, briefingCursor, briefingText, btnCodex, btnDaily, btnHelp, btnMute, btnPause, btnSkipBrief, btnSkipGuide, btnSkipIntro, btnStart, camera, canvas, copyText, endBriefing, finishIntro, intro, introBox, manaWrap, overlay, playIntro, resize, screenGame, screenIntro, screenTitle, setPrompt, showOverlay, skillName, startBriefing, syncGuide, syncHud, titleStats, toast, toastEl, togglePause } from "./ui.js";
+import { currentTarget, campGaps, canAffordNextFence, canOffer, BRIEF, advanceBrief, advanceIntro, brief, briefingBox, briefingCursor, briefingText, btnCodex, btnDaily, btnHelp, btnMute, btnPause, btnSkipBrief, btnSkipGuide, btnSkipIntro, btnStart, camera, canvas, copyText, endBriefing, finishIntro, intro, introBox, manaWrap, overlay, playIntro, resize, screenGame, screenIntro, screenTitle, setPrompt, showOverlay, skillName, startBriefing, syncGuide, syncHud, titleStats, toast, toastEl, togglePause } from "./ui.js";
 import { endDayEvent, genWorld, makePlayer, rollDayEvent, tradeCaravan, updateDayEvent } from "./world.js";
 
 export function startGame(cls, opts) {
@@ -28,7 +28,7 @@ export function startGame(cls, opts) {
     crops: world.crops,
     player: makePlayer(cls),
     inv: {
-      wood: cls === "miner" ? 2 : 0,
+      wood: 2,
       stone: 0,
       gold: 0,
       wheat: 0,
@@ -64,7 +64,7 @@ export function startGame(cls, opts) {
     camp: { x: 22 * TILE + 8, y: 21 * TILE + 8 },
     day: true,
     cycle: 0,
-    dayLen: 62,
+    dayLen: FIRST_DAY_LEN,
     nightLen: 26,
     nights: 0,
     time: 0,
@@ -122,7 +122,10 @@ export function startGame(cls, opts) {
   syncGuide();
   setLast(performance.now());
   if (briefOn) startBriefing();
-  else toast("先走到树旁边，按空格砍木头。", 3.2);
+  else {
+    markSeenWorld();
+    toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
+  }
   if (!looping) {
     setLooping(true);
     requestAnimationFrame(loop);
@@ -512,6 +515,7 @@ function updateCycle(dt) {
       toast("天亮了。" + extra, 3);
       checkAch("dawn");
       beep(620, 0.1, "square", 0.04);
+      state.dayLen = DAY_LEN;
       state.enemies = [];
       state.rocks = [];
       state.bossPending = false;
@@ -684,7 +688,8 @@ document.querySelectorAll(".class-card").forEach((card) => {
 btnStart.addEventListener("click", () => {
   if (!selectedClass) return;
   ensureAudio();
-  playIntro(selectedClass);
+  if (hasSeenWorld()) startGame(selectedClass, { brief: false });
+  else playIntro(selectedClass);
 });
 if (btnDaily) {
   btnDaily.textContent = `今日挑战 · ${dailySeed().slice(-4, -2)}月${dailySeed().slice(-2)}日`;
@@ -692,7 +697,8 @@ if (btnDaily) {
     if (!selectedClass) return;
     setPendingSeed(dailySeed());
     ensureAudio();
-    playIntro(selectedClass);
+    if (hasSeenWorld()) startGame(selectedClass, { brief: false });
+    else playIntro(selectedClass);
   });
 }
 if (btnCodex) btnCodex.addEventListener("click", () => openCodex());
@@ -808,6 +814,7 @@ window.CUBE = {
     return state.enemies.length - 1;
   },
   interact,
+  currentTarget, campGaps, canAffordNextFence, spawnEnemy, canOffer,
 };
 
 const qa = new URLSearchParams(location.search).get("qa");

@@ -1,4 +1,4 @@
-import { COLS, ERA_NAMES, ERA_NIGHTS_STEP, ERA_SCALING, FENCE_MAX, NEED, PARTICLES, RELIC_FX, ROWS, T, TILE, WIN_NIGHTS } from "./data.js";
+import { SEEN_KEY, COLS, ERA_NAMES, ERA_NIGHTS_STEP, ERA_SCALING, FENCE_MAX, NEED, PARTICLES, RELIC_FX, ROWS, T, TILE, WIN_NIGHTS } from "./data.js";
 
 export let selectedClass = null;
 export let pendingSeed = "";
@@ -196,4 +196,11 @@ export function tryMove(ent, dt) {
 
 export function labelOf(k) {
   return { wood: "木", stone: "石", gold: "金", wheat: "麦", seed: "种", heart: "心", fence: "栏", torch: "火", plot: "田" }[k] || k;
+}
+
+export function hasSeenWorld() {
+  try { return localStorage.getItem(SEEN_KEY) === "1"; } catch (_) { return false; }
+}
+export function markSeenWorld() {
+  try { localStorage.setItem(SEEN_KEY, "1"); } catch (_) { /* 隐私模式就当没记住 */ }
 }

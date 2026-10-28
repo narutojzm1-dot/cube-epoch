@@ -40,6 +40,8 @@ await page.evaluate(() => {
   st.wave = 2;
   st.toSpawn = 0;
   st.enemies = [];
+  st.ap = 1;
+  st.lastPlace = { fixture: true };
   st.cycle = st.nightLen - 0.05;
 });
 await page.waitForSelector("#overlay:not(.hidden) button.choice", { timeout: 3000 });
@@ -49,6 +51,8 @@ const n = await page.locator("#overlay-actions button.choice").count();
 if (n !== 3) throw new Error("dawn should show 3 choices, got " + n);
 const paused = await page.evaluate(() => window.CUBE.getState().paused);
 if (!paused) throw new Error("game must pause while choosing");
+const dawnReset = await page.evaluate(() => {const st=window.CUBE.getState(); return {dayLen:st.dayLen, ap:st.ap, lastPlace:st.lastPlace};});
+if (dawnReset.dayLen !== 62 || dawnReset.ap !== 14 || dawnReset.lastPlace !== null) throw new Error("dawn must restore normal day/AP and clear undo: " + JSON.stringify(dawnReset));
 const picked = await page.locator("#overlay-actions button.choice").first().getAttribute("data-relic");
 await page.locator("#overlay-actions button.choice").first().click();
 const after = await page.evaluate(() => {
@@ -64,7 +68,7 @@ await page.evaluate(() => {
   const st = window.CUBE.getState();
   st.day = true;
   st.cycle = 0;
-  st.nights = 2;
+  st.nights = 3;
   st.inv.heart = 1;
   st.player.x = st.altar.x;
   st.player.y = st.altar.y + 16;
@@ -74,9 +78,9 @@ await page.waitForSelector("#btn-next-era", { timeout: 2000 });
 await page.locator("#btn-next-era").click();
 const era = await page.evaluate(() => {
   const st = window.CUBE.getState();
-  return { era: st.era, eraStart: st.eraStart, over: st.over, paused: st.paused };
+  return { era: st.era, eraStart: st.eraStart, over: st.over, paused: st.paused, dayLen: st.dayLen };
 });
-if (era.era !== 2 || era.eraStart !== 2 || era.over || era.paused) throw new Error("next era failed: " + JSON.stringify(era));
+if (era.era !== 2 || era.eraStart !== 3 || era.over || era.paused || era.dayLen !== 62) throw new Error("next era failed: " + JSON.stringify(era));
 
 // 结算页战绩文本
 await page.evaluate(() => {

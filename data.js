@@ -6,7 +6,10 @@ export const ROWS = 36;
 export const VIEW_W = 20;
 export const VIEW_H = 12;
 export const NEED = { wood: 4, stone: 5, gold: 3, wheat: 3 };
-export const WIN_NIGHTS = 2;
+export const WIN_NIGHTS = 3;
+export const DAY_LEN = 62;
+export const FIRST_DAY_LEN = 76;
+export const SEEN_KEY = "cube-epoch-seen";
 export const CAMP_MAX = 100;
 export const FENCE_MAX = 80;
 
@@ -134,10 +137,13 @@ export const ENEMY_DROPS = [
   { kind: "seed", chance: 0.2 },
 ];
 
-// 波次：第一夜 2 波，之后 3 波；每进入一个新纪元 +1 波。
+// 波次：首夜 2 波、第二夜 3 波、第三夜起 4 波；每个后续纪元再 +1 波。
 export const WAVES = {
   firstNight: 2,
   later: 3,
+  thirdNight: 4,
+  nightLength: 26,
+  laterNightLength: 32,
   perEra: 1,
   baseSpawn: 3,
 };

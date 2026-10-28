@@ -205,6 +205,9 @@ export function spawnEnemy() {
     for (const row of SPAWN_TABLE) {
       if (state.era >= row.minEra && state.nights >= row.minNight && state.wave >= row.minWave && rnd("event") < row.chance) kind = row.kind;
     }
+    // Retain the first-era cube reveal without
+    // suppressing later-era enemy variety. Boss selection still takes priority.
+    if (state.era === 1 && state.nights === 3 && state.wave >= 2) kind = "cube";
     if (state.bossPending) {
       state.bossPending = false;
       kind = BOSSES[(state.era - 1) % BOSSES.length];
@@ -354,8 +357,9 @@ export function updateRocks(dt) {
 }
 
 export function startNightWaves() {
+  state.nightLen = state.nights >= 3 ? WAVES.laterNightLength : WAVES.nightLength;
   state.wave = 0;
-  state.wavesTotal = (state.nights === 1 ? WAVES.firstNight : WAVES.later) + (state.era - 1) * WAVES.perEra;
+  state.wavesTotal = (state.nights === 1 ? WAVES.firstNight : state.nights === 2 ? WAVES.later : WAVES.thirdNight) + (state.era - 1) * WAVES.perEra;
   state.toSpawn = 0;
   state.waveWait = 2.2;
 }
@@ -488,6 +492,7 @@ export function updateEnemies(dt) {
     punch(2.6, 0.045);
     burst(e.x, e.y, "#8dff9a", 8);
     state.kills += 1;
+    if (state.kills === 1) toast("干掉一只！掉的麦可以点背包回血。夜里别离篝火太远。", 2.6);
     state.nightKills = (state.nightKills || 0) + 1;
     const def = edef(e);
     if (def.spore) corrupt(Math.floor(e.x / TILE), Math.floor(e.y / TILE));

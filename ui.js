@@ -1,7 +1,7 @@
 import { BUILDINGS, CAMP_MAX, CLASSES, COLS, NEED, ROWS, T, TILE, VIEW_H, VIEW_W } from "./data.js";
 import { audioCtx, beep, ensureMusicPad, musicGain, musicOn } from "./audio.js";
-import { apMax, costText } from "./build.js";
-import { campWalled, clamp, dist, eraName, inBounds, materialsReady, nightsLeft, setLast, setToastTimer, solid, state, survivedNights, tileAt } from "./core.js";
+import { buildCost, apMax, costText } from "./build.js";
+import { campRing, markSeenWorld, campWalled, clamp, dist, eraName, inBounds, materialsReady, nightsLeft, setLast, setToastTimer, solid, state, survivedNights, tileAt } from "./core.js";
 import { startGame } from "./game.js";
 
 export const canvas = document.getElementById("game");
@@ -52,12 +52,15 @@ export const btnDaily = document.getElementById("btn-daily");
 export const btnCodex = document.getElementById("btn-codex");
 export const titleStats = document.getElementById("title-stats");
 
+export const keysHintEl = document.getElementById("keys-hint");
+
 export const GUIDE = [
-  { id: "move", title: "第一步：走起来", body: "用 WASD 移动。先走到附近的树旁边。" },
-  { id: "chop", title: "第二步：砍木头", body: "走到树前面按空格，或对准树按住左键。木头用来围栅栏、点火把。" },
+  { id: "move", title: "第一步：走起来", body: "用 WASD 或方向键移动。金框指着附近的树，先走过去。" },
+  { id: "chop", title: "第二步：砍木头", body: "对准金框的树，按空格或按住左键。木头会飞进背包，用来围栅栏。" },
+  // 围营正文会按缺口/木料在 wallGuideBody 里重写；原句留下当兜底
   { id: "build", title: "第三步：围营地", body: "按 1 选栅栏，把篝火上下左右四格围上。发光的格子就是缺口。木头还要留给方块之心。" },
-  { id: "night", title: "第四步：守住篝火", body: "怪朝篝火走，站在墙后打，缺口要补。第二夜才有蝙蝠飞进来。" },
-  { id: "offer", title: "第五步：天亮献祭", body: "凑齐材料在工作台按 E 合成方块之心。撑过两夜，天亮后送到北边祭坛。" },
+  { id: "night", title: "第四步：守住篝火", body: "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。" },
+  { id: "offer", title: "第五步：天亮献祭", body: "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。" },
 ];
 
 export function toast(text, ms) {
@@ -91,11 +94,12 @@ export function introPages(cls) {
     "最后一堆篝火还在营地中央跳。\n老人说，火在，纪元就在。\n火灭了，名字也会一起冷掉。",
     "北方祭坛沉睡着。\n要有人把「方块之心」捧去，\n黎明才会肯再睁眼。",
     `${name}啊。\n${flavor}\n篝火在等你。别让它先睡着。`,
-    "围起栅栏，像给火围一条被子。\n守过两夜。把那颗心，送到北边去。\n\n……出发吧。",
+    "围起栅栏，像给火围一条被子。\n守过三夜。把那颗心，送到北边去。\n\n……出发吧。",
   ];
 }
 
 export function playIntroTheme() {
+  try {
   if (!audioCtx || !musicOn || !musicGain) return;
   ensureMusicPad();
   const notes = [392, 523, 587, 523, 392, 330, 392, 523, 659, 784, 659, 523];
@@ -112,6 +116,7 @@ export function playIntroTheme() {
     o.start(t0);
     o.stop(t0 + 0.5);
   });
+  } catch (_) { /* No audio device: keep gameplay running silently. */ }
 }
 
 export function renderIntroText() {
@@ -184,7 +189,7 @@ export function playIntro(cls) {
 export const BRIEF = [
   { focus: "camp", title: "要保护的", text: "看见了吗？这簇还在跳的火。\n夜里所有的牙，都会朝它来。它灭了，这一局的太阳也就灭了。" },
   { focus: "bench", title: "合成之心", text: "这张旧台子还温着。\n木、石、金、麦凑齐，按 E。方块之心会在这里醒来。" },
-  { focus: "altar", title: "送到这里", text: "顺着土路一直向北。\n那座沉睡的祭坛，才是心要回家的地方。守过两夜，天亮再献。" },
+  { focus: "altar", title: "送到这里", text: "顺着土路一直向北。\n那座沉睡的祭坛，才是心要回家的地方。守过三夜，天亮再献。" },
   { focus: "camp", title: "白天先做", text: "先去砍树。把火的上下左右围死。\n记得留木头——心也是要吃木头的。" },
   { focus: "player", title: "出发", text: "预演到此。风已经在等了。\n……正式开始。" },
 ];
@@ -247,7 +252,8 @@ export function endBriefing() {
   state.lookTo.y = state.player.y;
   briefingEl.classList.add("hidden");
   guideEl.classList.remove("hidden");
-  toast("先走到树旁边，按空格砍木头。", 3.2);
+  markSeenWorld();
+  toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
   setLast(performance.now());
   syncGuide();
   syncHud();
@@ -285,11 +291,13 @@ export function syncGuide() {
     guideEl.classList.add("compact");
     guideTitle.textContent = state.era > 1 ? `${eraName(state.era)} · 当前目标` : "当前目标";
     guideBody.textContent = objectiveText();
+    syncKeysHint(null);
     return;
   }
   guideEl.classList.remove("compact");
   guideTitle.textContent = step.title;
-  guideBody.textContent = step.body;
+  guideBody.textContent = step.id === "build" ? wallGuideBody() : step.body;
+  syncKeysHint(step);
 }
 
 export function setPrompt(text) {
@@ -346,8 +354,31 @@ export function currentTarget() {
   if (canOffer()) return { x: state.altar.x, y: state.altar.y, kind: "altar" };
   if (!state.day) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
   if (state.inv.heart > 0 && !survivedNights()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
+  // 没围营时：先指树，够料再指缺口——别再让新手盯着篝火
+  // 围营优先于工作台，免得先挖齐材料的人被拉去合成
+  if (!campWalled()) {
+    if (!state.flags.chopped || !canAffordNextFence()) {
+      const t = nearestOf((tile) => tile === T.TREE);
+      if (t) {
+        // 第一棵树框树本身，别框旁边的空地（空格会砍错）
+        if (!state.flags.chopped) return { x: t.x, y: t.y, kind: "tree" };
+        return { ...(approachTile(t.tx, t.ty) || t), kind: "tree" };
+      }
+    }
+    const p = state.player;
+    let best = null;
+    let bestD = 1e9;
+    for (const [tx, ty] of campGaps()) {
+      const d = dist(p.x, p.y, tx * TILE + 8, ty * TILE + 8);
+      if (d < bestD) {
+        bestD = d;
+        best = { x: tx * TILE + 8, y: ty * TILE + 8, kind: "gap" };
+      }
+    }
+    if (best) return best;
+    return { x: state.camp.x, y: state.camp.y, kind: "camp" };
+  }
   if (materialsReady() && !state.inv.heart) return { x: state.bench.x, y: state.bench.y, kind: "bench" };
-  if (!campWalled()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
   if (state.inv.wood < NEED.wood) {
     const t = nearestOf((tile) => tile === T.TREE);
     if (t) return { ...(approachTile(t.tx, t.ty) || t), kind: "tree" };
@@ -371,7 +402,7 @@ export function currentTarget() {
 
 export function helpText() {
   return [
-    "白天围营，夜里守火。撑过两夜，天亮把方块之心送到北边祭坛。",
+    "白天围营，夜里守火。首纪元撑过三夜，天亮把方块之心送到北边祭坛。",
     "每撑过一夜，天亮可从三份「黎明的馈赠」里挑一份：遗物、祝福或变异。",
     "献祭后可点亮祭坛进入下一纪元：多守一夜，怪更强。随时可以收手结算，复制战绩。",
     "",
@@ -386,7 +417,7 @@ export function helpText() {
     "Q 或右键  职业技能",
     "点「麦」或 H  回血",
     "",
-    "栅栏挡地面怪，挡不住蝙蝠。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过两夜才能献。",
+    "栅栏挡地面怪，挡不住蝙蝠。火把夜里照明。篝火灭了就失败。祭坛只在天亮且完成当前纪元守夜要求后才能献。",
   ].join("\n");
 }
 
@@ -448,8 +479,13 @@ export function objectiveText() {
   if (!state.day) return "守住篝火！怪从地图边缘朝营地来";
   if (canOffer()) return "天亮了。把方块之心送到北边祭坛（按 E）";
   if (state.inv.heart > 0 && !survivedNights()) return `先再守 ${nightsLeft()} 夜，天亮才能献祭`;
+  if (!campWalled()) {
+    const gaps = campGaps().length;
+    if (!state.flags.chopped) return "走到金框的树旁，空格或按住左键砍木头";
+    if (!canAffordNextFence()) return `再砍树凑木头（还差 ${gaps} 面墙）`;
+    return `按 1，点发光格围营（还差 ${gaps} 面）`;
+  }
   if (materialsReady() && !state.inv.heart) return "去工作台按 E 合成方块之心";
-  if (!campWalled()) return "按 1，把篝火上下左右四边的发光格围上";
   const miss = [];
   if (state.inv.wood < NEED.wood) miss.push(`木 ${state.inv.wood}/${NEED.wood}`);
   if (state.inv.stone < NEED.stone) miss.push(`石 ${state.inv.stone}/${NEED.stone}`);
@@ -503,7 +539,12 @@ export function syncHud() {
   for (const el of document.querySelectorAll(".item")) {
     const k = el.dataset.k;
     const b = el.querySelector("b");
-    if (b && k) b.textContent = state.inv[k] || 0;
+    if (b && k) {
+      const n = state.inv[k] || 0;
+      const prev = Number(b.textContent);
+      b.textContent = n;
+      if (n > prev) { el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); }
+    }
     el.classList.toggle("ready", k === "heart" && state.inv.heart > 0);
     el.classList.toggle("on", el.dataset.build && state.build === el.dataset.build);
   }
@@ -544,4 +585,47 @@ export function togglePause() {
     overlay.classList.add("hidden");
     setLast(performance.now());
   }
+}
+
+export function campGaps() {
+  return campRing().filter(([tx, ty]) => tileAt(tx, ty) !== T.FENCE);
+}
+
+export function canAffordNextFence() {
+  if (!state) return false;
+  if ((state.inv.fence || 0) > 0) return true;
+  const cost = buildCost("fence").wood || 0;
+  return (state.inv.wood || 0) >= cost;
+}
+
+export function woodToFinishWall() {
+  const gaps = campGaps().length;
+  const stored = state.inv.fence || 0;
+  const needPay = Math.max(0, gaps - stored);
+  return needPay * (buildCost("fence").wood || 0);
+}
+
+export function syncKeysHint(step) {
+  if (!keysHintEl) return;
+  if (!step) {
+    keysHintEl.textContent = "WASD 移动 · 空格砍/挖/打 · 1-6 建造 · 点空地建造 / 点坏墙修理 · Z 撤销 · Q 技能 · H 吃麦";
+    return;
+  }
+  if (step.id === "move") keysHintEl.textContent = "此刻：WASD 或方向键，走到金框的树旁边";
+  else if (step.id === "chop") keysHintEl.textContent = "此刻：对准树，按空格或按住左键砍倒";
+  else if (step.id === "build") {
+    keysHintEl.textContent = canAffordNextFence()
+      ? "此刻：按 1 选栅栏，再点篝火旁发光的格子"
+      : "此刻：木头不够围营，再砍金框里的树";
+  } else if (step.id === "night") keysHintEl.textContent = "此刻：夜里守篝火 · 左键打怪 · 墙破了按 1 补";
+  else if (step.id === "offer") keysHintEl.textContent = "此刻：工作台按 E 合成，天亮送到北边祭坛";
+}
+
+export function wallGuideBody() {
+  const gaps = campGaps().length;
+  const needWood = woodToFinishWall();
+  if (!canAffordNextFence()) {
+    return `围营还差 ${gaps} 面墙、大约 ${needWood} 木。先对着金框的树按空格或按住左键再砍。`;
+  }
+  return `按 1 选栅栏，再点篝火旁发光格（还差 ${gaps} 面）。自己能穿过栅栏。木头还要留给方块之心。`;
 }

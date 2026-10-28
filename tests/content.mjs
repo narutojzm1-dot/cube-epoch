@@ -118,10 +118,10 @@ if (throwerPos < 60) throw new Error("thrower should keep distance, d=" + throwe
 await setNight();
 await page.evaluate(() => {
   const st = window.CUBE.getState();
-  st.nights = 2;
+  st.nights = 3;
   st.eraStart = 0;
-  st.wavesTotal = 3;
-  st.wave = 2;
+  st.wavesTotal = 4;
+  st.wave = 3;
   st.waveWait = 3;
 });
 await page.waitForFunction(() => window.CUBE.getState().enemies.some((e) => e.kind === "slime_king"), null, { timeout: 4000 });
@@ -172,7 +172,14 @@ await page.evaluate(() => {
   st.day = true;
   st.dayLen = 0.05;
   st.cycle = 0;
-  st.nightLen = 0.05;
+});
+// Enter the real night first: startNightWaves now selects the configured length.
+// Fast-forward its cycle, rather than overriding a value that transition resets.
+await page.waitForFunction(() => !window.CUBE.getState().day);
+await page.evaluate(() => {
+  const st = window.CUBE.getState();
+  st.enemies = [];
+  st.cycle = st.nightLen - 0.02;
 });
 await page.waitForFunction(() => window.CUBE.getState().ap >= 14, null, { timeout: 4000 });
 await page.waitForFunction(() => window.CUBE.getState().choosing, null, { timeout: 4000 });

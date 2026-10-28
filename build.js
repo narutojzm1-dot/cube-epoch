@@ -2,7 +2,7 @@ import { AP_BASE, AP_COST, BIOME_FX, BUILDINGS, BUILD_FX, CLASSES, COLS, ENEMY_F
 import { beep, chopSound } from "./audio.js";
 import { isFlying, makeEnemy, nearSpore, targetable } from "./combat.js";
 import { addDrop, burst, campWalled, dist, fenceMax, floatText, has, inBounds, labelOf, nightsLeft, punch, rand, rnd, setTile, state, survivedNights, tileAt } from "./core.js";
-import { syncHud, toast } from "./ui.js";
+import { campGaps, syncHud, toast } from "./ui.js";
 
 export function eatWheat() {
   if (!state || state.paused || state.over) return;
@@ -180,6 +180,8 @@ export function tryPlace(tx, ty) {
   beep(400, 0.05, "square", 0.04);
   if (openBefore && campWalled()) {
     toast("四边围好了。再砍两棵树，木头还要留给方块之心。", 3);
+  } else if (kind === "fence" && openBefore) {
+    toast(`围上了。还差 ${campGaps().length} 面，点下一个发光格。`, 2.4);
   }
   return true;
 }
@@ -209,6 +211,7 @@ export function gatherTile(tx, ty) {
     addDrop("wood", cx, cy, 3 + rand("loot", 2));
     if (!state.flags.chopped) state.benchHint = 8;
     state.flags.chopped = true;
+    floatText(cx, cy - 14, "+木", "#e8c040");
     burst(cx, cy, "#6bcf6b", 16);
     burst(cx, cy, "#8b5a2b", 8, "debris");
     punch(3.2, 0.045);
@@ -353,6 +356,11 @@ export function updateDrops(dt) {
       state.inv[d.kind] = (state.inv[d.kind] || 0) + 1;
       d.life = 0;
       beep(660, 0.04, "square", 0.03);
+      floatText(d.x, d.y - 12, "+" + labelOf(d.kind), d.kind === "gold" ? "#ffe27a" : "#e8dcc8");
+      if (d.kind === "wood" && !state.flags.gathered) {
+        state.flags.gathered = true;
+        toast("木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。", 3.4);
+      }
       if (d.kind === "wheat" && !state.flags.sawWheat) {
         state.flags.sawWheat = true;
         toast("点背包里的「麦」或按 H，可以吃掉回血。", 2.8);

@@ -11,6 +11,7 @@ export let musicPad = null;
 export let musicPadGain = null;
 
 export function ensureMusicPad() {
+  try {
   if (!audioCtx || !musicGain || musicPad) return;
   const filter = audioCtx.createBiquadFilter();
   filter.type = "lowpass";
@@ -24,6 +25,7 @@ export function ensureMusicPad() {
   filter.connect(musicPadGain);
   musicPadGain.connect(musicGain);
   musicPad.start();
+  } catch (_) { /* No audio device: keep gameplay running silently. */ }
 }
 
 export function setMusicLevel() {
@@ -32,6 +34,7 @@ export function setMusicLevel() {
 }
 
 export function ensureAudio() {
+  try {
   const AC = window.AudioContext || window.webkitAudioContext;
   if (!audioCtx) audioCtx = new AC();
   if (audioCtx.state === "suspended") audioCtx.resume();
@@ -41,9 +44,11 @@ export function ensureAudio() {
     musicGain.connect(audioCtx.destination);
   }
   ensureMusicPad();
+  } catch (_) { /* No audio device: keep gameplay running silently. */ }
 }
 
 export function beep(freq, dur, type, vol) {
+  try {
   if (!audioCtx || !sfxOn) return;
   const o = audioCtx.createOscillator();
   const g = audioCtx.createGain();
@@ -55,9 +60,11 @@ export function beep(freq, dur, type, vol) {
   g.connect(audioCtx.destination);
   o.start();
   o.stop(audioCtx.currentTime + dur);
+  } catch (_) { /* No audio device: keep gameplay running silently. */ }
 }
 
 export function noise(dur, vol, freq) {
+  try {
   if (!audioCtx || !sfxOn) return;
   const n = Math.max(1, Math.floor(audioCtx.sampleRate * dur));
   const buf = audioCtx.createBuffer(1, n, audioCtx.sampleRate);
@@ -74,6 +81,7 @@ export function noise(dur, vol, freq) {
   f.connect(g);
   g.connect(audioCtx.destination);
   src.start();
+  } catch (_) { /* No audio device: keep gameplay running silently. */ }
 }
 
 export function footstep() {
@@ -93,6 +101,7 @@ export function hitSound() {
 }
 
 export function playMusicPulse() {
+  try {
   if (!audioCtx || !musicOn || !state || state.paused || state.over) return;
   ensureMusicPad();
   const day = [262, 330, 392, 330, 392, 523, 494, 392];
@@ -126,6 +135,7 @@ export function playMusicPulse() {
   bg.connect(musicGain);
   b.start();
   b.stop(audioCtx.currentTime + 0.42);
+  } catch (_) { /* No audio device: keep gameplay running silently. */ }
 }
 
 export function audioLabel() {
