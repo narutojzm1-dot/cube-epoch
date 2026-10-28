@@ -25,6 +25,12 @@ export const T = {
   FENCE: 12,
   TORCH: 13,
   SPORE: 14,
+  TOWER: 15,
+  SPIKE: 16,
+  SPRING: 17,
+  MUSHROOM: 18,
+  STATUE: 19,
+  RUBBLE: 20,
 };
 
 export const CLASSES = {
@@ -196,3 +202,44 @@ export const RELIC_FX = {
 // 日晷行动点：白天砍树、挖矿、建造、修墙各耗 1 点；收麦、拆除与夜里的行动不耗点。天亮回满。
 export const AP_BASE = 14;
 export const AP_COST = { chop: 1, mine: 1, build: 1, repair: 1 };
+
+// 建筑表：按数字键选择。stored = 背包里预存的成品（开局赠送），classCost = 职业专属折扣。
+export const BUILDINGS = {
+  fence: { name: "栅栏", key: "1", tile: "FENCE", cost: { wood: 2 }, stored: "fence", classCost: { miner: { wood: 1 }, knight: { wood: 1 } } },
+  torch: { name: "火把", key: "2", tile: "TORCH", cost: { wood: 1, stone: 1 }, stored: "torch", classCost: { mage: { wood: 1, stone: 0 } } },
+  plot: { name: "田", key: "3", tile: "FARM", cost: { wood: 1 }, stored: "plot", classCost: { farmer: { wood: 0 } } },
+  tower: { name: "箭塔", key: "4", tile: "TOWER", cost: { stone: 3, gold: 1 }, desc: "自动射击附近的怪。" },
+  spike: { name: "尖刺", key: "5", tile: "SPIKE", cost: { wood: 2 }, desc: "踩上的地面怪持续掉血。" },
+  spring: { name: "圣泉", key: "6", tile: "SPRING", cost: { stone: 2, wheat: 1 }, desc: "站在附近缓慢回血。" },
+};
+
+export const BUILD_FX = {
+  towerRange: 80,
+  towerCd: 0.9,
+  towerDmg: 12,
+  towerBoltSpeed: 170,
+  spikeDps: 10,
+  springRadius: 40,
+  springHeal: 3,
+};
+
+// 地图生态：四个分区位置每局随机洗牌；森林/采石场各有一半概率变成蘑菇林/晶洞。
+export const BIOME_SLOTS = [
+  { name: "西北", x: 9, y: 10 },
+  { name: "东北", x: 37, y: 12 },
+  { name: "西南", x: 10, y: 26 },
+  { name: "东南", x: 38, y: 27 },
+];
+export const BIOME_FX = {
+  mushroomChance: 0.5,
+  crystalChance: 0.5,
+  crystalGold: 9,
+  quarryGold: 5,
+  statues: 3,
+  statueWakeChance: 0.35,
+  statueWakeRadius: 6,
+  rubbleCount: 16,
+  rubbleStone: 1,
+  sporeNearMushroom: 0.6,
+  mushroomLight: 28,
+};

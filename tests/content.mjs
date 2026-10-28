@@ -144,6 +144,98 @@ await page.evaluate(() => {
   st.nightLen = 0.05;
 });
 await page.waitForFunction(() => window.CUBE.getState().ap >= 14, null, { timeout: 4000 });
+await page.waitForFunction(() => window.CUBE.getState().choosing, null, { timeout: 4000 });
+await page.click("button.choice");
+
+// 新建筑：箭塔自动射击、尖刺掉血、圣泉回血；箭塔是实心建筑
+await setNight();
+const builds = await page.evaluate(async () => {
+  const C = window.CUBE;
+  const st = C.getState();
+  st.inv.stone = 20;
+  st.inv.gold = 5;
+  st.inv.wood = 20;
+  st.inv.wheat = 5;
+  st.player.x = 40 * 16 + 8;
+  st.player.y = 30 * 16 + 8;
+  for (const [x, y] of [[30, 12], [31, 12], [30, 13], [31, 13], [29, 12], [29, 13], [30, 11], [31, 11]]) st.tiles[y * 48 + x] = 1;
+  C.setBuild("tower");
+  C.place(30, 12);
+  C.setBuild("spike");
+  C.place(31, 13);
+  C.setBuild("spring");
+  C.place(38, 30);
+  C.setBuild(null);
+  const tower = st.tiles[12 * 48 + 30];
+  const spike = st.tiles[13 * 48 + 31];
+  const spring = st.tiles[30 * 48 + 38];
+  C.spawn("slime", 33, 12);
+  const slime = st.enemies[st.enemies.length - 1];
+  slime.speed = 0;
+  const hp0 = slime.hp;
+  st.player.hp = 10;
+  st.player.x = 38 * 16 + 8;
+  st.player.y = 31 * 16 + 8;
+  await new Promise((r) => setTimeout(r, 1200));
+  return { tower, spike, spring, shot: slime.hp < hp0 || !st.enemies.includes(slime), healed: st.player.hp > 10, stone: st.inv.stone, gold: st.inv.gold };
+});
+if (builds.tower !== 15 || builds.spike !== 16 || builds.spring !== 17) throw new Error("buildings not placed: " + JSON.stringify(builds));
+if (builds.stone !== 15 || builds.gold !== 4) throw new Error("building costs wrong: " + JSON.stringify(builds));
+if (!builds.shot) throw new Error("arrow tower should shoot nearby enemies");
+if (!builds.healed) throw new Error("holy spring should heal the player");
+const spikeHit = await page.evaluate(async () => {
+  const C = window.CUBE;
+  const st = C.getState();
+  st.enemies = [];
+  C.spawn("slime", 31, 13);
+  const s = st.enemies[0];
+  s.speed = 0;
+  const hp0 = s.hp;
+  await new Promise((r) => setTimeout(r, 400));
+  return hp0 - s.hp;
+});
+if (!(spikeHit > 0)) throw new Error("spikes should hurt ground enemies standing on them");
+
+// 地图生态：同种子同图，不同种子分区不同；四类生态齐全
+const worlds = await page.evaluate(() => {
+  const C = window.CUBE;
+  const sig = () => {
+    const st = C.getState();
+    return { biomes: st.biomes.map((b) => `${b.kind}@${b.name}`).join(","), hash: Array.from(st.tiles).join("") };
+  };
+  C.start("miner", "biome-a");
+  const a = sig();
+  C.start("miner", "biome-a");
+  const a2 = sig();
+  const seen = new Set();
+  const kinds = new Set();
+  for (let i = 0; i < 8; i += 1) {
+    C.start("miner", "biome-" + i);
+    const s = sig();
+    seen.add(s.biomes);
+    for (const k of C.getState().biomes) kinds.add(k.kind);
+  }
+  return { same: a.hash === a2.hash, layouts: seen.size, kinds: [...kinds].sort().join(",") };
+});
+if (!worlds.same) throw new Error("same seed must produce the same map");
+if (worlds.layouts < 3) throw new Error("biome layouts should vary by seed: " + JSON.stringify(worlds));
+for (const k of ["lake", "rubble"]) if (!worlds.kinds.includes(k)) throw new Error("missing biome " + k);
+if (!/forest|mushroom/.test(worlds.kinds) || !/quarry|crystal/.test(worlds.kinds)) throw new Error("missing biome kinds: " + worlds.kinds);
+
+// 晶洞石像：在附近挖金可能吵醒石像，变成敌人
+const statue = await page.evaluate(() => {
+  const C = window.CUBE;
+  const st = C.getState();
+  st.enemies = [];
+  st.ap = 99;
+  for (let k = 0; k < 40 && !st.enemies.length; k += 1) {
+    st.tiles[5 * 48 + 30] = 19;
+    st.tiles[5 * 48 + 33] = 5;
+    C.gather(33, 5);
+  }
+  return { woke: st.enemies.length, tile: st.tiles[5 * 48 + 30] };
+});
+if (!statue.woke || statue.tile === 19) throw new Error("mining gold near a statue should eventually wake it: " + JSON.stringify(statue));
 
 if (logs.length) throw new Error("page errors: " + logs.join(" | "));
 await browser.close();
