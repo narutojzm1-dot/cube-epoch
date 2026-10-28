@@ -38,6 +38,11 @@ const must = [
   ["DAY_EVENT_CHANCE = 0.6", data],
   ["function rollDayEvent", js],
   ["function tradeCaravan", js],
+  ["export const ACHIEVEMENTS = [", data],
+  ["STORE_PREFIX = \"cube-epoch:v1:\"", data],
+  ["id=\"btn-daily\"", html],
+  ["id=\"btn-codex\"", html],
+  ["方块纪元·每日", js],
   ["function nextEra", js],
   ["function shareText", js],
   ["function ensureMusicPad", js],
@@ -64,6 +69,12 @@ const relicCount = (data.match(/\{ id: "[a-z_]+", type: "(relic|blessing|mutatio
 if (relicCount < 12) throw new Error("need at least 12 dawn gifts, got " + relicCount);
 for (const m of data.matchAll(/\{ id: "([a-z_]+)", type: "(relic|mutation)"/g)) {
   if (!js.includes(`has("${m[1]}")`)) throw new Error("relic has no effect hook: " + m[1]);
+}
+
+const achIds = [...data.matchAll(/\{ id: "([a-z_0-9]+)", name: "[^"]+", desc: "[^"]+" \}/g)].map((m) => m[1]);
+if (achIds.length < 12 || achIds.length > 16) throw new Error("need 12~16 achievements, got " + achIds.length);
+for (const id of achIds) {
+  if (!js.includes(`    ${id}: (s`)) throw new Error("achievement has no ACH_CHECK rule: " + id);
 }
 
 if (js.includes("state.look && Math.hypot(state.look.x - p.x")) {

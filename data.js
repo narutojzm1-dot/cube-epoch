@@ -265,3 +265,26 @@ export const TRADES = [
   { give: { stone: 3 }, get: { seed: 2 } },
   { give: { wood: 3 }, get: { wheat: 2 } },
 ];
+
+// 成就：存 localStorage（cube-epoch:v1:ach）。判定写在 game.js 的 ACH_CHECK 里，键名与 id 一一对应。
+export const ACHIEVEMENTS = [
+  { id: "first_night", name: "第一缕晨光", desc: "撑过第一夜。" },
+  { id: "first_heart", name: "心之匠", desc: "合成一颗方块之心。" },
+  { id: "era_one", name: "纪元落幕", desc: "完成第一纪元的献祭。" },
+  { id: "era_three", name: "三世薪火", desc: "进入第三纪元。" },
+  { id: "no_repair", name: "不补之墙", desc: "一局里一次都没修墙就完成献祭。" },
+  { id: "farm_only", name: "粮食就是药", desc: "完成献祭，且回血只靠吃麦和收麦。" },
+  { id: "full_camp", name: "火苗未惊", desc: "整夜篝火一点没掉血。" },
+  { id: "night_30", name: "长夜屠夫", desc: "单夜击杀 30 只怪。" },
+  { id: "boss_slayer", name: "弑王者", desc: "击败一位纪元 Boss。" },
+  { id: "tower_three", name: "箭塔林立", desc: "一局里建起 3 座箭塔。" },
+  { id: "trader", name: "精明买卖", desc: "和路过的商队做满两笔交易。" },
+  { id: "stargazer", name: "观星人", desc: "亲眼看见陨石坠落。" },
+  { id: "statue_wake", name: "惊扰者", desc: "挖金吵醒了晶洞的石像。" },
+  { id: "relic_five", name: "收藏家", desc: "一局里集齐 5 件遗物。" },
+  { id: "mutant", name: "与魔鬼交易", desc: "接受一份变异。" },
+  { id: "daily", name: "今日之火", desc: "完成一次每日挑战（结算即可）。" },
+];
+
+export const DAILY_PREFIX = "daily-";
+export const STORE_PREFIX = "cube-epoch:v1:";

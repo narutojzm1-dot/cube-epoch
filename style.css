@@ -570,3 +570,10 @@ h1 {
 .overlay-actions button.choice.mutation { border-left-color: var(--hp); }
 .overlay-actions button.choice:hover,
 .overlay-actions button.choice:focus-visible { background: #4a3a50; }
+
+.meta-row { display: flex; gap: 10px; justify-content: center; margin-top: 10px; flex-wrap: wrap; }
+.meta-row button { padding: 8px 14px; font-size: 13px; }
+#btn-daily { background: #e8c040; }
+#btn-daily:disabled { opacity: 0.55; cursor: not-allowed; }
+.title-stats { text-align: center; color: var(--muted); font-size: 12px; margin-top: 8px; min-height: 1em; }
+.overlay.codex #overlay-body { max-height: 60vh; overflow-y: auto; text-align: left; font-size: 13px; line-height: 1.6; }

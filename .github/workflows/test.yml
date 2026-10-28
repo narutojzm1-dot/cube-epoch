@@ -36,3 +36,4 @@ jobs:
       - run: node tests/e2e.mjs
       - run: node tests/roguelite.mjs
       - run: node tests/content.mjs
+      - run: node tests/meta.mjs
