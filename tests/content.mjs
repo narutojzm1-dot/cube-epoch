@@ -6,6 +6,28 @@ const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
 const logs = [];
 page.on("pageerror", (e) => logs.push(e.message));
 
+// Poll observable game outcomes, not wall-clock sleeps: slow headless frames and
+// hitstop can leave the simulation unchanged for several hundred milliseconds.
+await page.addInitScript(() => {
+  window.waitForTestCondition = (predicate, label) => new Promise((resolve, reject) => {
+    let frame;
+    const timer = setTimeout(() => {
+      cancelAnimationFrame(frame);
+      reject(new Error(`Timed out waiting for ${label}`));
+    }, 10000);
+    const check = () => {
+      try {
+        if (predicate()) { clearTimeout(timer); resolve(); }
+        else frame = requestAnimationFrame(check);
+      } catch (error) {
+        clearTimeout(timer);
+        reject(error);
+      }
+    };
+    check();
+  });
+});
+
 await page.goto(origin + "?seed=content", { waitUntil: "domcontentloaded" });
 await enterPlay(page, "knight");
 
@@ -21,6 +43,8 @@ const setNight = () => page.evaluate(() => {
   st.toSpawn = 0;
   st.enemies = [];
   st.rocks = [];
+  st.hitstop = 0;
+  st.campHurtCd = 0;
   st.campHp = 100;
   st.player.x = 40 * 16 + 8;
   st.player.y = 30 * 16 + 8;
@@ -52,7 +76,7 @@ await page.evaluate(() => {
   st.tiles[10 * 48 + 30] = 13;
   C.spawn("burrower", 31, 10);
 });
-await page.waitForTimeout(120);
+await page.waitForFunction(() => window.CUBE.getState().enemies[0]?.under === false);
 const lit = await page.evaluate(() => window.CUBE.getState().enemies[0]?.under);
 if (lit !== false) throw new Error("torch should reveal burrower");
 
@@ -63,7 +87,7 @@ await page.evaluate(() => {
   const i = C.spawn("spore", 22, 27);
   C.getState().enemies[i].hp = 0;
 });
-await page.waitForTimeout(120);
+await page.waitForFunction(() => [[22, 27], [21, 27], [23, 28]].every(([x, y]) => window.CUBE.getState().tiles[y * 48 + x] === 14));
 for (const [tx, ty] of [[22, 27], [21, 27], [23, 28]]) {
   const t = await tileAt(tx, ty);
   if (t !== 14) throw new Error(`spore should corrupt ${tx},${ty}, got ${t}`);
@@ -101,7 +125,7 @@ const split = await page.evaluate(async () => {
   const boss = st.enemies.find((e) => e.kind === "slime_king");
   const before = st.enemies.length;
   boss.hp = boss.maxHp * 0.4;
-  await new Promise((r) => setTimeout(r, 500));
+  await window.waitForTestCondition(() => boss.phase2 && st.enemies.length - before >= 4, "boss phase-two split");
   return { phase2: boss.phase2, added: st.enemies.length - before };
 });
 if (!split.phase2 || split.added < 4) throw new Error("boss phase 2 should split slimes: " + JSON.stringify(split));
@@ -197,7 +221,7 @@ const builds = await page.evaluate(async () => {
   st.player.hp = 10;
   st.player.x = 38 * 16 + 8;
   st.player.y = 31 * 16 + 8;
-  await new Promise((r) => setTimeout(r, 1200));
+  await window.waitForTestCondition(() => (slime.hp < hp0 || !st.enemies.includes(slime)) && st.player.hp > 10, "tower shot and spring healing");
   return { tower, spike, spring, shot: slime.hp < hp0 || !st.enemies.includes(slime), healed: st.player.hp > 10, stone: st.inv.stone, gold: st.inv.gold };
 });
 if (builds.tower !== 15 || builds.spike !== 16 || builds.spring !== 17) throw new Error("buildings not placed: " + JSON.stringify(builds));
@@ -212,7 +236,7 @@ const spikeHit = await page.evaluate(async () => {
   const s = st.enemies[0];
   s.spd = 0;
   const hp0 = s.hp;
-  await new Promise((r) => setTimeout(r, 400));
+  await window.waitForTestCondition(() => s.hp < hp0, "spike damage");
   return hp0 - s.hp;
 });
 if (!(spikeHit > 0)) throw new Error("spikes should hurt ground enemies standing on them");
@@ -293,7 +317,7 @@ const startEvent = (n) => page.evaluate(async (night) => {
   st.nights = night;
   const ev = C.rollDayEvent();
   ev.delay = 0;
-  await new Promise((r) => setTimeout(r, 200));
+  await window.waitForTestCondition(() => ev.started, "day event start");
   return { id: ev.id, started: ev.started, x: ev.x, y: ev.y, trade: ev.trade, tiles: ev.tiles };
 }, n);
 
@@ -321,7 +345,7 @@ const meteorTiles = await page.evaluate(async (ev) => {
   const placed = ev.tiles.filter((c) => at(c) === c.t).length;
   const gold = ev.tiles.filter((c) => at(c) === 5).length;
   st.cycle = st.dayLen - 0.02;
-  await new Promise((r) => setTimeout(r, 200));
+  await window.waitForTestCondition(() => !st.day, "meteor night transition");
   const left = ev.tiles.filter((c) => at(c) === 4 || at(c) === 5).length;
   return { placed, gold, left, night: !st.day };
 }, meteor);
@@ -333,7 +357,7 @@ const migration = await startEvent(dayOf("migration"));
 const herd = await page.evaluate(async () => {
   const st = window.CUBE.getState();
   st.dayEvent.wait = 0.05;
-  await new Promise((r) => setTimeout(r, 300));
+  await window.waitForTestCondition(() => st.enemies.length >= 4, "migration wave");
   return st.enemies.length;
 });
 if (migration.id !== "migration" || herd < 4) throw new Error("migration should bring a daytime mini-wave, got " + herd);
@@ -360,12 +384,8 @@ const feel = await page.evaluate(async () => {
   st.cycle = 10;
   st.enemies = [];
   C.spawn("slime", Math.floor(st.player.x / 16) + 1, Math.floor(st.player.y / 16));
-  let hurtSeen = false;
-  for (let i = 0; i < 30 && !hurtSeen; i += 1) {
-    await new Promise((r) => setTimeout(r, 50));
-    hurtSeen = !!st.hurtDir;
-  }
-  return { noon, dusk, early, deep, hurtSeen };
+  await window.waitForTestCondition(() => !!st.hurtDir, "hurt-direction indicator");
+  return { noon, dusk, early, deep, hurtSeen: !!st.hurtDir };
 });
 if (!(feel.noon === 0 && feel.dusk > 0.2)) throw new Error("dusk should tint the sky: " + JSON.stringify(feel));
 if (!(feel.early < feel.deep)) throw new Error("night should fade in: " + JSON.stringify(feel));
