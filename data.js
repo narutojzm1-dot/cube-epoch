@@ -154,6 +154,7 @@ export const RELICS = [
   { id: "ember_core", type: "relic", name: "余烬之芯", desc: "篝火受到的伤害 -30%。", weight: 8 },
   { id: "thorn_fence", type: "relic", name: "荆棘栅栏", desc: "啃栅栏的怪每秒受到 8 点伤害。", weight: 7 },
   { id: "harvest_charm", type: "relic", name: "丰饶护符", desc: "吃麦额外回复 10 生命。", weight: 7 },
+  { id: "sundial_shard", type: "relic", name: "日晷碎片", desc: "白天日晷行动点 +4。", weight: 8 },
   { id: "lucky_coin", type: "relic", name: "幸运币", desc: "怪物掉落概率 ×1.5。", weight: 7 },
   { id: "supply_cache", type: "blessing", name: "补给箱", desc: "立刻获得 6 木、4 石。", weight: 10 },
   { id: "hearth_song", type: "blessing", name: "炉火之歌", desc: "篝火与生命立刻回满。", weight: 9 },
@@ -189,4 +190,9 @@ export const RELIC_FX = {
   glassCannonDmg: 1.5,
   glassCannonHp: 0.7,
   greedyHearthGold: 3,
+  sundialAp: 4,
 };
+
+// 日晷行动点：白天砍树、挖矿、建造、修墙各耗 1 点；收麦、拆除与夜里的行动不耗点。天亮回满。
+export const AP_BASE = 14;
+export const AP_COST = { chop: 1, mine: 1, build: 1, repair: 1 };

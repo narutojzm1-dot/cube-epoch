@@ -1,5 +1,5 @@
 import {
-  TILE, COLS, ROWS, VIEW_W, VIEW_H, NEED, WIN_NIGHTS, CAMP_MAX, FENCE_MAX, T, CLASSES,
+  TILE, COLS, ROWS, VIEW_W, VIEW_H, NEED, AP_BASE, AP_COST, WIN_NIGHTS, CAMP_MAX, FENCE_MAX, T, CLASSES,
   ENEMIES, SPAWN_TABLE, ENEMY_DROPS, WAVES, ERA_SCALING, ERA_NIGHTS_STEP, ERA_NAMES,
   RELICS, RELIC_TYPE_LABEL, DAWN_CHOICES, RELIC_FX, BOSSES, ENEMY_FX,
 } from "./data.js";
@@ -25,6 +25,7 @@ import {
   const campText = document.getElementById("camp-text");
   const clockEl = document.getElementById("clock");
   const objectiveEl = document.getElementById("objective");
+  const apEl = document.getElementById("ap");
   const skillName = document.getElementById("skill-name");
   const skillCdEl = document.getElementById("skill-cd");
   const skillDock = document.querySelector(".skill-dock");
@@ -729,6 +730,9 @@ import {
       bossKills: 0,
       nightKills: 0,
       nightCampHit: false,
+      ap: AP_BASE,
+      apWarn: 0,
+      lastPlace: null,
       nightWarned: false,
       skippedGuide: false,
       flags: { moved: false, chopped: false, gathered: false, crafted: false, offered: false, planted: false, sawWheat: false, built: false },
@@ -922,7 +926,8 @@ import {
       "WASD  移动",
       "空格  砍/挖/打面前的东西",
       "1 栅栏　2 火把　3 田（按 0 取消）",
-      "点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。",
+      "点空地放下；点坏墙修理。空格拆除。Z 撤销上一次建造。自己能穿过栅栏。",
+      "白天的日晷有限：砍树、挖矿、建造、修墙各耗 1 点，天亮回满。收麦、拆除和夜里行动不耗点。",
       "先把篝火四边围上，再留木头合成方块之心。",
       "E  工作台合成 / 祭坛献祭 / 播种",
       "Q 或右键  职业技能",
@@ -930,6 +935,52 @@ import {
       "",
       "栅栏挡地面怪，挡不住蝙蝠。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过两夜才能献。",
     ].join("\n");
+  }
+
+  function apMax() {
+    return AP_BASE + (has("sundial_shard") ? RELIC_FX.sundialAp : 0);
+  }
+
+  function apCostOfTile(t) {
+    if (!state.day) return 0;
+    if (t === T.TREE) return AP_COST.chop;
+    if (t === T.STONE || t === T.GOLD) return AP_COST.mine;
+    return 0;
+  }
+
+  function apShort(n, what) {
+    if (!state.day || state.ap >= n) return false;
+    if (state.apWarn <= 0) {
+      toast(`日晷用尽：今天不能再${what}。收麦、拆除和夜里的行动不耗点。`, 2.6);
+      beep(160, 0.08, "square", 0.03);
+      state.apWarn = 2.4;
+    }
+    return true;
+  }
+
+  function spendAp(n) {
+    if (!state.day || n <= 0) return;
+    state.ap = Math.max(0, state.ap - n);
+    syncHud();
+  }
+
+  function undoPlace() {
+    const u = state.lastPlace;
+    state.lastPlace = null;
+    if (!u || u.day !== state.nights || !state.day || tileAt(u.tx, u.ty) !== u.tile) {
+      toast("没有可以撤销的建造。");
+      return false;
+    }
+    setTile(u.tx, u.ty, u.prev);
+    if (u.tile === T.FENCE) state.fenceHp.delete(`${u.tx},${u.ty}`);
+    if (u.stored) state.inv[u.stored] += 1;
+    else for (const [k, n] of Object.entries(u.paid)) state.inv[k] = (state.inv[k] || 0) + n;
+    state.ap = Math.min(apMax(), state.ap + u.ap);
+    burst(u.tx * TILE + 8, u.ty * TILE + 8, "#c0c4cc", 6);
+    toast("撤销了上一次建造，材料和日晷点已退回。");
+    beep(300, 0.05, "triangle", 0.03);
+    syncHud();
+    return true;
   }
 
   function buildCost(kind) {
@@ -1002,6 +1053,8 @@ import {
         toast("修墙需要 1 木。");
         return true;
       }
+      if (apShort(AP_COST.repair, "修墙")) return true;
+      spendAp(AP_COST.repair);
       state.inv.wood -= 1;
       state.fenceHp.set(key, fenceMax());
       burst(tx * TILE + 8, ty * TILE + 8, "#c4a06a", 6);
@@ -1015,15 +1068,18 @@ import {
     }
     const cost = buildCost(kind);
     const stored = kind === "fence" ? "fence" : kind === "torch" ? "torch" : "plot";
-    if ((state.inv[stored] || 0) > 0) {
-      state.inv[stored] -= 1;
-    } else if (canPay(cost)) {
-      pay(cost);
-    } else {
+    const hasStored = (state.inv[stored] || 0) > 0;
+    if (!hasStored && !canPay(cost)) {
       const miss = Object.entries(cost).filter(([k, n]) => (state.inv[k] || 0) < n).map(([k, n]) => `${labelOf(k)}${n}`);
       toast("材料不够：" + miss.join("、"));
       return true;
     }
+    if (apShort(AP_COST.build, "建造")) return true;
+    const apPaid = state.day ? AP_COST.build : 0;
+    spendAp(apPaid);
+    const prev = tileAt(tx, ty);
+    if (hasStored) state.inv[stored] -= 1;
+    else pay(cost);
     const openBefore = kind === "fence" && !campWalled();
     if (kind === "fence") {
       setTile(tx, ty, T.FENCE);
@@ -1033,6 +1089,7 @@ import {
     } else {
       setTile(tx, ty, T.FARM);
     }
+    state.lastPlace = { tx, ty, prev, tile: tileAt(tx, ty), stored: hasStored ? stored : null, paid: hasStored ? {} : cost, ap: apPaid, day: state.nights };
     state.flags.built = true;
     burst(tx * TILE + 8, ty * TILE + 8, "#ffe27a", 8);
     beep(400, 0.05, "square", 0.04);
@@ -1352,6 +1409,8 @@ import {
       p.hp = p.maxHp;
     } else if (id === "wolf_howl") {
       state.howlPending = true;
+    } else if (id === "sundial_shard" && state.day) {
+      state.ap += RELIC_FX.sundialAp;
     } else if (id === "glass_cannon") {
       p.maxHp = Math.round(p.maxHp * RELIC_FX.glassCannonHp);
       p.hp = Math.min(p.hp, p.maxHp);
@@ -1369,6 +1428,9 @@ import {
     const t = tileAt(tx, ty);
     const cx = tx * TILE + 8;
     const cy = ty * TILE + 8;
+    const apCost = apCostOfTile(t);
+    if (apCost && apShort(apCost, t === T.TREE ? "砍树" : "挖矿")) return false;
+    spendAp(apCost);
     if (t === T.TREE) {
       setTile(tx, ty, T.DIRT);
       addDrop("wood", cx, cy, 3 + rand("loot", 2));
@@ -2038,6 +2100,12 @@ import {
     if (!mouse.down && !usingSpace) p.blockMine = false;
     const enemyNear = state.enemies.some((e) => targetable(e) && dist(e.x, e.y, p.x, p.y) < 42);
     const doMine = () => {
+      const apCost = apCostOfTile(t);
+      if (apCost && apShort(apCost, t === T.TREE ? "砍树" : "挖矿")) {
+        p.mine = 0;
+        p.mineTx = -1;
+        return;
+      }
       if (p.mineTx !== f.tx || p.mineTy !== f.ty) startMine(f.tx, f.ty);
       const hard = t === T.GOLD ? 1.35 : t === T.STONE ? 1.05 : t === T.TREE ? 0.85 : 0.35;
       const axe = t === T.TREE && has("flint_axe") ? RELIC_FX.flintAxeChop : 1;
@@ -2094,6 +2162,7 @@ import {
 
   function updateCycle(dt) {
     state.time += dt;
+    state.apWarn = Math.max(0, state.apWarn - dt);
     state.cycle += dt;
     const len = state.day ? state.dayLen : state.nightLen;
     if (state.cycle >= len) {
@@ -2125,6 +2194,8 @@ import {
         state.howl = 0;
         state.nightWarned = false;
         state.fenceBreakWarn = false;
+        state.ap = apMax();
+        state.lastPlace = null;
         if (has("greedy_hearth")) {
           state.inv.gold += RELIC_FX.greedyHearthGold;
           floatText(state.camp.x, state.camp.y - 18, `+${RELIC_FX.greedyHearthGold}金`, "#e8c040");
@@ -2279,11 +2350,15 @@ import {
     clockEl.textContent = `${state.era > 1 ? eraName(state.era) + " · " : ""}${state.day ? "白天" : "夜晚"} ${m}:${s}`;
     clockEl.className = "clock " + (state.day ? "day" : "night");
     objectiveEl.textContent = objectiveText();
+    if (apEl) {
+      apEl.textContent = state.day ? `日晷 ${state.ap}/${apMax()}` : "日晷 · 夜里不耗点";
+      apEl.classList.toggle("empty", state.day && state.ap <= 0);
+    }
     skillCdEl.textContent = p.skillCd > 0 ? `${p.skillCd.toFixed(1)}s` : "就绪";
     skillDock.classList.toggle("ready", p.skillCd <= 0);
     if (state.build) {
       const names = { fence: "栅栏", torch: "火把", plot: "田" };
-      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)} · 点空地放下 / 点坏墙修理 · 按 0 取消`;
+      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)}${state.day ? " + 1 日晷" : ""} · 点空地放下 / 点坏墙修理 · Z 撤销 · 按 0 取消`;
       buildBanner.classList.remove("hidden");
     } else {
       buildBanner.classList.add("hidden");
@@ -2836,6 +2911,10 @@ import {
     if (e.key === "1" || e.code === "Digit1" || e.code === "Numpad1") setBuild("fence");
     if (e.key === "2" || e.code === "Digit2" || e.code === "Numpad2") setBuild("torch");
     if (e.key === "3" || e.code === "Digit3" || e.code === "Numpad3") setBuild("plot");
+    if (e.code === "KeyZ" || e.code === "Backspace") {
+      e.preventDefault();
+      undoPlace();
+    }
   });
   window.addEventListener("keyup", (e) => keys.delete(e.code));
   canvas.addEventListener("mousemove", (e) => {
@@ -2872,6 +2951,7 @@ import {
     gather: (tx, ty) => gatherTile(tx, ty),
     setBuild,
     place: (tx, ty) => tryPlace(tx, ty),
+    undo: () => undoPlace(),
     spawn: (kind, tx, ty) => {
       const e = makeEnemy(kind, tx * TILE + 8, ty * TILE + 8);
       state.enemies.push(e);

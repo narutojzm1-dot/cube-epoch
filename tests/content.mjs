@@ -105,6 +105,46 @@ const split = await page.evaluate(async () => {
 });
 if (!split.phase2 || split.added < 4) throw new Error("boss phase 2 should split slimes: " + JSON.stringify(split));
 
+// 日晷行动点：白天砍树/建造耗点，耗尽后被拦下；撤销退回材料与点数；天亮回满
+const ap = await page.evaluate(() => {
+  const C = window.CUBE;
+  const st = C.getState();
+  st.enemies = [];
+  st.day = true;
+  st.cycle = 1;
+  st.dayLen = 999;
+  st.ap = 2;
+  st.inv.wood = 10;
+  const trees = [];
+  for (let i = 0; i < st.tiles.length; i += 1) if (st.tiles[i] === 6) trees.push([i % 48, Math.floor(i / 48)]);
+  const [ax, ay] = trees[0];
+  const [bx, by] = trees[1];
+  C.gather(ax, ay);
+  const afterChop = st.ap;
+  C.setBuild("fence");
+  const woodBefore = st.inv.wood;
+  C.place(30, 24);
+  const afterBuild = st.ap;
+  const blockedTree = st.tiles[by * 48 + bx];
+  C.gather(bx, by);
+  const stillTree = st.tiles[by * 48 + bx] === blockedTree;
+  const undone = C.undo();
+  const refunded = st.inv.wood === woodBefore && st.ap === 1 && st.tiles[24 * 48 + 30] !== 12;
+  C.setBuild(null);
+  return { afterChop, afterBuild, stillTree, undone, refunded };
+});
+if (ap.afterChop !== 1 || ap.afterBuild !== 0 || !ap.stillTree || !ap.undone || !ap.refunded) {
+  throw new Error("sundial AP economy broken: " + JSON.stringify(ap));
+}
+await page.evaluate(() => {
+  const st = window.CUBE.getState();
+  st.day = true;
+  st.dayLen = 0.05;
+  st.cycle = 0;
+  st.nightLen = 0.05;
+});
+await page.waitForFunction(() => window.CUBE.getState().ap >= 14, null, { timeout: 4000 });
+
 if (logs.length) throw new Error("page errors: " + logs.join(" | "));
 await browser.close();
 server.close();

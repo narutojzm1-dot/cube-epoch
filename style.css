@@ -196,6 +196,13 @@ h1 {
   font-size: 12px;
   margin-top: 4px;
 }
+.ap {
+  text-align: center;
+  color: #e8c040;
+  font-size: 12px;
+  margin-top: 2px;
+}
+.ap.empty { color: #ff7a6a; }
 .hud-right { text-align: right; display: flex; justify-content: flex-end; gap: 8px; }
 #btn-pause, #btn-help, #btn-mute { padding: 6px 12px; font-size: 12px; }
 #btn-help { background: #e8dcc8; }
