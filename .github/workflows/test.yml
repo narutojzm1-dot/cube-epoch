@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: node --check game.js
+      - run: node --check game.js && node --check data.js
       - run: node tests/static.mjs
 
   e2e:

@@ -1,80 +1,11 @@
+import {
+  TILE, COLS, ROWS, VIEW_W, VIEW_H, NEED, WIN_NIGHTS, CAMP_MAX, FENCE_MAX, T, CLASSES,
+  ENEMIES, SPAWN_TABLE, ENEMY_DROPS, WAVES, ERA_SCALING, ERA_NIGHTS_STEP, ERA_NAMES,
+  RELICS, RELIC_TYPE_LABEL, DAWN_CHOICES, RELIC_FX,
+} from "./data.js";
+
 (() => {
   "use strict";
-
-  const TILE = 16;
-  const COLS = 48;
-  const ROWS = 36;
-  const VIEW_W = 20;
-  const VIEW_H = 12;
-  const NEED = { wood: 4, stone: 5, gold: 3, wheat: 3 };
-  const WIN_NIGHTS = 2;
-  const CAMP_MAX = 100;
-  const FENCE_MAX = 80;
-
-  const T = {
-    GRASS: 1,
-    DIRT: 2,
-    WATER: 3,
-    STONE: 4,
-    GOLD: 5,
-    TREE: 6,
-    FARM: 7,
-    CROP: 8,
-    SAND: 9,
-    PATH: 10,
-    BRICK: 11,
-    FENCE: 12,
-    TORCH: 13,
-  };
-
-  const CLASSES = {
-    miner: {
-      name: "矿工阿石",
-      hp: 110,
-      speed: 62,
-      melee: 18,
-      mine: 2.35,
-      goldBonus: 1,
-      light: 108,
-      skill: "矿脉感应",
-      skillCd: 9,
-    },
-    farmer: {
-      name: "农夫麦麦",
-      hp: 100,
-      speed: 60,
-      melee: 12,
-      mine: 1,
-      grow: 2.4,
-      light: 82,
-      skill: "丰收术",
-      skillCd: 11,
-      seeds: 6,
-    },
-    mage: {
-      name: "法师星萤",
-      hp: 78,
-      speed: 58,
-      melee: 0,
-      ranged: 22,
-      mana: 8,
-      mine: 0.9,
-      light: 100,
-      skill: "星爆",
-      skillCd: 8,
-    },
-    knight: {
-      name: "骑士方盾",
-      hp: 165,
-      speed: 64,
-      melee: 20,
-      dr: 0.35,
-      mine: 1.05,
-      light: 78,
-      skill: "冲锋",
-      skillCd: 6,
-    },
-  };
 
   const canvas = document.getElementById("game");
   const ctx = canvas.getContext("2d");
@@ -139,8 +70,40 @@
   const keys = new Set();
   const mouse = { x: 0, y: 0, down: false, pressed: false, right: false, inside: false };
 
-  function rand(n) {
-    return Math.floor(Math.random() * n);
+  // 种子化 PRNG：按用途拆成四条独立随机流，互不干扰。
+  // world: 地图生成 · event: 波次/敌种/掉落判定/黎明三选一 · loot: 局内掉落微调 · fx: 音画表现
+  function mulberry32(a) {
+    return function next() {
+      a = (a + 0x6d2b79f5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function hashSeed(str) {
+    let h = 2166136261 >>> 0;
+    for (let i = 0; i < str.length; i++) {
+      h ^= str.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return h >>> 0;
+  }
+  const RNG_STREAMS = ["world", "event", "loot", "fx"];
+  const urlSeed = (new URLSearchParams(location.search).get("seed") || "").replace(/[^\w-]/g, "").slice(0, 32);
+  let rng = makeStreams(newSeed());
+  function newSeed() {
+    return String(Math.floor(Math.random() * 1e9)).padStart(9, "0");
+  }
+  function makeStreams(seed) {
+    const s = {};
+    for (const name of RNG_STREAMS) s[name] = mulberry32(hashSeed(`${seed}:${name}`));
+    return s;
+  }
+  function rnd(stream) {
+    return rng[stream]();
+  }
+  function rand(stream, n) {
+    return Math.floor(rng[stream]() * n);
   }
   function clamp(v, a, b) {
     return Math.max(a, Math.min(b, v));
@@ -214,7 +177,7 @@
     const n = Math.max(1, Math.floor(audioCtx.sampleRate * dur));
     const buf = audioCtx.createBuffer(1, n, audioCtx.sampleRate);
     const data = buf.getChannelData(0);
-    for (let i = 0; i < n; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / n);
+    for (let i = 0; i < n; i++) data[i] = (rnd("fx") * 2 - 1) * (1 - i / n);
     const src = audioCtx.createBufferSource();
     src.buffer = buf;
     const f = audioCtx.createBiquadFilter();
@@ -230,7 +193,7 @@
 
   function footstep() {
     noise(0.05, 0.045, 500);
-    beep(90 + rand(30), 0.04, "square", 0.02);
+    beep(90 + rand("fx", 30), 0.04, "square", 0.02);
   }
 
   function chopSound() {
@@ -642,10 +605,13 @@
       screenIntro.classList.add("hidden");
     }
     const briefOn = !!(opts && opts.brief);
+    const seed = String((opts && opts.seed) || urlSeed || newSeed());
+    rng = makeStreams(seed);
     const world = genWorld();
     const def = CLASSES[cls];
     state = {
       cls,
+      seed,
       tiles: world.tiles,
       crops: world.crops,
       player: makePlayer(cls),
@@ -1111,9 +1077,9 @@
     for (let i = 0; i < (n || 1); i++) {
       state.drops.push({
         kind,
-        x: x + rand(7) - 3,
-        y: y + rand(7) - 3,
-        z: 6 + rand(6),
+        x: x + rand("fx", 7) - 3,
+        y: y + rand("fx", 7) - 3,
+        z: 6 + rand("fx", 6),
         vz: -40,
         life: 18,
       });
@@ -1121,10 +1087,10 @@
   }
   function burst(x, y, color, n) {
     for (let i = 0; i < (n || 8); i++) {
-      const a = Math.random() * Math.PI * 2;
-      const s = 18 + rand(40);
+      const a = rnd("fx") * Math.PI * 2;
+      const s = 18 + rand("fx", 40);
       state.particles.push({
-        x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s, life: 0.4 + Math.random() * 0.3, color,
+        x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s, life: 0.4 + rnd("fx") * 0.3, color,
       });
     }
   }
@@ -1189,7 +1155,7 @@
     const cy = ty * TILE + 8;
     if (t === T.TREE) {
       setTile(tx, ty, T.DIRT);
-      addDrop("wood", cx, cy, 3 + rand(2));
+      addDrop("wood", cx, cy, 3 + rand("loot", 2));
       if (!state.flags.chopped) state.benchHint = 8;
       state.flags.chopped = true;
       burst(cx, cy, "#6bcf6b", 16);
@@ -1198,12 +1164,12 @@
       chopSound();
     } else if (t === T.STONE) {
       setTile(tx, ty, T.DIRT);
-      addDrop("stone", cx, cy, 2 + rand(2));
+      addDrop("stone", cx, cy, 2 + rand("loot", 2));
       burst(cx, cy, "#c0c4cc", 10);
       beep(200, 0.05, "square", 0.04);
     } else if (t === T.GOLD) {
       setTile(tx, ty, T.STONE);
-      addDrop("gold", cx, cy, 1 + (state.cls === "miner" ? 1 : 0) + rand(2));
+      addDrop("gold", cx, cy, 1 + (state.cls === "miner" ? 1 : 0) + rand("loot", 2));
       burst(cx, cy, "#e8c040", 12);
       beep(740, 0.08, "square", 0.05);
     } else if (t === T.CROP) {
@@ -1405,19 +1371,20 @@
       edges.push([1, y], [COLS - 2, y]);
     }
     for (let k = 0; k < 24; k++) {
-      const [tx, ty] = edges[rand(edges.length)];
+      const [tx, ty] = edges[rand("event", edges.length)];
       if (solid(tx, ty)) continue;
       const x = tx * TILE + 8;
       const y = ty * TILE + 8;
       if (dist(x, y, state.camp.x, state.camp.y) < 80) continue;
-      const nights = state.nights;
       let kind = "slime";
-      if (nights >= 2 && state.wave >= 2 && Math.random() < 0.45) kind = "bat";
-      if (nights >= 3 && Math.random() < 0.22) kind = "cube";
-      const hp = kind === "slime" ? 32 : kind === "bat" ? 22 : 64;
-      const spd = kind === "slime" ? 26 : kind === "bat" ? 44 : 30;
-      const dmg = kind === "slime" ? 9 : kind === "bat" ? 8 : 16;
-      state.enemies.push({ kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd, dmg, hit: 0, flash: 0, bob: Math.random() });
+      for (const row of SPAWN_TABLE) {
+        if (state.nights >= row.minNight && state.wave >= row.minWave && rnd("event") < row.chance) kind = row.kind;
+      }
+      const def = ENEMIES[kind];
+      const hp = def.hp;
+      const spd = def.spd;
+      const dmg = def.dmg;
+      state.enemies.push({ kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd, dmg, hit: 0, flash: 0, bob: rnd("fx") });
       return;
     }
   }
@@ -1448,14 +1415,14 @@
 
   function startNightWaves() {
     state.wave = 0;
-    state.wavesTotal = state.nights === 1 ? 2 : 3;
+    state.wavesTotal = state.nights === 1 ? WAVES.firstNight : WAVES.later;
     state.toSpawn = 0;
     state.waveWait = 2.2;
   }
 
   function beginWave() {
     state.wave += 1;
-    state.toSpawn = 3 + state.nights + state.wave;
+    state.toSpawn = WAVES.baseSpawn + state.nights + state.wave;
     state.spawnAcc = 0;
     state.waveWait = 0;
     toast(`第 ${state.nights} 夜 · 第 ${state.wave}/${state.wavesTotal} 波来了！`, 2.4);
@@ -1575,10 +1542,9 @@
       punch(2.6, 0.045);
       burst(e.x, e.y, "#8dff9a", 8);
       state.kills += 1;
-      if (Math.random() < 0.45) addDrop("wheat", e.x, e.y, 1);
-      if (Math.random() < 0.16) addDrop("gold", e.x, e.y, 1);
-      if (Math.random() < 0.22) addDrop("wood", e.x, e.y, 1);
-      if (Math.random() < 0.2) addDrop("seed", e.x, e.y, 1);
+      for (const d of ENEMY_DROPS) {
+        if (rnd("event") < d.chance) addDrop(d.kind, e.x, e.y, 1);
+      }
       return false;
     });
   }
@@ -2160,7 +2126,7 @@
     ctx.setTransform(scale, 0, 0, scale, 0, 0);
     ctx.imageSmoothingEnabled = false;
     if (state.shake > 0) {
-      ctx.translate((Math.random() - 0.5) * state.shake, (Math.random() - 0.5) * state.shake);
+      ctx.translate((rnd("fx") - 0.5) * state.shake, (rnd("fx") - 0.5) * state.shake);
       state.shake = Math.max(0, state.shake - 0.45);
     }
     ctx.fillStyle = "#16351c";
