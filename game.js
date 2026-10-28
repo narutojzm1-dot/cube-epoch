@@ -7,9 +7,16 @@
   const VIEW_W = 20;
   const VIEW_H = 12;
   const NEED = { wood: 4, stone: 5, gold: 3, wheat: 3 };
-  const WIN_NIGHTS = 2;
+  // 以前是 2；第一夜当教学，第三夜才出金色立方
+  const WIN_NIGHTS = 3;
   const CAMP_MAX = 100;
   const FENCE_MAX = 80;
+  // 后几天仍用原来的白天长度
+  const DAY_LEN = 62;
+  // 第一天多给十几秒，够砍树围营再出门
+  const FIRST_DAY_LEN = 76;
+  // 再玩的人跳过开场爬字和营地预演；第一次预演结束才写入
+  const SEEN_KEY = "cube-epoch-seen";
 
   const T = {
     GRASS: 1,
@@ -121,12 +128,14 @@
   const btnSkipBrief = document.getElementById("btn-skip-brief");
 
   const GUIDE = [
-    { id: "move", title: "第一步：走起来", body: "用 WASD 移动。先走到附近的树旁边。" },
-    { id: "chop", title: "第二步：砍木头", body: "走到树前面按空格，或对准树按住左键。木头用来围栅栏、点火把。" },
+    { id: "move", title: "第一步：走起来", body: "用 WASD 或方向键移动。金框指着附近的树，先走过去。" },
+    { id: "chop", title: "第二步：砍木头", body: "对准金框的树，按空格或按住左键。木头会飞进背包，用来围栅栏。" },
+    // 围营正文会按缺口/木料在 wallGuideBody 里重写；原句留下当兜底
     { id: "build", title: "第三步：围营地", body: "按 1 选栅栏，把篝火上下左右四格围上。发光的格子就是缺口。木头还要留给方块之心。" },
-    { id: "night", title: "第四步：守住篝火", body: "怪朝篝火走，站在墙后打，缺口要补。第二夜才有蝙蝠飞进来。" },
-    { id: "offer", title: "第五步：天亮献祭", body: "凑齐材料在工作台按 E 合成方块之心。撑过两夜，天亮后送到北边祭坛。" },
+    { id: "night", title: "第四步：守住篝火", body: "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。" },
+    { id: "offer", title: "第五步：天亮献祭", body: "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。" },
   ];
+  const keysHintEl = document.getElementById("keys-hint");
   const nightFx = document.createElement("canvas");
   const nightCtx = nightFx.getContext("2d");
 
@@ -164,6 +173,7 @@
 
   function ensureMusicPad() {
     if (!audioCtx || !musicGain || musicPad) return;
+    try {
     const filter = audioCtx.createBiquadFilter();
     filter.type = "lowpass";
     filter.frequency.value = 480;
@@ -176,6 +186,7 @@
     filter.connect(musicPadGain);
     musicPadGain.connect(musicGain);
     musicPad.start();
+    } catch (_) { /* 无音频输出时保持静音 */ }
   }
 
   function setMusicLevel() {
@@ -184,19 +195,24 @@
   }
 
   function ensureAudio() {
-    const AC = window.AudioContext || window.webkitAudioContext;
-    if (!audioCtx) audioCtx = new AC();
-    if (audioCtx.state === "suspended") audioCtx.resume();
-    if (!musicGain) {
-      musicGain = audioCtx.createGain();
-      musicGain.gain.value = musicOn ? 0.26 : 0;
-      musicGain.connect(audioCtx.destination);
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!audioCtx) audioCtx = new AC();
+      if (audioCtx.state === "suspended") audioCtx.resume();
+      if (!musicGain) {
+        musicGain = audioCtx.createGain();
+        musicGain.gain.value = musicOn ? 0.26 : 0;
+        musicGain.connect(audioCtx.destination);
+      }
+      ensureMusicPad();
+    } catch (_) {
+      // 无音频设备时保持静音，别把页面打挂
     }
-    ensureMusicPad();
   }
 
   function beep(freq, dur, type, vol) {
     if (!audioCtx || !sfxOn) return;
+    try {
     const o = audioCtx.createOscillator();
     const g = audioCtx.createGain();
     o.type = type || "square";
@@ -207,10 +223,12 @@
     g.connect(audioCtx.destination);
     o.start();
     o.stop(audioCtx.currentTime + dur);
+    } catch (_) { /* 无音频输出时保持静音 */ }
   }
 
   function noise(dur, vol, freq) {
     if (!audioCtx || !sfxOn) return;
+    try {
     const n = Math.max(1, Math.floor(audioCtx.sampleRate * dur));
     const buf = audioCtx.createBuffer(1, n, audioCtx.sampleRate);
     const data = buf.getChannelData(0);
@@ -226,6 +244,7 @@
     f.connect(g);
     g.connect(audioCtx.destination);
     src.start();
+    } catch (_) { /* 无音频输出时保持静音 */ }
   }
 
   function footstep() {
@@ -246,6 +265,7 @@
 
   function playMusicPulse() {
     if (!audioCtx || !musicOn || !state || state.paused || state.over) return;
+    try {
     ensureMusicPad();
     const day = [262, 330, 392, 330, 392, 523, 494, 392];
     const night = [196, 233, 262, 247, 220, 196, 175, 196];
@@ -274,6 +294,7 @@
     bg.connect(musicGain);
     b.start();
     b.stop(audioCtx.currentTime + 0.42);
+    } catch (_) { /* 无音频输出时保持静音 */ }
   }
 
   function audioLabel() {
@@ -332,6 +353,31 @@
   }
   function campWalled() {
     return campRing().every(([tx, ty]) => tileAt(tx, ty) === T.FENCE);
+  }
+  // 篝火四边还没围上的格子
+  function campGaps() {
+    return campRing().filter(([tx, ty]) => tileAt(tx, ty) !== T.FENCE);
+  }
+  // 下一截栅栏够不够料（含背包里现成的栏）
+  function canAffordNextFence() {
+    if (!state) return false;
+    if ((state.inv.fence || 0) > 0) return true;
+    const cost = buildCost("fence").wood || 0;
+    return (state.inv.wood || 0) >= cost;
+  }
+  // 围营还差几木（现成的栏先用掉）
+  function woodToFinishWall() {
+    const gaps = campGaps().length;
+    const stored = state.inv.fence || 0;
+    const needPay = Math.max(0, gaps - stored);
+    return needPay * (buildCost("fence").wood || 0);
+  }
+  // 再玩的人跳过开场
+  function hasSeenWorld() {
+    try { return localStorage.getItem(SEEN_KEY) === "1"; } catch (_) { return false; }
+  }
+  function markSeenWorld() {
+    try { localStorage.setItem(SEEN_KEY, "1"); } catch (_) { /* 隐私模式就当没记住 */ }
   }
   function groundSolid(tx, ty) {
     if (solid(tx, ty) || tileAt(tx, ty) === T.FENCE) return true;
@@ -472,12 +518,13 @@
       "最后一堆篝火还在营地中央跳。\n老人说，火在，纪元就在。\n火灭了，名字也会一起冷掉。",
       "北方祭坛沉睡着。\n要有人把「方块之心」捧去，\n黎明才会肯再睁眼。",
       `${name}啊。\n${flavor}\n篝火在等你。别让它先睡着。`,
-      "围起栅栏，像给火围一条被子。\n守过两夜。把那颗心，送到北边去。\n\n……出发吧。",
+      "围起栅栏，像给火围一条被子。\n守过三夜。把那颗心，送到北边去。\n\n……出发吧。",
     ];
   }
 
   function playIntroTheme() {
     if (!audioCtx || !musicOn || !musicGain) return;
+    try {
     ensureMusicPad();
     const notes = [392, 523, 587, 523, 392, 330, 392, 523, 659, 784, 659, 523];
     notes.forEach((freq, i) => {
@@ -493,6 +540,7 @@
       o.start(t0);
       o.stop(t0 + 0.5);
     });
+    } catch (_) { /* 无音频输出时保持静音 */ }
   }
 
   function renderIntroText() {
@@ -565,7 +613,7 @@
   const BRIEF = [
     { focus: "camp", title: "要保护的", text: "看见了吗？这簇还在跳的火。\n夜里所有的牙，都会朝它来。它灭了，这一局的太阳也就灭了。" },
     { focus: "bench", title: "合成之心", text: "这张旧台子还温着。\n木、石、金、麦凑齐，按 E。方块之心会在这里醒来。" },
-    { focus: "altar", title: "送到这里", text: "顺着土路一直向北。\n那座沉睡的祭坛，才是心要回家的地方。守过两夜，天亮再献。" },
+    { focus: "altar", title: "送到这里", text: "顺着土路一直向北。\n那座沉睡的祭坛，才是心要回家的地方。守过三夜，天亮再献。" },
     { focus: "camp", title: "白天先做", text: "先去砍树。把火的上下左右围死。\n记得留木头——心也是要吃木头的。" },
     { focus: "player", title: "出发", text: "预演到此。风已经在等了。\n……正式开始。" },
   ];
@@ -628,7 +676,9 @@
     state.lookTo.y = state.player.y;
     briefingEl.classList.add("hidden");
     guideEl.classList.remove("hidden");
-    toast("先走到树旁边，按空格砍木头。", 3.2);
+    markSeenWorld();
+    // 预演结束：金框改指树，别再让人盯着篝火
+    toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
     last = performance.now();
     syncGuide();
     syncHud();
@@ -650,7 +700,8 @@
       crops: world.crops,
       player: makePlayer(cls),
       inv: {
-        wood: cls === "miner" ? 2 : 0,
+        // 非矿工以前是 0，第一局木头太紧；人人 2 木，第一棵树后就能围
+        wood: cls === "miner" ? 2 : 2,
         stone: 0,
         gold: 0,
         wheat: 0,
@@ -685,7 +736,8 @@
       camp: { x: 22 * TILE + 8, y: 21 * TILE + 8 },
       day: true,
       cycle: 0,
-      dayLen: 62,
+      // 只有第一天用加长白天
+      dayLen: FIRST_DAY_LEN,
       nightLen: 26,
       nights: 0,
       time: 0,
@@ -716,7 +768,11 @@
     syncGuide();
     last = performance.now();
     if (briefOn) startBriefing();
-    else toast("先走到树旁边，按空格砍木头。", 3.2);
+    else {
+      // 再玩或直接进场：这时才算看过世界
+      markSeenWorld();
+      toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
+    }
     if (!looping) {
       looping = true;
       requestAnimationFrame(loop);
@@ -763,11 +819,41 @@
       guideEl.classList.add("compact");
       guideTitle.textContent = state.win ? "方块之心已点亮" : "当前目标";
       guideBody.textContent = objectiveText();
+      syncKeysHint(null);
       return;
     }
     guideEl.classList.remove("compact");
     guideTitle.textContent = step.title;
-    guideBody.textContent = step.body;
+    // 围营步按缺口/木料重写，GUIDE[2].body 仍留着当兜底
+    guideBody.textContent = step.id === "build" ? wallGuideBody() : step.body;
+    syncKeysHint(step);
+  }
+
+  // 底栏和教程说同一句「此刻做什么」
+  function syncKeysHint(step) {
+    if (!keysHintEl) return;
+    if (!step) {
+      keysHintEl.textContent = "WASD 移动 · 空格砍/挖/打 · 1栏 2火 3田 · 点空地建造 / 点坏墙修理 · Q 技能 · H 吃麦";
+      return;
+    }
+    if (step.id === "move") keysHintEl.textContent = "此刻：WASD 或方向键，走到金框的树旁边";
+    else if (step.id === "chop") keysHintEl.textContent = "此刻：对准树，按空格或按住左键砍倒";
+    else if (step.id === "build") {
+      keysHintEl.textContent = canAffordNextFence()
+        ? "此刻：按 1 选栅栏，再点篝火旁发光的格子"
+        : "此刻：木头不够围营，再砍金框里的树";
+    } else if (step.id === "night") keysHintEl.textContent = "此刻：夜里守篝火 · 左键打怪 · 墙破了按 1 补";
+    else if (step.id === "offer") keysHintEl.textContent = "此刻：工作台按 E 合成，天亮送到北边祭坛";
+  }
+
+  // 围营步的动态说明
+  function wallGuideBody() {
+    const gaps = campGaps().length;
+    const needWood = woodToFinishWall();
+    if (!canAffordNextFence()) {
+      return `围营还差 ${gaps} 面墙、大约 ${needWood} 木。先对着金框的树按空格或按住左键再砍。`;
+    }
+    return `按 1 选栅栏，再点篝火旁发光格（还差 ${gaps} 面）。自己能穿过栅栏。木头还要留给方块之心。`;
   }
 
   function setPrompt(text) {
@@ -824,8 +910,31 @@
     if (canOffer()) return { x: state.altar.x, y: state.altar.y, kind: "altar" };
     if (!state.day) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
     if (state.inv.heart > 0 && !survivedNights()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
+    // 没围营时：先指树，够料再指缺口——别再让新手盯着篝火
+    // 围营优先于工作台，免得先挖齐材料的人被拉去合成
+    if (!campWalled()) {
+      if (!state.flags.chopped || !canAffordNextFence()) {
+        const t = nearestOf((tile) => tile === T.TREE);
+        if (t) {
+          // 第一棵树框树本身，别框旁边的空地（空格会砍错）
+          if (!state.flags.chopped) return { x: t.x, y: t.y, kind: "tree" };
+          return { ...(approachTile(t.tx, t.ty) || t), kind: "tree" };
+        }
+      }
+      const p = state.player;
+      let best = null;
+      let bestD = 1e9;
+      for (const [tx, ty] of campGaps()) {
+        const d = dist(p.x, p.y, tx * TILE + 8, ty * TILE + 8);
+        if (d < bestD) {
+          bestD = d;
+          best = { x: tx * TILE + 8, y: ty * TILE + 8, kind: "gap" };
+        }
+      }
+      if (best) return best;
+      return { x: state.camp.x, y: state.camp.y, kind: "camp" };
+    }
     if (materialsReady() && !state.inv.heart) return { x: state.bench.x, y: state.bench.y, kind: "bench" };
-    if (!campWalled()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
     if (state.inv.wood < NEED.wood) {
       const t = nearestOf((tile) => tile === T.TREE);
       if (t) return { ...(approachTile(t.tx, t.ty) || t), kind: "tree" };
@@ -868,7 +977,8 @@
 
   function helpText() {
     return [
-      "白天围营，夜里守火。撑过两夜，天亮把方块之心送到北边祭坛。",
+      "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。",
+      "金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。",
       "",
       "WASD  移动",
       "空格  砍/挖/打面前的东西",
@@ -879,7 +989,7 @@
       "Q 或右键  职业技能",
       "点「麦」或 H  回血",
       "",
-      "栅栏挡地面怪，挡不住蝙蝠。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过两夜才能献。",
+      "栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
     ].join("\n");
   }
 
@@ -989,6 +1099,10 @@
     beep(400, 0.05, "square", 0.04);
     if (openBefore && campWalled()) {
       toast("四边围好了。再砍两棵树，木头还要留给方块之心。", 3);
+    } else if (kind === "fence" && openBefore) {
+      // 围上一面也给一句，免得以为围完了
+      const left = campGaps().length;
+      toast(`围上了。还差 ${left} 面，点下一个发光格。`, 2.4);
     }
     return true;
   }
@@ -1192,6 +1306,8 @@
       addDrop("wood", cx, cy, 3 + rand(2));
       if (!state.flags.chopped) state.benchHint = 8;
       state.flags.chopped = true;
+      // 树倒当下给一个字，拾取时还会再飘一次进包
+      floatText(cx, cy - 14, "+木", "#e8c040");
       burst(cx, cy, "#6bcf6b", 16);
       burst(cx, cy, "#8b5a2b", 8);
       punch(3.2, 0.045);
@@ -1297,7 +1413,7 @@
     burst(state.bench.x, state.bench.y - 8, "#fff4b0", 16);
     toast(survivedNights() && state.day
       ? "合成成功！沿土路向北，天亮把心放到祭坛。"
-      : "合成成功！先守过两夜，天亮再到北边祭坛。", 3.2);
+      : "合成成功！先守过三夜，天亮再到北边祭坛。", 3.2);
     beep(880, 0.1, "square", 0.06);
   }
 
@@ -1414,6 +1530,8 @@
       let kind = "slime";
       if (nights >= 2 && state.wave >= 2 && Math.random() < 0.45) kind = "bat";
       if (nights >= 3 && Math.random() < 0.22) kind = "cube";
+      // 第三夜从第 2 波起必出立方（32 秒夜里第 3 波经常走不到）
+      if (nights >= 3 && state.wave >= 2) kind = "cube";
       const hp = kind === "slime" ? 32 : kind === "bat" ? 22 : 64;
       const spd = kind === "slime" ? 26 : kind === "bat" ? 44 : 30;
       const dmg = kind === "slime" ? 9 : kind === "bat" ? 8 : 16;
@@ -1448,7 +1566,10 @@
 
   function startNightWaves() {
     state.wave = 0;
-    state.wavesTotal = state.nights === 1 ? 2 : 3;
+    // 第一夜 2 波教学；第二夜 3 波蝙蝠；第三夜 4 波立方
+    state.wavesTotal = state.nights === 1 ? 2 : state.nights === 2 ? 3 : 4;
+    // 第三夜多撑几秒
+    state.nightLen = state.nights >= 3 ? 32 : 26;
     state.toSpawn = 0;
     state.waveWait = 2.2;
   }
@@ -1575,6 +1696,10 @@
       punch(2.6, 0.045);
       burst(e.x, e.y, "#8dff9a", 8);
       state.kills += 1;
+      // 第一击杀：告诉人掉落能吃、别追太远
+      if (state.kills === 1) {
+        toast("干掉一只！掉的麦可以点背包回血。夜里别离篝火太远。", 2.6);
+      }
       if (Math.random() < 0.45) addDrop("wheat", e.x, e.y, 1);
       if (Math.random() < 0.16) addDrop("gold", e.x, e.y, 1);
       if (Math.random() < 0.22) addDrop("wood", e.x, e.y, 1);
@@ -1602,6 +1727,13 @@
         state.inv[d.kind] = (state.inv[d.kind] || 0) + 1;
         d.life = 0;
         beep(660, 0.04, "square", 0.03);
+        // 捡到东西要看见字，否则只听一声不知道进了谁的包
+        floatText(d.x, d.y - 12, "+" + labelOf(d.kind), d.kind === "gold" ? "#ffe27a" : "#e8dcc8");
+        if (d.kind === "wood" && !state.flags.gathered) {
+          state.flags.gathered = true;
+          // 第一批木头还在飞，不按当前一颗判断够不够
+          toast("木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。", 3.4);
+        }
         if (d.kind === "wheat" && !state.flags.sawWheat) {
           state.flags.sawWheat = true;
           toast("点背包里的「麦」或按 H，可以吃掉回血。", 2.8);
@@ -1778,7 +1910,9 @@
         startNightWaves();
         toast(state.nights === 1
           ? "第一夜：怪分波朝篝火来。站在墙后打。"
-          : `第 ${state.nights} 夜，共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`, 3.2);
+          : state.nights === 2
+            ? `第二夜：共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`
+            : `第 ${state.nights} 夜：金色立方来了，共 ${state.wavesTotal} 波。它更肉，站在墙后打。`, 3.2);
         beep(140, 0.16, "sawtooth", 0.05);
       } else {
         const extra = !campWalled()
@@ -1788,6 +1922,8 @@
             : `还要再守 ${WIN_NIGHTS - state.nights} 夜。白天补墙、凑材料。`;
         toast("天亮了。" + extra, 3);
         beep(620, 0.1, "square", 0.04);
+        // 第一天过后恢复原来的白天长度
+        state.dayLen = DAY_LEN;
         state.enemies = [];
         state.nightWarned = false;
         state.fenceBreakWarn = false;
@@ -1912,7 +2048,12 @@
     if (canOffer()) return "天亮了。把方块之心送到北边祭坛（按 E）";
     if (state.inv.heart > 0 && !survivedNights()) return `先再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献祭`;
     if (materialsReady() && !state.inv.heart) return "去工作台按 E 合成方块之心";
-    if (!campWalled()) return "按 1，把篝火上下左右四边的发光格围上";
+    if (!campWalled()) {
+      const gaps = campGaps().length;
+      if (!state.flags.chopped) return "走到金框的树旁，空格或按住左键砍木头";
+      if (!canAffordNextFence()) return `再砍树凑木头（还差 ${gaps} 面墙）`;
+      return `按 1，点发光格围营（还差 ${gaps} 面）`;
+    }
     const miss = [];
     if (state.inv.wood < NEED.wood) miss.push(`木 ${state.inv.wood}/${NEED.wood}`);
     if (state.inv.stone < NEED.stone) miss.push(`石 ${state.inv.stone}/${NEED.stone}`);
@@ -1962,7 +2103,16 @@
     }
     for (const el of document.querySelectorAll(".item")) {
       const k = el.dataset.k;
-      el.querySelector("b").textContent = state.inv[k] || 0;
+      const n = state.inv[k] || 0;
+      const b = el.querySelector("b");
+      const prev = Number(b.textContent);
+      b.textContent = n;
+      // 数字变多时跳一下，让人看见进包了
+      if (n > prev) {
+        el.classList.remove("pop");
+        void el.offsetWidth;
+        el.classList.add("pop");
+      }
       el.classList.toggle("ready", k === "heart" && state.inv.heart > 0);
       el.classList.toggle("on", el.dataset.build && state.build === el.dataset.build);
     }
@@ -2370,7 +2520,9 @@
   btnStart.addEventListener("click", () => {
     if (!selectedClass) return;
     ensureAudio();
-    playIntro(selectedClass);
+    // 再玩的人直接进场，少挡一层故事
+    if (hasSeenWorld()) startGame(selectedClass, { brief: false });
+    else playIntro(selectedClass);
   });
   btnSkipIntro.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -2465,6 +2617,11 @@
     setBuild,
     place: (tx, ty) => tryPlace(tx, ty),
     interact,
+    currentTarget,
+    campGaps,
+    canAffordNextFence,
+    spawnEnemy,
+    canOffer,
   };
 
   const qa = new URLSearchParams(location.search).get("qa");

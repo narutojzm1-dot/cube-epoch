@@ -50,6 +50,7 @@ export async function launch() {
 }
 
 export async function enterPlay(page, cls = "knight") {
+  await page.evaluate(() => localStorage.removeItem("cube-epoch-seen"));
   await page.locator(`.class-card[data-class="${cls}"]`).click();
   await page.locator("#btn-start").click();
   await page.locator("#btn-skip-intro").click();
