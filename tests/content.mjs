@@ -148,6 +148,26 @@ await page.waitForFunction(() => window.CUBE.getState().ap >= 14, null, { timeou
 await page.waitForFunction(() => window.CUBE.getState().choosing, null, { timeout: 4000 });
 await page.click("button.choice");
 
+// 撤销箭塔要回退箭塔计数，不能靠放/撤刷成就
+const towerUndo = await page.evaluate(() => {
+  const C = window.CUBE;
+  const st = C.getState();
+  st.inv.stone = 3;
+  st.inv.gold = 1;
+  st.ap = 14;
+  st.tiles[12 * 48 + 30] = 1;
+  const before = st.towersBuilt;
+  C.setBuild("tower");
+  C.place(30, 12);
+  const placed = st.tiles[12 * 48 + 30];
+  const undone = C.undo();
+  C.setBuild(null);
+  return { placed, undone, before, after: st.towersBuilt };
+});
+if (towerUndo.placed !== 15 || !towerUndo.undone || towerUndo.after !== towerUndo.before) {
+  throw new Error("undoing a tower must roll back towersBuilt: " + JSON.stringify(towerUndo));
+}
+
 // 新建筑：箭塔自动射击、尖刺掉血、圣泉回血；箭塔是实心建筑
 await setNight();
 const builds = await page.evaluate(async () => {

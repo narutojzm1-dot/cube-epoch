@@ -60,6 +60,7 @@ export function undoPlace() {
   }
   setTile(u.tx, u.ty, u.prev);
   if (u.tile === T.FENCE) state.fenceHp.delete(`${u.tx},${u.ty}`);
+  if (u.tile === T.TOWER) state.towersBuilt = Math.max(0, state.towersBuilt - 1);
   if (u.stored) state.inv[u.stored] += 1;
   else for (const [k, n] of Object.entries(u.paid)) state.inv[k] = (state.inv[k] || 0) + n;
   state.ap = Math.min(apMax(), state.ap + u.ap);
