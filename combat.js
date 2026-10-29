@@ -75,7 +75,7 @@ export function damageCamp(amount) {
 }
 
 export function hurt(ent, dmg, src) {
-  if (ent === state.player && state.player.invuln > 0) return;
+  if (ent === state.player && state.player.invuln > 0) return false;
   ent.hp -= dmg;
   burst(ent.x, ent.y - 8, "#f07070", 6);
   floatText(ent.x, ent.y - 16, String(Math.ceil(dmg)), "#ffd0d0");
@@ -90,6 +90,7 @@ export function hurt(ent, dmg, src) {
     ent.vy += (dy / l) * 40;
     if (ent.hp <= 0) die();
   }
+  return true;
 }
 
 export function meleeAttack() {
@@ -498,16 +499,14 @@ export function updateEnemies(dt) {
       e.hit = 0.85;
       let dmg = e.dmg;
       if (p.cls === "knight") dmg *= 1 - CLASSES.knight.dr;
-      hurt(p, dmg, e);
-      if (has("shield_thorns")) e.hp -= dmg * RELIC_FX.shieldThorns;
+      if (hurt(p, dmg, e) && has("shield_thorns")) e.hp -= dmg * RELIC_FX.shieldThorns;
     } else if (canHitCamp(e) && e.hit <= 0 && state.campHp > 0) {
       const home = dist(p.x, p.y, state.camp.x, state.camp.y) < 28;
       if (home && dPlayer < 24) {
         e.hit = 0.85;
         let dmg = e.dmg;
         if (p.cls === "knight") dmg *= 1 - CLASSES.knight.dr;
-        hurt(p, dmg, e);
-        if (has("shield_thorns")) e.hp -= dmg * RELIC_FX.shieldThorns;
+        if (hurt(p, dmg, e) && has("shield_thorns")) e.hp -= dmg * RELIC_FX.shieldThorns;
         continue;
       }
       if (home) continue;
