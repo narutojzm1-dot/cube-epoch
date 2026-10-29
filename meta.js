@@ -1,4 +1,4 @@
-import { ACHIEVEMENTS, DAILY_DIFFICULTY, DAILY_PREFIX, DEFAULT_DIFFICULTY, DIFFICULTIES, DAY_EVENT_FX, ENEMIES, RELICS, RELIC_TYPE_LABEL, STORE_PREFIX } from "./data.js";
+import { UNLOCKS, ACHIEVEMENTS, DAILY_DIFFICULTY, DAILY_PREFIX, DEFAULT_DIFFICULTY, DIFFICULTIES, DAY_EVENT_FX, ENEMIES, RELICS, RELIC_TYPE_LABEL, STORE_PREFIX } from "./data.js";
 import { beep } from "./audio.js";
 import { eraName, state, toastTimer } from "./core.js";
 import { overlay, showOverlay, toast } from "./ui.js";
@@ -30,6 +30,34 @@ if (!meta.stats.daily || typeof meta.stats.daily !== "object") meta.stats.daily 
 if (!meta.stats.byDiff || typeof meta.stats.byDiff !== "object") meta.stats.byDiff = {};
 meta.prefs = loadStore("prefs", { difficulty: DEFAULT_DIFFICULTY });
 if (!meta.prefs || typeof meta.prefs !== "object" || !DIFFICULTIES[meta.prefs.difficulty]) meta.prefs = { difficulty: DEFAULT_DIFFICULTY };
+
+meta.unlocks = loadStore("unlocks", []);
+if (!Array.isArray(meta.unlocks)) meta.unlocks = [];
+
+export function unlockMet(u) {
+  if (u.need.ach) return !!meta.ach[u.need.ach];
+  if (u.need.kills) return (meta.stats.kills || 0) >= u.need.kills;
+  return false;
+}
+export function isUnlocked(id, daily) {
+  const u = UNLOCKS.find((x) => x.id === id);
+  if (!u) return true;
+  return !daily && unlockMet(u);
+}
+// 新达成的解锁只提示一次；已提示的记在 cube-epoch:v1:unlocks。
+export function checkUnlocks() {
+  const fresh = UNLOCKS.filter((u) => unlockMet(u) && !meta.unlocks.includes(u.id));
+  if (!fresh.length) return [];
+  for (const u of fresh) meta.unlocks.push(u.id);
+  saveStore("unlocks", meta.unlocks);
+  if (state && state.achQueue) {
+    for (const u of fresh) {
+      const r = RELICS.find((x) => x.id === u.id);
+      state.achQueue.push({ name: `解锁遗物·${r.name}`, desc: "以后的三选一里可能出现。" });
+    }
+  }
+  return fresh.map((u) => u.id);
+}
 
 export function setDifficulty(id) {
   if (!DIFFICULTIES[id]) return;
@@ -89,6 +117,7 @@ export function checkAch(ev) {
     saveStore("ach", meta.ach);
     state.achQueue.push(a);
   }
+  checkUnlocks();
 }
 
 export function updateAch(dt) {
@@ -99,7 +128,7 @@ export function updateAch(dt) {
   }
   if (state.achQueue.length && toastTimer <= 0) {
     const a = state.achQueue.shift();
-    toast(`成就解锁「${a.name}」：${a.desc}`, 2.6);
+    toast(a.id ? `成就解锁「${a.name}」：${a.desc}` : `${a.name}：${a.desc}`, 2.6);
     beep(990, 0.08, "triangle", 0.05);
   }
 }
@@ -147,6 +176,16 @@ export function codexText() {
   lines.push(`【遗物图鉴】${RELICS.filter((r) => meta.codex.relics.includes(r.id)).length}/${RELICS.length}`);
   for (const r of RELICS) {
     lines.push(meta.codex.relics.includes(r.id) ? `${r.name}（${RELIC_TYPE_LABEL[r.type]}）：${r.desc}` : "？？？");
+  }
+  lines.push("");
+  lines.push(`【局外解锁】${UNLOCKS.filter(unlockMet).length}/${UNLOCKS.length}`);
+  for (const u of UNLOCKS) {
+    const r = RELICS.find((x) => x.id === u.id);
+    if (unlockMet(u)) lines.push(`✔ ${r.name}：${r.desc}`);
+    else {
+      const prog = u.need.kills ? `（${Math.min(meta.stats.kills || 0, u.need.kills)}/${u.need.kills}）` : "";
+      lines.push(`🔒 ？？？ —— 解锁条件：${u.hint}${prog}`);
+    }
   }
   lines.push("");
   lines.push(`【成就】${ACHIEVEMENTS.filter((a) => meta.ach[a.id]).length}/${ACHIEVEMENTS.length}`);

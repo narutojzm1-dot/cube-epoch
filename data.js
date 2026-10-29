@@ -175,6 +175,18 @@ export const RELICS = [
   { id: "blood_moon", type: "mutation", name: "血月契约", desc: "敌人 +40% 生命，但掉落双倍。", weight: 6 },
   { id: "glass_cannon", type: "mutation", name: "玻璃大炮", desc: "伤害 +50%，生命上限 -30%。", weight: 5 },
   { id: "greedy_hearth", type: "mutation", name: "贪婪篝火", desc: "篝火白天不再回血，但每次天亮获得 3 金。", weight: 5 },
+  // 以下需要局外解锁（见 UNLOCKS），未解锁前不会出现在三选一里。
+  { id: "phoenix_feather", type: "relic", name: "不死鸟之羽", desc: "篝火第一次熄灭时以 40 点复燃（每局一次）。", weight: 6 },
+  { id: "veteran_banner", type: "relic", name: "老兵战旗", desc: "夜里每击杀一只怪回复 2 生命。", weight: 7 },
+  { id: "star_map", type: "relic", name: "星图", desc: "之后每个白天必定有随机事件。", weight: 7 },
+];
+
+// 局外解锁：达成条件后，对应遗物进入三选一的池子。每日挑战只用基础池，保证人人相同。
+// need.ach：拿到某个成就；need.kills：累计击杀数（存档 stats.kills）。
+export const UNLOCKS = [
+  { id: "phoenix_feather", need: { ach: "era_one" }, hint: "完成一次第一纪元献祭" },
+  { id: "veteran_banner", need: { kills: 500 }, hint: "累计击杀 500 只怪" },
+  { id: "star_map", need: { ach: "stargazer" }, hint: "亲眼看见一次陨石坠落" },
 ];
 
 export const RELIC_TYPE_LABEL = { relic: "遗物", blessing: "祝福", mutation: "变异" };
@@ -193,6 +205,8 @@ export const RELIC_FX = {
   thornFenceDps: 8,
   harvestCharmHeal: 10,
   luckyCoinDrop: 1.5,
+  phoenixCamp: 40,
+  veteranHeal: 2,
   supplyWood: 6,
   supplyStone: 4,
   wolfHowlSecs: 10,

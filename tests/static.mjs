@@ -50,6 +50,8 @@ const must = [
   ["export const CAP_BASE = {", data],
   ["export const DIFFICULTIES = {", data],
   ["export function nightRng", js],
+  ["export const UNLOCKS = [", data],
+  ["isUnlocked(r.id, daily)", js],
   ["nightRng(\"dawn\")", js],
   ["export const DAILY_DIFFICULTY = \"normal\"", data],
   ["* diff().spawn", js],

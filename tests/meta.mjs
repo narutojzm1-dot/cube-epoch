@@ -98,6 +98,46 @@ if (!(diffs.easy.hp < diffs.normal.hp)) throw new Error("easy should weaken enem
 if (diffs.daily.d !== "normal") throw new Error("daily challenge must force normal difficulty: " + JSON.stringify(diffs.daily));
 if (!diffs.hard.share.includes("困难") || diffs.normal.share.includes("普通")) throw new Error("share text should note non-normal difficulty: " + JSON.stringify(diffs));
 
+// 局外解锁：未达成时不进三选一池、图鉴显示条件；达成后可出现；每日挑战只用基础池
+const locked = await page.evaluate(() => {
+  const C = window.CUBE;
+  C.start("miner", "unlock-a");
+  return { phoenix: C.unlocked("phoenix_feather"), banner: C.unlocked("veteran_banner"), codex: C.codexText() };
+});
+if (locked.phoenix || locked.banner) throw new Error("locked relics must stay out of the pool: " + JSON.stringify(locked));
+if (!locked.codex.includes("【局外解锁】") || !locked.codex.includes("累计击杀 500 只怪（")) throw new Error("codex should list unlock conditions: " + locked.codex);
+await page.evaluate(() => {
+  const ach = JSON.parse(localStorage.getItem("cube-epoch:v1:ach") || "{}");
+  ach.era_one = "2026-10-29";
+  localStorage.setItem("cube-epoch:v1:ach", JSON.stringify(ach));
+});
+await page.goto(origin, { waitUntil: "domcontentloaded" });
+const opened = await page.evaluate(async () => {
+  const C = window.CUBE;
+  C.start("miner", "unlock-b");
+  const free = C.unlocked("phoenix_feather");
+  const codex = C.codexText();
+  C.start("miner", C.dailySeed());
+  const daily = C.unlocked("phoenix_feather");
+  C.start("miner", "unlock-c");
+  const st = C.getState();
+  st.skippedGuide = true;
+  st.relics.push("phoenix_feather");
+  st.campHp = 1;
+  st.enemies = [];
+  C.spawn("slime", 22, 20);
+  st.enemies[0].x = st.camp.x;
+  st.enemies[0].y = st.camp.y - 16;
+  st.day = false;
+  for (let i = 0; i < 40 && !st.phoenixUsed && !st.over; i++) await new Promise((r) => setTimeout(r, 100));
+  const revived = st.phoenixUsed && !st.over;
+  st.enemies = [];
+  return { free, daily, codex, revived };
+});
+if (!opened.free || opened.daily) throw new Error("unlock should open the relic outside daily only: " + JSON.stringify(opened));
+if (!opened.codex.includes("✔ 不死鸟之羽")) throw new Error("codex should show unlocked relic");
+if (!opened.revived) throw new Error("phoenix feather should revive the campfire once");
+
 // 存档损坏不应让游戏崩溃
 await page.evaluate(() => localStorage.setItem("cube-epoch:v1:codex", "{bad json"));
 await page.goto(origin, { waitUntil: "domcontentloaded" });

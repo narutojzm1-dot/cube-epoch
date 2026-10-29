@@ -59,6 +59,14 @@ export function damageCamp(amount) {
     state.campPull = Math.max(state.campPull || 0, 1.6);
     toast("篝火还在挨打！别追太远。", 2.2);
   }
+  if (state.campHp <= 0 && has("phoenix_feather") && !state.phoenixUsed) {
+    state.phoenixUsed = true;
+    state.campHp = RELIC_FX.phoenixCamp;
+    burst(state.camp.x, state.camp.y - 8, "#ffb040", 24);
+    punch(5, 0.08);
+    toast("不死鸟之羽燃尽——篝火复燃了！", 2.8);
+    return;
+  }
   if (state.campHp <= 0) die("篝火熄灭");
 }
 
@@ -507,6 +515,7 @@ export function updateEnemies(dt) {
     state.kills += 1;
     if (state.kills === 1) toast("干掉一只！掉的麦可以点背包回血。夜里别离篝火太远。", 2.6);
     state.nightKills = (state.nightKills || 0) + 1;
+    if (!state.day && has("veteran_banner")) state.player.hp = Math.min(state.player.maxHp, state.player.hp + RELIC_FX.veteranHeal);
     const def = edef(e);
     if (def.spore) corrupt(Math.floor(e.x / TILE), Math.floor(e.y / TILE));
     const luck = has("lucky_coin") ? RELIC_FX.luckyCoinDrop : 1;

@@ -2,7 +2,7 @@ import { BIOME_FX, BIOME_SLOTS, CLASSES, COLS, DAY_EVENTS, DAY_EVENT_CHANCE, DAY
 import { beep, noise } from "./audio.js";
 import { roomFor } from "./build.js";
 import { makeEnemy } from "./combat.js";
-import { burst, dist, hashSeed, inBounds, labelOf, mulberry32, punch, rand, rnd, setTile, solid, state, tileAt } from "./core.js";
+import { burst, dist, has, hashSeed, inBounds, labelOf, mulberry32, punch, rand, rnd, setTile, solid, state, tileAt } from "./core.js";
 import { syncHud, toast } from "./ui.js";
 
 export function genWorld() {
@@ -152,7 +152,7 @@ export function rollDayEvent() {
   state.dayEvent = null;
   if (state.nights < 1) return null;
   const r = dayRng();
-  if (r() >= DAY_EVENT_CHANCE) {
+  if (r() >= (has("star_map") ? 1 : DAY_EVENT_CHANCE)) {
     state.eventLog.push(`${state.nights}:-`);
     return null;
   }

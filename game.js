@@ -3,7 +3,7 @@ import { beep, cycleAudio, ensureAudio, footstep, playMusicPulse } from "./audio
 import { apCostOfTile, apMax, apShort, capOf, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
 import { spawnEnemy, makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
 import { hasSeenWorld, markSeenWorld, burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, last, looping, makeStreams, materialsReady, mouse, newSeed, nightsLeft, pendingSeed, nightRng, selectedClass, setLast, setLooping, setPendingSeed, setRng, setSelectedClass, setState, setToastTimer, state, survivedNights, tileAt, toastTimer, tryMove, urlSeed } from "./core.js";
-import { checkAch, codexAdd, codexText, dailySeed, meta, openCodex, recordRun, runDifficulty, setDifficulty, shareText, titleStatsText, updateAch } from "./meta.js";
+import { checkAch, codexAdd, codexText, dailySeed, isDaily, isUnlocked, meta, openCodex, recordRun, runDifficulty, setDifficulty, shareText, titleStatsText, updateAch } from "./meta.js";
 import { render, skyTint } from "./render.js";
 import { currentTarget, campGaps, canAffordNextFence, canOffer, BRIEF, advanceBrief, advanceIntro, brief, briefingBox, briefingCursor, briefingText, btnCodex, btnDaily, btnHelp, btnMute, btnPause, btnSkipBrief, btnSkipGuide, btnSkipIntro, btnStart, camera, canvas, copyText, endBriefing, finishIntro, intro, introBox, manaWrap, overlay, playIntro, resize, screenGame, screenIntro, screenTitle, setPrompt, showOverlay, skillName, startBriefing, syncGuide, syncHud, titleStats, toast, toastEl, togglePause } from "./ui.js";
 import { endDayEvent, genWorld, makePlayer, rollDayEvent, tradeCaravan, updateDayEvent } from "./world.js";
@@ -272,7 +272,8 @@ function nextEra() {
 }
 
 function rollDawn() {
-  const pool = RELICS.filter((r) => r.type === "blessing" || !state.relics.includes(r.id));
+  const daily = isDaily(state.seed);
+  const pool = RELICS.filter((r) => (r.type === "blessing" || !state.relics.includes(r.id)) && isUnlocked(r.id, daily));
   const roll01 = nightRng("dawn");
   const out = [];
   while (out.length < DAWN_CHOICES && pool.length) {
@@ -818,6 +819,7 @@ window.CUBE = {
   place: (tx, ty) => tryPlace(tx, ty),
   undo: () => undoPlace(),
   cap: (k) => capOf(k),
+  unlocked: (id) => isUnlocked(id, isDaily(state && state.seed)),
   rollDayEvent: () => rollDayEvent(),
   dailySeed: () => dailySeed(),
   meta: () => meta,
