@@ -2,7 +2,7 @@ import { DAY_LEN, FIRST_DAY_LEN, AP_BASE, BUILDINGS, CAMP_MAX, CLASSES, CLASS_RE
 import { beep, cycleAudio, ensureAudio, footstep, playMusicPulse } from "./audio.js";
 import { apCostOfTile, apMax, apShort, capOf, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
 import { spawnEnemy, makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
-import { hasSeenWorld, markSeenWorld, burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, last, looping, makeStreams, materialsReady, mouse, newSeed, nightsLeft, pendingSeed, nightRng, selectedClass, setLast, setLooping, setPendingSeed, setRng, setSelectedClass, setState, setToastTimer, state, survivedNights, tileAt, toastTimer, tryMove, urlSeed } from "./core.js";
+import { hasSeenWorld, markSeenWorld, burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, makeStreams, materialsReady, mouse, newSeed, nightsLeft, nightRng, setRng, setState, state, survivedNights, tileAt, tryMove, urlSeed, session } from "./core.js";
 import { checkAch, codexAdd, codexText, dailySeed, highlights, isDaily, isUnlocked, meta, openCodex, recordRun, runDifficulty, setDifficulty, shareText, titleStatsText, updateAch } from "./meta.js";
 import { render, skyTint } from "./render.js";
 import { currentTarget, campGaps, canAffordNextFence, canOffer, BRIEF, advanceBrief, advanceIntro, brief, briefingBox, briefingCursor, briefingText, btnCodex, btnDaily, btnHelp, btnMute, btnPause, btnSkipBrief, btnSkipGuide, btnSkipIntro, btnStart, camera, canvas, copyText, endBriefing, finishIntro, intro, introBox, manaWrap, overlay, playIntro, resize, screenGame, screenIntro, screenTitle, setPrompt, showOverlay, skillName, startBriefing, syncGuide, syncHud, titleStats, toast, toastEl, togglePause } from "./ui.js";
@@ -16,8 +16,8 @@ export function startGame(cls, opts) {
     screenIntro.classList.add("hidden");
   }
   const briefOn = !!(opts && opts.brief);
-  const seed = String((opts && opts.seed) || pendingSeed || urlSeed || newSeed());
-  setPendingSeed("");
+  const seed = String((opts && opts.seed) || session.pendingSeed || urlSeed || newSeed());
+  session.pendingSeed = "";
   setRng(makeStreams(seed));
   const world = genWorld();
   const def = CLASSES[cls];
@@ -122,14 +122,14 @@ export function startGame(cls, opts) {
   resize();
   beep(520, 0.08, "square", 0.05);
   syncGuide();
-  setLast(performance.now());
+  session.last = performance.now();
   if (briefOn) startBriefing();
   else {
     markSeenWorld();
     toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
   }
-  if (!looping) {
-    setLooping(true);
+  if (!session.looping) {
+    session.looping = true;
     requestAnimationFrame(loop);
   }
 }
@@ -266,7 +266,7 @@ function nextEra() {
   state.paused = false;
   state.skippedGuide = true;
   overlay.classList.add("hidden");
-  setLast(performance.now());
+  session.last = performance.now();
   burst(state.altar.x, state.altar.y, "#ffe27a", 24);
   toast(`${eraName(state.era)}开始。再守 ${eraNights()} 夜，怪物更强了。`, 3.4);
   beep(330, 0.2, "sawtooth", 0.05);
@@ -339,7 +339,7 @@ function pickRelic(id) {
   state.choosing = false;
   state.paused = false;
   overlay.classList.add("hidden");
-  setLast(performance.now());
+  session.last = performance.now();
   toast(`获得${RELIC_TYPE_LABEL[r.type]}「${r.name}」：${r.desc}`, 3);
   beep(880, 0.08, "square", 0.05);
   syncHud();
@@ -577,9 +577,9 @@ function update(dt) {
   if (state.hitstop > 0) {
     state.hitstop -= dt;
     state.shake = Math.max(0, (state.shake || 0) - dt * 20);
-    if (toastTimer > 0) {
-      setToastTimer(toastTimer - dt);
-      if (toastTimer <= 0) toastEl.classList.add("hidden");
+    if (session.toastTimer > 0) {
+      session.toastTimer -= dt;
+      if (session.toastTimer <= 0) toastEl.classList.add("hidden");
     }
     mouse.pressed = false;
     syncHud();
@@ -666,46 +666,46 @@ function update(dt) {
     f.life -= dt;
   }
   state.floats = state.floats.filter((f) => f.life > 0);
-  if (toastTimer > 0) {
-    setToastTimer(toastTimer - dt);
-    if (toastTimer <= 0) toastEl.classList.add("hidden");
+  if (session.toastTimer > 0) {
+    session.toastTimer -= dt;
+    if (session.toastTimer <= 0) toastEl.classList.add("hidden");
   }
   syncHud();
 }
 
 function loop(now) {
-  const dt = (now - last) / 1000;
-  setLast(now);
+  const dt = (now - session.last) / 1000;
+  session.last = now;
   if (state && !state.paused && !state.over) update(dt);
   render();
   if (state && !state.over) requestAnimationFrame(loop);
-  else setLooping(false);
+  else session.looping = false;
 }
 
 document.querySelectorAll(".class-card").forEach((card) => {
   card.addEventListener("click", () => {
     document.querySelectorAll(".class-card").forEach((c) => c.classList.remove("selected"));
     card.classList.add("selected");
-    setSelectedClass(card.dataset.class);
+    session.selectedClass = card.dataset.class;
     btnStart.disabled = false;
-    btnStart.textContent = `以${CLASSES[selectedClass].name}进入世界`;
+    btnStart.textContent = `以${CLASSES[session.selectedClass].name}进入世界`;
     if (btnDaily) btnDaily.disabled = false;
   });
 });
 btnStart.addEventListener("click", () => {
-  if (!selectedClass) return;
+  if (!session.selectedClass) return;
   ensureAudio();
-  if (hasSeenWorld()) startGame(selectedClass, { brief: false });
-  else playIntro(selectedClass);
+  if (hasSeenWorld()) startGame(session.selectedClass, { brief: false });
+  else playIntro(session.selectedClass);
 });
 if (btnDaily) {
   btnDaily.textContent = `今日挑战 · ${dailySeed().slice(-4, -2)}月${dailySeed().slice(-2)}日`;
   btnDaily.addEventListener("click", () => {
-    if (!selectedClass) return;
-    setPendingSeed(dailySeed());
+    if (!session.selectedClass) return;
+    session.pendingSeed = dailySeed();
     ensureAudio();
-    if (hasSeenWorld()) startGame(selectedClass, { brief: false });
-    else playIntro(selectedClass);
+    if (hasSeenWorld()) startGame(session.selectedClass, { brief: false });
+    else playIntro(session.selectedClass);
   });
 }
 if (btnCodex) btnCodex.addEventListener("click", () => openCodex());
@@ -840,7 +840,7 @@ window.CUBE = {
 
 const qa = new URLSearchParams(location.search).get("qa");
 if (qa === "win") {
-  setSelectedClass("miner");
+  session.selectedClass = "miner";
   startGame("miner");
   Object.assign(state.inv, { wood: 5, stone: 5, gold: 3, wheat: 3, heart: 1 });
   state.player.x = state.altar.x;

@@ -1,6 +1,6 @@
 import { CAMP_MAX, CLASSES, UNLOCKS, ACHIEVEMENTS, DAILY_DIFFICULTY, DAILY_PREFIX, DEFAULT_DIFFICULTY, DIFFICULTIES, DAY_EVENT_FX, ENEMIES, RELICS, RELIC_TYPE_LABEL, STORE_PREFIX } from "./data.js";
 import { beep } from "./audio.js";
-import { eraName, state, toastTimer } from "./core.js";
+import { eraName, state, session } from "./core.js";
 import { overlay, showOverlay, toast } from "./ui.js";
 
 export function loadStore(key, fallback) {
@@ -126,7 +126,7 @@ export function updateAch(dt) {
     state.achAcc = 0;
     checkAch("tick");
   }
-  if (state.achQueue.length && toastTimer <= 0) {
+  if (state.achQueue.length && session.toastTimer <= 0) {
     const a = state.achQueue.shift();
     toast(a.id ? `成就解锁「${a.name}」：${a.desc}` : `${a.name}：${a.desc}`, 2.6);
     beep(990, 0.08, "triangle", 0.05);

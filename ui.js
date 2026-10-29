@@ -1,7 +1,7 @@
 import { BUILDINGS, CAMP_MAX, CLASSES, COLS, NEED, ROWS, T, TILE, VIEW_H, VIEW_W } from "./data.js";
 import { audioCtx, beep, ensureMusicPad, musicGain, musicOn } from "./audio.js";
 import { buildCost, apMax, capOf, costText } from "./build.js";
-import { campRing, markSeenWorld, campWalled, clamp, dist, eraName, inBounds, materialsReady, nightsLeft, setLast, setToastTimer, solid, state, survivedNights, tileAt } from "./core.js";
+import { campRing, markSeenWorld, campWalled, clamp, dist, eraName, inBounds, materialsReady, nightsLeft, solid, state, survivedNights, tileAt, session } from "./core.js";
 import { startGame } from "./game.js";
 
 export const canvas = document.getElementById("game");
@@ -66,7 +66,7 @@ export const GUIDE = [
 export function toast(text, ms) {
   toastEl.textContent = text;
   toastEl.classList.remove("hidden");
-  setToastTimer(ms || 2.2);
+  session.toastTimer = ms || 2.2;
 }
 
 export const intro = {
@@ -254,7 +254,7 @@ export function endBriefing() {
   guideEl.classList.remove("hidden");
   markSeenWorld();
   toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
-  setLast(performance.now());
+  session.last = performance.now();
   syncGuide();
   syncHud();
 }
@@ -580,13 +580,13 @@ export function togglePause() {
       ["继续", () => {
         overlay.classList.add("hidden");
         state.paused = false;
-        setLast(performance.now());
+        session.last = performance.now();
       }],
       ["回选角", () => location.reload()],
     ]);
   } else {
     overlay.classList.add("hidden");
-    setLast(performance.now());
+    session.last = performance.now();
   }
 }
 

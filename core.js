@@ -1,26 +1,8 @@
 import { DEFAULT_DIFFICULTY, DIFFICULTIES, SEEN_KEY, COLS, ERA_NAMES, ERA_NIGHTS_STEP, ERA_SCALING, FENCE_MAX, NEED, PARTICLES, RELIC_FX, ROWS, T, TILE, WIN_NIGHTS } from "./data.js";
 
-export let selectedClass = null;
-export let pendingSeed = "";
+// 跨局保留的会话变量（标题页选择、主循环时间戳、提示计时）。每局的数据在 state 里。
+export const session = { selectedClass: null, pendingSeed: "", last: 0, looping: false, toastTimer: 0 };
 export let state = null;
-export let last = 0;
-export let looping = false;
-export let toastTimer = 0;
-export function setSelectedClass(v) {
-  selectedClass = v;
-}
-export function setPendingSeed(v) {
-  pendingSeed = v;
-}
-export function setLast(v) {
-  last = v;
-}
-export function setLooping(v) {
-  looping = v;
-}
-export function setToastTimer(v) {
-  toastTimer = v;
-}
 export function setRng(v) {
   rng = v;
 }
