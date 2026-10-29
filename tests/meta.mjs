@@ -67,9 +67,36 @@ if (meta.stats.runs !== 1 || meta.stats.daily[daily.seed] === undefined) throw n
 await page.goto(origin, { waitUntil: "domcontentloaded" });
 const stats1 = await page.locator("#title-stats").textContent();
 if (!stats1.includes("已玩 1 局") || !stats1.includes("今日挑战最佳")) throw new Error("title stats should show saved runs: " + stats1);
+if (!stats1.includes("通关率 0%（0/1）") || !stats1.includes("普通通关率 0%（0/1）")) throw new Error("title stats should show win rate: " + stats1);
+
 await page.locator("#btn-codex").click();
 const codex2 = await page.locator("#overlay-body").textContent();
 if (!codex2.includes("史莱姆") || !codex2.includes("★ 心之匠")) throw new Error("codex should reveal unlocked entries");
+
+// 难度：标题页可选并记住；困难放大怪物生命/伤害/每波数量；每日挑战固定普通
+await page.locator("#overlay-actions button").click();
+await page.locator('[data-diff="hard"]').click();
+await page.goto(origin, { waitUntil: "domcontentloaded" });
+const diffOn = await page.locator('[data-diff="hard"]').getAttribute("class");
+if (!String(diffOn).includes("on")) throw new Error("difficulty pick should persist");
+const diffs = await page.evaluate(() => {
+  const C = window.CUBE;
+  const probe = (seed, d) => {
+    C.start("miner", seed, d);
+    const st = C.getState();
+    st.enemies = [];
+    C.spawn("slime", 40, 30);
+    const e = st.enemies[0];
+    st.wave = 0;
+    st.nights = 1;
+    return { d: st.difficulty, hp: e.hp, dmg: e.dmg, share: C.shareText() };
+  };
+  return { normal: probe("diff-a", "normal"), hard: probe("diff-a"), easy: probe("diff-a", "easy"), daily: probe(C.dailySeed()) };
+});
+if (diffs.hard.d !== "hard" || !(diffs.hard.hp > diffs.normal.hp) || !(diffs.hard.dmg > diffs.normal.dmg)) throw new Error("hard should scale enemies: " + JSON.stringify(diffs));
+if (!(diffs.easy.hp < diffs.normal.hp)) throw new Error("easy should weaken enemies: " + JSON.stringify(diffs));
+if (diffs.daily.d !== "normal") throw new Error("daily challenge must force normal difficulty: " + JSON.stringify(diffs.daily));
+if (!diffs.hard.share.includes("困难") || diffs.normal.share.includes("普通")) throw new Error("share text should note non-normal difficulty: " + JSON.stringify(diffs));
 
 // 存档损坏不应让游戏崩溃
 await page.evaluate(() => localStorage.setItem("cube-epoch:v1:codex", "{bad json"));

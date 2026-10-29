@@ -577,6 +577,10 @@ h1 {
 .meta-row button { padding: 8px 14px; font-size: 13px; }
 #btn-daily { background: #e8c040; }
 #btn-daily:disabled { opacity: 0.55; cursor: not-allowed; }
+.diff-row { align-items: center; margin-top: 6px; }
+.diff-row span { color: var(--muted); font-size: 12px; }
+.diff-row button { padding: 4px 12px; font-size: 12px; opacity: 0.6; }
+.diff-row button.on { opacity: 1; outline: 2px solid var(--gold); }
 .title-stats { text-align: center; color: var(--muted); font-size: 12px; margin-top: 8px; min-height: 1em; }
 .overlay.codex #overlay-body { max-height: 60vh; overflow-y: auto; text-align: left; font-size: 13px; line-height: 1.6; }
 

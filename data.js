@@ -299,6 +299,15 @@ export const ACHIEVEMENTS = [
 ];
 
 export const DAILY_PREFIX = "daily-";
+
+// 难度：统一乘到敌人生命、伤害和每波数量上。每日挑战固定用 DAILY_DIFFICULTY，保证同一套规则。
+export const DIFFICULTIES = {
+  easy: { name: "简单", hp: 0.75, dmg: 0.7, spawn: 0.75 },
+  normal: { name: "普通", hp: 1, dmg: 1, spawn: 1 },
+  hard: { name: "困难", hp: 1.3, dmg: 1.3, spawn: 1.35 },
+};
+export const DEFAULT_DIFFICULTY = "normal";
+export const DAILY_DIFFICULTY = "normal";
 export const STORE_PREFIX = "cube-epoch:v1:";
 
 // 粒子预设：burst(x, y, color, n, preset) 读取这里的参数。gravity > 0 下坠，< 0 上飘。

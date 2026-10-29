@@ -1,6 +1,6 @@
 import { BIOME_FX, BOSSES, CLASSES, COLS, ENEMIES, ENEMY_DROPS, ENEMY_FX, RELIC_FX, ROWS, SKY_FX, SPAWN_TABLE, T, TILE, VIEW_H, VIEW_W, WAVES } from "./data.js";
 import { beep, hitSound, noise } from "./audio.js";
-import { addDrop, burst, campTile, dist, dmgMul, eraMul, eraNights, fenceMax, floatText, flySolid, groundSolid, has, punch, rand, rnd, setTile, solid, state, tileAt } from "./core.js";
+import { addDrop, burst, campTile, diff, dist, dmgMul, eraMul, eraNights, fenceMax, floatText, flySolid, groundSolid, has, punch, rand, rnd, setTile, solid, state, tileAt } from "./core.js";
 import { aimVec, die, faceVec } from "./game.js";
 import { codexAdd } from "./meta.js";
 import { camera, toast } from "./ui.js";
@@ -176,9 +176,9 @@ export function useSkill() {
 export function makeEnemy(kind, x, y) {
   const def = ENEMIES[kind];
   codexAdd("enemies", kind);
-  const hp = Math.round(def.hp * eraMul() * (has("blood_moon") ? RELIC_FX.bloodMoonHp : 1));
+  const hp = Math.round(def.hp * eraMul() * diff().hp * (has("blood_moon") ? RELIC_FX.bloodMoonHp : 1));
   return {
-    kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd: def.spd, dmg: def.dmg * eraMul(),
+    kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd: def.spd, dmg: def.dmg * eraMul() * diff().dmg,
     hit: 0, flash: 0, bob: rnd("fx"), under: !!def.burrow, throwT: ENEMY_FX.throwCd * 0.5,
   };
 }
@@ -366,7 +366,7 @@ export function startNightWaves() {
 
 export function beginWave() {
   state.wave += 1;
-  state.toSpawn = WAVES.baseSpawn + state.nights + state.wave;
+  state.toSpawn = Math.max(1, Math.round((WAVES.baseSpawn + state.nights + state.wave) * diff().spawn));
   if (bossNight() && state.wave === state.wavesTotal) {
     state.bossPending = true;
     state.toSpawn += 1;

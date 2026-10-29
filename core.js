@@ -1,4 +1,4 @@
-import { SEEN_KEY, COLS, ERA_NAMES, ERA_NIGHTS_STEP, ERA_SCALING, FENCE_MAX, NEED, PARTICLES, RELIC_FX, ROWS, T, TILE, WIN_NIGHTS } from "./data.js";
+import { DEFAULT_DIFFICULTY, DIFFICULTIES, SEEN_KEY, COLS, ERA_NAMES, ERA_NIGHTS_STEP, ERA_SCALING, FENCE_MAX, NEED, PARTICLES, RELIC_FX, ROWS, T, TILE, WIN_NIGHTS } from "./data.js";
 
 export let selectedClass = null;
 export let pendingSeed = "";
@@ -142,6 +142,9 @@ export function nightsLeft() {
 }
 export function survivedNights() {
   return nightsLeft() <= 0;
+}
+export function diff() {
+  return DIFFICULTIES[state.difficulty] || DIFFICULTIES[DEFAULT_DIFFICULTY];
 }
 export function eraMul() {
   return Math.pow(ERA_SCALING, state.era - 1);

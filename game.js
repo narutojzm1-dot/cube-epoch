@@ -3,7 +3,7 @@ import { beep, cycleAudio, ensureAudio, footstep, playMusicPulse } from "./audio
 import { apCostOfTile, apMax, apShort, capOf, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
 import { spawnEnemy, makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
 import { hasSeenWorld, markSeenWorld, burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, last, looping, makeStreams, materialsReady, mouse, newSeed, nightsLeft, pendingSeed, rnd, selectedClass, setLast, setLooping, setPendingSeed, setRng, setSelectedClass, setState, setToastTimer, state, survivedNights, tileAt, toastTimer, tryMove, urlSeed } from "./core.js";
-import { checkAch, codexAdd, codexText, dailySeed, meta, openCodex, recordRun, shareText, titleStatsText, updateAch } from "./meta.js";
+import { checkAch, codexAdd, codexText, dailySeed, meta, openCodex, recordRun, runDifficulty, setDifficulty, shareText, titleStatsText, updateAch } from "./meta.js";
 import { render, skyTint } from "./render.js";
 import { currentTarget, campGaps, canAffordNextFence, canOffer, BRIEF, advanceBrief, advanceIntro, brief, briefingBox, briefingCursor, briefingText, btnCodex, btnDaily, btnHelp, btnMute, btnPause, btnSkipBrief, btnSkipGuide, btnSkipIntro, btnStart, camera, canvas, copyText, endBriefing, finishIntro, intro, introBox, manaWrap, overlay, playIntro, resize, screenGame, screenIntro, screenTitle, setPrompt, showOverlay, skillName, startBriefing, syncGuide, syncHud, titleStats, toast, toastEl, togglePause } from "./ui.js";
 import { endDayEvent, genWorld, makePlayer, rollDayEvent, tradeCaravan, updateDayEvent } from "./world.js";
@@ -24,6 +24,7 @@ export function startGame(cls, opts) {
   setState({
     cls,
     seed,
+    difficulty: runDifficulty(seed, opts && opts.difficulty),
     tiles: world.tiles,
     crops: world.crops,
     player: makePlayer(cls),
@@ -702,6 +703,17 @@ if (btnDaily) {
   });
 }
 if (btnCodex) btnCodex.addEventListener("click", () => openCodex());
+function syncDifficulty() {
+  for (const b of document.querySelectorAll("[data-diff]")) b.classList.toggle("on", b.dataset.diff === meta.prefs.difficulty);
+  if (titleStats) titleStats.textContent = titleStatsText();
+}
+for (const b of document.querySelectorAll("[data-diff]")) {
+  b.addEventListener("click", () => {
+    setDifficulty(b.dataset.diff);
+    syncDifficulty();
+  });
+}
+syncDifficulty();
 if (titleStats) titleStats.textContent = titleStatsText();
 btnSkipIntro.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -791,7 +803,8 @@ window.addEventListener("resize", () => { if (state) resize(); });
 
 window.CUBE = {
   getState: () => state,
-  start: (cls, seed) => startGame(cls || "miner", { seed }),
+  start: (cls, seed, difficulty) => startGame(cls || "miner", { seed, difficulty }),
+  setDifficulty: (id) => { setDifficulty(id); syncDifficulty(); },
   rollDawn: () => rollDawn().map((r) => r.id),
   pickRelic,
   shareText: () => shareText(),

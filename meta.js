@@ -1,4 +1,4 @@
-import { ACHIEVEMENTS, DAILY_PREFIX, DAY_EVENT_FX, ENEMIES, RELICS, RELIC_TYPE_LABEL, STORE_PREFIX } from "./data.js";
+import { ACHIEVEMENTS, DAILY_DIFFICULTY, DAILY_PREFIX, DEFAULT_DIFFICULTY, DIFFICULTIES, DAY_EVENT_FX, ENEMIES, RELICS, RELIC_TYPE_LABEL, STORE_PREFIX } from "./data.js";
 import { beep } from "./audio.js";
 import { eraName, state, toastTimer } from "./core.js";
 import { overlay, showOverlay, toast } from "./ui.js";
@@ -27,6 +27,23 @@ export const meta = {
 if (!Array.isArray(meta.codex.enemies)) meta.codex.enemies = [];
 if (!Array.isArray(meta.codex.relics)) meta.codex.relics = [];
 if (!meta.stats.daily || typeof meta.stats.daily !== "object") meta.stats.daily = {};
+if (!meta.stats.byDiff || typeof meta.stats.byDiff !== "object") meta.stats.byDiff = {};
+meta.prefs = loadStore("prefs", { difficulty: DEFAULT_DIFFICULTY });
+if (!meta.prefs || typeof meta.prefs !== "object" || !DIFFICULTIES[meta.prefs.difficulty]) meta.prefs = { difficulty: DEFAULT_DIFFICULTY };
+
+export function setDifficulty(id) {
+  if (!DIFFICULTIES[id]) return;
+  meta.prefs.difficulty = id;
+  saveStore("prefs", meta.prefs);
+}
+export function runDifficulty(seed, wanted) {
+  if (isDaily(seed)) return DAILY_DIFFICULTY;
+  if (DIFFICULTIES[wanted]) return wanted;
+  return meta.prefs.difficulty;
+}
+function winRate(runs, wins) {
+  return runs ? `${Math.round((wins / runs) * 100)}%（${wins}/${runs}）` : "—";
+}
 
 export function dailySeed(date) {
   const d = date || new Date();
@@ -95,7 +112,13 @@ export function recordRun() {
   st.kills += state.kills;
   st.bestNights = Math.max(st.bestNights, state.nights);
   st.bestEra = Math.max(st.bestEra, state.era);
-  if (state.win || state.era > 1) st.wins += 1;
+  const won = state.win || state.era > 1;
+  if (won) st.wins += 1;
+  const d = state.difficulty || DEFAULT_DIFFICULTY;
+  const row = st.byDiff[d] && typeof st.byDiff[d] === "object" ? st.byDiff[d] : { runs: 0, wins: 0 };
+  row.runs = (row.runs || 0) + 1;
+  row.wins = (row.wins || 0) + (won ? 1 : 0);
+  st.byDiff[d] = row;
   if (isDaily(state.seed)) st.daily[state.seed] = Math.max(st.daily[state.seed] || 0, state.nights);
   const keys = Object.keys(st.daily).sort();
   while (keys.length > 30) delete st.daily[keys.shift()];
@@ -108,7 +131,10 @@ export function titleStatsText() {
   const got = ACHIEVEMENTS.filter((a) => meta.ach[a.id]).length;
   const today = st.daily[dailySeed()];
   if (!st.runs) return `成就 ${got}/${ACHIEVEMENTS.length} · 还没有战绩，先来一局吧`;
-  return `已玩 ${st.runs} 局 · 最远第${st.bestNights}夜 · 最高${eraName(st.bestEra)} · 累计击杀 ${st.kills} · 成就 ${got}/${ACHIEVEMENTS.length}`
+  const d = meta.prefs.difficulty;
+  const row = st.byDiff[d] || { runs: 0, wins: 0 };
+  return `已玩 ${st.runs} 局 · 通关率 ${winRate(st.runs, st.wins || 0)} · ${DIFFICULTIES[d].name}通关率 ${winRate(row.runs || 0, row.wins || 0)}`
+    + ` · 最远第${st.bestNights}夜 · 最高${eraName(st.bestEra)} · 累计击杀 ${st.kills} · 成就 ${got}/${ACHIEVEMENTS.length}`
     + (today !== undefined ? ` · 今日挑战最佳第${today}夜` : "");
 }
 
@@ -137,7 +163,8 @@ export function openCodex() {
 
 export function shareText() {
   const names = state.picks.map((id) => RELICS.find((r) => r.id === id).name);
-  const tail = `第${state.nights}夜 · 击杀${state.kills} · 遗物[${names.join(",")}]`;
+  const d = state.difficulty || DEFAULT_DIFFICULTY;
+  const tail = (d !== DEFAULT_DIFFICULTY ? `${DIFFICULTIES[d].name} · ` : "") + `第${state.nights}夜 · 击杀${state.kills} · 遗物[${names.join(",")}]`;
   if (isDaily(state.seed)) return `方块纪元·每日 ${state.seed.slice(-4)} · ${eraName(state.era)} · ${tail}`;
   return `方块纪元·种子 ${state.seed} · ${eraName(state.era)} · ${tail}`;
 }
