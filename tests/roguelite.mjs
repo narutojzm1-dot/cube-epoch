@@ -110,6 +110,21 @@ const era = await page.evaluate(() => {
 });
 if (era.era !== 2 || era.eraStart !== 3 || era.over || era.paused || era.dayLen !== 62) throw new Error("next era failed: " + JSON.stringify(era));
 
+// 高光统计随实际击杀和篝火掉血更新
+const hlLive = await page.evaluate(async () => {
+  const C = window.CUBE;
+  const st = C.getState();
+  st.day = false;
+  st.cycle = 0;
+  st.nightKills = 0;
+  st.enemies = [];
+  C.spawn("slime", 30, 30);
+  st.enemies[0].hp = 0;
+  await new Promise((r) => setTimeout(r, 300));
+  return { kills: st.hl.bestKills, night: st.hl.bestKillsNight, nights: st.nights };
+});
+if (hlLive.kills < 1 || hlLive.night !== hlLive.nights) throw new Error("night kill highlight not tracked: " + JSON.stringify(hlLive));
+
 // 结算页战绩文本
 await page.evaluate(() => {
   const st = window.CUBE.getState();
@@ -120,6 +135,9 @@ await page.evaluate(() => {
   }];
   st.player.x = st.camp.x + 120;
   st.player.y = st.camp.y;
+  st.hl.bestKills = 12;
+  st.hl.bestKillsNight = 2;
+  st.hl.boss.push({ name: "史莱姆王", secs: 41 });
 });
 await page.waitForSelector("#btn-copy-share", { timeout: 3000 });
 const share = await page.evaluate(() => window.CUBE.getState().share);
@@ -128,6 +146,11 @@ for (const bit of ["方块纪元", "种子", "第二纪元", "击杀", "遗物["
 }
 const body = await page.locator("#overlay-body").innerText();
 if (!body.includes(share)) throw new Error("result overlay should show share text");
+// 结算高光：篝火最低、单夜最多击杀、Boss 用时，并带进分享文本
+for (const bit of ["【本局高光】", "篝火一度熄灭", "最猛一夜：第2夜击杀 12 只", "弑王：41 秒击败史莱姆王"]) {
+  if (!body.includes(bit)) throw new Error("result highlights missing " + bit + ": " + body);
+}
+if (!share.includes("高光[篝火曾熄,单夜12杀,史莱姆王41秒]")) throw new Error("share text should carry highlights: " + share);
 
 if (logs.length) throw new Error("page errors: " + logs.join(" | "));
 await browser.close();

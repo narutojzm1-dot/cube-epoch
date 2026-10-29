@@ -51,6 +51,8 @@ const must = [
   ["export const DIFFICULTIES = {", data],
   ["export function nightRng", js],
   ["export const UNLOCKS = [", data],
+  ["export function highlights", js],
+  ["【本局高光】", js],
   ["isUnlocked(r.id, daily)", js],
   ["nightRng(\"dawn\")", js],
   ["export const DAILY_DIFFICULTY = \"normal\"", data],

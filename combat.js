@@ -40,6 +40,10 @@ export function canHitCamp(e) {
 export function damageCamp(amount) {
   if (state.campHp <= 0 || state.over) return;
   state.campHp = Math.max(0, state.campHp - amount * (has("ember_core") ? RELIC_FX.emberCoreCamp : 1));
+  if (state.hl && state.campHp < state.hl.campLow) {
+    state.hl.campLow = state.campHp;
+    state.hl.campLowNight = state.nights;
+  }
   state.campFlash = 0.4;
   state.nightCampHit = true;
   burst(state.camp.x, state.camp.y - 8, "#ff6a20", 5);
@@ -188,6 +192,7 @@ export function makeEnemy(kind, x, y) {
   return {
     kind, x, y, vx: 0, vy: 0, hp, maxHp: hp, spd: def.spd, dmg: def.dmg * eraMul() * diff().dmg,
     hit: 0, flash: 0, bob: rnd("fx"), under: !!def.burrow, throwT: ENEMY_FX.throwCd * 0.5,
+    born: state.time,
   };
 }
 
@@ -515,6 +520,10 @@ export function updateEnemies(dt) {
     state.kills += 1;
     if (state.kills === 1) toast("干掉一只！掉的麦可以点背包回血。夜里别离篝火太远。", 2.6);
     state.nightKills = (state.nightKills || 0) + 1;
+    if (state.hl && !state.day && state.nightKills > state.hl.bestKills) {
+      state.hl.bestKills = state.nightKills;
+      state.hl.bestKillsNight = state.nights;
+    }
     if (!state.day && has("veteran_banner")) state.player.hp = Math.min(state.player.maxHp, state.player.hp + RELIC_FX.veteranHeal);
     const def = edef(e);
     if (def.spore) corrupt(Math.floor(e.x / TILE), Math.floor(e.y / TILE));
@@ -525,6 +534,7 @@ export function updateEnemies(dt) {
     }
     if (def.boss) {
       state.bossKills = (state.bossKills || 0) + 1;
+      if (state.hl) state.hl.boss.push({ name: def.name, secs: Math.max(1, Math.round(state.time - (e.born ?? state.time))) });
       state.bossName = "";
       burst(e.x, e.y, "#ffe27a", 30, "boss");
       burst(e.x, e.y, "#fff4b0", 16, "spark");

@@ -3,7 +3,7 @@ import { beep, cycleAudio, ensureAudio, footstep, playMusicPulse } from "./audio
 import { apCostOfTile, apMax, apShort, capOf, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
 import { spawnEnemy, makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
 import { hasSeenWorld, markSeenWorld, burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, last, looping, makeStreams, materialsReady, mouse, newSeed, nightsLeft, pendingSeed, nightRng, selectedClass, setLast, setLooping, setPendingSeed, setRng, setSelectedClass, setState, setToastTimer, state, survivedNights, tileAt, toastTimer, tryMove, urlSeed } from "./core.js";
-import { checkAch, codexAdd, codexText, dailySeed, isDaily, isUnlocked, meta, openCodex, recordRun, runDifficulty, setDifficulty, shareText, titleStatsText, updateAch } from "./meta.js";
+import { checkAch, codexAdd, codexText, dailySeed, highlights, isDaily, isUnlocked, meta, openCodex, recordRun, runDifficulty, setDifficulty, shareText, titleStatsText, updateAch } from "./meta.js";
 import { render, skyTint } from "./render.js";
 import { currentTarget, campGaps, canAffordNextFence, canOffer, BRIEF, advanceBrief, advanceIntro, brief, briefingBox, briefingCursor, briefingText, btnCodex, btnDaily, btnHelp, btnMute, btnPause, btnSkipBrief, btnSkipGuide, btnSkipIntro, btnStart, camera, canvas, copyText, endBriefing, finishIntro, intro, introBox, manaWrap, overlay, playIntro, resize, screenGame, screenIntro, screenTitle, setPrompt, showOverlay, skillName, startBriefing, syncGuide, syncHud, titleStats, toast, toastEl, togglePause } from "./ui.js";
 import { endDayEvent, genWorld, makePlayer, rollDayEvent, tradeCaravan, updateDayEvent } from "./world.js";
@@ -108,6 +108,7 @@ export function startGame(cls, opts) {
     meteorSeen: false,
     recorded: false,
     achQueue: [],
+    hl: { campLow: CAMP_MAX, campLowNight: 0, bestKills: 0, bestKillsNight: 0, boss: [] },
     achAcc: 0,
     biomes: world.biomes,
     nightWarned: false,
@@ -212,7 +213,9 @@ function showResult(title, body) {
   state.choosing = false;
   recordRun();
   state.share = shareText();
-  showOverlay(title, `${body}\n\n${state.share}`, [
+  const hl = highlights().lines;
+  const hlText = hl.length ? `\n\n【本局高光】\n${hl.map((l) => "· " + l).join("\n")}` : "";
+  showOverlay(title, `${body}${hlText}\n\n${state.share}`, [
     ["复制战绩", () => copyText(state.share), { id: "btn-copy-share" }],
     ["同种子再来", () => {
       const u = new URL(location.href);

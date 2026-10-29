@@ -1,4 +1,4 @@
-import { UNLOCKS, ACHIEVEMENTS, DAILY_DIFFICULTY, DAILY_PREFIX, DEFAULT_DIFFICULTY, DIFFICULTIES, DAY_EVENT_FX, ENEMIES, RELICS, RELIC_TYPE_LABEL, STORE_PREFIX } from "./data.js";
+import { CAMP_MAX, UNLOCKS, ACHIEVEMENTS, DAILY_DIFFICULTY, DAILY_PREFIX, DEFAULT_DIFFICULTY, DIFFICULTIES, DAY_EVENT_FX, ENEMIES, RELICS, RELIC_TYPE_LABEL, STORE_PREFIX } from "./data.js";
 import { beep } from "./audio.js";
 import { eraName, state, toastTimer } from "./core.js";
 import { overlay, showOverlay, toast } from "./ui.js";
@@ -200,10 +200,41 @@ export function openCodex() {
   overlay.classList.add("codex");
 }
 
+// 结算页「本局高光」：最多 3 行；短版拼进分享战绩。
+export function highlights() {
+  const hl = state.hl;
+  if (!hl) return { lines: [], tags: [] };
+  const lines = [];
+  const tags = [];
+  if (hl.campLow <= 0) {
+    lines.push(`篝火一度熄灭（第${hl.campLowNight}夜）`);
+    tags.push("篝火曾熄");
+  } else if (hl.campLow < CAMP_MAX) {
+    const hp = Math.ceil(hl.campLow);
+    lines.push(`最惊险：第${hl.campLowNight}夜篝火只剩 ${hp} 点`);
+    tags.push(`篝火最低${hp}`);
+  } else if (state.nights > 0) {
+    lines.push("篝火从没掉过一滴血");
+    tags.push("篝火无伤");
+  }
+  if (hl.bestKills > 0) {
+    lines.push(`最猛一夜：第${hl.bestKillsNight}夜击杀 ${hl.bestKills} 只`);
+    tags.push(`单夜${hl.bestKills}杀`);
+  }
+  if (hl.boss.length) {
+    const fast = hl.boss.reduce((a, b) => (b.secs < a.secs ? b : a));
+    lines.push(`弑王：${fast.secs} 秒击败${fast.name}`);
+    tags.push(`${fast.name}${fast.secs}秒`);
+  }
+  return { lines, tags };
+}
+
 export function shareText() {
   const names = state.picks.map((id) => RELICS.find((r) => r.id === id).name);
   const d = state.difficulty || DEFAULT_DIFFICULTY;
-  const tail = (d !== DEFAULT_DIFFICULTY ? `${DIFFICULTIES[d].name} · ` : "") + `第${state.nights}夜 · 击杀${state.kills} · 遗物[${names.join(",")}]`;
+  const tags = highlights().tags;
+  const tail = (d !== DEFAULT_DIFFICULTY ? `${DIFFICULTIES[d].name} · ` : "") + `第${state.nights}夜 · 击杀${state.kills} · 遗物[${names.join(",")}]`
+    + (tags.length ? ` · 高光[${tags.join(",")}]` : "");
   if (isDaily(state.seed)) return `方块纪元·每日 ${state.seed.slice(-4)} · ${eraName(state.era)} · ${tail}`;
   return `方块纪元·种子 ${state.seed} · ${eraName(state.era)} · ${tail}`;
 }
