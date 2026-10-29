@@ -29,6 +29,13 @@ const seedC = await page.evaluate(() => {
   return window.CUBE.rollDawn();
 });
 if (seedC.length !== 3 || new Set(seedC).size !== 3) throw new Error("dawn must offer 3 distinct choices, got " + seedC);
+// 验收：连续 3 局（不同种子）地图、天亮三选一都不完全相同
+const runs3 = await page.evaluate(() => ["run-a", "run-b", "run-c"].map((sd) => {
+  window.CUBE.start("miner", sd);
+  return { tiles: Array.from(window.CUBE.getState().tiles).join(""), dawn: window.CUBE.rollDawn().join() };
+}));
+if (new Set(runs3.map((r) => r.tiles)).size !== 3) throw new Error("3 seeds must give 3 different maps");
+if (new Set(runs3.map((r) => r.dawn)).size < 2) throw new Error("3 seeds should not all roll the same dawn: " + runs3.map((r) => r.dawn));
 
 // 每夜独立随机流：同种子下第一夜打法不同（刷怪次数不同），第二夜的三选一和出怪序列仍然相同
 const nightStable = await page.evaluate(() => {
