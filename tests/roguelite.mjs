@@ -58,6 +58,47 @@ if (nightStable.a.dawn !== nightStable.b.dawn) throw new Error("night-2 dawn pic
 if (nightStable.a.kinds !== nightStable.b.kinds) throw new Error("night-2 spawns must not depend on night-1 play: " + JSON.stringify(nightStable));
 await page.evaluate(() => window.CUBE.start("miner", "test1027"));
 
+// 职业专属遗物：只出现在本职业的三选一里，并且权重更高
+const classRelics = await page.evaluate(() => {
+  const C = window.CUBE;
+  const own = { miner: ["gold_nose", "deep_pick"], farmer: ["harvest_prayer", "fertile_soil"], mage: ["tower_enchant", "mana_spring"], knight: ["shield_thorns", "war_cry"] };
+  const all = Object.values(own).flat();
+  const out = {};
+  for (const cls of Object.keys(own)) {
+    let mine = 0;
+    let foreign = 0;
+    for (let i = 0; i < 40; i++) {
+      C.start(cls, `cls-${i}`);
+      for (const id of C.rollDawn()) {
+        if (own[cls].includes(id)) mine += 1;
+        else if (all.includes(id)) foreign += 1;
+      }
+    }
+    out[cls] = { mine, foreign };
+  }
+  return out;
+});
+for (const [cls, r] of Object.entries(classRelics)) {
+  if (r.foreign) throw new Error(`${cls} must not roll other classes' relics: ` + JSON.stringify(classRelics));
+  if (r.mine < 15) throw new Error(`${cls} class relics should show up often: ` + JSON.stringify(classRelics));
+}
+const nose = await page.evaluate(() => {
+  const C = window.CUBE;
+  const dig = (relic) => {
+    C.start("miner", "gold-nose");
+    const st = C.getState();
+    if (relic) st.relics.push(relic);
+    st.drops = [];
+    st.ap = 99;
+    const i = Array.from(st.tiles).indexOf(5);
+    C.gather(i % 48, Math.floor(i / 48));
+    return st.drops.filter((d) => d.kind === "gold").length;
+  };
+  return { base: dig(null), nose: dig("gold_nose") };
+});
+if (nose.nose !== nose.base + 1) throw new Error("gold_nose should add one gold: " + JSON.stringify(nose));
+await page.evaluate(() => window.CUBE.start("miner", "test1027"));
+
 // 撑过一夜 → 黎明三选一出现并能选
 await page.evaluate(() => {
   const st = window.CUBE.getState();

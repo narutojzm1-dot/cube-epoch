@@ -1,4 +1,4 @@
-import { CAMP_MAX, UNLOCKS, ACHIEVEMENTS, DAILY_DIFFICULTY, DAILY_PREFIX, DEFAULT_DIFFICULTY, DIFFICULTIES, DAY_EVENT_FX, ENEMIES, RELICS, RELIC_TYPE_LABEL, STORE_PREFIX } from "./data.js";
+import { CAMP_MAX, CLASSES, UNLOCKS, ACHIEVEMENTS, DAILY_DIFFICULTY, DAILY_PREFIX, DEFAULT_DIFFICULTY, DIFFICULTIES, DAY_EVENT_FX, ENEMIES, RELICS, RELIC_TYPE_LABEL, STORE_PREFIX } from "./data.js";
 import { beep } from "./audio.js";
 import { eraName, state, toastTimer } from "./core.js";
 import { overlay, showOverlay, toast } from "./ui.js";
@@ -175,7 +175,8 @@ export function codexText() {
   lines.push("");
   lines.push(`【遗物图鉴】${RELICS.filter((r) => meta.codex.relics.includes(r.id)).length}/${RELICS.length}`);
   for (const r of RELICS) {
-    lines.push(meta.codex.relics.includes(r.id) ? `${r.name}（${RELIC_TYPE_LABEL[r.type]}）：${r.desc}` : "？？？");
+    const tag = r.cls ? `·${CLASSES[r.cls].name}专属` : "";
+    lines.push(meta.codex.relics.includes(r.id) ? `${r.name}（${RELIC_TYPE_LABEL[r.type]}${tag}）：${r.desc}` : "？？？");
   }
   lines.push("");
   lines.push(`【局外解锁】${UNLOCKS.filter(unlockMet).length}/${UNLOCKS.length}`);

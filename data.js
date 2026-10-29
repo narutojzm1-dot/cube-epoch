@@ -175,6 +175,15 @@ export const RELICS = [
   { id: "blood_moon", type: "mutation", name: "血月契约", desc: "敌人 +40% 生命，但掉落双倍。", weight: 6 },
   { id: "glass_cannon", type: "mutation", name: "玻璃大炮", desc: "伤害 +50%，生命上限 -30%。", weight: 5 },
   { id: "greedy_hearth", type: "mutation", name: "贪婪篝火", desc: "篝火白天不再回血，但每次天亮获得 3 金。", weight: 5 },
+  // 职业专属（cls）：只会出现在该职业的三选一里，权重 ×CLASS_RELIC_BIAS，用来分化流派。
+  { id: "gold_nose", type: "relic", cls: "miner", name: "寻金鼻", desc: "挖金额外 +1 金。", weight: 6 },
+  { id: "deep_pick", type: "relic", cls: "miner", name: "深掘镐", desc: "挖石额外 +1 石。", weight: 6 },
+  { id: "harvest_prayer", type: "relic", cls: "farmer", name: "丰收祷言", desc: "收麦回血翻倍。", weight: 6 },
+  { id: "fertile_soil", type: "relic", cls: "farmer", name: "沃土", desc: "庄稼生长速度 +50%。", weight: 6 },
+  { id: "tower_enchant", type: "relic", cls: "mage", name: "箭塔附魔", desc: "箭塔伤害 +60%。", weight: 6 },
+  { id: "mana_spring", type: "relic", cls: "mage", name: "法力涌泉", desc: "法力回复 +50%。", weight: 6 },
+  { id: "shield_thorns", type: "relic", cls: "knight", name: "盾刺", desc: "被怪近身打到时，把同等伤害反弹回去。", weight: 6 },
+  { id: "war_cry", type: "relic", cls: "knight", name: "战吼", desc: "冲锋冷却 -35%。", weight: 6 },
   // 以下需要局外解锁（见 UNLOCKS），未解锁前不会出现在三选一里。
   { id: "phoenix_feather", type: "relic", name: "不死鸟之羽", desc: "篝火第一次熄灭时以 40 点复燃（每局一次）。", weight: 6 },
   { id: "veteran_banner", type: "relic", name: "老兵战旗", desc: "夜里每击杀一只怪回复 2 生命。", weight: 7 },
@@ -189,6 +198,7 @@ export const UNLOCKS = [
   { id: "star_map", need: { ach: "stargazer" }, hint: "亲眼看见一次陨石坠落" },
 ];
 
+export const CLASS_RELIC_BIAS = 3;
 export const RELIC_TYPE_LABEL = { relic: "遗物", blessing: "祝福", mutation: "变异" };
 export const DAWN_CHOICES = 3;
 
@@ -206,6 +216,14 @@ export const RELIC_FX = {
   harvestCharmHeal: 10,
   luckyCoinDrop: 1.5,
   phoenixCamp: 40,
+  goldNose: 1,
+  deepPick: 1,
+  harvestPrayerMul: 2,
+  fertileSoilGrow: 1.5,
+  towerEnchantDmg: 1.6,
+  manaSpringRegen: 1.5,
+  shieldThorns: 1,
+  warCryCd: 0.65,
   veteranHeal: 2,
   supplyWood: 6,
   supplyStone: 4,

@@ -150,7 +150,7 @@ export function shoot() {
 export function useSkill() {
   const p = state.player;
   if (p.skillCd > 0) return;
-  p.skillCd = CLASSES[p.cls].skillCd;
+  p.skillCd = CLASSES[p.cls].skillCd * (has("war_cry") ? RELIC_FX.warCryCd : 1);
   if (p.cls === "miner") {
     p.sense = 6;
     const q = (state.biomes || []).find((b) => b.kind === "quarry" || b.kind === "crystal");
@@ -499,6 +499,7 @@ export function updateEnemies(dt) {
       let dmg = e.dmg;
       if (p.cls === "knight") dmg *= 1 - CLASSES.knight.dr;
       hurt(p, dmg, e);
+      if (has("shield_thorns")) e.hp -= dmg * RELIC_FX.shieldThorns;
     } else if (canHitCamp(e) && e.hit <= 0 && state.campHp > 0) {
       const home = dist(p.x, p.y, state.camp.x, state.camp.y) < 28;
       if (home && dPlayer < 24) {
@@ -506,6 +507,7 @@ export function updateEnemies(dt) {
         let dmg = e.dmg;
         if (p.cls === "knight") dmg *= 1 - CLASSES.knight.dr;
         hurt(p, dmg, e);
+        if (has("shield_thorns")) e.hp -= dmg * RELIC_FX.shieldThorns;
         continue;
       }
       if (home) continue;

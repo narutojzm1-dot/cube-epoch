@@ -1,4 +1,4 @@
-import { DAY_LEN, FIRST_DAY_LEN, AP_BASE, BUILDINGS, CAMP_MAX, CLASSES, DAWN_CHOICES, DAY_EVENT_FX, ERA_NIGHTS_STEP, ERA_SCALING, RELICS, RELIC_FX, RELIC_TYPE_LABEL, T, TILE, WAVES, WIN_NIGHTS } from "./data.js";
+import { DAY_LEN, FIRST_DAY_LEN, AP_BASE, BUILDINGS, CAMP_MAX, CLASSES, CLASS_RELIC_BIAS, DAWN_CHOICES, DAY_EVENT_FX, ERA_NIGHTS_STEP, ERA_SCALING, RELICS, RELIC_FX, RELIC_TYPE_LABEL, T, TILE, WAVES, WIN_NIGHTS } from "./data.js";
 import { beep, cycleAudio, ensureAudio, footstep, playMusicPulse } from "./audio.js";
 import { apCostOfTile, apMax, apShort, capOf, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
 import { spawnEnemy, makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
@@ -276,15 +276,16 @@ function nextEra() {
 
 function rollDawn() {
   const daily = isDaily(state.seed);
-  const pool = RELICS.filter((r) => (r.type === "blessing" || !state.relics.includes(r.id)) && isUnlocked(r.id, daily));
+  const pool = RELICS.filter((r) => (r.type === "blessing" || !state.relics.includes(r.id)) && isUnlocked(r.id, daily) && (!r.cls || r.cls === state.cls));
+  const w = (r) => r.weight * (r.cls ? CLASS_RELIC_BIAS : 1);
   const roll01 = nightRng("dawn");
   const out = [];
   while (out.length < DAWN_CHOICES && pool.length) {
-    const total = pool.reduce((s, r) => s + r.weight, 0);
+    const total = pool.reduce((s, r) => s + w(r), 0);
     let roll = roll01() * total;
     let i = 0;
-    while (i < pool.length - 1 && roll >= pool[i].weight) {
-      roll -= pool[i].weight;
+    while (i < pool.length - 1 && roll >= w(pool[i])) {
+      roll -= w(pool[i]);
       i += 1;
     }
     out.push(pool.splice(i, 1)[0]);
@@ -415,7 +416,7 @@ function updatePlayer(dt) {
   p.invuln = Math.max(0, p.invuln - dt);
   p.attack = Math.max(0, p.attack - dt);
   p.sense = Math.max(0, p.sense - dt);
-  if (p.cls === "mage") p.mana = Math.min(p.maxMana, p.mana + dt * 1.35);
+  if (p.cls === "mage") p.mana = Math.min(p.maxMana, p.mana + dt * 1.35 * (has("mana_spring") ? RELIC_FX.manaSpringRegen : 1));
 
   const usingSpace = keys.has("Space") || keys.has("KeyJ");
   const wantAct = mouse.down || usingSpace;

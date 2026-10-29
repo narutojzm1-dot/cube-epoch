@@ -236,12 +236,12 @@ export function gatherTile(tx, ty) {
     chopSound();
   } else if (t === T.STONE) {
     setTile(tx, ty, T.DIRT);
-    addDrop("stone", cx, cy, 2 + rand("loot", 2));
+    addDrop("stone", cx, cy, 2 + rand("loot", 2) + (has("deep_pick") ? RELIC_FX.deepPick : 0));
     burst(cx, cy, "#c0c4cc", 10);
     beep(200, 0.05, "square", 0.04);
   } else if (t === T.GOLD) {
     setTile(tx, ty, T.STONE);
-    addDrop("gold", cx, cy, 1 + (state.cls === "miner" ? 1 : 0) + rand("loot", 2));
+    addDrop("gold", cx, cy, 1 + (state.cls === "miner" ? 1 : 0) + rand("loot", 2) + (has("gold_nose") ? RELIC_FX.goldNose : 0));
     burst(cx, cy, "#e8c040", 12);
     beep(740, 0.08, "square", 0.05);
     wakeStatue(tx, ty);
@@ -265,8 +265,9 @@ export function gatherTile(tx, ty) {
       addDrop("wheat", cx, cy, 1 + (state.cls === "farmer" ? 1 : 0));
       addDrop("seed", cx, cy, 1);
       if (state.cls === "farmer") {
-        state.player.hp = Math.min(state.player.maxHp, state.player.hp + 18);
-        floatText(cx, cy - 10, "+18", "#8dff9a");
+        const heal = 18 * (has("harvest_prayer") ? RELIC_FX.harvestPrayerMul : 1);
+        state.player.hp = Math.min(state.player.maxHp, state.player.hp + heal);
+        floatText(cx, cy - 10, "+" + heal, "#8dff9a");
         state.heals.harvest = true;
       }
       burst(cx, cy, "#e8c040", 8);
@@ -426,7 +427,7 @@ export function updateBuildings(dt) {
       const dy = (target.y - cy) / (best || 1);
       state.bolts.push({
         x: cx, y: cy - 6, vx: dx * BUILD_FX.towerBoltSpeed, vy: dy * BUILD_FX.towerBoltSpeed,
-        life: BUILD_FX.towerRange / BUILD_FX.towerBoltSpeed + 0.2, dmg: BUILD_FX.towerDmg, arrow: true, pierce: 1, hit: new Set(),
+        life: BUILD_FX.towerRange / BUILD_FX.towerBoltSpeed + 0.2, dmg: BUILD_FX.towerDmg * (has("tower_enchant") ? RELIC_FX.towerEnchantDmg : 1), arrow: true, pierce: 1, hit: new Set(),
       });
       beep(980, 0.03, "triangle", 0.02);
     }
@@ -441,7 +442,7 @@ export function updateBuildings(dt) {
 }
 
 export function updateCrops(dt) {
-  const growMul = state.cls === "farmer" ? CLASSES.farmer.grow : 1;
+  const growMul = (state.cls === "farmer" ? CLASSES.farmer.grow : 1) * (has("fertile_soil") ? RELIC_FX.fertileSoilGrow : 1);
   for (const [key, c] of state.crops) {
     if (c.stage >= 2) continue;
     const [tx, ty] = key.split(",").map(Number);

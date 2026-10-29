@@ -52,6 +52,8 @@ const must = [
   ["export function nightRng", js],
   ["export const UNLOCKS = [", data],
   ["export function highlights", js],
+  ["export const CLASS_RELIC_BIAS = 3", data],
+  ["(!r.cls || r.cls === state.cls)", js],
   ["【本局高光】", js],
   ["isUnlocked(r.id, daily)", js],
   ["nightRng(\"dawn\")", js],
