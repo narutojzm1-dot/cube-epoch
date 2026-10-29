@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: node --check game.js
+      - run: for f in data core audio ui render world meta build combat game; do node --check $f.js; done
       - run: node tests/static.mjs
 
   e2e:
@@ -34,3 +34,6 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps webkit
       - run: node tests/e2e.mjs
+      - run: node tests/roguelite.mjs
+      - run: node tests/content.mjs
+      - run: node tests/meta.mjs

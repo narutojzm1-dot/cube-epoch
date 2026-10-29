@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="rotate-hint" class="rotate-hint" role="alert">
+    <div class="rotate-icon">⟳</div>
+    <p>请横屏游玩</p>
+    <small>方块纪元需要键盘和较宽的屏幕。手机请横过来，或换到电脑上打开。</small>
+  </div>
   <div id="app">
     <section id="screen-title" class="screen">
       <div class="title-wrap">
@@ -76,6 +81,17 @@
 
       <div class="title-actions">
         <button id="btn-start" class="btn-primary" type="button" disabled>先选一个角色</button>
+        <div class="meta-row">
+          <button id="btn-daily" type="button" disabled>今日挑战</button>
+          <button id="btn-codex" type="button">图鉴 / 成就</button>
+        </div>
+        <div class="meta-row diff-row" id="diff-row" title="难度乘在怪物生命、伤害和每波数量上；今日挑战固定普通">
+          <span>难度</span>
+          <button type="button" data-diff="easy">简单</button>
+          <button type="button" data-diff="normal">普通</button>
+          <button type="button" data-diff="hard">困难</button>
+        </div>
+        <p id="title-stats" class="title-stats"></p>
         <p class="hint">第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。</p>
       </div>
     </section>
@@ -101,6 +117,7 @@
         </div>
         <div class="hud-center">
           <div id="clock" class="clock">白天 1:16</div>
+          <div id="ap" class="ap">日晷 14/14</div>
           <!-- 顶栏只说此刻要做的一件事 -->
           <div id="objective" class="objective">走到金框的树旁，空格或按住左键砍木头</div>
         </div>
@@ -148,6 +165,10 @@
           <span class="item build" data-k="fence" data-build="fence" title="按 1：放下栅栏"> <kbd>1</kbd> 栏 <b>0</b></span>
           <span class="item build" data-k="torch" data-build="torch" title="按 2：放下火把"> <kbd>2</kbd> 火 <b>0</b></span>
           <span class="item build" data-k="plot" data-build="plot" title="按 3：开田"> <kbd>3</kbd> 田 <b>0</b></span>
+          <span class="item build" data-build="tower" title="按 4：箭塔（石3金1），自动射击附近的怪"> <kbd>4</kbd> 塔</span>
+          <span class="item build" data-build="spike" title="按 5：尖刺（木2），踩上的地面怪掉血"> <kbd>5</kbd> 刺</span>
+          <span class="item build" data-build="spring" title="按 6：圣泉（石2麦1），附近慢慢回血"> <kbd>6</kbd> 泉</span>
+          <span class="item build" data-build="warehouse" title="按 7：仓库（木4石2），木/石/金/麦上限变大"> <kbd>7</kbd> 仓</span>
           <span class="item" data-k="wood">木 <b>0</b></span>
           <span class="item" data-k="stone">石 <b>0</b></span>
           <span class="item" data-k="gold">金 <b>0</b></span>
@@ -161,7 +182,7 @@
           <span id="skill-cd">就绪</span>
         </div>
         <div class="need">
-          心：木4石5金3麦3　栏1～2木　火1木1石　田1木
+          心：木4石5金3麦3　栏1～2木　火1木1石　田1木　塔3石1金　刺2木　泉2石1麦
         </div>
       </footer>
     </section>
@@ -184,6 +205,6 @@
       </div>
     </div>
   </div>
-  <script src="game.js"></script>
+  <script type="module" src="game.js"></script>
 </body>
 </html>

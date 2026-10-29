@@ -18,9 +18,12 @@ await page.locator("#btn-skip-intro").click();
 await page.waitForSelector("#briefing:not(.hidden)");
 const briefTitle = await page.locator("#briefing-title").innerText();
 if (!briefTitle.includes("保护")) throw new Error("briefing should start at camp, got " + briefTitle);
+if (await page.evaluate(() => localStorage.getItem("cube-epoch-seen"))) throw new Error("intro alone must not mark briefing seen");
 await page.locator("#btn-skip-brief").click();
 await page.waitForSelector("#screen-game:not(.hidden)");
 await page.waitForTimeout(200);
+
+if ((await page.evaluate(() => localStorage.getItem("cube-epoch-seen"))) !== "1") throw new Error("completed briefing should mark seen");
 
 const firstAim = await page.evaluate(() => {
   const t = window.CUBE.currentTarget();
@@ -80,6 +83,11 @@ await page.evaluate(() => {
   st.flags.chopped = true;
   st.inv.wood = 8;
 });
+await page.evaluate(() => {
+  const st = window.CUBE.getState();
+  Object.assign(st.inv, { stone: 5, gold: 3, wheat: 3 });
+});
+await page.waitForFunction(() => document.getElementById("objective").textContent.includes("围营"));
 const gapAim = await page.evaluate(() => window.CUBE.currentTarget().kind);
 if (gapAim !== "gap") throw new Error("after wood, target should be gap, got " + gapAim);
 
@@ -164,6 +172,7 @@ const cubes = await page.evaluate(() => {
   st.nights = 3;
   st.wave = 2;
   st.enemies = [];
+  st.bossPending = false;
   for (let i = 0; i < 10; i++) C.spawnEnemy();
   return st.enemies.filter((e) => e.kind === "cube").length;
 });
@@ -201,6 +210,44 @@ if (!(await page.evaluate(() => window.CUBE.getState().win))) {
   throw new Error("three nights offer should win");
 }
 
+// The integrated first era retains three nights, while later eras keep their
+// expanded enemy table and Boss override rather than becoming cube-only.
+const progression = await page.evaluate(async () => {
+  const { startNightWaves } = await import("/combat.js");
+  const st = window.CUBE.getState();
+  const waves = [];
+  for (const night of [1, 2, 3]) {
+    st.nights = night;
+    startNightWaves();
+    waves.push([st.wavesTotal, st.nightLen]);
+  }
+  st.bossPending = true;
+  st.nights = 3;
+  st.wave = st.wavesTotal;
+  st.enemies = [];
+  window.CUBE.spawnEnemy();
+  const boss = st.enemies[0]?.kind;
+  st.era = 2;
+  st.eraStart = 3;
+  st.nights = 6;
+  st.inv.heart = 1;
+  const early = window.CUBE.canOffer();
+  st.nights = 7;
+  const ready = window.CUBE.canOffer();
+  st.nights = 4;
+  startNightWaves();
+  const laterWaves = st.wavesTotal;
+  st.wave = 2;
+  st.bossPending = false;
+  st.enemies = [];
+  for (let i = 0; i < 100; i++) window.CUBE.spawnEnemy();
+  return { waves, boss, early, ready, laterWaves, kinds: [...new Set(st.enemies.map(e => e.kind))] };
+});
+if (JSON.stringify(progression.waves) !== JSON.stringify([[2,26],[3,26],[4,32]])) throw new Error("first-era wave progression regressed: " + JSON.stringify(progression));
+if (progression.boss !== "slime_king") throw new Error("Boss must take precedence over the cube reveal");
+if (progression.early || !progression.ready || progression.laterWaves !== 5) throw new Error("later-era progression regressed: " + JSON.stringify(progression));
+if (!progression.kinds.includes("thrower") || progression.kinds.length < 2) throw new Error("later-era enemy table must remain active: " + JSON.stringify(progression));
+
 await page.reload({ waitUntil: "domcontentloaded" });
 await page.locator('.class-card[data-class="knight"]').click();
 await page.locator("#btn-start").click();
@@ -211,6 +258,14 @@ const skipped = await page.evaluate(() => ({
 }));
 if (!skipped.intro) throw new Error("returning player should skip intro");
 if (!skipped.brief) throw new Error("returning player should skip briefing");
+
+// Returning daily players also skip the story, without losing the daily seed.
+await page.reload({ waitUntil: "domcontentloaded" });
+await page.locator('.class-card[data-class="knight"]').click();
+await page.locator("#btn-daily").click();
+await page.waitForSelector("#screen-game:not(.hidden)");
+const returningDaily = await page.evaluate(() => ({seed: window.CUBE.getState().seed, expected: window.CUBE.dailySeed(), briefing: window.CUBE.getState().briefing}));
+if (returningDaily.seed !== returningDaily.expected || returningDaily.briefing) throw new Error("returning daily start must preserve daily seed: " + JSON.stringify(returningDaily));
 
 const realLogs = logs.filter((m) => !/audio device/i.test(m));
 if (realLogs.length) throw new Error("page errors: " + realLogs.join(" | "));
