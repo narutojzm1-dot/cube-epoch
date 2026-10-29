@@ -589,3 +589,17 @@ h1 {
   0%, 100% { transform: scale(1); }
   40% { transform: scale(1.08); outline: 2px solid var(--gold); }
 }
+
+/* 竖屏或太窄：提示横屏（不做触控适配） */
+.rotate-hint { display: none; }
+@media (orientation: portrait) and (max-width: 900px), (max-width: 560px) {
+  .rotate-hint {
+    display: flex; position: fixed; inset: 0; z-index: 9999;
+    flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+    padding: 24px; text-align: center; background: rgba(12, 14, 22, 0.96); color: #f4ecd8;
+  }
+  .rotate-hint p { font-size: 22px; margin: 0; color: #e8c040; }
+  .rotate-hint small { max-width: 280px; line-height: 1.6; color: #b8b0a0; }
+  .rotate-icon { font-size: 48px; animation: rotate-nudge 1.6s ease-in-out infinite; }
+}
+@keyframes rotate-nudge { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(90deg); } }

@@ -138,6 +138,15 @@ if (!opened.free || opened.daily) throw new Error("unlock should open the relic 
 if (!opened.codex.includes("✔ 不死鸟之羽")) throw new Error("codex should show unlocked relic");
 if (!opened.revived) throw new Error("phoenix feather should revive the campfire once");
 
+// 竖屏 / 太窄：显示横屏提示；正常桌面不显示
+if (await page.locator("#rotate-hint").isVisible()) throw new Error("rotate hint should be hidden on desktop");
+const phone = await browser.newPage({ viewport: { width: 390, height: 844 } });
+await phone.goto(origin, { waitUntil: "domcontentloaded" });
+if (!(await phone.locator("#rotate-hint").isVisible())) throw new Error("rotate hint should show in portrait phones");
+await phone.setViewportSize({ width: 844, height: 390 });
+if (await phone.locator("#rotate-hint").isVisible()) throw new Error("rotate hint should hide in landscape");
+await phone.close();
+
 // 存档损坏不应让游戏崩溃
 await page.evaluate(() => localStorage.setItem("cube-epoch:v1:codex", "{bad json"));
 await page.goto(origin, { waitUntil: "domcontentloaded" });
