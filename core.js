@@ -59,6 +59,10 @@ export function makeStreams(seed) {
   for (const name of RNG_STREAMS) s[name] = mulberry32(hashSeed(`${seed}:${name}`));
   return s;
 }
+// 按「种子 + 纪元 + 第几夜」派生的一次性随机流：玩家这一夜怎么打，都不会改变下一夜的抽取。
+export function nightRng(kind) {
+  return mulberry32(hashSeed(`${state.seed}:${kind}:${state.era}:${state.nights}`));
+}
 export function rnd(stream) {
   return rng[stream]();
 }

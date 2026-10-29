@@ -1,6 +1,6 @@
 import { BIOME_FX, BOSSES, CLASSES, COLS, ENEMIES, ENEMY_DROPS, ENEMY_FX, RELIC_FX, ROWS, SKY_FX, SPAWN_TABLE, T, TILE, VIEW_H, VIEW_W, WAVES } from "./data.js";
 import { beep, hitSound, noise } from "./audio.js";
-import { addDrop, burst, campTile, diff, dist, dmgMul, eraMul, eraNights, fenceMax, floatText, flySolid, groundSolid, has, punch, rand, rnd, setTile, solid, state, tileAt } from "./core.js";
+import { addDrop, burst, campTile, diff, dist, dmgMul, eraMul, eraNights, fenceMax, floatText, flySolid, groundSolid, has, nightRng, punch, rnd, setTile, solid, state, tileAt } from "./core.js";
 import { aimVec, die, faceVec } from "./game.js";
 import { codexAdd } from "./meta.js";
 import { camera, toast } from "./ui.js";
@@ -187,6 +187,18 @@ export function bossNight() {
   return state.nights - state.eraStart === eraNights();
 }
 
+function spawnRnd() {
+  const key = `${state.era}:${state.nights}:${state.day ? "day" : "night"}`;
+  if (state.spawnKey !== key) {
+    state.spawnKey = key;
+    state.spawnRng = nightRng(state.day ? "spawn-day" : "spawn");
+  }
+  return state.spawnRng();
+}
+function spawnRand(n) {
+  return Math.floor(spawnRnd() * n);
+}
+
 export function spawnEnemy() {
   const edges = [];
   for (let x = 1; x < COLS - 1; x++) {
@@ -196,14 +208,14 @@ export function spawnEnemy() {
     edges.push([1, y], [COLS - 2, y]);
   }
   for (let k = 0; k < 24; k++) {
-    const [tx, ty] = edges[rand("event", edges.length)];
+    const [tx, ty] = edges[spawnRand(edges.length)];
     if (solid(tx, ty)) continue;
     const x = tx * TILE + 8;
     const y = ty * TILE + 8;
     if (dist(x, y, state.camp.x, state.camp.y) < 80) continue;
     let kind = "slime";
     for (const row of SPAWN_TABLE) {
-      if (state.era >= row.minEra && state.nights >= row.minNight && state.wave >= row.minWave && rnd("event") < row.chance) kind = row.kind;
+      if (state.era >= row.minEra && state.nights >= row.minNight && state.wave >= row.minWave && spawnRnd() < row.chance) kind = row.kind;
     }
     // Retain the first-era cube reveal without
     // suppressing later-era enemy variety. Boss selection still takes priority.
@@ -214,9 +226,9 @@ export function spawnEnemy() {
       announceBoss(kind);
     }
     const grove = kind === "spore" && (state.biomes || []).find((b) => b.kind === "mushroom");
-    if (grove && rnd("event") < BIOME_FX.sporeNearMushroom) {
-      const gx = grove.x - 4 + rand("event", 9);
-      const gy = grove.y - 3 + rand("event", 7);
+    if (grove && spawnRnd() < BIOME_FX.sporeNearMushroom) {
+      const gx = grove.x - 4 + spawnRand(9);
+      const gy = grove.y - 3 + spawnRand(7);
       if (!solid(gx, gy)) {
         const e = makeEnemy(kind, gx * TILE + 8, gy * TILE + 8);
         state.enemies.push(e);
@@ -362,6 +374,7 @@ export function startNightWaves() {
   state.wavesTotal = (state.nights === 1 ? WAVES.firstNight : state.nights === 2 ? WAVES.later : WAVES.thirdNight) + (state.era - 1) * WAVES.perEra;
   state.toSpawn = 0;
   state.waveWait = 2.2;
+  state.spawnKey = null;
 }
 
 export function beginWave() {

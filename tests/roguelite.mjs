@@ -30,6 +30,34 @@ const seedC = await page.evaluate(() => {
 });
 if (seedC.length !== 3 || new Set(seedC).size !== 3) throw new Error("dawn must offer 3 distinct choices, got " + seedC);
 
+// 每夜独立随机流：同种子下第一夜打法不同（刷怪次数不同），第二夜的三选一和出怪序列仍然相同
+const nightStable = await page.evaluate(() => {
+  const C = window.CUBE;
+  const run = (extraSpawns) => {
+    C.start("miner", "night-stream");
+    const st = C.getState();
+    st.day = false;
+    st.nights = 1;
+    st.wave = 1;
+    for (let i = 0; i < extraSpawns; i++) C.spawnEnemy();
+    st.enemies = [];
+    st.nights = 2;
+    const dawn = C.rollDawn();
+    const kinds = [];
+    st.wave = 3;
+    for (let i = 0; i < 8; i++) {
+      const e = C.spawnEnemy();
+      kinds.push(e ? `${e.kind}@${Math.round(e.x)},${Math.round(e.y)}` : "-");
+    }
+    st.enemies = [];
+    return { dawn: dawn.join(), kinds: kinds.join(";") };
+  };
+  return { a: run(0), b: run(17) };
+});
+if (nightStable.a.dawn !== nightStable.b.dawn) throw new Error("night-2 dawn picks must not depend on night-1 play: " + JSON.stringify(nightStable));
+if (nightStable.a.kinds !== nightStable.b.kinds) throw new Error("night-2 spawns must not depend on night-1 play: " + JSON.stringify(nightStable));
+await page.evaluate(() => window.CUBE.start("miner", "test1027"));
+
 // 撑过一夜 → 黎明三选一出现并能选
 await page.evaluate(() => {
   const st = window.CUBE.getState();

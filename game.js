@@ -2,7 +2,7 @@ import { DAY_LEN, FIRST_DAY_LEN, AP_BASE, BUILDINGS, CAMP_MAX, CLASSES, DAWN_CHO
 import { beep, cycleAudio, ensureAudio, footstep, playMusicPulse } from "./audio.js";
 import { apCostOfTile, apMax, apShort, capOf, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
 import { spawnEnemy, makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
-import { hasSeenWorld, markSeenWorld, burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, last, looping, makeStreams, materialsReady, mouse, newSeed, nightsLeft, pendingSeed, rnd, selectedClass, setLast, setLooping, setPendingSeed, setRng, setSelectedClass, setState, setToastTimer, state, survivedNights, tileAt, toastTimer, tryMove, urlSeed } from "./core.js";
+import { hasSeenWorld, markSeenWorld, burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, last, looping, makeStreams, materialsReady, mouse, newSeed, nightsLeft, pendingSeed, nightRng, selectedClass, setLast, setLooping, setPendingSeed, setRng, setSelectedClass, setState, setToastTimer, state, survivedNights, tileAt, toastTimer, tryMove, urlSeed } from "./core.js";
 import { checkAch, codexAdd, codexText, dailySeed, meta, openCodex, recordRun, runDifficulty, setDifficulty, shareText, titleStatsText, updateAch } from "./meta.js";
 import { render, skyTint } from "./render.js";
 import { currentTarget, campGaps, canAffordNextFence, canOffer, BRIEF, advanceBrief, advanceIntro, brief, briefingBox, briefingCursor, briefingText, btnCodex, btnDaily, btnHelp, btnMute, btnPause, btnSkipBrief, btnSkipGuide, btnSkipIntro, btnStart, camera, canvas, copyText, endBriefing, finishIntro, intro, introBox, manaWrap, overlay, playIntro, resize, screenGame, screenIntro, screenTitle, setPrompt, showOverlay, skillName, startBriefing, syncGuide, syncHud, titleStats, toast, toastEl, togglePause } from "./ui.js";
@@ -273,10 +273,11 @@ function nextEra() {
 
 function rollDawn() {
   const pool = RELICS.filter((r) => r.type === "blessing" || !state.relics.includes(r.id));
+  const roll01 = nightRng("dawn");
   const out = [];
   while (out.length < DAWN_CHOICES && pool.length) {
     const total = pool.reduce((s, r) => s + r.weight, 0);
-    let roll = rnd("event") * total;
+    let roll = roll01() * total;
     let i = 0;
     while (i < pool.length - 1 && roll >= pool[i].weight) {
       roll -= pool[i].weight;

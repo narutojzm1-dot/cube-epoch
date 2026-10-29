@@ -49,6 +49,8 @@ const must = [
   ["function updateBuildings", js],
   ["export const CAP_BASE = {", data],
   ["export const DIFFICULTIES = {", data],
+  ["export function nightRng", js],
+  ["nightRng(\"dawn\")", js],
   ["export const DAILY_DIFFICULTY = \"normal\"", data],
   ["* diff().spawn", js],
   ["warehouse: { name: \"仓库\"", data],
