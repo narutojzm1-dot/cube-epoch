@@ -363,6 +363,7 @@ h1 {
 }
 .item.heart { color: var(--gold); }
 .item.ready { outline: 2px solid var(--gold); }
+.item.full b { color: #ff9a7a; }
 .skill-dock, .need { color: var(--muted); }
 .skill-dock kbd {
   display: inline-block;

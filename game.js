@@ -1,6 +1,6 @@
 import { DAY_LEN, FIRST_DAY_LEN, AP_BASE, BUILDINGS, CAMP_MAX, CLASSES, DAWN_CHOICES, DAY_EVENT_FX, ERA_NIGHTS_STEP, ERA_SCALING, RELICS, RELIC_FX, RELIC_TYPE_LABEL, T, TILE, WAVES, WIN_NIGHTS } from "./data.js";
 import { beep, cycleAudio, ensureAudio, footstep, playMusicPulse } from "./audio.js";
-import { apCostOfTile, apMax, apShort, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
+import { apCostOfTile, apMax, apShort, capOf, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
 import { spawnEnemy, makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
 import { hasSeenWorld, markSeenWorld, burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, last, looping, makeStreams, materialsReady, mouse, newSeed, nightsLeft, pendingSeed, rnd, selectedClass, setLast, setLooping, setPendingSeed, setRng, setSelectedClass, setState, setToastTimer, state, survivedNights, tileAt, toastTimer, tryMove, urlSeed } from "./core.js";
 import { checkAch, codexAdd, codexText, dailySeed, meta, openCodex, recordRun, shareText, titleStatsText, updateAch } from "./meta.js";
@@ -431,7 +431,7 @@ function updatePlayer(dt) {
       return;
     }
     if (p.mineTx !== f.tx || p.mineTy !== f.ty) startMine(f.tx, f.ty);
-    const hard = t === T.GOLD ? 1.35 : t === T.STONE ? 1.05 : t === T.TREE ? 0.85 : t === T.TOWER ? 0.8 : 0.35;
+    const hard = t === T.GOLD ? 1.35 : t === T.STONE ? 1.05 : t === T.TREE ? 0.85 : t === T.TOWER || t === T.WAREHOUSE ? 0.8 : 0.35;
     const axe = t === T.TREE && has("flint_axe") ? RELIC_FX.flintAxeChop : 1;
     p.mine += dt * def.mine * axe / hard;
     if (p.mine >= 1) {
@@ -634,7 +634,7 @@ function update(dt) {
   else if (t === T.GOLD) prompt = "按住左键挖金矿";
   else if (t === T.RUBBLE) prompt = "按住左键捡碎石（不耗日晷）";
   else if (t === T.STATUE) prompt = "沉睡的石像。在它附近挖金会吵醒它";
-  else if (t === T.TOWER || t === T.SPIKE || t === T.SPRING) prompt = "空格拆除，退回部分材料";
+  else if (t === T.TOWER || t === T.SPIKE || t === T.SPRING || t === T.WAREHOUSE) prompt = "空格拆除，退回部分材料";
   else if (t === T.STONE) prompt = "按住左键挖石头";
   else if (t === T.FENCE) {
     const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || fenceMax();
@@ -803,6 +803,7 @@ window.CUBE = {
   setBuild,
   place: (tx, ty) => tryPlace(tx, ty),
   undo: () => undoPlace(),
+  cap: (k) => capOf(k),
   rollDayEvent: () => rollDayEvent(),
   dailySeed: () => dailySeed(),
   meta: () => meta,

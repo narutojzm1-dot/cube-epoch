@@ -205,6 +205,37 @@ if (towerUndo.placed !== 15 || !towerUndo.undone || towerUndo.after !== towerUnd
   throw new Error("undoing a tower must roll back towersBuilt: " + JSON.stringify(towerUndo));
 }
 
+// 仓库：满仓捡不起，建仓库后上限变大，拆掉退木头
+const ware = await page.evaluate(async () => {
+  const C = window.CUBE;
+  const st = C.getState();
+  st.paused = false;
+  st.drops = [];
+  const cap0 = C.cap("stone");
+  st.inv.stone = cap0;
+  st.inv.wood = 4;
+  st.ap = 14;
+  const p = st.player;
+  st.drops.push({ kind: "stone", x: p.x + 4, y: p.y, z: 0, vz: 0, life: 18 });
+  await new Promise((r) => setTimeout(r, 400));
+  const blocked = st.inv.stone === cap0 && st.drops.length === 1;
+  st.inv.stone = cap0;
+  st.tiles[14 * 48 + 30] = 1;
+  C.setBuild("warehouse");
+  C.place(30, 14);
+  C.setBuild(null);
+  const placed = st.tiles[14 * 48 + 30];
+  const cap1 = C.cap("stone");
+  await new Promise((r) => setTimeout(r, 600));
+  const picked = st.inv.stone;
+  st.drops = [];
+  return { cap0, cap1, blocked, placed, picked, hud: document.querySelector('.item[data-k="stone"] b').textContent };
+});
+if (!ware.blocked) throw new Error("full inventory must not pick up drops: " + JSON.stringify(ware));
+if (ware.placed !== 21 || !(ware.cap1 > ware.cap0)) throw new Error("warehouse should raise caps: " + JSON.stringify(ware));
+if (ware.picked !== ware.cap0 - 2 + 1) throw new Error("drop should be picked after warehouse: " + JSON.stringify(ware));
+if (!ware.hud.includes("/")) throw new Error("HUD should show current/cap: " + JSON.stringify(ware));
+
 // 新建筑：箭塔自动射击、尖刺掉血、圣泉回血；箭塔是实心建筑
 await setNight();
 const builds = await page.evaluate(async () => {
@@ -341,6 +372,7 @@ const traded = await page.evaluate((ev) => {
   st.player.x = ev.x;
   st.player.y = ev.y + 8;
   for (const k of Object.keys(st.inv)) st.inv[k] = 20;
+  for (const x of [1, 2, 3]) st.tiles[1 * 48 + x] = 21; // 三座仓库，留足上限
   C.interact();
   const want = Object.entries(ev.trade.get).every(([k, n]) => st.inv[k] === 20 + n);
   const paid = Object.entries(ev.trade.give).every(([k, n]) => st.inv[k] === 20 - n);

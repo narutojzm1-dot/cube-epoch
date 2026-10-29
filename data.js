@@ -34,6 +34,7 @@ export const T = {
   MUSHROOM: 18,
   STATUE: 19,
   RUBBLE: 20,
+  WAREHOUSE: 21,
 };
 
 export const CLASSES = {
@@ -217,7 +218,12 @@ export const BUILDINGS = {
   tower: { name: "箭塔", key: "4", tile: "TOWER", cost: { stone: 3, gold: 1 }, desc: "自动射击附近的怪。" },
   spike: { name: "尖刺", key: "5", tile: "SPIKE", cost: { wood: 2 }, desc: "踩上的地面怪持续掉血。" },
   spring: { name: "圣泉", key: "6", tile: "SPRING", cost: { stone: 2, wheat: 1 }, desc: "站在附近缓慢回血。" },
+  warehouse: { name: "仓库", key: "7", tile: "WAREHOUSE", cost: { wood: 4, stone: 2 }, desc: "每座让木/石/金/麦的上限变大。" },
 };
+
+// 背包上限：只限制捡起的原料；每座仓库加一份 WAREHOUSE_CAP。
+export const CAP_BASE = { wood: 16, stone: 16, gold: 8, wheat: 8 };
+export const WAREHOUSE_CAP = { wood: 10, stone: 10, gold: 5, wheat: 5 };
 
 export const BUILD_FX = {
   towerRange: 80,

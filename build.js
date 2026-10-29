@@ -1,4 +1,4 @@
-import { AP_BASE, AP_COST, BIOME_FX, BUILDINGS, BUILD_FX, CLASSES, COLS, ENEMY_FX, NEED, RELIC_FX, ROWS, T, TILE } from "./data.js";
+import { AP_BASE, AP_COST, BIOME_FX, BUILDINGS, BUILD_FX, CAP_BASE, WAREHOUSE_CAP, CLASSES, COLS, ENEMY_FX, NEED, RELIC_FX, ROWS, T, TILE } from "./data.js";
 import { beep, chopSound } from "./audio.js";
 import { isFlying, makeEnemy, nearSpore, targetable } from "./combat.js";
 import { addDrop, burst, campWalled, dist, fenceMax, floatText, has, inBounds, labelOf, nightsLeft, punch, rand, rnd, setTile, state, survivedNights, tileAt } from "./core.js";
@@ -69,6 +69,24 @@ export function undoPlace() {
   beep(300, 0.05, "triangle", 0.03);
   syncHud();
   return true;
+}
+
+export function warehouseCount() {
+  let n = 0;
+  for (const t of state.tiles) if (t === T.WAREHOUSE) n += 1;
+  return n;
+}
+export function capOf(kind) {
+  if (!(kind in CAP_BASE)) return Infinity;
+  return CAP_BASE[kind] + warehouseCount() * WAREHOUSE_CAP[kind];
+}
+export function roomFor(kind) {
+  return Math.max(0, capOf(kind) - (state.inv[kind] || 0));
+}
+export function warnFull(kind) {
+  if (state.time - (state.fullWarnAt || -99) < 3) return;
+  state.fullWarnAt = state.time;
+  toast(`仓库满了：${labelOf(kind)}最多 ${capOf(kind)}。按 7 建仓库可以多放。`, 2.6);
 }
 
 export function buildCost(kind) {
@@ -193,7 +211,7 @@ export function isResource(tx, ty) {
 }
 export function isDismantle(tx, ty) {
   const t = tileAt(tx, ty);
-  return t === T.FENCE || t === T.TORCH || t === T.SPORE || t === T.TOWER || t === T.SPIKE || t === T.SPRING;
+  return t === T.FENCE || t === T.TORCH || t === T.SPORE || t === T.TOWER || t === T.SPIKE || t === T.SPRING || t === T.WAREHOUSE;
 }
 export function isMineable(tx, ty) {
   return isResource(tx, ty) || isDismantle(tx, ty);
@@ -232,9 +250,9 @@ export function gatherTile(tx, ty) {
     addDrop("stone", cx, cy, BIOME_FX.rubbleStone);
     burst(cx, cy, "#a8acb4", 6);
     beep(240, 0.04, "square", 0.03);
-  } else if (t === T.TOWER || t === T.SPIKE || t === T.SPRING) {
+  } else if (t === T.TOWER || t === T.SPIKE || t === T.SPRING || t === T.WAREHOUSE) {
     setTile(tx, ty, T.GRASS);
-    const back = t === T.TOWER ? ["stone", 2] : t === T.SPIKE ? ["wood", 1] : ["stone", 1];
+    const back = t === T.TOWER ? ["stone", 2] : t === T.SPIKE ? ["wood", 1] : t === T.WAREHOUSE ? ["wood", 2] : ["stone", 1];
     addDrop(back[0], cx, cy, back[1]);
     burst(cx, cy, "#c0c4cc", 8);
     beep(220, 0.05, "square", 0.03);
@@ -348,6 +366,10 @@ export function updateDrops(dt) {
     }
     d.life -= dt;
     const dd = dist(d.x, d.y, p.x, p.y);
+    if (dd < 56 && roomFor(d.kind) <= 0) {
+      if (dd < 18) warnFull(d.kind);
+      continue;
+    }
     if (dd < 56 && dd > 1) {
       d.x += (p.x - d.x) * 11 * dt;
       d.y += (p.y - d.y) * 11 * dt;

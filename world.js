@@ -1,5 +1,6 @@
 import { BIOME_FX, BIOME_SLOTS, CLASSES, COLS, DAY_EVENTS, DAY_EVENT_CHANCE, DAY_EVENT_FX, ROWS, T, TILE, TRADES } from "./data.js";
 import { beep, noise } from "./audio.js";
+import { roomFor } from "./build.js";
 import { makeEnemy } from "./combat.js";
 import { burst, dist, hashSeed, inBounds, labelOf, mulberry32, punch, rand, rnd, setTile, solid, state, tileAt } from "./core.js";
 import { syncHud, toast } from "./ui.js";
@@ -282,6 +283,11 @@ export function tradeCaravan() {
   const miss = Object.entries(ev.trade.give).filter(([k, n]) => (state.inv[k] || 0) < n);
   if (miss.length) {
     toast("商队：你的货不够——还差" + miss.map(([k, n]) => `${labelOf(k)}${n - (state.inv[k] || 0)}`).join("、"));
+    return true;
+  }
+  const full = Object.entries(ev.trade.get).find(([k, n]) => roomFor(k) + (ev.trade.give[k] || 0) < n);
+  if (full) {
+    toast(`仓库满了，放不下${labelOf(full[0])}。先用掉一些或建仓库。`);
     return true;
   }
   for (const [k, n] of Object.entries(ev.trade.give)) state.inv[k] -= n;

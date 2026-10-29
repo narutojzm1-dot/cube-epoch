@@ -134,6 +134,14 @@ export function drawTile(c, t, x, y, tx, ty, time) {
     px(c, x + 11, y, 2, 2, "#5a5e68");
     px(c, x + 7, y + 8, 2, 4, "#2a2a32");
     px(c, x + 6, y + 2, 4, 2, "#e8c040");
+  } else if (t === T.WAREHOUSE) {
+    px(c, x, y, 16, 16, "#3d9344");
+    px(c, x + 1, y + 6, 14, 10, "#8b5a2b");
+    px(c, x + 2, y + 7, 12, 8, "#a8743c");
+    px(c, x, y + 3, 16, 4, "#6b3f20");
+    px(c, x + 3, y + 1, 10, 3, "#7a4a26");
+    px(c, x + 6, y + 10, 4, 6, "#4a2a14");
+    px(c, x + 3, y + 9, 2, 2, "#e8c040");
   } else if (t === T.SPIKE) {
     px(c, x, y, 16, 16, "#7a5230");
     for (let k = 0; k < 4; k++) {

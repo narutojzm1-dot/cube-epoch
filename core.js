@@ -96,7 +96,7 @@ export function setTile(tx, ty, v) {
 export function solid(tx, ty) {
   const t = tileAt(tx, ty);
   return t === T.WATER || t === T.STONE || t === T.GOLD || t === T.TREE
-    || t === T.TOWER || t === T.STATUE || t === T.RUBBLE;
+    || t === T.TOWER || t === T.STATUE || t === T.RUBBLE || t === T.WAREHOUSE;
 }
 export function campTile() {
   return {

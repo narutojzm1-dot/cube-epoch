@@ -47,6 +47,8 @@ const must = [
   ["id=\"ap\"", html],
   ["export const BUILDINGS = {", data],
   ["function updateBuildings", js],
+  ["export const CAP_BASE = {", data],
+  ["warehouse: { name: \"仓库\"", data],
   ["export const BIOME_SLOTS = [", data],
   ["function wakeStatue", js],
   ["DAY_EVENT_CHANCE = 0.6", data],

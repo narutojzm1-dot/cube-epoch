@@ -1,6 +1,6 @@
 import { BUILDINGS, CAMP_MAX, CLASSES, COLS, NEED, ROWS, T, TILE, VIEW_H, VIEW_W } from "./data.js";
 import { audioCtx, beep, ensureMusicPad, musicGain, musicOn } from "./audio.js";
-import { buildCost, apMax, costText } from "./build.js";
+import { buildCost, apMax, capOf, costText } from "./build.js";
 import { campRing, markSeenWorld, campWalled, clamp, dist, eraName, inBounds, materialsReady, nightsLeft, setLast, setToastTimer, solid, state, survivedNights, tileAt } from "./core.js";
 import { startGame } from "./game.js";
 
@@ -541,8 +541,11 @@ export function syncHud() {
     const b = el.querySelector("b");
     if (b && k) {
       const n = state.inv[k] || 0;
-      const prev = Number(b.textContent);
-      b.textContent = n;
+      const prev = Number(el.dataset.n || 0);
+      const cap = capOf(k);
+      el.dataset.n = n;
+      b.textContent = cap === Infinity ? n : `${n}/${cap}`;
+      el.classList.toggle("full", n >= cap);
       if (n > prev) { el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); }
     }
     el.classList.toggle("ready", k === "heart" && state.inv.heart > 0);
@@ -608,7 +611,7 @@ export function woodToFinishWall() {
 export function syncKeysHint(step) {
   if (!keysHintEl) return;
   if (!step) {
-    keysHintEl.textContent = "WASD 移动 · 空格砍/挖/打 · 1-6 建造 · 点空地建造 / 点坏墙修理 · Z 撤销 · Q 技能 · H 吃麦";
+    keysHintEl.textContent = "WASD 移动 · 空格砍/挖/打 · 1-7 建造 · 点空地建造 / 点坏墙修理 · Z 撤销 · Q 技能 · H 吃麦";
     return;
   }
   if (step.id === "move") keysHintEl.textContent = "此刻：WASD 或方向键，走到金框的树旁边";
