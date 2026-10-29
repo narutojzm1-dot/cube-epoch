@@ -147,6 +147,62 @@ await phone.setViewportSize({ width: 844, height: 390 });
 if (await phone.locator("#rotate-hint").isVisible()) throw new Error("rotate hint should hide in landscape");
 await phone.close();
 
+// 解锁通知只有真正显示后才记忆；尚在队列中的通知刷新后不能丢失。
+const notices = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+notices.on("pageerror", (e) => logs.push(e.message));
+await notices.goto(origin, { waitUntil: "domcontentloaded" });
+const queued = await notices.evaluate(async () => {
+  const M = await import("./meta.js");
+  window.CUBE.start("miner", "unlock-notices");
+  M.meta.ach.era_one = "2026-10-29";
+  M.saveStore("ach", M.meta.ach);
+  M.checkUnlocks();
+  M.checkUnlocks();
+  window.CUBE.getState().paused = true; // Keep this notification genuinely unseen before reload.
+  return { queued: window.CUBE.getState().achQueue.filter((a) => a.unlockId === "phoenix_feather").length,
+    saved: JSON.parse(localStorage.getItem("cube-epoch:v1:unlocks") || "[]") };
+});
+if (queued.queued !== 1 || queued.saved.includes("phoenix_feather")) throw new Error("queued notice must deduplicate without being marked shown: " + JSON.stringify(queued));
+await notices.reload({ waitUntil: "domcontentloaded" });
+const shown = await notices.evaluate(async () => {
+  const M = await import("./meta.js");
+  const core = await import("./core.js");
+  window.CUBE.start("miner", "unlock-notices");
+  M.checkUnlocks();
+  const pending = window.CUBE.getState().achQueue.some((a) => a.unlockId === "phoenix_feather");
+  core.session.toastTimer = 0;
+  M.updateAch(0);
+  return { pending, text: document.getElementById("toast").textContent,
+    saved: JSON.parse(localStorage.getItem("cube-epoch:v1:unlocks") || "[]") };
+});
+if (!shown.pending || !shown.text.includes("不死鸟之羽") || !shown.saved.includes("phoenix_feather")) throw new Error("pending notice must survive reload and persist after display: " + JSON.stringify(shown));
+await notices.reload({ waitUntil: "domcontentloaded" });
+const resultNotice = await notices.evaluate(async () => {
+  const M = await import("./meta.js");
+  const G = await import("./game.js");
+  window.CUBE.start("miner", "unlock-result");
+  M.checkUnlocks();
+  const duplicate = window.CUBE.getState().achQueue.some((a) => a.unlockId === "phoenix_feather");
+  const loaded = Array.isArray(M.meta.unlocks) && M.meta.unlocks.includes("phoenix_feather");
+  M.meta.stats.kills = 499;
+  window.CUBE.getState().kills = 1;
+  G.die("通知回归测试");
+  return { duplicate, loaded, over: window.CUBE.getState().over,
+    text: document.getElementById("overlay-body").textContent,
+    saved: JSON.parse(localStorage.getItem("cube-epoch:v1:unlocks") || "[]") };
+});
+if (!resultNotice.loaded || resultNotice.duplicate) throw new Error("shown unlock array must load without a repeated notice: " + JSON.stringify(resultNotice));
+if (!resultNotice.over || !resultNotice.text.includes("解锁遗物·老兵战旗") || !resultNotice.saved.includes("veteran_banner")) throw new Error("end-of-run unlock must be displayed and then persisted: " + JSON.stringify(resultNotice));
+await notices.reload({ waitUntil: "domcontentloaded" });
+const repeated = await notices.evaluate(async () => {
+  const M = await import("./meta.js");
+  window.CUBE.start("miner", "unlock-result-reload");
+  M.checkUnlocks();
+  return window.CUBE.getState().achQueue.filter((a) => a.unlockId).length;
+});
+if (repeated !== 0) throw new Error("result unlock should not repeat after reload");
+await notices.close();
+
 // 存档损坏不应让游戏崩溃
 await page.evaluate(() => localStorage.setItem("cube-epoch:v1:codex", "{bad json"));
 await page.goto(origin, { waitUntil: "domcontentloaded" });

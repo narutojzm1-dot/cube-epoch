@@ -7,7 +7,8 @@ export function loadStore(key, fallback) {
   try {
     const raw = localStorage.getItem(STORE_PREFIX + key);
     const v = raw ? JSON.parse(raw) : null;
-    return v && typeof v === "object" ? { ...fallback, ...v } : fallback;
+    if (Array.isArray(fallback)) return Array.isArray(v) ? v : [...fallback];
+    return v && typeof v === "object" && !Array.isArray(v) ? { ...fallback, ...v } : fallback;
   } catch {
     return fallback;
   }
@@ -47,16 +48,23 @@ export function isUnlocked(id, daily) {
 // 新达成的解锁只提示一次；已提示的记在 cube-epoch:v1:unlocks。
 export function checkUnlocks() {
   const fresh = UNLOCKS.filter((u) => unlockMet(u) && !meta.unlocks.includes(u.id));
-  if (!fresh.length) return [];
-  for (const u of fresh) meta.unlocks.push(u.id);
-  saveStore("unlocks", meta.unlocks);
   if (state && state.achQueue) {
     for (const u of fresh) {
+      if (state.achQueue.some((a) => a.unlockId === u.id)) continue;
       const r = RELICS.find((x) => x.id === u.id);
-      state.achQueue.push({ name: `解锁遗物·${r.name}`, desc: "以后的三选一里可能出现。" });
+      state.achQueue.push({ unlockId: u.id, name: `解锁遗物·${r.name}`, desc: "以后的三选一里可能出现。" });
     }
   }
   return fresh.map((u) => u.id);
+}
+
+// Only persist after the toast or result overlay has actually been displayed.
+export function markUnlockShown(id) {
+  if (!meta.unlocks.includes(id)) {
+    meta.unlocks.push(id);
+    saveStore("unlocks", meta.unlocks);
+  }
+  if (state && state.achQueue) state.achQueue = state.achQueue.filter((a) => a.unlockId !== id);
 }
 
 export function setDifficulty(id) {
@@ -129,6 +137,7 @@ export function updateAch(dt) {
   if (state.achQueue.length && session.toastTimer <= 0) {
     const a = state.achQueue.shift();
     toast(a.id ? `成就解锁「${a.name}」：${a.desc}` : `${a.name}：${a.desc}`, 2.6);
+    if (a.unlockId) markUnlockShown(a.unlockId);
     beep(990, 0.08, "triangle", 0.05);
   }
 }

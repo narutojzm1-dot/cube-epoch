@@ -200,6 +200,45 @@ for (const bit of ["【本局高光】", "篝火一度熄灭", "最猛一夜：�
 }
 if (!share.includes("高光[篝火曾熄,单夜12杀,史莱姆王41秒]")) throw new Error("share text should carry highlights: " + share);
 
+// 盾刺仅反弹实际受击：贴身和篝火拦截两条路径都遵守无敌帧。
+const thorns = await page.evaluate(async () => {
+  const { updateEnemies, canHitCamp } = await import("/combat.js");
+  const { setTile } = await import("/core.js");
+  const { T, TILE } = await import("/data.js");
+  const rows = [];
+  for (const distance of [5, 20]) {
+    for (const invuln of [1, 0]) {
+      window.CUBE.start("knight", "thorns-regression");
+      const st = window.CUBE.getState();
+      st.paused = true;
+      st.day = true;
+      st.relics = ["shield_thorns"];
+      const p = st.player;
+      p.x = st.camp.x;
+      p.y = st.camp.y;
+      p.invuln = invuln;
+      const e = { kind: "slime", x: p.x + distance, y: p.y,
+        vx: 0, vy: 0, hp: 100, maxHp: 100, spd: 0, dmg: 9, hit: 0, flash: 0, bob: 0 };
+      setTile(Math.floor(e.x / TILE), Math.floor(e.y / TILE), T.GRASS);
+      st.enemies = [e];
+      const hp = p.hp;
+      const campHp = st.campHp;
+      const intercept = canHitCamp(e);
+      updateEnemies(0);
+      rows.push({ distance, invuln, intercept, damage: hp - p.hp, reflected: 100 - e.hp,
+        campDamage: campHp - st.campHp });
+    }
+  }
+  return rows;
+});
+for (const row of thorns) {
+  if (row.distance === 20 && !row.intercept) throw new Error("thorns test must exercise camp interception");
+  if (row.campDamage !== 0 || (row.invuln ? row.damage !== 0 : row.damage <= 0)
+      || Math.abs(row.reflected - row.damage) > 1e-9) {
+    throw new Error("thorns must reflect only actual damage: " + JSON.stringify(row));
+  }
+}
+
 if (logs.length) throw new Error("page errors: " + logs.join(" | "));
 await browser.close();
 server.close();

@@ -3,7 +3,7 @@ import { beep, cycleAudio, ensureAudio, footstep, playMusicPulse } from "./audio
 import { apCostOfTile, apMax, apShort, capOf, costText, craft, eatWheat, gatherTile, isDismantle, isMineable, isResource, placeable, plant, setBuild, tryPlace, undoPlace, updateBuildings, updateCrops, updateDrops } from "./build.js";
 import { spawnEnemy, makeEnemy, meleeAttack, shoot, startMine, startNightWaves, targetable, updateBolts, updateEnemies, updateRocks, useSkill } from "./combat.js";
 import { hasSeenWorld, markSeenWorld, burst, campWalled, dist, eraName, eraNights, fenceMax, floatText, has, inBounds, keys, makeStreams, materialsReady, mouse, newSeed, nightsLeft, nightRng, setRng, setState, state, survivedNights, tileAt, tryMove, urlSeed, session } from "./core.js";
-import { checkAch, codexAdd, codexText, dailySeed, highlights, isDaily, isUnlocked, meta, openCodex, recordRun, runDifficulty, setDifficulty, shareText, titleStatsText, updateAch } from "./meta.js";
+import { checkAch, codexAdd, codexText, dailySeed, highlights, isDaily, isUnlocked, markUnlockShown, meta, openCodex, recordRun, runDifficulty, setDifficulty, shareText, titleStatsText, updateAch } from "./meta.js";
 import { render, skyTint } from "./render.js";
 import { currentTarget, campGaps, canAffordNextFence, canOffer, BRIEF, advanceBrief, advanceIntro, brief, briefingBox, briefingCursor, briefingText, btnCodex, btnDaily, btnHelp, btnMute, btnPause, btnSkipBrief, btnSkipGuide, btnSkipIntro, btnStart, camera, canvas, copyText, endBriefing, finishIntro, intro, introBox, manaWrap, overlay, playIntro, resize, screenGame, screenIntro, screenTitle, setPrompt, showOverlay, skillName, startBriefing, syncGuide, syncHud, titleStats, toast, toastEl, togglePause } from "./ui.js";
 import { endDayEvent, genWorld, makePlayer, rollDayEvent, tradeCaravan, updateDayEvent } from "./world.js";
@@ -213,9 +213,11 @@ function showResult(title, body) {
   state.choosing = false;
   recordRun();
   state.share = shareText();
+  const unlocks = state.achQueue.filter((a) => a.unlockId && !meta.unlocks.includes(a.unlockId));
+  const unlockText = unlocks.length ? `\n\n【新解锁】\n${unlocks.map((a) => `${a.name}：${a.desc}`).join("\n")}` : "";
   const hl = highlights().lines;
   const hlText = hl.length ? `\n\n【本局高光】\n${hl.map((l) => "· " + l).join("\n")}` : "";
-  showOverlay(title, `${body}${hlText}\n\n${state.share}`, [
+  showOverlay(title, `${body}${hlText}${unlockText}\n\n${state.share}`, [
     ["复制战绩", () => copyText(state.share), { id: "btn-copy-share" }],
     ["同种子再来", () => {
       const u = new URL(location.href);
@@ -228,6 +230,7 @@ function showResult(title, body) {
       location.href = u.toString();
     }],
   ]);
+  for (const a of unlocks) markUnlockShown(a.unlockId);
 }
 
 export function die(reason) {
