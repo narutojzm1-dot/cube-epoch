@@ -212,12 +212,12 @@
 
 ## 6. 验收清单（Definition of Done）
 
-- [x] 连续玩 3 局，地图、事件、遗物组合均不同（种子决定地图、白天事件、天亮三选一；`tests/roguelite.mjs` 固定种子可复现、不同种子不同）
-- [x] 通关率通过难度系数可调，目标 20~35%（`data.js` 的 `DIFFICULTIES` 统一缩放怪物生命/伤害/每波数量；标题页显示总通关率和分难度通关率，见 `tests/meta.mjs` 难度用例）
+- [ ] 连续实玩 3 局，地图、事件、遗物组合均不同（未验证；已有 `tests/roguelite.mjs` 种子可复现及差异自动化用例，但不等同于连续实玩验收）
+- [ ] 通关率通过难度系数可调，目标 20~35%（难度可调已实现；20~35% 实际通关率尚无实玩样本验证。已实现 `data.js` 的 `DIFFICULTIES` 难度缩放及标题页总/分难度通关率统计，见 `tests/meta.mjs` 难度用例；自动化用例不能证明实际通关率）
 - [x] 结算页战绩可复制，含种子/夜数/击杀/遗物（另含难度与本局高光，见 `tests/meta.mjs`、`tests/roguelite.mjs` 高光用例）
 - [x] 所有新数值在 `data.js`，契约测试覆盖（`tests/static.mjs`）
 - [ ] ship-gate 全流程：static + e2e 绿、reviewer 通过、Pages 部署确认
-  - 本地 `npm test`（static / e2e / roguelite / content / meta）全绿；GitHub CI 额度恢复、合入并部署 Pages 后再勾选
+  - 原作者记录：本地 `npm test`（static / e2e / roguelite / content / meta）全绿；这不代表 GitHub 原生 CI 通过。`8070761` 的 [Test 40802647945](https://github.com/narutojzm1-dot/cube-epoch/actions/runs/40802647945) 为 `action_required`，尚未运行；未据此认定额度耗尽；须在目标 SHA 的原生 CI、reviewer 和合入后 Pages 部署均确认后再勾选。
 
 ---
 
