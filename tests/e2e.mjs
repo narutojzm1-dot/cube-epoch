@@ -212,6 +212,214 @@ const skipped = await page.evaluate(() => ({
 if (!skipped.intro) throw new Error("returning player should skip intro");
 if (!skipped.brief) throw new Error("returning player should skip briefing");
 
+// Exercise the real responsive page: native pointer holds/capture for movement,
+// native touch taps for aiming/building and one-shot actions.
+const mobileContext = await browser.newContext({
+  viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true,
+});
+try {
+  const mobile = await mobileContext.newPage();
+  mobile.on("pageerror", (e) => logs.push(e.message));
+  await mobile.goto(origin, { waitUntil: "domcontentloaded" });
+  await enterPlay(mobile);
+  const hold = async (code) => {
+    const button = mobile.locator(`#touch-controls [data-hold="${code}"]`);
+    await button.scrollIntoViewIfNeeded();
+    const r = await button.boundingBox();
+    await mobile.mouse.move(r.x + r.width / 2, r.y + r.height / 2);
+    await mobile.mouse.down();
+  };
+  const release = async () => {
+    // Release outside the button: pointer capture must still clear the hold.
+    await mobile.mouse.move(1, 1);
+    await mobile.mouse.up();
+    await mobile.waitForFunction(() => !document.querySelector("#touch-controls .held"));
+  };
+  const tapTile = async (tx, ty) => {
+    await mobile.locator("#game").scrollIntoViewIfNeeded();
+    const point = await mobile.evaluate(({ tx, ty }) => {
+      const r = document.getElementById("game").getBoundingClientRect();
+      const cam = window.CUBE.cam();
+      return {
+        x: r.left + (tx * 16 + 8 - cam.x) / 320 * r.width,
+        y: r.top + (ty * 16 + 8 - cam.y) / 192 * r.height,
+      };
+    }, { tx, ty });
+    await mobile.touchscreen.tap(point.x, point.y);
+  };
+  for (const viewport of [{ width: 390, height: 844 }, { width: 320, height: 568 }, { width: 844, height: 390 }]) {
+    await mobile.setViewportSize(viewport);
+    const layout = await mobile.evaluate(() => {
+      const canvas = document.getElementById("game").getBoundingClientRect();
+      const guide = document.getElementById("guide").getBoundingClientRect();
+      const controls = document.getElementById("touch-controls").getBoundingClientRect();
+      const inv = document.getElementById("inv").getBoundingClientRect();
+      const overlaps = (a, b) => a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+      return {
+        overflow: document.documentElement.scrollWidth > innerWidth,
+        obscured: overlaps(guide, canvas) || overlaps(controls, canvas) || overlaps(controls, inv),
+        distorted: Math.abs(canvas.width / canvas.height - 5 / 3) > 0.02,
+        landscapeOffscreen: innerWidth > innerHeight && (canvas.bottom > innerHeight || controls.bottom > innerHeight),
+      };
+    });
+    if (Object.values(layout).some(Boolean)) throw new Error(`mobile layout ${JSON.stringify(viewport)}: ${JSON.stringify(layout)}`);
+  }
+  await mobile.setViewportSize({ width: 390, height: 844 });
+  if (!(await mobile.locator("#touch-controls").isVisible())) throw new Error("mobile controls missing");
+  const mobileStart = await mobile.evaluate(() => window.CUBE.getState().player.x);
+  await hold("ArrowRight");
+  await mobile.waitForFunction((x) => window.CUBE.getState().player.x >= x + 10, mobileStart);
+  await release();
+  await hold("ArrowDown");
+  await mobile.waitForFunction(() => window.CUBE.getState().player.dir === 0);
+  // Two independent pointer IDs can hold movement and action together.
+  await mobile.locator('[data-hold="Space"]').evaluate((button) => {
+    button.addEventListener("pointerdown", () => {
+      button.dataset.simultaneous = String(document.querySelectorAll("#touch-controls .held").length);
+    }, { once: true });
+  });
+  await mobile.locator('[data-hold="Space"]').tap();
+  if (await mobile.locator('[data-hold="Space"]').getAttribute("data-simultaneous") !== "2") {
+    throw new Error("movement and action must accept independent simultaneous pointers");
+  }
+  await release();
+  await hold("Space");
+  try {
+    await mobile.waitForFunction(() => {
+      const st = window.CUBE.getState();
+      return st.flags.chopped && st.flags.gathered && st.inv.wood > 2;
+    });
+  } finally { await release(); }
+
+  await mobile.locator('.item[data-build="fence"]').tap();
+  await tapTile(23, 21);
+  await mobile.waitForFunction(() => window.CUBE.getState().fenceHp.get("23,21") === 80);
+  await mobile.evaluate(() => { window.CUBE.getState().fenceHp.set("23,21", 20); });
+  await tapTile(23, 21);
+  await mobile.waitForFunction(() => window.CUBE.getState().fenceHp.get("23,21") === 80);
+  await mobile.locator('.item[data-build="fence"]').tap();
+  if (await mobile.evaluate(() => window.CUBE.getState().build) !== null) throw new Error("touch build toggle must cancel");
+
+  await mobile.locator("#touch-skill").tap();
+  if (!(await mobile.evaluate(() => window.CUBE.getState().player.skillCd > 0))) throw new Error("touch skill missing");
+  await mobile.waitForFunction(() => window.CUBE.getState().player.dash <= 0);
+
+  // Deterministic fixtures isolate input release, planting, combat and the win gate.
+  await mobile.evaluate(() => {
+    const st = window.CUBE.getState();
+    st.player.x = 30 * 16 + 8;
+    st.player.y = 25 * 16 + 8;
+    st.player.vx = st.player.vy = 0;
+    for (let y = 24; y <= 27; y++) {
+      for (let x = 28; x <= 33; x++) st.tiles[y * 48 + x] = 1;
+    }
+  });
+  for (const reason of ["pointercancel", "blur", "pause"]) {
+    await mobile.locator('[data-hold="ArrowRight"]').evaluate((button) => {
+      button.addEventListener("pointerdown", (e) => {
+        button.dataset.pointerId = String(e.pointerId);
+      }, { once: true });
+    });
+    await hold("ArrowRight");
+    await mobile.waitForFunction(() => window.CUBE.getState().player.vx > 0);
+    if (reason === "pointercancel") {
+      await mobile.locator('[data-hold="ArrowRight"]').evaluate((button) => {
+        button.dispatchEvent(new PointerEvent("pointercancel", {
+          pointerId: Number(button.dataset.pointerId), bubbles: true,
+        }));
+      });
+    } else if (reason === "blur") {
+      await mobile.evaluate(() => window.dispatchEvent(new Event("blur")));
+    } else {
+      // Avoid WebKit's compatibility mouse click retargeting while its mouse
+      // is held. The ordinary touchscreen pause/resume path is covered below.
+      await mobile.locator("#btn-pause").evaluate((button) => button.click());
+    }
+    await mobile.waitForFunction(() => !document.querySelector("#touch-controls .held"));
+    await release();
+    if (reason === "pause") await mobile.locator("#overlay-actions button").first().tap();
+    await mobile.waitForFunction(() => Math.abs(window.CUBE.getState().player.vx) < 0.1);
+    const stopped = await mobile.evaluate(() => {
+      const st = window.CUBE.getState();
+      return { x: st.player.x, time: st.time };
+    });
+    await mobile.waitForFunction(({ time }) => window.CUBE.getState().time >= time + 0.2, stopped);
+    const drift = await mobile.evaluate(({ x }) => Math.abs(window.CUBE.getState().player.x - x), stopped);
+    if (drift > 0.1) throw new Error("touch movement stuck after " + reason);
+  }
+  await mobile.locator("#btn-pause").tap();
+  await mobile.waitForSelector("#overlay:not(.hidden)");
+  await mobile.locator("#overlay-actions button").first().tap();
+  await mobile.waitForFunction(() => !window.CUBE.getState().paused);
+  await mobile.setViewportSize({ width: 320, height: 568 });
+  await mobile.locator("#btn-pause").tap();
+  await mobile.locator("#overlay-actions button").first().tap();
+  await mobile.waitForFunction(() => !window.CUBE.getState().paused);
+  await mobile.setViewportSize({ width: 390, height: 844 });
+
+  // A prior canvas aim must not skew a later facing-based interaction.
+  await tapTile(30, 25);
+  await mobile.evaluate(() => {
+    const st = window.CUBE.getState();
+    st.player.x = 30 * 16 + 8;
+    st.player.y = 25 * 16 + 8;
+    st.player.vx = st.player.vy = 0;
+    st.tiles[26 * 48 + 30] = 7;
+  });
+  await hold("ArrowDown");
+  await mobile.waitForFunction(() => window.CUBE.getState().player.dir === 0);
+  await release();
+  await mobile.locator("#touch-interact").tap();
+  await mobile.waitForFunction(() => window.CUBE.getState().crops.has("30,26"));
+
+  await mobile.evaluate(() => {
+    const st = window.CUBE.getState();
+    st.player.x = st.bench.x;
+    st.player.y = st.bench.y + 12;
+    st.player.vx = st.player.vy = 0;
+    Object.assign(st.inv, { wood: 4, stone: 5, gold: 3, wheat: 3 });
+  });
+  await mobile.locator("#touch-interact").tap();
+  await mobile.waitForFunction(() => window.CUBE.getState().inv.heart === 1);
+  await mobile.evaluate(() => {
+    const st = window.CUBE.getState();
+    st.day = false;
+    st.nights = 3;
+    st.cycle = 0;
+    st.player.x = 30 * 16 + 8;
+    st.player.y = 25 * 16 + 8;
+    st.player.dir = 2;
+    st.player.atkCd = 0;
+    st.enemies = [{
+      kind: "slime", x: st.player.x + 16, y: st.player.y,
+      vx: 0, vy: 0, hp: 1, maxHp: 1, spd: 0, dmg: 0, hit: 0, flash: 0, bob: 0,
+    }];
+  });
+  const kills = await mobile.evaluate(() => window.CUBE.getState().kills);
+  await hold("Space");
+  try {
+    await mobile.waitForFunction((before) => window.CUBE.getState().kills > before, kills);
+  } finally { await release(); }
+  await mobile.evaluate(() => {
+    const st = window.CUBE.getState();
+    st.player.x = st.altar.x;
+    st.player.y = st.altar.y + 12;
+    st.player.vx = st.player.vy = 0;
+  });
+  await mobile.locator("#touch-interact").tap();
+  if (await mobile.evaluate(() => window.CUBE.getState().win)) throw new Error("touch cannot offer at night");
+  await mobile.evaluate(() => { const st = window.CUBE.getState(); st.day = true; st.nights = 2; });
+  await mobile.locator("#touch-interact").tap();
+  if (await mobile.evaluate(() => window.CUBE.getState().win)) throw new Error("touch cannot offer before three nights");
+  await mobile.evaluate(() => { window.CUBE.getState().nights = 3; });
+  await mobile.locator("#touch-interact").tap();
+  await mobile.waitForFunction(() => window.CUBE.getState().win);
+  if (!(await mobile.locator("#overlay-title").innerText()).includes("已点亮")) throw new Error("touch win screen missing");
+  console.log("MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates");
+} finally {
+  await mobileContext.close();
+}
+
 const realLogs = logs.filter((m) => !/audio device/i.test(m));
 if (realLogs.length) throw new Error("page errors: " + realLogs.join(" | "));
 await browser.close();

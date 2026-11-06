@@ -147,6 +147,25 @@
   let toastTimer = 0;
   const keys = new Set();
   const mouse = { x: 0, y: 0, down: false, pressed: false, right: false, inside: false };
+  const touchHolds = new Map();
+  const touchLayout = window.matchMedia("(any-pointer: coarse), (max-width: 760px)");
+  let canvasTouch = null;
+
+  function held(code) {
+    return keys.has(code) || [...touchHolds.values()].some((button) => button.dataset.hold === code);
+  }
+
+  function resetInput() {
+    keys.clear();
+    for (const button of touchHolds.values()) button.classList.remove("held");
+    touchHolds.clear();
+    canvasTouch = null;
+    mouse.down = mouse.pressed = mouse.right = mouse.inside = false;
+  }
+
+  function canTouchPlay() {
+    return state && !state.paused && !state.over && !state.briefing && !intro.active;
+  }
 
   function rand(n) {
     return Math.floor(Math.random() * n);
@@ -678,13 +697,16 @@
     guideEl.classList.remove("hidden");
     markSeenWorld();
     // 预演结束：金框改指树，别再让人盯着篝火
-    toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
+    toast(touchLayout.matches
+      ? "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。"
+      : "金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
     last = performance.now();
     syncGuide();
     syncHud();
   }
 
   function startGame(cls, opts) {
+    resetInput();
     if (intro.active) {
       intro.active = false;
       if (intro.raf) cancelAnimationFrame(intro.raf);
@@ -771,7 +793,9 @@
     else {
       // 再玩或直接进场：这时才算看过世界
       markSeenWorld();
-      toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
+      toast(touchLayout.matches
+        ? "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。"
+        : "金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
     }
     if (!looping) {
       looping = true;
@@ -825,13 +849,23 @@
     guideEl.classList.remove("compact");
     guideTitle.textContent = step.title;
     // 围营步按缺口/木料重写，GUIDE[2].body 仍留着当兜底
-    guideBody.textContent = step.id === "build" ? wallGuideBody() : step.body;
+    const touchBody = {
+      move: "按方向按钮移动。金框指着附近的树，先走过去。",
+      chop: "面朝金框的树，按住「采集/攻击」。木头会飞进背包，用来围栅栏。",
+      offer: "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+    };
+    guideBody.textContent = step.id === "build" ? wallGuideBody()
+      : (touchLayout.matches && touchBody[step.id]) || step.body;
     syncKeysHint(step);
   }
 
   // 底栏和教程说同一句「此刻做什么」
   function syncKeysHint(step) {
     if (!keysHintEl) return;
+    if (touchLayout.matches) {
+      keysHintEl.textContent = "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q";
+      return;
+    }
     if (!step) {
       keysHintEl.textContent = "WASD 移动 · 空格砍/挖/打 · 1栏 2火 3田 · 点空地建造 / 点坏墙修理 · Q 技能 · H 吃麦";
       return;
@@ -851,9 +885,9 @@
     const gaps = campGaps().length;
     const needWood = woodToFinishWall();
     if (!canAffordNextFence()) {
-      return `围营还差 ${gaps} 面墙、大约 ${needWood} 木。先对着金框的树按空格或按住左键再砍。`;
+      return `围营还差 ${gaps} 面墙、大约 ${needWood} 木。先对着金框的树${touchLayout.matches ? "按住「采集/攻击」" : "按空格或按住左键"}再砍。`;
     }
-    return `按 1 选栅栏，再点篝火旁发光格（还差 ${gaps} 面）。自己能穿过栅栏。木头还要留给方块之心。`;
+    return `${touchLayout.matches ? "点背包「栏」选栅栏" : "按 1 选栅栏"}，再点篝火旁发光格（还差 ${gaps} 面）。自己能穿过栅栏。木头还要留给方块之心。`;
   }
 
   function setPrompt(text) {
@@ -988,6 +1022,7 @@
       "E  工作台合成 / 祭坛献祭 / 播种",
       "Q 或右键  职业技能",
       "点「麦」或 H  回血",
+      "触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。",
       "",
       "栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
     ].join("\n");
@@ -1166,6 +1201,8 @@
     let dx = m.x - p.x;
     let dy = m.y - p.y;
     if (!mouse.inside || (Math.abs(dx) + Math.abs(dy) < 2)) {
+      dx = 0;
+      dy = 0;
       if (p.dir === 0) dy = 1;
       if (p.dir === 1) dx = -1;
       if (p.dir === 2) dx = 1;
@@ -1789,10 +1826,10 @@
     const def = CLASSES[p.cls];
     let ix = 0;
     let iy = 0;
-    if (keys.has("KeyW") || keys.has("ArrowUp")) iy -= 1;
-    if (keys.has("KeyS") || keys.has("ArrowDown")) iy += 1;
-    if (keys.has("KeyA") || keys.has("ArrowLeft")) ix -= 1;
-    if (keys.has("KeyD") || keys.has("ArrowRight")) ix += 1;
+    if (held("KeyW") || held("ArrowUp")) iy -= 1;
+    if (held("KeyS") || held("ArrowDown")) iy += 1;
+    if (held("KeyA") || held("ArrowLeft")) ix -= 1;
+    if (held("KeyD") || held("ArrowRight")) ix += 1;
     const moving = ix || iy;
     if (moving) state.flags.moved = true;
     if (moving) {
@@ -1832,7 +1869,7 @@
     p.sense = Math.max(0, p.sense - dt);
     if (p.cls === "mage") p.mana = Math.min(p.maxMana, p.mana + dt * 1.35);
 
-    const usingSpace = keys.has("Space") || keys.has("KeyJ");
+    const usingSpace = held("Space") || held("KeyJ");
     const wantAct = mouse.down || usingSpace;
     const f = (usingSpace || bumpRes) ? frontTile() : aimTile();
     const t = tileAt(f.tx, f.ty);
@@ -2050,9 +2087,11 @@
     if (materialsReady() && !state.inv.heart) return "去工作台按 E 合成方块之心";
     if (!campWalled()) {
       const gaps = campGaps().length;
-      if (!state.flags.chopped) return "走到金框的树旁，空格或按住左键砍木头";
+      if (!state.flags.chopped) return touchLayout.matches
+        ? "走到金框的树旁，按住「采集/攻击」砍木头"
+        : "走到金框的树旁，空格或按住左键砍木头";
       if (!canAffordNextFence()) return `再砍树凑木头（还差 ${gaps} 面墙）`;
-      return `按 1，点发光格围营（还差 ${gaps} 面）`;
+      return `${touchLayout.matches ? "点背包「栏」" : "按 1"}，点发光格围营（还差 ${gaps} 面）`;
     }
     const miss = [];
     if (state.inv.wood < NEED.wood) miss.push(`木 ${state.inv.wood}/${NEED.wood}`);
@@ -2084,7 +2123,7 @@
     skillDock.classList.toggle("ready", p.skillCd <= 0);
     if (state.build) {
       const names = { fence: "栅栏", torch: "火把", plot: "田" };
-      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)} · 点空地放下 / 点坏墙修理 · 按 0 取消`;
+      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)} · 点空地放下 / 点坏墙修理 · ${touchLayout.matches ? "再点背包同一项取消" : "按 0 取消"}`;
       buildBanner.classList.remove("hidden");
     } else {
       buildBanner.classList.add("hidden");
@@ -2478,6 +2517,7 @@
   }
 
   function showOverlay(title, body, actions) {
+    resetInput();
     overlayTitle.textContent = title;
     overlayBody.textContent = body;
     overlayActions.innerHTML = "";
@@ -2585,14 +2625,15 @@
     if (e.key === "3" || e.code === "Digit3" || e.code === "Numpad3") setBuild("plot");
   });
   window.addEventListener("keyup", (e) => keys.delete(e.code));
-  canvas.addEventListener("mousemove", (e) => {
+  function aimAt(e) {
     const r = canvas.getBoundingClientRect();
     const scaleX = canvas.width / r.width;
     const scaleY = canvas.height / r.height;
     mouse.x = (e.clientX - r.left) * scaleX;
     mouse.y = (e.clientY - r.top) * scaleY;
     mouse.inside = true;
-  });
+  }
+  canvas.addEventListener("mousemove", aimAt);
   canvas.addEventListener("mouseleave", () => { mouse.inside = false; mouse.down = false; });
   canvas.addEventListener("mousedown", (e) => {
     if (state && state.briefing) {
@@ -2604,6 +2645,59 @@
   });
   window.addEventListener("mouseup", () => { mouse.down = false; });
   canvas.addEventListener("contextmenu", (e) => e.preventDefault());
+  canvas.addEventListener("pointerdown", (e) => {
+    if (e.pointerType === "mouse" || canvasTouch !== null) return;
+    e.preventDefault();
+    if (state && state.briefing) {
+      advanceBrief();
+      return;
+    }
+    if (!canTouchPlay()) return;
+    canvasTouch = e.pointerId;
+    canvas.setPointerCapture(e.pointerId);
+    aimAt(e);
+    mouse.down = mouse.pressed = true;
+  });
+  canvas.addEventListener("pointermove", (e) => {
+    if (e.pointerId === canvasTouch) aimAt(e);
+  });
+  function releaseCanvasTouch(e) {
+    if (e.pointerId !== canvasTouch) return;
+    canvasTouch = null;
+    mouse.down = false;
+    if (e.type !== "pointerup") mouse.pressed = mouse.inside = false;
+  }
+  for (const type of ["pointerup", "pointercancel", "lostpointercapture"]) {
+    canvas.addEventListener(type, releaseCanvasTouch);
+  }
+  document.querySelectorAll("#touch-controls [data-hold]").forEach((button) => {
+    button.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
+      if (!canTouchPlay() || e.button !== 0) return;
+      button.setPointerCapture(e.pointerId);
+      touchHolds.set(e.pointerId, button);
+      button.classList.add("held");
+      mouse.inside = false;
+    });
+    const release = (e) => {
+      touchHolds.delete(e.pointerId);
+      if (![...touchHolds.values()].includes(button)) button.classList.remove("held");
+    };
+    for (const type of ["pointerup", "pointercancel", "lostpointercapture"]) {
+      button.addEventListener(type, release);
+    }
+    button.addEventListener("contextmenu", (e) => e.preventDefault());
+  });
+  document.getElementById("touch-interact").addEventListener("click", () => {
+    if (canTouchPlay()) interact();
+  });
+  document.getElementById("touch-skill").addEventListener("click", () => {
+    if (canTouchPlay()) useSkill();
+  });
+  window.addEventListener("blur", resetInput);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) resetInput();
+  });
   window.addEventListener("resize", () => { if (state) resize(); });
 
   window.CUBE = {

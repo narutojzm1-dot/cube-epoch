@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-06",
+  "branch": "fix/mobile-first-run-controls",
+  "base_sha": "7c22ec5def4f7f9b1ee31e0c39bfcb05e6daa5b1",
+  "product_source_sha256": "d4fcb73df3e981030c1b1282f31a8c6e05729048fdbf6b3466337374cbd42695",
+  "baseline_reproduction": {
+    "browser": "WebKit touch emulation",
+    "viewport": "390x844",
+    "before": { "x": 392, "y": 344 },
+    "after_canvas_tap": { "x": 392, "y": 344, "moved": false, "touchControls": false }
+  },
+  "checks": [
+    { "command": "node --check game.js", "result": "pass" },
+    { "command": "node --check tests\\ui-review.mjs", "result": "pass" },
+    { "command": "npm test", "result": "STATIC_OK, MOBILE_OK, E2E_OK", "log": "local-checks.log" },
+    { "command": "node tests\\ui-review.mjs --check-coverage", "result": "UI_COVERAGE_OK 172/172; no images captured", "log": "coverage-check.log" },
+    { "command": "git diff --check", "result": "pass" },
+    { "check": "all PNGs indexed; recovered normal-source records do not claim fixture preparation", "result": "305 indexed; 0 mislabeled" }
+  ],
+  "playable_regression": {
+    "desktop": "Existing first-run tutorial, gather, build/repair, wall defence, third-night enemies, offering gates, success and returning-player flow.",
+    "touch": "Movement, independent pointer overlap, gather, coordinate-based build/repair and cancel, skill, pointercancel/blur/pause release, planting after stale aim, crafting, combat, night/two-night refusal, three-night daylight offering and victory.",
+    "layout": "390x844, 320x568, 844x390: no horizontal overflow or guide/controls/inventory overlap, undistorted canvas; landscape playfield and controls in viewport.",
+    "small_screen_pause": "320x568 native touch pause and resume through scrollable panel.",
+    "method_limit": "Pointer holds use native mouse events plus real browser touch taps in a touch-enabled WebKit context. Independent pointer overlap is not a two-finger physical-device test. Deterministic fixtures isolate combat, crafting and victory gates; not a natural full three-night playthrough."
+  },
+  "independent_review": {
+    "product": "Independent code-review agent found no blocking bugs.",
+    "evidence_followup": "Independent narrow review identified 42 archived normal-source descriptions incorrectly mentioning fixture preparation. Generator normalization applied without retaking images; final provenance check reports zero.",
+    "visual": "Pending user / parent coordinator per-image review; not approved."
+  },
+  "screenshots": {
+    "current_matrix": "43 states x 4 viewports = 172 captured",
+    "total_preserved_originals": 305,
+    "early_archives_with_recovered_metadata": 125,
+    "archive_limit": "These early intermediate images retain base SHA/dirty, source fingerprint, viewport and original PNG. Lost canvas measurements and some exact injection parameters are explicitly marked; they are not counted toward the complete current matrix.",
+    "format": "Original full-page PNG; deviceScaleFactor 1; browser zoom 100%; not resized. Actual viewport and canvas measurements are in screenshots.json."
+  },
+  "not_covered": [
+    "Physical iOS/Android devices, browser chrome, system gestures and safe areas.",
+    "Natural full three-night completion or gameplay balance.",
+    "User visual approval. UI-005: some 320x568 controls/inventory require page scrolling.",
+    "English is not available; no account/manual save/load or standalone settings panel exists."
+  ],
+  "open_visual_findings": [
+    "UI-005: 320x568 needs scrolling for some controls and inventory.",
+    "UI-006: existing guide advances to offering during the third night, while the main objective correctly says defend the camp.",
+    "UI-007: 320x568 combat prompt overlaps part of the wave banner.",
+    "These are explicitly surfaced for user review, not marked visually approved."
+  ],
+  "release": "No merge, no Pages deployment, no Tencent Cloud upload or server change. CI results are reported on the pull request."
+}

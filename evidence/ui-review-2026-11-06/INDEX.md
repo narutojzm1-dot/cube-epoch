@@ -1,0 +1,217 @@
+# Cube Epoch UI review · 2026-11-06
+
+覆盖：172/172。视觉审查：**待用户逐图审查，未通过**。
+
+- Web / WebKit，中文 zh-CN；项目无英文切换、独立设置页或手动存读档界面，声音开关和暂停操作说明即现有设置入口。
+- 独立临时 browser context；不读写用户浏览器存档。normal 从正常选角/开场进入；fixture 明确使用 window.CUBE 测试接口和临时状态，不代表自然通关或平衡验证。
+- deviceScaleFactor=1，浏览器缩放 100%，原图未缩放；full_page=true 可能高于视口。viewport 是真实 layout viewport，game_viewport_css 是 canvas 实测尺寸，游戏逻辑视口为 320x192。
+- 已截仅表示证据已保存，不表示视觉审查通过。所有图待用户/父协调会话逐图审查；未变且已覆盖的图复用，不重复刷图。持续会话每 4 小时核对一次覆盖，不创建无人值守定时进程。
+- 修复前 day-before 从 git 7c22ec5 内存服务渲染；未切换、覆盖或暂存当前工作区。修复后 dirty 构建以三个产品源码文件的 SHA-256 区分。
+- 无腾讯云、Pages 上传或部署；只运行本机临时 HTTP 服务。触屏为浏览器模拟，尚未真机验证。
+- history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。
+
+复现命令：`node tests\ui-review.mjs --touch-only`（首批）或 `node tests\ui-review.mjs`（全量）；`node tests\ui-review.mjs --check-coverage` 只核查覆盖与文件，不刷图。
+截图及生成器在主题分支；截图完整元数据见 screenshots.json。
+
+检查与限制：[validation.json](validation.json)；原始结果：[local-checks.log](local-checks.log)、[coverage-check.log](coverage-check.log)。
+
+## 优先审查：触屏入口 / 主 HUD 前后图
+
+| 视口 | 基线 7c22ec5 | 当前触屏 / HUD | 小屏暂停修复前 | 当前暂停按钮 |
+|---|---|---|---|---|
+| desktop-1280x800 | [原图](images/day-before--desktop-1280x800--4eec7720.png) | [原图](images/day-first--desktop-1280x800--d4fcb73d.png) | [原图](images/pause-help--desktop-1280x800--b968823a.png) | [原图](images/pause-actions--desktop-1280x800--d4fcb73d.png) |
+| phone-390x844 | [原图](images/day-before--phone-390x844--4eec7720.png) | [原图](images/day-first--phone-390x844--d4fcb73d.png) | [原图](images/pause-help--phone-390x844--b968823a.png) | [原图](images/pause-actions--phone-390x844--d4fcb73d.png) |
+| phone-320x568 | [原图](images/day-before--phone-320x568--4eec7720.png) | [原图](images/day-first--phone-320x568--d4fcb73d.png) | [原图](images/pause-help--phone-320x568--b968823a.png) | [原图](images/pause-actions--phone-320x568--d4fcb73d.png) |
+| landscape-844x390 | [原图](images/day-before--landscape-844x390--4eec7720.png) | [原图](images/day-first--landscape-844x390--d4fcb73d.png) | — | [原图](images/pause-actions--landscape-844x390--d4fcb73d.png) |
+
+## 界面问题 / 前后图
+
+- **UI-001** 触屏无移动/技能/交互入口：已修复，待用户审查。前图 day-before，当前图 day-first；旧图仍保留在 screenshots.json 的 history。
+- **UI-002** 手机引导遮挡画布：已移出画布，待用户审查。前图 day-before，当前图 day-first；旧图仍保留在 screenshots.json 的 history。
+- **UI-003** 横屏画布过高，操作时看不到角色/篝火：已改并排布局，待用户审查。前图 0fc9c92a，当前图 day-first；旧图仍保留在 screenshots.json 的 history。
+- **UI-004** 320x568 暂停长说明使继续按钮在视口外且不可滚动：已增加面板滚动，待用户审查。前图 b968823a，当前图 pause-actions；旧图仍保留在 screenshots.json 的 history。
+- **UI-005** 320x568 背包与部分触屏入口需要页面滚动：待用户逐图评估。前图 见当前图（待整改），当前图 day-first；旧图仍保留在 screenshots.json 的 history。
+- **UI-006** 第三夜仍在夜间时，引导已跳至天亮献祭，和主目标守火不一致：截图发现，待整改；既有引导规则未在本片修改。前图 见当前图（待整改），当前图 night-wave；旧图仍保留在 screenshots.json 的 history。
+- **UI-007** 320x568 夜战操作提示遮住部分波次文字：截图发现，待整改；不代表视觉通过。前图 见当前图（待整改），当前图 night-wave；旧图仍保留在 screenshots.json 的 history。
+
+| screen_id | 状态 | 视口 | 来源 | 证据 | 覆盖状态 |
+|---|---|---|---|---|---|
+| day-before | 触屏修复前的首局 HUD | desktop-1280x800 | baseline | [原图](images/day-before--desktop-1280x800--4eec7720.png) | 已截 |
+| day-before | 触屏修复前的首局 HUD | phone-390x844 | baseline | [原图](images/day-before--phone-390x844--4eec7720.png) | 已截 |
+| day-before | 触屏修复前的首局 HUD | phone-320x568 | baseline | [原图](images/day-before--phone-320x568--4eec7720.png) | 已截 |
+| day-before | 触屏修复前的首局 HUD | landscape-844x390 | baseline | [原图](images/day-before--landscape-844x390--4eec7720.png) | 已截 |
+| title-empty | 首次选角，开始按钮禁用 | desktop-1280x800 | normal | [原图](images/title-empty--desktop-1280x800--d4fcb73d.png) | 已截 |
+| title-empty | 首次选角，开始按钮禁用 | phone-390x844 | normal | [原图](images/title-empty--phone-390x844--d4fcb73d.png) | 已截 |
+| title-empty | 首次选角，开始按钮禁用 | phone-320x568 | normal | [原图](images/title-empty--phone-320x568--d4fcb73d.png) | 已截 |
+| title-empty | 首次选角，开始按钮禁用 | landscape-844x390 | normal | [原图](images/title-empty--landscape-844x390--d4fcb73d.png) | 已截 |
+| title-selected | 骑士选中，开始按钮启用 | desktop-1280x800 | normal | [原图](images/title-selected--desktop-1280x800--d4fcb73d.png) | 已截 |
+| title-selected | 骑士选中，开始按钮启用 | phone-390x844 | normal | [原图](images/title-selected--phone-390x844--d4fcb73d.png) | 已截 |
+| title-selected | 骑士选中，开始按钮启用 | phone-320x568 | normal | [原图](images/title-selected--phone-320x568--d4fcb73d.png) | 已截 |
+| title-selected | 骑士选中，开始按钮启用 | landscape-844x390 | normal | [原图](images/title-selected--landscape-844x390--d4fcb73d.png) | 已截 |
+| intro-1 | 开场故事第 1 页完整长文字 | desktop-1280x800 | normal | [原图](images/intro-1--desktop-1280x800--d4fcb73d.png) | 已截 |
+| intro-1 | 开场故事第 1 页完整长文字 | phone-390x844 | normal | [原图](images/intro-1--phone-390x844--d4fcb73d.png) | 已截 |
+| intro-1 | 开场故事第 1 页完整长文字 | phone-320x568 | normal | [原图](images/intro-1--phone-320x568--d4fcb73d.png) | 已截 |
+| intro-1 | 开场故事第 1 页完整长文字 | landscape-844x390 | normal | [原图](images/intro-1--landscape-844x390--d4fcb73d.png) | 已截 |
+| intro-2 | 开场故事第 2 页完整长文字 | desktop-1280x800 | normal | [原图](images/intro-2--desktop-1280x800--d4fcb73d.png) | 已截 |
+| intro-2 | 开场故事第 2 页完整长文字 | phone-390x844 | normal | [原图](images/intro-2--phone-390x844--d4fcb73d.png) | 已截 |
+| intro-2 | 开场故事第 2 页完整长文字 | phone-320x568 | normal | [原图](images/intro-2--phone-320x568--d4fcb73d.png) | 已截 |
+| intro-2 | 开场故事第 2 页完整长文字 | landscape-844x390 | normal | [原图](images/intro-2--landscape-844x390--d4fcb73d.png) | 已截 |
+| intro-3 | 开场故事第 3 页完整长文字 | desktop-1280x800 | normal | [原图](images/intro-3--desktop-1280x800--d4fcb73d.png) | 已截 |
+| intro-3 | 开场故事第 3 页完整长文字 | phone-390x844 | normal | [原图](images/intro-3--phone-390x844--d4fcb73d.png) | 已截 |
+| intro-3 | 开场故事第 3 页完整长文字 | phone-320x568 | normal | [原图](images/intro-3--phone-320x568--d4fcb73d.png) | 已截 |
+| intro-3 | 开场故事第 3 页完整长文字 | landscape-844x390 | normal | [原图](images/intro-3--landscape-844x390--d4fcb73d.png) | 已截 |
+| intro-4 | 开场故事第 4 页完整长文字 | desktop-1280x800 | normal | [原图](images/intro-4--desktop-1280x800--d4fcb73d.png) | 已截 |
+| intro-4 | 开场故事第 4 页完整长文字 | phone-390x844 | normal | [原图](images/intro-4--phone-390x844--d4fcb73d.png) | 已截 |
+| intro-4 | 开场故事第 4 页完整长文字 | phone-320x568 | normal | [原图](images/intro-4--phone-320x568--d4fcb73d.png) | 已截 |
+| intro-4 | 开场故事第 4 页完整长文字 | landscape-844x390 | normal | [原图](images/intro-4--landscape-844x390--d4fcb73d.png) | 已截 |
+| intro-5 | 开场故事第 5 页完整长文字 | desktop-1280x800 | normal | [原图](images/intro-5--desktop-1280x800--d4fcb73d.png) | 已截 |
+| intro-5 | 开场故事第 5 页完整长文字 | phone-390x844 | normal | [原图](images/intro-5--phone-390x844--d4fcb73d.png) | 已截 |
+| intro-5 | 开场故事第 5 页完整长文字 | phone-320x568 | normal | [原图](images/intro-5--phone-320x568--d4fcb73d.png) | 已截 |
+| intro-5 | 开场故事第 5 页完整长文字 | landscape-844x390 | normal | [原图](images/intro-5--landscape-844x390--d4fcb73d.png) | 已截 |
+| intro-6 | 开场故事第 6 页完整长文字 | desktop-1280x800 | normal | [原图](images/intro-6--desktop-1280x800--d4fcb73d.png) | 已截 |
+| intro-6 | 开场故事第 6 页完整长文字 | phone-390x844 | normal | [原图](images/intro-6--phone-390x844--d4fcb73d.png) | 已截 |
+| intro-6 | 开场故事第 6 页完整长文字 | phone-320x568 | normal | [原图](images/intro-6--phone-320x568--d4fcb73d.png) | 已截 |
+| intro-6 | 开场故事第 6 页完整长文字 | landscape-844x390 | normal | [原图](images/intro-6--landscape-844x390--d4fcb73d.png) | 已截 |
+| brief-camp | 营地预演第 1 步完整文字 | desktop-1280x800 | normal | [原图](images/brief-camp--desktop-1280x800--d4fcb73d.png) | 已截 |
+| brief-camp | 营地预演第 1 步完整文字 | phone-390x844 | normal | [原图](images/brief-camp--phone-390x844--d4fcb73d.png) | 已截 |
+| brief-camp | 营地预演第 1 步完整文字 | phone-320x568 | normal | [原图](images/brief-camp--phone-320x568--d4fcb73d.png) | 已截 |
+| brief-camp | 营地预演第 1 步完整文字 | landscape-844x390 | normal | [原图](images/brief-camp--landscape-844x390--d4fcb73d.png) | 已截 |
+| brief-bench | 营地预演第 2 步完整文字 | desktop-1280x800 | normal | [原图](images/brief-bench--desktop-1280x800--d4fcb73d.png) | 已截 |
+| brief-bench | 营地预演第 2 步完整文字 | phone-390x844 | normal | [原图](images/brief-bench--phone-390x844--d4fcb73d.png) | 已截 |
+| brief-bench | 营地预演第 2 步完整文字 | phone-320x568 | normal | [原图](images/brief-bench--phone-320x568--d4fcb73d.png) | 已截 |
+| brief-bench | 营地预演第 2 步完整文字 | landscape-844x390 | normal | [原图](images/brief-bench--landscape-844x390--d4fcb73d.png) | 已截 |
+| brief-altar | 营地预演第 3 步完整文字 | desktop-1280x800 | normal | [原图](images/brief-altar--desktop-1280x800--d4fcb73d.png) | 已截 |
+| brief-altar | 营地预演第 3 步完整文字 | phone-390x844 | normal | [原图](images/brief-altar--phone-390x844--d4fcb73d.png) | 已截 |
+| brief-altar | 营地预演第 3 步完整文字 | phone-320x568 | normal | [原图](images/brief-altar--phone-320x568--d4fcb73d.png) | 已截 |
+| brief-altar | 营地预演第 3 步完整文字 | landscape-844x390 | normal | [原图](images/brief-altar--landscape-844x390--d4fcb73d.png) | 已截 |
+| brief-build | 营地预演第 4 步完整文字 | desktop-1280x800 | normal | [原图](images/brief-build--desktop-1280x800--d4fcb73d.png) | 已截 |
+| brief-build | 营地预演第 4 步完整文字 | phone-390x844 | normal | [原图](images/brief-build--phone-390x844--d4fcb73d.png) | 已截 |
+| brief-build | 营地预演第 4 步完整文字 | phone-320x568 | normal | [原图](images/brief-build--phone-320x568--d4fcb73d.png) | 已截 |
+| brief-build | 营地预演第 4 步完整文字 | landscape-844x390 | normal | [原图](images/brief-build--landscape-844x390--d4fcb73d.png) | 已截 |
+| brief-depart | 营地预演第 5 步完整文字 | desktop-1280x800 | normal | [原图](images/brief-depart--desktop-1280x800--d4fcb73d.png) | 已截 |
+| brief-depart | 营地预演第 5 步完整文字 | phone-390x844 | normal | [原图](images/brief-depart--phone-390x844--d4fcb73d.png) | 已截 |
+| brief-depart | 营地预演第 5 步完整文字 | phone-320x568 | normal | [原图](images/brief-depart--phone-320x568--d4fcb73d.png) | 已截 |
+| brief-depart | 营地预演第 5 步完整文字 | landscape-844x390 | normal | [原图](images/brief-depart--landscape-844x390--d4fcb73d.png) | 已截 |
+| day-first | 正常首局 HUD、背包和触屏入口 | desktop-1280x800 | normal | [原图](images/day-first--desktop-1280x800--d4fcb73d.png) | 已截 |
+| day-first | 正常首局 HUD、背包和触屏入口 | phone-390x844 | normal | [原图](images/day-first--phone-390x844--d4fcb73d.png) | 已截 |
+| day-first | 正常首局 HUD、背包和触屏入口 | phone-320x568 | normal | [原图](images/day-first--phone-320x568--d4fcb73d.png) | 已截 |
+| day-first | 正常首局 HUD、背包和触屏入口 | landscape-844x390 | normal | [原图](images/day-first--landscape-844x390--d4fcb73d.png) | 已截 |
+| day-returning | 已完成引导的玩家重新开始，跳过开场 | desktop-1280x800 | normal | [原图](images/day-returning--desktop-1280x800--d4fcb73d.png) | 已截 |
+| day-returning | 已完成引导的玩家重新开始，跳过开场 | phone-390x844 | normal | [原图](images/day-returning--phone-390x844--d4fcb73d.png) | 已截 |
+| day-returning | 已完成引导的玩家重新开始，跳过开场 | phone-320x568 | normal | [原图](images/day-returning--phone-320x568--d4fcb73d.png) | 已截 |
+| day-returning | 已完成引导的玩家重新开始，跳过开场 | landscape-844x390 | normal | [原图](images/day-returning--landscape-844x390--d4fcb73d.png) | 已截 |
+| day-miner | miner 职业 HUD / 技能 / 法力差异 | desktop-1280x800 | fixture | [原图](images/day-miner--desktop-1280x800--d4fcb73d.png) | 已截 |
+| day-miner | miner 职业 HUD / 技能 / 法力差异 | phone-390x844 | fixture | [原图](images/day-miner--phone-390x844--d4fcb73d.png) | 已截 |
+| day-miner | miner 职业 HUD / 技能 / 法力差异 | phone-320x568 | fixture | [原图](images/day-miner--phone-320x568--d4fcb73d.png) | 已截 |
+| day-miner | miner 职业 HUD / 技能 / 法力差异 | landscape-844x390 | fixture | [原图](images/day-miner--landscape-844x390--d4fcb73d.png) | 已截 |
+| day-farmer | farmer 职业 HUD / 技能 / 法力差异 | desktop-1280x800 | fixture | [原图](images/day-farmer--desktop-1280x800--d4fcb73d.png) | 已截 |
+| day-farmer | farmer 职业 HUD / 技能 / 法力差异 | phone-390x844 | fixture | [原图](images/day-farmer--phone-390x844--d4fcb73d.png) | 已截 |
+| day-farmer | farmer 职业 HUD / 技能 / 法力差异 | phone-320x568 | fixture | [原图](images/day-farmer--phone-320x568--d4fcb73d.png) | 已截 |
+| day-farmer | farmer 职业 HUD / 技能 / 法力差异 | landscape-844x390 | fixture | [原图](images/day-farmer--landscape-844x390--d4fcb73d.png) | 已截 |
+| day-mage | mage 职业 HUD / 技能 / 法力差异 | desktop-1280x800 | fixture | [原图](images/day-mage--desktop-1280x800--d4fcb73d.png) | 已截 |
+| day-mage | mage 职业 HUD / 技能 / 法力差异 | phone-390x844 | fixture | [原图](images/day-mage--phone-390x844--d4fcb73d.png) | 已截 |
+| day-mage | mage 职业 HUD / 技能 / 法力差异 | phone-320x568 | fixture | [原图](images/day-mage--phone-320x568--d4fcb73d.png) | 已截 |
+| day-mage | mage 职业 HUD / 技能 / 法力差异 | landscape-844x390 | fixture | [原图](images/day-mage--landscape-844x390--d4fcb73d.png) | 已截 |
+| build-selected | 栅栏选中、缺口与取消建造提示 | desktop-1280x800 | fixture | [原图](images/build-selected--desktop-1280x800--d4fcb73d.png) | 已截 |
+| build-selected | 栅栏选中、缺口与取消建造提示 | phone-390x844 | fixture | [原图](images/build-selected--phone-390x844--d4fcb73d.png) | 已截 |
+| build-selected | 栅栏选中、缺口与取消建造提示 | phone-320x568 | fixture | [原图](images/build-selected--phone-320x568--d4fcb73d.png) | 已截 |
+| build-selected | 栅栏选中、缺口与取消建造提示 | landscape-844x390 | fixture | [原图](images/build-selected--landscape-844x390--d4fcb73d.png) | 已截 |
+| build-no-resource | 材料不足的建造提示 | desktop-1280x800 | fixture | [原图](images/build-no-resource--desktop-1280x800--d4fcb73d.png) | 已截 |
+| build-no-resource | 材料不足的建造提示 | phone-390x844 | fixture | [原图](images/build-no-resource--phone-390x844--d4fcb73d.png) | 已截 |
+| build-no-resource | 材料不足的建造提示 | phone-320x568 | fixture | [原图](images/build-no-resource--phone-320x568--d4fcb73d.png) | 已截 |
+| build-no-resource | 材料不足的建造提示 | landscape-844x390 | fixture | [原图](images/build-no-resource--landscape-844x390--d4fcb73d.png) | 已截 |
+| build-repair | 坏墙修复后的反馈 | desktop-1280x800 | fixture | [原图](images/build-repair--desktop-1280x800--d4fcb73d.png) | 已截 |
+| build-repair | 坏墙修复后的反馈 | phone-390x844 | fixture | [原图](images/build-repair--phone-390x844--d4fcb73d.png) | 已截 |
+| build-repair | 坏墙修复后的反馈 | phone-320x568 | fixture | [原图](images/build-repair--phone-320x568--d4fcb73d.png) | 已截 |
+| build-repair | 坏墙修复后的反馈 | landscape-844x390 | fixture | [原图](images/build-repair--landscape-844x390--d4fcb73d.png) | 已截 |
+| plant-empty | 空田与播种提示 | desktop-1280x800 | fixture | [原图](images/plant-empty--desktop-1280x800--d4fcb73d.png) | 已截 |
+| plant-empty | 空田与播种提示 | phone-390x844 | fixture | [原图](images/plant-empty--phone-390x844--d4fcb73d.png) | 已截 |
+| plant-empty | 空田与播种提示 | phone-320x568 | fixture | [原图](images/plant-empty--phone-320x568--d4fcb73d.png) | 已截 |
+| plant-empty | 空田与播种提示 | landscape-844x390 | fixture | [原图](images/plant-empty--landscape-844x390--d4fcb73d.png) | 已截 |
+| plant-growing | 播种后的幼苗状态 | desktop-1280x800 | fixture | [原图](images/plant-growing--desktop-1280x800--d4fcb73d.png) | 已截 |
+| plant-growing | 播种后的幼苗状态 | phone-390x844 | fixture | [原图](images/plant-growing--phone-390x844--d4fcb73d.png) | 已截 |
+| plant-growing | 播种后的幼苗状态 | phone-320x568 | fixture | [原图](images/plant-growing--phone-320x568--d4fcb73d.png) | 已截 |
+| plant-growing | 播种后的幼苗状态 | landscape-844x390 | fixture | [原图](images/plant-growing--landscape-844x390--d4fcb73d.png) | 已截 |
+| plant-ripe | 成熟作物与收麦提示 | desktop-1280x800 | fixture | [原图](images/plant-ripe--desktop-1280x800--d4fcb73d.png) | 已截 |
+| plant-ripe | 成熟作物与收麦提示 | phone-390x844 | fixture | [原图](images/plant-ripe--phone-390x844--d4fcb73d.png) | 已截 |
+| plant-ripe | 成熟作物与收麦提示 | phone-320x568 | fixture | [原图](images/plant-ripe--phone-320x568--d4fcb73d.png) | 已截 |
+| plant-ripe | 成熟作物与收麦提示 | landscape-844x390 | fixture | [原图](images/plant-ripe--landscape-844x390--d4fcb73d.png) | 已截 |
+| inventory-large | 大数字背包与长目标文本 | desktop-1280x800 | fixture | [原图](images/inventory-large--desktop-1280x800--d4fcb73d.png) | 已截 |
+| inventory-large | 大数字背包与长目标文本 | phone-390x844 | fixture | [原图](images/inventory-large--phone-390x844--d4fcb73d.png) | 已截 |
+| inventory-large | 大数字背包与长目标文本 | phone-320x568 | fixture | [原图](images/inventory-large--phone-320x568--d4fcb73d.png) | 已截 |
+| inventory-large | 大数字背包与长目标文本 | landscape-844x390 | fixture | [原图](images/inventory-large--landscape-844x390--d4fcb73d.png) | 已截 |
+| craft-missing | 合成缺少全部材料的长提示 | desktop-1280x800 | fixture | [原图](images/craft-missing--desktop-1280x800--d4fcb73d.png) | 已截 |
+| craft-missing | 合成缺少全部材料的长提示 | phone-390x844 | fixture | [原图](images/craft-missing--phone-390x844--d4fcb73d.png) | 已截 |
+| craft-missing | 合成缺少全部材料的长提示 | phone-320x568 | fixture | [原图](images/craft-missing--phone-320x568--d4fcb73d.png) | 已截 |
+| craft-missing | 合成缺少全部材料的长提示 | landscape-844x390 | fixture | [原图](images/craft-missing--landscape-844x390--d4fcb73d.png) | 已截 |
+| craft-heart | 合成成功，背包方块之心就绪 | desktop-1280x800 | fixture | [原图](images/craft-heart--desktop-1280x800--d4fcb73d.png) | 已截 |
+| craft-heart | 合成成功，背包方块之心就绪 | phone-390x844 | fixture | [原图](images/craft-heart--phone-390x844--d4fcb73d.png) | 已截 |
+| craft-heart | 合成成功，背包方块之心就绪 | phone-320x568 | fixture | [原图](images/craft-heart--phone-320x568--d4fcb73d.png) | 已截 |
+| craft-heart | 合成成功，背包方块之心就绪 | landscape-844x390 | fixture | [原图](images/craft-heart--landscape-844x390--d4fcb73d.png) | 已截 |
+| night-wave | 夜间波次、营火、围墙与敌人 | desktop-1280x800 | fixture | [原图](images/night-wave--desktop-1280x800--d4fcb73d--036f284c.png) | 已截 |
+| night-wave | 夜间波次、营火、围墙与敌人 | phone-390x844 | fixture | [原图](images/night-wave--phone-390x844--d4fcb73d--036f284c.png) | 已截 |
+| night-wave | 夜间波次、营火、围墙与敌人 | phone-320x568 | fixture | [原图](images/night-wave--phone-320x568--d4fcb73d--036f284c.png) | 已截 |
+| night-wave | 夜间波次、营火、围墙与敌人 | landscape-844x390 | fixture | [原图](images/night-wave--landscape-844x390--d4fcb73d--036f284c.png) | 已截 |
+| night-hurt | 玩家与营火低血量、受伤反馈 | desktop-1280x800 | fixture | [原图](images/night-hurt--desktop-1280x800--d4fcb73d.png) | 已截 |
+| night-hurt | 玩家与营火低血量、受伤反馈 | phone-390x844 | fixture | [原图](images/night-hurt--phone-390x844--d4fcb73d.png) | 已截 |
+| night-hurt | 玩家与营火低血量、受伤反馈 | phone-320x568 | fixture | [原图](images/night-hurt--phone-320x568--d4fcb73d.png) | 已截 |
+| night-hurt | 玩家与营火低血量、受伤反馈 | landscape-844x390 | fixture | [原图](images/night-hurt--landscape-844x390--d4fcb73d.png) | 已截 |
+| skill-cooldown | 技能冷却、法力不足、采集攻击提示 | desktop-1280x800 | fixture | [原图](images/skill-cooldown--desktop-1280x800--d4fcb73d.png) | 已截 |
+| skill-cooldown | 技能冷却、法力不足、采集攻击提示 | phone-390x844 | fixture | [原图](images/skill-cooldown--phone-390x844--d4fcb73d.png) | 已截 |
+| skill-cooldown | 技能冷却、法力不足、采集攻击提示 | phone-320x568 | fixture | [原图](images/skill-cooldown--phone-320x568--d4fcb73d.png) | 已截 |
+| skill-cooldown | 技能冷却、法力不足、采集攻击提示 | landscape-844x390 | fixture | [原图](images/skill-cooldown--landscape-844x390--d4fcb73d.png) | 已截 |
+| pause-help | 暂停 / 操作说明 / 继续 / 回选角 | desktop-1280x800 | normal | [原图](images/pause-help--desktop-1280x800--d4fcb73d.png) | 已截 |
+| pause-help | 暂停 / 操作说明 / 继续 / 回选角 | phone-390x844 | normal | [原图](images/pause-help--phone-390x844--d4fcb73d.png) | 已截 |
+| pause-help | 暂停 / 操作说明 / 继续 / 回选角 | phone-320x568 | normal | [原图](images/pause-help--phone-320x568--d4fcb73d.png) | 已截 |
+| pause-help | 暂停 / 操作说明 / 继续 / 回选角 | landscape-844x390 | normal | [原图](images/pause-help--landscape-844x390--d4fcb73d.png) | 已截 |
+| pause-actions | 暂停长说明滚动到底部，可见继续 / 回选角按钮 | desktop-1280x800 | normal | [原图](images/pause-actions--desktop-1280x800--d4fcb73d.png) | 已截 |
+| pause-actions | 暂停长说明滚动到底部，可见继续 / 回选角按钮 | phone-390x844 | normal | [原图](images/pause-actions--phone-390x844--d4fcb73d.png) | 已截 |
+| pause-actions | 暂停长说明滚动到底部，可见继续 / 回选角按钮 | phone-320x568 | normal | [原图](images/pause-actions--phone-320x568--d4fcb73d.png) | 已截 |
+| pause-actions | 暂停长说明滚动到底部，可见继续 / 回选角按钮 | landscape-844x390 | normal | [原图](images/pause-actions--landscape-844x390--d4fcb73d.png) | 已截 |
+| audio-music-off | 音乐关闭，音效保留 | desktop-1280x800 | normal | [原图](images/audio-music-off--desktop-1280x800--d4fcb73d.png) | 已截 |
+| audio-music-off | 音乐关闭，音效保留 | phone-390x844 | normal | [原图](images/audio-music-off--phone-390x844--d4fcb73d.png) | 已截 |
+| audio-music-off | 音乐关闭，音效保留 | phone-320x568 | normal | [原图](images/audio-music-off--phone-320x568--d4fcb73d.png) | 已截 |
+| audio-music-off | 音乐关闭，音效保留 | landscape-844x390 | normal | [原图](images/audio-music-off--landscape-844x390--d4fcb73d.png) | 已截 |
+| audio-all-off | 声音全部关闭 | desktop-1280x800 | normal | [原图](images/audio-all-off--desktop-1280x800--d4fcb73d.png) | 已截 |
+| audio-all-off | 声音全部关闭 | phone-390x844 | normal | [原图](images/audio-all-off--phone-390x844--d4fcb73d.png) | 已截 |
+| audio-all-off | 声音全部关闭 | phone-320x568 | normal | [原图](images/audio-all-off--phone-320x568--d4fcb73d.png) | 已截 |
+| audio-all-off | 声音全部关闭 | landscape-844x390 | normal | [原图](images/audio-all-off--landscape-844x390--d4fcb73d.png) | 已截 |
+| return-title | 暂停菜单返回选角 | desktop-1280x800 | normal | [原图](images/return-title--desktop-1280x800--d4fcb73d.png) | 已截 |
+| return-title | 暂停菜单返回选角 | phone-390x844 | normal | [原图](images/return-title--phone-390x844--d4fcb73d.png) | 已截 |
+| return-title | 暂停菜单返回选角 | phone-320x568 | normal | [原图](images/return-title--phone-320x568--d4fcb73d.png) | 已截 |
+| return-title | 暂停菜单返回选角 | landscape-844x390 | normal | [原图](images/return-title--landscape-844x390--d4fcb73d.png) | 已截 |
+| failure-camp | 篝火熄灭失败结算 | desktop-1280x800 | fixture | [原图](images/failure-camp--desktop-1280x800--d4fcb73d.png) | 已截 |
+| failure-camp | 篝火熄灭失败结算 | phone-390x844 | fixture | [原图](images/failure-camp--phone-390x844--d4fcb73d.png) | 已截 |
+| failure-camp | 篝火熄灭失败结算 | phone-320x568 | fixture | [原图](images/failure-camp--phone-320x568--d4fcb73d.png) | 已截 |
+| failure-camp | 篝火熄灭失败结算 | landscape-844x390 | fixture | [原图](images/failure-camp--landscape-844x390--d4fcb73d.png) | 已截 |
+| failure-player | 玩家死亡失败结算 | desktop-1280x800 | fixture | [原图](images/failure-player--desktop-1280x800--d4fcb73d.png) | 已截 |
+| failure-player | 玩家死亡失败结算 | phone-390x844 | fixture | [原图](images/failure-player--phone-390x844--d4fcb73d.png) | 已截 |
+| failure-player | 玩家死亡失败结算 | phone-320x568 | fixture | [原图](images/failure-player--phone-320x568--d4fcb73d.png) | 已截 |
+| failure-player | 玩家死亡失败结算 | landscape-844x390 | fixture | [原图](images/failure-player--landscape-844x390--d4fcb73d.png) | 已截 |
+| retry-title | 临时注入失败后，通过真实按钮回到选角 | desktop-1280x800 | fixture | [原图](images/retry-title--desktop-1280x800--d4fcb73d--23e4f1f1.png) | 已截 |
+| retry-title | 临时注入失败后，通过真实按钮回到选角 | phone-390x844 | fixture | [原图](images/retry-title--phone-390x844--d4fcb73d--23e4f1f1.png) | 已截 |
+| retry-title | 临时注入失败后，通过真实按钮回到选角 | phone-320x568 | fixture | [原图](images/retry-title--phone-320x568--d4fcb73d--23e4f1f1.png) | 已截 |
+| retry-title | 临时注入失败后，通过真实按钮回到选角 | landscape-844x390 | fixture | [原图](images/retry-title--landscape-844x390--d4fcb73d--23e4f1f1.png) | 已截 |
+| altar-night | 第三夜夜间禁止献祭 | desktop-1280x800 | fixture | [原图](images/altar-night--desktop-1280x800--d4fcb73d.png) | 已截 |
+| altar-night | 第三夜夜间禁止献祭 | phone-390x844 | fixture | [原图](images/altar-night--phone-390x844--d4fcb73d.png) | 已截 |
+| altar-night | 第三夜夜间禁止献祭 | phone-320x568 | fixture | [原图](images/altar-night--phone-320x568--d4fcb73d.png) | 已截 |
+| altar-night | 第三夜夜间禁止献祭 | landscape-844x390 | fixture | [原图](images/altar-night--landscape-844x390--d4fcb73d.png) | 已截 |
+| altar-early | 只过两夜禁止献祭 | desktop-1280x800 | fixture | [原图](images/altar-early--desktop-1280x800--d4fcb73d.png) | 已截 |
+| altar-early | 只过两夜禁止献祭 | phone-390x844 | fixture | [原图](images/altar-early--phone-390x844--d4fcb73d.png) | 已截 |
+| altar-early | 只过两夜禁止献祭 | phone-320x568 | fixture | [原图](images/altar-early--phone-320x568--d4fcb73d.png) | 已截 |
+| altar-early | 只过两夜禁止献祭 | landscape-844x390 | fixture | [原图](images/altar-early--landscape-844x390--d4fcb73d.png) | 已截 |
+| altar-ready | 第三夜后天亮祭坛交付提示 | desktop-1280x800 | fixture | [原图](images/altar-ready--desktop-1280x800--d4fcb73d.png) | 已截 |
+| altar-ready | 第三夜后天亮祭坛交付提示 | phone-390x844 | fixture | [原图](images/altar-ready--phone-390x844--d4fcb73d.png) | 已截 |
+| altar-ready | 第三夜后天亮祭坛交付提示 | phone-320x568 | fixture | [原图](images/altar-ready--phone-320x568--d4fcb73d.png) | 已截 |
+| altar-ready | 第三夜后天亮祭坛交付提示 | landscape-844x390 | fixture | [原图](images/altar-ready--landscape-844x390--d4fcb73d.png) | 已截 |
+| victory | 祭坛交付成功结算与再玩一局 | desktop-1280x800 | fixture | [原图](images/victory--desktop-1280x800--d4fcb73d.png) | 已截 |
+| victory | 祭坛交付成功结算与再玩一局 | phone-390x844 | fixture | [原图](images/victory--phone-390x844--d4fcb73d.png) | 已截 |
+| victory | 祭坛交付成功结算与再玩一局 | phone-320x568 | fixture | [原图](images/victory--phone-320x568--d4fcb73d.png) | 已截 |
+| victory | 祭坛交付成功结算与再玩一局 | landscape-844x390 | fixture | [原图](images/victory--landscape-844x390--d4fcb73d.png) | 已截 |
+
+## 不适用 / 未覆盖
+
+- 无英文切换、账号/存档页、独立设置面板、空列表界面；不得用伪造界面代替。
+- 未覆盖真实 iOS/Android 设备、浏览器工具栏/系统手势、安全区，以及完整自然三夜通关；结算/极端值使用标注的临时注入状态。
+- 状态截图是全页原图，横屏/小屏可能需要页面滚动；关键控件是否应固定在同屏由用户逐图审查决定。
+- 自动测试与截图均不代表布局审查或产品平衡已通过。
