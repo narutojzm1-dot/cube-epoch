@@ -1,0 +1,20 @@
+{
+    "programs": [
+
+    ],
+    "stream_groups": [
+
+    ],
+    "streams": [
+        {
+            "codec_name": "vp8",
+            "width": 390,
+            "height": 844,
+            "nb_read_frames": "7041"
+        }
+    ],
+    "format": {
+        "duration": "281.640000",
+        "size": "14150772"
+    }
+}

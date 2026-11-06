@@ -1,0 +1,4250 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "first-day",
+      "state": "first-day",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/first-day--390x844.png",
+      "repro_steps": [
+        "独立空浏览器上下文，正常选骑士 → 开始 → UI跳过开场和预演，未修改存储"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:35:14.945Z",
+      "live_state_before": {
+        "time": 0.05299999999962744,
+        "day": true,
+        "cycle": 0,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 392,
+          "y": 344,
+          "hp": 165,
+          "vx": 0,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": false,
+          "chopped": false,
+          "gathered": false,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": false
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 0.08189999999925493,
+        "day": true,
+        "cycle": 0.02889999999962748,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 392,
+          "y": 344,
+          "hp": 165,
+          "vx": 0,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": false,
+          "chopped": false,
+          "gathered": false,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": false
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "day-0",
+      "state": "day-0",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/day-0--390x844.png",
+      "repro_steps": [
+        "普通输入持续运行至自然昼夜转换；没有暂停或修改时钟"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:35:15.997Z",
+      "live_state_before": {
+        "time": 1.098499999999255,
+        "day": true,
+        "cycle": 1.045499999999628,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 414.75896432456,
+          "y": 344,
+          "hp": 165,
+          "vx": 0.000040747556869817675,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": false,
+          "gathered": false,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": false
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 1.1318999999992547,
+        "day": true,
+        "cycle": 1.0788999999996276,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 414.75896513433617,
+          "y": 344,
+          "hp": 165,
+          "vx": 0.00001996630286621066,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": false,
+          "gathered": false,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": false
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "details-live-open",
+      "state": "details-live-open",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/details-live-open--390x844.png",
+      "repro_steps": [
+        "正常右移长按并松手，确认停止；点击详情，游戏继续运行"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:35:16.028Z",
+      "live_state_before": {
+        "time": 1.1151999999992548,
+        "day": true,
+        "cycle": 1.0621999999996277,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 414.7589648008989,
+          "y": 344,
+          "hp": 165,
+          "vx": 0.00002852328980887237,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": false,
+          "gathered": false,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": false
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 1.1651999999992546,
+        "day": true,
+        "cycle": 1.1121999999996275,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 414.75896553014815,
+          "y": 344,
+          "hp": 165,
+          "vx": 0.000009783488404443222,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": false,
+          "gathered": false,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": false
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "wood-gathered",
+      "state": "wood-gathered",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/wood-gathered--390x844.png",
+      "repro_steps": [
+        "移动至营地附近三棵树，真实触屏长按砍树并拾取自然掉落"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:35:24.944Z",
+      "live_state_before": {
+        "time": 9.91489999999927,
+        "day": true,
+        "cycle": 9.861899999999643,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 393.74648591080825,
+          "y": 363.67281228271736,
+          "hp": 165,
+          "vx": 0,
+          "vy": 2.6776182224581753e-9,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 14,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": false
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 9.93159999999927,
+        "day": true,
+        "cycle": 9.878599999999643,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 393.74648591080825,
+          "y": 363.6728122827487,
+          "hp": 165,
+          "vx": 0,
+          "vy": 1.8743327557207225e-9,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 14,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": false
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "build-selected-details-closed",
+      "state": "build-selected-details-closed",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/build-selected-details-closed--390x844.png",
+      "repro_steps": [
+        "详情点栏，验证自动收起、建造选中且核心触控可达"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:35:25.949Z",
+      "live_state_before": {
+        "time": 10.91479999999926,
+        "day": true,
+        "cycle": 10.861799999999635,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": "fence",
+        "player": {
+          "x": 361.646645910808,
+          "y": 343.0466992216762,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5.270675199999998,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 14,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": false
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 10.94819999999926,
+        "day": true,
+        "cycle": 10.895199999999633,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": "fence",
+        "player": {
+          "x": 361.646645910808,
+          "y": 342.9419550934266,
+          "hp": 165,
+          "vx": 0,
+          "vy": -2.5826308479999986,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 14,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": false
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "camp-walled",
+      "state": "camp-walled",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/camp-walled--390x844.png",
+      "repro_steps": [
+        "普通UI选择栅栏，使用开局已有栏与实采木头，将营火四面围上，再次点栏取消"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:35:26.711Z",
+      "live_state_before": {
+        "time": 11.664799999999246,
+        "day": true,
+        "cycle": 11.61179999999962,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 361.646645910808,
+          "y": 342.84166677927357,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5.639986373742265e-7,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 12,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 11.698099999999245,
+        "day": true,
+        "cycle": 11.64509999999962,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 361.646645910808,
+          "y": 342.84166676810474,
+          "hp": 165,
+          "vx": 0,
+          "vy": -2.7635933231337094e-7,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 12,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": false,
+          "offered": false,
+          "planted": false,
+          "sawWheat": false,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "planted",
+      "state": "planted",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/planted--390x844.png",
+      "repro_steps": [
+        "实采木头造田，方向键轻移朝向空田，正常交互播种，种子来自角色原有背包"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:35:28.792Z",
+      "live_state_before": {
+        "time": 13.764699999999214,
+        "day": true,
+        "cycle": 13.711699999999588,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 399.1131483108085,
+          "y": 408.7925425332977,
+          "hp": 165,
+          "vx": 21.951999999999995,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 11,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": false,
+          "offered": false,
+          "planted": true,
+          "sawWheat": false,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "25,25",
+            "stage": 0,
+            "grow": 0.3500000000000001
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 13.781299999999215,
+        "day": true,
+        "cycle": 13.728299999999589,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 399.3682305508085,
+          "y": 408.7925425332977,
+          "hp": 165,
+          "vx": 15.366399999999995,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 11,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": false,
+          "offered": false,
+          "planted": true,
+          "sawWheat": false,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "25,25",
+            "stage": 0,
+            "grow": 0.3666000000000005
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "materials-collected",
+      "state": "materials-collected",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/materials-collected--390x844.png",
+      "repro_steps": [
+        "步行到东部矿区，普通长按挖3处金矿及变为石头的原矿；南部农田实收麦"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:35:49.210Z",
+      "live_state_before": {
+        "time": 34.1804999999989,
+        "day": true,
+        "cycle": 34.12749999999927,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 603.5042862350426,
+          "y": 231.35450225058045,
+          "hp": 165,
+          "vx": 2.0700649661598314e-14,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 11,
+          "stone": 5,
+          "gold": 4,
+          "wheat": 3,
+          "seed": 1,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": false,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 34.1971999999989,
+        "day": true,
+        "cycle": 34.14419999999927,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 603.5042862350426,
+          "y": 231.35450225058045,
+          "hp": 165,
+          "vx": 1.449045476311882e-14,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 11,
+          "stone": 5,
+          "gold": 4,
+          "wheat": 3,
+          "seed": 1,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": false,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "heart-crafted",
+      "state": "heart-crafted",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/heart-crafted--390x844.png",
+      "repro_steps": [
+        "实采木4石5金3麦3，返回工作台旁点击交互合成；未注入资源或心"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:35:54.394Z",
+      "live_state_before": {
+        "time": 39.36359999999926,
+        "day": true,
+        "cycle": 39.31059999999963,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 390.22473423504255,
+          "y": 330.8783294505814,
+          "hp": 165,
+          "vx": 0,
+          "vy": 21.951999999999995,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 39.38039999999926,
+        "day": true,
+        "cycle": 39.327399999999635,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 390.22473423504255,
+          "y": 331.1364849705815,
+          "hp": 165,
+          "vx": 0,
+          "vy": 15.366399999999995,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "night-1",
+      "state": "night-1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/night-1--390x844.png",
+      "repro_steps": [
+        "普通输入持续运行至自然昼夜转换；没有暂停或修改时钟"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:36:31.280Z",
+      "live_state_before": {
+        "time": 76.22890000000334,
+        "day": false,
+        "cycle": 0.1666999999999971,
+        "nights": 1,
+        "wave": 0,
+        "wavesTotal": 2,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 358.1223342350423,
+          "y": 347.8746209361455,
+          "hp": 165,
+          "vx": 0,
+          "vy": 5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 76.27880000000334,
+        "day": false,
+        "cycle": 0.21659999999999127,
+        "nights": 1,
+        "wave": 0,
+        "wavesTotal": 2,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 358.1223342350423,
+          "y": 347.8746209361455,
+          "hp": 165,
+          "vx": 0,
+          "vy": 5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "night-1-combat",
+      "state": "night-1-combat",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/night-1-combat--390x844.png",
+      "repro_steps": [
+        "自然等待第1夜，站营火旁，触屏瞄准接近的怪物攻击"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:36:48.847Z",
+      "live_state_before": {
+        "time": 93.76130000000728,
+        "day": false,
+        "cycle": 17.699099999999838,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 358.1223342350423,
+          "y": 342.18393175776083,
+          "hp": 165,
+          "vx": 0,
+          "vy": -1.751603114985046e-160,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 389.81342011659643,
+            "y": 365.5319145286513,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 314.699614998339,
+            "y": 331.84636392787723,
+            "hp": 12
+          },
+          {
+            "kind": "slime",
+            "x": 475.50721182446136,
+            "y": 288.8043577998277,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 111.96319999999974,
+            "y": 344,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 357.6538733121353,
+            "y": 297.0774662427038,
+            "hp": 32
+          }
+        ],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 93.79470000000728,
+        "day": false,
+        "cycle": 17.73249999999983,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "campHp": 100,
+        "kills": 0,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 358.1223342350423,
+          "y": 342.18393175776083,
+          "hp": 165,
+          "vx": 0,
+          "vy": -8.582855263426724e-161,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 389.109426274654,
+            "y": 365.02347453169295,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 310.92617702511524,
+            "y": 330.94676007721534,
+            "hp": 12
+          },
+          {
+            "kind": "slime",
+            "x": 474.7236745792502,
+            "y": 289.1787746068311,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 111.96319999999974,
+            "y": 344,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 357.6972391386894,
+            "y": 297.9447827737851,
+            "hp": 32
+          }
+        ],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "day-1",
+      "state": "day-1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/day-1--390x844.png",
+      "repro_steps": [
+        "普通输入持续运行至自然昼夜转换；没有暂停或修改时钟"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:36:58.323Z",
+      "live_state_before": {
+        "time": 102.94430000000938,
+        "day": true,
+        "cycle": 0.8666999999999969,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "campHp": 100,
+        "kills": 4,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 391.2980142350424,
+          "y": 355.7320917577608,
+          "hp": 165,
+          "vx": 0,
+          "vy": 44.8,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 1,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 102.96090000000939,
+        "day": true,
+        "cycle": 0.8833000000000027,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "campHp": 100,
+        "kills": 4,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 391.2980142350424,
+          "y": 356.7944917577612,
+          "hp": 165,
+          "vx": 0,
+          "vy": 64,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 1,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "night-2",
+      "state": "night-2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/night-2--390x844.png",
+      "repro_steps": [
+        "普通输入持续运行至自然昼夜转换；没有暂停或修改时钟"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:37:59.510Z",
+      "live_state_before": {
+        "time": 164.12510000002203,
+        "day": false,
+        "cycle": 0.03330000000001747,
+        "nights": 2,
+        "wave": 1,
+        "wavesTotal": 3,
+        "campHp": 100,
+        "kills": 4,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 358.13679823504185,
+          "y": 342.65335380688424,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 3,
+          "wheat": 7,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 164.15850000002203,
+        "day": false,
+        "cycle": 0.06670000000001164,
+        "nights": 2,
+        "wave": 1,
+        "wavesTotal": 3,
+        "campHp": 100,
+        "kills": 4,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 358.13679823504185,
+          "y": 342.65335380688424,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 3,
+          "wheat": 7,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "night-2-combat",
+      "state": "night-2-combat",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/night-2-combat--390x844.png",
+      "repro_steps": [
+        "自然等待第2夜，站营火旁，触屏瞄准接近的怪物攻击"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:38:07.941Z",
+      "live_state_before": {
+        "time": 172.50820000002395,
+        "day": false,
+        "cycle": 8.416399999999992,
+        "nights": 2,
+        "wave": 1,
+        "wavesTotal": 3,
+        "campHp": 100,
+        "kills": 4,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 358.13679823504185,
+          "y": 342.65335380688424,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 3,
+          "wheat": 7,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 454.881890957403,
+            "y": 198.02786006553058,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 312.846070551917,
+            "y": 209.27448729119484,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 538.6762901734764,
+            "y": 454.60913201215976,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 360.22970662770587,
+            "y": 383.6556411049128,
+            "hp": 12
+          },
+          {
+            "kind": "slime",
+            "x": 583.7161166256782,
+            "y": 381.2860194376152,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 128.61448508955334,
+            "y": 224.99651612332903,
+            "hp": 32
+          }
+        ],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 172.52490000002393,
+        "day": false,
+        "cycle": 8.433099999999975,
+        "nights": 2,
+        "wave": 1,
+        "wavesTotal": 3,
+        "campHp": 100,
+        "kills": 4,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 358.13679823504185,
+          "y": 342.65335380688424,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 7,
+          "stone": 0,
+          "gold": 3,
+          "wheat": 7,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 454.6452570155747,
+            "y": 198.39191228372795,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 312.9895087063338,
+            "y": 209.68431058952854,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 538.307105046785,
+            "y": 454.38058883849357,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 360.3356242647947,
+            "y": 385.7526488773863,
+            "hp": 12
+          },
+          {
+            "kind": "slime",
+            "x": 583.2878243839507,
+            "y": 381.2146373973273,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 129.00061031105145,
+            "y": 225.1951035180011,
+            "hp": 32
+          }
+        ],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "day-2",
+      "state": "day-2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/day-2--390x844.png",
+      "repro_steps": [
+        "普通输入持续运行至自然昼夜转换；没有暂停或修改时钟"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:38:26.621Z",
+      "live_state_before": {
+        "time": 190.54110000002805,
+        "day": true,
+        "cycle": 0.4332999999999886,
+        "nights": 2,
+        "wave": 2,
+        "wavesTotal": 3,
+        "campHp": 100,
+        "kills": 11,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 379.89551823504127,
+          "y": 342.65335380688424,
+          "hp": 165,
+          "vx": 64,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 10,
+          "stone": 0,
+          "gold": 4,
+          "wheat": 10,
+          "seed": 3,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 1,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 190.55780000002807,
+        "day": true,
+        "cycle": 0.45000000000000023,
+        "nights": 2,
+        "wave": 2,
+        "wavesTotal": 3,
+        "campHp": 100,
+        "kills": 11,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 380.964318235042,
+          "y": 342.65335380688424,
+          "hp": 165,
+          "vx": 64,
+          "vy": 0,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 10,
+          "stone": 0,
+          "gold": 4,
+          "wheat": 10,
+          "seed": 3,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 1,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "night-3",
+      "state": "night-3",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/night-3--390x844.png",
+      "repro_steps": [
+        "普通输入持续运行至自然昼夜转换；没有暂停或修改时钟"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:39:28.855Z",
+      "live_state_before": {
+        "time": 252.75530000004227,
+        "day": false,
+        "cycle": 0.6332999999999884,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "campHp": 100,
+        "kills": 11,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 360.2784302350454,
+          "y": 342.0558867278836,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 10,
+          "stone": 0,
+          "gold": 4,
+          "wheat": 14,
+          "seed": 3,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 501.04010811008243,
+            "y": 547.7246006034525,
+            "hp": 32
+          }
+        ],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 252.80530000004228,
+        "day": false,
+        "cycle": 0.6832999999999884,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "campHp": 100,
+        "kills": 11,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 360.2784302350454,
+          "y": 342.0558867278836,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 10,
+          "stone": 0,
+          "gold": 4,
+          "wheat": 14,
+          "seed": 3,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 500.30013513760304,
+            "y": 546.6557507543156,
+            "hp": 32
+          }
+        ],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "night-3-combat",
+      "state": "night-3-combat",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/night-3-combat--390x844.png",
+      "repro_steps": [
+        "自然等待第3夜，站营火旁，触屏瞄准接近的怪物攻击"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:39:37.024Z",
+      "live_state_before": {
+        "time": 260.8883000000398,
+        "day": false,
+        "cycle": 8.766299999999957,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "campHp": 100,
+        "kills": 11,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 360.2784302350454,
+          "y": 342.0558867278836,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 10,
+          "stone": 0,
+          "gold": 4,
+          "wheat": 14,
+          "seed": 3,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 383.6343742320048,
+            "y": 378.4088995764767,
+            "hp": 12
+          },
+          {
+            "kind": "slime",
+            "x": 542.9250578331818,
+            "y": 382.1093870485793,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 385.92868070370935,
+            "y": 214.35659648144568,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 181.33790463471038,
+            "y": 252.16996170022063,
+            "hp": 32
+          },
+          {
+            "kind": "cube",
+            "x": 550.1706877157249,
+            "y": 383.6188932741128,
+            "hp": 64
+          },
+          {
+            "kind": "cube",
+            "x": 201.8771226938141,
+            "y": 298.8220350553746,
+            "hp": 64
+          },
+          {
+            "kind": "slime",
+            "x": 126.68843441758389,
+            "y": 224.00604167931317,
+            "hp": 32
+          }
+        ],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 260.9216000000398,
+        "day": false,
+        "cycle": 8.799599999999945,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "campHp": 100,
+        "kills": 11,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 360.2784302350454,
+          "y": 342.0558867278836,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 10,
+          "stone": 0,
+          "gold": 4,
+          "wheat": 14,
+          "seed": 3,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 385.84073565797115,
+            "y": 381.83795921663227,
+            "hp": 12
+          },
+          {
+            "kind": "slime",
+            "x": 542.0774565857732,
+            "y": 381.93280345536925,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 385.75888335390675,
+            "y": 215.2055832304586,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 182.107943468575,
+            "y": 252.5657518394862,
+            "hp": 32
+          },
+          {
+            "kind": "cube",
+            "x": 549.1926862764074,
+            "y": 383.41514297425493,
+            "hp": 64
+          },
+          {
+            "kind": "cube",
+            "x": 202.83768511750696,
+            "y": 299.09648146214397,
+            "hp": 64
+          },
+          {
+            "kind": "slime",
+            "x": 127.45837288026954,
+            "y": 224.40202703722017,
+            "hp": 32
+          }
+        ],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "third-dawn-ready",
+      "state": "third-dawn-ready",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/third-dawn-ready--390x844.png",
+      "repro_steps": [
+        "连续自然守过三夜，第三夜后自然天亮，背包已实合成方块之心"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:40:01.032Z",
+      "live_state_before": {
+        "time": 284.18700000004503,
+        "day": true,
+        "cycle": 0.05009999999997672,
+        "nights": 3,
+        "wave": 2,
+        "wavesTotal": 4,
+        "campHp": 100,
+        "kills": 18,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 360.2784302350454,
+          "y": 342.0558867278836,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 12,
+          "stone": 0,
+          "gold": 5,
+          "wheat": 19,
+          "seed": 5,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            78.5
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 284.22020000004505,
+        "day": true,
+        "cycle": 0.08329999999998836,
+        "nights": 3,
+        "wave": 2,
+        "wavesTotal": 4,
+        "campHp": 100,
+        "kills": 18,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 360.2784302350454,
+          "y": 342.0558867278836,
+          "hp": 165,
+          "vx": 0,
+          "vy": -5e-324,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 12,
+          "stone": 0,
+          "gold": 5,
+          "wheat": 19,
+          "seed": 5,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            78.5
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "day-3",
+      "state": "day-3",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/day-3--390x844.png",
+      "repro_steps": [
+        "普通输入持续运行至自然昼夜转换；没有暂停或修改时钟"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:40:01.918Z",
+      "live_state_before": {
+        "time": 285.08690000004526,
+        "day": true,
+        "cycle": 0.9499999999999995,
+        "nights": 3,
+        "wave": 2,
+        "wavesTotal": 4,
+        "campHp": 100,
+        "kills": 18,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 391.31843023504524,
+          "y": 321.04340672788396,
+          "hp": 165,
+          "vx": 0,
+          "vy": -64,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 12,
+          "stone": 0,
+          "gold": 5,
+          "wheat": 19,
+          "seed": 5,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            78.5
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 1,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "live_state_after": {
+        "time": 285.10350000004524,
+        "day": true,
+        "cycle": 0.9665999999999763,
+        "nights": 3,
+        "wave": 2,
+        "wavesTotal": 4,
+        "campHp": 100,
+        "kills": 18,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "build": null,
+        "player": {
+          "x": 391.31843023504524,
+          "y": 319.9810067278855,
+          "hp": 165,
+          "vx": 0,
+          "vy": -64,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 12,
+          "stone": 0,
+          "gold": 5,
+          "wheat": 19,
+          "seed": 5,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            78.5
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 1,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "暂停"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    },
+    {
+      "screen_id": "natural-victory",
+      "state": "natural-victory",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+        "dirty": true,
+        "product_dirty": false,
+        "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b"
+      },
+      "source": "normal",
+      "input": "automated ordinary native touch input; read-only state telemetry",
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/natural-victory--390x844.png",
+      "repro_steps": [
+        "仅普通输入持续运行；最终真实胜利/失败，未调用win或qa"
+      ],
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "待协调人实际看图",
+      "captured_at": "2026-11-06T16:40:05.247Z",
+      "live_state_before": {
+        "time": 288.403400000046,
+        "day": true,
+        "cycle": 4.266500000000011,
+        "nights": 3,
+        "wave": 2,
+        "wavesTotal": 4,
+        "campHp": 100,
+        "kills": 18,
+        "paused": true,
+        "over": true,
+        "win": true,
+        "build": null,
+        "player": {
+          "x": 391.31843023504524,
+          "y": 117.50908352788437,
+          "hp": 165,
+          "vx": 0,
+          "vy": -21.951999999999995,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 12,
+          "stone": 0,
+          "gold": 5,
+          "wheat": 19,
+          "seed": 5,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            78.5
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "方块之心已点亮"
+      },
+      "live_state_after": {
+        "time": 288.403400000046,
+        "day": true,
+        "cycle": 4.266500000000011,
+        "nights": 3,
+        "wave": 2,
+        "wavesTotal": 4,
+        "campHp": 100,
+        "kills": 18,
+        "paused": true,
+        "over": true,
+        "win": true,
+        "build": null,
+        "player": {
+          "x": 391.31843023504524,
+          "y": 117.50908352788437,
+          "hp": 165,
+          "vx": 0,
+          "vy": -21.951999999999995,
+          "skillCd": 0
+        },
+        "inv": {
+          "wood": 12,
+          "stone": 0,
+          "gold": 5,
+          "wheat": 19,
+          "seed": 5,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "flags": {
+          "moved": true,
+          "chopped": true,
+          "gathered": true,
+          "crafted": true,
+          "offered": false,
+          "planted": true,
+          "sawWheat": true,
+          "built": true
+        },
+        "crops": [
+          {
+            "tile": "25,25",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "tile": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "fences": [
+          [
+            "22,20",
+            79.33300000000003
+          ],
+          [
+            "21,21",
+            78.5
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "enemies": [],
+        "held": 0,
+        "detailsOpen": false,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "overlay": "方块之心已点亮"
+      },
+      "note": "游戏持续运行，截图不冻结时间；没有fixture、状态写入、qa参数或动作API调用"
+    }
+  ]
+}

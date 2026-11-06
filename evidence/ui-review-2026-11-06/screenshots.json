@@ -1,13 +1,22 @@
 {
   "supplemental_batches": [
     {
+      "id": "natural-loop-a342ef0",
+      "base_sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+      "index": "natural-loop-a342ef0/INDEX.md",
+      "screenshots": "natural-loop-a342ef0/screenshots.json",
+      "issue_ids": [],
+      "status": "已截",
+      "visual_review": "20张自然实玩图待协调人看；骑士390普通输入自然通关，归档报错及部分录像缺尾如实记录"
+    },
+    {
       "id": "core-layout",
       "base_sha": "9c06379dd6cdc14ea262d8545a4e44d8c28f2796",
       "index": "core-layout/INDEX.md",
       "screenshots": "core-layout/screenshots.json",
       "issue_ids": ["UI-005", "UI-007"],
       "status": "已截",
-      "visual_review": "待协调人实际复看；80张真实首屏及4张全页补图，旧基线不覆盖"
+      "visual_review": "协调人已看7指定状态，普通态局部通过，详情遮主控按限制记录；其余未标通过。a342ef0为ready_for_user_playtest源码候选，非腾讯云包"
     },
     {
       "id": "night-followup",

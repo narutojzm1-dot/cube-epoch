@@ -1,0 +1,225 @@
+{
+  "build": {
+    "sha": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+    "product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b",
+    "product_dirty": false,
+    "evidence_runner_untracked": true
+  },
+  "role": "knight",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "source": "normal player inputs; automated native touch with read-only telemetry/pathfinding; not a human or physical-device playtest",
+  "game_result": "natural_victory",
+  "game_elapsed_seconds": 288.403400000046,
+  "wall_elapsed_seconds": 290.938,
+  "final": {
+    "time": 288.403400000046,
+    "day": true,
+    "cycle": 4.266500000000011,
+    "nights": 3,
+    "wave": 2,
+    "wavesTotal": 4,
+    "campHp": 100,
+    "kills": 18,
+    "paused": true,
+    "over": true,
+    "win": true,
+    "build": null,
+    "player": {
+      "x": 391.31843023504524,
+      "y": 117.50908352788437,
+      "hp": 165,
+      "vx": 0,
+      "vy": -21.951999999999995,
+      "skillCd": 0
+    },
+    "inv": {
+      "wood": 12,
+      "stone": 0,
+      "gold": 5,
+      "wheat": 19,
+      "seed": 5,
+      "fence": 0,
+      "torch": 0,
+      "plot": 0,
+      "heart": 0
+    },
+    "flags": {
+      "moved": true,
+      "chopped": true,
+      "gathered": true,
+      "crafted": true,
+      "offered": false,
+      "planted": true,
+      "sawWheat": true,
+      "built": true
+    },
+    "crops": [
+      {
+        "tile": "25,25",
+        "stage": 2,
+        "grow": 0
+      },
+      {
+        "tile": "21,27",
+        "stage": 2,
+        "grow": 0
+      },
+      {
+        "tile": "24,28",
+        "stage": 2,
+        "grow": 0
+      },
+      {
+        "tile": "26,27",
+        "stage": 2,
+        "grow": 0
+      }
+    ],
+    "fences": [
+      [
+        "22,20",
+        79.33300000000003
+      ],
+      [
+        "21,21",
+        78.5
+      ],
+      [
+        "23,21",
+        80
+      ],
+      [
+        "22,22",
+        80
+      ]
+    ],
+    "enemies": [],
+    "held": 0,
+    "detailsOpen": false,
+    "scroll": {
+      "x": 0,
+      "y": 0
+    },
+    "overlay": "方块之心已点亮"
+  },
+  "phases": [
+    {
+      "phase": "day-0",
+      "wall_seconds": 1.642,
+      "game_seconds": 1.098499999999255,
+      "phase_start_game_seconds": 0.05299999999962712,
+      "camp_hp": 100,
+      "player_hp": 165,
+      "kills": 0,
+      "wave": 0,
+      "waves_total": 0
+    },
+    {
+      "phase": "night-1",
+      "wall_seconds": 76.926,
+      "game_seconds": 76.22890000000334,
+      "phase_start_game_seconds": 76.06220000000334,
+      "camp_hp": 100,
+      "player_hp": 165,
+      "kills": 0,
+      "wave": 0,
+      "waves_total": 2
+    },
+    {
+      "phase": "day-1",
+      "wall_seconds": 103.985,
+      "game_seconds": 102.94430000000938,
+      "phase_start_game_seconds": 102.07760000000938,
+      "camp_hp": 100,
+      "player_hp": 165,
+      "kills": 4,
+      "wave": 1,
+      "waves_total": 2
+    },
+    {
+      "phase": "night-2",
+      "wall_seconds": 165.17,
+      "game_seconds": 164.12510000002203,
+      "phase_start_game_seconds": 164.091800000022,
+      "camp_hp": 100,
+      "player_hp": 165,
+      "kills": 4,
+      "wave": 1,
+      "waves_total": 3
+    },
+    {
+      "phase": "day-2",
+      "wall_seconds": 192.278,
+      "game_seconds": 190.52450000002807,
+      "phase_start_game_seconds": 190.10780000002805,
+      "camp_hp": 100,
+      "player_hp": 165,
+      "kills": 11,
+      "wave": 2,
+      "waves_total": 3
+    },
+    {
+      "phase": "night-3",
+      "wall_seconds": 254.501,
+      "game_seconds": 252.75530000004227,
+      "phase_start_game_seconds": 252.12200000004228,
+      "camp_hp": 100,
+      "player_hp": 165,
+      "kills": 11,
+      "wave": 1,
+      "waves_total": 4
+    },
+    {
+      "phase": "day-3",
+      "wall_seconds": 287.582,
+      "game_seconds": 285.08690000004526,
+      "phase_start_game_seconds": 284.1369000000453,
+      "camp_hp": 100,
+      "player_hp": 165,
+      "kills": 18,
+      "wave": 2,
+      "waves_total": 4
+    }
+  ],
+  "input_events": 310,
+  "gather_events": 19,
+  "page_errors": 0,
+  "screenshots": 20,
+  "video": "video/continuous-natural-run.webm",
+  "video_sha256": "ad1088a5ce9c35ade433f1d8966e5f7851e66f61d95a0c027305d009e4664043",
+  "runner_process_result": "exit 1 AFTER finish/victory: redundant final TouchEnd protocol error",
+  "artifact_recovery": "Result reconstructed from unmodified finish event, winning frame and seven phase events; video renamed after process exited. No game replay or state modification.",
+  "executed_runner": "executed-run.mjs",
+  "executed_runner_sha256": "edb58d1fe8135e6e29bb177a667e5bb535cef1604973f985b23a18dc038a191c",
+  "corrected_runner": "run.mjs",
+  "corrected_runner_sha256": "757a20e2a7f5c71744af45f14f746dceb2e4628aa926b078d8b3ee24f3c4429e",
+  "runner_fix": "Track active native contact before final cleanup; avoid gather type field overriding event type. Corrected runner not replayed.",
+  "raw_console": "raw-run.log",
+  "limitations": [
+    "One knight run at 390x844 Chromium touch emulation with tile telemetry/pathfinding; not unassisted onboarding or physical mobile proof.",
+    "Third night reached wave2/4 before natural dawn; not all four waves killed. No difficulty/balance assertion.",
+    "No player damage and no healing/skill use occurred; no recovery/retry/save-restore claim.",
+    "This new live-play evidence awaits coordinator visual review.",
+    "Continuous video is partial281.64s; final~9s missing after archive error. Natural victory supported by original live victory frame and unmodified finish/input/phase logs, not a complete victory video.",
+    "Per-frame canvas CSS bounds were not collected by this runner; logical viewport320x192 and real layout viewport390x844 are known. Prior same-build core-layout measurements are reference only."
+  ],
+  "visual_review": "待协调人实际复看本批20图；不外推旧UI批次局部批准",
+  "video_validation": {
+    "original_container": "Premature EOF after runner process exited; raw bytes preserved",
+    "recovered": "video/continuous-natural-run-recovered.webm",
+    "recovery_command": "ffmpeg -nostdin -hide_banner -loglevel warning -i continuous-natural-run.webm -map 0:v:0 -c copy continuous-natural-run-recovered.webm",
+    "codec": "vp8",
+    "width": 390,
+    "height": 844,
+    "decoded_frames": 7041,
+    "duration_seconds": 281.64,
+    "full_run_recording": false,
+    "limitation": "Only 281.64 seconds landed; final approximately9 seconds including victory are missing from video. Full phase/input logs and unmodified winning screenshot retained; no continuous-full-victory-video claim.",
+    "recovered_sha256": "f265ac1b6cf1d751d7af6024e456c11d2ef40c7d99c6c458c71b169ac9454f39"
+  },
+  "independent_review": "Runner source independently reviewed before completion: no source issues/injection found; reviewer explicitly did not certify completion. Later finalization failure and artifact recovery documented separately.",
+  "completed_artifact_review": "Independent review after completion found no blockers or high-confidence misleading claims; confirmed exit1 cleanup error, un-replayed corrected runner, partial281.64s video, wave2/4 limitation, and pending coordinator review of20 screenshots."
+}
