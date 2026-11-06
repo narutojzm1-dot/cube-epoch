@@ -1,5 +1,6 @@
 import { serve, launch, enterPlay } from "./helpers.mjs";
 import { testNightUI } from "./night-ui.mjs";
+import { testCoreLayout } from "./layout-ui.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -292,12 +293,15 @@ try {
     });
   } finally { await release(); }
 
+  await mobile.locator("#play-details summary").tap();
   await mobile.locator('.item[data-build="fence"]').tap();
+  if (await mobile.locator("#play-details").getAttribute("open") !== null) throw new Error("build selection must return to the playfield");
   await tapTile(23, 21);
   await mobile.waitForFunction(() => window.CUBE.getState().fenceHp.get("23,21") === 80);
   await mobile.evaluate(() => { window.CUBE.getState().fenceHp.set("23,21", 20); });
   await tapTile(23, 21);
   await mobile.waitForFunction(() => window.CUBE.getState().fenceHp.get("23,21") === 80);
+  await mobile.locator("#play-details summary").tap();
   await mobile.locator('.item[data-build="fence"]').tap();
   if (await mobile.evaluate(() => window.CUBE.getState().build) !== null) throw new Error("touch build toggle must cancel");
 
@@ -424,6 +428,7 @@ try {
 const realLogs = logs.filter((m) => !/audio device/i.test(m));
 if (realLogs.length) throw new Error("page errors: " + realLogs.join(" | "));
 await testNightUI(browser, origin);
+await testCoreLayout(browser, origin);
 await browser.close();
 server.close();
 console.log("E2E_OK");

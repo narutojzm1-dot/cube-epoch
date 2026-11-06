@@ -1,13 +1,22 @@
 {
   "supplemental_batches": [
     {
+      "id": "core-layout",
+      "base_sha": "9c06379dd6cdc14ea262d8545a4e44d8c28f2796",
+      "index": "core-layout/INDEX.md",
+      "screenshots": "core-layout/screenshots.json",
+      "issue_ids": ["UI-005", "UI-007"],
+      "status": "已截",
+      "visual_review": "待协调人实际复看；80张真实首屏及4张全页补图，旧基线不覆盖"
+    },
+    {
       "id": "night-followup",
       "base_sha": "63420933af8a79ccdf25c5a2ff5008280334d632",
       "index": "night-followup/INDEX.md",
       "screenshots": "night-followup/screenshots.json",
       "issue_ids": ["UI-006", "UI-007"],
       "status": "已截",
-      "visual_review": "待协调人复看；原172张完整基线仍保留，不声称未变页重拍"
+      "visual_review": "协调人已看320第三夜前后与390第三天清晨后图，UI-006/007夜间局部通过；不代表全局布局或当前core-layout批次通过"
     }
   ],
   "updated_at": "2026-11-06T15:14:35.682Z",

@@ -1,0 +1,81 @@
+ARCHIVE_UNCHANGED_OK baseline172 + history305 deep-equal HEAD
+SOURCE_MATCH_OK 839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b
+CORE_IMAGES 84 current / 110 retained
+[
+  {
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "canvas": {
+      "x": 96,
+      "y": 93,
+      "width": 796,
+      "height": 477.59375,
+      "right": 892,
+      "bottom": 570.59375
+    },
+    "buttons": 7,
+    "scroll": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "canvas": {
+      "x": 6,
+      "y": 95,
+      "width": 378,
+      "height": 226.796875,
+      "right": 384,
+      "bottom": 321.796875
+    },
+    "buttons": 7,
+    "scroll": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "canvas": {
+      "x": 6,
+      "y": 95,
+      "width": 308,
+      "height": 184.796875,
+      "right": 314,
+      "bottom": 279.796875
+    },
+    "buttons": 7,
+    "scroll": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "canvas": {
+      "x": 109.328125,
+      "y": 54,
+      "width": 333.328125,
+      "height": 199.984375,
+      "right": 442.65625,
+      "bottom": 253.984375
+    },
+    "buttons": 7,
+    "scroll": {
+      "x": 0,
+      "y": 0
+    }
+  }
+]

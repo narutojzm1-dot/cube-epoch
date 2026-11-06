@@ -55,7 +55,13 @@ async function inspect(page) {
     const rects = Object.fromEntries(ids.map((id) => {
       const el = document.getElementById(id);
       const r = el.getBoundingClientRect();
-      return [id, { x: r.x, y: r.y, width: r.width, height: r.height, visible: r.width > 0 && r.height > 0 }];
+      const feed = el.closest("#notice-feed")?.getBoundingClientRect();
+      const x = feed ? Math.max(r.x, feed.x) : r.x;
+      const y = feed ? Math.max(r.y, feed.y) : r.y;
+      const width = feed ? Math.max(0, Math.min(r.right, feed.right) - x) : r.width;
+      const height = feed ? Math.max(0, Math.min(r.bottom, feed.bottom) - y) : r.height;
+      return [id, { x, y, width, height, visible: width > 0 && height > 0,
+        unclipped: { x: r.x, y: r.y, width: r.width, height: r.height } }];
     }));
     return {
       title: document.getElementById("guide-title").textContent,
@@ -69,6 +75,8 @@ async function inspect(page) {
     };
   });
 }
+
+export { prepare as prepareNightUI };
 
 function assertLayout(metrics) {
   assert.equal(metrics.overflow, false, "night HUD must not overflow horizontally");

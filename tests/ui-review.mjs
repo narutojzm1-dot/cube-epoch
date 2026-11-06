@@ -63,10 +63,40 @@ const baselineBuild = {
   dirty: false,
   source_sha256: hash(productFiles.map((file) => execFileSync("git", ["show", `${baselineSha}:${file}`], { cwd: ROOT }))),
 };
-await mkdir(join(OUT, "images"), { recursive: true });
 let previous;
 try { previous = JSON.parse(await readFile(join(OUT, "screenshots.json"), "utf8")); }
 catch (e) { if (e.code !== "ENOENT") throw e; }
+if (process.argv.includes("--check-coverage")) {
+  if (!previous || previous.screenshots.length !== states.length * viewports.length) {
+    throw new Error("Recorded baseline matrix is missing or incomplete");
+  }
+  const checkImages = async (rows) => {
+    for (const row of rows) {
+      if (row.status !== "已截" || !row.relative_image_path) {
+        throw new Error(`Missing screenshot: ${row.screen_id} ${JSON.stringify(row.viewport)}`);
+      }
+      await stat(join(OUT, ...row.relative_image_path.split("/")));
+    }
+  };
+  await checkImages(previous.screenshots);
+  await checkImages(previous.history);
+  let supplemental = 0;
+  for (const batch of previous.supplemental_batches || []) {
+    const data = JSON.parse(await readFile(join(OUT, ...batch.screenshots.split("/")), "utf8"));
+    for (const row of data.screenshots) {
+      if (row.status !== "已截" || !row.relative_image_path) throw new Error(`Incomplete batch: ${batch.id}`);
+      const png = await readFile(join(OUT, batch.id, ...row.relative_image_path.split("/")));
+      if (!row.full_page && (png.readUInt32BE(16) !== row.viewport.width || png.readUInt32BE(20) !== row.viewport.height)) {
+        throw new Error(`Not an actual viewport PNG: ${batch.id} ${row.relative_image_path}`);
+      }
+    }
+    supplemental += data.screenshots.length;
+  }
+  console.log(`UI_COVERAGE_OK recorded baseline ${previous.screenshots.length}/${states.length * viewports.length}; `
+    + `history ${previous.history.length}; supplemental ${supplemental}; read-only, no images captured; not a new-build full-matrix claim`);
+  process.exit(0);
+}
+await mkdir(join(OUT, "images"), { recursive: true });
 const captures = (previous?.history || previous?.screenshots || []).filter((entry) => entry.status === "已截");
 // Recover early intermediate images without inventing their lost canvas metrics.
 for (const filename of await readdir(join(OUT, "images"))) {
@@ -180,15 +210,7 @@ async function manifest() {
   await writeFile(join(OUT, "INDEX.md"), lines.join("\n"));
   return rows;
 }
-const currentRows = await manifest();
-if (process.argv.includes("--check-coverage")) {
-  for (const row of currentRows) {
-    if (row.status !== "已截") throw new Error(`Missing screenshot: ${row.screen_id} ${row.viewport.id}`);
-    await stat(join(OUT, ...row.relative_image_path.split("/")));
-  }
-  console.log(`UI_COVERAGE_OK ${currentRows.length}/${currentRows.length}; no images captured`);
-  process.exit(0);
-}
+await manifest();
 const { server, origin } = await serve();
 const baselineFiles = new Map([...productFiles, "assets/miner.jpg", "assets/farmer.jpg", "assets/mage.jpg", "assets/knight.jpg"]
   .map((file) => ["/" + file, execFileSync("git", ["show", `${baselineSha}:${file}`], { cwd: ROOT })]));

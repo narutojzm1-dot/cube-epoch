@@ -112,6 +112,10 @@
   const guideEl = document.getElementById("guide");
   const guideTitle = document.getElementById("guide-title");
   const guideBody = document.getElementById("guide-body");
+  const guideSummary = document.getElementById("guide-summary");
+  const playDetails = document.getElementById("play-details");
+  const noticeFeed = document.getElementById("notice-feed");
+  const touchSkillCd = document.getElementById("touch-skill-cd");
   const promptEl = document.getElementById("prompt");
   const buildBanner = document.getElementById("build-banner");
   const waveBanner = document.getElementById("wave-banner");
@@ -346,6 +350,7 @@
   function toast(text, ms) {
     toastEl.textContent = text;
     toastEl.classList.remove("hidden");
+    noticeFeed.scrollTop = 0;
     toastTimer = ms || 2.2;
   }
 
@@ -707,6 +712,7 @@
 
   function startGame(cls, opts) {
     resetInput();
+    playDetails.open = !touchLayout.matches;
     if (intro.active) {
       intro.active = false;
       if (intro.raf) cancelAnimationFrame(intro.raf);
@@ -843,12 +849,14 @@
     if (state.skippedGuide || !step) {
       guideEl.classList.add("compact");
       guideTitle.textContent = state.win ? "方块之心已点亮" : "当前目标";
+      guideSummary.textContent = guideTitle.textContent;
       guideBody.textContent = objectiveText();
       syncKeysHint(null);
       return;
     }
     guideEl.classList.remove("compact");
     guideTitle.textContent = step.title;
+    guideSummary.textContent = step.title;
     // 围营步按缺口/木料重写，GUIDE[2].body 仍留着当兜底
     const touchBody = {
       move: "按方向按钮移动。金框指着附近的树，先走过去。",
@@ -2104,7 +2112,6 @@
   }
 
   function syncHud() {
-    canvas.parentElement.classList.toggle("night", !state.day);
     const p = state.player;
     hpBar.style.width = `${clamp((p.hp / p.maxHp) * 100, 0, 100)}%`;
     hpText.textContent = `${Math.max(0, Math.ceil(p.hp))}/${p.maxHp}`;
@@ -2122,6 +2129,7 @@
     clockEl.className = "clock " + (state.day ? "day" : "night");
     objectiveEl.textContent = objectiveText();
     skillCdEl.textContent = p.skillCd > 0 ? `${p.skillCd.toFixed(1)}s` : "就绪";
+    touchSkillCd.textContent = skillCdEl.textContent;
     skillDock.classList.toggle("ready", p.skillCd <= 0);
     if (state.build) {
       const names = { fence: "栅栏", torch: "火把", plot: "田" };
@@ -2595,7 +2603,10 @@
     if (!item) return;
     if (item.dataset.k === "wheat") eatWheat();
     if (item.dataset.build) setBuild(item.dataset.build, { toggle: true });
+    if (touchLayout.matches && (item.dataset.build || item.dataset.k === "wheat")) playDetails.open = false;
   });
+  playDetails.addEventListener("toggle", resetInput);
+  touchLayout.addEventListener("change", () => { playDetails.open = !touchLayout.matches; });
 
   window.addEventListener("keydown", (e) => {
     if (intro.active) {
@@ -2611,6 +2622,11 @@
       if (e.code === "Escape") endBriefing();
       else if (e.code === "Space" || e.code === "Enter" || e.key === "Enter") advanceBrief();
       return;
+    }
+    const navigation = ["Space", "Enter", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Home", "End", "PageUp", "PageDown"];
+    if (e.target instanceof HTMLElement) {
+      if (e.target.closest("summary") && ["Space", "Enter"].includes(e.code)) return;
+      if (e.target.matches("#notice-feed, .details-content") && navigation.includes(e.code)) return;
     }
     keys.add(e.code);
     if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Digit0", "Digit1", "Digit2", "Digit3"].includes(e.code)) e.preventDefault();
