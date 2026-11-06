@@ -1,6 +1,7 @@
 import { serve, launch, enterPlay } from "./helpers.mjs";
 import { testNightUI } from "./night-ui.mjs";
 import { testCoreLayout } from "./layout-ui.mjs";
+import { testMaterialFeedback } from "./material-feedback.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -429,6 +430,7 @@ const realLogs = logs.filter((m) => !/audio device/i.test(m));
 if (realLogs.length) throw new Error("page errors: " + realLogs.join(" | "));
 await testNightUI(browser, origin);
 await testCoreLayout(browser, origin);
+await testMaterialFeedback(browser, origin);
 await browser.close();
 server.close();
 console.log("E2E_OK");

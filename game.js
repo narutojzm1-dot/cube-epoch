@@ -1048,6 +1048,12 @@
     return Object.entries(cost).every(([k, n]) => (state.inv[k] || 0) >= n);
   }
 
+  function missingMaterials(cost) {
+    return Object.entries(cost)
+      .filter(([k, n]) => (state.inv[k] || 0) < n)
+      .map(([k, n]) => `${labelOf(k)} ${n - (state.inv[k] || 0)}`);
+  }
+
   function pay(cost) {
     for (const [k, n] of Object.entries(cost)) state.inv[k] -= n;
   }
@@ -1104,7 +1110,7 @@
         return true;
       }
       if ((state.inv.wood || 0) < 1) {
-        toast("修墙需要 1 木。");
+        toast("修墙还差：" + missingMaterials({ wood: 1 }).join("、"));
         return true;
       }
       state.inv.wood -= 1;
@@ -1125,8 +1131,7 @@
     } else if (canPay(cost)) {
       pay(cost);
     } else {
-      const miss = Object.entries(cost).filter(([k, n]) => (state.inv[k] || 0) < n).map(([k, n]) => `${labelOf(k)}${n}`);
-      toast("材料不够：" + miss.join("、"));
+      toast("材料还差：" + missingMaterials(cost).join("、"));
       return true;
     }
     const openBefore = kind === "fence" && !campWalled();
@@ -1442,10 +1447,7 @@
       toast("方块之心已经在背包里。送到北边祭坛。");
       return;
     }
-    const miss = [];
-    for (const [k, n] of Object.entries(NEED)) {
-      if (inv[k] < n) miss.push(`${labelOf(k)} ${n - inv[k]}`);
-    }
+    const miss = missingMaterials(NEED);
     if (miss.length) {
       toast("还差：" + miss.join("、"));
       return;

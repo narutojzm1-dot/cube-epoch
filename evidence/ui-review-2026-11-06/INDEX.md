@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-008 材料缺口反馈
+
+[320/390九状态36张真实首屏前后原图](material-feedback/INDEX.md) · [逐图构建与复现](material-feedback/screenshots.json) · [30个针对性后版本场景](material-feedback/validation.json) · [检查和归档错误记录](material-feedback/checks.log)。
+
+已有1木、法师栅栏需2木时提示「材料还差：木 1」；修墙明确还差1木，方块之心原正确缺口文案不变。共享实际库存/配方派生规则，不改配方或资源消耗，既有成品仍优先。仅追加本片证据，产品a342ef0/自然证据d80f0e8和本地诊断result保留；不称新反馈已获视觉批准、全界面重拍或已上线。
+
 ## 自然主循环维护：源码候选 a342ef0
 
 [骑士自然采集 / 建设种植 / 三夜 / 天亮交付证据](natural-loop-a342ef0/INDEX.md) · [20张真实首屏元数据](natural-loop-a342ef0/screenshots.json) · [原始事件与成败](natural-loop-a342ef0/result.json)。

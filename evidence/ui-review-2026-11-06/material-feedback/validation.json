@@ -1,0 +1,6833 @@
+{
+  "checks": [
+    {
+      "screen_id": "fence-partial",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料不够：木2",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-zero",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料不够：木2",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-enough",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "围上了。还差 3 面，点下一个发光格。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "torch-zero",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料不够：木1、石1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "repair-zero",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 1,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 1,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 20,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "修墙需要 1 木。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "repair-enough",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "栅栏修好了。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-partial",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 2,
+          "stone": 3,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 2,
+          "stone": 3,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "还差：木 2、石 2、麦 2",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-zero",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "还差：木 4、石 5、金 3、麦 3",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-enough",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "合成成功！先守过三夜，天亮再到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-partial",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料不够：木2",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-zero",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料不够：木2",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-enough",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "围上了。还差 3 面，点下一个发光格。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "torch-zero",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料不够：木1、石1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "repair-zero",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 1,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 1,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 20,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "修墙需要 1 木。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "repair-enough",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "栅栏修好了。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-partial",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 2,
+          "stone": 3,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 2,
+          "stone": 3,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "还差：木 2、石 2、麦 2",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-zero",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "还差：木 4、石 5、金 3、麦 3",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-enough",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "合成成功！先守过三夜，天亮再到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-partial",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料还差：木 1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-zero",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料还差：木 2",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-enough",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "围上了。还差 3 面，点下一个发光格。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-stored",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 1,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "围上了。还差 3 面，点下一个发光格。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "torch-partial",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料还差：石 1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "torch-zero",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料还差：木 1、石 1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "mage-torch",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 13,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "建造火把。点空地放下，点坏墙修好。空格拆除。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "farmer-free-plot",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 7,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "建造田。点空地放下，点坏墙修好。空格拆除。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "plot-zero",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料还差：木 1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "repair-zero",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 1,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 1,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 20,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "修墙还差：木 1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "repair-enough",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "栅栏修好了。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-partial",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 2,
+          "stone": 3,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 2,
+          "stone": 3,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "还差：木 2、石 2、麦 2",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-zero",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "还差：木 4、石 5、金 3、麦 3",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-enough",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "合成成功！先守过三夜，天亮再到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-stored",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "result": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-partial",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料还差：木 1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-zero",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料还差：木 2",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-enough",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "围上了。还差 3 面，点下一个发光格。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "fence-stored",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 1,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "围上了。还差 3 面，点下一个发光格。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "torch-partial",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料还差：石 1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "torch-zero",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料还差：木 1、石 1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "mage-torch",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 13,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "建造火把。点空地放下，点坏墙修好。空格拆除。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "farmer-free-plot",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 7,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "建造田。点空地放下，点坏墙修好。空格拆除。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "plot-zero",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "材料还差：木 1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "repair-zero",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 1,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 1,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 20,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "修墙还差：木 1",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "repair-enough",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "栅栏修好了。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-partial",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 2,
+          "stone": 3,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 2,
+          "stone": 3,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "还差：木 2、石 2、麦 2",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-zero",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "还差：木 4、石 5、金 3、麦 3",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-enough",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "合成成功！先守过三夜，天亮再到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    },
+    {
+      "screen_id": "craft-stored",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "result": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 1,
+        "fence_hp": null,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      }
+    }
+  ],
+  "after_cases": 30,
+  "baseline": "d80f0e8876bf47343da80f88b6a05b7c90447fdd",
+  "no_user_save_access": true,
+  "no_gameplay_changes": true,
+  "local_gates": {
+    "npm_test": "passed: STATIC_OK, MOBILE_OK, NIGHT_UI_OK, CORE_LAYOUT_OK, MATERIAL_FEEDBACK_OK (30 native-touch cases), E2E_OK",
+    "syntax_check": "game.js and new/changed test modules passed",
+    "diff_check": "passed",
+    "coverage_check": "read-only: recorded baseline172/172, history305, supplemental172; no old screenshots rewritten"
+  },
+  "independent_review": "Repository-required independent reviewer found no significant issues, suggestions or nits in the scoped production/test/evidence changes; not coordinator visual approval.",
+  "artifact_recovery": "Early native-tap wait failures retained; test now waits for queued native details transition before aiming. Later INDEX error occurred after all48 before/after case assertions and36 PNGs completed; fixed state-field lookup and recovered INDEX from original metadata without replay. Relative paths normalized to repository URLs, image bytes unchanged.",
+  "visual_review": "Pending coordinator/user review of36 new images; no global layout, physical-device or natural-loop revalidation claim."
+}
