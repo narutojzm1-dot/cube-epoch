@@ -1,4 +1,15 @@
 {
+  "supplemental_batches": [
+    {
+      "id": "night-followup",
+      "base_sha": "63420933af8a79ccdf25c5a2ff5008280334d632",
+      "index": "night-followup/INDEX.md",
+      "screenshots": "night-followup/screenshots.json",
+      "issue_ids": ["UI-006", "UI-007"],
+      "status": "已截",
+      "visual_review": "待协调人复看；原172张完整基线仍保留，不声称未变页重拍"
+    }
+  ],
   "updated_at": "2026-11-06T15:14:35.682Z",
   "visual_review": "待用户逐图审查",
   "notes": [

@@ -594,6 +594,18 @@ h1 {
     max-width: calc(100% - 16px);
     z-index: 4;
   }
+  .stage.night .guide { order: 2; }
+  .stage.night .keys-hint { order: 3; }
+  .stage.night .build-banner, .stage.night .wave-banner,
+  .stage.night .prompt, .stage.night .toast {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    order: 1;
+    overflow-wrap: anywhere;
+    box-shadow: none;
+  }
   .touch-controls {
     display: grid;
     grid-template-columns: 144px 1fr;

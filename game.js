@@ -816,6 +816,7 @@
 
   function currentGuide() {
     if (!state || state.skippedGuide) return null;
+    if (!state.day) return GUIDE[3];
     if (!state.flags.moved) return GUIDE[0];
     if (!state.flags.chopped) return GUIDE[1];
     if (!campWalled()) return GUIDE[2];
@@ -831,7 +832,7 @@
       move: state.flags.moved,
       chop: state.flags.chopped,
       build: campWalled(),
-      night: state.nights >= WIN_NIGHTS,
+      night: state.day && survivedNights(),
       offer: !!state.win,
     };
     for (const li of document.querySelectorAll("#guide-steps li")) {
@@ -2103,6 +2104,7 @@
   }
 
   function syncHud() {
+    canvas.parentElement.classList.toggle("night", !state.day);
     const p = state.player;
     hpBar.style.width = `${clamp((p.hp / p.maxHp) * 100, 0, 100)}%`;
     hpText.textContent = `${Math.max(0, Math.ceil(p.hp))}/${p.maxHp}`;

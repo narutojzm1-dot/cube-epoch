@@ -1,4 +1,5 @@
 import { serve, launch, enterPlay } from "./helpers.mjs";
+import { testNightUI } from "./night-ui.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -422,6 +423,7 @@ try {
 
 const realLogs = logs.filter((m) => !/audio device/i.test(m));
 if (realLogs.length) throw new Error("page errors: " + realLogs.join(" | "));
+await testNightUI(browser, origin);
 await browser.close();
 server.close();
 console.log("E2E_OK");
