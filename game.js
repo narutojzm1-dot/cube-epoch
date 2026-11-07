@@ -1030,7 +1030,13 @@
   }
 
   function helpText() {
+    const current = touchLayout.matches && !waveBanner.classList.contains("hidden")
+      ? [toastEl, promptEl, buildBanner]
+        .filter((el) => !el.classList.contains("hidden") && el.textContent)
+        .map((el) => el.textContent)
+      : [];
     return [
+      ...(current.length ? ["当前反馈与操作", ...current, ""] : []),
       "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。",
       "金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。",
       "",

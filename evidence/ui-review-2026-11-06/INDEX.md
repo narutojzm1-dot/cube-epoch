@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-017 夜战次级指引完整收起
+
+[四视口32张同状态前后首屏原图](night-notice-fold/INDEX.md) · [真实输入/矩形/源码](night-notice-fold/screenshots.json) · [前后行为](night-notice-fold/validation.json) · [检查](night-notice-fold/checks.log)。
+
+320真实触屏夜间波次+缺法力反馈后，44px操作指引只露12px。现在触屏夜战次级指引/建造说明完整隐藏，波次和当前反馈优先；现有44px「怎么玩」主动打开原暂停帮助查看当时全文，反馈过期后显示入口说明。保留首屏核心控制及原长反馈滚动，不改规则/存档。夹具与真实触控分开标注，未重打自然三夜；本批待协调人逐图审查，旧图/候选保留。
+
 ## 独立维护批次：UI-016 夜战法力可用量/恢复说明
 
 [四视口8张同状态首屏前后图](mana-feedback/INDEX.md) · [真实耗法力/释放/自然恢复/再攻击](mana-feedback/validation.json) · [源码及输入/矩形](mana-feedback/screenshots.json) · [检查](mana-feedback/checks.log)。

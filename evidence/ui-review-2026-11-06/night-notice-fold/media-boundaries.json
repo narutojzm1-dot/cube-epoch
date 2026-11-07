@@ -1,0 +1,797 @@
+{
+  "checks": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "hasTouch": false,
+      "input": "keyboard attack hold/release, native help/continue/E taps when coarse or mouse/keyboard when fine",
+      "fixture": "night/grass/zero-damage target/mana=0.2",
+      "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+      "feedback": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+      "feed": {
+        "height": 38,
+        "scrollHeight": 44,
+        "action": "pan-y"
+      },
+      "scrollBottom": 1,
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "法力不足，会自动恢复。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "restored": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 301.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "守住篝火 · 按住「采集/攻击」 · 点「技能 Q」",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "expected_touchLayout": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasTouch": true,
+      "input": "keyboard attack hold/release, native help/continue/E taps when coarse or mouse/keyboard when fine",
+      "fixture": "night/grass/zero-damage target/mana=0.2",
+      "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+      "feedback": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+      "feed": {
+        "height": 38,
+        "scrollHeight": 38,
+        "action": "pan-y"
+      },
+      "scrollBottom": 0,
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 86,
+            "y": 140.703125,
+            "width": 815.984375,
+            "height": 489.59375,
+            "right": 901.984375,
+            "bottom": 630.296875
+          },
+          "wave-banner": {
+            "x": 86,
+            "y": 682,
+            "width": 816,
+            "height": 22,
+            "right": 902,
+            "bottom": 704
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 704,
+            "width": 816,
+            "height": 38,
+            "right": 902,
+            "bottom": 742
+          },
+          "toast": {
+            "x": 86,
+            "y": 704,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 730
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 96,
+            "y": 800,
+            "width": 1088,
+            "height": 94.5,
+            "right": 1184,
+            "bottom": 894.5
+          },
+          "play-details": {
+            "x": 86,
+            "y": 746,
+            "width": 1108,
+            "height": 48,
+            "right": 1194,
+            "bottom": 794
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 962,
+            "y": 95,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 914,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 958,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 962,
+            "y": 191,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 1010,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 1054,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 1062,
+            "y": 95,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 1062,
+            "y": 143,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 1062,
+            "y": 191,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "法力不足，会自动恢复。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "restored": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 86,
+            "y": 140.703125,
+            "width": 815.984375,
+            "height": 489.59375,
+            "right": 901.984375,
+            "bottom": 630.296875
+          },
+          "wave-banner": {
+            "x": 86,
+            "y": 682,
+            "width": 816,
+            "height": 22,
+            "right": 902,
+            "bottom": 704
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 704,
+            "width": 816,
+            "height": 38,
+            "right": 902,
+            "bottom": 742
+          },
+          "toast": {
+            "x": 86,
+            "y": 704,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 730
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 96,
+            "y": 800,
+            "width": 1088,
+            "height": 94.5,
+            "right": 1184,
+            "bottom": 894.5
+          },
+          "play-details": {
+            "x": 86,
+            "y": 746,
+            "width": 1108,
+            "height": 48,
+            "right": 1194,
+            "bottom": 794
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 962,
+            "y": 95,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 914,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 958,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 962,
+            "y": 191,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 1010,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 1054,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 1062,
+            "y": 95,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 1062,
+            "y": 143,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 1062,
+            "y": 191,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "守住篝火 · 按住「采集/攻击」 · 点「技能 Q」",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "expected_touchLayout": true
+    }
+  ],
+  "no_user_save_access": true,
+  "no_images": true,
+  "build": {
+    "sha": "5f451b62d87f37e29bfe4f727057a6066808b00f",
+    "dirty": true,
+    "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c"
+  },
+  "platform": "Web / Chromium",
+  "ui_scale": "100%"
+}

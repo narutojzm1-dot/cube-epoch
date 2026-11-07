@@ -1,0 +1,30 @@
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+HEART_DELIVERY_OK 20 after cases; 0 original PNGs
+CROP_FEEDBACK_OK 20 after checks; natural growth + unchanged harvest + night priority; 0 actual-viewport originals; webkit; harvest=keyboard, touch E native
+FARMER_SKILL_FEEDBACK_OK 20 after cases; actual ripening/heal + cap/cooldown/inventory guards; 0 original PNGs
+PLANTING_FEEDBACK_OK 24 after cases; real seed depletion + refusal/repeat/success/target priorities; 0 original PNGs
+AUDIO_NATIVE_UNAVAILABLE webkit 320x568: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_NATIVE_UNAVAILABLE webkit 390x844: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_NATIVE_UNAVAILABLE webkit 844x390: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_NATIVE_UNAVAILABLE webkit 1280x800: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_CONTROLS_CHECKED 12 after records; native audio availability per record; 0 viewport originals; physical listening NOT tested
+MANA_FEEDBACK_OK 4 after sessions; actual depletion/release/natural recovery/re-attack/Nova; 0 viewport originals; webkit; holds keyboard, touch skill native
+NIGHT_NOTICE_SCROLL_OK {"engine":"webkit","viewport":{"width":320,"height":568},"kind":"mana","scrollStart":{"focused":true,"scrollend":true,"top":0,"height":60,"full":96},"scrollBottom":36,"keyboardScroll":{"ends":[36,0],"keys":[{"key":"End","code":"End","prevented":false},{"key":"Home","code":"Home","prevented":false}]}}
+NIGHT_NOTICE_SCROLL_OK {"engine":"webkit","viewport":{"width":320,"height":568},"kind":"build","scrollStart":{"focused":true,"scrollend":true,"top":0,"height":60,"full":96},"scrollBottom":36,"keyboardScroll":{"ends":[36,0],"keys":[{"key":"End","code":"End","prevented":false},{"key":"Home","code":"Home","prevented":false}]}}
+NIGHT_NOTICE_SCROLL_OK {"engine":"webkit","viewport":{"width":390,"height":844},"kind":"mana","scrollStart":{"focused":true,"scrollend":true,"top":0,"height":60,"full":96},"scrollBottom":36,"keyboardScroll":{"ends":[36,0],"keys":[{"key":"End","code":"End","prevented":false},{"key":"Home","code":"Home","prevented":false}]}}
+NIGHT_NOTICE_SCROLL_OK {"engine":"webkit","viewport":{"width":390,"height":844},"kind":"build","scrollStart":{"focused":true,"scrollend":true,"top":0,"height":60,"full":96},"scrollBottom":36,"keyboardScroll":{"ends":[36,0],"keys":[{"key":"End","code":"End","prevented":false},{"key":"Home","code":"Home","prevented":false}]}}
+NIGHT_NOTICE_SCROLL_OK {"engine":"webkit","viewport":{"width":844,"height":390},"kind":"mana","scrollStart":{"focused":true,"scrollend":true,"top":0,"height":60,"full":78},"scrollBottom":18,"keyboardScroll":{"ends":[18,0],"keys":[{"key":"End","code":"End","prevented":false},{"key":"Home","code":"Home","prevented":false}]}}
+NIGHT_NOTICE_SCROLL_OK {"engine":"webkit","viewport":{"width":844,"height":390},"kind":"build","scrollStart":{"focused":true,"scrollend":true,"top":0,"height":60,"full":78},"scrollBottom":18,"keyboardScroll":{"ends":[18,0],"keys":[{"key":"End","code":"End","prevented":false},{"key":"Home","code":"Home","prevented":false}]}}
+NIGHT_NOTICE_SCROLL_OK {"engine":"webkit","viewport":{"width":1280,"height":800},"kind":"mana","scrollStart":{"focused":true,"scrollend":true,"top":0,"height":95,"full":95},"scrollBottom":0,"keyboardScroll":{"ends":[],"keys":[{"key":"End","code":"End","prevented":false},{"key":"Home","code":"Home","prevented":false}]}}
+NIGHT_NOTICE_SCROLL_OK {"engine":"webkit","viewport":{"width":1280,"height":800},"kind":"build","scrollStart":{"focused":true,"scrollend":true,"top":0,"height":95,"full":95},"scrollBottom":0,"keyboardScroll":{"ends":[],"keys":[{"key":"End","code":"End","prevented":false},{"key":"Home","code":"Home","prevented":false}]}}
+NIGHT_NOTICE_FOLD_OK 8 after sessions; 0 viewport originals; webkit; native touch holds=false
+DEVICE_HINTS_OK 84 cases; 0 actual-viewport PNGs
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":109.5,"y":95,"width":470,"height":282,"right":579.5,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406,"y":280.703125,"width":816,"height":489.59375,"right":1222,"bottom":770.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+E2E_OK

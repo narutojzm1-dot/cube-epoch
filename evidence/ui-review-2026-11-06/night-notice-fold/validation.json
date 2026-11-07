@@ -1,0 +1,5728 @@
+{
+  "before_checks": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "mana",
+      "version": "before",
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": null,
+          "tile": 1,
+          "mana": 0.3125900000000001,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 285.796875,
+              "bottom": 307.796875,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false,
+              "display": "block",
+              "top": 307.796875,
+              "bottom": 333.796875,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false,
+              "display": "block",
+              "top": 333.796875,
+              "bottom": 377.796875,
+              "height": 44,
+              "visibleHeight": 12
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 22,
+              "right": 314,
+              "bottom": 307.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 38,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 333.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 333.796875,
+              "width": 308,
+              "height": 44,
+              "right": 314,
+              "bottom": 377.796875
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 112.5,
+              "right": 304,
+              "bottom": 662.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 3.4561999999999977,
+        "skillCd": 6.4335000000000075,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false,
+            "display": "block",
+            "top": 285.796875,
+            "bottom": 311.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 311.796875,
+            "bottom": 337.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 337.796875,
+            "bottom": 381.796875,
+            "height": 44,
+            "visibleHeight": 8
+          }
+        ]
+      },
+      "scrollBottom": 1,
+      "native_hold": true,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "build",
+      "version": "before",
+      "initial": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 1,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": "fence",
+          "tile": 1,
+          "mana": 8,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 285.796875,
+              "bottom": 307.796875,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false,
+              "display": "block",
+              "top": 307.796875,
+              "bottom": 333.796875,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false,
+              "display": "block",
+              "top": 333.796875,
+              "bottom": 359.796875,
+              "height": 26,
+              "visibleHeight": 12
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false,
+              "display": "block",
+              "top": 359.796875,
+              "bottom": 403.796875,
+              "height": 44,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 22,
+              "right": 314,
+              "bottom": 307.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 38,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 333.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 333.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 359.796875
+            },
+            "build-banner": {
+              "x": 6,
+              "y": 359.796875,
+              "width": 308,
+              "height": 44,
+              "right": 314,
+              "bottom": 403.796875
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 112.5,
+              "right": 304,
+              "bottom": 662.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 8,
+        "skillCd": 0,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "材料还差：木 1",
+            "hidden": false,
+            "display": "block",
+            "top": 285.796875,
+            "bottom": 311.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 311.796875,
+            "bottom": 337.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 337.796875,
+            "bottom": 381.796875,
+            "height": 44,
+            "visibleHeight": 8
+          }
+        ]
+      },
+      "scrollBottom": 2,
+      "native_hold": true,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mana",
+      "version": "before",
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": null,
+          "tile": 1,
+          "mana": 0.290045,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 327.796875,
+              "bottom": 349.796875,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false,
+              "display": "block",
+              "top": 349.796875,
+              "bottom": 375.796875,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false,
+              "display": "block",
+              "top": 375.796875,
+              "bottom": 401.796875,
+              "height": 26,
+              "visibleHeight": 12
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 22,
+              "right": 384,
+              "bottom": 349.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 38,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 375.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 375.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 401.796875
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 112.5,
+              "right": 374,
+              "bottom": 704.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 3.413675000002011,
+        "skillCd": 6.350099999999999,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false,
+            "display": "block",
+            "top": 327.796875,
+            "bottom": 353.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 353.796875,
+            "bottom": 379.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 379.796875,
+            "bottom": 423.796875,
+            "height": 44,
+            "visibleHeight": 8
+          }
+        ]
+      },
+      "scrollBottom": 2,
+      "native_hold": true,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "build",
+      "version": "before",
+      "initial": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 1,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": "fence",
+          "tile": 1,
+          "mana": 8,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 327.796875,
+              "bottom": 349.796875,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false,
+              "display": "block",
+              "top": 349.796875,
+              "bottom": 375.796875,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false,
+              "display": "block",
+              "top": 375.796875,
+              "bottom": 401.796875,
+              "height": 26,
+              "visibleHeight": 12
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false,
+              "display": "block",
+              "top": 401.796875,
+              "bottom": 445.796875,
+              "height": 44,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 22,
+              "right": 384,
+              "bottom": 349.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 38,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 375.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 375.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 401.796875
+            },
+            "build-banner": {
+              "x": 6,
+              "y": 401.796875,
+              "width": 378,
+              "height": 44,
+              "right": 384,
+              "bottom": 445.796875
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 112.5,
+              "right": 374,
+              "bottom": 704.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 8,
+        "skillCd": 0,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "材料还差：木 1",
+            "hidden": false,
+            "display": "block",
+            "top": 327.796875,
+            "bottom": 353.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 353.796875,
+            "bottom": 379.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 379.796875,
+            "bottom": 423.796875,
+            "height": 44,
+            "visibleHeight": 8
+          }
+        ]
+      },
+      "scrollBottom": 2,
+      "native_hold": true,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "mana",
+      "version": "before",
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": null,
+          "tile": 1,
+          "mana": 0.2675,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 275,
+              "bottom": 297,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false,
+              "display": "block",
+              "top": 297,
+              "bottom": 323,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false,
+              "display": "block",
+              "top": 323,
+              "bottom": 349,
+              "height": 26,
+              "visibleHeight": 12
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 69,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 268.984375
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 275,
+              "width": 540,
+              "height": 22,
+              "right": 546,
+              "bottom": 297
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 297,
+              "width": 540,
+              "height": 38,
+              "right": 546,
+              "bottom": 335
+            },
+            "toast": {
+              "x": 6,
+              "y": 297,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 323
+            },
+            "prompt": {
+              "x": 6,
+              "y": 323,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 349
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 393,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 487.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 339,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 387
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 69,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 113,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 117,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 165,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 209,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 117,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 69,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 113,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 117,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 706,
+              "y": 165,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 209,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 3.4132699999919534,
+        "skillCd": 6.366699999999997,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false,
+            "display": "block",
+            "top": 275,
+            "bottom": 301,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 301,
+            "bottom": 327,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 327,
+            "bottom": 353,
+            "height": 26,
+            "visibleHeight": 8
+          }
+        ]
+      },
+      "scrollBottom": 1,
+      "native_hold": true,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "build",
+      "version": "before",
+      "initial": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 1,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": "fence",
+          "tile": 1,
+          "mana": 8,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 275,
+              "bottom": 297,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false,
+              "display": "block",
+              "top": 297,
+              "bottom": 323,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false,
+              "display": "block",
+              "top": 323,
+              "bottom": 349,
+              "height": 26,
+              "visibleHeight": 12
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false,
+              "display": "block",
+              "top": 349,
+              "bottom": 375,
+              "height": 26,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 69,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 268.984375
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 275,
+              "width": 540,
+              "height": 22,
+              "right": 546,
+              "bottom": 297
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 297,
+              "width": 540,
+              "height": 38,
+              "right": 546,
+              "bottom": 335
+            },
+            "toast": {
+              "x": 6,
+              "y": 297,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 323
+            },
+            "prompt": {
+              "x": 6,
+              "y": 323,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 349
+            },
+            "build-banner": {
+              "x": 6,
+              "y": 349,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 375
+            },
+            "guide": {
+              "x": 16,
+              "y": 393,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 487.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 339,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 387
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 69,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 113,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 117,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 165,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 209,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 117,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 69,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 113,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 117,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 706,
+              "y": 165,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 209,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 8,
+        "skillCd": 0,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "材料还差：木 1",
+            "hidden": false,
+            "display": "block",
+            "top": 275,
+            "bottom": 301,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 301,
+            "bottom": 327,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 327,
+            "bottom": 353,
+            "height": 26,
+            "visibleHeight": 8
+          }
+        ]
+      },
+      "scrollBottom": 1,
+      "native_hold": true,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "mana",
+      "version": "before",
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": null,
+          "tile": 1,
+          "mana": 0.22241000000000005,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": false,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 594.59375,
+              "bottom": 623.59375,
+              "height": 29,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false,
+              "display": "block",
+              "top": 623.59375,
+              "bottom": 658.59375,
+              "height": 35,
+              "visibleHeight": 35
+            },
+            {
+              "id": "prompt",
+              "text": "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+              "hidden": false,
+              "display": "block",
+              "top": 658.59375,
+              "bottom": 689.59375,
+              "height": 31,
+              "visibleHeight": 31
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "document": {
+            "width": 1280,
+            "height": 800
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 96,
+              "y": 109,
+              "width": 796,
+              "height": 477.59375,
+              "right": 892,
+              "bottom": 586.59375
+            },
+            "wave-banner": {
+              "x": 96,
+              "y": 594.59375,
+              "width": 796,
+              "height": 29,
+              "right": 892,
+              "bottom": 623.59375
+            },
+            "notice-feed": {
+              "x": 96,
+              "y": 623.59375,
+              "width": 796,
+              "height": 66,
+              "right": 892,
+              "bottom": 689.59375
+            },
+            "toast": {
+              "x": 96,
+              "y": 623.59375,
+              "width": 796,
+              "height": 35,
+              "right": 892,
+              "bottom": 658.59375
+            },
+            "prompt": {
+              "x": 96,
+              "y": 658.59375,
+              "width": 796,
+              "height": 31,
+              "right": 892,
+              "bottom": 689.59375
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 914,
+              "y": 163,
+              "width": 260,
+              "height": 112.5,
+              "right": 1174,
+              "bottom": 275.5
+            },
+            "play-details": {
+              "x": 904,
+              "y": 109,
+              "width": 280,
+              "height": 409.09375,
+              "right": 1184,
+              "bottom": 518.09375
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "←",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "↓",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "→",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            }
+          ],
+          "canvas_backing": {
+            "width": 960,
+            "height": 576
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": true,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 3.187010000004021,
+        "skillCd": 6.366800000000001,
+        "held": 0,
+        "touchLayout": false,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "左键点空地/坏墙；按 0 取消。",
+            "hidden": false,
+            "display": "block",
+            "top": 594.59375,
+            "bottom": 629.59375,
+            "height": 35,
+            "visibleHeight": 35
+          },
+          {
+            "id": "prompt",
+            "text": "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+            "hidden": false,
+            "display": "block",
+            "top": 629.59375,
+            "bottom": 660.59375,
+            "height": 31,
+            "visibleHeight": 31
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false,
+            "display": "block",
+            "top": 660.59375,
+            "bottom": 689.59375,
+            "height": 29,
+            "visibleHeight": 29
+          }
+        ]
+      },
+      "scrollBottom": 0,
+      "native_hold": false,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "build",
+      "version": "before",
+      "initial": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 1,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": "fence",
+          "tile": 1,
+          "mana": 8,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": false,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 594.59375,
+              "bottom": 623.59375,
+              "height": 29,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false,
+              "display": "block",
+              "top": 623.59375,
+              "bottom": 658.59375,
+              "height": 35,
+              "visibleHeight": 35
+            },
+            {
+              "id": "prompt",
+              "text": "左键点空地放下栅栏",
+              "hidden": false,
+              "display": "block",
+              "top": 658.59375,
+              "bottom": 689.59375,
+              "height": 31,
+              "visibleHeight": 31
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+              "hidden": false,
+              "display": "block",
+              "top": 689.59375,
+              "bottom": 718.59375,
+              "height": 29,
+              "visibleHeight": 29
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "document": {
+            "width": 1280,
+            "height": 800
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 96,
+              "y": 109,
+              "width": 796,
+              "height": 477.59375,
+              "right": 892,
+              "bottom": 586.59375
+            },
+            "wave-banner": {
+              "x": 96,
+              "y": 594.59375,
+              "width": 796,
+              "height": 29,
+              "right": 892,
+              "bottom": 623.59375
+            },
+            "notice-feed": {
+              "x": 96,
+              "y": 623.59375,
+              "width": 796,
+              "height": 95,
+              "right": 892,
+              "bottom": 718.59375
+            },
+            "toast": {
+              "x": 96,
+              "y": 623.59375,
+              "width": 796,
+              "height": 35,
+              "right": 892,
+              "bottom": 658.59375
+            },
+            "prompt": {
+              "x": 96,
+              "y": 658.59375,
+              "width": 796,
+              "height": 31,
+              "right": 892,
+              "bottom": 689.59375
+            },
+            "build-banner": {
+              "x": 96,
+              "y": 689.59375,
+              "width": 796,
+              "height": 29,
+              "right": 892,
+              "bottom": 718.59375
+            },
+            "guide": {
+              "x": 914,
+              "y": 163,
+              "width": 260,
+              "height": 112.5,
+              "right": 1174,
+              "bottom": 275.5
+            },
+            "play-details": {
+              "x": 904,
+              "y": 109,
+              "width": 280,
+              "height": 409.09375,
+              "right": 1184,
+              "bottom": 518.09375
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "←",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "↓",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "→",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            }
+          ],
+          "canvas_backing": {
+            "width": 960,
+            "height": 576
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "左键点空地放下栅栏",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+              "hidden": false
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": true,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 8,
+        "skillCd": 0,
+        "held": 0,
+        "touchLayout": false,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "材料还差：木 1",
+            "hidden": false,
+            "display": "block",
+            "top": 594.59375,
+            "bottom": 629.59375,
+            "height": 35,
+            "visibleHeight": 35
+          },
+          {
+            "id": "prompt",
+            "text": "左键点空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 629.59375,
+            "bottom": 660.59375,
+            "height": 31,
+            "visibleHeight": 31
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false,
+            "display": "block",
+            "top": 660.59375,
+            "bottom": 689.59375,
+            "height": 29,
+            "visibleHeight": 29
+          }
+        ]
+      },
+      "scrollBottom": 0,
+      "native_hold": false,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    }
+  ],
+  "fixture_only_not_natural_night": true,
+  "no_user_save_access": true,
+  "after_checks": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "mana",
+      "version": "after",
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": null,
+          "tile": 1,
+          "mana": 0.267635,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 285.796875,
+              "bottom": 307.796875,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false,
+              "display": "block",
+              "top": 307.796875,
+              "bottom": 333.796875,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "notice-help",
+              "text": "操作指引见「怎么玩」",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 22,
+              "right": 314,
+              "bottom": 307.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 38,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 333.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 112.5,
+              "right": 304,
+              "bottom": 662.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "当前反馈与操作\n法力不足，会自动恢复。\n按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理\n\n白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 3.3897799999959743,
+        "skillCd": 6.350100000000003,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false,
+            "display": "block",
+            "top": 285.796875,
+            "bottom": 311.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 311.796875,
+            "bottom": 337.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 337.796875,
+            "bottom": 381.796875,
+            "height": 44,
+            "visibleHeight": 8
+          },
+          {
+            "id": "notice-help",
+            "text": "操作指引见「怎么玩」",
+            "hidden": false,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          }
+        ]
+      },
+      "scrollBottom": 2,
+      "native_hold": true,
+      "native_pan_scroll": 29,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "build",
+      "version": "after",
+      "initial": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 1,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": "fence",
+          "tile": 1,
+          "mana": 8,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 285.796875,
+              "bottom": 307.796875,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false,
+              "display": "block",
+              "top": 307.796875,
+              "bottom": 333.796875,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "notice-help",
+              "text": "操作指引见「怎么玩」",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 22,
+              "right": 314,
+              "bottom": 307.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 38,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 333.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 112.5,
+              "right": 304,
+              "bottom": 662.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "当前反馈与操作\n材料还差：木 1\n点地图空地放下栅栏\n建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消\n\n白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 8,
+        "skillCd": 0,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "材料还差：木 1",
+            "hidden": false,
+            "display": "block",
+            "top": 285.796875,
+            "bottom": 311.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 311.796875,
+            "bottom": 337.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 337.796875,
+            "bottom": 381.796875,
+            "height": 44,
+            "visibleHeight": 8
+          },
+          {
+            "id": "notice-help",
+            "text": "操作指引见「怎么玩」",
+            "hidden": false,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          }
+        ]
+      },
+      "scrollBottom": 2,
+      "native_hold": true,
+      "native_pan_scroll": 29,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "mana",
+      "version": "after",
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": null,
+          "tile": 1,
+          "mana": 0.2673650000000001,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 327.796875,
+              "bottom": 349.796875,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false,
+              "display": "block",
+              "top": 349.796875,
+              "bottom": 375.796875,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "notice-help",
+              "text": "操作指引见「怎么玩」",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 22,
+              "right": 384,
+              "bottom": 349.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 38,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 375.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 112.5,
+              "right": 374,
+              "bottom": 704.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "当前反馈与操作\n法力不足，会自动恢复。\n按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理\n\n白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 3.389374999997985,
+        "skillCd": 6.350200000000004,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false,
+            "display": "block",
+            "top": 327.796875,
+            "bottom": 353.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 353.796875,
+            "bottom": 379.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 379.796875,
+            "bottom": 423.796875,
+            "height": 44,
+            "visibleHeight": 8
+          },
+          {
+            "id": "notice-help",
+            "text": "操作指引见「怎么玩」",
+            "hidden": false,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          }
+        ]
+      },
+      "scrollBottom": 2,
+      "native_hold": true,
+      "native_pan_scroll": 29,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "build",
+      "version": "after",
+      "initial": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 1,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": "fence",
+          "tile": 1,
+          "mana": 8,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 327.796875,
+              "bottom": 349.796875,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false,
+              "display": "block",
+              "top": 349.796875,
+              "bottom": 375.796875,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "notice-help",
+              "text": "操作指引见「怎么玩」",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 22,
+              "right": 384,
+              "bottom": 349.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 38,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 375.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 112.5,
+              "right": 374,
+              "bottom": 704.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "当前反馈与操作\n材料还差：木 1\n点地图空地放下栅栏\n建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消\n\n白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 8,
+        "skillCd": 0,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "材料还差：木 1",
+            "hidden": false,
+            "display": "block",
+            "top": 327.796875,
+            "bottom": 353.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 353.796875,
+            "bottom": 379.796875,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 379.796875,
+            "bottom": 423.796875,
+            "height": 44,
+            "visibleHeight": 8
+          },
+          {
+            "id": "notice-help",
+            "text": "操作指引见「怎么玩」",
+            "hidden": false,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          }
+        ]
+      },
+      "scrollBottom": 2,
+      "native_hold": true,
+      "native_pan_scroll": 29,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "mana",
+      "version": "after",
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": null,
+          "tile": 1,
+          "mana": 0.28991000000000006,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 275,
+              "bottom": 297,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false,
+              "display": "block",
+              "top": 297,
+              "bottom": 323,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "notice-help",
+              "text": "操作指引见「怎么玩」",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 69,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 268.984375
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 275,
+              "width": 540,
+              "height": 22,
+              "right": 546,
+              "bottom": 297
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 297,
+              "width": 540,
+              "height": 38,
+              "right": 546,
+              "bottom": 335
+            },
+            "toast": {
+              "x": 6,
+              "y": 297,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 323
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 393,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 487.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 339,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 387
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 69,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 113,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 117,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 165,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 209,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 117,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 69,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 113,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 117,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 706,
+              "y": 165,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 209,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "当前反馈与操作\n法力不足，会自动恢复。\n按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理\n\n白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 3.4352750000080436,
+        "skillCd": 6.350100000000003,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false,
+            "display": "block",
+            "top": 275,
+            "bottom": 301,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 301,
+            "bottom": 327,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 327,
+            "bottom": 353,
+            "height": 26,
+            "visibleHeight": 8
+          },
+          {
+            "id": "notice-help",
+            "text": "操作指引见「怎么玩」",
+            "hidden": false,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          }
+        ]
+      },
+      "scrollBottom": 1,
+      "native_hold": true,
+      "native_pan_scroll": 18,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "build",
+      "version": "after",
+      "initial": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 1,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": "fence",
+          "tile": 1,
+          "mana": 8,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": true,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 275,
+              "bottom": 297,
+              "height": 22,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false,
+              "display": "block",
+              "top": 297,
+              "bottom": 323,
+              "height": 26,
+              "visibleHeight": 26
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "notice-help",
+              "text": "操作指引见「怎么玩」",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 69,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 268.984375
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 275,
+              "width": 540,
+              "height": 22,
+              "right": 546,
+              "bottom": 297
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 297,
+              "width": 540,
+              "height": 38,
+              "right": 546,
+              "bottom": 335
+            },
+            "toast": {
+              "x": 6,
+              "y": 297,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 323
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 393,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 487.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 339,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 387
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 69,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 113,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 117,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 165,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 209,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 117,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 69,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 113,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 117,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 161,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 706,
+              "y": 165,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 209,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点地图空地放下栅栏",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+              "hidden": false
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "当前反馈与操作\n材料还差：木 1\n点地图空地放下栅栏\n建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消\n\n白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 8,
+        "skillCd": 0,
+        "held": 0,
+        "touchLayout": true,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "材料还差：木 1",
+            "hidden": false,
+            "display": "block",
+            "top": 275,
+            "bottom": 301,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 301,
+            "bottom": 327,
+            "height": 26,
+            "visibleHeight": 26
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false,
+            "display": "block",
+            "top": 327,
+            "bottom": 353,
+            "height": 26,
+            "visibleHeight": 8
+          },
+          {
+            "id": "notice-help",
+            "text": "操作指引见「怎么玩」",
+            "hidden": false,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          }
+        ]
+      },
+      "scrollBottom": 1,
+      "native_hold": true,
+      "native_pan_scroll": 18,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "mana",
+      "version": "after",
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": null,
+          "tile": 1,
+          "mana": 0.222545,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": false,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 594.59375,
+              "bottom": 623.59375,
+              "height": 29,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false,
+              "display": "block",
+              "top": 623.59375,
+              "bottom": 658.59375,
+              "height": 35,
+              "visibleHeight": 35
+            },
+            {
+              "id": "prompt",
+              "text": "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+              "hidden": false,
+              "display": "block",
+              "top": 658.59375,
+              "bottom": 689.59375,
+              "height": 31,
+              "visibleHeight": 31
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            },
+            {
+              "id": "notice-help",
+              "text": "操作指引见「怎么玩」",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "document": {
+            "width": 1280,
+            "height": 800
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 96,
+              "y": 109,
+              "width": 796,
+              "height": 477.59375,
+              "right": 892,
+              "bottom": 586.59375
+            },
+            "wave-banner": {
+              "x": 96,
+              "y": 594.59375,
+              "width": 796,
+              "height": 29,
+              "right": 892,
+              "bottom": 623.59375
+            },
+            "notice-feed": {
+              "x": 96,
+              "y": 623.59375,
+              "width": 796,
+              "height": 66,
+              "right": 892,
+              "bottom": 689.59375
+            },
+            "toast": {
+              "x": 96,
+              "y": 623.59375,
+              "width": 796,
+              "height": 35,
+              "right": 892,
+              "bottom": 658.59375
+            },
+            "prompt": {
+              "x": 96,
+              "y": 658.59375,
+              "width": 796,
+              "height": 31,
+              "right": 892,
+              "bottom": 689.59375
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 914,
+              "y": 163,
+              "width": 260,
+              "height": 112.5,
+              "right": 1174,
+              "bottom": 275.5
+            },
+            "play-details": {
+              "x": 904,
+              "y": 109,
+              "width": 280,
+              "height": 409.09375,
+              "right": 1184,
+              "bottom": 518.09375
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "←",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "↓",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "→",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            }
+          ],
+          "canvas_backing": {
+            "width": 960,
+            "height": 576
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "法力不足，会自动恢复。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": true,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 3.186335000006034,
+        "skillCd": 6.383400000000006,
+        "held": 0,
+        "touchLayout": false,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "左键点空地/坏墙；按 0 取消。",
+            "hidden": false,
+            "display": "block",
+            "top": 594.59375,
+            "bottom": 629.59375,
+            "height": 35,
+            "visibleHeight": 35
+          },
+          {
+            "id": "prompt",
+            "text": "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+            "hidden": false,
+            "display": "block",
+            "top": 629.59375,
+            "bottom": 660.59375,
+            "height": 31,
+            "visibleHeight": 31
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false,
+            "display": "block",
+            "top": 660.59375,
+            "bottom": 689.59375,
+            "height": 29,
+            "visibleHeight": 29
+          },
+          {
+            "id": "notice-help",
+            "text": "操作指引见「怎么玩」",
+            "hidden": false,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          }
+        ]
+      },
+      "scrollBottom": 0,
+      "native_hold": false,
+      "native_pan_scroll": null,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "build",
+      "version": "after",
+      "initial": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100
+      },
+      "current": {
+        "data": {
+          "paused": true,
+          "day": false,
+          "inv": {
+            "wood": 1,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 1,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 78,
+          "campHp": 100,
+          "build": "fence",
+          "tile": 1,
+          "mana": 8,
+          "skillCd": 0,
+          "held": 0,
+          "touchLayout": false,
+          "rows": [
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false,
+              "display": "block",
+              "top": 594.59375,
+              "bottom": 623.59375,
+              "height": 29,
+              "visibleHeight": 0
+            },
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false,
+              "display": "block",
+              "top": 623.59375,
+              "bottom": 658.59375,
+              "height": 35,
+              "visibleHeight": 35
+            },
+            {
+              "id": "prompt",
+              "text": "左键点空地放下栅栏",
+              "hidden": false,
+              "display": "block",
+              "top": 658.59375,
+              "bottom": 689.59375,
+              "height": 31,
+              "visibleHeight": 31
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+              "hidden": false,
+              "display": "block",
+              "top": 689.59375,
+              "bottom": 718.59375,
+              "height": 29,
+              "visibleHeight": 29
+            },
+            {
+              "id": "notice-help",
+              "text": "操作指引见「怎么玩」",
+              "hidden": false,
+              "display": "none",
+              "top": 0,
+              "bottom": 0,
+              "height": 0,
+              "visibleHeight": 0
+            }
+          ]
+        },
+        "metrics": {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "document": {
+            "width": 1280,
+            "height": 800
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 96,
+              "y": 109,
+              "width": 796,
+              "height": 477.59375,
+              "right": 892,
+              "bottom": 586.59375
+            },
+            "wave-banner": {
+              "x": 96,
+              "y": 594.59375,
+              "width": 796,
+              "height": 29,
+              "right": 892,
+              "bottom": 623.59375
+            },
+            "notice-feed": {
+              "x": 96,
+              "y": 623.59375,
+              "width": 796,
+              "height": 95,
+              "right": 892,
+              "bottom": 718.59375
+            },
+            "toast": {
+              "x": 96,
+              "y": 623.59375,
+              "width": 796,
+              "height": 35,
+              "right": 892,
+              "bottom": 658.59375
+            },
+            "prompt": {
+              "x": 96,
+              "y": 658.59375,
+              "width": 796,
+              "height": 31,
+              "right": 892,
+              "bottom": 689.59375
+            },
+            "build-banner": {
+              "x": 96,
+              "y": 689.59375,
+              "width": 796,
+              "height": 29,
+              "right": 892,
+              "bottom": 718.59375
+            },
+            "guide": {
+              "x": 914,
+              "y": 163,
+              "width": 260,
+              "height": 112.5,
+              "right": 1174,
+              "bottom": 275.5
+            },
+            "play-details": {
+              "x": 904,
+              "y": 109,
+              "width": 280,
+              "height": 409.09375,
+              "right": 1184,
+              "bottom": 518.09375
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "←",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "↓",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "→",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            }
+          ],
+          "canvas_backing": {
+            "width": 960,
+            "height": 576
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "材料还差：木 1",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "左键点空地放下栅栏",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+              "hidden": false
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": true,
+          "guide_title": "第四步：守住篝火"
+        }
+      },
+      "helpBody": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "day": {
+        "paused": false,
+        "day": true,
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "build": "fence",
+        "tile": 1,
+        "mana": 8,
+        "skillCd": 0,
+        "held": 0,
+        "touchLayout": false,
+        "rows": [
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": true,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          },
+          {
+            "id": "toast",
+            "text": "材料还差：木 1",
+            "hidden": false,
+            "display": "block",
+            "top": 594.59375,
+            "bottom": 629.59375,
+            "height": 35,
+            "visibleHeight": 35
+          },
+          {
+            "id": "prompt",
+            "text": "左键点空地放下栅栏",
+            "hidden": false,
+            "display": "block",
+            "top": 629.59375,
+            "bottom": 660.59375,
+            "height": 31,
+            "visibleHeight": 31
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false,
+            "display": "block",
+            "top": 660.59375,
+            "bottom": 689.59375,
+            "height": 29,
+            "visibleHeight": 29
+          },
+          {
+            "id": "notice-help",
+            "text": "操作指引见「怎么玩」",
+            "hidden": false,
+            "display": "none",
+            "top": 0,
+            "bottom": 0,
+            "height": 0,
+            "visibleHeight": 0
+          }
+        ]
+      },
+      "scrollBottom": 0,
+      "native_hold": false,
+      "native_pan_scroll": null,
+      "resume_and_release": true,
+      "cancellation_and_day_scroll": true
+    }
+  ]
+}
