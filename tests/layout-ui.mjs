@@ -231,7 +231,20 @@ export async function prepareHint(page, origin, name, mode, before) {
     combat: touch ? "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理"
       : "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
   }[name];
-  if (!before && expected) await page.waitForFunction((text) => document.getElementById("prompt").textContent === text, expected);
+  if (!before && expected) {
+    try {
+      await page.waitForFunction((text) => document.getElementById("prompt").textContent === text, expected);
+    } catch (error) {
+      console.error("DEVICE_HINT_TIMEOUT_STATE", JSON.stringify({ name, mode, expected, observed: await page.evaluate(() => {
+        const s = CUBE.getState();
+        return { prompt: document.getElementById("prompt").textContent, build: s.build, flags: s.flags, inv: s.inv,
+          day: s.day, over: s.over, player: { x: s.player.x, y: s.player.y, dir: s.player.dir },
+          stage: document.querySelector(".stage").getBoundingClientRect().toJSON(),
+          canvas: document.getElementById("game").getBoundingClientRect().toJSON() };
+      }) }));
+      throw error;
+    }
+  }
   else await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
   const metrics = await inspect(page);
   const media = await page.evaluate(() => ({

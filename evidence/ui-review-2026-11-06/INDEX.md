@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-029 宽屏触控首局舞台黑区
+
+[87张真实原图](canvas-black-area/INDEX.md) · [逐图版本、资源哈希、矩形、DPR和原生输入](canvas-black-area/screenshots.json)。
+
+公网e35452c58的7项静态资源逐项匹配version.json；新隔离配置与当前52195fc同条件复现宽屏触控舞台被撑高、完整画布居中，1484×1040上下各约166px，开背包约190px。仅收回宽屏触控舞台/主区过高布局，不改绘制、加载、地图或规则；修复后上下黑区0，320/390/844及细指针画布矩形不变。公网29、父版29、修复后29原图待协调审查，非新版全界面或实体设备验收。Office独占D临时目录、关闭浏览器后精确清理；#25旧批次和原诊断不动，不合并、不发布。
+
 ## 独立维护批次：UI-028 普通新玩家的第一面栅栏
 
 [72张原生视口前后图](first-fence-onboarding/INDEX.md) · [普通采木、拒绝、纠正、扣料与真实落点](first-fence-onboarding/validation.json) · [逐图来源与中间图](first-fence-onboarding/screenshots.json)。

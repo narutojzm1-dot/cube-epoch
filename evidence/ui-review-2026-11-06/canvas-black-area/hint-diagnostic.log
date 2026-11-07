@@ -1,0 +1,13 @@
+2026-11-07T17:52:17.204Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\webkit-2336\Playwright.exe --inspector-pipe --disable-accelerated-compositing --headless --no-startup-window
+2026-11-07T17:52:17.212Z pw:browser <launched> pid=61216
+DEVICE_HINTS_OK 84 cases; 0 actual-viewport PNGs
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86.015625,"y":95,"width":815.953125,"height":489.578125,"right":901.96875,"bottom":584.578125},"controls_bottom":235,"minimum_target":44}
+WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":6,"y":95,"width":470,"height":282,"right":476,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406.015625,"y":95,"width":815.953125,"height":489.578125,"right":1221.96875,"bottom":584.578125},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+2026-11-07T17:54:25.423Z pw:browser [pid=61216] <gracefully close start>
+2026-11-07T17:54:25.471Z pw:browser [pid=61216] <process did exit: exitCode=0, signal=null>
+2026-11-07T17:54:25.471Z pw:browser [pid=61216] starting temporary directories cleanup
+2026-11-07T17:54:25.472Z pw:browser [pid=61216] finished temporary directories cleanup
+2026-11-07T17:54:25.472Z pw:browser [pid=61216] <gracefully close end>

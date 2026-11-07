@@ -1,0 +1,42 @@
+2026-11-07T18:33:45.211Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=D:\.tmp\agents\cube-epoch\clock-fixture-final-2-0987ccda56484b9298f45a520387700b\tmp\playwright_chromiumdev_profile-1FgZNY --remote-debugging-pipe --no-startup-window
+2026-11-07T18:33:45.218Z pw:browser <launched> pid=49792
+FIRST_WOOD_INPUT 320 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3138000000059606,"x":392,"y":360.0128,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3638000000059606,"x":394.1376,"y":360.75648,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.1979000000059608,"x":395.99999999730574,"y":360.75648,"paused":false,"over":false,"gathered":true}
+2026-11-07T18:33:48.998Z pw:browser [pid=49792][err] [49792:75436:1108/023348.997:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+FIRST_WOOD_DURATION 320 game=3.3365000000000022 frame=3.386300000000002 real=3.38179999999702
+FIRST_WOOD_INPUT 390 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3142999999970198,"x":392,"y":360.0128000000001,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3642999999970198,"x":394.13120000000004,"y":360.76096000000007,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":5,"time":1.1985999999970196,"x":395.99999999213753,"y":360.76096000000007,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 390 game=3.3360000000000025 frame=3.3861000000000026 real=3.3821000000089407
+FIRST_WOOD_INPUT 1280 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.264,"x":392,"y":358.9440000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.28070000000000006,"x":393.0688,"y":358.9440000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.0980999999999996,"x":395.56045383792866,"y":358.9440000000002,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 1280 game=3.3359999999999967 frame=3.386099999999996 real=3.3810999999940394
+FIRST_WOOD_TOAST_OK chromium after: 320/390 touch layout + desktop, ordinary native gather/release, single pickup feedback, natural3.4s, fully visible toast
+TOAST_CLOCK_NORMAL_OK three original-input viewports
+TOAST_CLOCK_STRESS_BEGIN isolated render-load fixture; source/world/save unchanged
+FIRST_WOOD_INPUT 320 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3132999999940396,"x":392,"y":360.0192000000001,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3632999999940396,"x":394.1376,"y":360.7628800000001,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":5,"time":1.1973999999940397,"x":395.99999998755095,"y":360.7628800000001,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 320 game=3.3344999999999994 frame=3.3511999999999995 real=4.450099999994039
+2026-11-07T18:34:09.827Z pw:browser [pid=49792][err] [49792:75436:1108/023409.827:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+FIRST_WOOD_INPUT 390 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.31390000000894064,"x":392,"y":360.00640000000016,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3640000000089406,"x":394.144,"y":360.75008000000014,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.1981000000089401,"x":395.99999999466775,"y":360.75008000000014,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 390 game=3.334199999999997 frame=3.3840999999999957 real=4.48190000000596
+FIRST_WOOD_INPUT 1280 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.2664000000149012,"x":392,"y":358.9440000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.2833000000149012,"x":393.0816,"y":358.9440000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.1005000000149012,"x":395.56542546912783,"y":358.9440000000002,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 1280 game=3.334699999999998 frame=3.384699999999998 real=4.4655
+FIRST_WOOD_TOAST_OK chromium after: 320/390 touch layout + desktop, ordinary native gather/release, single pickup feedback, natural3.4s, fully visible toast
+TOAST_CLOCK_STRESS_OK
+FIRST_WOOD_INPUT 320 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.31499999998509887,"x":392,"y":360.01920000000007,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3648999999850989,"x":394.13120000000004,"y":360.76288000000005,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.1988999999850989,"x":395.99999999061725,"y":360.76288000000005,"paused":false,"over":false,"gathered":true}
+TOAST_CLOCK_LATE_HIDE_REJECTED isolated DOM +400ms fixture; source/world/save unchanged
+2026-11-07T18:34:29.066Z pw:browser [pid=49792] <gracefully close start>
+2026-11-07T18:34:29.203Z pw:browser [pid=49792] <process did exit: exitCode=0, signal=null>
+2026-11-07T18:34:29.204Z pw:browser [pid=49792] starting temporary directories cleanup
+2026-11-07T18:34:29.214Z pw:browser [pid=49792] finished temporary directories cleanup
+2026-11-07T18:34:29.214Z pw:browser [pid=49792] <gracefully close end>

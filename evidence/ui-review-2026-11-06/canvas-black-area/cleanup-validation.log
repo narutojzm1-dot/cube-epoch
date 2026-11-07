@@ -1,0 +1,12 @@
+Office owned-root cleanup validation; no browser/user profile/save copied into shared temp.
+Normal: cleanup-normal-a9419b086def4c789dd1fccba819bcd3 created and removed, independent owned decoy untouched.
+Intentional InvalidDataException: cleanup-exception-8f7bf6f199a84f55ba5eaec13dc0407f removed via finally, independent decoy untouched.
+Simulated bounded TimeoutException: cleanup-timeout-ac5d4babc7044ae59838345753a03055 removed via finally, independent decoy untouched.
+Simulated cooperative OperationCanceledException: cleanup-cancel-eb0cd89427814697b976c856062e98e6 removed via finally, independent decoy untouched.
+Decoy content/ownership verified, then only its exact named file and empty directory removed by its creator.
+All roots normalized under D:\.tmp\agents\cube-epoch; marker id/root/project checked before deletion; no broad base/user Temp deletion.
+Actual initial parallel public/local browser failures closed recorded parents and independently removed own roots, logs retained.
+Actual complete parallel public/local captures and later after/native/metadata/hint runs closed own browsers and removed own distinct GUID roots.
+Real full-suite timeout also closed recorded browser99616 before exact full-run root removal, full-cleanup.log.
+These are actual normal/error and simulated cooperative timeout/cancel finally paths, not a claim that Windows forced OS kill executes finally.
+Force-kill/Ctrl+C/SIGTERM OS delivery is not verified. Cleanup refuses active recorded browser parents and reports exact path/nonzero, rather than deleting a possibly live/shared directory.

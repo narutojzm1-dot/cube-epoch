@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "canvas-black-area",
+      "base_sha": "52195fc2e722f78fba754a343eab3a61c1afc72b",
+      "index": "canvas-black-area/INDEX.md",
+      "screenshots": "canvas-black-area/screenshots.json",
+      "issue_ids": ["UI-029"],
+      "status": "已截",
+      "visual_review": "87张原图待协调审查：公网e354旧包29、本地52195fc29、修复后29；实际7项资源匹配版本，1484触控DPR1/2舞台上下约166/190px多余黑区已去除。320/390/844及细指针矩形保留，真实首步/采集/开关背包/旋转；未声称实体设备或当前全界面通过"
+    },
+    {
       "id": "first-fence-onboarding",
       "base_sha": "63182223ae90bf06118ed21639853cdab9be848f",
       "index": "first-fence-onboarding/INDEX.md",
@@ -229,6 +238,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-029",
+      "title": "宽屏触控舞台被撑高、画布居中留下首局大黑区，开背包还会下移地图",
+      "status": "公网与父版真实复现，已做局部比例/高度约束并补87张原图，待协调逐图审查",
+      "before": "canvas-black-area public/before",
+      "after": "canvas-black-area after"
+    },
     {
       "id": "UI-028",
       "title": "首日栏0入口、重复说明与误选状态让普通新玩家不知道如何直接造栅栏",
