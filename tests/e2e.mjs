@@ -18,6 +18,7 @@ import { testVictoryRestart } from "./victory-restart.mjs";
 import { testTouchTitle, testFirstWoodToast } from "./touch-title.mjs";
 import { testFirstFence } from "./first-fence.mjs";
 import { testCanvasBlackArea } from "./canvas-black-area.mjs";
+import { testFirstNightGuidance } from "./first-night-guidance.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -463,6 +464,7 @@ await testVictoryRestart(browser, origin);
 await testTouchTitle(browser, origin);
 await testFirstWoodToast(browser, origin);
 await testFirstFence(browser, origin);
+await testFirstNightGuidance(browser, origin);
 const canvasSnapshots = await testCanvasBlackArea(browser, origin, { enforce: true });
 assert.equal(canvasSnapshots.length, 29);
 assert.ok(canvasSnapshots.every((row) => row.relative_image_path.includes("--after--")),

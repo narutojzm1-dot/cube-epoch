@@ -1,0 +1,40 @@
+Product parent: af3a311a40ac5a70d2b65daffe4e36b004ef596c.
+After product SHA256: 487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce.
+Scope: touch first-night toast and existing night guide only; desktop wording,
+3.2-second toast argument, rules, controls, CSS, saves and map unchanged.
+
+PASS node --check game.js.
+PASS node tests/static.mjs: STATIC_OK (static.log).
+PASS node tests/e2e.mjs: full Windows WebKit E2E_OK (e2e.log).
+PASS integrated first-night boundary test: four viewports, real touch taps and
+keyboard hold fallback on WebKit, demolition/rebuild/side attack, no errors.
+PASS Chromium normal before and after: each three independent mage new games,
+320/390 native touch hold/release and desktop keyboard/mouse; real wood gathering,
+2-wood first fence, natural 76-second dusk and first real enemy wave.
+PASS Chromium boundary before/after: each four viewports including 844x390.
+PASS existing first-screen/core controls >=44px and complete touch first-night
+toast range inside notice-feed; night guide captured fully in 320/390/844.
+PASS evidence index: current68/history12 unique viewport PNG80; demolition
+refund1/rebuild cost2, restored gaps3, side attack preserves inventory/wall.
+PASS UI recorded coverage: baseline172/172, history305, supplemental819;
+read-only inventory check, not new-source full-matrix visual acceptance.
+PASS old UI JSON deep-equal after removing only UI-030 additions.
+PASS protected natural-loop result SHA256 unchanged:
+964230c5914271f326300ca2c0fe82122b87f43d3bf2111d5b2363a75089596d.
+PASS independent code-review agent: no significant issues (review.log).
+PASS protected PR25/26 OPEN, original heads52195fc/af3a311 (protected-pr logs).
+
+Retained attempts: initial missing Tee evidence directory produced no screenshots,
+own root explicitly cleaned. Initial fixture 844 character-selection input
+failed; prior12 partial originals/log retained, corrected test visible midpoint
+and eight stable scroll frames; no auto-scroll, timeout extension or product fix.
+All own browser processes closed and GUID temporary roots cleaned, logs retained.
+Staged whitespace check rejected one trailing space in the new initial-cleanup
+log before commit; trimmed that space only, preserved log meaning and attempts.
+D TEMP/TMP/TMPDIR/cache/profile; existing C browser installation read-only.
+No new dependencies installed. Tool stdout filtered to avoid large C output spill.
+
+Not covered: physical iOS/Android, ordinary natural844 preparation, full first
+night survival or natural three nights. UI acceptance pending user/coordinator.
+Branch PR only; no merge, Pages or Tencent deployment. Same-head GitHub CI result
+is recorded after pushing, separately from these local pre-commit checks.

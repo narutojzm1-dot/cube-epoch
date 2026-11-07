@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-030 首夜触屏朝墙攻击的误导
+
+[68张当前前后原图与12张中间图](first-night-wall-guidance/INDEX.md) · [逐图源码/实际画布/原生输入](first-night-wall-guidance/screenshots.json) · [库存/缺口/自然首日时间](first-night-wall-guidance/validation.json)。
+
+普通320/390/桌面独立新局采木、放首墙并自然入夜；旧「站在墙后打」会引导触屏按住攻击拆自己的墙。仅适配触屏首夜短反馈与现有守夜步骤，明确朝墙拆墙、先侧移面朝怪；原输入、2木成本/1木退款、昼夜和桌面文字不改。844及其他视口边界夹具单列，不称普通横屏自然跑、完整首夜存活或实体设备验收。待协调逐图审查；#25/#26及旧诊断保留，不合并、不发布。
+
 ## 独立维护批次：UI-029 宽屏触控首局舞台黑区
 
 [87张真实原图](canvas-black-area/INDEX.md) · [逐图版本、资源哈希、矩形、DPR和原生输入](canvas-black-area/screenshots.json)。

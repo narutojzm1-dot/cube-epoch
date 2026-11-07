@@ -1,0 +1,7355 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "first-fence",
+      "state": "first-fence",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": true,
+        "nights": 0,
+        "time": 2.016499999976158,
+        "cycle": 1.980799999988079,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.14514547999994,
+          "y": 360.15995999999984,
+          "dir": 1,
+          "mana": 7.720765000000001
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "第一面栅栏好了！还差 3 面。",
+        "toastVisible": true,
+        "objective": "白天围营 · 还差 3 面栅栏",
+        "guide": "点「栅栏」，直接用木头放到篝火旁发光格（还差 3 面），不用先合成。自己能穿过栅栏。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 200,
+            "height": 60,
+            "right": 206,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 200,
+            "height": 20,
+            "right": 206,
+            "bottom": 305.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 22.5,
+            "right": 304,
+            "bottom": 572.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第一面栅栏好了！还差 3 面。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "这段好了。点发光的空地继续围",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 268.28125
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 264,
+          "y": 315.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 144.31338725050009,
+          "y": 187.2444786035158
+        }
+      ],
+      "relative_image_path": "images/normal-first-fence--320x568--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:41:37.102Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "first-night",
+      "state": "first-night",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 76.04449999998035,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 360.15995999999984,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 130.5,
+            "right": 304,
+            "bottom": 680.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "这段好了。点发光的空地继续围",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 268.28125
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 264,
+          "y": 315.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 144.31338725050009,
+          "y": 187.2444786035158
+        }
+      ],
+      "relative_image_path": "images/normal-first-night--320x568--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:42:51.146Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "night-guide",
+      "state": "night-guide",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 76.11119999998036,
+        "cycle": 0.06669999999999708,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 360.15995999999984,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 246.8125,
+            "width": 288,
+            "height": 130.5,
+            "right": 304,
+            "bottom": 377.3125
+          },
+          "play-details": {
+            "x": 6,
+            "y": 192.8125,
+            "width": 308,
+            "height": 369.1875,
+            "right": 314,
+            "bottom": 562
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "这段好了。点发光的空地继续围",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 268.28125
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 264,
+          "y": 315.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 144.31338725050009,
+          "y": 187.2444786035158
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 519.796875
+        }
+      ],
+      "relative_image_path": "images/normal-night-guide--320x568--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:42:51.219Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "wall-facing-hold",
+      "state": "wall-facing-hold",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 76.61169999998046,
+        "cycle": 0.5671999999999972,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 360.15995999999984,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 130.5,
+            "right": 304,
+            "bottom": 680.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 268.28125
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 264,
+          "y": 315.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 144.31338725050009,
+          "y": 187.2444786035158
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 519.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 216.8125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ],
+      "relative_image_path": "images/normal-wall-facing-hold--320x568--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:42:51.712Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "wall-side-attack",
+      "state": "wall-side-attack",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 77.09539999998054,
+        "cycle": 1.050899999999994,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 380.99658179999966,
+          "dir": 0,
+          "mana": 6.652995
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 130.5,
+            "right": 304,
+            "bottom": 680.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "围上了。还差 3 面，点下一个发光格。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 268.28125
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 264,
+          "y": 315.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 144.31338725050009,
+          "y": 187.2444786035158
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 519.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 216.8125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 146.4862901877367,
+          "y": 187.2444786035158
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ],
+      "relative_image_path": "images/normal-wall-side-attack--320x568--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:42:52.195Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "first-wave",
+      "state": "first-wave",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 81.49899999998142,
+        "cycle": 5.454500000000012,
+        "dayLen": 76,
+        "wave": 1,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 381.77092158195444,
+          "dir": 0,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 24.431111488242017,
+            "y": 328.02052911848773
+          }
+        ],
+        "bolts": 0,
+        "toast": "第 1 夜 · 第 1/2 波来了！",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 130.5,
+            "right": 304,
+            "bottom": 680.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第 1 夜 · 第 1/2 波来了！",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 5",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 268.28125
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 264,
+          "y": 315.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 144.31338725050009,
+          "y": 187.2444786035158
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 519.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 216.8125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 146.4862901877367,
+          "y": 187.2444786035158
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ],
+      "relative_image_path": "images/normal-first-wave--320x568--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:42:56.590Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "first-fence",
+      "state": "first-fence",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": true,
+        "nights": 0,
+        "time": 1.9999000000089402,
+        "cycle": 1.9813000000029797,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.13786125999974,
+          "y": 360.15822000000003,
+          "dir": 1,
+          "mana": 7.720495
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "第一面栅栏好了！还差 3 面。",
+        "toastVisible": true,
+        "objective": "白天围营 · 还差 3 面栅栏",
+        "guide": "点「栅栏」，直接用木头放到篝火旁发光格（还差 3 面），不用先合成。自己能穿过栅栏。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 270,
+            "height": 60,
+            "right": 276,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 270,
+            "height": 20,
+            "right": 276,
+            "bottom": 347.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 22.5,
+            "right": 374,
+            "bottom": 614.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第一面栅栏好了！还差 3 面。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "这段好了。点发光的空地继续围",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 781.09375
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 334,
+          "y": 357.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 175.7602095866253,
+          "y": 208.21154270019525
+        }
+      ],
+      "relative_image_path": "images/normal-first-fence--390x844--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:42:59.533Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "first-night",
+      "state": "first-night",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 76.0280000000132,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 360.15822000000003,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "这段好了。点发光的空地继续围",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 781.09375
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 334,
+          "y": 357.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 175.7602095866253,
+          "y": 208.21154270019525
+        }
+      ],
+      "relative_image_path": "images/normal-first-night--390x844--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:44:13.561Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "night-guide",
+      "state": "night-guide",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 76.0947000000132,
+        "cycle": 0.0666999999999971,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 360.15822000000003,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 362.3125,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 474.8125
+          },
+          "play-details": {
+            "x": 6,
+            "y": 308.3125,
+            "width": 378,
+            "height": 529.6875,
+            "right": 384,
+            "bottom": 838
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "这段好了。点发光的空地继续围",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 781.09375
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 334,
+          "y": 357.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 175.7602095866253,
+          "y": 208.21154270019525
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 561.796875
+        }
+      ],
+      "relative_image_path": "images/normal-night-guide--390x844--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:44:13.630Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "wall-facing-hold",
+      "state": "wall-facing-hold",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 76.5950000000133,
+        "cycle": 0.5670000000000002,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 360.15822000000003,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 781.09375
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 334,
+          "y": 357.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 175.7602095866253,
+          "y": 208.21154270019525
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 561.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 332.3125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ],
+      "relative_image_path": "images/normal-wall-facing-hold--390x844--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:44:14.135Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "wall-side-attack",
+      "state": "wall-side-attack",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 77.07890000001339,
+        "cycle": 1.0508999999999937,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 380.9898131999999,
+          "dir": 0,
+          "mana": 6.6532649999999975
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "围上了。还差 3 面，点下一个发光格。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 781.09375
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 334,
+          "y": 357.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 175.7602095866253,
+          "y": 208.21154270019525
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 561.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 332.3125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 178.42667558406646,
+          "y": 208.21154270019525
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ],
+      "relative_image_path": "images/normal-wall-side-attack--390x844--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:44:14.613Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "first-wave",
+      "state": "first-wave",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 81.48240000001421,
+        "cycle": 5.454400000000004,
+        "dayLen": 76,
+        "wave": 1,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 381.76283329010374,
+          "dir": 0,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 24.321974835295485,
+            "y": 40.291310565267345
+          }
+        ],
+        "bolts": 0,
+        "toast": "第 1 夜 · 第 1/2 波来了！",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第 1 夜 · 第 1/2 波来了！",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 5",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 781.09375
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 334,
+          "y": 357.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 175.7602095866253,
+          "y": 208.21154270019525
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 561.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 332.3125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 178.42667558406646,
+          "y": 208.21154270019525
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ],
+      "relative_image_path": "images/normal-first-wave--390x844--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:44:19.016Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "first-fence",
+      "state": "first-fence",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": true,
+        "nights": 0,
+        "time": 1.793099999999998,
+        "cycle": 1.7694999999999976,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 0,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 376.8144400000002,
+          "y": 358.5115999999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一面栅栏好了！还差 3 面。",
+        "toastVisible": true,
+        "objective": "白天围营 · 还差 3 面栅栏",
+        "guide": "按 1 选栅栏，直接用木头放到篝火旁发光格（还差 3 面），不用先合成。自己能穿过栅栏。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 109,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 586.59375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 688,
+            "height": 60,
+            "right": 784,
+            "bottom": 654.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 688,
+            "height": 20,
+            "right": 784,
+            "bottom": 614.59375
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 914,
+            "y": 163,
+            "width": 260,
+            "height": 22.5,
+            "right": 1174,
+            "bottom": 185.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 109,
+            "width": 280,
+            "height": 300.5,
+            "right": 1184,
+            "bottom": 409.5
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第一面栅栏好了！还差 3 面。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "这段好了。点发光的空地继续围",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第三步：围营地"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 450.4976049999994,
+          "y": 351.49922154947944
+        }
+      ],
+      "relative_image_path": "images/normal-first-fence--1280x800--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:44:21.271Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "first-night",
+      "state": "first-night",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 76.03810000000387,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 358.5115999999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 109,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 586.59375
+          },
+          "wave-banner": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 623.59375
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 95,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 658.59375
+          },
+          "prompt": {
+            "x": 96,
+            "y": 658.59375,
+            "width": 796,
+            "height": 31,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "build-banner": {
+            "x": 96,
+            "y": 689.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "guide": {
+            "x": 914,
+            "y": 163,
+            "width": 260,
+            "height": 112.5,
+            "right": 1174,
+            "bottom": 275.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 109,
+            "width": 280,
+            "height": 470.09375,
+            "right": 1184,
+            "bottom": 579.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第一夜：怪分波朝篝火来。站在墙后打。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "这段好了。点发光的空地继续围",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 450.4976049999994,
+          "y": 351.49922154947944
+        }
+      ],
+      "relative_image_path": "images/normal-first-night--1280x800--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:45:35.510Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "night-guide",
+      "state": "night-guide",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 76.10480000000388,
+        "cycle": 0.0666999999999971,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 358.5115999999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 109,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 586.59375
+          },
+          "wave-banner": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 623.59375
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 95,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 658.59375
+          },
+          "prompt": {
+            "x": 96,
+            "y": 658.59375,
+            "width": 796,
+            "height": 31,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "build-banner": {
+            "x": 96,
+            "y": 689.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "guide": {
+            "x": 914,
+            "y": 163,
+            "width": 260,
+            "height": 112.5,
+            "right": 1174,
+            "bottom": 275.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 109,
+            "width": 280,
+            "height": 470.09375,
+            "right": 1184,
+            "bottom": 579.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第一夜：怪分波朝篝火来。站在墙后打。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "这段好了。点发光的空地继续围",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 450.4976049999994,
+          "y": 351.49922154947944
+        }
+      ],
+      "relative_image_path": "images/normal-night-guide--1280x800--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:45:35.574Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "wall-facing-hold",
+      "state": "wall-facing-hold",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 76.57190000000398,
+        "cycle": 0.533800000000003,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 358.5115999999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 109,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 586.59375
+          },
+          "wave-banner": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 623.59375
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 95,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 658.59375
+          },
+          "prompt": {
+            "x": 96,
+            "y": 658.59375,
+            "width": 796,
+            "height": 31,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "build-banner": {
+            "x": 96,
+            "y": 689.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "guide": {
+            "x": 914,
+            "y": 163,
+            "width": 260,
+            "height": 112.5,
+            "right": 1174,
+            "bottom": 275.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 109,
+            "width": 280,
+            "height": 470.09375,
+            "right": 1184,
+            "bottom": 579.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第一夜：怪分波朝篝火来。站在墙后打。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "左键点空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 450.4976049999994,
+          "y": 351.49922154947944
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        }
+      ],
+      "relative_image_path": "images/normal-wall-facing-hold--1280x800--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:45:36.039Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "wall-side-attack",
+      "state": "wall-side-attack",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 77.02230000000407,
+        "cycle": 0.984199999999997,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 379.51107999999925,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 109,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 586.59375
+          },
+          "wave-banner": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 623.59375
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 95,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 658.59375
+          },
+          "prompt": {
+            "x": 96,
+            "y": 658.59375,
+            "width": 796,
+            "height": 31,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "build-banner": {
+            "x": 96,
+            "y": 689.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "guide": {
+            "x": 914,
+            "y": 163,
+            "width": 260,
+            "height": 112.5,
+            "right": 1174,
+            "bottom": 275.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 109,
+            "width": 280,
+            "height": 470.09375,
+            "right": 1184,
+            "bottom": 579.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "围上了。还差 3 面，点下一个发光格。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "左键点空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 450.4976049999994,
+          "y": 351.49922154947944
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 456.1084387914931,
+          "y": 351.49922154947944
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        }
+      ],
+      "relative_image_path": "images/normal-wall-side-attack--1280x800--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:45:36.490Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    },
+    {
+      "screen_id": "first-wave",
+      "state": "first-wave",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "platform": "Web / chromium",
+      "build": {
+        "sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+        "dirty": true,
+        "source": "current working-tree product bytes",
+        "source_sha256": "487ade13b19d2365bb95b5a4934a4af3eb6280c6b54a3071d1d238fc8c2bc1ce"
+      },
+      "phase": "after",
+      "data": {
+        "day": false,
+        "nights": 1,
+        "time": 81.49260000000491,
+        "cycle": 5.454500000000008,
+        "dayLen": 76,
+        "wave": 1,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 381.08950566876524,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 24.37473374014105,
+            "y": 152.2141335657949
+          }
+        ],
+        "bolts": 0,
+        "toast": "第 1 夜 · 第 1/2 波来了！",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 109,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 586.59375
+          },
+          "wave-banner": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 623.59375
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 95,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 658.59375
+          },
+          "prompt": {
+            "x": 96,
+            "y": 658.59375,
+            "width": 796,
+            "height": 31,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "build-banner": {
+            "x": 96,
+            "y": 689.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "guide": {
+            "x": 914,
+            "y": 163,
+            "width": 260,
+            "height": 112.5,
+            "right": 1174,
+            "bottom": 275.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 109,
+            "width": 280,
+            "height": 470.09375,
+            "right": 1184,
+            "bottom": 579.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第 1 夜 · 第 1/2 波来了！",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "左键点空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 5",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "source": "ordinary isolated mage new game; native wood gathering/first-fence placement/natural first dusk; no state or save injection",
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 450.4976049999994,
+          "y": 351.49922154947944
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 456.1084387914931,
+          "y": 351.49922154947944
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        }
+      ],
+      "relative_image_path": "images/normal-first-wave--1280x800--after--487ade13--79078fbf.png",
+      "issue_ids": [
+        "UI-030"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T19:45:40.963Z",
+      "repro_steps": [
+        "原生选法师、开始、跳过开场/预演",
+        "砍木、选栅栏、点(22,22)扣原2木；等原首日自然天黑（夹具单列）",
+        "首夜面对首墙按住采集/攻击确实拆墙；恢复墙后走到墙侧，按住同控件发术，不拆墙或扣建造料"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "natural": true,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 76.04449999998035,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 360.15995999999984,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 76.11119999998036,
+        "cycle": 0.06669999999999708,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 360.15995999999984,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 76.61169999998046,
+        "cycle": 0.5671999999999972,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 360.15995999999984,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 77.04539999998053,
+        "cycle": 1.0008999999999941,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 379.5145599999997,
+          "dir": 0,
+          "mana": 7.585494999999999
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 77.09539999998054,
+        "cycle": 1.050899999999994,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 380.99658179999966,
+          "dir": 0,
+          "mana": 6.652995
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 268.28125
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 264,
+          "y": 315.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 144.31338725050009,
+          "y": 187.2444786035158
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 519.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 216.8125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 146.4862901877367,
+          "y": 187.2444786035158
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "natural": true,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 76.0280000000132,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 360.15822000000003,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 76.0947000000132,
+        "cycle": 0.0666999999999971,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 360.15822000000003,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 76.5950000000133,
+        "cycle": 0.5670000000000002,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 360.15822000000003,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 77.02880000001339,
+        "cycle": 1.0008000000000026,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 379.5070200000003,
+          "dir": 0,
+          "mana": 7.585630000000009
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 77.07890000001339,
+        "cycle": 1.0508999999999937,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 380.9898131999999,
+          "dir": 0,
+          "mana": 6.6532649999999975
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 781.09375
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 334,
+          "y": 357.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 175.7602095866253,
+          "y": 208.21154270019525
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 561.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 332.3125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 178.42667558406646,
+          "y": 208.21154270019525
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "natural": true,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 76.03810000000387,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 358.5115999999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 76.10480000000388,
+        "cycle": 0.0666999999999971,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 358.5115999999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 76.57190000000398,
+        "cycle": 0.533800000000003,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 358.5115999999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 77.00550000000406,
+        "cycle": 0.967399999999994,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 378.82899999999916,
+          "dir": 0,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 77.02230000000407,
+        "cycle": 0.984199999999997,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 379.51107999999925,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 450.4976049999994,
+          "y": 351.49922154947944
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 456.1084387914931,
+          "y": 351.49922154947944
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        }
+      ]
+    }
+  ]
+}

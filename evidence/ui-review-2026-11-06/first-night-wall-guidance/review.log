@@ -1,0 +1,8 @@
+Independent ship-gate reviewer: night-guidance-review (code-review agent).
+Scope: game.js two text branches; tests/first-night-guidance.mjs;
+tests/e2e.mjs integration. No edits or duplicate builds requested.
+Reviewed guidance vs existing Space demolition priority, preserved desktop
+wording/timing/cost/rules, fixture vs natural capture metadata, touch native
+input readiness, clipping assertion, WebKit keyboard hold fallback.
+Reviewer result: "No significant issues found in the reviewed changes."
+This is a code review, not user/coordinator visual acceptance.
