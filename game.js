@@ -1454,7 +1454,10 @@
       return;
     }
     const f = facingTile();
-    if (plant(f.tx, f.ty)) return;
+    if (tileAt(f.tx, f.ty) === T.FARM) {
+      plant(f.tx, f.ty);
+      return;
+    }
     toast("靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。");
   }
 

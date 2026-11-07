@@ -1,13 +1,22 @@
 {
   "supplemental_batches": [
     {
+      "id": "planting-feedback",
+      "base_sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+      "index": "planting-feedback/INDEX.md",
+      "screenshots": "planting-feedback/screenshots.json",
+      "issue_ids": ["UI-014"],
+      "status": "已截",
+      "visual_review": "14张真实首屏前后原图待协调人逐图审查；320/390/844原生交互触屏、1280桌面。隔离空田定位后真实耗完初始两粒种子；不注库存/阶段。夜间单独fixture，非自然夜守/三夜或真机验收"
+    },
+    {
       "id": "farmer-skill-feedback",
       "base_sha": "557c41e17103c9593789e44ffe2b3a148cb13f34",
       "index": "farmer-skill-feedback/INDEX.md",
       "screenshots": "farmer-skill-feedback/screenshots.json",
       "issue_ids": ["UI-013"],
       "status": "已截",
-      "visual_review": "28张真实首屏前后原图待协调人逐图审查；320/390/844原生触屏、1280桌面。正常首局及明示空田/伤血/夜间fixture，真实播种/技能输入；非自然夜守、三夜或真机验收"
+      "visual_review": "协调人10:30已看320已熟满血、390新苗夜伤血两图，所看状态局部通过；不是全部28图/教程展开/真机通过。夜间次提示裁切/内滚限制保留，其余待审"
     },
     {
       "id": "crop-feedback",
@@ -94,6 +103,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-014",
+      "title": "空田缺种交互的专用拒绝提示被通用说明立即覆盖",
+      "status": "已修复，待协调人逐图审查",
+      "before": "planting-feedback/exhausted-day before",
+      "after": "planting-feedback/exhausted-day after"
+    },
     {
       "id": "UI-013",
       "title": "丰收术在无待熟麦苗时仍声称催熟，未说明实际回血结果",
