@@ -1,5 +1,17 @@
 # UI-017 夜战次级指引完整收起
 
+## PR14 CI 滚动回归修复（不改产品）
+
+原 run `42345136221` / job `128321128991` 的Linux WebKit在 `tests/night-notice-fold.mjs:204` 等待Home后scrollTop=0超时30秒；此前End正偏移断言已通过。安装步骤06:01:24–06:01:54成功，游戏测试06:01:54–06:07:11执行后失败；static成功，不能记为安装失败或CI通过。原日志未记录焦点、偏移或具体视口，不能唯一还原原现场。
+
+旧测试只等End首次正偏移便立刻反向；[WebKit上游实现](https://github.com/WebKit/WebKit/blob/ce4df78bd3b06d1cd763458253db65655617731f/Source/WebCore/platform/KeyboardScrollingAnimator.cpp#L210-L233)会消费反向键以取消尚在进行的滚动，而不启动反向。上游[Home/End默认处理](https://github.com/WebKit/WebKit/blob/ce4df78bd3b06d1cd763458253db65655617731f/Source/WebCore/page/EventHandler.cpp#L5211-L5225)对GTK/WPE/Windows均使用无修饰键，故未改为Ctrl组合键。本机WebKit26.5瞬时滚动，Chromium151可测到多帧动画及之后的原生scrollend；没有可用本机Linux运行时，原Linux现场的完整因果仍以新SHA CI验证。
+
+最小修改仅在测试：确认焦点、原生scrollend支持和触屏夹具实际溢出；真实End到达实际底部且完成原生scrollend后再真实Home，Home也须产生新的完成事件并归零。记录键值、未拦截状态、边界和失败现场；不加超时、不直接赋scrollTop、不跳过正反覆盖，原生触控pan断言保留。
+
+[修后Chromium八会话/六次真实触控pan](ci-scroll-fix-native.log)：320/390正向36→反向0，844正向18→反向0；桌面本来不溢出，保持0并验证原键确实收到。[新测试的完整本机WebKit集成](ci-scroll-fix-integration.log)。独立只读审查未发现显著问题；新SHA GitHub CI结论在终端交付记录核对，不把旧失败或本机成功冒称Linux已通过。
+
+产品三个文件字节哈希仍为下文73fa0632，32张旧原图/元数据全部复用，未补拍未变UI。用户报告320所看状态局部通过，不外推32图全量批准。当前修复没有产品界面或交互语义改动，natural诊断/旧候选/腾讯云5f451b6均保留，不合并、不发布。
+
 5f451b6 下真实 Chromium 320 触屏长按攻击、松开后复现：波次占22px，反馈区剩38px；缺法力反馈26px，操作指引44px却只露12px。优先级为**波次与当前反馈优先，次级操作/建造说明按需查看**。本批另外以明确的低法力/部分材料夹具复现同状态，未重打自然三夜。
 
 仅在既有 touchLayout（粗指针 OR 宽度≤760）且波次栏显示时，CSS完整隐藏原操作指引和建造说明，不留下半行。当前反馈及原滚动区域不变；反馈自然过期后显示“操作指引见「怎么玩」”。现有44px「怎么玩」仍主动打开原暂停帮助，新增的是把当时有效的反馈、指引、建造/取消说明全文放在帮助顶部。**没有新增自动暂停、输入规则或按钮，也未修改消耗、法力恢复、战斗、昼夜、胜负、存档。** 白天和桌面细指针原展示方式保留。

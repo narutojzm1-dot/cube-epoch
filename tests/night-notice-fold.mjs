@@ -197,11 +197,50 @@ export async function testNightNoticeFold(browser, origin, { before = false, cap
         const day = await read();
         for (const id of ["prompt", "build-banner"]) assert.notEqual(day.rows.find((r) => r.id === id).display, "none");
         await page.locator("#notice-feed").focus();
+        const scrollStart = await page.locator("#notice-feed").evaluate((el) => {
+          window.__noticeScroll = { ends: [], keys: [] };
+          el.addEventListener("scrollend", () => window.__noticeScroll.ends.push(el.scrollTop));
+          window.addEventListener("keydown", (e) => {
+            if (e.target === el && ["Home", "End"].includes(e.code)) {
+              window.__noticeScroll.keys.push({ key: e.key, code: e.code, prevented: e.defaultPrevented });
+            }
+          });
+          return { focused: document.activeElement === el, scrollend: "onscrollend" in el,
+            top: el.scrollTop, height: el.clientHeight, full: el.scrollHeight };
+        });
+        assert.equal(scrollStart.focused, true, "keyboard scrolling must target the notice region");
+        assert.equal(scrollStart.scrollend, true, "native scroll completion must be observable");
+        assert.equal(scrollStart.top, 0);
+        const maximumScroll = Math.max(0, scrollStart.full - scrollStart.height);
+        if (mode.touch) assert.ok(maximumScroll > 0, "touch feedback fixture must actually overflow");
+        const waitForScrollEnd = async (completed, top) => {
+          try {
+            await page.waitForFunction(({ completed, top }) => {
+              const el = document.getElementById("notice-feed");
+              return document.activeElement === el && Math.abs(el.scrollTop - top) <= 1
+                && window.__noticeScroll.ends.length > completed;
+            }, { completed, top });
+          } catch (error) {
+            const detail = await page.locator("#notice-feed").evaluate((el) => ({
+              focus: document.activeElement.id, top: el.scrollTop, height: el.clientHeight,
+              full: el.scrollHeight, ...window.__noticeScroll,
+            }));
+            throw new Error(`notice scroll ${engine} ${mode.width}x${mode.height} ${kind}: ${JSON.stringify(detail)}`, { cause: error });
+          }
+        };
+        // An opposite key can cancel WebKit's in-flight scroll instead of reversing it.
         await page.keyboard.press("End");
-        if (mode.touch) await page.waitForFunction(() => document.getElementById("notice-feed").scrollTop > 0);
+        if (maximumScroll > 0) await waitForScrollEnd(0, maximumScroll);
         const scrollBottom = await page.locator("#notice-feed").evaluate((el) => el.scrollTop);
+        const endCount = await page.evaluate(() => window.__noticeScroll.ends.length);
         await page.keyboard.press("Home");
-        await page.waitForFunction(() => document.getElementById("notice-feed").scrollTop === 0);
+        if (maximumScroll > 0) await waitForScrollEnd(endCount, 0);
+        assert.equal(await page.locator("#notice-feed").evaluate((el) => el.scrollTop), 0);
+        const keyboardScroll = await page.evaluate(() => window.__noticeScroll);
+        assert.deepEqual(keyboardScroll.keys, [
+          { key: "End", code: "End", prevented: false }, { key: "Home", code: "Home", prevented: false },
+        ]);
+        console.log(`NIGHT_NOTICE_SCROLL_OK ${JSON.stringify({ engine, viewport, kind, scrollStart, scrollBottom, keyboardScroll })}`);
         let nativePan = null;
         if (session && !before) {
           const r = await page.locator("#notice-feed").boundingBox(), x = r.x + r.width / 2;
@@ -216,13 +255,14 @@ export async function testNightNoticeFold(browser, origin, { before = false, cap
           } finally { await session.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] }); }
           await page.waitForFunction(() => document.getElementById("notice-feed").scrollTop > 0);
           nativePan = await page.locator("#notice-feed").evaluate((el) => el.scrollTop);
+          console.log(`NIGHT_NOTICE_PAN_OK ${JSON.stringify({ viewport, kind, scrollTop: nativePan })}`);
         }
         if (mode.touch) await selectFence();
         else await page.keyboard.press("0");
         assert.equal((await read()).build, null);
         assert.deepEqual((await inspect(page)).scroll, { x: 0, y: 0 });
         checks.push({ viewport, kind, version, initial, current, helpBody, day, scrollBottom,
-          native_hold: !!session, native_pan_scroll: nativePan, resume_and_release: true, cancellation_and_day_scroll: true });
+          keyboardScroll, native_hold: !!session, native_pan_scroll: nativePan, resume_and_release: true, cancellation_and_day_scroll: true });
       }
       assert.deepEqual(errors, []);
     } finally { await context.close(); }

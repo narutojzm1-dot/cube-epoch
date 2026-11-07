@@ -51,3 +51,36 @@ Fixture restrictions:
   Native Chromium touch and WebKit keyboard holds are distinct.
   No user saves, natural-loop result writes, merges, deployments, CI reruns or workflow edits.
   Image visibility checks do not equal coordinator visual approval.
+
+PR14 original Linux CI failure and minimal test-only repair:
+  Run42345136221 job128321128991 source56c4840; static SUCCESS, e2e FAILURE.
+  Dependency install SUCCESS06:01:24..06:01:54; tests ran06:01:54..06:07:11 UTC.
+  Original line204 Home scrollTop===0 timed out30000ms; earlier End>0 passed.
+  Original log has no focus/offset/viewport diagnostics. Do not infer missing state.
+  Windows WebKit26.5 plain End/Home:10/0, native scrollend fires.
+  Chromium151 plain End animates through1..10 before native scrollend.
+  WebKit upstream ce4df78bd3b06d1cd763458253db65655617731f:
+  KeyboardScrollingAnimator.cpp210..233 consumes opposite key to end in-flight
+  scroll instead of starting reverse; EventHandler.cpp5211..5225 uses plain
+  Home/End on GTK/WPE/WIN and rejects modifiers. No Ctrl-key substitution.
+  No usable local Linux runtime; original Linux root cause not experimentally
+  reconstructed. New SHA CI must verify native Linux sequence.
+  Fix only tests/night-notice-fold.mjs:focus/support/overflow assertions, native
+  completion before reverse, actual bottom/top, key/prevented diagnostics.
+  No timeout increase, direct scrollTop assignment, input mocking or gate skip.
+node --check tests\night-notice-fold.mjs
+node tests\night-notice-fold.mjs
+  PASS:8 Chromium sessions,6 original native pan assertions,0 new screenshots.
+  320/390 keyboard completion36/0,844 completion18/0,desktop nonoverflow0.
+  Focus true, actual End/Home keys not prevented; raw ci-scroll-fix-native.log.
+Independent [reviewer] scroll-review
+  No significant issues. Read-only; Linux behavior awaits new SHA CI.
+node tests\e2e.mjs
+  PASS / exit0 / E2E_OK in ci-scroll-fix-integration.log.
+  Eight WebKit sessions:focus=true, real End/Home not prevented, completed
+  sequences36/0 (320/390),18/0 (844),desktop nonoverflow0.
+  Legacy integration regressions passed; no additional image capture.
+  Existing game.js/index.html/style.css syntax/static results reused unchanged.
+Integrity check
+  PASS:product hash73fa0632 and original screenshot/validation/boundary JSON
+  unchanged; protected natural diagnostic hash964230...89596D unchanged.
