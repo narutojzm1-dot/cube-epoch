@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "mana-feedback",
+      "base_sha": "32f0ef280efcaf1746343bc074480a5cfb90d289",
+      "index": "mana-feedback/INDEX.md",
+      "screenshots": "mana-feedback/screenshots.json",
+      "issue_ids": ["UI-016"],
+      "status": "已截",
+      "visual_review": "8张夜战法力不足/原生释放首屏前后图待协调人逐图审查；320/390/844触屏及1280桌面。真实消耗原法力、自然恢复、再攻击/星爆，夜间靶为明示fixture，不代表自然夜守/三夜/真机"
+    },
+    {
       "id": "audio-recovery",
       "base_sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
       "index": "audio-recovery/INDEX.md",
@@ -112,6 +121,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-016",
+      "title": "不足1点法力HUD却显示1，且未说明原自动恢复",
+      "status": "已修复，待协调人逐图审查",
+      "before": "mana-feedback/depleted-release before",
+      "after": "mana-feedback/depleted-release after"
+    },
     {
       "id": "UI-015",
       "title": "用户开启声音后，已挂起的AudioContext仍未恢复",
