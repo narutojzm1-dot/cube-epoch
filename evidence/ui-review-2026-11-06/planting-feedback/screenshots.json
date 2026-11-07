@@ -1,0 +1,4313 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "exhausted-day",
+      "state": "exhausted-day / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": false,
+        "source_sha256": "51a0cbc70ebe7ba282df9ce2f70aaaf12fc1e8f66bbd6185bf5e7fcad0612cb7"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-day--320x568--before--51a0cbc7.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:34:29.855Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 60,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 44,
+              "right": 314,
+              "bottom": 329.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 329.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 355.796875
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 94.5,
+              "right": 304,
+              "bottom": 644.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "保持正常白天",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-night",
+      "state": "exhausted-night / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": false,
+        "source_sha256": "51a0cbc70ebe7ba282df9ce2f70aaaf12fc1e8f66bbd6185bf5e7fcad0612cb7"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-night--320x568--before--51a0cbc7.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:34:31.315Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 22,
+              "right": 314,
+              "bottom": 307.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 38,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 44,
+              "right": 314,
+              "bottom": 351.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 351.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 377.796875
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 112.5,
+              "right": 304,
+              "bottom": 662.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "独立夜间fixture：第二夜26秒/波1/3，远处静止零伤害怪；非自然夜守",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-day",
+      "state": "exhausted-day / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": false,
+        "source_sha256": "51a0cbc70ebe7ba282df9ce2f70aaaf12fc1e8f66bbd6185bf5e7fcad0612cb7"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-day--390x844--before--51a0cbc7.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:34:37.424Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 60,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 353.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 353.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 379.796875
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 94.5,
+              "right": 374,
+              "bottom": 686.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "保持正常白天",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-night",
+      "state": "exhausted-night / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": false,
+        "source_sha256": "51a0cbc70ebe7ba282df9ce2f70aaaf12fc1e8f66bbd6185bf5e7fcad0612cb7"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-night--390x844--before--51a0cbc7.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:34:38.918Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 22,
+              "right": 384,
+              "bottom": 349.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 38,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 375.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 375.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 401.796875
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 112.5,
+              "right": 374,
+              "bottom": 704.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "独立夜间fixture：第二夜26秒/波1/3，远处静止零伤害怪；非自然夜守",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-day",
+      "state": "exhausted-day / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": false,
+        "source_sha256": "51a0cbc70ebe7ba282df9ce2f70aaaf12fc1e8f66bbd6185bf5e7fcad0612cb7"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-day--844x390--before--51a0cbc7.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:34:45.211Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 54,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 253.984375
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 60,
+              "right": 546,
+              "bottom": 320
+            },
+            "toast": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 286
+            },
+            "prompt": {
+              "x": 6,
+              "y": 286,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 312
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 378,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 472.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 324,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 372
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 54,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 150,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 54,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 102,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 706,
+              "y": 150,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "保持正常白天",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-night",
+      "state": "exhausted-night / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": false,
+        "source_sha256": "51a0cbc70ebe7ba282df9ce2f70aaaf12fc1e8f66bbd6185bf5e7fcad0612cb7"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-night--844x390--before--51a0cbc7.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:34:46.658Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 54,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 253.984375
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 22,
+              "right": 546,
+              "bottom": 282
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 282,
+              "width": 540,
+              "height": 38,
+              "right": 546,
+              "bottom": 320
+            },
+            "toast": {
+              "x": 6,
+              "y": 282,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 308
+            },
+            "prompt": {
+              "x": 6,
+              "y": 308,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 334
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 378,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 472.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 324,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 372
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 54,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 150,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 54,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 102,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 706,
+              "y": 150,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "独立夜间fixture：第二夜26秒/波1/3，远处静止零伤害怪；非自然夜守",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-day",
+      "state": "exhausted-day / before",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": false,
+        "source_sha256": "51a0cbc70ebe7ba282df9ce2f70aaaf12fc1e8f66bbd6185bf5e7fcad0612cb7"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-day--1280x800--before--51a0cbc7.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "keyboard E",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:34:52.824Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住左键收。",
+          "touchLayout": false
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": false
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+          "touchLayout": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "document": {
+            "width": 1280,
+            "height": 800
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 96,
+              "y": 93,
+              "width": 796,
+              "height": 477.59375,
+              "right": 892,
+              "bottom": 570.59375
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 96,
+              "y": 578.59375,
+              "width": 796,
+              "height": 66,
+              "right": 892,
+              "bottom": 644.59375
+            },
+            "toast": {
+              "x": 96,
+              "y": 578.59375,
+              "width": 796,
+              "height": 35,
+              "right": 892,
+              "bottom": 613.59375
+            },
+            "prompt": {
+              "x": 96,
+              "y": 613.59375,
+              "width": 796,
+              "height": 31,
+              "right": 892,
+              "bottom": 644.59375
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 914,
+              "y": 147,
+              "width": 260,
+              "height": 112.5,
+              "right": 1174,
+              "bottom": 259.5
+            },
+            "play-details": {
+              "x": 904,
+              "y": 93,
+              "width": 280,
+              "height": 410.09375,
+              "right": 1184,
+              "bottom": 503.09375
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "←",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "↓",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "→",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            }
+          ],
+          "canvas_backing": {
+            "width": 960,
+            "height": 576
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "按 E 或左键播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": true,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "保持正常白天",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-day",
+      "state": "exhausted-day / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": true,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-day--320x568--after--295f970e.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:35:19.626Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 60,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 311.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 311.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 337.796875
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 94.5,
+              "right": 304,
+              "bottom": 644.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "没有种子了。收麦可以再拿到种子。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "保持正常白天",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-night",
+      "state": "exhausted-night / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": true,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-night--320x568--after--295f970e.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:35:21.099Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 22,
+              "right": 314,
+              "bottom": 307.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 38,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 307.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 333.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 333.796875,
+              "width": 308,
+              "height": 26,
+              "right": 314,
+              "bottom": 359.796875
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 112.5,
+              "right": 304,
+              "bottom": 662.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "没有种子了。收麦可以再拿到种子。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "独立夜间fixture：第二夜26秒/波1/3，远处静止零伤害怪；非自然夜守",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-day",
+      "state": "exhausted-day / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": true,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-day--390x844--after--295f970e.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:35:27.440Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 60,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 353.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 353.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 379.796875
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 94.5,
+              "right": 374,
+              "bottom": 686.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "没有种子了。收麦可以再拿到种子。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "保持正常白天",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-night",
+      "state": "exhausted-night / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": true,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-night--390x844--after--295f970e.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:35:28.921Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 22,
+              "right": 384,
+              "bottom": 349.796875
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 38,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 349.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 375.796875
+            },
+            "prompt": {
+              "x": 6,
+              "y": 375.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 401.796875
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 112.5,
+              "right": 374,
+              "bottom": 704.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "没有种子了。收麦可以再拿到种子。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "独立夜间fixture：第二夜26秒/波1/3，远处静止零伤害怪；非自然夜守",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-day",
+      "state": "exhausted-day / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": true,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-day--844x390--after--295f970e.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:35:35.271Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 54,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 253.984375
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 60,
+              "right": 546,
+              "bottom": 320
+            },
+            "toast": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 286
+            },
+            "prompt": {
+              "x": 6,
+              "y": 286,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 312
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 378,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 472.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 324,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 372
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 54,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 150,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 54,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 102,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 706,
+              "y": 150,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "没有种子了。收麦可以再拿到种子。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "保持正常白天",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-night",
+      "state": "exhausted-night / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": true,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-night--844x390--after--295f970e.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touchscreen interaction taps",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:35:36.779Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住「采集/攻击」收。",
+          "touchLayout": true
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": false,
+          "nights": 2,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": true
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 54,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 253.984375
+            },
+            "wave-banner": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 22,
+              "right": 546,
+              "bottom": 282
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 282,
+              "width": 540,
+              "height": 38,
+              "right": 546,
+              "bottom": 320
+            },
+            "toast": {
+              "x": 6,
+              "y": 282,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 308
+            },
+            "prompt": {
+              "x": 6,
+              "y": 308,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 334
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 378,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 472.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 324,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 372
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 54,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 150,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 54,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 102,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 706,
+              "y": 150,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "没有种子了。收麦可以再拿到种子。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "点「交互 E」播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "第 2 夜  波次 1/3  剩余 1",
+              "hidden": false
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第四步：守住篝火"
+        },
+        "alternative_input": "keyboard Space hold/release (not a native touch hold)",
+        "alternative_refusal": "没有种子了。收麦可以再拿到种子。"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "独立夜间fixture：第二夜26秒/波1/3，远处静止零伤害怪；非自然夜守",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    },
+    {
+      "screen_id": "exhausted-day",
+      "state": "exhausted-day / after",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "326e686bc23893b9bfcb8464d45d84e10c4c7595",
+        "dirty": true,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "isolated location/empty-soil fixture; real planting exhausts normal seeds",
+      "relative_image_path": "images/exhausted-day--1280x800--after--295f970e.png",
+      "issue_ids": [
+        "UI-014"
+      ],
+      "status": "已截",
+      "platform": "Web / webkit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "keyboard E",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T02:35:43.168Z",
+      "result": {
+        "front": {
+          "tx": 32,
+          "ty": 24
+        },
+        "startInv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "spend": 2,
+        "initial": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "播下了。长大后按住左键收。",
+          "touchLayout": false
+        },
+        "first": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": false
+        },
+        "repeated": {
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 0,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "tile": 7,
+          "crop": null,
+          "hp": 165,
+          "day": true,
+          "nights": 0,
+          "over": false,
+          "win": false,
+          "toast": "没有种子了。收麦可以再拿到种子。",
+          "touchLayout": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "document": {
+            "width": 1280,
+            "height": 800
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 96,
+              "y": 93,
+              "width": 796,
+              "height": 477.59375,
+              "right": 892,
+              "bottom": 570.59375
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 96,
+              "y": 578.59375,
+              "width": 796,
+              "height": 66,
+              "right": 892,
+              "bottom": 644.59375
+            },
+            "toast": {
+              "x": 96,
+              "y": 578.59375,
+              "width": 796,
+              "height": 35,
+              "right": 892,
+              "bottom": 613.59375
+            },
+            "prompt": {
+              "x": 96,
+              "y": 613.59375,
+              "width": 796,
+              "height": 31,
+              "right": 892,
+              "bottom": 644.59375
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 914,
+              "y": 147,
+              "width": 260,
+              "height": 112.5,
+              "right": 1174,
+              "bottom": 259.5
+            },
+            "play-details": {
+              "x": 904,
+              "y": 93,
+              "width": 280,
+              "height": 410.09375,
+              "right": 1184,
+              "bottom": 503.09375
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "←",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "↓",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "→",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            }
+          ],
+          "canvas_backing": {
+            "width": 960,
+            "height": 576
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "没有种子了。收麦可以再拿到种子。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "按 E 或左键播种（要有种子）",
+              "hidden": false
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": true,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士，跳过开场/预演；不接触用户存档",
+        "fixture仅玩家(30,25)面北与附近草地、三块空田，不注库存或作物阶段",
+        "真实点交互或按E播种两次，用完初始两粒种子；移至第三空田，再交互两次",
+        "保持正常白天",
+        "只拍照冻结模拟，真实首屏、100%缩放；保留实际库存/田与原生输入记录"
+      ]
+    }
+  ],
+  "visual_review": "待协调人逐图审查"
+}

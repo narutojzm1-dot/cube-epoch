@@ -1,0 +1,66 @@
+Product baseline: 326e686bc23893b9bfcb8464d45d84e10c4c7595
+Before served-byte SHA256: 51a0cbc70ebe7ba282df9ce2f70aaaf12fc1e8f66bbd6185bf5e7fcad0612cb7
+After dirty served-byte SHA256: 295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c
+
+Actual isolated320 knight reproduction, native touchscreen interaction:
+PRE  seed0 tile7 toast="播下了。长大后按住「采集/攻击」收。"
+POST seed0 tile7 toast="靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。"
+Seeds were consumed by actual planting, not injected. Original starting seed2.
+
+node --check tests\planting-feedback.mjs
+exit0
+node tests\planting-feedback.mjs --before --capture
+PLANTING_FEEDBACK_OK 24 before cases; real seed depletion + refusal/repeat/success/target priorities; 7 original PNGs
+
+node --check game.js
+exit0
+node tests\static.mjs
+STATIC_OK
+node tests\planting-feedback.mjs --capture
+PLANTING_FEEDBACK_OK 24 after cases; real seed depletion + refusal/repeat/success/target priorities; 7 original PNGs
+
+Original independent review request failed before returning findings:
+Failed to get response from the AI model; retried5 times, total retry wait23.00 seconds.
+Failed native model HTTP request: client error(Connect): 远程主机强迫关闭了一个现有的连接。 (os error10054)
+User subsequently reported DNS11001/ENOTFOUND retry exhaustion; those later errors were not independently observed by this review tool.
+No review pass claimed at that point. Source, completed tests and14 images retained unchanged.
+
+User-authorized single resumption:
+HEAD326e686 / fix/planting-refusal-feedback verified; only in-scope changes and original local diagnostic present.
+Natural diagnostic SHA256 retained: 964230C5914271F326300CA2C0FE82122B87F43D3BF2111D5B2363A75089596D
+No active interrupted planting command; earlier completed natural/crop/farmer sessions not restarted.
+Independent READ-ONLY reviewer [reviewer] Resume narrow planting review:
+No significant issues found in the reviewed changes.
+No second writer/worktree. No further provider retry/relaunch.
+
+Only not-yet-run integration gate completed after resumption:
+node --check tests\e2e.mjs
+exit0
+node tests\e2e.mjs
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+HEART_DELIVERY_OK 20 after cases; 0 original PNGs
+CROP_FEEDBACK_OK 20 after checks; natural growth + unchanged harvest + night priority; 0 actual-viewport originals; webkit; harvest=keyboard, touch E native
+FARMER_SKILL_FEEDBACK_OK 20 after cases; actual ripening/heal + cap/cooldown/inventory guards; 0 original PNGs
+PLANTING_FEEDBACK_OK 24 after cases; real seed depletion + refusal/repeat/success/target priorities; 0 original PNGs
+DEVICE_HINTS_OK 84 cases; 0 actual-viewport PNGs
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":109.5,"y":95,"width":470,"height":282,"right":579.5,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406,"y":280.703125,"width":816,"height":489.59375,"right":1222,"bottom":770.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+E2E_OK
+exit0
+
+node tests\ui-review.mjs --check-coverage
+UI_COVERAGE_OK recorded baseline172/172; history305; supplemental358; read-only, no images captured; not a new-build full-matrix claim
+PLANTING_EVIDENCE_INTEGRITY_OK14 originals; completed24+24 checks reused; product hash matches capture; old matrices/batches and protected diagnosis preserved
+git diff --check (only current slice)
+exit0
+
+Completed captures and focused/static checks reused, not rerun.
+Night phase is an isolated fixture, not natural survival.
+WebKit touchscreen E taps native; alternative300ms Space hold/release is keyboard-only.
+All14 originals await coordinator visual review; not physical-device acceptance.
