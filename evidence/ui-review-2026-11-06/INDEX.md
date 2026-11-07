@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-021 暂停帮助随时返回
+
+[20张四视口前后原图](build-help-return/INDEX.md) · [真实上滑/首屏继续/取消再放/暂停安全](build-help-return/validation.json) · [源码与矩形](build-help-return/screenshots.json) · [检查](build-help-return/checks.log)。
+
+普通触屏320/390/844原继续需上滑438/85/360px才出现。仅暂停帮助正文独立滚动，原44px继续/回选角始终可见，重新打开从顶部显示当前步骤。原建造全文、核心画布和暂停回调保留；夜间图明确夹具，不称自然夜守。20图待协调逐图审查，旧批次/候选/诊断保留。
+
 ## 独立维护批次：UI-020 白天建造完整步骤入口
 
 [16张四视口前后原图](build-guidance/INDEX.md) · [正常采集/成品优先/原生滚动/帮助/取消/再放置](build-guidance/validation.json) · [真实源码/矩形](build-guidance/screenshots.json) · [检查](build-guidance/checks.log)。

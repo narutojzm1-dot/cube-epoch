@@ -1,0 +1,22 @@
+UI-021 pause help return; baseline 920cadffc27330ef37407b260e123b1b45682f0a
+Chromium before: PASS four normal gather/stored-priority/help/native-scroll/return/cancel/place paths, 10 original PNGs.
+Chromium after: PASS same four paths, immediate unscrolled Continue, fixed >=44px actions during body scroll, help reopen top0, 10 original PNGs.
+Before native panel scroll to Continue: 320=438px, 390=85px, 844=360px.
+After same full text uses native body scroll; Continue already visible at top, action rects unchanged after scroll.
+Canvas rectangles before/after: exact equal all four views; existing first-screen core-control checks PASS.
+Night checks: explicitly injected completed-wave fixture, no natural survival claim; scroll freezes exact time/day/nights/hp/camp/build/inventory/paused, only Continue resumes.
+Desktop: original keyboard/mouse and Escape pause toggle PASS.
+Independent readonly ship-gate review: PASS, no significant findings; no reviewer writes or duplicate test runs.
+Narrow readonly follow-up on tabindex0/paused navigation guard/native End-Home-End: PASS, no significant findings.
+node --check game.js: PASS.
+node tests\static.mjs: STATIC_OK.
+Initial integration reached this slice after earlier suites passed, then mobile WebKit refused mouse.wheel API; original log preserved as initial-integration.log.
+Mobile WebKit now uses actual focusable body and real End/Home/End, each completed scrollend/top-bottom verified; Chromium native touch swipes and desktop wheel retained.
+Required full WebKit integration after product keyboard access change: PASS, existing help-return-integration-fixed exited0; BUILD_GUIDANCE_OK webkit after4 and E2E_OK.
+Explicit pause-action min-width/min-height44 is independent of platform fonts; final Chromium source4b50e0ef capture4 paths PASS,20 current +20 preserved intermediate originals.
+Protected natural result SHA256: 964230C5914271F326300CA2C0FE82122B87F43D3BF2111D5B2363A75089596D.
+Scope: game.js pause-help layout flag/body scroll reset/paused help navigation guard; style.css pause-only flex/body scroll; index.html focusable help body; existing build-guidance route extended.
+Final artifact audit: PASS20 current/20 preserved intermediate native-size PNGs; product bytes exactly match current after4b50e0ef; old root JSON deep-equal after removing only new batch/issue; exact canvas/frozen state/fixed action geometry.
+Read-only coverage: baseline172/history305/supplemental487; no new-build full-matrix or visual approval claim; final batch/history files separately audited.
+Scoped git diff --check: PASS.
+No merge, deployment, server restart, save modification, rule/cost/time change, or old diagnostic inclusion.

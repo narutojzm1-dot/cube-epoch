@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "build-help-return",
+      "base_sha": "920cadffc27330ef37407b260e123b1b45682f0a",
+      "index": "build-help-return/INDEX.md",
+      "screenshots": "build-help-return/screenshots.json",
+      "issue_ids": ["UI-021"],
+      "status": "已截",
+      "visual_review": "20张四视口当前前后原图待协调逐图审查；16正常白天帮助/上滑图，4明确夜间夹具图，另保留20张中间构建history。真实Chromium触屏滑动、首屏继续/取消再放，WebKit原生键盘滚动分开；不称真机/自然夜守/全图通过"
+    },
+    {
       "id": "build-guidance",
       "base_sha": "62de00aa750d1b2054783fca83354fb2beeec3d8",
       "index": "build-guidance/INDEX.md",
@@ -157,6 +166,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-021",
+      "title": "长暂停帮助把继续埋在末尾且重开沿用旧滚动位置",
+      "status": "已修首屏固定原操作及正文重开顶部，待协调逐图审查",
+      "before": "build-help-return/build-help before",
+      "after": "build-help-return/build-help after"
+    },
     {
       "id": "UI-020",
       "title": "320建造取消尾行裁切且通用帮助缺手机取消步骤",
