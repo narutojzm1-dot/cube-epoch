@@ -10,6 +10,7 @@ import { testManaFeedback } from "./mana-feedback.mjs";
 import { testNightNoticeFold } from "./night-notice-fold.mjs";
 import { testBuildSuccessFeedback } from "./build-success-feedback.mjs";
 import { testMapPlacement } from "./map-placement.mjs";
+import { testBuildGuidance } from "./build-guidance.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -448,6 +449,7 @@ await testManaFeedback(browser, origin);
 await testNightNoticeFold(browser, origin);
 await testBuildSuccessFeedback(browser, origin);
 await testMapPlacement(browser, origin);
+await testBuildGuidance(browser, origin);
 await testDeviceHints(browser, origin);
 await testWideTouchLayout(browser, origin);
 await browser.close();

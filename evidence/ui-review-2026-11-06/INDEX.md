@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-020 白天建造完整步骤入口
+
+[16张四视口前后原图](build-guidance/INDEX.md) · [正常采集/成品优先/原生滚动/帮助/取消/再放置](build-guidance/validation.json) · [真实源码/矩形](build-guidance/screenshots.json) · [检查](build-guidance/checks.log)。
+
+320取消尾行原生滑动可达、同项取消可用，但普通帮助缺手机取消步骤。白天触控选中建造时现有44px帮助标“建造说明”，首屏从原说明分句列名称、成本、放置及取消。画布/60px原反馈和滚动保留：是可达完整步骤改进，不声称原限高裁切已消失。1280键鼠/夜战原语义保留，16图待协调审查，旧候选/诊断不混入。
+
 ## 独立维护批次：UI-019 快速触屏点图候选恢复
 
 [16张四视口同状态前后原图](map-placement/INDEX.md) · [正常输入/候选/真实落点与库存](map-placement/validation.json) · [源码/观测桥/画布矩形](map-placement/screenshots.json) · [检查](map-placement/checks.log)。

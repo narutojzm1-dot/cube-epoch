@@ -1,0 +1,40 @@
+UI-020 baseline62de00aa750d1b2054783fca83354fb2beeec3d8; fix/build-guidance-help.
+Normal320 mage gather/stored-torch success:
+  Original feed60px/content70px; cancellation tail partly clipped.
+  Native pan scrollTop10 shows whole tail; actual same-item tap cancels.
+  Original pause/help lacks touch same-item cancel (only keyboard0).
+Initial baseline desktop script attempts:
+  First placement timed out; diagnostic retained in initial-placement.log.
+  Waiting two layout frames alone did not establish input readiness.
+  Actual mining hitstop still0.0116 on desktop before tap; original game
+  discards pressed during hitstop. Test now waits existing hitstop<=0.
+  No longer timeout, skipping guard or game/hitstop rule change.
+node tests\build-guidance.mjs --before --capture
+  PASS4 normal gather/stored placement/pan/help/cancel/reselect/place paths,
+  8 baseline originals, untouched product.
+node tests\build-guidance.mjs --capture
+  PASS4 paths,8 after originals;16 total.
+  New touch first-screen help lines complete by measured Range rectangles.
+  Actual cancel build=null,stock stable,help label restored.
+  Re-placement25,23 actualtorch13,originalmagewood-1,stone/stored unchanged.
+  No stock/location/map/time injection; no source instrumentation.
+  Old feed still clips at top and remains native-scrollable; honest alternative
+  reachable full-step entry, not a claimed elimination of old clipping.
+node --check game.js
+node --check tests\build-guidance.mjs
+node tests\static.mjs
+  PASS/STATIC_OK.
+Independent [reviewer] build-guidance-review
+  No significant issues; read-only product/test/call review.
+node tests\e2e.mjs
+  PASS/exit0/E2E_OK; BUILD_GUIDANCE_OK WebKit4 normal paths.
+  Existing map candidate/night fold and keyboard End/Home real scrolling
+  remain green;320/390 ends36->0,84418->0,desktop no overflow.
+Read-only evidence audit:
+  PASS16 PNG native dimensions/sourceSHA+dirty; older root records unchanged.
+  UI_COVERAGE_OK baseline172/172,history305,supplemental467; no recapture,
+  not current-build full-matrix or visual approval.
+  Protected natural result hash964230...89596D unchanged.
+Canvas rectangles all4 views match before/after exactly;scroll0;core targets44px.
+No old CI rerun,natural-night replay,user-save edits,merge/deployment.
+Old natural-loop result and local CI completion logs excluded.

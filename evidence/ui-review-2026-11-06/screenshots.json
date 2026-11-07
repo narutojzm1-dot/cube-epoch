@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "build-guidance",
+      "base_sha": "62de00aa750d1b2054783fca83354fb2beeec3d8",
+      "index": "build-guidance/INDEX.md",
+      "screenshots": "build-guidance/screenshots.json",
+      "issue_ids": ["UI-020"],
+      "status": "已截",
+      "visual_review": "16张320/390/844触控和1280键鼠前后原图待协调逐图审查；普通玩家无库存/世界注入或观测桥，正常采集/成品优先/取消/再放置。保留原限高可滚，补完整可达步骤，不称原裁切消失或真机批准"
+    },
+    {
       "id": "map-placement",
       "base_sha": "a510ac1200163f88e5579d888df8ea772a38c57b",
       "index": "map-placement/INDEX.md",
@@ -148,6 +157,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-020",
+      "title": "320建造取消尾行裁切且通用帮助缺手机取消步骤",
+      "status": "已补可达完整说明，原限高裁切保留；待协调逐图审查",
+      "before": "build-guidance/build-help before",
+      "after": "build-guidance/build-help after"
+    },
     {
       "id": "UI-019",
       "title": "快速触屏点图候选被兼容mouseleave清掉，844反向点空地误放",

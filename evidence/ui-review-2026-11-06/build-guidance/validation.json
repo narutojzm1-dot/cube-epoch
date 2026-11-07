@@ -1,0 +1,1859 @@
+{
+  "before": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "version": "before",
+      "native_hold": true,
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0,
+        "dir": 0,
+        "x": 392,
+        "y": 344,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "firstTile": 6,
+        "secondTile": 1
+      },
+      "wood": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0.028299999999999954,
+        "dir": 2,
+        "x": 395.99999999971953,
+        "y": 360.1425599999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "firstTile": 2,
+        "secondTile": 1
+      },
+      "firstPoint": {
+        "x": 171.54999999828505,
+        "y": 187.26122582031263
+      },
+      "selected": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 396.00000000192284,
+        "y": 360.1425599999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 315.796875,
+            "bottom": 332.796875,
+            "fully_visible": true
+          },
+          {
+            "top": 333.796875,
+            "bottom": 350.796875,
+            "fully_visible": false
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 70,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "pan": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 396.00000000205756,
+        "y": 360.1425599999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 305.796875,
+            "bottom": 322.796875,
+            "fully_visible": true
+          },
+          {
+            "top": 323.796875,
+            "bottom": 340.796875,
+            "fully_visible": true
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 70,
+          "top": 10
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "body": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "canceled": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 396.00000000205756,
+        "y": 360.1425599999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "已取消建造。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "secondPoint": {
+        "x": 171.5499999980196,
+        "y": 202.66096540364595
+      },
+      "placed": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 396.00000000205756,
+        "y": 360.1425599999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 315.796875,
+            "bottom": 332.796875,
+            "fully_visible": true
+          },
+          {
+            "top": 333.796875,
+            "bottom": 350.796875,
+            "fully_visible": false
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 70,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 13
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "version": "before",
+      "native_hold": true,
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0,
+        "dir": 0,
+        "x": 392,
+        "y": 344,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "firstTile": 6,
+        "secondTile": 1
+      },
+      "wood": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0.02840000000000009,
+        "dir": 2,
+        "x": 395.99999999975705,
+        "y": 360.1408199999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "firstTile": 2,
+        "secondTile": 1
+      },
+      "firstPoint": {
+        "x": 209.17499999784897,
+        "y": 208.23209616699228
+      },
+      "selected": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.0050000000000000044,
+        "dir": 2,
+        "x": 396.0000000019612,
+        "y": 360.1408199999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 357.796875,
+            "bottom": 374.796875,
+            "fully_visible": true
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "pan": null,
+      "body": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "canceled": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.0050000000000000044,
+        "dir": 2,
+        "x": 396.000000002093,
+        "y": 360.1408199999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "已取消建造。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "secondPoint": {
+        "x": 209.1749999975256,
+        "y": 227.13183575032562
+      },
+      "placed": {
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.0050000000000000044,
+        "dir": 2,
+        "x": 396.0000000020948,
+        "y": 360.1408199999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 357.796875,
+            "bottom": 374.796875,
+            "fully_visible": true
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 13
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "version": "before",
+      "native_hold": true,
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0,
+        "dir": 0,
+        "x": 392,
+        "y": 344,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "firstTile": 6,
+        "secondTile": 1
+      },
+      "wood": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0.02840000000000009,
+        "dir": 2,
+        "x": 395.99999999948113,
+        "y": 360.1466199999998,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "firstTile": 2,
+        "secondTile": 1
+      },
+      "firstPoint": {
+        "x": 288.49199218588967,
+        "y": 168.83947026529967
+      },
+      "selected": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.004899999999999866,
+        "dir": 2,
+        "x": 396.00000000168615,
+        "y": 360.1466199999998,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 305,
+            "bottom": 322,
+            "fully_visible": true
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "pan": null,
+      "body": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "canceled": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.004899999999999866,
+        "dir": 2,
+        "x": 396.00000000181615,
+        "y": 360.1466199999998,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "已取消建造。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "secondPoint": {
+        "x": 288.4919921856056,
+        "y": 185.50483484863298
+      },
+      "placed": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.004899999999999866,
+        "dir": 2,
+        "x": 396.00000000181876,
+        "y": 360.1466199999998,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 305,
+            "bottom": 322,
+            "fully_visible": true
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 13
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "version": "before",
+      "native_hold": false,
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0,
+        "dir": 0,
+        "x": 392,
+        "y": 344,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 35,
+          "full": 35,
+          "top": 0
+        },
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "firstTile": 6,
+        "secondTile": 1
+      },
+      "wood": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0.045,
+        "dir": 2,
+        "x": 395.2219436296669,
+        "y": 358.4999999999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 35,
+          "full": 35,
+          "top": 0
+        },
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "firstTile": 2,
+        "secondTile": 1
+      },
+      "firstPoint": {
+        "x": 525.7854152212036,
+        "y": 351.5280761718752
+      },
+      "selected": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 395.22194363067115,
+        "y": 358.4999999999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 64,
+          "full": 64,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "pan": null,
+      "body": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "canceled": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 395.221943631862,
+        "y": 358.4999999999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 35,
+          "full": 35,
+          "top": 0
+        },
+        "toast": "已取消建造。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "secondPoint": {
+        "x": 525.7854152144678,
+        "y": 391.3275553385419
+      },
+      "placed": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 395.2219436325415,
+        "y": 358.4999999999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 64,
+          "full": 64,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 13
+      }
+    }
+  ],
+  "after": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "version": "after",
+      "native_hold": true,
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0,
+        "dir": 0,
+        "x": 392,
+        "y": 344,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "firstTile": 6,
+        "secondTile": 1
+      },
+      "wood": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0.02840000000000009,
+        "dir": 2,
+        "x": 395.99999999969316,
+        "y": 360.14256,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "firstTile": 2,
+        "secondTile": 1
+      },
+      "firstPoint": {
+        "x": 171.54999999830696,
+        "y": 187.26122582031252
+      },
+      "selected": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.004900000000000092,
+        "dir": 2,
+        "x": 396.0000000018991,
+        "y": 360.14256,
+        "held": 0,
+        "helpLabel": "建造说明",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 315.796875,
+            "bottom": 332.796875,
+            "fully_visible": true
+          },
+          {
+            "top": 333.796875,
+            "bottom": 350.796875,
+            "fully_visible": false
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 70,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "pan": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.004900000000000092,
+        "dir": 2,
+        "x": 396.00000000203374,
+        "y": 360.14256,
+        "held": 0,
+        "helpLabel": "建造说明",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 305.796875,
+            "bottom": 322.796875,
+            "fully_visible": true
+          },
+          {
+            "top": 323.796875,
+            "bottom": 340.796875,
+            "fully_visible": true
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 70,
+          "top": 10
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "body": "建造步骤\n建造火把\n1木\n点地图空地放下火把\n再点背包同一项取消\n\n白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "steps": [
+        {
+          "line": "建造火把",
+          "rects": [
+            {
+              "top": 110.59375,
+              "bottom": 134.59375,
+              "fully_visible": true
+            }
+          ]
+        },
+        {
+          "line": "1木",
+          "rects": [
+            {
+              "top": 136.1875,
+              "bottom": 160.1875,
+              "fully_visible": true
+            }
+          ]
+        },
+        {
+          "line": "点地图空地放下火把",
+          "rects": [
+            {
+              "top": 161.78125,
+              "bottom": 185.78125,
+              "fully_visible": true
+            }
+          ]
+        },
+        {
+          "line": "再点背包同一项取消",
+          "rects": [
+            {
+              "top": 187.375,
+              "bottom": 211.375,
+              "fully_visible": true
+            }
+          ]
+        }
+      ],
+      "canceled": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.004900000000000092,
+        "dir": 2,
+        "x": 396.00000000203374,
+        "y": 360.14256,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "已取消建造。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "secondPoint": {
+        "x": 171.54999999804252,
+        "y": 202.66096540364583
+      },
+      "placed": {
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.004900000000000092,
+        "dir": 2,
+        "x": 396.00000000203374,
+        "y": 360.14256,
+        "held": 0,
+        "helpLabel": "建造说明",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 315.796875,
+            "bottom": 332.796875,
+            "fully_visible": true
+          },
+          {
+            "top": 333.796875,
+            "bottom": 350.796875,
+            "fully_visible": false
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 70,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 13
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "version": "after",
+      "native_hold": true,
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0,
+        "dir": 0,
+        "x": 392,
+        "y": 344,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "firstTile": 6,
+        "secondTile": 1
+      },
+      "wood": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0.02840000000000009,
+        "dir": 2,
+        "x": 395.99999999992605,
+        "y": 360.1408199999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "firstTile": 2,
+        "secondTile": 1
+      },
+      "firstPoint": {
+        "x": 209.17499999764533,
+        "y": 208.23209616699228
+      },
+      "selected": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.004900000000000092,
+        "dir": 2,
+        "x": 396.00000000213345,
+        "y": 360.1408199999999,
+        "held": 0,
+        "helpLabel": "建造说明",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 357.796875,
+            "bottom": 374.796875,
+            "fully_visible": true
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "pan": null,
+      "body": "建造步骤\n建造火把\n1木\n点地图空地放下火把\n再点背包同一项取消\n\n白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "steps": [
+        {
+          "line": "建造火把",
+          "rects": [
+            {
+              "top": 110.59375,
+              "bottom": 134.59375,
+              "fully_visible": true
+            }
+          ]
+        },
+        {
+          "line": "1木",
+          "rects": [
+            {
+              "top": 136.1875,
+              "bottom": 160.1875,
+              "fully_visible": true
+            }
+          ]
+        },
+        {
+          "line": "点地图空地放下火把",
+          "rects": [
+            {
+              "top": 161.78125,
+              "bottom": 185.78125,
+              "fully_visible": true
+            }
+          ]
+        },
+        {
+          "line": "再点背包同一项取消",
+          "rects": [
+            {
+              "top": 187.375,
+              "bottom": 211.375,
+              "fully_visible": true
+            }
+          ]
+        }
+      ],
+      "canceled": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.004900000000000092,
+        "dir": 2,
+        "x": 396.00000000226316,
+        "y": 360.1408199999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "已取消建造。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "secondPoint": {
+        "x": 209.17499999732368,
+        "y": 227.13183575032562
+      },
+      "placed": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.004900000000000092,
+        "dir": 2,
+        "x": 396.0000000022658,
+        "y": 360.1408199999999,
+        "held": 0,
+        "helpLabel": "建造说明",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 357.796875,
+            "bottom": 374.796875,
+            "fully_visible": true
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 13
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "version": "after",
+      "native_hold": true,
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0,
+        "dir": 0,
+        "x": 392,
+        "y": 344,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "firstTile": 6,
+        "secondTile": 1
+      },
+      "wood": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0.028299999999999954,
+        "dir": 2,
+        "x": 395.9999999994985,
+        "y": 360.1466199999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "firstTile": 2,
+        "secondTile": 1
+      },
+      "firstPoint": {
+        "x": 288.49199218587285,
+        "y": 168.83947026529955
+      },
+      "selected": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 396.0000000017026,
+        "y": 360.1466199999999,
+        "held": 0,
+        "helpLabel": "建造说明",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 305,
+            "bottom": 322,
+            "fully_visible": true
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "pan": null,
+      "body": "建造步骤\n建造火把\n1木\n点地图空地放下火把\n再点背包同一项取消\n\n白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "steps": [
+        {
+          "line": "建造火把",
+          "rects": [
+            {
+              "top": 110.59375,
+              "bottom": 134.59375,
+              "fully_visible": true
+            }
+          ]
+        },
+        {
+          "line": "1木",
+          "rects": [
+            {
+              "top": 136.1875,
+              "bottom": 160.1875,
+              "fully_visible": true
+            }
+          ]
+        },
+        {
+          "line": "点地图空地放下火把",
+          "rects": [
+            {
+              "top": 161.78125,
+              "bottom": 185.78125,
+              "fully_visible": true
+            }
+          ]
+        },
+        {
+          "line": "再点背包同一项取消",
+          "rects": [
+            {
+              "top": 187.375,
+              "bottom": 211.375,
+              "fully_visible": true
+            }
+          ]
+        }
+      ],
+      "canceled": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 396.0000000018329,
+        "y": 360.1466199999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "已取消建造。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "secondPoint": {
+        "x": 288.4919921855881,
+        "y": 185.50483484863287
+      },
+      "placed": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 396.00000000183553,
+        "y": 360.1466199999999,
+        "held": 0,
+        "helpLabel": "建造说明",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "cancelRects": [
+          {
+            "top": 305,
+            "bottom": 322,
+            "fully_visible": true
+          }
+        ],
+        "feed": {
+          "height": 60,
+          "full": 60,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 13
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "version": "after",
+      "native_hold": false,
+      "initial": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0,
+        "dir": 0,
+        "x": 392,
+        "y": 344,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 35,
+          "full": 35,
+          "top": 0
+        },
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "firstTile": 6,
+        "secondTile": 1
+      },
+      "wood": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": 0.045,
+        "dir": 2,
+        "x": 395.2226173022117,
+        "y": 358.4999999999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "",
+        "cancelRects": [],
+        "feed": {
+          "height": 35,
+          "full": 35,
+          "top": 0
+        },
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "firstTile": 2,
+        "secondTile": 1
+      },
+      "firstPoint": {
+        "x": 525.7837394607484,
+        "y": 351.5280761718752
+      },
+      "selected": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 395.22261730321594,
+        "y": 358.4999999999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 64,
+          "full": 64,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "pan": null,
+      "body": "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。\n金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。\n\nWASD  移动\n空格  砍/挖/打面前的东西\n1 栅栏　2 火把　3 田（按 0 取消）\n点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。\n先把篝火四边围上，再留木头合成方块之心。\nE  工作台合成 / 祭坛献祭 / 播种\nQ 或右键  职业技能\n点「麦」或 H  回血\n触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。\n\n栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
+      "steps": null,
+      "canceled": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 395.22261730440806,
+        "y": 358.4999999999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 35,
+          "full": 35,
+          "top": 0
+        },
+        "toast": "已取消建造。",
+        "firstTile": 13,
+        "secondTile": 1
+      },
+      "secondPoint": {
+        "x": 525.7837394540064,
+        "y": 391.3275553385419
+      },
+      "placed": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": "torch",
+        "day": true,
+        "nights": 0,
+        "paused": false,
+        "hp": 78,
+        "campHp": 100,
+        "hitstop": -0.005000000000000001,
+        "dir": 2,
+        "x": 395.2226173050908,
+        "y": 358.4999999999999,
+        "held": 0,
+        "helpLabel": "怎么玩",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "cancelRects": [],
+        "feed": {
+          "height": 64,
+          "full": 64,
+          "top": 0
+        },
+        "toast": "火把放好了。",
+        "firstTile": 13,
+        "secondTile": 13
+      }
+    }
+  ]
+}

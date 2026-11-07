@@ -1032,12 +1032,16 @@
   }
 
   function helpText() {
+    const building = touchLayout.matches && state.day && state.build
+      ? ["建造步骤", ...buildBanner.textContent.split(" · "), ""]
+      : [];
     const current = touchLayout.matches && !waveBanner.classList.contains("hidden")
       ? [toastEl, promptEl, buildBanner]
         .filter((el) => !el.classList.contains("hidden") && el.textContent)
         .map((el) => el.textContent)
       : [];
     return [
+      ...building,
       ...(current.length ? ["当前反馈与操作", ...current, ""] : []),
       "白天围营，夜里守火。撑过三夜，天亮把方块之心送到北边祭坛。",
       "金框会指下一处：树、缺口、矿或祭坛。空格或按住左键砍/挖。",
@@ -2182,6 +2186,7 @@
     objectiveEl.textContent = objectiveText();
     skillCdEl.textContent = p.skillCd > 0 ? `${p.skillCd.toFixed(1)}s` : "就绪";
     touchSkillCd.textContent = skillCdEl.textContent;
+    btnHelp.textContent = touchLayout.matches && state.day && state.build ? "建造说明" : "怎么玩";
     skillDock.classList.toggle("ready", p.skillCd <= 0);
     if (state.build) {
       const names = { fence: "栅栏", torch: "火把", plot: "田" };
