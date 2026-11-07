@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "device-hints",
+      "base_sha": "4cf83fdb7b90e38fb7d7a2855dbd9206bb7a9076",
+      "index": "device-hints/INDEX.md",
+      "screenshots": "device-hints/screenshots.json",
+      "issue_ids": ["UI-009"],
+      "status": "已截",
+      "visual_review": "76张四视口真实首屏图待协调人逐图复看；84场景中28个媒体边界只查提示，不声称1280宽屏触控首屏布局通过"
+    },
+    {
       "id": "material-feedback",
       "base_sha": "d80f0e8876bf47343da80f88b6a05b7c90447fdd",
       "index": "material-feedback/INDEX.md",
@@ -49,6 +58,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-009",
+      "title": "触屏建造等操作反馈仍使用左键/键盘文案",
+      "status": "已修复，待协调人逐图审查",
+      "before": "device-hints/fence before",
+      "after": "device-hints/fence after"
+    },
     {
       "id": "UI-008",
       "title": "建造缺料提示显示总需求而非库存缺口",

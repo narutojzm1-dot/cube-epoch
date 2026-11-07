@@ -1,0 +1,2197 @@
+{
+  "baseline": "4cf83fdb7b90e38fb7d7a2855dbd9206bb7a9076",
+  "checks": [
+    {
+      "screen_id": "fence",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键放下栅栏"
+    },
+    {
+      "screen_id": "torch",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键放下火把"
+    },
+    {
+      "screen_id": "plot",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键开田"
+    },
+    {
+      "screen_id": "repair",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键修理栅栏（1木）"
+    },
+    {
+      "screen_id": "cancel",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": ""
+    },
+    {
+      "screen_id": "fence",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键放下栅栏"
+    },
+    {
+      "screen_id": "torch",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键放下火把"
+    },
+    {
+      "screen_id": "plot",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键开田"
+    },
+    {
+      "screen_id": "repair",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键修理栅栏（1木）"
+    },
+    {
+      "screen_id": "cancel",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": ""
+    },
+    {
+      "screen_id": "fence",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键放下栅栏"
+    },
+    {
+      "screen_id": "torch",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键放下火把"
+    },
+    {
+      "screen_id": "plot",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键开田"
+    },
+    {
+      "screen_id": "repair",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键修理栅栏（1木）"
+    },
+    {
+      "screen_id": "cancel",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": ""
+    },
+    {
+      "screen_id": "fence",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键放下栅栏"
+    },
+    {
+      "screen_id": "torch",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键放下火把"
+    },
+    {
+      "screen_id": "plot",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键开田"
+    },
+    {
+      "screen_id": "repair",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": "左键修理栅栏（1木）"
+    },
+    {
+      "screen_id": "cancel",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "reused unchanged baseline PNG/metadata",
+      "prompt": ""
+    },
+    {
+      "screen_id": "fence",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点地图空地放下栅栏"
+    },
+    {
+      "screen_id": "torch",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点地图空地放下火把"
+    },
+    {
+      "screen_id": "plot",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点地图空地开田"
+    },
+    {
+      "screen_id": "repair",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点坏墙修理栅栏（1木）"
+    },
+    {
+      "screen_id": "cancel",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": ""
+    },
+    {
+      "screen_id": "tree",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」砍树"
+    },
+    {
+      "screen_id": "gold",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」挖金矿"
+    },
+    {
+      "screen_id": "stone",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」挖石头"
+    },
+    {
+      "screen_id": "crop",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」收麦"
+    },
+    {
+      "screen_id": "farm",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点「交互 E」播种（要有种子）"
+    },
+    {
+      "screen_id": "dismantle",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "面朝栅栏，按住「采集/攻击」拆除"
+    },
+    {
+      "screen_id": "bench",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点「交互 E」查看还差哪些材料"
+    },
+    {
+      "screen_id": "altar",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点「交互 E」献上方块之心"
+    },
+    {
+      "screen_id": "combat",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理"
+    },
+    {
+      "screen_id": "fence",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点地图空地放下栅栏"
+    },
+    {
+      "screen_id": "torch",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点地图空地放下火把"
+    },
+    {
+      "screen_id": "plot",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点地图空地开田"
+    },
+    {
+      "screen_id": "repair",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点坏墙修理栅栏（1木）"
+    },
+    {
+      "screen_id": "cancel",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": ""
+    },
+    {
+      "screen_id": "tree",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」砍树"
+    },
+    {
+      "screen_id": "gold",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」挖金矿"
+    },
+    {
+      "screen_id": "stone",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」挖石头"
+    },
+    {
+      "screen_id": "crop",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」收麦"
+    },
+    {
+      "screen_id": "farm",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点「交互 E」播种（要有种子）"
+    },
+    {
+      "screen_id": "dismantle",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "面朝栅栏，按住「采集/攻击」拆除"
+    },
+    {
+      "screen_id": "bench",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点「交互 E」查看还差哪些材料"
+    },
+    {
+      "screen_id": "altar",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点「交互 E」献上方块之心"
+    },
+    {
+      "screen_id": "combat",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": true,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理"
+    },
+    {
+      "screen_id": "fence",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "左键点空地放下栅栏"
+    },
+    {
+      "screen_id": "torch",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "左键点空地放下火把"
+    },
+    {
+      "screen_id": "plot",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "左键点空地开田"
+    },
+    {
+      "screen_id": "repair",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "左键修理栅栏（1木）"
+    },
+    {
+      "screen_id": "cancel",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": ""
+    },
+    {
+      "screen_id": "tree",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "空格或按住左键砍树"
+    },
+    {
+      "screen_id": "gold",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住左键挖金矿"
+    },
+    {
+      "screen_id": "stone",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住左键挖石头"
+    },
+    {
+      "screen_id": "crop",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住左键收麦"
+    },
+    {
+      "screen_id": "farm",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按 E 或左键播种（要有种子）"
+    },
+    {
+      "screen_id": "dismantle",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "空格拆除栅栏"
+    },
+    {
+      "screen_id": "bench",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按 E查看还差哪些材料"
+    },
+    {
+      "screen_id": "altar",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按 E献上方块之心"
+    },
+    {
+      "screen_id": "combat",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": false,
+        "coarse": false,
+        "narrow": false,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "左键攻击 · Q 技能 · 按 1 后点坏墙修理"
+    },
+    {
+      "screen_id": "fence",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点地图空地放下栅栏"
+    },
+    {
+      "screen_id": "torch",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点地图空地放下火把"
+    },
+    {
+      "screen_id": "plot",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点地图空地开田"
+    },
+    {
+      "screen_id": "repair",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点坏墙修理栅栏（1木）"
+    },
+    {
+      "screen_id": "cancel",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": ""
+    },
+    {
+      "screen_id": "tree",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」砍树"
+    },
+    {
+      "screen_id": "gold",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」挖金矿"
+    },
+    {
+      "screen_id": "stone",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」挖石头"
+    },
+    {
+      "screen_id": "crop",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」收麦"
+    },
+    {
+      "screen_id": "farm",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点「交互 E」播种（要有种子）"
+    },
+    {
+      "screen_id": "dismantle",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "面朝栅栏，按住「采集/攻击」拆除"
+    },
+    {
+      "screen_id": "bench",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点「交互 E」查看还差哪些材料"
+    },
+    {
+      "screen_id": "altar",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "点「交互 E」献上方块之心"
+    },
+    {
+      "screen_id": "combat",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "first viewport and native action geometry",
+      "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理"
+    },
+    {
+      "screen_id": "fence",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点地图空地放下栅栏"
+    },
+    {
+      "screen_id": "torch",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点地图空地放下火把"
+    },
+    {
+      "screen_id": "plot",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点地图空地开田"
+    },
+    {
+      "screen_id": "repair",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点坏墙修理栅栏（1木）"
+    },
+    {
+      "screen_id": "cancel",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": ""
+    },
+    {
+      "screen_id": "tree",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "按住「采集/攻击」砍树"
+    },
+    {
+      "screen_id": "gold",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "按住「采集/攻击」挖金矿"
+    },
+    {
+      "screen_id": "stone",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "按住「采集/攻击」挖石头"
+    },
+    {
+      "screen_id": "crop",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "按住「采集/攻击」收麦"
+    },
+    {
+      "screen_id": "farm",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点「交互 E」播种（要有种子）"
+    },
+    {
+      "screen_id": "dismantle",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "面朝栅栏，按住「采集/攻击」拆除"
+    },
+    {
+      "screen_id": "bench",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点「交互 E」查看还差哪些材料"
+    },
+    {
+      "screen_id": "altar",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点「交互 E」献上方块之心"
+    },
+    {
+      "screen_id": "combat",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "input": "mouse/keyboard",
+      "media": {
+        "touchLayout": true,
+        "coarse": false,
+        "narrow": true,
+        "pointer_coarse": false
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理"
+    },
+    {
+      "screen_id": "fence",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 160
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点地图空地放下栅栏"
+    },
+    {
+      "screen_id": "torch",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 160
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点地图空地放下火把"
+    },
+    {
+      "screen_id": "plot",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 160
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点地图空地开田"
+    },
+    {
+      "screen_id": "repair",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 160
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点坏墙修理栅栏（1木）"
+    },
+    {
+      "screen_id": "cancel",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 160
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": ""
+    },
+    {
+      "screen_id": "tree",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "按住「采集/攻击」砍树"
+    },
+    {
+      "screen_id": "gold",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "按住「采集/攻击」挖金矿"
+    },
+    {
+      "screen_id": "stone",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "按住「采集/攻击」挖石头"
+    },
+    {
+      "screen_id": "crop",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "按住「采集/攻击」收麦"
+    },
+    {
+      "screen_id": "farm",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点「交互 E」播种（要有种子）"
+    },
+    {
+      "screen_id": "dismantle",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "面朝栅栏，按住「采集/攻击」拆除"
+    },
+    {
+      "screen_id": "bench",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点「交互 E」查看还差哪些材料"
+    },
+    {
+      "screen_id": "altar",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "点「交互 E」献上方块之心"
+    },
+    {
+      "screen_id": "combat",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "input": "native touch",
+      "media": {
+        "touchLayout": true,
+        "coarse": true,
+        "narrow": false,
+        "pointer_coarse": true
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "layout_scope": "media/input wording only; no first-screen assertion",
+      "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理"
+    }
+  ],
+  "after_cases": 84,
+  "first_viewport_cases": 56,
+  "media_only_cases": 28,
+  "boundary_limitation": "Initial broad zero-scroll assertion failed on1280x800 coarse touch. A read-only4cf83fd source probe confirmed native fence selection already scrollsY160 there. Main56 cases assert first-screen/no-scroll; extra28 verify media/input wording only, not layout approval.",
+  "capture_history": "76 active PNGs:20 unchanged baseline images reused,56 final after images.132 retained originals/metadata including56 intermediate after images.320 selection confirmation was shortened so confirmation and live placement prompt both fit the bounded feed.",
+  "local_gates": "Final npm test passed STATIC_OK/MOBILE_OK/NIGHT_UI_OK/CORE_LAYOUT_OK/MATERIAL_FEEDBACK_OK30/DEVICE_HINTS_OK84/E2E_OK; syntax and diff checks passed. Read-only coverage:baseline172/history305/supplemental248, no old screenshots rewritten.",
+  "independent_review": "Independent broad device-wording review and narrower final compact-confirmation/baseline-reuse review both found no significant issues; not coordinator visual approval.",
+  "visual_review": "Pending coordinator/user review; no physical-device, natural-loop replay or global visual approval claim."
+}

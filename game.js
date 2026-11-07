@@ -1058,23 +1058,29 @@
     for (const [k, n] of Object.entries(cost)) state.inv[k] -= n;
   }
 
+  function buildPlacementText(kind) {
+    const click = touchLayout.matches ? "点地图空地" : "左键点空地";
+    const action = { fence: "放下栅栏", torch: "放下火把", plot: "开田" }[kind];
+    return click + action;
+  }
+
   function setBuild(kind, opts) {
     if (!state || state.over) return;
     if (!kind) {
+      if (state.build) toast("已取消建造。");
       state.build = null;
       syncHud();
       return;
     }
     if (opts && opts.toggle && state.build === kind) {
-      state.build = null;
-      syncHud();
-      return;
+      return setBuild(null);
     }
     const changed = state.build !== kind;
     state.build = kind;
     if (changed) {
-      const names = { fence: "栅栏", torch: "火把", plot: "田" };
-      toast(`建造${names[kind]}。点空地放下，点坏墙修好。空格拆除。`);
+      const target = kind === "fence" ? "空地/坏墙" : kind === "torch" ? "空地放火把" : "空地开田";
+      const cancel = touchLayout.matches ? `再点背包「${labelOf(kind)}」取消` : "按 0 取消";
+      toast(`${touchLayout.matches ? "点" : "左键点"}${target}；${cancel}。`);
     }
     syncHud();
   }
@@ -1412,7 +1418,8 @@
     state.crops.set(`${tx},${ty}`, { stage: 0, grow: 0 });
     if (!state.flags.planted) {
       state.flags.planted = true;
-      toast(state.cls === "farmer" ? "播下了。你种的麦熟得更快。" : "播下了。长大后按住左键收。");
+      toast(state.cls === "farmer" ? "播下了。你种的麦熟得更快。"
+        : `播下了。长大后${touchLayout.matches ? "按住「采集/攻击」" : "按住左键"}收。`);
     }
     beep(400, 0.05, "triangle", 0.04);
     return true;
@@ -2047,29 +2054,34 @@
     const t = tileAt(f.tx, f.ty);
     const p = state.player;
     let prompt = "";
+    const interactHint = touchLayout.matches ? "点「交互 E」" : "按 E";
+    const holdHint = touchLayout.matches ? "按住「采集/攻击」" : "按住左键";
+    const combatHint = touchLayout.matches ? "按住「采集/攻击」 · 点「技能 Q」" : "左键攻击 · Q 技能";
     if (dist(p.x, p.y, state.bench.x, state.bench.y) < 26 && (state.flags.chopped || materialsReady() || state.inv.heart)) {
-      prompt = materialsReady() || state.inv.heart ? "按 E 合成方块之心" : "按 E 查看还差哪些材料";
+      prompt = materialsReady() || state.inv.heart ? `${interactHint}合成方块之心` : `${interactHint}查看还差哪些材料`;
     } else if (dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
       if (!state.day) prompt = "祭坛夜里封着，先守篝火";
       else if (!survivedNights()) prompt = `再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献`;
-      else if (state.inv.heart > 0) prompt = "按 E 献上方块之心";
+      else if (state.inv.heart > 0) prompt = `${interactHint}献上方块之心`;
       else prompt = "先去工作台合成方块之心";
     } else if (!state.day && state.enemies.some((e) => dist(e.x, e.y, p.x, p.y) < 42)) {
-      prompt = "左键攻击 · Q 技能 · 点坏墙修理";
+      prompt = `${combatHint} · ${touchLayout.matches ? "选栏再点坏墙修理" : "按 1 后点坏墙修理"}`;
     } else if (state.build && placeable(f.tx, f.ty)) {
-      prompt = state.build === "fence" ? "左键放下栅栏" : state.build === "torch" ? "左键放下火把" : "左键开田";
-    } else if (t === T.TREE || tileAt(frontTile().tx, frontTile().ty) === T.TREE) prompt = "空格或按住左键砍树";
-    else if (t === T.GOLD) prompt = "按住左键挖金矿";
-    else if (t === T.STONE) prompt = "按住左键挖石头";
+      prompt = buildPlacementText(state.build);
+    } else if (t === T.TREE || tileAt(frontTile().tx, frontTile().ty) === T.TREE) {
+      prompt = touchLayout.matches ? `${holdHint}砍树` : "空格或按住左键砍树";
+    }
+    else if (t === T.GOLD) prompt = `${holdHint}挖金矿`;
+    else if (t === T.STONE) prompt = `${holdHint}挖石头`;
     else if (t === T.FENCE) {
       const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || FENCE_MAX;
-      if (state.build === "fence" && hp < FENCE_MAX - 0.5) prompt = "左键修理栅栏（1木）";
+      if (state.build === "fence" && hp < FENCE_MAX - 0.5) prompt = `${touchLayout.matches ? "点坏墙" : "左键"}修理栅栏（1木）`;
       else if (state.build === "fence" && !campWalled()) prompt = "这段好了。点发光的空地继续围";
-      else prompt = "空格拆除栅栏";
+      else prompt = touchLayout.matches ? "面朝栅栏，按住「采集/攻击」拆除" : "空格拆除栅栏";
     }
-    else if (t === T.CROP && (state.crops.get(`${f.tx},${f.ty}`)?.stage || 0) >= 2) prompt = "按住左键收麦";
-    else if (t === T.FARM) prompt = "按 E 或左键播种（要有种子）";
-    else if (!state.day && state.enemies.length) prompt = "守住篝火 · 左键攻击 · Q 技能";
+    else if (t === T.CROP && (state.crops.get(`${f.tx},${f.ty}`)?.stage || 0) >= 2) prompt = `${holdHint}收麦`;
+    else if (t === T.FARM) prompt = touchLayout.matches ? `${interactHint}播种（要有种子）` : "按 E 或左键播种（要有种子）";
+    else if (!state.day && state.enemies.length) prompt = `守住篝火 · ${combatHint}`;
     setPrompt(prompt);
     syncGuide();
     for (const pt of state.particles) {
@@ -2091,11 +2103,12 @@
   }
 
   function objectiveText() {
+    const interactHint = touchLayout.matches ? "点「交互 E」" : "按 E";
     if (state.briefing) return "预演：看清要守的火，和最后要送到的祭坛";
     if (!state.day) return "守住篝火！怪从地图边缘朝营地来";
-    if (canOffer()) return "天亮了。把方块之心送到北边祭坛（按 E）";
+    if (canOffer()) return `天亮了。把方块之心送到北边祭坛（${interactHint}）`;
     if (state.inv.heart > 0 && !survivedNights()) return `先再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献祭`;
-    if (materialsReady() && !state.inv.heart) return "去工作台按 E 合成方块之心";
+    if (materialsReady() && !state.inv.heart) return `去工作台${interactHint}合成方块之心`;
     if (!campWalled()) {
       const gaps = campGaps().length;
       if (!state.flags.chopped) return touchLayout.matches
@@ -2109,7 +2122,7 @@
     if (state.inv.stone < NEED.stone) miss.push(`石 ${state.inv.stone}/${NEED.stone}`);
     if (state.inv.gold < NEED.gold) miss.push(`金 ${state.inv.gold}/${NEED.gold}`);
     if (state.inv.wheat < NEED.wheat) miss.push(`麦 ${state.inv.wheat}/${NEED.wheat}`);
-    if (!miss.length) return "材料齐了。去工作台按 E 合成";
+    if (!miss.length) return `材料齐了。去工作台${interactHint}合成`;
     return "采集 " + miss.join("  ") + "，顺手补墙";
   }
 
@@ -2135,7 +2148,7 @@
     skillDock.classList.toggle("ready", p.skillCd <= 0);
     if (state.build) {
       const names = { fence: "栅栏", torch: "火把", plot: "田" };
-      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)} · 点空地放下 / 点坏墙修理 · ${touchLayout.matches ? "再点背包同一项取消" : "按 0 取消"}`;
+      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)} · ${buildPlacementText(state.build)}${state.build === "fence" ? " / 点坏墙修理" : ""} · ${touchLayout.matches ? "再点背包同一项取消" : "按 0 取消"}`;
       buildBanner.classList.remove("hidden");
     } else {
       buildBanner.classList.add("hidden");

@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-009 设备相符操作反馈
+
+[四视口建设/修墙/取消40张前后图及其他提示36张后图](device-hints/INDEX.md) · [实际touchLayout/输入/源码逐图记录](device-hints/screenshots.json) · [针对性检查与边界限制](device-hints/validation.json)。
+
+触屏建设明确点地图空地、再点同一背包项取消；桌面保留鼠标/键盘。火把/田不再误称可修墙，取消增加短确认；已有正确触屏引导不重做。只补受影响提示状态，旧基线、4cf83fd材料缺口与自然三夜证据保持，不外推旧片所看状态的局部视觉批准。
+
 ## 独立维护批次：UI-008 材料缺口反馈
 
 [320/390九状态36张真实首屏前后原图](material-feedback/INDEX.md) · [逐图构建与复现](material-feedback/screenshots.json) · [30个针对性后版本场景](material-feedback/validation.json) · [检查和归档错误记录](material-feedback/checks.log)。

@@ -153,6 +153,217 @@ export async function testCoreLayout(browser, origin) {
   console.log("CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll");
 }
 
+const hintBaseline = "4cf83fdb7b90e38fb7d7a2855dbd9206bb7a9076";
+const hintOut = join(ROOT, "evidence", "ui-review-2026-11-06", "device-hints");
+const hintModes = [
+  { width: 320, height: 568, touch: true, layoutTouch: true, capture: true },
+  { width: 390, height: 844, touch: true, layoutTouch: true, capture: true },
+  { width: 1280, height: 800, touch: false, layoutTouch: false, capture: true },
+  { width: 844, height: 390, touch: true, layoutTouch: true, capture: true },
+  { width: 320, height: 568, touch: false, layoutTouch: true, capture: false },
+  { width: 1280, height: 800, touch: true, layoutTouch: true, capture: false },
+];
+const hintCases = ["fence", "torch", "plot", "repair", "cancel", "tree", "gold", "stone",
+  "crop", "farm", "dismantle", "bench", "altar", "combat"];
+const hintComparisons = ["fence", "torch", "plot", "repair", "cancel"];
+
+export async function prepareHint(page, origin, name, mode, before) {
+  await page.goto(origin);
+  await enterPlay(page);
+  await page.evaluate((name) => {
+    const s = window.CUBE.getState();
+    s.player.x = 30 * 16 + 8; s.player.y = 25 * 16 + 8;
+    s.player.dir = 3; s.player.vx = s.player.vy = 0;
+    for (let y = 23; y <= 27; y++) for (let x = 28; x <= 32; x++) s.tiles[y * 48 + x] = 1;
+    Object.assign(s.inv, { wood: 10, stone: 10 });
+    s.flags.chopped = true;
+    const types = { repair: 12, tree: 6, gold: 5, stone: 4, crop: 8, farm: 7, dismantle: 12 };
+    if (types[name]) s.tiles[24 * 48 + 30] = types[name];
+    if (name === "repair" || name === "dismantle") s.fenceHp.set("30,24", 20);
+    if (name === "repair") s.inv.wood = 0;
+    if (name === "crop") s.crops.set("30,24", { stage: 2, grow: 0 });
+    if (name === "bench") { s.player.x = s.bench.x; s.player.y = s.bench.y + 12; }
+    if (name === "altar") {
+      s.player.x = s.altar.x; s.player.y = s.altar.y + 12; s.nights = 3; s.day = true; s.inv.heart = 1;
+    }
+    if (name === "combat") {
+      s.day = false; s.nights = 1; s.cycle = 0; s.wave = 1; s.wavesTotal = 2; s.toSpawn = 0;
+      s.enemies = [{ kind: "slime", x: s.player.x + 16, y: s.player.y, vx: 0, vy: 0,
+        hp: 100, maxHp: 100, spd: 0, dmg: 0, hit: 0, flash: 0, bob: 0 }];
+    }
+  }, name);
+  const click = async (selector) => mode.touch ? page.locator(selector).tap() : page.locator(selector).click();
+  if (hintComparisons.includes(name)) {
+    if (!await page.locator("#play-details").evaluate((el) => el.open)) await click("#play-details summary");
+    await click(`.item[data-build="${["repair", "cancel"].includes(name) ? "fence" : name}"]`);
+    await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+    if (name === "cancel") {
+      if (mode.layoutTouch) {
+        await click("#play-details summary");
+        await click('.item[data-build="fence"]');
+      } else await page.keyboard.press("Digit0");
+      await page.waitForFunction(() => window.CUBE.getState().build === null);
+      assert.ok(await page.locator("#build-banner").evaluate((el) => el.classList.contains("hidden")));
+      if (!before) assert.equal(await page.locator("#toast").innerText(), "已取消建造。");
+    }
+  }
+  if (!mode.touch) {
+    const point = await page.evaluate(() => {
+      const cam = window.CUBE.cam(), r = document.getElementById("game").getBoundingClientRect();
+      return { x: r.x + (30 * 16 + 8 - cam.x) * r.width / 320,
+        y: r.y + (24 * 16 + 8 - cam.y) * r.height / 192 };
+    });
+    if (!["bench", "altar"].includes(name)) await page.mouse.move(point.x, point.y);
+  }
+  const touch = mode.layoutTouch;
+  const hold = touch ? "按住「采集/攻击」" : "按住左键";
+  const interact = touch ? "点「交互 E」" : "按 E";
+  const expected = {
+    fence: `${touch ? "点地图空地" : "左键点空地"}放下栅栏`,
+    torch: `${touch ? "点地图空地" : "左键点空地"}放下火把`,
+    plot: `${touch ? "点地图空地" : "左键点空地"}开田`,
+    repair: `${touch ? "点坏墙" : "左键"}修理栅栏（1木）`,
+    tree: touch ? `${hold}砍树` : "空格或按住左键砍树",
+    gold: `${hold}挖金矿`, stone: `${hold}挖石头`, crop: `${hold}收麦`,
+    farm: touch ? `${interact}播种（要有种子）` : "按 E 或左键播种（要有种子）",
+    dismantle: touch ? "面朝栅栏，按住「采集/攻击」拆除" : "空格拆除栅栏",
+    bench: `${interact}查看还差哪些材料`, altar: `${interact}献上方块之心`,
+    combat: touch ? "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理"
+      : "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+  }[name];
+  if (!before && expected) await page.waitForFunction((text) => document.getElementById("prompt").textContent === text, expected);
+  else await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+  const metrics = await inspect(page);
+  const media = await page.evaluate(() => ({
+    touchLayout: matchMedia("(any-pointer: coarse), (max-width: 760px)").matches,
+    coarse: matchMedia("(any-pointer: coarse)").matches,
+    narrow: matchMedia("(max-width: 760px)").matches,
+    pointer_coarse: matchMedia("(pointer: coarse)").matches,
+  }));
+  assert.equal(media.touchLayout, mode.layoutTouch);
+  assert.equal(media.touchLayout, media.coarse || media.narrow, "keep existing OR media rule");
+  if (mode.capture) {
+    assertFirstScreen(metrics, mode.layoutTouch);
+    assert.deepEqual(metrics.scroll, { x: 0, y: 0 }, `${name} ${mode.width}x${mode.height}: native selection/cancellation must not scroll`);
+  }
+  if (!before && ["fence", "torch", "plot"].includes(name)) {
+    const toast = metrics.notice_text.find((r) => r.id === "toast").text;
+    assert.ok(toast.includes(mode.layoutTouch ? `再点背包「${{ fence: "栏", torch: "火", plot: "田" }[name]}」取消` : "按 0 取消"));
+    assert.equal(toast.includes("坏墙"), name === "fence", "torch/plot must not promise fence repair");
+    assert.ok(!toast.includes("拆除"), "selection toast must not imply tap-to-dismantle");
+    if (mode.capture) {
+      const r = metrics.rects;
+      assert.ok(r.toast.bottom <= r["notice-feed"].bottom + 0.5, "selection instructions must fit bounded feedback");
+      assert.ok(r.prompt.bottom <= r["notice-feed"].bottom + 0.5, "live placement prompt must also be fully visible");
+    }
+  }
+  return { metrics, media };
+}
+
+export async function testDeviceHints(browser, origin, capture = false) {
+  const screenshots = [], checks = [];
+  let previous;
+  if (capture) {
+    try { previous = JSON.parse(await readFile(join(hintOut, "screenshots.json"), "utf8")); }
+    catch (error) { if (error.code !== "ENOENT") throw error; }
+  }
+  const files = ["index.html", "style.css", "game.js"];
+  const sha = execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT }).toString().trim();
+  const dirty = !!execFileSync("git", ["status", "--porcelain", "--", ...files], { cwd: ROOT }).toString().trim();
+  for (const version of capture ? ["before", "after"] : ["after"]) {
+    const buffers = version === "before"
+      ? files.map((f) => execFileSync("git", ["show", `${hintBaseline}:${f}`], { cwd: ROOT }))
+      : await Promise.all(files.map((f) => readFile(join(ROOT, f))));
+    const hash = createHash("sha256").update(Buffer.concat(buffers)).digest("hex");
+    for (const mode of hintModes.filter((m) => version !== "before" || m.capture)) {
+      const viewport = { width: mode.width, height: mode.height };
+      const context = await browser.newContext({ viewport, hasTouch: mode.touch, isMobile: mode.touch, deviceScaleFactor: 1 });
+      try {
+        const page = await context.newPage(), errors = [];
+        page.on("pageerror", (e) => errors.push(e.message));
+        if (version === "before") {
+          await page.route(origin, (r) => r.fulfill({ body: buffers[0], contentType: "text/html" }));
+          for (let i = 0; i < files.length; i++) await page.route(`**/${files[i]}`, (r) => r.fulfill({
+            body: buffers[i], contentType: i === 0 ? "text/html" : i === 1 ? "text/css" : "text/javascript",
+          }));
+        }
+        for (const name of hintCases.filter((n) => version !== "before" || hintComparisons.includes(n))) {
+          const cached = version === "before" && previous?.screenshots.find((s) => s.state === `${name} / before`
+            && s.viewport.width === mode.width && s.viewport.height === mode.height && s.build.source_sha256 === hash);
+          if (cached) {
+            screenshots.push(cached);
+            checks.push({ screen_id: name, version, viewport, input: cached.input, media: cached.media,
+              scroll: cached.metrics.scroll, layout_scope: "reused unchanged baseline PNG/metadata",
+              prompt: cached.metrics.notice_text.find((r) => r.id === "prompt").text });
+            continue;
+          }
+          const result = await prepareHint(page, origin, name, mode, version === "before");
+          checks.push({ screen_id: name, version, viewport, input: mode.touch ? "native touch" : "mouse/keyboard",
+            media: result.media, scroll: result.metrics.scroll,
+            layout_scope: mode.capture ? "first viewport and native action geometry" : "media/input wording only; no first-screen assertion",
+            prompt: result.metrics.notice_text.find((r) => r.id === "prompt").text });
+          if (capture && mode.capture) {
+            await page.evaluate(() => { window.CUBE.getState().paused = true; });
+            const filename = `${name}--${mode.width}x${mode.height}--${version}--${hash.slice(0, 8)}.png`;
+            await mkdir(join(hintOut, "images"), { recursive: true });
+            await page.screenshot({ path: join(hintOut, "images", filename), fullPage: false });
+            screenshots.push({
+              screen_id: name, state: `${name} / ${version}`, viewport, language: "zh-CN",
+              build: { sha: version === "before" ? hintBaseline : sha, dirty: version === "after" && dirty, source_sha256: hash },
+              source: "fixture / isolated context, normal class entry and native selection/cancel inputs",
+              platform: "Web / WebKit", ui_scale: "100%", device_scale_factor: 1, full_page: false,
+              input: mode.touch ? "native touch" : "mouse/keyboard", media: result.media,
+              relative_image_path: `images/${filename}`, issue_ids: ["UI-009"], status: "已截",
+              visual_review: "待协调人逐图复看", captured_at: new Date().toISOString(), metrics: result.metrics,
+              repro_steps: [
+                `隔离上下文；${version === "before" ? "内存route提供4cf83fd原HTML/CSS/JS，不覆盖工作区" : "当前源码"}；不接触用户存档`,
+                `正常选择骑士并跳过开场/预演；prepareHint("${name}")明确注入地形/库存/角色位置`,
+                "一般夹具：玩家(30,25)朝北、(28..32,23..27)草地、木石10；目标(30,24)按场景设资源/田/墙；坏墙HP20且修墙场景木0",
+                "工作台/祭坛场景改为设施南12px；祭坛夹具为三夜后白天且心1；夜战为静止0伤害近怪，不代表自然通关",
+                `${mode.touch ? "原生触屏" : "真实鼠标/键盘"}选背包项；取消用${mode.layoutTouch ? "再点同一背包项" : "键盘0"}；不直接调用建造/取消API`,
+                "目标由朝向或桌面鼠标悬停确定；只在截图时冻结模拟；真实首屏原图，100%缩放，不拼接",
+              ],
+            });
+          }
+        }
+        assert.deepEqual(errors, [], "no page exceptions");
+      } finally { await context.close(); }
+    }
+  }
+  if (capture) {
+    const history = [...new Map([...(previous?.history || previous?.screenshots || []), ...screenshots]
+      .map((s) => [s.relative_image_path, s])).values()];
+    await writeFile(join(hintOut, "screenshots.json"), JSON.stringify({ screenshots, history, visual_review: "待协调人实际看图" }, null, 2) + "\n");
+    await writeFile(join(hintOut, "validation.json"), JSON.stringify({ baseline: hintBaseline, checks,
+      after_cases: checks.filter((c) => c.version === "after").length }, null, 2) + "\n");
+    const rows = hintComparisons.flatMap((name) => hintModes.filter((m) => m.capture).map((m) => {
+      const image = (v) => screenshots.find((s) => s.state === `${name} / ${v}` && s.viewport.width === m.width).relative_image_path;
+      return `| ${name} | ${m.width}×${m.height} | [原图](${image("before")}) | [原图](${image("after")}) |`;
+    }));
+    await writeFile(join(hintOut, "INDEX.md"), [
+      "# UI-009 设备相符操作反馈", "",
+      "独立片：前图4cf83fd，后图实际源码SHA/dirty/hash逐项记录。保留旧基线、材料缺口及自然三夜证据。",
+      "40张建设/修墙/取消同状态前后原图；另36张受影响采集/播种/交互/夜战后图。四视口均为真实首屏，不是全页缩图。",
+      "touchLayout沿用(any-pointer: coarse) OR (max-width:760px)，不是最后输入设备检测。另对320鼠标与1280触屏仅验证媒体规则/提示，不追加图片或作边界首屏布局结论；实际scroll见validation。",
+      "触控用地图点击、背包同项取消、交互/技能按钮与面朝目标按住采集/攻击；桌面用鼠标/键盘。火把/田不再误称可修墙；取消仅增加确认文案，无玩法数值改动。",
+      "所有状态是隔离fixture，源码/库存/目标/输入/真实画布见screenshots.json。不动用户存档，仅截图时冻结模拟。",
+      "", "| 状态 | 视口 | 前原图 | 后原图 |", "|---|---|---|---|", ...rows,
+      "", "## 其他受影响后图", "",
+      ...screenshots.filter((s) => s.state.endsWith("/ after") && !hintComparisons.includes(s.screen_id))
+        .map((s) => `- ${s.screen_id} ${s.viewport.width}×${s.viewport.height}：[原图](${s.relative_image_path})`),
+      "", "## 检查与限制", "",
+      "- [逐图元数据](screenshots.json) · [84个后版本设备/提示场景](validation.json) · [实际检查与独立审查记录](checks.log)。",
+      "- 原输入逻辑未改；仅取消选择时增加「已取消建造」反馈。既有触屏/鼠标选项及取消入口有真实输入断言。",
+      "- 初次目标检查将宽屏触摸边界也作为零滚动首屏断言而失败；一次4cf83fd原源码探测确认该边界选栏同样scrollY=160。现56个主视口场景验证首屏/输入，28个媒体边界仅验证提示规则；不掩称宽屏触控布局已修复。",
+      "- 自查320中间版发现选栏确认句过长，重复放置提示底边受限；已缩短确认并增加确认/放置两条都完整可见的断言。旧版本前图复用，中间版原图及元数据保留history，不冒称已获协调人批准。",
+      "- 只补本片受影响状态，不重拍开始/暂停/结算等未变界面，不重跑自然三夜/平衡验证。受控夜战/祭坛不代表自然通关。",
+      "- 浏览器触控模拟不是实体手机；截图未获本片协调人视觉批准，不以旧材料缺口局部批准代替。",
+      "- 无Pages/腾讯云部署；原PR保持未合并。", "",
+    ].join("\n"));
+  }
+  console.log(`DEVICE_HINTS_OK ${checks.filter((c) => c.version === "after").length} cases; ${screenshots.length} actual-viewport PNGs`);
+}
+
 async function touchGestures(origin) {
   const browser = await chromium.launch({ headless: true });
   try {
@@ -305,8 +516,12 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   } else {
     const browser = await launch();
     try {
-      await testCoreLayout(browser, origin);
-      if (process.argv.includes("--capture")) await capture(browser, origin);
+      if (process.argv.includes("--device-hints")) {
+        await testDeviceHints(browser, origin, process.argv.includes("--capture"));
+      } else {
+        await testCoreLayout(browser, origin);
+        if (process.argv.includes("--capture")) await capture(browser, origin);
+      }
     } finally {
       await browser.close();
       await new Promise((r) => server.close(r));

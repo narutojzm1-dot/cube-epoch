@@ -1,6 +1,6 @@
 import { serve, launch, enterPlay } from "./helpers.mjs";
 import { testNightUI } from "./night-ui.mjs";
-import { testCoreLayout } from "./layout-ui.mjs";
+import { testCoreLayout, testDeviceHints } from "./layout-ui.mjs";
 import { testMaterialFeedback } from "./material-feedback.mjs";
 
 const { server, origin } = await serve();
@@ -431,6 +431,7 @@ if (realLogs.length) throw new Error("page errors: " + realLogs.join(" | "));
 await testNightUI(browser, origin);
 await testCoreLayout(browser, origin);
 await testMaterialFeedback(browser, origin);
+await testDeviceHints(browser, origin);
 await browser.close();
 server.close();
 console.log("E2E_OK");
