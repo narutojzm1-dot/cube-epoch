@@ -337,6 +337,7 @@
       musicOn = true;
       sfxOn = true;
     }
+    if (musicOn || sfxOn) ensureAudio();
     setMusicLevel();
     if (btnMute) btnMute.textContent = audioLabel();
   }

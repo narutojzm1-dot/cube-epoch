@@ -1,0 +1,74 @@
+Product baseline: b292b989c1aefb2f3e4103aab4d636d04e9e5bfe
+Before served-byte SHA256: 295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c
+After dirty served-byte SHA256: d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3
+
+Actual Chromium320 probe:
+START contexts1 state=running label="声音开"
+Real native AudioContext.suspend fixture, not actual OS interruption.
+TAP label="仅音效" state=suspended time=0.30133333333333334
+TAP label="静音" state=suspended time=0.30133333333333334
+TAP label="声音开" state=suspended time=0.30133333333333334
+
+Native WebKit availability probe:
+AudioContext and webkitAudioContext unavailable.
+TypeError: undefined is not a constructor (evaluating 'new(window.AudioContext||window.webkitAudioContext)()')
+Initial recorder probe could not suspend a nonexistent context; no native recovery pass claimed.
+Final tests explicitly check unavailable-API compatibility without mock APIs.
+
+node --check tests\audio-recovery.mjs
+exit0
+node tests\audio-recovery.mjs --before --capture
+AUDIO_CONTROLS_CHECKED 12 before records; native audio availability per record; 7 viewport originals; physical listening NOT tested
+node --check game.js
+exit0
+node tests\static.mjs
+STATIC_OK
+node tests\audio-recovery.mjs --capture
+AUDIO_CONTROLS_CHECKED 12 after records; native audio availability per record; 7 viewport originals; physical listening NOT tested
+All four Chromium native profiles: resumed state/time, original skill oscillator ended=true, mute stays suspended, one context, unchanged gains.
+
+Independent READ-ONLY reviewer [reviewer] Review explicit audio recovery:
+No significant issues found in the reviewed changes.
+
+node --check tests\e2e.mjs
+exit0
+node tests\e2e.mjs (one required integration run)
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+HEART_DELIVERY_OK 20 after cases; 0 original PNGs
+CROP_FEEDBACK_OK 20 after checks; natural growth + unchanged harvest + night priority; 0 actual-viewport originals; webkit; harvest=keyboard, touch E native
+FARMER_SKILL_FEEDBACK_OK 20 after cases; actual ripening/heal + cap/cooldown/inventory guards; 0 original PNGs
+PLANTING_FEEDBACK_OK 24 after cases; real seed depletion + refusal/repeat/success/target priorities; 0 original PNGs
+AUDIO_NATIVE_UNAVAILABLE webkit 320x568: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_NATIVE_UNAVAILABLE webkit 390x844: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_NATIVE_UNAVAILABLE webkit 844x390: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_NATIVE_UNAVAILABLE webkit 1280x800: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_CONTROLS_CHECKED 12 after records; native audio availability per record; 0 viewport originals; physical listening NOT tested
+DEVICE_HINTS_OK 84 cases; 0 actual-viewport PNGs
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":109.5,"y":95,"width":470,"height":282,"right":579.5,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406,"y":280.703125,"width":816,"height":489.59375,"right":1222,"bottom":770.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+E2E_OK
+exit0
+
+Resumption after user-reported Copilot model connection interruption:
+No new provider error code is available in retained tool output; do not invent a cause/code.
+Current source hash exactly matches all14 originals and after-native validation.
+audio-integrated-gate already completed exit0; source unchanged, no rerun or recapture.
+Protected natural diagnostic SHA256 unchanged: 964230C5914271F326300CA2C0FE82122B87F43D3BF2111D5B2363A75089596D
+No save writes, gameplay changes, merge/deploy or second writing workspace.
+
+node tests\ui-review.mjs --check-coverage
+UI_COVERAGE_OK recorded baseline172/172; history305; supplemental372; read-only, no images captured; not a new-build full-matrix claim
+AUDIO_EVIDENCE_INTEGRITY_OK14 actual-viewport originals; native12+12 traces match current source; old baselines/batches/diagnosis preserved
+git diff --check (only current slice)
+exit0
+
+GitHub readonly base-PR query encountered:
+Post "https://api.github.com/graphql": net/http: TLS handshake timeout
+Not a product/test failure or a confirmed Copilot-provider failure.
+Audio-branch open-PR list returned[]; no duplicate PR observed. BasePR11 was not independently reverified by the failed query.

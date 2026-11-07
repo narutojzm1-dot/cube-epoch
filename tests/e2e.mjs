@@ -5,6 +5,7 @@ import { testMaterialFeedback, testHeartDelivery } from "./material-feedback.mjs
 import { testCropFeedback } from "./crop-feedback.mjs";
 import { testFarmerSkillFeedback } from "./farmer-skill-feedback.mjs";
 import { testPlantingFeedback } from "./planting-feedback.mjs";
+import { testAudioRecovery } from "./audio-recovery.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -438,6 +439,7 @@ await testHeartDelivery(browser, origin);
 await testCropFeedback(browser, origin);
 await testFarmerSkillFeedback(browser, origin);
 await testPlantingFeedback(browser, origin);
+await testAudioRecovery(browser, origin);
 await testDeviceHints(browser, origin);
 await testWideTouchLayout(browser, origin);
 await browser.close();
