@@ -1,0 +1,43 @@
+{
+  "batch": "night-followup",
+  "delivery_status": "ready_for_coordinator_visual_review",
+  "base_sha": "63420933af8a79ccdf25c5a2ff5008280334d632",
+  "product_source_sha256": "784f5365d94b2443945cd695e8150a8c2de8620e5486f12b0cf33304b04b975f",
+  "recovery": {
+    "working_tree": "Clean at resume; existing HEAD/branch unchanged.",
+    "existing_pr": "PR #6 was open, unmerged, at 6342093; static/e2e already passed.",
+    "prior_evidence": "172 matrix records, 305 original images and indexed history verified. Original PNGs unchanged.",
+    "background_commands": "No surviving interrupted test/build process found in current PowerShell sessions.",
+    "reuse": "Previous checks were inspected, not rerun until product code changed. New validation covers this UI delta."
+  },
+  "changes": [
+    "UI-006: During any night the guide prioritizes camp defence, even if a wall is broken. The night step becomes complete only in daylight after at least three nights. Gameplay win gates and numbers are unchanged.",
+    "UI-007: Only touch/small-screen night layout stacks build/wave/action/toast messages below the canvas; no overlapping each other, guide, canvas or touch buttons. Day and desktop notice layouts are unchanged."
+  ],
+  "checks": [
+    { "command": "node --check game.js", "result": "pass" },
+    { "command": "node --check tests\\night-ui.mjs", "result": "pass" },
+    { "command": "node tests\\night-ui.mjs --capture", "result": "NIGHT_UI_OK; 32 current before/after originals, with intermediate originals retained" },
+    { "command": "npm test", "result": "STATIC_OK, MOBILE_OK, NIGHT_UI_OK, E2E_OK", "log": "checks.log" },
+    { "command": "git diff --check", "result": "pass" }
+  ],
+  "regression": "4 viewports; third night, broken-wall third night, third dawn and fourth night; guide current/done/objective assertions, no overlapping touch night notices, actual simulation transition from third night to daylight. Existing desktop/touch gameplay regression still passes.",
+  "independent_review": "Required independent code-review agent reviewed this finite increment and found no bug/suggestion/nit or blocking issue.",
+  "visual": {
+    "developer_opened": [
+      "third-night before at 320x568",
+      "final third-night after at 320x568, 844x390, 1280x800",
+      "final third-night-broken-wall after at 390x844",
+      "final third-dawn after at 320x568",
+      "final fourth-night after at 320x568"
+    ],
+    "status": "Pending coordinator per-image re-review; developer image inspection and automated tests do not mean user visual approval.",
+    "limits": [
+      "UI-005: small screens still require page scrolling for some controls and inventory.",
+      "Desktop original build/action notices can overlap when both appear; not changed by this mobile night patch.",
+      "Original daytime build/action/toast overlap can still be reproduced in the injected third-dawn stress case; kept visible as an unchanged follow-up candidate, not claimed fixed.",
+      "Fixture states and WebKit touch emulation do not establish natural three-night completion, real-device gestures, safe areas or performance."
+    ]
+  },
+  "release": "Update existing PR #6 only. No merge, Pages/Tencent Cloud deployment, upload or server change."
+}

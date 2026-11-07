@@ -1,0 +1,47 @@
+file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:85
+    throw new Error(`${c.id} / ${version}: ${JSON.stringify(debug)}`, { cause: error });
+          ^
+
+Error: fence-partial / before: {"inv":{"wood":1,"stone":0,"gold":0,"wheat":0,"seed":0,"fence":0,"torch":0,"plot":0,"heart":0},"tile":1,"build":"fence","paused":false,"message":"建造栅栏。点空地放下，点坏墙修好。空格拆除。"}
+    at file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:85:11
+    at async scenario (file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:73:3)
+    at async testMaterialFeedback (file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:161:26)
+    at async file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:203:5 {
+  [cause]: page.waitForFunction: Timeout 10000ms exceeded.
+      at scenario (D:\work\projects\cube-epoch\tests\material-feedback.mjs:73:14)
+      at async testMaterialFeedback (D:\work\projects\cube-epoch\tests\material-feedback.mjs:161:26)
+      at async file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:203:5 {
+    log: [],
+    name: 'TimeoutError'
+  }
+}
+
+Node.js v24.22.1
+file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:207
+          && s.viewport.width === v.width).relative_image_path.replaceAll("\\", "/");
+                                          ^
+
+TypeError: Cannot read properties of undefined (reading 'relative_image_path')
+    at image (file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:207:43)
+    at file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:208:61
+    at Array.map (<anonymous>)
+    at file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:205:66
+    at Array.flatMap (<anonymous>)
+    at testMaterialFeedback (file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:205:41)
+    at async file:///D:/work/projects/cube-epoch/tests/material-feedback.mjs:228:5
+
+Node.js v24.22.1
+MATERIAL_FEEDBACK_ARTIFACTS_OK: 30 passed after cases; 36 exact-viewport PNGs; INDEX recovered without replay
+ARTIFACT_PATHS_OK: metadata uses repository-relative URLs; original PNGs unchanged
+UI_COVERAGE_OK recorded baseline 172/172; history 305; supplemental 172; read-only, no images captured; not a new-build full-matrix claim
+
+> test
+> node tests/static.mjs && node tests/e2e.mjs
+
+STATIC_OK
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+E2E_OK
+PROVENANCE_OK: old baseline/history/batches unchanged; all18 after PNG records match current product bytes e30ac7d8dcb3e0f329202e230b24c7d0843480e571008a86473e50ace23ed9ba

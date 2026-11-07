@@ -111,8 +111,46 @@
         </div>
       </header>
 
-      <div class="stage">
+      <div class="play-main">
+        <div class="stage">
         <canvas id="game" width="640" height="384"></canvas>
+        <div id="briefing" class="briefing hidden">
+          <button type="button" id="btn-skip-brief">跳过预演</button>
+          <div class="briefing-box" id="briefing-box">
+            <strong id="briefing-title">要保护的</strong>
+            <p id="briefing-text"></p>
+            <span id="briefing-cursor" class="intro-cursor hidden">▼</span>
+          </div>
+          <p class="briefing-hint">空格 / 点击　继续</p>
+        </div>
+        </div>
+        <div class="play-notices">
+          <div id="wave-banner" class="wave-banner hidden"></div>
+          <div id="notice-feed" class="notice-feed" role="region" aria-label="操作与反馈，可上下滚动查看" tabindex="0">
+            <div id="toast" class="toast hidden" role="status"></div>
+            <div id="prompt" class="prompt hidden"></div>
+            <div id="build-banner" class="build-banner hidden"></div>
+          </div>
+        </div>
+
+      <div id="touch-controls" class="touch-controls" role="group" aria-label="触屏操作">
+        <div class="touch-directions" role="group" aria-label="移动方向">
+          <button type="button" data-hold="ArrowUp" aria-label="向上移动">↑</button>
+          <button type="button" data-hold="ArrowLeft" aria-label="向左移动">←</button>
+          <button type="button" data-hold="ArrowDown" aria-label="向下移动">↓</button>
+          <button type="button" data-hold="ArrowRight" aria-label="向右移动">→</button>
+        </div>
+        <div class="touch-actions">
+          <button type="button" data-hold="Space">采集/攻击 <small>按住 · 空格</small></button>
+          <button type="button" id="touch-interact">交互 E <small>合成 / 播种 / 献祭</small></button>
+          <button type="button" id="touch-skill">技能 Q <small id="touch-skill-cd">就绪</small></button>
+        </div>
+      </div>
+      </div>
+
+      <details id="play-details" class="play-details" open>
+        <summary><span id="guide-summary">第一步：走起来</span> · 背包/建造</summary>
+        <div class="details-content" tabindex="0" role="region" aria-label="引导、背包和建造说明">
         <aside id="guide" class="guide">
           <div class="guide-head">
             <strong id="guide-title">第一步：走起来</strong>
@@ -127,22 +165,6 @@
             <li data-step="offer">献祭</li>
           </ol>
         </aside>
-        <div id="build-banner" class="build-banner hidden"></div>
-        <div id="wave-banner" class="wave-banner hidden"></div>
-        <div id="prompt" class="prompt hidden"></div>
-        <div id="toast" class="toast hidden"></div>
-        <p id="keys-hint" class="keys-hint">此刻：WASD 或方向键，走到金框的树旁边</p>
-        <div id="briefing" class="briefing hidden">
-          <button type="button" id="btn-skip-brief">跳过预演</button>
-          <div class="briefing-box" id="briefing-box">
-            <strong id="briefing-title">要保护的</strong>
-            <p id="briefing-text"></p>
-            <span id="briefing-cursor" class="intro-cursor hidden">▼</span>
-          </div>
-          <p class="briefing-hint">空格 / 点击　继续</p>
-        </div>
-      </div>
-
       <footer class="dock">
         <div class="inv" id="inv">
           <span class="item build" data-k="fence" data-build="fence" title="按 1：放下栅栏"> <kbd>1</kbd> 栏 <b>0</b></span>
@@ -164,6 +186,10 @@
           心：木4石5金3麦3　栏1～2木　火1木1石　田1木
         </div>
       </footer>
+        <p id="keys-hint" class="keys-hint">此刻：WASD 或方向键，走到金框的树旁边</p>
+        <p class="touch-help">面朝目标按住采集/攻击；点背包「栏 / 火 / 田」后点地图建造，再点同一项取消。点「麦」回血。</p>
+        </div>
+      </details>
     </section>
 
     <section id="screen-intro" class="intro hidden" aria-live="polite">

@@ -112,6 +112,10 @@
   const guideEl = document.getElementById("guide");
   const guideTitle = document.getElementById("guide-title");
   const guideBody = document.getElementById("guide-body");
+  const guideSummary = document.getElementById("guide-summary");
+  const playDetails = document.getElementById("play-details");
+  const noticeFeed = document.getElementById("notice-feed");
+  const touchSkillCd = document.getElementById("touch-skill-cd");
   const promptEl = document.getElementById("prompt");
   const buildBanner = document.getElementById("build-banner");
   const waveBanner = document.getElementById("wave-banner");
@@ -147,6 +151,25 @@
   let toastTimer = 0;
   const keys = new Set();
   const mouse = { x: 0, y: 0, down: false, pressed: false, right: false, inside: false };
+  const touchHolds = new Map();
+  const touchLayout = window.matchMedia("(any-pointer: coarse), (max-width: 760px)");
+  let canvasTouch = null;
+
+  function held(code) {
+    return keys.has(code) || [...touchHolds.values()].some((button) => button.dataset.hold === code);
+  }
+
+  function resetInput() {
+    keys.clear();
+    for (const button of touchHolds.values()) button.classList.remove("held");
+    touchHolds.clear();
+    canvasTouch = null;
+    mouse.down = mouse.pressed = mouse.right = mouse.inside = false;
+  }
+
+  function canTouchPlay() {
+    return state && !state.paused && !state.over && !state.briefing && !intro.active;
+  }
 
   function rand(n) {
     return Math.floor(Math.random() * n);
@@ -327,6 +350,7 @@
   function toast(text, ms) {
     toastEl.textContent = text;
     toastEl.classList.remove("hidden");
+    noticeFeed.scrollTop = 0;
     toastTimer = ms || 2.2;
   }
 
@@ -678,13 +702,17 @@
     guideEl.classList.remove("hidden");
     markSeenWorld();
     // 预演结束：金框改指树，别再让人盯着篝火
-    toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
+    toast(touchLayout.matches
+      ? "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。"
+      : "金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
     last = performance.now();
     syncGuide();
     syncHud();
   }
 
   function startGame(cls, opts) {
+    resetInput();
+    playDetails.open = !touchLayout.matches;
     if (intro.active) {
       intro.active = false;
       if (intro.raf) cancelAnimationFrame(intro.raf);
@@ -771,7 +799,9 @@
     else {
       // 再玩或直接进场：这时才算看过世界
       markSeenWorld();
-      toast("金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
+      toast(touchLayout.matches
+        ? "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。"
+        : "金框指着附近的树。WASD 走过去，空格或按住左键砍。", 3.2);
     }
     if (!looping) {
       looping = true;
@@ -792,6 +822,7 @@
 
   function currentGuide() {
     if (!state || state.skippedGuide) return null;
+    if (!state.day) return GUIDE[3];
     if (!state.flags.moved) return GUIDE[0];
     if (!state.flags.chopped) return GUIDE[1];
     if (!campWalled()) return GUIDE[2];
@@ -807,7 +838,7 @@
       move: state.flags.moved,
       chop: state.flags.chopped,
       build: campWalled(),
-      night: state.nights >= WIN_NIGHTS,
+      night: state.day && survivedNights(),
       offer: !!state.win,
     };
     for (const li of document.querySelectorAll("#guide-steps li")) {
@@ -818,20 +849,32 @@
     if (state.skippedGuide || !step) {
       guideEl.classList.add("compact");
       guideTitle.textContent = state.win ? "方块之心已点亮" : "当前目标";
+      guideSummary.textContent = guideTitle.textContent;
       guideBody.textContent = objectiveText();
       syncKeysHint(null);
       return;
     }
     guideEl.classList.remove("compact");
     guideTitle.textContent = step.title;
+    guideSummary.textContent = step.title;
     // 围营步按缺口/木料重写，GUIDE[2].body 仍留着当兜底
-    guideBody.textContent = step.id === "build" ? wallGuideBody() : step.body;
+    const touchBody = {
+      move: "按方向按钮移动。金框指着附近的树，先走过去。",
+      chop: "面朝金框的树，按住「采集/攻击」。木头会飞进背包，用来围栅栏。",
+      offer: "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+    };
+    guideBody.textContent = step.id === "build" ? wallGuideBody()
+      : (touchLayout.matches && touchBody[step.id]) || step.body;
     syncKeysHint(step);
   }
 
   // 底栏和教程说同一句「此刻做什么」
   function syncKeysHint(step) {
     if (!keysHintEl) return;
+    if (touchLayout.matches) {
+      keysHintEl.textContent = "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q";
+      return;
+    }
     if (!step) {
       keysHintEl.textContent = "WASD 移动 · 空格砍/挖/打 · 1栏 2火 3田 · 点空地建造 / 点坏墙修理 · Q 技能 · H 吃麦";
       return;
@@ -851,9 +894,9 @@
     const gaps = campGaps().length;
     const needWood = woodToFinishWall();
     if (!canAffordNextFence()) {
-      return `围营还差 ${gaps} 面墙、大约 ${needWood} 木。先对着金框的树按空格或按住左键再砍。`;
+      return `围营还差 ${gaps} 面墙、大约 ${needWood} 木。先对着金框的树${touchLayout.matches ? "按住「采集/攻击」" : "按空格或按住左键"}再砍。`;
     }
-    return `按 1 选栅栏，再点篝火旁发光格（还差 ${gaps} 面）。自己能穿过栅栏。木头还要留给方块之心。`;
+    return `${touchLayout.matches ? "点背包「栏」选栅栏" : "按 1 选栅栏"}，再点篝火旁发光格（还差 ${gaps} 面）。自己能穿过栅栏。木头还要留给方块之心。`;
   }
 
   function setPrompt(text) {
@@ -988,6 +1031,7 @@
       "E  工作台合成 / 祭坛献祭 / 播种",
       "Q 或右键  职业技能",
       "点「麦」或 H  回血",
+      "触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。",
       "",
       "栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
     ].join("\n");
@@ -1004,27 +1048,39 @@
     return Object.entries(cost).every(([k, n]) => (state.inv[k] || 0) >= n);
   }
 
+  function missingMaterials(cost) {
+    return Object.entries(cost)
+      .filter(([k, n]) => (state.inv[k] || 0) < n)
+      .map(([k, n]) => `${labelOf(k)} ${n - (state.inv[k] || 0)}`);
+  }
+
   function pay(cost) {
     for (const [k, n] of Object.entries(cost)) state.inv[k] -= n;
+  }
+
+  function buildPlacementText(kind) {
+    const click = touchLayout.matches ? "点地图空地" : "左键点空地";
+    const action = { fence: "放下栅栏", torch: "放下火把", plot: "开田" }[kind];
+    return click + action;
   }
 
   function setBuild(kind, opts) {
     if (!state || state.over) return;
     if (!kind) {
+      if (state.build) toast("已取消建造。");
       state.build = null;
       syncHud();
       return;
     }
     if (opts && opts.toggle && state.build === kind) {
-      state.build = null;
-      syncHud();
-      return;
+      return setBuild(null);
     }
     const changed = state.build !== kind;
     state.build = kind;
     if (changed) {
-      const names = { fence: "栅栏", torch: "火把", plot: "田" };
-      toast(`建造${names[kind]}。点空地放下，点坏墙修好。空格拆除。`);
+      const target = kind === "fence" ? "空地/坏墙" : kind === "torch" ? "空地放火把" : "空地开田";
+      const cancel = touchLayout.matches ? `再点背包「${labelOf(kind)}」取消` : "按 0 取消";
+      toast(`${touchLayout.matches ? "点" : "左键点"}${target}；${cancel}。`);
     }
     syncHud();
   }
@@ -1060,7 +1116,7 @@
         return true;
       }
       if ((state.inv.wood || 0) < 1) {
-        toast("修墙需要 1 木。");
+        toast("修墙还差：" + missingMaterials({ wood: 1 }).join("、"));
         return true;
       }
       state.inv.wood -= 1;
@@ -1081,8 +1137,7 @@
     } else if (canPay(cost)) {
       pay(cost);
     } else {
-      const miss = Object.entries(cost).filter(([k, n]) => (state.inv[k] || 0) < n).map(([k, n]) => `${labelOf(k)}${n}`);
-      toast("材料不够：" + miss.join("、"));
+      toast("材料还差：" + missingMaterials(cost).join("、"));
       return true;
     }
     const openBefore = kind === "fence" && !campWalled();
@@ -1166,6 +1221,8 @@
     let dx = m.x - p.x;
     let dy = m.y - p.y;
     if (!mouse.inside || (Math.abs(dx) + Math.abs(dy) < 2)) {
+      dx = 0;
+      dy = 0;
       if (p.dir === 0) dy = 1;
       if (p.dir === 1) dx = -1;
       if (p.dir === 2) dx = 1;
@@ -1361,7 +1418,8 @@
     state.crops.set(`${tx},${ty}`, { stage: 0, grow: 0 });
     if (!state.flags.planted) {
       state.flags.planted = true;
-      toast(state.cls === "farmer" ? "播下了。你种的麦熟得更快。" : "播下了。长大后按住左键收。");
+      toast(state.cls === "farmer" ? "播下了。你种的麦熟得更快。"
+        : `播下了。长大后${touchLayout.matches ? "按住「采集/攻击」" : "按住左键"}收。`);
     }
     beep(400, 0.05, "triangle", 0.04);
     return true;
@@ -1396,10 +1454,7 @@
       toast("方块之心已经在背包里。送到北边祭坛。");
       return;
     }
-    const miss = [];
-    for (const [k, n] of Object.entries(NEED)) {
-      if (inv[k] < n) miss.push(`${labelOf(k)} ${n - inv[k]}`);
-    }
+    const miss = missingMaterials(NEED);
     if (miss.length) {
       toast("还差：" + miss.join("、"));
       return;
@@ -1789,10 +1844,10 @@
     const def = CLASSES[p.cls];
     let ix = 0;
     let iy = 0;
-    if (keys.has("KeyW") || keys.has("ArrowUp")) iy -= 1;
-    if (keys.has("KeyS") || keys.has("ArrowDown")) iy += 1;
-    if (keys.has("KeyA") || keys.has("ArrowLeft")) ix -= 1;
-    if (keys.has("KeyD") || keys.has("ArrowRight")) ix += 1;
+    if (held("KeyW") || held("ArrowUp")) iy -= 1;
+    if (held("KeyS") || held("ArrowDown")) iy += 1;
+    if (held("KeyA") || held("ArrowLeft")) ix -= 1;
+    if (held("KeyD") || held("ArrowRight")) ix += 1;
     const moving = ix || iy;
     if (moving) state.flags.moved = true;
     if (moving) {
@@ -1832,7 +1887,7 @@
     p.sense = Math.max(0, p.sense - dt);
     if (p.cls === "mage") p.mana = Math.min(p.maxMana, p.mana + dt * 1.35);
 
-    const usingSpace = keys.has("Space") || keys.has("KeyJ");
+    const usingSpace = held("Space") || held("KeyJ");
     const wantAct = mouse.down || usingSpace;
     const f = (usingSpace || bumpRes) ? frontTile() : aimTile();
     const t = tileAt(f.tx, f.ty);
@@ -1999,29 +2054,34 @@
     const t = tileAt(f.tx, f.ty);
     const p = state.player;
     let prompt = "";
+    const interactHint = touchLayout.matches ? "点「交互 E」" : "按 E";
+    const holdHint = touchLayout.matches ? "按住「采集/攻击」" : "按住左键";
+    const combatHint = touchLayout.matches ? "按住「采集/攻击」 · 点「技能 Q」" : "左键攻击 · Q 技能";
     if (dist(p.x, p.y, state.bench.x, state.bench.y) < 26 && (state.flags.chopped || materialsReady() || state.inv.heart)) {
-      prompt = materialsReady() || state.inv.heart ? "按 E 合成方块之心" : "按 E 查看还差哪些材料";
+      prompt = materialsReady() || state.inv.heart ? `${interactHint}合成方块之心` : `${interactHint}查看还差哪些材料`;
     } else if (dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
       if (!state.day) prompt = "祭坛夜里封着，先守篝火";
       else if (!survivedNights()) prompt = `再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献`;
-      else if (state.inv.heart > 0) prompt = "按 E 献上方块之心";
+      else if (state.inv.heart > 0) prompt = `${interactHint}献上方块之心`;
       else prompt = "先去工作台合成方块之心";
     } else if (!state.day && state.enemies.some((e) => dist(e.x, e.y, p.x, p.y) < 42)) {
-      prompt = "左键攻击 · Q 技能 · 点坏墙修理";
+      prompt = `${combatHint} · ${touchLayout.matches ? "选栏再点坏墙修理" : "按 1 后点坏墙修理"}`;
     } else if (state.build && placeable(f.tx, f.ty)) {
-      prompt = state.build === "fence" ? "左键放下栅栏" : state.build === "torch" ? "左键放下火把" : "左键开田";
-    } else if (t === T.TREE || tileAt(frontTile().tx, frontTile().ty) === T.TREE) prompt = "空格或按住左键砍树";
-    else if (t === T.GOLD) prompt = "按住左键挖金矿";
-    else if (t === T.STONE) prompt = "按住左键挖石头";
+      prompt = buildPlacementText(state.build);
+    } else if (t === T.TREE || tileAt(frontTile().tx, frontTile().ty) === T.TREE) {
+      prompt = touchLayout.matches ? `${holdHint}砍树` : "空格或按住左键砍树";
+    }
+    else if (t === T.GOLD) prompt = `${holdHint}挖金矿`;
+    else if (t === T.STONE) prompt = `${holdHint}挖石头`;
     else if (t === T.FENCE) {
       const hp = state.fenceHp.get(`${f.tx},${f.ty}`) || FENCE_MAX;
-      if (state.build === "fence" && hp < FENCE_MAX - 0.5) prompt = "左键修理栅栏（1木）";
+      if (state.build === "fence" && hp < FENCE_MAX - 0.5) prompt = `${touchLayout.matches ? "点坏墙" : "左键"}修理栅栏（1木）`;
       else if (state.build === "fence" && !campWalled()) prompt = "这段好了。点发光的空地继续围";
-      else prompt = "空格拆除栅栏";
+      else prompt = touchLayout.matches ? "面朝栅栏，按住「采集/攻击」拆除" : "空格拆除栅栏";
     }
-    else if (t === T.CROP && (state.crops.get(`${f.tx},${f.ty}`)?.stage || 0) >= 2) prompt = "按住左键收麦";
-    else if (t === T.FARM) prompt = "按 E 或左键播种（要有种子）";
-    else if (!state.day && state.enemies.length) prompt = "守住篝火 · 左键攻击 · Q 技能";
+    else if (t === T.CROP && (state.crops.get(`${f.tx},${f.ty}`)?.stage || 0) >= 2) prompt = `${holdHint}收麦`;
+    else if (t === T.FARM) prompt = touchLayout.matches ? `${interactHint}播种（要有种子）` : "按 E 或左键播种（要有种子）";
+    else if (!state.day && state.enemies.length) prompt = `守住篝火 · ${combatHint}`;
     setPrompt(prompt);
     syncGuide();
     for (const pt of state.particles) {
@@ -2043,23 +2103,26 @@
   }
 
   function objectiveText() {
+    const interactHint = touchLayout.matches ? "点「交互 E」" : "按 E";
     if (state.briefing) return "预演：看清要守的火，和最后要送到的祭坛";
     if (!state.day) return "守住篝火！怪从地图边缘朝营地来";
-    if (canOffer()) return "天亮了。把方块之心送到北边祭坛（按 E）";
+    if (canOffer()) return `天亮了。把方块之心送到北边祭坛（${interactHint}）`;
     if (state.inv.heart > 0 && !survivedNights()) return `先再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献祭`;
-    if (materialsReady() && !state.inv.heart) return "去工作台按 E 合成方块之心";
+    if (materialsReady() && !state.inv.heart) return `去工作台${interactHint}合成方块之心`;
     if (!campWalled()) {
       const gaps = campGaps().length;
-      if (!state.flags.chopped) return "走到金框的树旁，空格或按住左键砍木头";
+      if (!state.flags.chopped) return touchLayout.matches
+        ? "走到金框的树旁，按住「采集/攻击」砍木头"
+        : "走到金框的树旁，空格或按住左键砍木头";
       if (!canAffordNextFence()) return `再砍树凑木头（还差 ${gaps} 面墙）`;
-      return `按 1，点发光格围营（还差 ${gaps} 面）`;
+      return `${touchLayout.matches ? "点背包「栏」" : "按 1"}，点发光格围营（还差 ${gaps} 面）`;
     }
     const miss = [];
     if (state.inv.wood < NEED.wood) miss.push(`木 ${state.inv.wood}/${NEED.wood}`);
     if (state.inv.stone < NEED.stone) miss.push(`石 ${state.inv.stone}/${NEED.stone}`);
     if (state.inv.gold < NEED.gold) miss.push(`金 ${state.inv.gold}/${NEED.gold}`);
     if (state.inv.wheat < NEED.wheat) miss.push(`麦 ${state.inv.wheat}/${NEED.wheat}`);
-    if (!miss.length) return "材料齐了。去工作台按 E 合成";
+    if (!miss.length) return `材料齐了。去工作台${interactHint}合成`;
     return "采集 " + miss.join("  ") + "，顺手补墙";
   }
 
@@ -2081,10 +2144,11 @@
     clockEl.className = "clock " + (state.day ? "day" : "night");
     objectiveEl.textContent = objectiveText();
     skillCdEl.textContent = p.skillCd > 0 ? `${p.skillCd.toFixed(1)}s` : "就绪";
+    touchSkillCd.textContent = skillCdEl.textContent;
     skillDock.classList.toggle("ready", p.skillCd <= 0);
     if (state.build) {
       const names = { fence: "栅栏", torch: "火把", plot: "田" };
-      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)} · 点空地放下 / 点坏墙修理 · 按 0 取消`;
+      buildBanner.textContent = `建造${names[state.build]} · ${costText(state.build)} · ${buildPlacementText(state.build)}${state.build === "fence" ? " / 点坏墙修理" : ""} · ${touchLayout.matches ? "再点背包同一项取消" : "按 0 取消"}`;
       buildBanner.classList.remove("hidden");
     } else {
       buildBanner.classList.add("hidden");
@@ -2478,6 +2542,7 @@
   }
 
   function showOverlay(title, body, actions) {
+    resetInput();
     overlayTitle.textContent = title;
     overlayBody.textContent = body;
     overlayActions.innerHTML = "";
@@ -2553,7 +2618,10 @@
     if (!item) return;
     if (item.dataset.k === "wheat") eatWheat();
     if (item.dataset.build) setBuild(item.dataset.build, { toggle: true });
+    if (touchLayout.matches && (item.dataset.build || item.dataset.k === "wheat")) playDetails.open = false;
   });
+  playDetails.addEventListener("toggle", resetInput);
+  touchLayout.addEventListener("change", () => { playDetails.open = !touchLayout.matches; });
 
   window.addEventListener("keydown", (e) => {
     if (intro.active) {
@@ -2570,6 +2638,11 @@
       else if (e.code === "Space" || e.code === "Enter" || e.key === "Enter") advanceBrief();
       return;
     }
+    const navigation = ["Space", "Enter", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Home", "End", "PageUp", "PageDown"];
+    if (e.target instanceof HTMLElement) {
+      if (e.target.closest("summary") && ["Space", "Enter"].includes(e.code)) return;
+      if (e.target.matches("#notice-feed, .details-content") && navigation.includes(e.code)) return;
+    }
     keys.add(e.code);
     if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Digit0", "Digit1", "Digit2", "Digit3"].includes(e.code)) e.preventDefault();
     if (!state) return;
@@ -2585,14 +2658,15 @@
     if (e.key === "3" || e.code === "Digit3" || e.code === "Numpad3") setBuild("plot");
   });
   window.addEventListener("keyup", (e) => keys.delete(e.code));
-  canvas.addEventListener("mousemove", (e) => {
+  function aimAt(e) {
     const r = canvas.getBoundingClientRect();
     const scaleX = canvas.width / r.width;
     const scaleY = canvas.height / r.height;
     mouse.x = (e.clientX - r.left) * scaleX;
     mouse.y = (e.clientY - r.top) * scaleY;
     mouse.inside = true;
-  });
+  }
+  canvas.addEventListener("mousemove", aimAt);
   canvas.addEventListener("mouseleave", () => { mouse.inside = false; mouse.down = false; });
   canvas.addEventListener("mousedown", (e) => {
     if (state && state.briefing) {
@@ -2604,6 +2678,59 @@
   });
   window.addEventListener("mouseup", () => { mouse.down = false; });
   canvas.addEventListener("contextmenu", (e) => e.preventDefault());
+  canvas.addEventListener("pointerdown", (e) => {
+    if (e.pointerType === "mouse" || canvasTouch !== null) return;
+    e.preventDefault();
+    if (state && state.briefing) {
+      advanceBrief();
+      return;
+    }
+    if (!canTouchPlay()) return;
+    canvasTouch = e.pointerId;
+    canvas.setPointerCapture(e.pointerId);
+    aimAt(e);
+    mouse.down = mouse.pressed = true;
+  });
+  canvas.addEventListener("pointermove", (e) => {
+    if (e.pointerId === canvasTouch) aimAt(e);
+  });
+  function releaseCanvasTouch(e) {
+    if (e.pointerId !== canvasTouch) return;
+    canvasTouch = null;
+    mouse.down = false;
+    if (e.type !== "pointerup") mouse.pressed = mouse.inside = false;
+  }
+  for (const type of ["pointerup", "pointercancel", "lostpointercapture"]) {
+    canvas.addEventListener(type, releaseCanvasTouch);
+  }
+  document.querySelectorAll("#touch-controls [data-hold]").forEach((button) => {
+    button.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
+      if (!canTouchPlay() || e.button !== 0) return;
+      button.setPointerCapture(e.pointerId);
+      touchHolds.set(e.pointerId, button);
+      button.classList.add("held");
+      mouse.inside = false;
+    });
+    const release = (e) => {
+      touchHolds.delete(e.pointerId);
+      if (![...touchHolds.values()].includes(button)) button.classList.remove("held");
+    };
+    for (const type of ["pointerup", "pointercancel", "lostpointercapture"]) {
+      button.addEventListener(type, release);
+    }
+    button.addEventListener("contextmenu", (e) => e.preventDefault());
+  });
+  document.getElementById("touch-interact").addEventListener("click", () => {
+    if (canTouchPlay()) interact();
+  });
+  document.getElementById("touch-skill").addEventListener("click", () => {
+    if (canTouchPlay()) useSkill();
+  });
+  window.addEventListener("blur", resetInput);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) resetInput();
+  });
   window.addEventListener("resize", () => { if (state) resize(); });
 
   window.CUBE = {

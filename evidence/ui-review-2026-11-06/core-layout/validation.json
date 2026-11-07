@@ -1,0 +1,123 @@
+{
+  "batch": "core-layout",
+  "branch": "fix/mobile-first-run-controls",
+  "pull_request": 6,
+  "base_sha": "9c06379dd6cdc14ea262d8545a4e44d8c28f2796",
+  "tested_product_source_sha256": "839cd5f4e9f731f5b10780a6a79f49383f6e822eec93f83da8e7a5191bbf9c6b",
+  "product_hash_order": [
+    "index.html",
+    "style.css",
+    "game.js"
+  ],
+  "changes": [
+    "白天、夜战、桌面统一为画布外独立波次与限高可滚动反馈区",
+    "320x568、390x844画布与七个核心触控按钮同首屏；按钮不小于44px",
+    "教程、背包和建造说明移动到可展开详情；手机选择建造或吃麦后自动收起",
+    "触控技能按钮显示既有冷却；展开详情释放长按；键盘可正常展开和滚动详情",
+    "小画布营地预演限制在画布内可滚动，跳过按钮保留在视口内",
+    "旧覆盖检查改为只读核查记录版本和追加批次，不按新源码覆盖历史索引"
+  ],
+  "checks": [
+    {
+      "command": "node --check game.js",
+      "result": "pass"
+    },
+    {
+      "command": "npm test",
+      "result": "STATIC_OK, MOBILE_OK, NIGHT_UI_OK, CORE_LAYOUT_OK, E2E_OK",
+      "log": "checks.log"
+    },
+    {
+      "command": "node tests\\layout-ui.mjs --capture",
+      "result": "pass; 84 current images, 110 preserved originals",
+      "log": "capture.log"
+    },
+    {
+      "command": "node tests\\layout-ui.mjs --touch-gestures",
+      "result": "Chromium native CDP two-touch hold/drag/end/cancel; no document scroll or stuck movement at 320x568 and 390x844",
+      "log": "touch-gestures.log"
+    },
+    {
+      "command": "node --check tests\\ui-review.mjs; node tests\\ui-review.mjs --check-coverage",
+      "result": "recorded baseline 172/172, history 305, supplemental 116; index hashes unchanged",
+      "log": "baseline-coverage.log"
+    },
+    {
+      "command": "compare recorded baseline/history to HEAD and current product hash to all after images",
+      "result": "unchanged 172/305 entries; product source matches",
+      "log": "provenance.log"
+    },
+    {
+      "command": "git diff --check",
+      "result": "pass"
+    }
+  ],
+  "independent_review": [
+    {
+      "scope": "product layout, input, dependent tests and screenshots",
+      "result": "No significant issues found. No blockers identified."
+    },
+    {
+      "scope": "read-only historical coverage check and briefing/pause metadata correction",
+      "result": "No significant issues found."
+    }
+  ],
+  "evidence": {
+    "current_images": 84,
+    "viewport_images": 80,
+    "explicit_full_page_supplements": 4,
+    "preserved_originals": 110,
+    "viewports": [
+      "1280x800",
+      "390x844",
+      "320x568",
+      "844x390"
+    ],
+    "states": [
+      "first-day",
+      "mage-first-day",
+      "third-night",
+      "third-dawn",
+      "no-materials",
+      "details-open",
+      "briefing",
+      "pause",
+      "victory",
+      "failure"
+    ],
+    "platform": "Web / WebKit",
+    "language": "zh-CN",
+    "ui_scale": "100%",
+    "device_scale_factor": 1,
+    "visual_review": "源码候选a342ef0可作ready_for_user_playtest；协调人已看7指定状态，其中6普通态局部通过、详情遮主控按限制记录；其余图不标通过。不是腾讯云包或已发布版本。",
+    "previous_local_approval": "协调人已看night-followup指定320第三夜前后和390第三天清晨后图；不外推到本批或全局布局"
+  },
+  "limitations": [
+    "夜战、清晨、材料不足和结算使用隔离临时夹具，不代表自然三夜实玩或平衡验证",
+    "打开次要详情时会覆盖部分画面和核心控件；关闭或选建造可返回主操作区",
+    "长反馈在固定区域内上下滚动查看；不保证所有提示同时完整显示，波次独立可见",
+    "未验证实体iOS/Android、浏览器工具栏、系统手势和安全区",
+    "全界面旧基线只作为记录版本复用；未宣称当前版本全部172状态重拍"
+  ],
+  "release": {
+    "merge_authorized": false,
+    "pages_deployed": false,
+    "tencent_cloud_deployed": false,
+    "server_changed": false
+  },
+  "readiness": {
+    "status": "ready_for_user_playtest",
+    "source_candidate": "a342ef0f7a1849b1e90a5ad32596d5622297c293",
+    "meaning": "源码候选，不等于腾讯云包或已发布版本",
+    "coordinator_reviewed_states": [
+      "third-night:320",
+      "third-dawn:390",
+      "first-day:844",
+      "details-open:320",
+      "pause:390",
+      "victory:320",
+      "first-day:1280"
+    ],
+    "scope": "指定普通态局部通过；展开详情遮主控保留限制，未将84图全部标通过"
+  }
+}

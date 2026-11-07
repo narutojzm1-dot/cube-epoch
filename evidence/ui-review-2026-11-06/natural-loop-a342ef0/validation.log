@@ -1,0 +1,15 @@
+NATURAL_VICTORY_VERIFIED game=288.403s wall=290.938s, 18kills, player165/camp100, no pageerror
+ARCHIVE_RECOVERED_WITH_ORIGINAL_EXIT1_ERROR_PRESERVED
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 30000ms exceeded.
+    at D:\work\projects\cube-epoch\[eval1]:2:451 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1
+NATURAL_ARTIFACTS_OK 20 original390x844 images; source hash unchanged; 172/305 old records unchanged
+VIDEO_PARTIAL_ONLY 281.64s/7041frames; victory last~9seconds NOT in recording; raw error retained
