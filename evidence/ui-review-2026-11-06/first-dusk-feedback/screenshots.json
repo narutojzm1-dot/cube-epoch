@@ -1,0 +1,6238 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "day-prepared",
+      "state": "day-prepared / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "4b50e0ef92f78a47796967524310e3d9c654eda13aa45532a406bcb8290a3bea"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/day-prepared--320x568--before--4b50e0ef.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "source": "ordinary isolated mage game: native mobile gathering/stored torch placement, natural first76s day/night/waves; no stock/world/location/time/source injection; screenshot pause only",
+      "input": "native Chromium touch holds/end and backpack/map taps; same natural320 game resized for real390/844 viewports",
+      "repro_steps": [
+        "普通隔离法师新局，方向移动至树旁，实际长按采集拾木",
+        "选火点(25,22)空地，用初始成品；不加快时间，等原76秒首日自然进入第一夜",
+        "观察目标、教程、保留建造选择及波次；等自然怪贴近，取消再选火",
+        "记录选择提示，再原生按住(23,22)空地至法力实际消耗，核对是否放置及库存",
+        "390/844是同一普通游戏的实际新视口渲染，不把320原图缩放；截图只暂停，不修改玩家存档"
+      ],
+      "captured_at": "2026-11-07T10:20:12.831Z",
+      "data": {
+        "day": true,
+        "time": 1.6876000000089386,
+        "cycle": 1.6535000000029783,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.000000002013,
+        "y": 360.14255999999995,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "点背包「栏」，点发光格围营（还差 4 面）",
+        "target": {
+          "x": 376,
+          "y": 344,
+          "kind": "gap"
+        },
+        "guide": "第三步：围营地",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "火把放好了。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 355.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "火把放好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      }
+    },
+    {
+      "screen_id": "first-night",
+      "state": "first-night / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "4b50e0ef92f78a47796967524310e3d9c654eda13aa45532a406bcb8290a3bea"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/first-night--320x568--before--4b50e0ef.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "source": "ordinary isolated mage game: native mobile gathering/stored torch placement, natural first76s day/night/waves; no stock/world/location/time/source injection; screenshot pause only",
+      "input": "native Chromium touch holds/end and backpack/map taps; same natural320 game resized for real390/844 viewports",
+      "repro_steps": [
+        "普通隔离法师新局，方向移动至树旁，实际长按采集拾木",
+        "选火点(25,22)空地，用初始成品；不加快时间，等原76秒首日自然进入第一夜",
+        "观察目标、教程、保留建造选择及波次；等自然怪贴近，取消再选火",
+        "记录选择提示，再原生按住(23,22)空地至法力实际消耗，核对是否放置及库存",
+        "390/844是同一普通游戏的实际新视口渲染，不把320原图缩放；截图只暂停，不修改玩家存档"
+      ],
+      "captured_at": "2026-11-07T10:21:27.235Z",
+      "data": {
+        "day": false,
+        "time": 76.03460000001303,
+        "cycle": 0,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 0,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第一夜：怪分波朝篝火来。站在墙后打。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      }
+    },
+    {
+      "screen_id": "near-enemy-selected",
+      "state": "near-enemy-selected / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "4b50e0ef92f78a47796967524310e3d9c654eda13aa45532a406bcb8290a3bea"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/near-enemy-selected--320x568--before--4b50e0ef.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "source": "ordinary isolated mage game: native mobile gathering/stored torch placement, natural first76s day/night/waves; no stock/world/location/time/source injection; screenshot pause only",
+      "input": "native Chromium touch holds/end and backpack/map taps; same natural320 game resized for real390/844 viewports",
+      "repro_steps": [
+        "普通隔离法师新局，方向移动至树旁，实际长按采集拾木",
+        "选火点(25,22)空地，用初始成品；不加快时间，等原76秒首日自然进入第一夜",
+        "观察目标、教程、保留建造选择及波次；等自然怪贴近，取消再选火",
+        "记录选择提示，再原生按住(23,22)空地至法力实际消耗，核对是否放置及库存",
+        "390/844是同一普通游戏的实际新视口渲染，不把320原图缩放；截图只暂停，不修改玩家存档"
+      ],
+      "captured_at": "2026-11-07T10:21:42.833Z",
+      "data": {
+        "day": false,
+        "time": 91.58390000001643,
+        "cycle": 15.54929999999991,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 2,
+        "bolts": 0,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 261.0794350564191,
+            "y": 296.8949690744888,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 414.8836015047614,
+            "y": 244.21163362770568,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 337.5462011625516,
+            "y": 381.68342625858264,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 406.22132237504405,
+            "y": 390.2213223750439,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 552.7330701294449,
+            "y": 448.3970796534475,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地放火把；再点背包「火」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 5",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      }
+    },
+    {
+      "screen_id": "near-enemy-selected",
+      "state": "near-enemy-selected / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "4b50e0ef92f78a47796967524310e3d9c654eda13aa45532a406bcb8290a3bea"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/near-enemy-selected--390x844--before--4b50e0ef.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "source": "ordinary isolated mage game: native mobile gathering/stored torch placement, natural first76s day/night/waves; no stock/world/location/time/source injection; screenshot pause only",
+      "input": "native Chromium touch holds/end and backpack/map taps; same natural320 game resized for real390/844 viewports",
+      "repro_steps": [
+        "普通隔离法师新局，方向移动至树旁，实际长按采集拾木",
+        "选火点(25,22)空地，用初始成品；不加快时间，等原76秒首日自然进入第一夜",
+        "观察目标、教程、保留建造选择及波次；等自然怪贴近，取消再选火",
+        "记录选择提示，再原生按住(23,22)空地至法力实际消耗，核对是否放置及库存",
+        "390/844是同一普通游戏的实际新视口渲染，不把320原图缩放；截图只暂停，不修改玩家存档"
+      ],
+      "captured_at": "2026-11-07T10:21:43.205Z",
+      "data": {
+        "day": false,
+        "time": 91.9173000000165,
+        "cycle": 15.882699999999899,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 7.4051349999999925,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 1,
+        "bolts": 1,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 268.9057911777926,
+            "y": 300.6218053227617,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 410.7061370142365,
+            "y": 251.80702361047818,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 341.98333082706006,
+            "y": 374.2367465353541,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 402.0466485512415,
+            "y": 382.96690935894486,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 545.1110156467175,
+            "y": 444.2684668086369,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地放火把；再点背包「火」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 5",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      }
+    },
+    {
+      "screen_id": "near-enemy-selected",
+      "state": "near-enemy-selected / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "4b50e0ef92f78a47796967524310e3d9c654eda13aa45532a406bcb8290a3bea"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/near-enemy-selected--844x390--before--4b50e0ef.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "source": "ordinary isolated mage game: native mobile gathering/stored torch placement, natural first76s day/night/waves; no stock/world/location/time/source injection; screenshot pause only",
+      "input": "native Chromium touch holds/end and backpack/map taps; same natural320 game resized for real390/844 viewports",
+      "repro_steps": [
+        "普通隔离法师新局，方向移动至树旁，实际长按采集拾木",
+        "选火点(25,22)空地，用初始成品；不加快时间，等原76秒首日自然进入第一夜",
+        "观察目标、教程、保留建造选择及波次；等自然怪贴近，取消再选火",
+        "记录选择提示，再原生按住(23,22)空地至法力实际消耗，核对是否放置及库存",
+        "390/844是同一普通游戏的实际新视口渲染，不把320原图缩放；截图只暂停，不修改玩家存档"
+      ],
+      "captured_at": "2026-11-07T10:21:43.560Z",
+      "data": {
+        "day": false,
+        "time": 92.23390000001658,
+        "cycle": 16.199299999999905,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 6.832545000000005,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 1,
+        "bolts": 2,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 276.3377778245441,
+            "y": 304.1608465831193,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 406.73917463361204,
+            "y": 259.01968248434093,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 346.19687387380117,
+            "y": 367.1653044226539,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 399.93864406049505,
+            "y": 375.0098021190618,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 537.8730358949732,
+            "y": 440.34789444310877,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 22,
+            "right": 546,
+            "bottom": 297
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 38,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 323
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 393,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 487.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地放火把；再点背包「火」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 5",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      }
+    },
+    {
+      "screen_id": "day-prepared",
+      "state": "day-prepared / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/day-prepared--320x568--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "source": "ordinary isolated mage game: native mobile gathering/stored torch placement, natural first76s day/night/waves; no stock/world/location/time/source injection; screenshot pause only",
+      "input": "native Chromium touch holds/end and backpack/map taps; same natural320 game resized for real390/844 viewports",
+      "repro_steps": [
+        "普通隔离法师新局，方向移动至树旁，实际长按采集拾木",
+        "选火点(25,22)空地，用初始成品；不加快时间，等原76秒首日自然进入第一夜",
+        "观察目标、教程、保留建造选择及波次；等自然怪贴近，取消再选火",
+        "记录选择提示，再原生按住(23,22)空地至法力实际消耗，核对是否放置及库存",
+        "390/844是同一普通游戏的实际新视口渲染，不把320原图缩放；截图只暂停，不修改玩家存档"
+      ],
+      "captured_at": "2026-11-07T10:25:06.052Z",
+      "data": {
+        "day": true,
+        "time": 1.688499999994038,
+        "cycle": 1.6542999999970183,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000205495,
+        "y": 360.14081999999996,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "点背包「栏」，点发光格围营（还差 4 面）",
+        "target": {
+          "x": 376,
+          "y": 344,
+          "kind": "gap"
+        },
+        "guide": "第三步：围营地",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "火把放好了。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 355.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "火把放好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      }
+    },
+    {
+      "screen_id": "first-night",
+      "state": "first-night / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/first-night--320x568--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "source": "ordinary isolated mage game: native mobile gathering/stored torch placement, natural first76s day/night/waves; no stock/world/location/time/source injection; screenshot pause only",
+      "input": "native Chromium touch holds/end and backpack/map taps; same natural320 game resized for real390/844 viewports",
+      "repro_steps": [
+        "普通隔离法师新局，方向移动至树旁，实际长按采集拾木",
+        "选火点(25,22)空地，用初始成品；不加快时间，等原76秒首日自然进入第一夜",
+        "观察目标、教程、保留建造选择及波次；等自然怪贴近，取消再选火",
+        "记录选择提示，再原生按住(23,22)空地至法力实际消耗，核对是否放置及库存",
+        "390/844是同一普通游戏的实际新视口渲染，不把320原图缩放；截图只暂停，不修改玩家存档"
+      ],
+      "captured_at": "2026-11-07T10:26:20.420Z",
+      "data": {
+        "day": false,
+        "time": 76.03539999999806,
+        "cycle": 0,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 0,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "第一夜：怪分波朝篝火来。站在墙后打。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次准备中",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      }
+    },
+    {
+      "screen_id": "near-enemy-selected",
+      "state": "near-enemy-selected / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/near-enemy-selected--320x568--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "source": "ordinary isolated mage game: native mobile gathering/stored torch placement, natural first76s day/night/waves; no stock/world/location/time/source injection; screenshot pause only",
+      "input": "native Chromium touch holds/end and backpack/map taps; same natural320 game resized for real390/844 viewports",
+      "repro_steps": [
+        "普通隔离法师新局，方向移动至树旁，实际长按采集拾木",
+        "选火点(25,22)空地，用初始成品；不加快时间，等原76秒首日自然进入第一夜",
+        "观察目标、教程、保留建造选择及波次；等自然怪贴近，取消再选火",
+        "记录选择提示，再原生按住(23,22)空地至法力实际消耗，核对是否放置及库存",
+        "390/844是同一普通游戏的实际新视口渲染，不把320原图缩放；截图只暂停，不修改玩家存档"
+      ],
+      "captured_at": "2026-11-07T10:26:40.502Z",
+      "data": {
+        "day": false,
+        "time": 95.9013000000025,
+        "cycle": 19.865899999999833,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 54.09999999999998,
+        "mana": 8,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 2,
+        "bolts": 0,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 360.0003968420553,
+            "y": 335.7322162093138,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 424.33094354804774,
+            "y": 378.8459277551916,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 351.9930466195148,
+            "y": 341.39123487587125,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 322.77076328801064,
+            "y": 296.4141947510692,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 319.6862466229127,
+            "y": 374.2345580406232,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已选火；近怪时按住空地先攻击。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 5",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      }
+    },
+    {
+      "screen_id": "near-enemy-selected",
+      "state": "near-enemy-selected / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/near-enemy-selected--390x844--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "source": "ordinary isolated mage game: native mobile gathering/stored torch placement, natural first76s day/night/waves; no stock/world/location/time/source injection; screenshot pause only",
+      "input": "native Chromium touch holds/end and backpack/map taps; same natural320 game resized for real390/844 viewports",
+      "repro_steps": [
+        "普通隔离法师新局，方向移动至树旁，实际长按采集拾木",
+        "选火点(25,22)空地，用初始成品；不加快时间，等原76秒首日自然进入第一夜",
+        "观察目标、教程、保留建造选择及波次；等自然怪贴近，取消再选火",
+        "记录选择提示，再原生按住(23,22)空地至法力实际消耗，核对是否放置及库存",
+        "390/844是同一普通游戏的实际新视口渲染，不把320原图缩放；截图只暂停，不修改玩家存档"
+      ],
+      "captured_at": "2026-11-07T10:26:40.840Z",
+      "data": {
+        "day": false,
+        "time": 96.18460000000258,
+        "cycle": 20.14919999999985,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 46.44999999999998,
+        "mana": 7.3375000000000234,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 1,
+        "bolts": 1,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 360.00015892635014,
+            "y": 335.7322162093138,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 417.9263339215026,
+            "y": 375.2200067166638,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 351.9930466195148,
+            "y": 342.9623286178087,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 327.3094723428474,
+            "y": 302.21549889372073,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 319.6862466229127,
+            "y": 370.01382647497775,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已选火；近怪时按住空地先攻击。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 5",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      }
+    },
+    {
+      "screen_id": "near-enemy-selected",
+      "state": "near-enemy-selected / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/near-enemy-selected--844x390--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "source": "ordinary isolated mage game: native mobile gathering/stored torch placement, natural first76s day/night/waves; no stock/world/location/time/source injection; screenshot pause only",
+      "input": "native Chromium touch holds/end and backpack/map taps; same natural320 game resized for real390/844 viewports",
+      "repro_steps": [
+        "普通隔离法师新局，方向移动至树旁，实际长按采集拾木",
+        "选火点(25,22)空地，用初始成品；不加快时间，等原76秒首日自然进入第一夜",
+        "观察目标、教程、保留建造选择及波次；等自然怪贴近，取消再选火",
+        "记录选择提示，再原生按住(23,22)空地至法力实际消耗，核对是否放置及库存",
+        "390/844是同一普通游戏的实际新视口渲染，不把320原图缩放；截图只暂停，不修改玩家存档"
+      ],
+      "captured_at": "2026-11-07T10:26:41.248Z",
+      "data": {
+        "day": false,
+        "time": 96.51800000000266,
+        "cycle": 20.482599999999863,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 38.79999999999998,
+        "mana": 6.787590000000037,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 1,
+        "bolts": 2,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 360.0000541362394,
+            "y": 335.7322162093138,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 410.7839438193476,
+            "y": 370.3080394744437,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 351.9930466195148,
+            "y": 343.66893402935915,
+            "hp": 10
+          },
+          {
+            "kind": "slime",
+            "x": 332.6508263805551,
+            "y": 309.0427308074518,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 323.7877822986591,
+            "y": 365.51771868971673,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 22,
+            "right": 546,
+            "bottom": 297
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 38,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 323
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 393,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 487.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已选火；近怪时按住空地先攻击。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 5",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      }
+    },
+    {
+      "screen_id": "fixture-near-torch",
+      "state": "fixture-near-torch / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "f85065c923e26c87dde65d3550bb98e6d6f0674c19be683a4d3d7e3153566793"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; Git e1a86b4 products served in memory, worktree untouched; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-torch--320x568--before--f85065c9.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地放火把；再点背包「火」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:13.076Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-help",
+      "state": "fixture-near-help / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "f85065c923e26c87dde65d3550bb98e6d6f0674c19be683a4d3d7e3153566793"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; Git e1a86b4 products served in memory, worktree untouched; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-help--320x568--before--f85065c9.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地放火把；再点背包「火」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:13.171Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-torch",
+      "state": "fixture-near-torch / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "f85065c923e26c87dde65d3550bb98e6d6f0674c19be683a4d3d7e3153566793"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; Git e1a86b4 products served in memory, worktree untouched; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-torch--390x844--before--f85065c9.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地放火把；再点背包「火」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:18.896Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-help",
+      "state": "fixture-near-help / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "f85065c923e26c87dde65d3550bb98e6d6f0674c19be683a4d3d7e3153566793"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; Git e1a86b4 products served in memory, worktree untouched; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-help--390x844--before--f85065c9.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地放火把；再点背包「火」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:18.979Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-torch",
+      "state": "fixture-near-torch / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "f85065c923e26c87dde65d3550bb98e6d6f0674c19be683a4d3d7e3153566793"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; Git e1a86b4 products served in memory, worktree untouched; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-torch--844x390--before--f85065c9.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 22,
+            "right": 546,
+            "bottom": 297
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 38,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 323
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 393,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 487.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地放火把；再点背包「火」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:24.734Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-help",
+      "state": "fixture-near-help / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "f85065c923e26c87dde65d3550bb98e6d6f0674c19be683a4d3d7e3153566793"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; Git e1a86b4 products served in memory, worktree untouched; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-help--844x390--before--f85065c9.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 22,
+            "right": 546,
+            "bottom": 297
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 38,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 323
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 393,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 487.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地放火把；再点背包「火」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:24.809Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-torch",
+      "state": "fixture-near-torch / before",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": false,
+        "source_sha256": "f85065c923e26c87dde65d3550bb98e6d6f0674c19be683a4d3d7e3153566793"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; Git e1a86b4 products served in memory, worktree untouched; screenshot pause only",
+      "input": "native mouse map holds, touch-layout backpack taps or desktop keyboard/mouse",
+      "relative_image_path": "images/fixture-near-torch--1280x800--before--f85065c9.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "左键点空地放火把；按 0 取消。",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 109,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 586.59375
+          },
+          "wave-banner": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 623.59375
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 95,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 658.59375
+          },
+          "prompt": {
+            "x": 96,
+            "y": 658.59375,
+            "width": 796,
+            "height": 31,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "build-banner": {
+            "x": 96,
+            "y": 689.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "guide": {
+            "x": 914,
+            "y": 163,
+            "width": 260,
+            "height": 112.5,
+            "right": 1174,
+            "bottom": 275.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 109,
+            "width": 280,
+            "height": 409.09375,
+            "right": 1184,
+            "bottom": 518.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "左键点空地放火把；按 0 取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:30.234Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-torch",
+      "state": "fixture-near-torch / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; current product bytes; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-torch--320x568--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已选火；近怪时按住空地先攻击。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:35.659Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-help",
+      "state": "fixture-near-help / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; current product bytes; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-help--320x568--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已选火；近怪时按住空地先攻击。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:35.752Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-torch",
+      "state": "fixture-near-torch / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; current product bytes; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-torch--390x844--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已选火；近怪时按住空地先攻击。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:41.463Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-help",
+      "state": "fixture-near-help / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; current product bytes; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-help--390x844--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已选火；近怪时按住空地先攻击。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:41.558Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-torch",
+      "state": "fixture-near-torch / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; current product bytes; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-torch--844x390--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 22,
+            "right": 546,
+            "bottom": 297
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 38,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 323
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 361,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 455.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已选火；近怪时按住空地先攻击。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:47.387Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-help",
+      "state": "fixture-near-help / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; current product bytes; screenshot pause only",
+      "input": "native Chromium map holds/end and backpack/help taps",
+      "relative_image_path": "images/fixture-near-help--844x390--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 22,
+            "right": 546,
+            "bottom": 297
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 38,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 323
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 361,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 455.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已选火；近怪时按住空地先攻击。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:47.475Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    },
+    {
+      "screen_id": "fixture-near-torch",
+      "state": "fixture-near-torch / after",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+        "dirty": true,
+        "source_sha256": "ace7f2288c909cfe831edb9cc6d68156eda9c9b40e6b0295faf5cd3d1936a6db"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated night fixture: initial mage stock, slime distance41/speed0/damage0/hp1000, left tilegrass; no natural survival claim; current product bytes; screenshot pause only",
+      "input": "native mouse map holds, touch-layout backpack taps or desktop keyboard/mouse",
+      "relative_image_path": "images/fixture-near-torch--1280x800--after--ace7f228.png",
+      "issue_ids": [
+        "UI-022"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "data": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时在空地按住左键先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时在空地按住左键先攻击；怪远离再放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 109,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 586.59375
+          },
+          "wave-banner": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 623.59375
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 95,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 658.59375
+          },
+          "prompt": {
+            "x": 96,
+            "y": 658.59375,
+            "width": 796,
+            "height": 31,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "build-banner": {
+            "x": 96,
+            "y": 689.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 718.59375
+          },
+          "guide": {
+            "x": 914,
+            "y": 163,
+            "width": 260,
+            "height": 112.5,
+            "right": 1174,
+            "bottom": 275.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 109,
+            "width": 280,
+            "height": 409.09375,
+            "right": 1184,
+            "bottom": 518.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已选火；近怪时在空地按住左键先攻击。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木 · 近怪时在空地按住左键先攻击；怪远离再放下火把 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 1 夜  波次 1/2  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "captured_at": "2026-11-07T10:31:52.869Z",
+      "repro_steps": [
+        "隔离法师新局后明确设置首夜波1/2、cycle1、无伤静止怪距41及(23,21)草地",
+        "真实选火，查看当前反馈及怎么玩里的原建造说明；不自动滚入",
+        "真实按住左侧空地至法力下降，释放；库存不扣、没有火把；42距离另独立真实放置正向回归",
+        "另独立选栏修20血墙，以及近怪指向树长按采集，保持原1木修理和采集优先"
+      ]
+    }
+  ]
+}

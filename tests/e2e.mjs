@@ -11,6 +11,7 @@ import { testNightNoticeFold } from "./night-notice-fold.mjs";
 import { testBuildSuccessFeedback } from "./build-success-feedback.mjs";
 import { testMapPlacement } from "./map-placement.mjs";
 import { testBuildGuidance } from "./build-guidance.mjs";
+import { testBuildCombatFeedback } from "./first-dusk-feedback.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -450,6 +451,7 @@ await testNightNoticeFold(browser, origin);
 await testBuildSuccessFeedback(browser, origin);
 await testMapPlacement(browser, origin);
 await testBuildGuidance(browser, origin);
+await testBuildCombatFeedback(browser, origin);
 await testDeviceHints(browser, origin);
 await testWideTouchLayout(browser, origin);
 await browser.close();

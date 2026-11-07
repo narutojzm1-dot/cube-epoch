@@ -1,0 +1,16 @@
+UI-022 first-night held-map building feedback; baseline e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a
+Ordinary Chromium before/after: PASS original76-second first day, real gather/stored-torch placement, natural night1/two waves, original camp objective/guide and build choice retained.
+Actual normal close-enemy held map: casts consume mana; no building stock spent or torch at intended empty cell; new feedback explicitly says HOLD, not all taps.
+Normal path: one320 game per version, resized real390/844 viewports and native input, no stock/location/world/time/source injection; screenshot pause only.
+Chromium fixture before/after: PASS32 cases per version; distance41 attacks/no cost,42 original placement, near fence1wood repair and resource mining priority.
+Held opening plot may sow under original rules; type7/8 accepted only with original wood1 and matching seed0/1 consumption. Initial failed wrong7-only expectation preserved.
+Desktop current banner/selection covers native mouse; unchanged generic desktop help has no live-banner prefix. Initial unsupported expectation preserved, mobile full hint remains asserted.
+Required static: node --check game.js PASS; node tests\static.mjs STATIC_OK.
+Independent readonly ship-gate review PASS, no significant findings; no reviewer writing or duplicate test/agent work.
+Required full WebKit integration PASS in dusk-integration, exit0: BUILD_COMBAT_FEEDBACK_OK webkit32 and E2E_OK. Existing mobile/core/night/fold/placement/help/native End-Home-End/wide-touch cases passed; see integration.log.
+Final strengthened nonempty/full-range mobile hint assertion: targeted Chromium32 PASS without captures, targeted-final.log. Product unchanged; ordinary76-second runs not repeated.
+Artifact audit PASS:24 actual-size PNGs/10ordinary14fixture; exact served byte hashes and32fixture+3natural records/version; near selection toast wholly inside feed; old root records deep-equal after removing only UI-022/batch.
+Read-only UI_COVERAGE_OK baseline172/history305/supplemental511; no new images or new-build full-matrix claim.
+Sources: natural-before rawWindows4b50e0ef; fixture-before GitLFf85065c9; after rawWindowsace7f228; captured SHA/dirty retained accurately.
+Protected natural diagnostic SHA256: 964230C5914271F326300CA2C0FE82122B87F43D3BF2111D5B2363A75089596D.
+No combat/input/map/time/wave/drop/economy/result/save changes. No merge/Pages/Tencent/server changes.

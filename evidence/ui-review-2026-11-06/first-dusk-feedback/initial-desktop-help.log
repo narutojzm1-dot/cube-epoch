@@ -1,0 +1,19 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(body.includes(selected.banner))
+
+    at testBuildCombatFeedback (file:///D:/work/projects/cube-epoch/tests/first-dusk-feedback.mjs:252:18)
+    at async file:///D:/work/projects/cube-epoch/tests/first-dusk-feedback.mjs:308:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.1
