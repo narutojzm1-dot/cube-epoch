@@ -1,0 +1,3570 @@
+{
+  "before": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "victory": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "focus": "touch-interact",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.0467,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "replaySpace": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.0467,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "returned": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "roleSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "focus": "mage",
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 625
+        },
+        "game": null
+      },
+      "startSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "btn-start",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 625
+        },
+        "game": null
+      },
+      "initial": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.026699999997019747,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "controlled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.3099999999970195,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 395.99999999915406,
+          "y": 360.1466199999999,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "settled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.476699999997019,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 396.00000000239896,
+          "y": 360.1466199999999,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "heldVictory": {
+        "title": false,
+        "overlay": true,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 6,
+          "x": 392,
+          "y": 116,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "touchRestart": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "btn-start",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "input_log": [
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:18.070Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:18.137Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:18.225Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:18.291Z"
+        },
+        {
+          "action": "#touch-interact",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:18.346Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.394Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.417Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.451Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.484Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.517Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.575Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.634Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.666Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.701Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.734Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.797Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.834Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.867Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.900Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:18.963Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:41:19.286Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:41:19.336Z"
+        },
+        {
+          "action": "gather",
+          "input": "native gameplay Space down/up (must not be swallowed by hidden title button)",
+          "at": "2026-11-07T12:41:20.289Z"
+        },
+        {
+          "action": "e",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:20.528Z"
+        },
+        {
+          "action": "#overlay-actions button",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:20.552Z"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:20.621Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:20.668Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "victory": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "focus": "touch-interact",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.04999999999995,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "replaySpace": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.04999999999995,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "returned": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "roleSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "focus": "mage",
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 221
+        },
+        "game": null
+      },
+      "startSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "btn-start",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 338
+        },
+        "game": null
+      },
+      "initial": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.03889999999701979,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "controlled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.3888999999970193,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 395.9999999986726,
+          "y": 361.581192,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "settled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.5555999999970187,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 396.0000000019195,
+          "y": 361.581192,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "heldVictory": {
+        "title": false,
+        "overlay": true,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 6,
+          "x": 392,
+          "y": 116,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "touchRestart": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.0022999999940395244,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "input_log": [
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:20.819Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:20.870Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:20.932Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:21.009Z"
+        },
+        {
+          "action": "#touch-interact",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:21.069Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.128Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.150Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.183Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.216Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.251Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.310Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.370Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.400Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.434Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.467Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.550Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.584Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.617Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.651Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:21.733Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:41:22.101Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:41:22.185Z"
+        },
+        {
+          "action": "gather",
+          "input": "native gameplay Space down/up (must not be swallowed by hidden title button)",
+          "at": "2026-11-07T12:41:23.139Z"
+        },
+        {
+          "action": "e",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:23.395Z"
+        },
+        {
+          "action": "#overlay-actions button",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:23.420Z"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:23.489Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:23.535Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "victory": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "focus": "touch-interact",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.0618,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "replaySpace": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.0618,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "returned": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "roleSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "focus": "mage",
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 955
+        },
+        "game": null
+      },
+      "startSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "btn-start",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 1147
+        },
+        "game": null
+      },
+      "initial": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.031300000002980256,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "controlled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.3146000000029796,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 395.9999999996529,
+          "y": 360.14255999999995,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "settled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.4813000000029788,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 396.0000000028998,
+          "y": 360.14255999999995,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "heldVictory": {
+        "title": false,
+        "overlay": true,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 6,
+          "x": 392,
+          "y": 116,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "touchRestart": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.003400000002980221,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "input_log": [
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:23.688Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:23.757Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:23.810Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:23.874Z"
+        },
+        {
+          "action": "#touch-interact",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:23.932Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:23.992Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.017Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.049Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.083Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.116Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.180Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.236Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.266Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.300Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.334Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.430Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.468Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.500Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.534Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:24.624Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:41:24.952Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:41:25.002Z"
+        },
+        {
+          "action": "gather",
+          "input": "native gameplay Space down/up (must not be swallowed by hidden title button)",
+          "at": "2026-11-07T12:41:25.955Z"
+        },
+        {
+          "action": "e",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.202Z"
+        },
+        {
+          "action": "#overlay-actions button",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:26.236Z"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:26.304Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:41:26.356Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "victory": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "replaySpace": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "returned": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "roleSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "focus": "mage",
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "startSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "btn-start",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "initial": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.02460000000000002,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "controlled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.2411999999999999,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 395.220024064455,
+          "y": 358.49999999999994,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "settled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.4077999999999993,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 395.2200240677032,
+          "y": 358.49999999999994,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "heldVictory": {
+        "title": false,
+        "overlay": true,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 6,
+          "x": 392,
+          "y": 116,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "touchRestart": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.0005660000029802319,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "input_log": [
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native click",
+          "at": "2026-11-07T12:41:26.502Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native click",
+          "at": "2026-11-07T12:41:26.537Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native click",
+          "at": "2026-11-07T12:41:26.577Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native click",
+          "at": "2026-11-07T12:41:26.622Z"
+        },
+        {
+          "action": "e",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.678Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.704Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.733Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.766Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.799Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.832Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.867Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.900Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.934Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:26.984Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:27.016Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:27.049Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:27.082Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:27.117Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:27.151Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:27.183Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:27.216Z"
+        },
+        {
+          "action": "Enter",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:27.250Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native keyboard down/up",
+          "at": "2026-11-07T12:41:27.533Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native keyboard down/up",
+          "at": "2026-11-07T12:41:27.551Z"
+        },
+        {
+          "action": "gather",
+          "input": "native gameplay Space down/up (must not be swallowed by hidden title button)",
+          "at": "2026-11-07T12:41:28.506Z"
+        },
+        {
+          "action": "e",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:41:28.723Z"
+        },
+        {
+          "action": "#overlay-actions button",
+          "input": "native click",
+          "at": "2026-11-07T12:41:28.753Z"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "input": "native click",
+          "at": "2026-11-07T12:41:28.812Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native click",
+          "at": "2026-11-07T12:41:28.854Z"
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "victory": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "focus": "touch-interact",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.04639999998807,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "replaySpace": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "returned": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "roleSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 625
+        },
+        "game": null
+      },
+      "startSpace": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.022099999994039537,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "initial": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.03869999999403956,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "controlled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.3386999999940388,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 395.99999999910506,
+          "y": 360.14661999999987,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "settled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.5053999999940384,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 396.0000000023533,
+          "y": 360.14661999999987,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "heldVictory": {
+        "title": false,
+        "overlay": true,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 5,
+          "x": 392,
+          "y": 116,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "touchRestart": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.002600000002980238,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "input_log": [
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:06.364Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:06.417Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:06.507Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:06.572Z"
+        },
+        {
+          "action": "#touch-interact",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:06.627Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:06.673Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:06.698Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:06.731Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:06.765Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:06.798Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:06.883Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:06.914Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:06.948Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:06.981Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:07.047Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:07.081Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:07.115Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:42:07.466Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:42:07.516Z"
+        },
+        {
+          "action": "gather",
+          "input": "native gameplay Space down/up (must not be swallowed by hidden title button)",
+          "at": "2026-11-07T12:42:08.468Z"
+        },
+        {
+          "action": "e",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:08.709Z"
+        },
+        {
+          "action": "#overlay-actions button",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:08.734Z"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:08.803Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:08.850Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "victory": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "focus": "touch-interact",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.04539999999105,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "replaySpace": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "returned": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "roleSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 221
+        },
+        "game": null
+      },
+      "startSpace": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.022899999999999976,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "initial": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.039600000000000024,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "controlled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.3395999999999992,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 395.9999999992705,
+          "y": 360.14081999999996,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "settled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.4895999999999987,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 396.00000000247735,
+          "y": 360.14081999999996,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "heldVictory": {
+        "title": false,
+        "overlay": true,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 5,
+          "x": 392,
+          "y": 116,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "touchRestart": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.0019999999970197564,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "input_log": [
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:08.970Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:09.034Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:09.091Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:09.156Z"
+        },
+        {
+          "action": "#touch-interact",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:09.211Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.256Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.281Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.313Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.348Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.381Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.481Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.514Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.548Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.581Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.662Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.698Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:09.731Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:42:10.082Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:42:10.133Z"
+        },
+        {
+          "action": "gather",
+          "input": "native gameplay Space down/up (must not be swallowed by hidden title button)",
+          "at": "2026-11-07T12:42:11.086Z"
+        },
+        {
+          "action": "e",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:11.312Z"
+        },
+        {
+          "action": "#overlay-actions button",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:11.335Z"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:11.402Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:11.450Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "victory": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "focus": "touch-interact",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.0459,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "replaySpace": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "returned": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "roleSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 955
+        },
+        "game": null
+      },
+      "startSpace": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.022699999997019743,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "initial": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.056099999997019784,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "controlled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.3393999999970188,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 395.99999999928724,
+          "y": 360.14487999999983,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "settled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.4892999999970185,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 396.0000000024884,
+          "y": 360.14487999999983,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "heldVictory": {
+        "title": false,
+        "overlay": true,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 5,
+          "x": 392,
+          "y": 116,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "touchRestart": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "btn-start",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "input_log": [
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:11.602Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:11.655Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:11.708Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:11.771Z"
+        },
+        {
+          "action": "#touch-interact",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:11.827Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:11.872Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:11.898Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:11.930Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:11.964Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:11.997Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:12.097Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:12.130Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:12.164Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:12.198Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:12.301Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:12.331Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:12.364Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:42:12.717Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T12:42:12.766Z"
+        },
+        {
+          "action": "gather",
+          "input": "native gameplay Space down/up (must not be swallowed by hidden title button)",
+          "at": "2026-11-07T12:42:13.719Z"
+        },
+        {
+          "action": "e",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:13.968Z"
+        },
+        {
+          "action": "#overlay-actions button",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:14.000Z"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:14.069Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native tap; engine may scroll title button into view",
+          "at": "2026-11-07T12:42:14.120Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "victory": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "replaySpace": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "returned": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "roleSpace": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "startSpace": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.024,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "initial": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.024,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "controlled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.2405999999999995,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 395.2201828331267,
+          "y": 358.49999999999994,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "settled": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.390599999999999,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 395.22018283633463,
+          "y": 358.49999999999994,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "heldVictory": {
+        "title": false,
+        "overlay": true,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 5,
+          "x": 392,
+          "y": 116,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "touchRestart": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.003399999994039533,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "input_log": [
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native click",
+          "at": "2026-11-07T12:42:14.275Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native click",
+          "at": "2026-11-07T12:42:14.318Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native click",
+          "at": "2026-11-07T12:42:14.358Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native click",
+          "at": "2026-11-07T12:42:14.404Z"
+        },
+        {
+          "action": "e",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.459Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.486Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.514Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.547Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.582Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.614Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.648Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.680Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.732Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.764Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.798Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.831Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.865Z"
+        },
+        {
+          "action": "Tab",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.898Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:14.931Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native keyboard down/up",
+          "at": "2026-11-07T12:42:15.215Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native keyboard down/up",
+          "at": "2026-11-07T12:42:15.232Z"
+        },
+        {
+          "action": "gather",
+          "input": "native gameplay Space down/up (must not be swallowed by hidden title button)",
+          "at": "2026-11-07T12:42:16.186Z"
+        },
+        {
+          "action": "e",
+          "input": "native keyboard",
+          "at": "2026-11-07T12:42:16.391Z"
+        },
+        {
+          "action": "#overlay-actions button",
+          "input": "native click",
+          "at": "2026-11-07T12:42:16.416Z"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "input": "native click",
+          "at": "2026-11-07T12:42:16.470Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native click",
+          "at": "2026-11-07T12:42:16.500Z"
+        }
+      ]
+    }
+  ]
+}

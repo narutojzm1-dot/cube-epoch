@@ -2708,6 +2708,9 @@
       if (e.target.closest("summary") && ["Space", "Enter"].includes(e.code)) return;
       if ((e.target.matches("#notice-feed, .details-content")
         || (state?.paused && e.target.id === "overlay-body")) && navigation.includes(e.code)) return;
+      if (["Space", "Enter"].includes(e.code)
+        && ((!screenTitle.classList.contains("hidden") && e.target.closest(".class-card, #btn-start"))
+          || (state?.over && !overlay.classList.contains("hidden") && e.target.closest("#overlay-actions button")))) return;
     }
     keys.add(e.code);
     if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Digit0", "Digit1", "Digit2", "Digit3"].includes(e.code)) e.preventDefault();

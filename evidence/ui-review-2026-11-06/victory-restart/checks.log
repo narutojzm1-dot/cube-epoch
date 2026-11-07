@@ -1,0 +1,15 @@
+UI-025 victory/replay/selection native keyboard activation, baseline44aa6793a2d29471d80479cd71fb0c57a07036a0.
+Chromium before+after4 actual viewports PASS: original Space prevented at focused outcome replay, role and start; before uses real Enter fallback, after native Space activates all3 without fallback.
+Native tap/click victory replay+mage selection/start works both versions; private-context original seen flag retained. New day/night0/heart0/kills0/fullHP/no old flags/overlay/held verified.
+Actual Chromium mobile touch movement/release, desktop/WebKit keyboard direction controls and gameplay Space gather; released position stable200ms. Random original wood drop4before/3after, no economy change.
+Keyboard Space held during real E victory is reset by original overlay; subsequent native tap restart still fresh. Not claimed as multi-touch held across victory.
+24 current original PNGs,12before/12after,320/390/844 actual-size; same action-node outcomes may be different screens. Native Tab scroll vs engine scroll-to-title-button disclosed.
+Before GitLF890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446; afterWindows1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe.
+Initial test navigation context-destroyed error/one image retained in sibling victory-restart-initial-navigation, not counted current. Fixed explicit DOMContentLoaded wait before known reload key action; no swallowed failure/timeout extension.
+Large new local browser temp profiles/artifacts: D:\work\projects\cube-epoch\node_modules\.cache\cube-epoch\victory-restart-790cd307 via per-command TEMP/TMP/TMPDIR; logs/evidence onD, no dependencies installed.
+node --check game.js PASS; node tests/static.mjs STATIC_OK. Independent readonly reviewer PASS, no significant issues.
+Full required Windows WebKit regression PASS in restart-integration, exit0: VICTORY_RESTART_OK webkit after4 and E2E_OK; previous fold/help/altar40/near-combat/placement/device cases remain green. D-drive browser profile/artifact leaf empty after browser close; no unchanged suite reruns.
+Artifact audit PASS24 native-size originals,4 real input traces/version, correct Space outcomes/Enter-only-before fallback, fresh mage/no overlay/no held/day-night0/heart0 plus stable released controls and actual stock gain.
+Exact before/after source hashes verified, old root records deep-equal after removing only UI-025/new batch; read-only UI_COVERAGE_OK baseline172/history305/supplemental559, not a full-new-source matrix.
+Only visible title UI buttons/visible state.over outcome buttons bypass Space/Enter gameplay listener. Active-play Space, hidden title, intro/briefing/pause paths kept unchanged; no CSS/rules/time/save changes.
+Protected natural diagnostic SHA256964230C5914271F326300CA2C0FE82122B87F43D3BF2111D5B2363A75089596D; exclude old diagnostic/CI logs from commit. No merge/Pages/Tencent/server changes, visual pending coordinator.
