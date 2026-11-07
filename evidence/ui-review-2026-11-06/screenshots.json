@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "first-wood-toast",
+      "base_sha": "7784c189d4e93ddb038681c78bbe2540003ca6ef",
+      "index": "first-wood-toast/INDEX.md",
+      "screenshots": "first-wood-toast/screenshots.json",
+      "issue_ids": ["UI-027"],
+      "status": "已截",
+      "visual_review": "6张320/390/1280首批木头普通新局同态前后原图待协调审查；真实Chromium触控/桌面键盘及只读DOM事件，无库存/世界夹具；未另拍844或真机，不称全图通过"
+    },
+    {
       "id": "touch-title",
       "base_sha": "61383ce9246a604aacbc05368373ab8ade9e2610",
       "index": "touch-title/INDEX.md",
@@ -211,6 +220,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-027",
+      "title": "触屏首批木头成功toast仍写按1选栅栏而不是背包栏路径",
+      "status": "已按既有触屏判定适配操作词，桌面/触发/时长保留，待协调逐图审查",
+      "before": "first-wood-toast/first-wood-toast before",
+      "after": "first-wood-toast/first-wood-toast after"
+    },
     {
       "id": "UI-026",
       "title": "首次和重开触屏选角仍用WASD/空格/数字键/Esc教四步与操作入口",

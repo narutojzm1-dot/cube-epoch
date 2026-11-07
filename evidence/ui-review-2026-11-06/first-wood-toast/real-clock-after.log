@@ -1,0 +1,14 @@
+BROWSER_PROFILE_D_OK D:\work\tmp\cube-epoch\first-wood-790cd307\tmp\playwright_chromiumdev_profile-FpR5QV
+FIRST_WOOD_INPUT 320 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.29609999999701997,"x":392,"y":360.0064,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.34619999999701984,"x":394.1312,"y":360.75903999999997,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":5,"time":1.1802999999970196,"x":395.9999999830504,"y":360.75903999999997,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 320 game=3.3361000000000023 real=3.3810999999940394
+FIRST_WOOD_INPUT 390 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3137999999910594,"x":392,"y":360.0128000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3638999999910593,"x":394.1376,"y":360.7609600000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":5,"time":1.197899999991059,"x":395.9999999969769,"y":360.7609600000002,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 390 game=3.3360999999999996 real=3.3813999999910593
+FIRST_WOOD_INPUT 1280 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.2686999999880791,"x":392,"y":358.94400000000013,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.2853999999880791,"x":393.0688,"y":358.94400000000013,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":5,"time":1.1026999999880789,"x":395.55962363463516,"y":358.94400000000013,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 1280 game=3.3360999999999996 real=3.381300000011921
+FIRST_WOOD_TOAST_OK chromium after: 320/390 touch layout + desktop, ordinary native gather/release, single pickup feedback, natural3.4s, fully visible toast

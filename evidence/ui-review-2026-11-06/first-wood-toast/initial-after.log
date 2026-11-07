@@ -1,0 +1,13 @@
+BROWSER_PROFILE_D_OK D:\work\tmp\cube-epoch\first-wood-790cd307\tmp\playwright_chromiumdev_profile-LEyqjF
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 30000ms exceeded.
+    at testTouchTitle (D:\work\projects\cube-epoch\tests\touch-title.mjs:190:28)
+    at async file:///D:/work/projects/cube-epoch/tests/touch-title.mjs:273:5 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

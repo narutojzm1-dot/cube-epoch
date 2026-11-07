@@ -1,0 +1,17 @@
+Scope: UI-027 first-wood toast input wording only; parent 7784c189d4e93ddb038681c78bbe2540003ca6ef.
+Product diff: one line in updateDrops. Existing touchLayout.matches and established backpack wording; desktop exact full text unchanged.
+First pickup predicate/flag, 3.4 parameter, pickup/inventory/build/input/day/night/victory/save rules unchanged.
+
+PASS node --check game.js and tests/touch-title.mjs (syntax rechecked after the test clock correction).
+PASS node tests/static.mjs: STATIC_OK (unchanged product bytes after the clock-only test correction).
+PASS Chromium ordinary --first-wood --before --capture / --first-wood --capture: 320x568, 390x844 native simulated touch holds/releases; 1280x800 native keyboard. Six native-size original screenshots.
+PASS Chromium no-capture before/after supplement with performance.now(): six sessions; natural duration 3.3811-3.3817 seconds. Does not retroactively add clock fields to capture metadata.
+PASS second complete node tests/e2e.mjs: Windows WebKit, E2E_OK; includes all existing gates, TOUCH_TITLE_OK and FIRST_WOOD_TOAST_OK. New toast durations 320/390/1280: 3.389/3.389/3.386 seconds.
+PASS first wood normal inventory increase, single DOM message write despite subsequent pickups, released held=0, no movement drift, complete visible text, natural hide, preserved flag/inventory.
+PASS UI_COVERAGE_OK: recorded baseline 172/172; history 305; supplemental 592. Read-only recorded coverage, not a new-build full-matrix claim.
+PASS EVIDENCE_OK: six unique native-size originals; source bytes equal after screenshot hash; desktop full toast identical; old root manifest deeply preserved after removing only this new batch/issue; protected natural-loop SHA256 unchanged.
+PASS required independent read-only [reviewer] first-wood-review and narrow wood-clock-review: no significant issues found.
+
+Retained failures: initial Chromium after input predicate timeout, cause unknown; subsequent normal replay passed without increasing timeout or skipping assertions. First complete WebKit run failed new game-clock duration assertion; original hitstop counts toast time but not state.time. Corrected test to monotonic real time without widening 3.3-3.55 tolerance or changing product.
+Limits: Chromium touch is browser-emulated, not physical device. WebKit continuous movement/gather uses native keyboard; normal coordinate taps remain native touch. No new 844 screenshot or natural three-night run. Six images await coordinator visual approval.
+GitHub same-SHA static/e2e are a separate post-push gate; no merge or deployment authorized.
