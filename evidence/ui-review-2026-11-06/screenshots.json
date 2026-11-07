@@ -1,13 +1,22 @@
 {
   "supplemental_batches": [
     {
+      "id": "crop-feedback",
+      "base_sha": "a11106c567b668e57ed38d775de243094660ed6b",
+      "index": "crop-feedback/INDEX.md",
+      "screenshots": "crop-feedback/screenshots.json",
+      "issue_ids": ["UI-012"],
+      "status": "已截",
+      "visual_review": "22张真实首屏原图待协调人审查；320/390/844原生触屏及1280桌面，空田fixture后实际播种/自然生长/采集，不代表自然三夜或真机验收"
+    },
+    {
       "id": "heart-delivery",
       "base_sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
       "index": "heart-delivery/INDEX.md",
       "screenshots": "heart-delivery/screenshots.json",
       "issue_ids": ["UI-011"],
       "status": "已截",
-      "visual_review": "32张五阶段真实首屏前后图待协调人审查；320/390/844触屏及1280鼠标键盘可交付态，全部隔离fixture，未变的前三状态复用原构建图，不代表自然通关或真机验收"
+      "visual_review": "协调人09:28实际看第三夜320、第一夜390、可交付白天320三图，所看状态局部通过；未全看32图/手机教程展开，不代表真机或自然三夜验收"
     },
     {
       "id": "wide-touch-layout",
@@ -76,6 +85,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-012",
+      "title": "白天未成熟麦苗长按无产出但没有状态说明",
+      "status": "已修复，待协调人逐图审查",
+      "before": "crop-feedback/sprout before",
+      "after": "crop-feedback/sprout after"
+    },
     {
       "id": "UI-011",
       "title": "已有方块之心仍提示合成，未满足条件也直接催去祭坛",

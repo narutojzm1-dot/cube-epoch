@@ -58,7 +58,7 @@ async function prepare(page, origin, scenario) {
   }
 }
 
-async function inspect(page) {
+export async function inspect(page) {
   return page.evaluate(() => {
     const ids = ["game", "wave-banner", "notice-feed", "toast", "prompt", "build-banner", "guide", "play-details"];
     const rect = (el) => {
@@ -87,7 +87,7 @@ async function inspect(page) {
   });
 }
 
-function assertFirstScreen(m, touch) {
+export function assertFirstScreen(m, touch) {
   assert.equal(m.document.width, m.viewport.width, "no horizontal document overflow");
   const c = m.rects.game;
   assert.ok(Math.abs(c.width / c.height - 5 / 3) < 0.02, "canvas must keep the actual aim-coordinate aspect ratio");

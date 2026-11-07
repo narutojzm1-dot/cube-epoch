@@ -2091,6 +2091,7 @@
       else prompt = touchLayout.matches ? "面朝栅栏，按住「采集/攻击」拆除" : "空格拆除栅栏";
     }
     else if (t === T.CROP && (state.crops.get(`${f.tx},${f.ty}`)?.stage || 0) >= 2) prompt = `${holdHint}收麦`;
+    else if (state.day && t === T.CROP) prompt = "麦苗还在长，成熟后再收。";
     else if (t === T.FARM) prompt = touchLayout.matches ? `${interactHint}播种（要有种子）` : "按 E 或左键播种（要有种子）";
     else if (!state.day && state.enemies.length) prompt = `守住篝火 · ${combatHint}`;
     setPrompt(prompt);
