@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-019 快速触屏点图候选恢复
+
+[16张四视口同状态前后原图](map-placement/INDEX.md) · [正常输入/候选/真实落点与库存](map-placement/validation.json) · [源码/观测桥/画布矩形](map-placement/screenshots.json) · [检查](map-placement/checks.log)。
+
+正常844挖石后面朝东点左侧(32,16)，按下映射正确却被松手后的兼容mouseleave丢失候选，实际放在(34,16)。本片保留待消费触屏点位，实际落回(32,16)，保留两格选择/沿指向近身回退、原扣料与输入优先。320/390/1280正常状态亦保留；只读调试观测桥与合成生命周期边界明确标注，不称真机或生产字节全图验收。待协调逐图审查；旧批次/候选/本地诊断保留。
+
 ## 独立维护批次：UI-018 补料后的放置成功反馈
 
 [23张同状态前后原图](build-success-feedback/INDEX.md) · [正常采集/缺料/补料的实际输入](build-success-feedback/validation.json) · [来源/原生视口](build-success-feedback/screenshots.json) · [检查](build-success-feedback/checks.log)。

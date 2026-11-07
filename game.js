@@ -154,6 +154,7 @@
   const touchHolds = new Map();
   const touchLayout = window.matchMedia("(any-pointer: coarse), (max-width: 760px)");
   let canvasTouch = null;
+  let touchPressed = false;
 
   function held(code) {
     return keys.has(code) || [...touchHolds.values()].some((button) => button.dataset.hold === code);
@@ -164,6 +165,7 @@
     for (const button of touchHolds.values()) button.classList.remove("held");
     touchHolds.clear();
     canvasTouch = null;
+    touchPressed = false;
     mouse.down = mouse.pressed = mouse.right = mouse.inside = false;
   }
 
@@ -1234,12 +1236,17 @@
     else p.dir = v.dy < 0 ? 3 : 0;
   }
 
+  function hasTileAim() {
+    // A quick touch can emit mouseleave before its press is consumed.
+    return mouse.inside || (mouse.pressed && touchPressed);
+  }
+
   function facingTile() {
     const p = state.player;
     const m = mouseWorld();
     let dx = m.x - p.x;
     let dy = m.y - p.y;
-    if (!mouse.inside || (Math.abs(dx) + Math.abs(dy) < 2)) {
+    if (!hasTileAim() || (Math.abs(dx) + Math.abs(dy) < 2)) {
       dx = 0;
       dy = 0;
       if (p.dir === 0) dy = 1;
@@ -1276,7 +1283,7 @@
 
   function aimTile() {
     const p = state.player;
-    if (mouse.inside) {
+    if (hasTileAim()) {
       const m = mouseWorld();
       const tx = Math.floor(m.x / TILE);
       const ty = Math.floor(m.y / TILE);
@@ -1977,6 +1984,7 @@
       useSkill();
     }
     mouse.pressed = false;
+    touchPressed = false;
   }
 
   function updateCycle(dt) {
@@ -2052,6 +2060,7 @@
         if (toastTimer <= 0) toastEl.classList.add("hidden");
       }
       mouse.pressed = false;
+      touchPressed = false;
       syncHud();
       return;
     }
@@ -2701,7 +2710,7 @@
       if (e.button === 0) advanceBrief();
       return;
     }
-    if (e.button === 0) { mouse.down = true; mouse.pressed = true; }
+    if (e.button === 0) { mouse.down = true; mouse.pressed = true; touchPressed = false; }
     if (e.button === 2) mouse.right = true;
   });
   window.addEventListener("mouseup", () => { mouse.down = false; });
@@ -2718,6 +2727,7 @@
     canvas.setPointerCapture(e.pointerId);
     aimAt(e);
     mouse.down = mouse.pressed = true;
+    touchPressed = true;
   });
   canvas.addEventListener("pointermove", (e) => {
     if (e.pointerId === canvasTouch) aimAt(e);
@@ -2726,7 +2736,9 @@
     if (e.pointerId !== canvasTouch) return;
     canvasTouch = null;
     mouse.down = false;
-    if (e.type !== "pointerup") mouse.pressed = mouse.inside = false;
+    if (e.type !== "pointerup") {
+      mouse.pressed = mouse.inside = touchPressed = false;
+    }
   }
   for (const type of ["pointerup", "pointercancel", "lostpointercapture"]) {
     canvas.addEventListener(type, releaseCanvasTouch);

@@ -1,0 +1,45 @@
+UI-019 baseline a510ac1200163f88e5579d888df8ea772a38c57b; branch fix/touch-map-placement.
+Original normal Chromium844 trace:
+  Trusted pointerdown/up maps32,16; trusted mouseleave before consume changes
+  inside=false with pressed=true; consumed34,16; wood6->5,stone2->1.
+  Canvas333.328x199.984 at109.328,54; backing640x384/scale2.
+  Click255.159,156.069 -> logical140,98 -> world520,264 -> tile32,16.
+node tests\map-placement.mjs --before --capture
+  PASS4 normal paths,8 originals; no world/inventory/location/time fixture.
+  Git-memory a510 baseline; workspace not reverted.
+Initial after range probe:
+  Assertion320 expected34 but actual32 when tapping far-west29,16.
+  Initial assumption of unconditional character-facing fallback was wrong:
+  existing facingTile uses14px toward active pointer.
+  Preserved initial-after.log; corrected assertion and shared valid pending
+  tile-aim guard with facingTile as well as aimTile. No range changes.
+  Four partial f1e22e78-version after PNGs removed; current originals retained.
+node tests\map-placement.mjs --capture
+  PASS4 normal paths,8 after originals; total16.
+  Actual844 compatibility leave preserved but consumption32,16; wood5->4,
+  stone3->2; front34,16 remains dirt. 320/390/desktop also correct.
+  Native far-east36->adjacent34 fence wood-1; far-west29->occupied32
+  refuses without cost; two-away31 plot wood-1.
+  Synthetic compatibility leave supplements real tap edge coverage.
+  Native tap + explicit synthetic pointercancel/lostcapture/blur:
+  PASS3 cancellation cases, no consumption/stock delta/pending state.
+  Released taps:pending/pressed false; stock stable after two frames.
+node --check game.js
+node --check tests\map-placement.mjs
+node tests\static.mjs
+  PASS/STATIC_OK.
+Independent [reviewer] map-placement-review
+  No significant issues; read-only review of game.js/new test/e2e call.
+node tests\e2e.mjs
+  PASS/exit0/E2E_OK. MAP_PLACEMENT_OK WebKit4 normal paths, range/cancel
+  cases passed; existing core/resource/build/night-fold/scroll gates passed.
+  WebKit holds keyboard; touch controls/map native; never called true touch holds.
+Read-only evidence integrity
+  PASS16 native PNG dimensions; current product a044aefa matched after captures;
+  actual read-only observer service hashes separately recorded.
+  All older root entries unchanged after removing this batch/UI-019.
+  UI_COVERAGE_OK baseline172/172,history305,supplemental451; no recapture,
+  not current-build full-matrix or visual approval.
+  Natural result hash964230...89596D unchanged.
+Protected old natural result and two old local CI logs excluded from this slice.
+No old CI rerun, natural-night replay, user-save edit, merge or deployment.
