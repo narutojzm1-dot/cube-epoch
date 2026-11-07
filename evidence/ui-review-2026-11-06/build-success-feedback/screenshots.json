@@ -1,0 +1,5588 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "torch-shortage",
+      "state": "torch-shortage / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "native Chromium direction/attack hold/end + crafting/build/map taps",
+      "relative_image_path": "images/torch-shortage--320x568--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:49:42.356Z",
+      "data": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 536.2185549254334,
+        "y": 262.02826021597394,
+        "hp": 110,
+        "campHp": 100,
+        "time": 4.971000000007455,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "材料还差：石 1",
+        "shown": true,
+        "target": 1
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 337.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 337.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 381.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "材料还差：石 1",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下火把",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，立刻再点原空地；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "torch-success",
+      "state": "torch-success / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "native Chromium direction/attack hold/end + crafting/build/map taps",
+      "relative_image_path": "images/torch-success--320x568--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:49:42.952Z",
+      "data": {
+        "inv": {
+          "wood": 5,
+          "stone": 2,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 540.0000257520087,
+        "y": 261.993455706109,
+        "hp": 110,
+        "campHp": 100,
+        "time": 5.55440000000746,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "材料还差：石 1",
+        "shown": true,
+        "target": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 355.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "材料还差：石 1",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，立刻再点原空地；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "torch-shortage",
+      "state": "torch-shortage / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "native Chromium direction/attack hold/end + crafting/build/map taps",
+      "relative_image_path": "images/torch-shortage--390x844--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:49:53.488Z",
+      "data": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 539.142791530381,
+        "y": 259.5241544519261,
+        "hp": 110,
+        "campHp": 100,
+        "time": 5.657799999997031,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "材料还差：石 1",
+        "shown": true,
+        "target": 1
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 353.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 379.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 379.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 405.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "材料还差：石 1",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下火把",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，立刻再点原空地；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "torch-success",
+      "state": "torch-success / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "native Chromium direction/attack hold/end + crafting/build/map taps",
+      "relative_image_path": "images/torch-success--390x844--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:49:54.260Z",
+      "data": {
+        "inv": {
+          "wood": 4,
+          "stone": 2,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 540.0000464693743,
+        "y": 259.51662889467815,
+        "hp": 110,
+        "campHp": 100,
+        "time": 6.357799999997039,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "材料还差：石 1",
+        "shown": true,
+        "target": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 353.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 379.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "材料还差：石 1",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，立刻再点原空地；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "torch-shortage",
+      "state": "torch-shortage / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "native Chromium direction/attack hold/end + crafting/build/map taps",
+      "relative_image_path": "images/torch-shortage--844x390--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:49:59.934Z",
+      "data": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 537.7583754107193,
+        "y": 261.1666817775364,
+        "hp": 110,
+        "campHp": 100,
+        "time": 5.232899999997028,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "材料还差：石 1",
+        "shown": true,
+        "target": 1
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "prompt": {
+            "x": 6,
+            "y": 286,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 312
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 312,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 338
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "材料还差：石 1",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下火把",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，立刻再点原空地；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "torch-success",
+      "state": "torch-success / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "native Chromium direction/attack hold/end + crafting/build/map taps",
+      "relative_image_path": "images/torch-success--844x390--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:50:00.615Z",
+      "data": {
+        "inv": {
+          "wood": 4,
+          "stone": 2,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 540.0000589475338,
+        "y": 261.149687638889,
+        "hp": 110,
+        "campHp": 100,
+        "time": 5.849599999997037,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "材料还差：石 1",
+        "shown": true,
+        "target": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 286,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 312
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "材料还差：石 1",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，立刻再点原空地；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "torch-success",
+      "state": "torch-success / before",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "keyboard holds; touch E/build/map taps on touch layouts or desktop mouse/keyboard",
+      "relative_image_path": "images/torch-success--1280x800--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:50:06.196Z",
+      "data": {
+        "inv": {
+          "wood": 5,
+          "stone": 2,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 538.3840722385235,
+        "y": 264.7522200000009,
+        "hp": 110,
+        "campHp": 100,
+        "time": 5.135099999998515,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "材料还差：石 1",
+        "shown": true,
+        "target": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 93,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 570.59375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 578.59375,
+            "width": 796,
+            "height": 64,
+            "right": 892,
+            "bottom": 642.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 578.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 613.59375
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 96,
+            "y": 613.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 642.59375
+          },
+          "guide": {
+            "x": 914,
+            "y": 147,
+            "width": 260,
+            "height": 130.5,
+            "right": 1174,
+            "bottom": 277.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 93,
+            "width": 280,
+            "height": 427.09375,
+            "right": 1184,
+            "bottom": 520.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "材料还差：石 1",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 左键点空地放下火把 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，立刻再点原空地；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "torch-success",
+      "state": "torch-success / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": true,
+        "source_sha256": "4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "native Chromium direction/attack hold/end + crafting/build/map taps",
+      "relative_image_path": "images/torch-success--320x568--after--4f1d7f51.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:58:00.232Z",
+      "data": {
+        "inv": {
+          "wood": 4,
+          "stone": 2,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 536.7032869011825,
+        "y": 262.0098001538749,
+        "hp": 110,
+        "campHp": 100,
+        "time": 5.5908999999985225,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "火把放好了。",
+        "shown": true,
+        "target": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 355.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "火把放好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，转向预留空地后点图；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "torch-success",
+      "state": "torch-success / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": true,
+        "source_sha256": "4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "native Chromium direction/attack hold/end + crafting/build/map taps",
+      "relative_image_path": "images/torch-success--390x844--after--4f1d7f51.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:58:09.718Z",
+      "data": {
+        "inv": {
+          "wood": 4,
+          "stone": 1,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 536.7032842771501,
+        "y": 261.9927544220169,
+        "hp": 110,
+        "campHp": 100,
+        "time": 5.59190000000597,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "火把放好了。",
+        "shown": true,
+        "target": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 353.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 379.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "火把放好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，转向预留空地后点图；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "torch-success",
+      "state": "torch-success / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": true,
+        "source_sha256": "4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "native Chromium direction/attack hold/end + crafting/build/map taps",
+      "relative_image_path": "images/torch-success--844x390--after--4f1d7f51.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:58:15.606Z",
+      "data": {
+        "inv": {
+          "wood": 4,
+          "stone": 1,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 536.7014526801875,
+        "y": 261.9882670732205,
+        "hp": 110,
+        "campHp": 100,
+        "time": 5.57349999999703,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "火把放好了。",
+        "shown": true,
+        "target": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 286,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 312
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "火把放好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 点地图空地放下火把 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，转向预留空地后点图；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "torch-success",
+      "state": "torch-success / after",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": true,
+        "source_sha256": "4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated miner first day; no inventory/world/location/time injection; screenshot pause only",
+      "input": "keyboard holds; touch E/build/map taps on touch layouts or desktop mouse/keyboard",
+      "relative_image_path": "images/torch-success--1280x800--after--4f1d7f51.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T06:58:21.037Z",
+      "data": {
+        "inv": {
+          "wood": 5,
+          "stone": 1,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "x": 536.6276126820668,
+        "y": 264.7503600000006,
+        "hp": 110,
+        "campHp": 100,
+        "time": 5.132300000007456,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "win": false,
+        "build": "torch",
+        "held": 0,
+        "message": "火把放好了。",
+        "shown": true,
+        "target": 13
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 93,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 570.59375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 578.59375,
+            "width": 796,
+            "height": 64,
+            "right": 892,
+            "bottom": 642.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 578.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 613.59375
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 96,
+            "y": 613.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 642.59375
+          },
+          "guide": {
+            "x": 914,
+            "y": 147,
+            "width": 260,
+            "height": 130.5,
+            "right": 1174,
+            "bottom": 277.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 93,
+            "width": 280,
+            "height": 427.09375,
+            "right": 1184,
+            "bottom": 520.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "火把放好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造火把 · 1木1石 · 左键点空地放下火把 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选矿工，向下一格后面朝(25,22)树，真实长按采集并拾取木头",
+        "正常走到(24,19)工作台，交互验证缺石/金/麦提示；不注资源",
+        "正常走到(33,16)矿旁，选火把点(32,16)空地，缺石拒绝不扣料",
+        "面朝(34,16)真实挖石并拾取，转向预留空地后点图；成功实际扣1木1石",
+        "仅原图时暂停模拟；真实首屏100%，未触用户存档，不是自然夜守或平衡验证"
+      ]
+    },
+    {
+      "screen_id": "free-plot",
+      "state": "free-plot successful placement / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c",
+        "served_from": "verified git c6165ae memory buffer; working tree unchanged"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/free-plot--320x568--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:00.632Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "点空地开田；再点背包「田」取消。",
+        "tile": 7
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 337.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 337.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 381.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 94.5,
+            "right": 304,
+            "bottom": 644.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地开田；再点背包「田」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」播种（要有种子）",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造田 · 免费 · 点地图空地开田 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选farmer; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture库存全0，沿原农夫免费开田成本",
+        "真实开背包选plot后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "surrounded-fence",
+      "state": "surrounded-fence successful placement / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c",
+        "served_from": "verified git c6165ae memory buffer; working tree unchanged"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/surrounded-fence--320x568--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:01.299Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "点空地/坏墙；再点背包「栏」取消。",
+        "tile": 12
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 337.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 337.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 381.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 94.5,
+            "right": 304,
+            "bottom": 644.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "面朝栅栏，按住「采集/攻击」拆除",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选miner; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture仅木1、成栏0，营火四面已有满血墙",
+        "真实开背包选fence后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "free-plot",
+      "state": "free-plot successful placement / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c",
+        "served_from": "verified git c6165ae memory buffer; working tree unchanged"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/free-plot--390x844--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:02.001Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "点空地开田；再点背包「田」取消。",
+        "tile": 7
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 353.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 379.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 379.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 405.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 94.5,
+            "right": 374,
+            "bottom": 686.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地开田；再点背包「田」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」播种（要有种子）",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造田 · 免费 · 点地图空地开田 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选farmer; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture库存全0，沿原农夫免费开田成本",
+        "真实开背包选plot后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "surrounded-fence",
+      "state": "surrounded-fence successful placement / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c",
+        "served_from": "verified git c6165ae memory buffer; working tree unchanged"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/surrounded-fence--390x844--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:02.651Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "点空地/坏墙；再点背包「栏」取消。",
+        "tile": 12
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 353.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 379.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 379.796875,
+            "width": 378,
+            "height": 44,
+            "right": 384,
+            "bottom": 423.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 94.5,
+            "right": 374,
+            "bottom": 686.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "面朝栅栏，按住「采集/攻击」拆除",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选miner; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture仅木1、成栏0，营火四面已有满血墙",
+        "真实开背包选fence后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "free-plot",
+      "state": "free-plot successful placement / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c",
+        "served_from": "verified git c6165ae memory buffer; working tree unchanged"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/free-plot--844x390--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:03.341Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "点空地开田；再点背包「田」取消。",
+        "tile": 7
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "prompt": {
+            "x": 6,
+            "y": 286,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 312
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 312,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 338
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地开田；再点背包「田」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」播种（要有种子）",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造田 · 免费 · 点地图空地开田 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选farmer; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture库存全0，沿原农夫免费开田成本",
+        "真实开背包选plot后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "surrounded-fence",
+      "state": "surrounded-fence successful placement / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": false,
+        "source_sha256": "73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c",
+        "served_from": "verified git c6165ae memory buffer; working tree unchanged"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/surrounded-fence--844x390--before--73fa0632.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:03.989Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "点空地/坏墙；再点背包「栏」取消。",
+        "tile": 12
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "prompt": {
+            "x": 6,
+            "y": 286,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 312
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 312,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 338
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "面朝栅栏，按住「采集/攻击」拆除",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选miner; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture仅木1、成栏0，营火四面已有满血墙",
+        "真实开背包选fence后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "free-plot",
+      "state": "free-plot successful placement / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": true,
+        "source_sha256": "4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145",
+        "served_from": "working tree game.js"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/free-plot--320x568--after--4f1d7f51.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:04.665Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "田开好了。",
+        "tile": 7
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 337.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 337.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 381.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 94.5,
+            "right": 304,
+            "bottom": 644.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "田开好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」播种（要有种子）",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造田 · 免费 · 点地图空地开田 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选farmer; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture库存全0，沿原农夫免费开田成本",
+        "真实开背包选plot后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "surrounded-fence",
+      "state": "surrounded-fence successful placement / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": true,
+        "source_sha256": "4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145",
+        "served_from": "working tree game.js"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/surrounded-fence--320x568--after--4f1d7f51.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:05.315Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "栅栏放好了。",
+        "tile": 12
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 337.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 337.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 381.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 94.5,
+            "right": 304,
+            "bottom": 644.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "栅栏放好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "面朝栅栏，按住「采集/攻击」拆除",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选miner; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture仅木1、成栏0，营火四面已有满血墙",
+        "真实开背包选fence后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "free-plot",
+      "state": "free-plot successful placement / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": true,
+        "source_sha256": "4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145",
+        "served_from": "working tree game.js"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/free-plot--390x844--after--4f1d7f51.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:06.001Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "田开好了。",
+        "tile": 7
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 353.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 379.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 379.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 405.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 94.5,
+            "right": 374,
+            "bottom": 686.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "田开好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」播种（要有种子）",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造田 · 免费 · 点地图空地开田 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选farmer; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture库存全0，沿原农夫免费开田成本",
+        "真实开背包选plot后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "surrounded-fence",
+      "state": "surrounded-fence successful placement / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": true,
+        "source_sha256": "4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145",
+        "served_from": "working tree game.js"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/surrounded-fence--390x844--after--4f1d7f51.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:06.652Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "栅栏放好了。",
+        "tile": 12
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 353.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 379.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 379.796875,
+            "width": 378,
+            "height": 44,
+            "right": 384,
+            "bottom": 423.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 94.5,
+            "right": 374,
+            "bottom": 686.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "栅栏放好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "面朝栅栏，按住「采集/攻击」拆除",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选miner; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture仅木1、成栏0，营火四面已有满血墙",
+        "真实开背包选fence后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "free-plot",
+      "state": "free-plot successful placement / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": true,
+        "source_sha256": "4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145",
+        "served_from": "working tree game.js"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/free-plot--844x390--after--4f1d7f51.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:07.339Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "田开好了。",
+        "tile": 7
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "prompt": {
+            "x": 6,
+            "y": 286,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 312
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 312,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 338
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "田开好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」播种（要有种子）",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造田 · 免费 · 点地图空地开田 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选farmer; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture库存全0，沿原农夫免费开田成本",
+        "真实开背包选plot后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    },
+    {
+      "screen_id": "surrounded-fence",
+      "state": "surrounded-fence successful placement / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "c6165aed7dc2548986a43150a36b45356349472e",
+        "dirty": true,
+        "source_sha256": "4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145",
+        "served_from": "working tree game.js"
+      },
+      "platform": "Web / Chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "EXPLICIT inventory/location/grass/full-camp fixture, not normal gathering; screenshot pause only",
+      "input": "native touchscreen build/map taps",
+      "relative_image_path": "images/surrounded-fence--844x390--after--4f1d7f51.png",
+      "issue_ids": [
+        "UI-018"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T07:05:07.991Z",
+      "data": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "message": "栅栏放好了。",
+        "tile": 12
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "prompt": {
+            "x": 6,
+            "y": 286,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 312
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 312,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 338
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "栅栏放好了。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "面朝栅栏，按住「采集/攻击」拆除",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选miner; fixture玩家(30,25)面东、(31,25)草地",
+        "fixture仅木1、成栏0，营火四面已有满血墙",
+        "真实开背包选fence后点(31,25)，成功不变成本；仅截图冻结模拟",
+        "前图从git c6165ae内存提供已验哈希源码，不切换或覆盖工作区；不是自然备料/围营证据"
+      ]
+    }
+  ],
+  "visual_review": "待协调人逐图审查"
+}

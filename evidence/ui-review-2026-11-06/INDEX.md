@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-018 补料后的放置成功反馈
+
+[23张同状态前后原图](build-success-feedback/INDEX.md) · [正常采集/缺料/补料的实际输入](build-success-feedback/validation.json) · [来源/原生视口](build-success-feedback/screenshots.json) · [检查](build-success-feedback/checks.log)。
+
+正常矿工采木、缺石、挖石后成功放火把，已实际扣料却仍显示“材料还差石1”。本片只在原漏报的成功分支确认火把/田/普通栅栏已放好，保留原围营进度和配方/成品优先/输入/夜折叠。正常路径与夹具分开；另行观察的844挖矿后逆向点图落点现象未修复、有限制，不声称瞄准全面通过。待协调人逐图审查；旧候选/证据与本地诊断保留。
+
 ## 独立维护批次：UI-017 夜战次级指引完整收起
 
 [四视口32张同状态前后首屏原图](night-notice-fold/INDEX.md) · [真实输入/矩形/源码](night-notice-fold/screenshots.json) · [前后行为](night-notice-fold/validation.json) · [检查](night-notice-fold/checks.log)。

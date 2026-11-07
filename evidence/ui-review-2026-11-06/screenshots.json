@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "build-success-feedback",
+      "base_sha": "c6165aed7dc2548986a43150a36b45356349472e",
+      "index": "build-success-feedback/INDEX.md",
+      "screenshots": "build-success-feedback/screenshots.json",
+      "issue_ids": ["UI-018"],
+      "status": "已截",
+      "visual_review": "23张前后原图待协调人逐图审查；正常矿工采木/缺料/挖石/成功放火把与明确开田/已围营栅栏夹具分开。320/390/844触屏关键状态覆盖，正常火把另有1280键鼠。不代表真机/自然夜守/任意朝向点图准确性"
+    },
+    {
       "id": "night-notice-fold",
       "base_sha": "5f451b62d87f37e29bfe4f727057a6066808b00f",
       "index": "night-notice-fold/INDEX.md",
@@ -130,6 +139,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-018",
+      "title": "补料后成功放火把仍显示旧缺料提示，部分成功放置没有确认",
+      "status": "已修复，待协调人逐图审查",
+      "before": "build-success-feedback/torch-success before",
+      "after": "build-success-feedback/torch-success after"
+    },
     {
       "id": "UI-017",
       "title": "触屏夜间波次加当前反馈后，第三条操作指引只露半行",

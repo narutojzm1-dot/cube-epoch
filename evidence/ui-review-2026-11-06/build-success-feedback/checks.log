@@ -1,0 +1,48 @@
+UI-018; baseline c6165aed7dc2548986a43150a36b45356349472e.
+Normal Chromium320 miner reproduction:
+  Natural tree pickup wood5; real bench interaction:missing stone5/gold3/wheat3.
+  Real torch refusal:missing stone1; real mining/pickup stone3.
+  Real success deducts wood5->4,stone3->2 and tile becomes13,
+  but baseline still displays material shortage stone1.
+  No stock/location/map/time injection in normal paths.
+Initial manual probe
+  Timed out30000ms facing row21 instead of tree row22; no product writes.
+  Corrected with ordinary down-direction input, then reproduced actual issue.
+node tests\build-success-feedback.mjs --before --capture
+  PASS:4 normal paths,6 separate fixtures,7 originals.
+node --check game.js
+node --check tests\build-success-feedback.mjs
+node tests\static.mjs
+  PASS: syntax / STATIC_OK.
+Initial after checks
+  Two844 placement waits timed out at old line148/new line151.
+  Supplied wood5/stone3,x540,y262,held0; tapped screen255.159,156.073.
+  Actual wood4/stone2,torch at34,16; expected32,16 remainedgrass.
+  New success text was correct. Separate input phenomenon not fixed or silently
+  counted as requested-location success. No input/rule changes made.
+  Normal final path explicitly uses real left-direction input before tapping.
+node tests\build-success-feedback.mjs --capture
+  PASS:4 normal after paths,6 fixtures,4 normal success originals.
+  Real touch hold/end, workbench/build/map taps; actual costs/hp/phase guarded.
+Supplemental native fixture captures
+  PASS:12 exact-viewport plot/full-camp-fence before/after originals; total23.
+  Baseline Gitgame memory buffer hash verified73fa0632; workspace not switched.
+  Explicit stock/position/world fixtures; not natural preparation/camp building.
+Independent [reviewer] build-feedback-review
+  No significant issues; read-only. Limited aiming coverage; unrelated844
+  reverse-tap observation remains unverified/unfixed.
+node tests\e2e.mjs
+  PASS/exit0/E2E_OK; full output in integration.log.
+  WebKit4 normal after paths+6 separate fixture cases passed.
+  Existing resource/crop/skill/input/night-fold/wide regressions passed.
+  Existing AUDIO_NATIVE_UNAVAILABLE on Windows WebKit not an audio pass.
+Source after hash:
+  4f1d7f51868a67b11a0003ac5454b9758e62b1c85c72c5b52a46fe5e66430145
+No old CI reruns, natural three-night replay, user-save edits, merges/deployments.
+Old night-notice-fold/ci-scroll-fix-linux.log and natural-loop result excluded.
+Read-only evidence audit
+  PASS:23 native PNG dimensions/source hashes; old root entries unchanged.
+  Capture retention preserves13 before records+6 supplemental after records.
+  UI_COVERAGE_OK baseline172/172,history305,supplemental435; no recapture,
+  not a new-build full-matrix or visual-approval claim.
+  Protected natural result hash remains964230...89596D.
