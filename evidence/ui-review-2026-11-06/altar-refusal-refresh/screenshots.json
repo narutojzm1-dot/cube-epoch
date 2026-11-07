@@ -1,0 +1,1570 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "arrived-ready",
+      "state": "arrived-ready / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "aab67feb0d08a999cfe6e849aa4bc4aad7eab31e",
+        "dirty": false,
+        "source_sha256": "a3dd727ddba2b6bebd28642f7c9b19663b83d9e9382780e03134f82dc6b37b1a"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "explicit isolated third-dawn/altar-distance fixture, not natural three-night survival",
+      "input": "native Chromium touchStart/end movement and UI taps",
+      "relative_image_path": "images/arrived-ready--320x568--before--a3dd727d.png",
+      "issue_ids": [
+        "UI-024"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T11:45:31.737Z",
+      "data": {
+        "day": true,
+        "nights": 3,
+        "time": 287.43320000000006,
+        "cycle": 3.333199999999996,
+        "nightLen": 32,
+        "distance": 17.843726719999992,
+        "x": 392,
+        "y": 121.84372671999999,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "toastVisible": true,
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 337.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 94.5,
+            "right": 304,
+            "bottom": 644.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "这次没献出：再靠近祭坛。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」献上方块之心",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "这一夜的波次结束，守到天亮",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "repro_steps": [
+        "隔离骑士新局；明示夹具：四面80血墙、心1、夜数3、夜长32/末0.1秒、完成波次/空敌、位置祭坛南24px、时间284",
+        "引擎按原规则跨黎明，等待原天亮toast自然结束；读携带、目的地与当前位置提示",
+        "真实点交互E（桌面按E），核对心未扣/未胜利及反馈",
+        "原生向上按住/释放走到原22px以内，再读提示；真实交互扣一颗心并正常胜利",
+        "内存响应aab67fe原Git字节，不切换/覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "arrived-ready",
+      "state": "arrived-ready / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "aab67feb0d08a999cfe6e849aa4bc4aad7eab31e",
+        "dirty": false,
+        "source_sha256": "a3dd727ddba2b6bebd28642f7c9b19663b83d9e9382780e03134f82dc6b37b1a"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "explicit isolated third-dawn/altar-distance fixture, not natural three-night survival",
+      "input": "native Chromium touchStart/end movement and UI taps",
+      "relative_image_path": "images/arrived-ready--390x844--before--a3dd727d.png",
+      "issue_ids": [
+        "UI-024"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T11:45:43.898Z",
+      "data": {
+        "day": true,
+        "nights": 3,
+        "time": 287.2499000000003,
+        "cycle": 3.1498999999999957,
+        "nightLen": 32,
+        "distance": 19.529343999999995,
+        "x": 392,
+        "y": 123.529344,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "toastVisible": true,
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 353.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 379.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 94.5,
+            "right": 374,
+            "bottom": 686.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "这次没献出：再靠近祭坛。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」献上方块之心",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "这一夜的波次结束，守到天亮",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "repro_steps": [
+        "隔离骑士新局；明示夹具：四面80血墙、心1、夜数3、夜长32/末0.1秒、完成波次/空敌、位置祭坛南24px、时间284",
+        "引擎按原规则跨黎明，等待原天亮toast自然结束；读携带、目的地与当前位置提示",
+        "真实点交互E（桌面按E），核对心未扣/未胜利及反馈",
+        "原生向上按住/释放走到原22px以内，再读提示；真实交互扣一颗心并正常胜利",
+        "内存响应aab67fe原Git字节，不切换/覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "arrived-ready",
+      "state": "arrived-ready / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "aab67feb0d08a999cfe6e849aa4bc4aad7eab31e",
+        "dirty": false,
+        "source_sha256": "a3dd727ddba2b6bebd28642f7c9b19663b83d9e9382780e03134f82dc6b37b1a"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "explicit isolated third-dawn/altar-distance fixture, not natural three-night survival",
+      "input": "native Chromium touchStart/end movement and UI taps",
+      "relative_image_path": "images/arrived-ready--844x390--before--a3dd727d.png",
+      "issue_ids": [
+        "UI-024"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T11:45:52.100Z",
+      "data": {
+        "day": true,
+        "nights": 3,
+        "time": 287.2499000000002,
+        "cycle": 3.1498999999999966,
+        "nightLen": 32,
+        "distance": 19.528127999999995,
+        "x": 392,
+        "y": 123.528128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "toastVisible": true,
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "prompt": {
+            "x": 6,
+            "y": 286,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 312
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "这次没献出：再靠近祭坛。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」献上方块之心",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "这一夜的波次结束，守到天亮",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "repro_steps": [
+        "隔离骑士新局；明示夹具：四面80血墙、心1、夜数3、夜长32/末0.1秒、完成波次/空敌、位置祭坛南24px、时间284",
+        "引擎按原规则跨黎明，等待原天亮toast自然结束；读携带、目的地与当前位置提示",
+        "真实点交互E（桌面按E），核对心未扣/未胜利及反馈",
+        "原生向上按住/释放走到原22px以内，再读提示；真实交互扣一颗心并正常胜利",
+        "内存响应aab67fe原Git字节，不切换/覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "arrived-ready",
+      "state": "arrived-ready / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "aab67feb0d08a999cfe6e849aa4bc4aad7eab31e",
+        "dirty": true,
+        "source_sha256": "bf61952196c25865a9f6ab5477772f9ff398485ea18e5c611789d1b12fb2793d"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "explicit isolated third-dawn/altar-distance fixture, not natural three-night survival",
+      "input": "native Chromium touchStart/end movement and UI taps",
+      "relative_image_path": "images/arrived-ready--320x568--after--bf619521.png",
+      "issue_ids": [
+        "UI-024"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T11:46:37.142Z",
+      "data": {
+        "day": true,
+        "nights": 3,
+        "time": 287.36650000000037,
+        "cycle": 3.2664999999999953,
+        "nightLen": 32,
+        "distance": 18.46246400000001,
+        "x": 392,
+        "y": 122.46246400000001,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "toastVisible": false,
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "prompt": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 94.5,
+            "right": 304,
+            "bottom": 644.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "这次没献出：再靠近祭坛。",
+            "hidden": true
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」献上方块之心",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "这一夜的波次结束，守到天亮",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "repro_steps": [
+        "隔离骑士新局；明示夹具：四面80血墙、心1、夜数3、夜长32/末0.1秒、完成波次/空敌、位置祭坛南24px、时间284",
+        "引擎按原规则跨黎明，等待原天亮toast自然结束；读携带、目的地与当前位置提示",
+        "真实点交互E（桌面按E），核对心未扣/未胜利及反馈",
+        "原生向上按住/释放走到原22px以内，再读提示；真实交互扣一颗心并正常胜利",
+        "当前源码dirty；仅拍图冻结，不改用户存档"
+      ]
+    },
+    {
+      "screen_id": "arrived-ready",
+      "state": "arrived-ready / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "aab67feb0d08a999cfe6e849aa4bc4aad7eab31e",
+        "dirty": true,
+        "source_sha256": "bf61952196c25865a9f6ab5477772f9ff398485ea18e5c611789d1b12fb2793d"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "explicit isolated third-dawn/altar-distance fixture, not natural three-night survival",
+      "input": "native Chromium touchStart/end movement and UI taps",
+      "relative_image_path": "images/arrived-ready--390x844--after--bf619521.png",
+      "issue_ids": [
+        "UI-024"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T11:46:46.530Z",
+      "data": {
+        "day": true,
+        "nights": 3,
+        "time": 287.28319999999997,
+        "cycle": 3.183199999999998,
+        "nightLen": 32,
+        "distance": 19.531263999999993,
+        "x": 392,
+        "y": 123.531264,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "toastVisible": false,
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "prompt": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 94.5,
+            "right": 374,
+            "bottom": 686.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "这次没献出：再靠近祭坛。",
+            "hidden": true
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」献上方块之心",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "这一夜的波次结束，守到天亮",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "repro_steps": [
+        "隔离骑士新局；明示夹具：四面80血墙、心1、夜数3、夜长32/末0.1秒、完成波次/空敌、位置祭坛南24px、时间284",
+        "引擎按原规则跨黎明，等待原天亮toast自然结束；读携带、目的地与当前位置提示",
+        "真实点交互E（桌面按E），核对心未扣/未胜利及反馈",
+        "原生向上按住/释放走到原22px以内，再读提示；真实交互扣一颗心并正常胜利",
+        "当前源码dirty；仅拍图冻结，不改用户存档"
+      ]
+    },
+    {
+      "screen_id": "arrived-ready",
+      "state": "arrived-ready / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "aab67feb0d08a999cfe6e849aa4bc4aad7eab31e",
+        "dirty": true,
+        "source_sha256": "bf61952196c25865a9f6ab5477772f9ff398485ea18e5c611789d1b12fb2793d"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "explicit isolated third-dawn/altar-distance fixture, not natural three-night survival",
+      "input": "native Chromium touchStart/end movement and UI taps",
+      "relative_image_path": "images/arrived-ready--844x390--after--bf619521.png",
+      "issue_ids": [
+        "UI-024"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T11:46:55.500Z",
+      "data": {
+        "day": true,
+        "nights": 3,
+        "time": 287.2665,
+        "cycle": 3.149899999999997,
+        "nightLen": 32,
+        "distance": 19.528127999999995,
+        "x": 392,
+        "y": 123.528128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "toastVisible": false,
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "prompt": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "这次没献出：再靠近祭坛。",
+            "hidden": true
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」献上方块之心",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "这一夜的波次结束，守到天亮",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "repro_steps": [
+        "隔离骑士新局；明示夹具：四面80血墙、心1、夜数3、夜长32/末0.1秒、完成波次/空敌、位置祭坛南24px、时间284",
+        "引擎按原规则跨黎明，等待原天亮toast自然结束；读携带、目的地与当前位置提示",
+        "真实点交互E（桌面按E），核对心未扣/未胜利及反馈",
+        "原生向上按住/释放走到原22px以内，再读提示；真实交互扣一颗心并正常胜利",
+        "当前源码dirty；仅拍图冻结，不改用户存档"
+      ]
+    }
+  ]
+}

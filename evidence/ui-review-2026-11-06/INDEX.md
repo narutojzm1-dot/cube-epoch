@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-024 走近祭坛后撤掉过期专用拒绝
+
+[6张320/390/844同态前后原图](altar-refusal-refresh/INDEX.md) · [真实输入及通知替换负覆盖](altar-refusal-refresh/validation.json) · [来源](altar-refusal-refresh/screenshots.json) · [检查](altar-refusal-refresh/checks.log)。
+
+针对协调指出UI-023走近截图的双重提示：只隐藏已可献且进入原22px以内时当前那条专用距离拒绝，不改通用toast计时；后续建造、播种、缺种通知保持。新图均明示夹具，立即触屏走近而非等待自然过期，旧UI-023与自然记录不改，待逐图审查。
+
 ## 独立维护批次：UI-023 祭坛交付距离边界反馈
 
 [18张320/390/844前后原图](altar-arrival/INDEX.md) · [准确来源](altar-arrival/screenshots.json) · [真实点按/走近/扣心与边界回归](altar-arrival/validation.json) · [检查](altar-arrival/checks.log)。

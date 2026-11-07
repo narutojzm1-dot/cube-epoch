@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "altar-refusal-refresh",
+      "base_sha": "aab67feb0d08a999cfe6e849aa4bc4aad7eab31e",
+      "index": "altar-refusal-refresh/INDEX.md",
+      "screenshots": "altar-refusal-refresh/screenshots.json",
+      "issue_ids": ["UI-024"],
+      "status": "已截",
+      "visual_review": "6张320/390/844同态前后原图待协调逐图审查；明示边界夹具真实24px拒绝后立即走近，旧拒绝隐藏而后来替换通知保留。不改旧UI-023图/审查，不称自然三夜/真机"
+    },
+    {
       "id": "altar-arrival",
       "base_sha": "2dcb7cdbe4ff286731c6510202f09db39cd11418",
       "index": "altar-arrival/INDEX.md",
@@ -184,6 +193,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-024",
+      "title": "24px拒绝后已走近可献范围，旧专用拒绝仍与可献提示冲突",
+      "status": "已修当前特定拒绝随实际可交状态隐藏，待协调逐图审查",
+      "before": "altar-refusal-refresh/arrived-ready before",
+      "after": "altar-refusal-refresh/arrived-ready after"
+    },
     {
       "id": "UI-023",
       "title": "祭坛24px处提示可献祭，但原22px操作范围之外只给通用说明",

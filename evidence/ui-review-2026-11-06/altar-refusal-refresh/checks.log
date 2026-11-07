@@ -1,0 +1,14 @@
+UI-024 specific stale altar refusal; baseline aab67feb0d08a999cfe6e849aa4bc4aad7eab31e.
+Chromium before/after40 fixtures PASS: real24px E refusal visible, immediate native approach inside22 (<1game sec, not2.2s expiry), before still-visible stale refusal vs after hidden, real E then heart1→0/original win.
+After mobile320/390/844 approach elapsed0.1500/0.1166/0.1000game sec; desktop0.0666sec. Outside/exact22 refusal remains visible, existing strict gate unchanged.
+Other notices PASS: actual fence selection replaces refusal then stays visible/unchanged upon approach; actual sowing and no-seed notifications also remain visible and preserve inventories.
+Original night/two-night/no-heart/26px generic/plant priority cases preserved; no direct action API for approach/offering, native tap/keyboard and movement start/release timestamps retained in validation.json input_log.
+Source before GitLF a3dd727ddba2b6bebd28642f7c9b19663b83d9e9382780e03134f82dc6b37b1a; afterWindows bf61952196c25865a9f6ab5477772f9ff398485ea18e5c611789d1b12fb2793d.
+6 native-size affected320/390/844 originals only; all explicitly isolated fixtures, Chinese100%/DPR1; >=44px first-screen targets. No new natural survival/real-device/visual approval.
+node --check game.js PASS; node tests/static.mjs STATIC_OK.
+Independent readonly ship-gate review PASS, no significant issues. Latest stronger replacement-visibility assertion included in full integration.
+Required full Windows WebKit regression PASS in altar-refresh-integration, exit0: ALTAR_ARRIVAL_OK webkit40 and E2E_OK. Existing night fold/map placement/help/near-combat/device44px cases remain green; no unchanged suite reruns.
+Artifact audit PASS6 native-size originals,40 records/version,sub1-second approach/current visibility/input_log/unchanged stock and actual offer; replacement/plant/no-seed notices visible inside22. Exact raw source hashes match, old root records deep-equal after removing only UI-024/new batch.
+Read-only UI_COVERAGE_OK baseline172/history305/supplemental535; no extra images or new-source full-matrix claim. Tracked old altar-arrival evidence diff empty, protected natural diagnostic hash unchanged.
+Protected old natural diagnostic SHA256 964230C5914271F326300CA2C0FE82122B87F43D3BF2111D5B2363A75089596D; old UI-023 source/evidence untouched.
+Generic toast helper/default duration untouched; only current exact active refusal hidden on existing readiness/range. No rule/inventory/save/time/keyboard/planting changes, no merge/deploy/server changes.
