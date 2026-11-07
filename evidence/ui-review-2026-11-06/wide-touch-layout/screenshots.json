@@ -1,0 +1,3155 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "first-day",
+      "state": "first-day / before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": false,
+        "source_sha256": "fc0bf115dfe709662ecfc44c42285823da4159cf2c9cce6f8debadeb5c7411bd"
+      },
+      "source": "normal",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/first-day--1280x800--touch--before--fc0bf115.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:38:49.436Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 1012
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 95,
+            "width": 1088,
+            "height": 652.796875,
+            "right": 1184,
+            "bottom": 747.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 753.796875,
+            "width": 1108,
+            "height": 60,
+            "right": 1194,
+            "bottom": 813.796875
+          },
+          "toast": {
+            "x": 86,
+            "y": 753.796875,
+            "width": 1108,
+            "height": 26,
+            "right": 1194,
+            "bottom": 779.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 96,
+            "y": 1017.796875,
+            "width": 1088,
+            "height": 94.5,
+            "right": 1184,
+            "bottom": 1112.296875
+          },
+          "play-details": {
+            "x": 86,
+            "y": 963.796875,
+            "width": 1108,
+            "height": 48,
+            "right": 1194,
+            "bottom": 1011.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 134,
+            "y": 819.796875,
+            "width": 44,
+            "height": 44,
+            "right": 178,
+            "bottom": 863.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 86,
+            "y": 867.796875,
+            "width": 44,
+            "height": 44,
+            "right": 130,
+            "bottom": 911.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 134,
+            "y": 915.796875,
+            "width": 44,
+            "height": 44,
+            "right": 178,
+            "bottom": 959.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 182,
+            "y": 867.796875,
+            "width": 44,
+            "height": 44,
+            "right": 226,
+            "bottom": 911.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 234,
+            "y": 819.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 863.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 234,
+            "y": 867.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 911.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 234,
+            "y": 915.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 959.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "正常选择骑士，跳过开场和营地预演；无库存/玩法注入",
+        "记录实际首屏",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "selected",
+      "state": "selected / before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": false,
+        "source_sha256": "fc0bf115dfe709662ecfc44c42285823da4159cf2c9cce6f8debadeb5c7411bd"
+      },
+      "source": "fixture",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/selected--1280x800--touch--before--fc0bf115.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:38:51.023Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 1012
+        },
+        "scroll": {
+          "x": 0,
+          "y": 160
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": -65,
+            "width": 1088,
+            "height": 652.796875,
+            "right": 1184,
+            "bottom": 587.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 593.796875,
+            "width": 1108,
+            "height": 60,
+            "right": 1194,
+            "bottom": 653.796875
+          },
+          "toast": {
+            "x": 86,
+            "y": 593.796875,
+            "width": 1108,
+            "height": 26,
+            "right": 1194,
+            "bottom": 619.796875
+          },
+          "prompt": {
+            "x": 86,
+            "y": 619.796875,
+            "width": 1108,
+            "height": 26,
+            "right": 1194,
+            "bottom": 645.796875
+          },
+          "build-banner": {
+            "x": 86,
+            "y": 645.796875,
+            "width": 1108,
+            "height": 26,
+            "right": 1194,
+            "bottom": 671.796875
+          },
+          "guide": {
+            "x": 96,
+            "y": 857.796875,
+            "width": 1088,
+            "height": 94.5,
+            "right": 1184,
+            "bottom": 952.296875
+          },
+          "play-details": {
+            "x": 86,
+            "y": 803.796875,
+            "width": 1108,
+            "height": 48,
+            "right": 1194,
+            "bottom": 851.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 134,
+            "y": 659.796875,
+            "width": 44,
+            "height": 44,
+            "right": 178,
+            "bottom": 703.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 86,
+            "y": 707.796875,
+            "width": 44,
+            "height": 44,
+            "right": 130,
+            "bottom": 751.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 134,
+            "y": 755.796875,
+            "width": 44,
+            "height": 44,
+            "right": 178,
+            "bottom": 799.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 182,
+            "y": 707.796875,
+            "width": 44,
+            "height": 44,
+            "right": 226,
+            "bottom": 751.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 234,
+            "y": 659.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 703.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 234,
+            "y": 707.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 751.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 234,
+            "y": 755.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 799.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "prepareHint围营fixture：玩家(30,25)朝北，周边草地、木石10，既有库存其余项保留",
+        "原生点详情，再点栏；面板自动收起，不调用建造API",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "details-open",
+      "state": "details-open / before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": false,
+        "source_sha256": "fc0bf115dfe709662ecfc44c42285823da4159cf2c9cce6f8debadeb5c7411bd"
+      },
+      "source": "normal",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/details-open--1280x800--touch--before--fc0bf115.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:38:52.477Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 160
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": -65,
+            "width": 1088,
+            "height": 652.796875,
+            "right": 1184,
+            "bottom": 587.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 593.796875,
+            "width": 1108,
+            "height": 60,
+            "right": 1194,
+            "bottom": 653.796875
+          },
+          "toast": {
+            "x": 86,
+            "y": 593.796875,
+            "width": 1108,
+            "height": 26,
+            "right": 1194,
+            "bottom": 619.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 509.90625,
+            "width": 1248,
+            "height": 94.5,
+            "right": 1264,
+            "bottom": 604.40625
+          },
+          "play-details": {
+            "x": 6,
+            "y": 455.90625,
+            "width": 1268,
+            "height": 338.09375,
+            "right": 1274,
+            "bottom": 794
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 134,
+            "y": 659.796875,
+            "width": 44,
+            "height": 44,
+            "right": 178,
+            "bottom": 703.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 86,
+            "y": 707.796875,
+            "width": 44,
+            "height": 44,
+            "right": 130,
+            "bottom": 751.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 134,
+            "y": 755.796875,
+            "width": 44,
+            "height": 44,
+            "right": 178,
+            "bottom": 799.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 182,
+            "y": 707.796875,
+            "width": 44,
+            "height": 44,
+            "right": 226,
+            "bottom": 751.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 234,
+            "y": 659.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 703.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 234,
+            "y": 707.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 751.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 234,
+            "y": 755.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 799.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "正常选择骑士，跳过开场和营地预演；无库存/玩法注入",
+        "原生点背包/教程详情；保留主动展开面板，未隐藏物品信息",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "cancelled",
+      "state": "cancelled / before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": false,
+        "source_sha256": "fc0bf115dfe709662ecfc44c42285823da4159cf2c9cce6f8debadeb5c7411bd"
+      },
+      "source": "fixture",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/cancelled--1280x800--touch--before--fc0bf115.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:38:54.915Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 1012
+        },
+        "scroll": {
+          "x": 0,
+          "y": 160
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": -65,
+            "width": 1088,
+            "height": 652.796875,
+            "right": 1184,
+            "bottom": 587.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 593.796875,
+            "width": 1108,
+            "height": 60,
+            "right": 1194,
+            "bottom": 653.796875
+          },
+          "toast": {
+            "x": 86,
+            "y": 593.796875,
+            "width": 1108,
+            "height": 26,
+            "right": 1194,
+            "bottom": 619.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 96,
+            "y": 857.796875,
+            "width": 1088,
+            "height": 94.5,
+            "right": 1184,
+            "bottom": 952.296875
+          },
+          "play-details": {
+            "x": 86,
+            "y": 803.796875,
+            "width": 1108,
+            "height": 48,
+            "right": 1194,
+            "bottom": 851.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 134,
+            "y": 659.796875,
+            "width": 44,
+            "height": 44,
+            "right": 178,
+            "bottom": 703.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 86,
+            "y": 707.796875,
+            "width": 44,
+            "height": 44,
+            "right": 130,
+            "bottom": 751.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 134,
+            "y": 755.796875,
+            "width": 44,
+            "height": 44,
+            "right": 178,
+            "bottom": 799.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 182,
+            "y": 707.796875,
+            "width": 44,
+            "height": 44,
+            "right": 226,
+            "bottom": 751.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 234,
+            "y": 659.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 703.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 234,
+            "y": 707.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 751.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 234,
+            "y": 755.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 799.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已取消建造。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "prepareHint围营fixture：玩家(30,25)朝北，周边草地、木石10，既有库存其余项保留",
+        "原生点栏选择；触控再点同项、桌面按0取消，不调用取消API",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "third-night",
+      "state": "third-night / before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": false,
+        "source_sha256": "fc0bf115dfe709662ecfc44c42285823da4159cf2c9cce6f8debadeb5c7411bd"
+      },
+      "source": "fixture",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/third-night--1280x800--touch--before--fc0bf115.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:38:56.452Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 1012
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 95,
+            "width": 1088,
+            "height": 652.796875,
+            "right": 1184,
+            "bottom": 747.796875
+          },
+          "wave-banner": {
+            "x": 86,
+            "y": 753.796875,
+            "width": 1108,
+            "height": 22,
+            "right": 1194,
+            "bottom": 775.796875
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 775.796875,
+            "width": 1108,
+            "height": 38,
+            "right": 1194,
+            "bottom": 813.796875
+          },
+          "toast": {
+            "x": 86,
+            "y": 775.796875,
+            "width": 1108,
+            "height": 26,
+            "right": 1194,
+            "bottom": 801.796875
+          },
+          "prompt": {
+            "x": 86,
+            "y": 801.796875,
+            "width": 1108,
+            "height": 26,
+            "right": 1194,
+            "bottom": 827.796875
+          },
+          "build-banner": {
+            "x": 86,
+            "y": 827.796875,
+            "width": 1108,
+            "height": 26,
+            "right": 1194,
+            "bottom": 853.796875
+          },
+          "guide": {
+            "x": 96,
+            "y": 1017.796875,
+            "width": 1088,
+            "height": 94.5,
+            "right": 1184,
+            "bottom": 1112.296875
+          },
+          "play-details": {
+            "x": 86,
+            "y": 963.796875,
+            "width": 1108,
+            "height": 48,
+            "right": 1194,
+            "bottom": 1011.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 134,
+            "y": 819.796875,
+            "width": 44,
+            "height": 44,
+            "right": 178,
+            "bottom": 863.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 86,
+            "y": 867.796875,
+            "width": 44,
+            "height": 44,
+            "right": 130,
+            "bottom": 911.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 134,
+            "y": 915.796875,
+            "width": 44,
+            "height": 44,
+            "right": 178,
+            "bottom": 959.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 182,
+            "y": 867.796875,
+            "width": 44,
+            "height": 44,
+            "right": 226,
+            "bottom": 911.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 234,
+            "y": 819.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 863.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 234,
+            "y": 867.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 911.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 234,
+            "y": 915.796875,
+            "width": 960,
+            "height": 44,
+            "right": 1194,
+            "bottom": 959.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "四边围好了。再砍两棵树，木头还要留给方块之心。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 3 夜  波次 2/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "prepareNightUI第三夜fixture；既有真实HUD/波次/通知，但不代表自然三夜",
+        "记录实际首屏",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "first-day",
+      "state": "first-day / after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": true,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "normal",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/first-day--1280x800--touch--after--089fda92.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:40:51.273Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 86,
+            "y": 140.703125,
+            "width": 816,
+            "height": 489.59375,
+            "right": 902,
+            "bottom": 630.296875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 682,
+            "width": 816,
+            "height": 60,
+            "right": 902,
+            "bottom": 742
+          },
+          "toast": {
+            "x": 86,
+            "y": 682,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 708
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 96,
+            "y": 800,
+            "width": 1088,
+            "height": 94.5,
+            "right": 1184,
+            "bottom": 894.5
+          },
+          "play-details": {
+            "x": 86,
+            "y": 746,
+            "width": 1108,
+            "height": 48,
+            "right": 1194,
+            "bottom": 794
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 962,
+            "y": 95,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 914,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 958,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 962,
+            "y": 191,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 1010,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 1054,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 1062,
+            "y": 95,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 1062,
+            "y": 143,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 1062,
+            "y": 191,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "正常选择骑士，跳过开场和营地预演；无库存/玩法注入",
+        "记录实际首屏",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "selected",
+      "state": "selected / after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": true,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/selected--1280x800--touch--after--089fda92.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:40:52.996Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 86,
+            "y": 140.703125,
+            "width": 816,
+            "height": 489.59375,
+            "right": 902,
+            "bottom": 630.296875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 682,
+            "width": 816,
+            "height": 60,
+            "right": 902,
+            "bottom": 742
+          },
+          "toast": {
+            "x": 86,
+            "y": 682,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 708
+          },
+          "prompt": {
+            "x": 86,
+            "y": 708,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 734
+          },
+          "build-banner": {
+            "x": 86,
+            "y": 734,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 760
+          },
+          "guide": {
+            "x": 96,
+            "y": 800,
+            "width": 1088,
+            "height": 94.5,
+            "right": 1184,
+            "bottom": 894.5
+          },
+          "play-details": {
+            "x": 86,
+            "y": 746,
+            "width": 1108,
+            "height": 48,
+            "right": 1194,
+            "bottom": 794
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 962,
+            "y": 95,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 914,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 958,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 962,
+            "y": 191,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 1010,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 1054,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 1062,
+            "y": 95,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 1062,
+            "y": 143,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 1062,
+            "y": 191,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "prepareHint围营fixture：玩家(30,25)朝北，周边草地、木石10，既有库存其余项保留",
+        "原生点详情，再点栏；面板自动收起，不调用建造API",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "details-open",
+      "state": "details-open / after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": true,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "normal",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/details-open--1280x800--touch--after--089fda92.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:40:55.289Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 86,
+            "y": 164.703125,
+            "width": 816,
+            "height": 489.59375,
+            "right": 902,
+            "bottom": 654.296875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 730,
+            "width": 816,
+            "height": 60,
+            "right": 902,
+            "bottom": 790
+          },
+          "toast": {
+            "x": 86,
+            "y": 730,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 756
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 509.90625,
+            "width": 1248,
+            "height": 94.5,
+            "right": 1264,
+            "bottom": 604.40625
+          },
+          "play-details": {
+            "x": 6,
+            "y": 455.90625,
+            "width": 1268,
+            "height": 338.09375,
+            "right": 1274,
+            "bottom": 794
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 962,
+            "y": 95,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 914,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 958,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 962,
+            "y": 191,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 1010,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 1054,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 1062,
+            "y": 95,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 1062,
+            "y": 143,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 1062,
+            "y": 191,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "正常选择骑士，跳过开场和营地预演；无库存/玩法注入",
+        "原生点背包/教程详情；保留主动展开面板，未隐藏物品信息",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "cancelled",
+      "state": "cancelled / after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": true,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/cancelled--1280x800--touch--after--089fda92.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:40:58.416Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 86,
+            "y": 140.703125,
+            "width": 816,
+            "height": 489.59375,
+            "right": 902,
+            "bottom": 630.296875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 682,
+            "width": 816,
+            "height": 60,
+            "right": 902,
+            "bottom": 742
+          },
+          "toast": {
+            "x": 86,
+            "y": 682,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 708
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 96,
+            "y": 800,
+            "width": 1088,
+            "height": 94.5,
+            "right": 1184,
+            "bottom": 894.5
+          },
+          "play-details": {
+            "x": 86,
+            "y": 746,
+            "width": 1108,
+            "height": 48,
+            "right": 1194,
+            "bottom": 794
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 962,
+            "y": 95,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 914,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 958,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 962,
+            "y": 191,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 1010,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 1054,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 1062,
+            "y": 95,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 1062,
+            "y": 143,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 1062,
+            "y": 191,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "已取消建造。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "prepareHint围营fixture：玩家(30,25)朝北，周边草地、木石10，既有库存其余项保留",
+        "原生点栏选择；触控再点同项、桌面按0取消，不调用取消API",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "third-night",
+      "state": "third-night / after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": true,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/third-night--1280x800--touch--after--089fda92.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:40:59.885Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 86,
+            "y": 140.703125,
+            "width": 816,
+            "height": 489.59375,
+            "right": 902,
+            "bottom": 630.296875
+          },
+          "wave-banner": {
+            "x": 86,
+            "y": 682,
+            "width": 816,
+            "height": 22,
+            "right": 902,
+            "bottom": 704
+          },
+          "notice-feed": {
+            "x": 86,
+            "y": 704,
+            "width": 816,
+            "height": 38,
+            "right": 902,
+            "bottom": 742
+          },
+          "toast": {
+            "x": 86,
+            "y": 704,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 730
+          },
+          "prompt": {
+            "x": 86,
+            "y": 730,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 756
+          },
+          "build-banner": {
+            "x": 86,
+            "y": 756,
+            "width": 816,
+            "height": 26,
+            "right": 902,
+            "bottom": 782
+          },
+          "guide": {
+            "x": 96,
+            "y": 800,
+            "width": 1088,
+            "height": 94.5,
+            "right": 1184,
+            "bottom": 894.5
+          },
+          "play-details": {
+            "x": 86,
+            "y": 746,
+            "width": 1108,
+            "height": 48,
+            "right": 1194,
+            "bottom": 794
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 962,
+            "y": 95,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 914,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 958,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 962,
+            "y": 191,
+            "width": 44,
+            "height": 44,
+            "right": 1006,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 1010,
+            "y": 143,
+            "width": 44,
+            "height": 44,
+            "right": 1054,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 1062,
+            "y": 95,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 139,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 1062,
+            "y": 143,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 187,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 1062,
+            "y": 191,
+            "width": 132,
+            "height": 44,
+            "right": 1194,
+            "bottom": 235,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "四边围好了。再砍两棵树，木头还要留给方块之心。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 3 夜  波次 2/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "prepareNightUI第三夜fixture；既有真实HUD/波次/通知，但不代表自然三夜",
+        "记录实际首屏",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "selected",
+      "state": "selected / after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": true,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture",
+      "platform": "Web / WebKit",
+      "input": "mouse/keyboard",
+      "media": {
+        "coarse": false,
+        "narrow": false,
+        "touchLayout": false
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/selected--1280x800--mouse--after--089fda92.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:41:01.831Z",
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 93,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 570.59375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 578.59375,
+            "width": 796,
+            "height": 95,
+            "right": 892,
+            "bottom": 673.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 578.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 613.59375
+          },
+          "prompt": {
+            "x": 96,
+            "y": 613.59375,
+            "width": 796,
+            "height": 31,
+            "right": 892,
+            "bottom": 644.59375
+          },
+          "build-banner": {
+            "x": 96,
+            "y": 644.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 673.59375
+          },
+          "guide": {
+            "x": 914,
+            "y": 147,
+            "width": 260,
+            "height": 112.5,
+            "right": 1174,
+            "bottom": 259.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 93,
+            "width": 280,
+            "height": 410.09375,
+            "right": 1184,
+            "bottom": 503.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "左键点空地/坏墙；按 0 取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "左键点空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "prepareHint围营fixture：玩家(30,25)朝北，周边草地、木石10，既有库存其余项保留",
+        "原生点详情，再点栏；面板自动收起，不调用建造API",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "selected",
+      "state": "selected / after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": true,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": true,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/selected--390x844--touch--after--089fda92.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:41:03.072Z",
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 353.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 379.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 379.796875,
+            "width": 378,
+            "height": 44,
+            "right": 384,
+            "bottom": 423.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 94.5,
+            "right": 374,
+            "bottom": 686.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "prepareHint围营fixture：玩家(30,25)朝北，周边草地、木石10，既有库存其余项保留",
+        "原生点详情，再点栏；面板自动收起，不调用建造API",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "selected",
+      "state": "selected / after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": true,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": true,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/selected--320x568--touch--after--089fda92.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:41:04.214Z",
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 337.796875
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 337.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 381.796875
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 94.5,
+            "right": 304,
+            "bottom": 644.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "prepareHint围营fixture：玩家(30,25)朝北，周边草地、木石10，既有库存其余项保留",
+        "原生点详情，再点栏；面板自动收起，不调用建造API",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    },
+    {
+      "screen_id": "selected",
+      "state": "selected / after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+        "dirty": true,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture",
+      "platform": "Web / WebKit",
+      "input": "native touch",
+      "media": {
+        "coarse": true,
+        "narrow": false,
+        "touchLayout": true
+      },
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "relative_image_path": "images/selected--844x390--touch--after--089fda92.png",
+      "issue_ids": [
+        "UI-010"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人实际逐图复看",
+      "captured_at": "2026-11-07T00:41:05.441Z",
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "prompt": {
+            "x": 6,
+            "y": 286,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 312
+          },
+          "build-banner": {
+            "x": 6,
+            "y": 312,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 338
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "点空地/坏墙；再点背包「栏」取消。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点地图空地放下栅栏",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "建造栅栏 · 1木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+            "hidden": false
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+        "prepareHint围营fixture：玩家(30,25)朝北，周边草地、木石10，既有库存其余项保留",
+        "原生点详情，再点栏；面板自动收起，不调用建造API",
+        "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接"
+      ]
+    }
+  ],
+  "visual_review": "待协调人实际看图"
+}

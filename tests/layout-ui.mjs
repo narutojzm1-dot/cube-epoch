@@ -161,7 +161,7 @@ const hintModes = [
   { width: 1280, height: 800, touch: false, layoutTouch: false, capture: true },
   { width: 844, height: 390, touch: true, layoutTouch: true, capture: true },
   { width: 320, height: 568, touch: false, layoutTouch: true, capture: false },
-  { width: 1280, height: 800, touch: true, layoutTouch: true, capture: false },
+  { width: 1280, height: 800, touch: true, layoutTouch: true, capture: false, verifyLayout: true },
 ];
 const hintCases = ["fence", "torch", "plot", "repair", "cancel", "tree", "gold", "stone",
   "crop", "farm", "dismantle", "bench", "altar", "combat"];
@@ -242,7 +242,7 @@ export async function prepareHint(page, origin, name, mode, before) {
   }));
   assert.equal(media.touchLayout, mode.layoutTouch);
   assert.equal(media.touchLayout, media.coarse || media.narrow, "keep existing OR media rule");
-  if (mode.capture) {
+  if (mode.capture || mode.verifyLayout) {
     assertFirstScreen(metrics, mode.layoutTouch);
     assert.deepEqual(metrics.scroll, { x: 0, y: 0 }, `${name} ${mode.width}x${mode.height}: native selection/cancellation must not scroll`);
   }
@@ -251,7 +251,7 @@ export async function prepareHint(page, origin, name, mode, before) {
     assert.ok(toast.includes(mode.layoutTouch ? `再点背包「${{ fence: "栏", torch: "火", plot: "田" }[name]}」取消` : "按 0 取消"));
     assert.equal(toast.includes("坏墙"), name === "fence", "torch/plot must not promise fence repair");
     assert.ok(!toast.includes("拆除"), "selection toast must not imply tap-to-dismantle");
-    if (mode.capture) {
+    if (mode.capture || mode.verifyLayout) {
       const r = metrics.rects;
       assert.ok(r.toast.bottom <= r["notice-feed"].bottom + 0.5, "selection instructions must fit bounded feedback");
       assert.ok(r.prompt.bottom <= r["notice-feed"].bottom + 0.5, "live placement prompt must also be fully visible");
@@ -300,7 +300,7 @@ export async function testDeviceHints(browser, origin, capture = false) {
           const result = await prepareHint(page, origin, name, mode, version === "before");
           checks.push({ screen_id: name, version, viewport, input: mode.touch ? "native touch" : "mouse/keyboard",
             media: result.media, scroll: result.metrics.scroll,
-            layout_scope: mode.capture ? "first viewport and native action geometry" : "media/input wording only; no first-screen assertion",
+            layout_scope: mode.capture || mode.verifyLayout ? "first viewport and native action geometry" : "media/input wording only; no first-screen assertion",
             prompt: result.metrics.notice_text.find((r) => r.id === "prompt").text });
           if (capture && mode.capture) {
             await page.evaluate(() => { window.CUBE.getState().paused = true; });
@@ -335,7 +335,9 @@ export async function testDeviceHints(browser, origin, capture = false) {
       .map((s) => [s.relative_image_path, s])).values()];
     await writeFile(join(hintOut, "screenshots.json"), JSON.stringify({ screenshots, history, visual_review: "待协调人实际看图" }, null, 2) + "\n");
     await writeFile(join(hintOut, "validation.json"), JSON.stringify({ baseline: hintBaseline, checks,
-      after_cases: checks.filter((c) => c.version === "after").length }, null, 2) + "\n");
+      after_cases: checks.filter((c) => c.version === "after").length,
+      first_viewport_cases: checks.filter((c) => c.version === "after" && !c.layout_scope.startsWith("media")).length,
+      media_only_cases: checks.filter((c) => c.version === "after" && c.layout_scope.startsWith("media")).length }, null, 2) + "\n");
     const rows = hintComparisons.flatMap((name) => hintModes.filter((m) => m.capture).map((m) => {
       const image = (v) => screenshots.find((s) => s.state === `${name} / ${v}` && s.viewport.width === m.width).relative_image_path;
       return `| ${name} | ${m.width}×${m.height} | [原图](${image("before")}) | [原图](${image("after")}) |`;
@@ -354,7 +356,7 @@ export async function testDeviceHints(browser, origin, capture = false) {
       "", "## 检查与限制", "",
       "- [逐图元数据](screenshots.json) · [84个后版本设备/提示场景](validation.json) · [实际检查与独立审查记录](checks.log)。",
       "- 原输入逻辑未改；仅取消选择时增加「已取消建造」反馈。既有触屏/鼠标选项及取消入口有真实输入断言。",
-      "- 初次目标检查将宽屏触摸边界也作为零滚动首屏断言而失败；一次4cf83fd原源码探测确认该边界选栏同样scrollY=160。现56个主视口场景验证首屏/输入，28个媒体边界仅验证提示规则；不掩称宽屏触控布局已修复。",
+      "- 旧01f批次56主视口/28媒体边界及原scrollY160限制按原记录保留。宽屏布局维护后新增该边界首屏断言，后续执行的实际检查范围以validation的layout_scope与计数为准，不改写旧批次结论。",
       "- 自查320中间版发现选栏确认句过长，重复放置提示底边受限；已缩短确认并增加确认/放置两条都完整可见的断言。旧版本前图复用，中间版原图及元数据保留history，不冒称已获协调人批准。",
       "- 只补本片受影响状态，不重拍开始/暂停/结算等未变界面，不重跑自然三夜/平衡验证。受控夜战/祭坛不代表自然通关。",
       "- 浏览器触控模拟不是实体手机；截图未获本片协调人视觉批准，不以旧材料缺口局部批准代替。",
@@ -364,19 +366,203 @@ export async function testDeviceHints(browser, origin, capture = false) {
   console.log(`DEVICE_HINTS_OK ${checks.filter((c) => c.version === "after").length} cases; ${screenshots.length} actual-viewport PNGs`);
 }
 
-async function touchGestures(origin) {
+const wideBaseline = "01f5c71835d6e78edeb53ffe8fa01749fd3afd42";
+const wideOut = join(ROOT, "evidence", "ui-review-2026-11-06", "wide-touch-layout");
+const wideSteps = ["first-day", "selected", "details-open", "cancelled", "third-night"];
+
+export async function testWideTouchLayout(browser, origin, { capture = false, before = false } = {}) {
+  const files = ["index.html", "style.css", "game.js"];
+  const sha = execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT }).toString().trim();
+  const dirty = !!execFileSync("git", ["status", "--porcelain", "--", ...files], { cwd: ROOT }).toString().trim();
+  if (before) {
+    assert.equal(sha, wideBaseline, "before evidence must use the actual original working product");
+    assert.equal(dirty, false, "do not label a modified product as the baseline");
+  }
+  const hash = createHash("sha256").update(Buffer.concat(await Promise.all(files.map((f) => readFile(join(ROOT, f))))))
+    .digest("hex");
+  let previous, previousValidation;
+  if (capture) {
+    try { previous = JSON.parse(await readFile(join(wideOut, "screenshots.json"), "utf8")); }
+    catch (error) { if (error.code !== "ENOENT") throw error; }
+    try { previousValidation = JSON.parse(await readFile(join(wideOut, "validation.json"), "utf8")); }
+    catch (error) { if (error.code !== "ENOENT") throw error; }
+  }
+  const version = before ? "before" : "after";
+  const checks = [], screenshots = (previous?.screenshots || []).filter((s) => !s.state.endsWith(`/ ${version}`));
+  const modes = [
+    { width: 1280, height: 800, touch: true, wide: true },
+    ...viewports.map((v) => ({ ...v, wide: false })),
+    ...(!before ? [
+      { width: 981, height: 501, touch: true, wide: true, steps: ["selected"], probe: true },
+      { width: 1920, height: 1080, touch: true, wide: true, steps: ["selected"], probe: true },
+    ] : []),
+  ];
+  for (const mode of modes) {
+    const viewport = { width: mode.width, height: mode.height };
+    const context = await browser.newContext({ viewport, isMobile: mode.touch, hasTouch: mode.touch, deviceScaleFactor: 1 });
+    try {
+      const page = await context.newPage(), errors = [];
+      page.on("pageerror", (error) => errors.push(error.message));
+      for (const step of mode.steps || (mode.wide ? wideSteps : ["selected"])) {
+        let metrics;
+        if (["selected", "cancelled"].includes(step)) {
+          metrics = (await prepareHint(page, origin, step === "selected" ? "fence" : "cancel",
+            { ...mode, layoutTouch: mode.touch, capture: false }, true)).metrics;
+        } else {
+          await prepare(page, origin, step === "third-night" ? "third-night" : "first-day");
+          if (step === "details-open") {
+            await page.locator("#play-details summary").tap();
+            await page.waitForFunction(() => document.getElementById("play-details").open);
+          }
+          metrics = await inspect(page);
+        }
+        const media = await page.evaluate(() => ({
+          coarse: matchMedia("(any-pointer: coarse)").matches,
+          narrow: matchMedia("(max-width: 760px)").matches,
+          touchLayout: matchMedia("(any-pointer: coarse), (max-width: 760px)").matches,
+        }));
+        if (before && mode.wide && step === "first-day") {
+          assert.ok(metrics.buttons.some((b) => b.bottom > mode.height), "baseline core controls must reproduce below-first-screen boundary");
+        }
+        if (before && mode.wide && step === "selected") {
+          assert.ok(metrics.scroll.y > 0, "baseline native selection must reproduce page scroll");
+          console.log(`WIDE_TOUCH_REPRODUCED ${JSON.stringify({ scroll: metrics.scroll, document: metrics.document,
+            canvas: metrics.rects.game, controls_bottom: Math.max(...metrics.buttons.map((b) => b.bottom)) })}`);
+        }
+        if (!before && step !== "details-open") {
+          assertFirstScreen(metrics, mode.touch);
+          assert.deepEqual(metrics.scroll, { x: 0, y: 0 }, `${mode.width}x${mode.height} ${step}: native actions must not scroll`);
+          if (mode.wide) assert.ok(metrics.document.height <= mode.height, "closed wide layout must fit the viewport");
+        }
+        const record = { screen_id: step, version, viewport, input: mode.touch ? "native touch" : "mouse/keyboard", media, metrics };
+        if (!before && !mode.wide && previousValidation) {
+          const baseline = previousValidation.before_checks.find((c) => c.screen_id === step
+            && c.viewport.width === mode.width && c.viewport.height === mode.height && c.input === record.input);
+          assert.ok(baseline, "unchanged-layout comparison requires baseline geometry");
+          assert.deepEqual(metrics.rects.game, baseline.metrics.rects.game, "do not change the other viewport canvas");
+          assert.deepEqual(metrics.buttons, baseline.metrics.buttons, "do not change other viewport core target geometry");
+          record.unchanged_geometry = true;
+        }
+        if (!before && mode.wide && step === "selected") {
+          console.log(`WIDE_TOUCH_FIXED ${JSON.stringify({ scroll: metrics.scroll, document: metrics.document,
+            canvas: metrics.rects.game, controls_bottom: Math.max(...metrics.buttons.map((b) => b.bottom)),
+            minimum_target: Math.min(...metrics.buttons.map((b) => Math.min(b.width, b.height))) })}`);
+        }
+        if (capture && !mode.probe && (mode.wide || !before)) {
+          await page.evaluate(() => { window.CUBE.getState().paused = true; });
+          const filename = `${step}--${mode.width}x${mode.height}--${mode.touch ? "touch" : "mouse"}--${version}--${hash.slice(0, 8)}.png`;
+          await mkdir(join(wideOut, "images"), { recursive: true });
+          await page.screenshot({ path: join(wideOut, "images", filename), fullPage: false });
+          await page.evaluate(() => { window.CUBE.getState().paused = false; });
+          screenshots.push({
+            screen_id: step, state: `${step} / ${version}`, viewport, language: "zh-CN",
+            build: { sha, dirty, source_sha256: hash }, source: ["first-day", "details-open"].includes(step) ? "normal" : "fixture",
+            platform: "Web / WebKit", input: record.input, media, ui_scale: "100%", device_scale_factor: 1,
+            full_page: false, relative_image_path: `images/${filename}`, issue_ids: ["UI-010"], status: "已截",
+            visual_review: "待协调人实际逐图复看", captured_at: new Date().toISOString(), metrics,
+            repro_steps: [
+              "隔离浏览器上下文，原生触控/鼠标输入；不接触用户存档；实际工作区产品源码，SHA/dirty/hash如上",
+              step === "first-day" || step === "details-open" ? "正常选择骑士，跳过开场和营地预演；无库存/玩法注入"
+                : step === "third-night" ? "prepareNightUI第三夜fixture；既有真实HUD/波次/通知，但不代表自然三夜"
+                : "prepareHint围营fixture：玩家(30,25)朝北，周边草地、木石10，既有库存其余项保留",
+              step === "details-open" ? "原生点背包/教程详情；保留主动展开面板，未隐藏物品信息"
+                : step === "selected" ? "原生点详情，再点栏；面板自动收起，不调用建造API"
+                : step === "cancelled" ? "原生点栏选择；触控再点同项、桌面按0取消，不调用取消API" : "记录实际首屏",
+              "不纠正实际页面scroll；仅截图瞬间停止模拟，不弹暂停面板；原图严格等于viewport，无缩放拼接",
+            ],
+          });
+        }
+        if (!before && mode.wide && step === "details-open") {
+          assert.ok(await page.locator(".item[data-k]").count() >= 9, "preserve all inventory entries");
+          assert.ok(await page.locator("#guide-body").innerText(), "preserve tutorial content");
+          await page.locator("#play-details summary").tap();
+          await page.waitForFunction(() => !document.getElementById("play-details").open);
+          const manualClose = await inspect(page);
+          assertFirstScreen(manualClose, true);
+          assert.deepEqual(manualClose.scroll, { x: 0, y: 0 });
+          record.after_manual_close = manualClose;
+          await page.locator("#play-details summary").tap();
+          await page.waitForFunction(() => document.getElementById("play-details").open);
+          await page.locator('.item[data-build="fence"]').tap();
+          await page.waitForFunction(() => !document.getElementById("play-details").open);
+          const closed = await inspect(page);
+          assertFirstScreen(closed, true);
+          assert.deepEqual(closed.scroll, { x: 0, y: 0 });
+          record.after_detail_selection = closed;
+          console.log("WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll");
+        }
+        if (!before && mode.wide && step === "selected") {
+          const point = await page.evaluate(() => {
+            const cam = window.CUBE.cam(), r = document.getElementById("game").getBoundingClientRect();
+            return { x: r.x + (30 * 16 + 8 - cam.x) * r.width / 320,
+              y: r.y + (24 * 16 + 8 - cam.y) * r.height / 192 };
+          });
+          await page.touchscreen.tap(point.x, point.y);
+          await page.waitForFunction(() => window.CUBE.getState().tiles[24 * 48 + 30] === 12);
+          await page.locator("#touch-interact").tap();
+          await page.locator("#touch-skill").tap();
+          await page.waitForFunction(() => window.CUBE.getState().player.skillCd > 0);
+          const after = await inspect(page);
+          assert.deepEqual(after.scroll, { x: 0, y: 0 });
+          record.native_canvas_place_and_core_actions = true;
+        }
+        checks.push(record);
+      }
+      assert.deepEqual(errors, []);
+    } finally { await context.close(); }
+  }
+  if (capture) {
+    await mkdir(wideOut, { recursive: true });
+    await writeFile(join(wideOut, "screenshots.json"), JSON.stringify({ screenshots, visual_review: "待协调人实际看图" }, null, 2) + "\n");
+    await writeFile(join(wideOut, "validation.json"), JSON.stringify({
+      baseline: wideBaseline, before_checks: before ? checks : previousValidation?.before_checks || [],
+      after_checks: before ? previousValidation?.after_checks || [] : checks,
+    }, null, 2) + "\n");
+    const wideRows = wideSteps.map((step) => {
+      const image = (v) => {
+        const s = screenshots.find((s) => s.screen_id === step && s.viewport.width === 1280 && s.input === "native touch"
+          && s.state.endsWith(`/ ${v}`));
+        return s ? `[原图](${s.relative_image_path})` : "待截";
+      };
+      return `| ${step} | ${image("before")} | ${image("after")} |`;
+    });
+    await writeFile(join(wideOut, "INDEX.md"), [
+      "# UI-010 宽屏粗指针核心首屏", "",
+      "原01f5c71宽屏粗指针边界：正常首屏控件低于视口，原生选栏使页面滚动；先在未修改产品上真实截图/量矩形，不将其误称文案片引入。",
+      "1280×800五状态前后10图，加320/390/1280鼠标/844横屏4张选栏抽样后图；仅补本片，不重拍旧76或全基线。",
+      "实际touchLayout/输入、源码SHA/dirty/hash、scroll和画布/44px控件矩形逐项记录；Web/WebKit100%缩放DPR1真实首屏。",
+      "", "| 宽屏触控状态 | 前原图 | 后原图 |", "|---|---|---|", ...wideRows,
+      "", "## 未变布局抽样", "",
+      ...screenshots.filter((s) => s.state.endsWith("/ after") && (s.viewport.width !== 1280 || s.input === "mouse/keyboard"))
+        .map((s) => `- ${s.viewport.width}×${s.viewport.height} ${s.input}：[原图](${s.relative_image_path})`),
+      "", "## 验证与限制", "",
+      "- [逐图来源/实测](screenshots.json) · [前后矩形及实际输入](validation.json) · [检查/独立审查](checks.log)。",
+      "- CSS仅分配宽屏粗指针空间，保留5:3真实画布和44px核心触点；无玩法/成本/输入判定改动。",
+      "- 详情仍按需主动展开并可内部滚动，展开时覆盖部分主操作是既有面板行为；选择栏/关闭后回到核心首屏，不新增自动暂停。",
+      "- 选栏/同项取消使用原生输入；缩放后实际点地图放栏、交互/技能有针对性验证，其他四视口与原矩形直接对比。",
+      "- 普通首日/详情与注入建设/第三夜分开标识；不动用户存档，不重打自然三夜，不代表真机或视觉批准。",
+      "- 使用独立子分支/堆叠PR保留原PR6，不因推原分支而主动取消它的CI；不合并、不部署Pages/腾讯云。", "",
+    ].join("\n"));
+  }
+  console.log(`WIDE_TOUCH_${before ? "BASELINE" : "OK"} ${checks.length} measured cases; ${screenshots.length} recorded original PNGs`);
+  return checks;
+}
+
+async function touchGestures(origin, gestureViewports = [{ width: 320, height: 568 }, { width: 390, height: 844 }], checkGather = false) {
   const browser = await chromium.launch({ headless: true });
   try {
-    for (const viewport of [{ width: 320, height: 568 }, { width: 390, height: 844 }]) {
+    for (const viewport of gestureViewports) {
       const context = await browser.newContext({ viewport, isMobile: true, hasTouch: true });
       try {
         const page = await context.newPage();
         await prepare(page, origin, "first-day");
-        await page.evaluate(() => {
+        await page.evaluate((checkGather) => {
           const s = window.CUBE.getState();
           s.player.x = 30 * 16 + 8; s.player.y = 25 * 16 + 8;
           for (let y = 23; y <= 28; y++) for (let x = 28; x <= 34; x++) s.tiles[y * 48 + x] = 1;
-        });
+          if (checkGather) s.tiles[25 * 48 + 32] = 6;
+        }, checkGather);
+        const woodBefore = await page.evaluate(() => window.CUBE.getState().inv.wood);
         const session = await context.newCDPSession(page);
         const center = async (selector) => {
           const r = await page.locator(selector).boundingBox();
@@ -390,6 +576,10 @@ async function touchGestures(origin) {
         await page.waitForFunction((x) => window.CUBE.getState().player.x > x + 5, x);
         await session.send("Input.dispatchTouchEvent", { type: "touchStart", touchPoints: [{ ...start, id: 1 }, { ...action, id: 2 }] });
         await page.waitForFunction(() => document.querySelectorAll("#touch-controls .held").length === 2);
+        if (checkGather) {
+          await page.waitForFunction((before) => window.CUBE.getState().inv.wood > before, woodBefore);
+          console.log(`WIDE_NATIVE_GATHER wood ${woodBefore}->${await page.evaluate(() => window.CUBE.getState().inv.wood)}; native movement + held harvest`);
+        }
         for (const offset of [10, 30, 60]) await session.send("Input.dispatchTouchEvent", {
           type: "touchMove", touchPoints: [{ x: start.x, y: start.y - offset, id: 1 }, { x: action.x, y: action.y - offset, id: 2 }],
         });
@@ -405,7 +595,7 @@ async function touchGestures(origin) {
         await page.waitForFunction(() => !document.querySelector("#touch-controls .held"));
       } finally { await context.close(); }
     }
-    console.log("TOUCH_GESTURES_OK Chromium native two-touch hold/drag/end/cancel; 320x568 + 390x844 no document scroll or stuck movement");
+    console.log(`TOUCH_GESTURES_OK Chromium native two-touch hold/drag/end/cancel; ${gestureViewports.map((v) => `${v.width}x${v.height}`).join(" + ")} no document scroll or stuck movement`);
   } finally { await browser.close(); }
 }
 
@@ -510,13 +700,16 @@ async function capture(browser, origin) {
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const { server, origin } = await serve();
-  if (process.argv.includes("--touch-gestures")) {
-    try { await touchGestures(origin); }
+  if (process.argv.includes("--touch-gestures") || process.argv.includes("--wide-touch-gestures")) {
+    try { await touchGestures(origin, process.argv.includes("--wide-touch-gestures") ? [{ width: 1280, height: 800 }] : undefined,
+      process.argv.includes("--wide-touch-gestures")); }
     finally { await new Promise((r) => server.close(r)); }
   } else {
     const browser = await launch();
     try {
-      if (process.argv.includes("--device-hints")) {
+      if (process.argv.includes("--wide-touch")) {
+        await testWideTouchLayout(browser, origin, { capture: process.argv.includes("--capture"), before: process.argv.includes("--before") });
+      } else if (process.argv.includes("--device-hints")) {
         await testDeviceHints(browser, origin, process.argv.includes("--capture"));
       } else {
         await testCoreLayout(browser, origin);

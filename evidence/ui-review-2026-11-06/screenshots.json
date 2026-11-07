@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "wide-touch-layout",
+      "base_sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
+      "index": "wide-touch-layout/INDEX.md",
+      "screenshots": "wide-touch-layout/screenshots.json",
+      "issue_ids": ["UI-010"],
+      "status": "已截",
+      "visual_review": "14张真实原图待协调人复看；1280触屏五状态前后，320/390/1280鼠标/844横屏抽样。不外推旧片局部批准或真机结论"
+    },
+    {
       "id": "device-hints",
       "base_sha": "4cf83fdb7b90e38fb7d7a2855dbd9206bb7a9076",
       "index": "device-hints/INDEX.md",
@@ -58,6 +67,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-010",
+      "title": "1280宽屏粗指针核心操作需要整页滚动",
+      "status": "已修复，待协调人逐图审查",
+      "before": "wide-touch-layout/selected before",
+      "after": "wide-touch-layout/selected after"
+    },
     {
       "id": "UI-009",
       "title": "触屏建造等操作反馈仍使用左键/键盘文案",

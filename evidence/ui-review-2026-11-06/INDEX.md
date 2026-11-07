@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-010 宽屏粗指针核心首屏
+
+[1280触屏五状态同视口前后图与其他四视口抽样](wide-touch-layout/INDEX.md) · [原图/实际媒体条件/矩形](wide-touch-layout/screenshots.json) · [真实选栏取消及原生移动采集验证](wide-touch-layout/checks.log)。
+
+原01f宽屏选栏使页面scrollY160、画布顶部被裁；本片仅分配宽屏粗指针布局空间，画布与44px核心控件回到首屏、详细信息仍按需展开。14张原图，原五张前图复用，无自然三夜重跑。旧候选及4cf/01f证据保留；本片待协调人看图，不合并或部署。
+
 ## 独立维护批次：UI-009 设备相符操作反馈
 
 [四视口建设/修墙/取消40张前后图及其他提示36张后图](device-hints/INDEX.md) · [实际touchLayout/输入/源码逐图记录](device-hints/screenshots.json) · [针对性检查与边界限制](device-hints/validation.json)。
