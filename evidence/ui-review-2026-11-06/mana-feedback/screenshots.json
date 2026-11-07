@@ -1,0 +1,1997 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "depleted-release",
+      "state": "night mana below1 / released / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "32f0ef280efcaf1746343bc074480a5cfb90d289",
+        "dirty": false,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "isolated night/location/target fixture; normal full mana spent by real attacks",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native Chromium touchscreen hold/end",
+      "relative_image_path": "images/depleted-release--320x568--before--d52f5123.png",
+      "issue_ids": [
+        "UI-016"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T04:44:54.045Z",
+      "depleted": {
+        "mana": 0.8723650000000005,
+        "maxMana": 8,
+        "hud": "1/8",
+        "skillCd": 0,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "enemyHp": 9714,
+        "held": 0,
+        "day": false,
+        "nights": 2,
+        "over": false,
+        "win": false,
+        "time": 4.629300000001488,
+        "touchLayout": true,
+        "toast": "法力不足"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 333.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 377.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "法力不足",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选法师，保留原满法力和库存；不碰用户存档",
+        "fixture: 玩家(30,25)面东/附近草地，第二夜26秒/波1/3；36px前方静止零伤害高血量靶，不是自然夜守",
+        "真实长按采集/攻击消耗原8点法力；等实际不足提示及0.5至1之间法力，再原生松开",
+        "仅截图冻结模拟，100%真实首屏；不注法力、不快进恢复或改攻击规则"
+      ]
+    },
+    {
+      "screen_id": "depleted-release",
+      "state": "night mana below1 / released / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "32f0ef280efcaf1746343bc074480a5cfb90d289",
+        "dirty": false,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "isolated night/location/target fixture; normal full mana spent by real attacks",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native Chromium touchscreen hold/end",
+      "relative_image_path": "images/depleted-release--390x844--before--d52f5123.png",
+      "issue_ids": [
+        "UI-016"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T04:44:59.345Z",
+      "depleted": {
+        "mana": 0.8723649999999947,
+        "maxMana": 8,
+        "hud": "1/8",
+        "skillCd": 0,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "enemyHp": 9714,
+        "held": 0,
+        "day": false,
+        "nights": 2,
+        "over": false,
+        "win": false,
+        "time": 4.624400000001492,
+        "touchLayout": true,
+        "toast": "法力不足"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 375.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 401.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "法力不足",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选法师，保留原满法力和库存；不碰用户存档",
+        "fixture: 玩家(30,25)面东/附近草地，第二夜26秒/波1/3；36px前方静止零伤害高血量靶，不是自然夜守",
+        "真实长按采集/攻击消耗原8点法力；等实际不足提示及0.5至1之间法力，再原生松开",
+        "仅截图冻结模拟，100%真实首屏；不注法力、不快进恢复或改攻击规则"
+      ]
+    },
+    {
+      "screen_id": "depleted-release",
+      "state": "night mana below1 / released / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "32f0ef280efcaf1746343bc074480a5cfb90d289",
+        "dirty": false,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "isolated night/location/target fixture; normal full mana spent by real attacks",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native Chromium touchscreen hold/end",
+      "relative_image_path": "images/depleted-release--844x390--before--d52f5123.png",
+      "issue_ids": [
+        "UI-016"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T04:45:04.666Z",
+      "depleted": {
+        "mana": 0.8722299999999967,
+        "maxMana": 8,
+        "hud": "1/8",
+        "skillCd": 0,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "enemyHp": 9714,
+        "held": 0,
+        "day": false,
+        "nights": 2,
+        "over": false,
+        "win": false,
+        "time": 4.63810000000894,
+        "touchLayout": true,
+        "toast": "法力不足"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 22,
+            "right": 546,
+            "bottom": 297
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 38,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 323
+          },
+          "prompt": {
+            "x": 6,
+            "y": 323,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 349
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 393,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 487.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "法力不足",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选法师，保留原满法力和库存；不碰用户存档",
+        "fixture: 玩家(30,25)面东/附近草地，第二夜26秒/波1/3；36px前方静止零伤害高血量靶，不是自然夜守",
+        "真实长按采集/攻击消耗原8点法力；等实际不足提示及0.5至1之间法力，再原生松开",
+        "仅截图冻结模拟，100%真实首屏；不注法力、不快进恢复或改攻击规则"
+      ]
+    },
+    {
+      "screen_id": "depleted-release",
+      "state": "night mana below1 / released / before",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "32f0ef280efcaf1746343bc074480a5cfb90d289",
+        "dirty": false,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "isolated night/location/target fixture; normal full mana spent by real attacks",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "keyboard Space down/up",
+      "relative_image_path": "images/depleted-release--1280x800--before--d52f5123.png",
+      "issue_ids": [
+        "UI-016"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T04:45:09.984Z",
+      "depleted": {
+        "mana": 0.849684999999994,
+        "maxMana": 8,
+        "hud": "1/8",
+        "skillCd": 0,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "enemyHp": 9714,
+        "held": 0,
+        "day": false,
+        "nights": 2,
+        "over": false,
+        "win": false,
+        "time": 4.612000000008941,
+        "touchLayout": false,
+        "toast": "法力不足"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 109,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 586.59375
+          },
+          "wave-banner": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 623.59375
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 66,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 658.59375
+          },
+          "prompt": {
+            "x": 96,
+            "y": 658.59375,
+            "width": 796,
+            "height": 31,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 914,
+            "y": 163,
+            "width": 260,
+            "height": 112.5,
+            "right": 1174,
+            "bottom": 275.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 109,
+            "width": 280,
+            "height": 409.09375,
+            "right": 1184,
+            "bottom": 518.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "法力不足",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选法师，保留原满法力和库存；不碰用户存档",
+        "fixture: 玩家(30,25)面东/附近草地，第二夜26秒/波1/3；36px前方静止零伤害高血量靶，不是自然夜守",
+        "真实长按采集/攻击消耗原8点法力；等实际不足提示及0.5至1之间法力，再原生松开",
+        "仅截图冻结模拟，100%真实首屏；不注法力、不快进恢复或改攻击规则"
+      ]
+    },
+    {
+      "screen_id": "depleted-release",
+      "state": "night mana below1 / released / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "32f0ef280efcaf1746343bc074480a5cfb90d289",
+        "dirty": true,
+        "source_sha256": "c62f6ed82c2074b66af75e94a22030c1d5962bdcf668b3886136e0d7287deed6"
+      },
+      "source": "isolated night/location/target fixture; normal full mana spent by real attacks",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native Chromium touchscreen hold/end",
+      "relative_image_path": "images/depleted-release--320x568--after--c62f6ed8.png",
+      "issue_ids": [
+        "UI-016"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T04:45:35.775Z",
+      "depleted": {
+        "mana": 0.8722299999999934,
+        "maxMana": 8,
+        "hud": "0/8",
+        "skillCd": 0,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "enemyHp": 9714,
+        "held": 0,
+        "day": false,
+        "nights": 2,
+        "over": false,
+        "win": false,
+        "time": 4.63839999999851,
+        "touchLayout": true,
+        "toast": "法力不足，会自动恢复。"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 22,
+            "right": 314,
+            "bottom": 307.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 38,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 307.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 333.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 333.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 377.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "法力不足，会自动恢复。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选法师，保留原满法力和库存；不碰用户存档",
+        "fixture: 玩家(30,25)面东/附近草地，第二夜26秒/波1/3；36px前方静止零伤害高血量靶，不是自然夜守",
+        "真实长按采集/攻击消耗原8点法力；等实际不足提示及0.5至1之间法力，再原生松开",
+        "仅截图冻结模拟，100%真实首屏；不注法力、不快进恢复或改攻击规则"
+      ]
+    },
+    {
+      "screen_id": "depleted-release",
+      "state": "night mana below1 / released / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "32f0ef280efcaf1746343bc074480a5cfb90d289",
+        "dirty": true,
+        "source_sha256": "c62f6ed82c2074b66af75e94a22030c1d5962bdcf668b3886136e0d7287deed6"
+      },
+      "source": "isolated night/location/target fixture; normal full mana spent by real attacks",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native Chromium touchscreen hold/end",
+      "relative_image_path": "images/depleted-release--390x844--after--c62f6ed8.png",
+      "issue_ids": [
+        "UI-016"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T04:45:41.096Z",
+      "depleted": {
+        "mana": 0.8722299999999972,
+        "maxMana": 8,
+        "hud": "0/8",
+        "skillCd": 0,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "enemyHp": 9714,
+        "held": 0,
+        "day": false,
+        "nights": 2,
+        "over": false,
+        "win": false,
+        "time": 4.620500000005961,
+        "touchLayout": true,
+        "toast": "法力不足，会自动恢复。"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 22,
+            "right": 384,
+            "bottom": 349.796875
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 38,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 349.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 375.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 375.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 401.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "法力不足，会自动恢复。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选法师，保留原满法力和库存；不碰用户存档",
+        "fixture: 玩家(30,25)面东/附近草地，第二夜26秒/波1/3；36px前方静止零伤害高血量靶，不是自然夜守",
+        "真实长按采集/攻击消耗原8点法力；等实际不足提示及0.5至1之间法力，再原生松开",
+        "仅截图冻结模拟，100%真实首屏；不注法力、不快进恢复或改攻击规则"
+      ]
+    },
+    {
+      "screen_id": "depleted-release",
+      "state": "night mana below1 / released / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "32f0ef280efcaf1746343bc074480a5cfb90d289",
+        "dirty": true,
+        "source_sha256": "c62f6ed82c2074b66af75e94a22030c1d5962bdcf668b3886136e0d7287deed6"
+      },
+      "source": "isolated night/location/target fixture; normal full mana spent by real attacks",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native Chromium touchscreen hold/end",
+      "relative_image_path": "images/depleted-release--844x390--after--c62f6ed8.png",
+      "issue_ids": [
+        "UI-016"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T04:45:46.432Z",
+      "depleted": {
+        "mana": 0.8723649999999981,
+        "maxMana": 8,
+        "hud": "0/8",
+        "skillCd": 0,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "enemyHp": 9714,
+        "held": 0,
+        "day": false,
+        "nights": 2,
+        "over": false,
+        "win": false,
+        "time": 4.63389999999553,
+        "touchLayout": true,
+        "toast": "法力不足，会自动恢复。"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 22,
+            "right": 546,
+            "bottom": 297
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 38,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 297,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 323
+          },
+          "prompt": {
+            "x": 6,
+            "y": 323,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 349
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 393,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 487.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "法力不足，会自动恢复。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第四步：守住篝火"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选法师，保留原满法力和库存；不碰用户存档",
+        "fixture: 玩家(30,25)面东/附近草地，第二夜26秒/波1/3；36px前方静止零伤害高血量靶，不是自然夜守",
+        "真实长按采集/攻击消耗原8点法力；等实际不足提示及0.5至1之间法力，再原生松开",
+        "仅截图冻结模拟，100%真实首屏；不注法力、不快进恢复或改攻击规则"
+      ]
+    },
+    {
+      "screen_id": "depleted-release",
+      "state": "night mana below1 / released / after",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "32f0ef280efcaf1746343bc074480a5cfb90d289",
+        "dirty": true,
+        "source_sha256": "c62f6ed82c2074b66af75e94a22030c1d5962bdcf668b3886136e0d7287deed6"
+      },
+      "source": "isolated night/location/target fixture; normal full mana spent by real attacks",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "keyboard Space down/up",
+      "relative_image_path": "images/depleted-release--1280x800--after--c62f6ed8.png",
+      "issue_ids": [
+        "UI-016"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T04:45:51.730Z",
+      "depleted": {
+        "mana": 0.8498199999999942,
+        "maxMana": 8,
+        "hud": "0/8",
+        "skillCd": 0,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "enemyHp": 9714,
+        "held": 0,
+        "day": false,
+        "nights": 2,
+        "over": false,
+        "win": false,
+        "time": 4.597100000001493,
+        "touchLayout": false,
+        "toast": "法力不足，会自动恢复。"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 109,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 586.59375
+          },
+          "wave-banner": {
+            "x": 96,
+            "y": 594.59375,
+            "width": 796,
+            "height": 29,
+            "right": 892,
+            "bottom": 623.59375
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 66,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 623.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 658.59375
+          },
+          "prompt": {
+            "x": 96,
+            "y": 658.59375,
+            "width": 796,
+            "height": 31,
+            "right": 892,
+            "bottom": 689.59375
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 914,
+            "y": 163,
+            "width": 260,
+            "height": 112.5,
+            "right": 1174,
+            "bottom": 275.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 109,
+            "width": 280,
+            "height": 409.09375,
+            "right": 1184,
+            "bottom": 518.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "法力不足，会自动恢复。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "左键攻击 · Q 技能 · 按 1 后点坏墙修理",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "第 2 夜  波次 1/3  剩余 1",
+            "hidden": false
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第四步：守住篝火"
+      },
+      "repro_steps": [
+        "隔离新上下文正常选法师，保留原满法力和库存；不碰用户存档",
+        "fixture: 玩家(30,25)面东/附近草地，第二夜26秒/波1/3；36px前方静止零伤害高血量靶，不是自然夜守",
+        "真实长按采集/攻击消耗原8点法力；等实际不足提示及0.5至1之间法力，再原生松开",
+        "仅截图冻结模拟，100%真实首屏；不注法力、不快进恢复或改攻击规则"
+      ]
+    }
+  ],
+  "visual_review": "待协调人逐图审查"
+}

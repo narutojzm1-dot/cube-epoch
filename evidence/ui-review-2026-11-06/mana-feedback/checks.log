@@ -1,0 +1,64 @@
+Product baseline: 32f0ef280efcaf1746343bc074480a5cfb90d289
+Before served-byte SHA256: d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3
+After dirty served-byte SHA256: c62f6ed82c2074b66af75e94a22030c1d5962bdcf668b3886136e0d7287deed6
+
+Actual Chromium320 mage native hold/end probe, normal initial8mana:
+RELEASE mana0.8722299999999984 toast="法力不足" held0 hp78 fire100
+WAIT800ms mana1.9522300000000001 toast="法力不足" held0
+No stuck release; source HUD toFixed(0) rounds insufficient sub1 to1.
+
+node --check tests\mana-feedback.mjs
+exit0
+node tests\mana-feedback.mjs --before --capture
+MANA_FEEDBACK_OK 4 before sessions; actual depletion/release/natural recovery/re-attack/Nova; 4 viewport originals; chromium; touch holds native
+node --check game.js
+exit0
+node tests\static.mjs
+STATIC_OK
+node tests\mana-feedback.mjs --capture
+MANA_FEEDBACK_OK 4 after sessions; actual depletion/release/natural recovery/re-attack/Nova; 4 viewport originals; chromium; touch holds native
+
+320 before: initial8, depleted0.872365 HUD1/8, recovered1.29991, re-attack0.36741, held0, NovaCd8
+320 after: initial8, depleted0.87223 HUD0/8, recovered1.299775, re-attack0.367275, held0, NovaCd8
+All four before/after sessions preserve inventory/playerHP/campHP/win/over.
+Native holds use real depletion and natural regeneration; isolated night/position/target only, no injected mana or fast-forward.
+
+Independent READ-ONLY reviewer [reviewer] Review usable mana feedback:
+No significant issues found in the reviewed changes.
+No writing agent/worktree delegated.
+
+node --check tests\e2e.mjs
+exit0
+node tests\e2e.mjs (one required integration run)
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+HEART_DELIVERY_OK 20 after cases; 0 original PNGs
+CROP_FEEDBACK_OK 20 after checks; natural growth + unchanged harvest + night priority; 0 actual-viewport originals; webkit; harvest=keyboard, touch E native
+FARMER_SKILL_FEEDBACK_OK 20 after cases; actual ripening/heal + cap/cooldown/inventory guards; 0 original PNGs
+PLANTING_FEEDBACK_OK 24 after cases; real seed depletion + refusal/repeat/success/target priorities; 0 original PNGs
+AUDIO_NATIVE_UNAVAILABLE webkit 320x568: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_NATIVE_UNAVAILABLE webkit 390x844: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_NATIVE_UNAVAILABLE webkit 844x390: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_NATIVE_UNAVAILABLE webkit 1280x800: no Web Audio API; only labels/gameplay/no-error compatibility checked, NOT native recovery
+AUDIO_CONTROLS_CHECKED 12 after records; native audio availability per record; 0 viewport originals; physical listening NOT tested
+MANA_FEEDBACK_OK 4 after sessions; actual depletion/release/natural recovery/re-attack/Nova; 0 viewport originals; webkit; holds keyboard, touch skill native
+DEVICE_HINTS_OK 84 cases; 0 actual-viewport PNGs
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":109.5,"y":95,"width":470,"height":282,"right":579.5,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406,"y":280.703125,"width":816,"height":489.59375,"right":1222,"bottom":770.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+E2E_OK
+exit0
+
+node tests\ui-review.mjs --check-coverage
+UI_COVERAGE_OK recorded baseline172/172; history305; supplemental380; read-only, no images captured; not a new-build full-matrix claim
+MANA_EVIDENCE_INTEGRITY_OK8 actual viewport originals; real depletion/recovery/re-attack traces; current hash and old evidence/diagnostic preserved
+git diff --check (only current slice)
+exit0
+
+No natural-three-night replay or unchanged full screenshot recapture.
+Eight originals await coordinator visual review; no physical-device acceptance.
+Existing clipped third night prompt/internal scroll remains out of scope.

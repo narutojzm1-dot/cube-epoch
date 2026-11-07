@@ -1532,7 +1532,7 @@
   function shoot() {
     const p = state.player;
     if (p.mana < 1) {
-      toast("法力不足");
+      toast("法力不足，会自动恢复。");
       return;
     }
     p.mana -= 1;
@@ -2152,7 +2152,7 @@
     hpText.textContent = `${Math.max(0, Math.ceil(p.hp))}/${p.maxHp}`;
     if (p.maxMana) {
       manaBar.style.width = `${(p.mana / p.maxMana) * 100}%`;
-      manaText.textContent = `${p.mana.toFixed(0)}/${p.maxMana}`;
+      manaText.textContent = `${Math.floor(p.mana)}/${p.maxMana}`;
     }
     campBar.style.width = `${clamp((state.campHp / CAMP_MAX) * 100, 0, 100)}%`;
     campText.textContent = `${Math.max(0, Math.ceil(state.campHp))}/${CAMP_MAX}`;

@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-016 夜战法力可用量/恢复说明
+
+[四视口8张同状态首屏前后图](mana-feedback/INDEX.md) · [真实耗法力/释放/自然恢复/再攻击](mana-feedback/validation.json) · [源码及输入/矩形](mana-feedback/screenshots.json) · [检查](mana-feedback/checks.log)。
+
+实际法力约0.87时不能普通射击，旧HUD却四舍五入成1/8；现在显示完整可用量0/8，原不足提示补“会自动恢复”。仅显示/说明，不改消耗或恢复速度。真实触屏长按/释放、自然恢复后再攻击和原星爆均有证据；夜间高血量零伤害靶是明示夹具，非自然守夜或平衡验收。本批待协调人逐图审查。
+
 ## 独立维护批次：UI-015 用户开启声音时恢复音频上下文
 
 [14张声音设置同视口前后原图](audio-recovery/INDEX.md) · [真实上下文/音频时钟/节点行为](audio-recovery/validation.json) · [检查及环境限制](audio-recovery/checks.log)。
