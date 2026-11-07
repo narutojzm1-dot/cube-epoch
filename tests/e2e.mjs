@@ -14,6 +14,7 @@ import { testBuildGuidance } from "./build-guidance.mjs";
 import { testBuildCombatFeedback } from "./first-dusk-feedback.mjs";
 import { testAltarArrival } from "./altar-arrival.mjs";
 import { testVictoryRestart } from "./victory-restart.mjs";
+import { testTouchTitle } from "./touch-title.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -456,6 +457,7 @@ await testBuildGuidance(browser, origin);
 await testBuildCombatFeedback(browser, origin);
 await testAltarArrival(browser, origin);
 await testVictoryRestart(browser, origin);
+await testTouchTitle(browser, origin);
 await testDeviceHints(browser, origin);
 await testWideTouchLayout(browser, origin);
 await browser.close();

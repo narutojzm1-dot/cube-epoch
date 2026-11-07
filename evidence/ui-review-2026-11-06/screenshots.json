@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "touch-title",
+      "base_sha": "61383ce9246a604aacbc05368373ab8ade9e2610",
+      "index": "touch-title/INDEX.md",
+      "screenshots": "touch-title/screenshots.json",
+      "issue_ids": ["UI-026"],
+      "status": "已截",
+      "visual_review": "27张四视口标题同态前后/三手机首日原图待协调逐图审查；普通新局与暂停回选角，无世界/胜利夹具，真实Chromium滑动/坐标tap/方向及采集按住，WebKit键盘限制单列；不称真机/全图通过"
+    },
+    {
       "id": "victory-restart",
       "base_sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
       "index": "victory-restart/INDEX.md",
@@ -202,6 +211,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-026",
+      "title": "首次和重开触屏选角仍用WASD/空格/数字键/Esc教四步与操作入口",
+      "status": "已按既有触屏判定适配操作词，桌面原文和媒体更新保留，待协调逐图审查",
+      "before": "touch-title/title-first title-footer title-reopened before",
+      "after": "touch-title/title-first title-footer title-reopened after"
+    },
     {
       "id": "UI-025",
       "title": "胜利后聚焦再玩、角色卡和开始按Space被全局玩法监听取消",

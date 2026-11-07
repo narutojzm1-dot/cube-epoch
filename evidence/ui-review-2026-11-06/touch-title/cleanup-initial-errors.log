@@ -1,0 +1,6 @@
+Initial cleanup inspection command: PowerShell ParserError, "An empty pipe element is not allowed." No statement or deletion executed.
+Second inspection enumerated empty owned directories, but Get-CimInstance Win32Process returned "无效类" (Invalid class).
+The subsequent OWNED_BROWSER_PROCESSES_CLOSED marker from that command is NOT valid verification and is superseded by cleanup.log.
+No directory deletion was executed by either failed inspection.
+Final verification uses native Get-Process for the WebKit launch PID and completed awaited Playwright browser.close() plus empty profile/artifact directories for Chromium, without WMI or name-based process termination.
+The verified cleanup then removed tmp/browser-cache/npm-cache/tool-cache, but conservatively stopped at nonempty localappdata. Follow-up inspection found only empty Microsoft/Windows/Caches directories, no files. Only that exact owned hierarchy and the remaining empty appdata were then removed.

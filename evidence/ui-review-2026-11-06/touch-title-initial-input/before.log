@@ -1,0 +1,18 @@
+BROWSER_PROFILE_D_OK D:\work\tmp\cube-epoch\touch-title-790cd307\tmp\playwright_chromiumdev_profile-x626o4
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: activation must already be in viewport: #btn-start
+    at activate (file:///D:/work/projects/cube-epoch/tests/touch-title.mjs:68:16)
+    at async testTouchTitle (file:///D:/work/projects/cube-epoch/tests/touch-title.mjs:142:7)
+    at async file:///D:/work/projects/cube-epoch/tests/touch-title.mjs:210:5 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

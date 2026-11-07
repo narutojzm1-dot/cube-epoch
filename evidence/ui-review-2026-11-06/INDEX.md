@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-026 手机首次/重开选角操作说明
+
+[27张原图：四视口标题同态前后与三手机首日](touch-title/INDEX.md) · [普通新局/暂停回选角及真实移动采集](touch-title/validation.json) · [源码/矩形](touch-title/screenshots.json) · [D盘环境](touch-title/environment.log) · [检查](touch-title/checks.log)。
+
+首次与普通重开标题原文仍教键鼠；仅用既有触屏布局判定改四步中的操作词及末尾「怎么玩」入口，桌面保留原文，媒体双向更新。无世界/胜利夹具、CSS/输入/规则/存档修改；Chromium实际触屏滑动/点按/按住与WebKit键盘按住限制分开。27图已截待逐图审查，8张初次输入工具错误图单独保留不计本批，旧证据复用。
+
 ## 独立维护批次：UI-025 胜利后Space重开、选角与进场
 
 [24张320/390/844前后原图](victory-restart/INDEX.md) · [真实Tab/Space/tap与首日控制记录](victory-restart/validation.json) · [来源](victory-restart/screenshots.json) · [检查](victory-restart/checks.log)。
