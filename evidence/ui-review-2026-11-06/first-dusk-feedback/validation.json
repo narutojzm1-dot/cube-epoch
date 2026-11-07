@@ -1,0 +1,4916 @@
+{
+  "before-natural": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "time": 0.23760000000894074,
+        "cycle": 0.2035000000029803,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": null,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 392,
+        "y": 344,
+        "dir": 0,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "走到金框的树旁，按住「采集/攻击」砍木头",
+        "target": {
+          "x": 408,
+          "y": 360,
+          "kind": "tree"
+        },
+        "guide": "第一步：走起来",
+        "prompt": "",
+        "banner": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "placed": 1,
+        "storedTile": 6
+      },
+      "prepared": {
+        "day": true,
+        "time": 1.6876000000089386,
+        "cycle": 1.6535000000029783,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.000000002013,
+        "y": 360.14255999999995,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "点背包「栏」，点发光格围营（还差 4 面）",
+        "target": {
+          "x": 376,
+          "y": 344,
+          "kind": "gap"
+        },
+        "guide": "第三步：围营地",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "火把放好了。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "firstPoint": {
+        "x": 171.5499999981978,
+        "y": 187.26122582031257
+      },
+      "dusk": {
+        "day": false,
+        "time": 76.03460000001303,
+        "cycle": 0,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 0,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "selected": {
+        "day": false,
+        "time": 91.58390000001643,
+        "cycle": 15.54929999999991,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 2,
+        "bolts": 0,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 261.0794350564191,
+            "y": 296.8949690744888,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 414.8836015047614,
+            "y": 244.21163362770568,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 337.5462011625516,
+            "y": 381.68342625858264,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 406.22132237504405,
+            "y": 390.2213223750439,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 552.7330701294449,
+            "y": 448.3970796534475,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "p": {
+        "x": 140.7499999979329,
+        "y": 187.26122582031257
+      },
+      "acted": {
+        "day": false,
+        "time": 91.65060000001644,
+        "cycle": 15.615999999999907,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 7.045089999999992,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 1,
+        "bolts": 1,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 262.6451757681635,
+            "y": 297.6405598896052,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 414.04785800890653,
+            "y": 245.73116725653267,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 338.4338932699982,
+            "y": 380.1936436024959,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 404.99505779511037,
+            "y": 388.99505779511026,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 551.2082020010768,
+            "y": 447.5711094172482,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "placed": 1,
+        "storedTile": 13
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "time": 0.23760000000894074,
+        "cycle": 0.2035000000029803,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": null,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 392,
+        "y": 344,
+        "dir": 0,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "走到金框的树旁，按住「采集/攻击」砍木头",
+        "target": {
+          "x": 408,
+          "y": 360,
+          "kind": "tree"
+        },
+        "guide": "第一步：走起来",
+        "prompt": "",
+        "banner": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "placed": 1,
+        "storedTile": 6
+      },
+      "prepared": {
+        "day": true,
+        "time": 1.6876000000089386,
+        "cycle": 1.6535000000029783,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.000000002013,
+        "y": 360.14255999999995,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "点背包「栏」，点发光格围营（还差 4 面）",
+        "target": {
+          "x": 376,
+          "y": 344,
+          "kind": "gap"
+        },
+        "guide": "第三步：围营地",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "火把放好了。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "firstPoint": {
+        "x": 171.5499999981978,
+        "y": 187.26122582031257
+      },
+      "dusk": {
+        "day": false,
+        "time": 76.03460000001303,
+        "cycle": 0,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 0,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "selected": {
+        "day": false,
+        "time": 91.9173000000165,
+        "cycle": 15.882699999999899,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 7.4051349999999925,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 1,
+        "bolts": 1,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 268.9057911777926,
+            "y": 300.6218053227617,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 410.7061370142365,
+            "y": 251.80702361047818,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 341.98333082706006,
+            "y": 374.2367465353541,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 402.0466485512415,
+            "y": 382.96690935894486,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 545.1110156467175,
+            "y": 444.2684668086369,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "p": {
+        "x": 171.37499999746308,
+        "y": 208.23004082031258
+      },
+      "acted": {
+        "day": false,
+        "time": 91.96730000001651,
+        "cycle": 15.932699999999897,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 6.472634999999993,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 1,
+        "bolts": 2,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 270.07950985226375,
+            "y": 301.18071897727174,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 410.0796426395327,
+            "y": 252.94610429175782,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 342.64876718946385,
+            "y": 373.1199679325904,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 401.7137356499866,
+            "y": 381.7102594474031,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 543.9679360902197,
+            "y": 443.649298715534,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "placed": 1,
+        "storedTile": 13
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "time": 0.23760000000894074,
+        "cycle": 0.2035000000029803,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": null,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 392,
+        "y": 344,
+        "dir": 0,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "走到金框的树旁，按住「采集/攻击」砍木头",
+        "target": {
+          "x": 408,
+          "y": 360,
+          "kind": "tree"
+        },
+        "guide": "第一步：走起来",
+        "prompt": "",
+        "banner": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "placed": 1,
+        "storedTile": 6
+      },
+      "prepared": {
+        "day": true,
+        "time": 1.6876000000089386,
+        "cycle": 1.6535000000029783,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.000000002013,
+        "y": 360.14255999999995,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "点背包「栏」，点发光格围营（还差 4 面）",
+        "target": {
+          "x": 376,
+          "y": 344,
+          "kind": "gap"
+        },
+        "guide": "第三步：围营地",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "火把放好了。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "firstPoint": {
+        "x": 171.5499999981978,
+        "y": 187.26122582031257
+      },
+      "dusk": {
+        "day": false,
+        "time": 76.03460000001303,
+        "cycle": 0,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 0,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "selected": {
+        "day": false,
+        "time": 92.23390000001658,
+        "cycle": 16.199299999999905,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 6.832545000000005,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 1,
+        "bolts": 2,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 276.3377778245441,
+            "y": 304.1608465831193,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 406.73917463361204,
+            "y": 259.01968248434093,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 346.19687387380117,
+            "y": 367.1653044226539,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 399.93864406049505,
+            "y": 375.0098021190618,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 537.8730358949732,
+            "y": 440.34789444310877,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "p": {
+        "x": 255.1591796852629,
+        "y": 168.84369910156255
+      },
+      "acted": {
+        "day": false,
+        "time": 92.30060000001659,
+        "cycle": 16.265999999999906,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 5.922590000000001,
+        "x": 396.00000000214766,
+        "y": 360.14255999999995,
+        "dir": 1,
+        "bolts": 3,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 277.9035185362885,
+            "y": 304.9064373982356,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 405.90343113775725,
+            "y": 260.53921611316787,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 347.0845659812478,
+            "y": 365.6755217665671,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 399.4945382502209,
+            "y": 373.3334311370651,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 536.3481677666051,
+            "y": 439.52192420690943,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "placed": 1,
+        "storedTile": 13
+      }
+    }
+  ],
+  "after-natural": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "time": 0.23849999999403956,
+        "cycle": 0.2042999999970198,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": null,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 392,
+        "y": 344,
+        "dir": 0,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "走到金框的树旁，按住「采集/攻击」砍木头",
+        "target": {
+          "x": 408,
+          "y": 360,
+          "kind": "tree"
+        },
+        "guide": "第一步：走起来",
+        "prompt": "",
+        "banner": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "placed": 1,
+        "storedTile": 6
+      },
+      "prepared": {
+        "day": true,
+        "time": 1.688499999994038,
+        "cycle": 1.6542999999970183,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000205495,
+        "y": 360.14081999999996,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "点背包「栏」，点发光格围营（还差 4 面）",
+        "target": {
+          "x": 376,
+          "y": 344,
+          "kind": "gap"
+        },
+        "guide": "第三步：围营地",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "火把放好了。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "firstPoint": {
+        "x": 171.5499999981571,
+        "y": 187.26290054199222
+      },
+      "dusk": {
+        "day": false,
+        "time": 76.03539999999806,
+        "cycle": 0,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 0,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "selected": {
+        "day": false,
+        "time": 95.9013000000025,
+        "cycle": 19.865899999999833,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 54.09999999999998,
+        "mana": 8,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 2,
+        "bolts": 0,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 360.0003968420553,
+            "y": 335.7322162093138,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 424.33094354804774,
+            "y": 378.8459277551916,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 351.9930466195148,
+            "y": 341.39123487587125,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 322.77076328801064,
+            "y": 296.4141947510692,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 319.6862466229127,
+            "y": 374.2345580406232,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "p": {
+        "x": 155.30299999877764,
+        "y": 193.78771668935553
+      },
+      "acted": {
+        "day": false,
+        "time": 95.9513000000025,
+        "cycle": 19.915899999999834,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 54.09999999999998,
+        "mana": 7.0225449999999965,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 1,
+        "bolts": 1,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 360.0003376571552,
+            "y": 335.7322162093138,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 423.1878639915499,
+            "y": 378.2267596620886,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 351.9930466195148,
+            "y": 341.7752946771923,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 323.5718061850873,
+            "y": 297.4380747621266,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 319.6862466229127,
+            "y": 373.45888855702657,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "placed": 1,
+        "storedTile": 13
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "time": 0.23849999999403956,
+        "cycle": 0.2042999999970198,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": null,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 392,
+        "y": 344,
+        "dir": 0,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "走到金框的树旁，按住「采集/攻击」砍木头",
+        "target": {
+          "x": 408,
+          "y": 360,
+          "kind": "tree"
+        },
+        "guide": "第一步：走起来",
+        "prompt": "",
+        "banner": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "placed": 1,
+        "storedTile": 6
+      },
+      "prepared": {
+        "day": true,
+        "time": 1.688499999994038,
+        "cycle": 1.6542999999970183,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000205495,
+        "y": 360.14081999999996,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "点背包「栏」，点发光格围营（还差 4 面）",
+        "target": {
+          "x": 376,
+          "y": 344,
+          "kind": "gap"
+        },
+        "guide": "第三步：围营地",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "火把放好了。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "firstPoint": {
+        "x": 171.5499999981571,
+        "y": 187.26290054199222
+      },
+      "dusk": {
+        "day": false,
+        "time": 76.03539999999806,
+        "cycle": 0,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 0,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "selected": {
+        "day": false,
+        "time": 96.18460000000258,
+        "cycle": 20.14919999999985,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 46.44999999999998,
+        "mana": 7.3375000000000234,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 1,
+        "bolts": 1,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 360.00015892635014,
+            "y": 335.7322162093138,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 417.9263339215026,
+            "y": 375.2200067166638,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 351.9930466195148,
+            "y": 342.9623286178087,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 327.3094723428474,
+            "y": 302.21549889372073,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 319.6862466229127,
+            "y": 370.01382647497775,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "p": {
+        "x": 189.23549999849982,
+        "y": 216.23985015185553
+      },
+      "acted": {
+        "day": false,
+        "time": 96.28450000000261,
+        "cycle": 20.249099999999864,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 46.44999999999998,
+        "mana": 6.4723650000000355,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 1,
+        "bolts": 2,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 360.00011509501553,
+            "y": 335.7322162093138,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 415.78618763714354,
+            "y": 373.748184498614,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 351.9930466195148,
+            "y": 343.2685621755403,
+            "hp": 10
+          },
+          {
+            "kind": "slime",
+            "x": 328.90995605120685,
+            "y": 304.26121115581367,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 319.6862466229127,
+            "y": 368.62807616263706,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "placed": 1,
+        "storedTile": 13
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "time": 0.23849999999403956,
+        "cycle": 0.2042999999970198,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": null,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 392,
+        "y": 344,
+        "dir": 0,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "走到金框的树旁，按住「采集/攻击」砍木头",
+        "target": {
+          "x": 408,
+          "y": 360,
+          "kind": "tree"
+        },
+        "guide": "第一步：走起来",
+        "prompt": "",
+        "banner": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "placed": 1,
+        "storedTile": 6
+      },
+      "prepared": {
+        "day": true,
+        "time": 1.688499999994038,
+        "cycle": 1.6542999999970183,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 0,
+        "wave": 0,
+        "wavesTotal": 0,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000205495,
+        "y": 360.14081999999996,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "点背包「栏」，点发光格围营（还差 4 面）",
+        "target": {
+          "x": 376,
+          "y": 344,
+          "kind": "gap"
+        },
+        "guide": "第三步：围营地",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "火把放好了。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "firstPoint": {
+        "x": 171.5499999981571,
+        "y": 187.26290054199222
+      },
+      "dusk": {
+        "day": false,
+        "time": 76.03539999999806,
+        "cycle": 0,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 0,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 100,
+        "mana": 8,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 2,
+        "bolts": 0,
+        "near": 0,
+        "enemies": [],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "selected": {
+        "day": false,
+        "time": 96.51800000000266,
+        "cycle": 20.482599999999863,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 38.79999999999998,
+        "mana": 6.787590000000037,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 1,
+        "bolts": 2,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 360.0000541362394,
+            "y": 335.7322162093138,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 410.7839438193476,
+            "y": 370.3080394744437,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 351.9930466195148,
+            "y": 343.66893402935915,
+            "hp": 10
+          },
+          {
+            "kind": "slime",
+            "x": 332.6508263805551,
+            "y": 309.0427308074518,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 323.7877822986591,
+            "y": 365.51771868971673,
+            "hp": 32
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "placed": 1,
+        "storedTile": 13
+      },
+      "p": {
+        "x": 270.9089335924271,
+        "y": 175.9065685217774
+      },
+      "acted": {
+        "day": false,
+        "time": 96.61800000000268,
+        "cycle": 20.582599999999864,
+        "dayLen": 76,
+        "nightLen": 26,
+        "nights": 1,
+        "wave": 1,
+        "wavesTotal": 2,
+        "toSpawn": 0,
+        "build": "torch",
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 78,
+        "campHp": 38.79999999999998,
+        "mana": 5.922590000000038,
+        "x": 396.00000000218967,
+        "y": 360.14081999999996,
+        "dir": 1,
+        "bolts": 1,
+        "near": 1,
+        "enemies": [
+          {
+            "kind": "slime",
+            "x": 360.00003919264464,
+            "y": 335.7322162093138,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 408.6416552464157,
+            "y": 368.8347439608804,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 334.2529121747085,
+            "y": 311.0904908295666,
+            "hp": 32
+          },
+          {
+            "kind": "slime",
+            "x": 326.022951604243,
+            "y": 364.18955523013216,
+            "hp": 10
+          }
+        ],
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "guide": "第四步：守住篝火",
+        "prompt": "按住「采集/攻击」 · 点「技能 Q」 · 选栏再点坏墙修理",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "toast": "干掉一只！掉的麦可以点背包回血。夜里别离篝火太远。",
+        "placed": 1,
+        "storedTile": 13
+      }
+    }
+  ],
+  "before-fixture": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "fence",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 144.6,
+        "y": 187.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "fence",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "torch",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 144.6,
+        "y": 187.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "torch",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 13,
+        "toast": "火把放好了。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "plot",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 144.6,
+        "y": 187.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.02241,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "plot",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 8,
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "repair": true,
+      "wall": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 20,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "repaired": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "栅栏修好了。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "resource_priority": true,
+      "gathered": {
+        "inv": {
+          "wood": 6,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 2,
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "fence",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 176.1,
+        "y": 208.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "fence",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "torch",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 176.1,
+        "y": 208.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "torch",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 13,
+        "toast": "火把放好了。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "plot",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 176.1,
+        "y": 208.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.02241,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "plot",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 8,
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "repair": true,
+      "wall": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 20,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "repaired": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "栅栏修好了。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "resource_priority": true,
+      "gathered": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 2,
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "fence",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 259.32578125,
+        "y": 168.9921875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "fence",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "torch",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 259.32578125,
+        "y": 168.9921875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "torch",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 13,
+        "toast": "火把放好了。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "plot",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 259.32578125,
+        "y": 168.9921875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.02241,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "plot",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 8,
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "repair": true,
+      "wall": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 20,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "repaired": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "栅栏修好了。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "resource_priority": true,
+      "gathered": {
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 2,
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "fence",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "左键点空地/坏墙；按 0 取消。",
+        "banner": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 454.2,
+        "y": 347.796875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7,
+        "build": "fence",
+        "tile": 1,
+        "toast": "左键点空地/坏墙；按 0 取消。",
+        "banner": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "fence",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "左键点空地/坏墙；按 0 取消。",
+        "banner": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "banner": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "torch",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "左键点空地放火把；按 0 取消。",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 454.2,
+        "y": 347.796875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7,
+        "build": "torch",
+        "tile": 1,
+        "toast": "左键点空地放火把；按 0 取消。",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "torch",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "左键点空地放火把；按 0 取消。",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 13,
+        "toast": "火把放好了。",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "plot",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "左键点空地开田；按 0 取消。",
+        "banner": "建造田 · 1木 · 左键点空地开田 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 454.2,
+        "y": 347.796875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7,
+        "build": "plot",
+        "tile": 1,
+        "toast": "左键点空地开田；按 0 取消。",
+        "banner": "建造田 · 1木 · 左键点空地开田 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "plot",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "左键点空地开田；按 0 取消。",
+        "banner": "建造田 · 1木 · 左键点空地开田 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 7,
+        "toast": "田开好了。",
+        "banner": "建造田 · 1木 · 左键点空地开田 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "repair": true,
+      "wall": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 20,
+        "toast": "左键点空地/坏墙；按 0 取消。",
+        "banner": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "repaired": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "栅栏修好了。",
+        "banner": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "resource_priority": true,
+      "gathered": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 2,
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    }
+  ],
+  "after-fixture": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "fence",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "已选栏；近怪时按住空地先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 144.6,
+        "y": 187.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "fence",
+        "tile": 1,
+        "toast": "已选栏；近怪时按住空地先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "fence",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "torch",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 144.6,
+        "y": 187.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.02268,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "torch",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 13,
+        "toast": "火把放好了。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "plot",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "已选田；近怪时按住空地先攻击。",
+        "banner": "建造田 · 1木 · 近怪时按住空地先攻击；怪远离再开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 144.6,
+        "y": 187.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "plot",
+        "tile": 1,
+        "toast": "已选田；近怪时按住空地先攻击。",
+        "banner": "建造田 · 1木 · 近怪时按住空地先攻击；怪远离再开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "kind": "plot",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 8,
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "repair": true,
+      "wall": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 20,
+        "toast": "已选栏；近怪时按住空地先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "repaired": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "栅栏修好了。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "resource_priority": true,
+      "gathered": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 2,
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "fence",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "已选栏；近怪时按住空地先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 176.1,
+        "y": 208.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "fence",
+        "tile": 1,
+        "toast": "已选栏；近怪时按住空地先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "fence",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "torch",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 176.1,
+        "y": 208.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.02241,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "torch",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 13,
+        "toast": "火把放好了。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "plot",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "已选田；近怪时按住空地先攻击。",
+        "banner": "建造田 · 1木 · 近怪时按住空地先攻击；怪远离再开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 176.1,
+        "y": 208.3984375
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "plot",
+        "tile": 1,
+        "toast": "已选田；近怪时按住空地先攻击。",
+        "banner": "建造田 · 1木 · 近怪时按住空地先攻击；怪远离再开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "kind": "plot",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 8,
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "repair": true,
+      "wall": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 20,
+        "toast": "已选栏；近怪时按住空地先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "repaired": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "栅栏修好了。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "resource_priority": true,
+      "gathered": {
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 2,
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "fence",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "已选栏；近怪时按住空地先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 259.32578125,
+        "y": 168.9921875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.02268,
+        "build": "fence",
+        "tile": 1,
+        "toast": "已选栏；近怪时按住空地先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "fence",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "点空地/坏墙；再点背包「栏」取消。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "banner": "建造栅栏 · 2木 · 点地图空地放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "torch",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 259.32578125,
+        "y": 168.9921875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时按住空地先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "torch",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "点空地放火把；再点背包「火」取消。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 13,
+        "toast": "火把放好了。",
+        "banner": "建造火把 · 1木 · 点地图空地放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "plot",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "已选田；近怪时按住空地先攻击。",
+        "banner": "建造田 · 1木 · 近怪时按住空地先攻击；怪远离再开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 259.32578125,
+        "y": 168.9921875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7.022545,
+        "build": "plot",
+        "tile": 1,
+        "toast": "已选田；近怪时按住空地先攻击。",
+        "banner": "建造田 · 1木 · 近怪时按住空地先攻击；怪远离再开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "kind": "plot",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "点空地开田；再点背包「田」取消。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 8,
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "banner": "建造田 · 1木 · 点地图空地开田 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "repair": true,
+      "wall": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 20,
+        "toast": "已选栏；近怪时按住空地先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "repaired": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "栅栏修好了。",
+        "banner": "建造栅栏 · 2木 · 近怪时按住空地先攻击；怪远离再放下栅栏 / 点坏墙修理 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "resource_priority": true,
+      "gathered": {
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 2,
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "banner": "建造火把 · 1木 · 近怪时按住空地先攻击；怪远离再放下火把 · 再点背包同一项取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "fence",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "已选栏；近怪时在空地按住左键先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时在空地按住左键先攻击；怪远离再放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 454.2,
+        "y": 347.796875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7,
+        "build": "fence",
+        "tile": 1,
+        "toast": "已选栏；近怪时在空地按住左键先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时在空地按住左键先攻击；怪远离再放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "fence",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 1,
+        "toast": "左键点空地/坏墙；按 0 取消。",
+        "banner": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 0,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "banner": "建造栅栏 · 2木 · 左键点空地放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "torch",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时在空地按住左键先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时在空地按住左键先攻击；怪远离再放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 454.2,
+        "y": 347.796875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7,
+        "build": "torch",
+        "tile": 1,
+        "toast": "已选火；近怪时在空地按住左键先攻击。",
+        "banner": "建造火把 · 1木 · 近怪时在空地按住左键先攻击；怪远离再放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "torch",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 1,
+        "toast": "左键点空地放火把；按 0 取消。",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 13,
+        "toast": "火把放好了。",
+        "banner": "建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "plot",
+      "distance": 41,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "已选田；近怪时在空地按住左键先攻击。",
+        "banner": "建造田 · 1木 · 近怪时在空地按住左键先攻击；怪远离再开田 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "p": {
+        "x": 454.2,
+        "y": 347.796875
+      },
+      "acted": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 7,
+        "build": "plot",
+        "tile": 1,
+        "toast": "已选田；近怪时在空地按住左键先攻击。",
+        "banner": "建造田 · 1木 · 近怪时在空地按住左键先攻击；怪远离再开田 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "kind": "plot",
+      "distance": 42,
+      "selected": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 1,
+        "toast": "左键点空地开田；按 0 取消。",
+        "banner": "建造田 · 1木 · 左键点空地开田 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "placed": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "plot",
+        "tile": 7,
+        "toast": "田开好了。",
+        "banner": "建造田 · 1木 · 左键点空地开田 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "repair": true,
+      "wall": {
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 20,
+        "toast": "已选栏；近怪时在空地按住左键先攻击。",
+        "banner": "建造栅栏 · 2木 · 近怪时在空地按住左键先攻击；怪远离再放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      },
+      "repaired": {
+        "inv": {
+          "wood": 1,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "fence",
+        "tile": 12,
+        "fenceHp": 80,
+        "toast": "栅栏修好了。",
+        "banner": "建造栅栏 · 2木 · 近怪时在空地按住左键先攻击；怪远离再放下栅栏 / 点坏墙修理 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "resource_priority": true,
+      "gathered": {
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "mana": 8,
+        "build": "torch",
+        "tile": 2,
+        "toast": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+        "banner": "建造火把 · 1木 · 近怪时在空地按住左键先攻击；怪远离再放下火把 · 按 0 取消",
+        "day": false,
+        "hp": 78,
+        "campHp": 100
+      }
+    }
+  ]
+}

@@ -1081,10 +1081,18 @@
     for (const [k, n] of Object.entries(cost)) state.inv[k] -= n;
   }
 
+  function buildCombatHint() {
+    const p = state.player;
+    return state.enemies.some((e) => dist(e.x, e.y, p.x, p.y) < 42)
+      ? `近怪时${touchLayout.matches ? "按住空地" : "在空地按住左键"}先攻击`
+      : "";
+  }
+
   function buildPlacementText(kind) {
     const click = touchLayout.matches ? "点地图空地" : "左键点空地";
     const action = { fence: "放下栅栏", torch: "放下火把", plot: "开田" }[kind];
-    return click + action;
+    const combat = buildCombatHint();
+    return combat ? `${combat}；怪远离再${action}` : click + action;
   }
 
   function setBuild(kind, opts) {
@@ -1103,7 +1111,9 @@
     if (changed) {
       const target = kind === "fence" ? "空地/坏墙" : kind === "torch" ? "空地放火把" : "空地开田";
       const cancel = touchLayout.matches ? `再点背包「${labelOf(kind)}」取消` : "按 0 取消";
-      toast(`${touchLayout.matches ? "点" : "左键点"}${target}；${cancel}。`);
+      const combat = buildCombatHint();
+      toast(combat ? `已选${labelOf(kind)}；${combat}。`
+        : `${touchLayout.matches ? "点" : "左键点"}${target}；${cancel}。`);
     }
     syncHud();
   }

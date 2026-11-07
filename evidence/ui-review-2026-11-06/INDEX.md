@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-022 第一晚近怪建造操作反馈
+
+[24张前后原图](first-dusk-feedback/INDEX.md) · [自然首日/第一晚及独立输入夹具](first-dusk-feedback/validation.json) · [准确源码/视口](first-dusk-feedback/screenshots.json) · [检查](first-dusk-feedback/checks.log)。
+
+自然首局76秒入夜时目标、教程和选择已正确保留；近怪重新选火仍提示放置，却真实按住空地耗法力攻击、不扣木/不放置。本片只说明原近怪按住空地攻击优先，复用建造说明与原帮助，不改变短点或战斗规则。10普通路径图（同320局实际390/844视口）、14明确夹具图待审；不称完整守夜/真机或全图通过，旧批次/诊断保留。
+
 ## 独立维护批次：UI-021 暂停帮助随时返回
 
 [20张四视口前后原图](build-help-return/INDEX.md) · [真实上滑/首屏继续/取消再放/暂停安全](build-help-return/validation.json) · [源码与矩形](build-help-return/screenshots.json) · [检查](build-help-return/checks.log)。

@@ -1,0 +1,19 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+8 !== 7
+
+    at testBuildCombatFeedback (file:///D:/work/projects/cube-epoch/tests/first-dusk-feedback.mjs:274:16)
+    at async file:///D:/work/projects/cube-epoch/tests/first-dusk-feedback.mjs:304:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 8,
+  expected: 7,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "first-dusk-feedback",
+      "base_sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
+      "index": "first-dusk-feedback/INDEX.md",
+      "screenshots": "first-dusk-feedback/screenshots.json",
+      "issue_ids": ["UI-022"],
+      "status": "已截",
+      "visual_review": "24张前后原图待协调逐图审查；10普通320自然首局/第一晚及同局真实390/844输入视口图，14独立近怪夹具图。仅反馈原近怪按住空地攻击优先，不把所有短点都说成攻击，不称完整自然夜守/真机/全图通过"
+    },
+    {
       "id": "build-help-return",
       "base_sha": "920cadffc27330ef37407b260e123b1b45682f0a",
       "index": "build-help-return/INDEX.md",
@@ -166,6 +175,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-022",
+      "title": "自然第一晚近怪重新选建造仍提示放置，但按住空地走攻击优先",
+      "status": "已修近怪选择反馈和共用建造说明，待协调逐图审查",
+      "before": "first-dusk-feedback/near-enemy-selected before",
+      "after": "first-dusk-feedback/near-enemy-selected after"
+    },
     {
       "id": "UI-021",
       "title": "长暂停帮助把继续埋在末尾且重开沿用旧滚动位置",
