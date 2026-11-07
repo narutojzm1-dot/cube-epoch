@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "altar-arrival",
+      "base_sha": "2dcb7cdbe4ff286731c6510202f09db39cd11418",
+      "index": "altar-arrival/INDEX.md",
+      "screenshots": "altar-arrival/screenshots.json",
+      "issue_ids": ["UI-023"],
+      "status": "已截",
+      "visual_review": "18张320/390/844前后原图待协调逐图审查；全部明示第三夜黎明/祭坛距离边界夹具，原生交互、走近/释放、原扣心胜利。只复用旧自然三夜记录，不把旧图改成新源码自然跑"
+    },
+    {
       "id": "first-dusk-feedback",
       "base_sha": "e1a86b4bf227d4e09be31ac8cc3f7442d22cee2a",
       "index": "first-dusk-feedback/INDEX.md",
@@ -175,6 +184,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-023",
+      "title": "祭坛24px处提示可献祭，但原22px操作范围之外只给通用说明",
+      "status": "已修范围外靠近提示和一次未献出反馈，待协调逐图审查",
+      "before": "altar-arrival/edge-ready and edge-pressed before",
+      "after": "altar-arrival/edge-ready and edge-pressed after"
+    },
     {
       "id": "UI-022",
       "title": "自然第一晚近怪重新选建造仍提示放置，但按住空地走攻击优先",

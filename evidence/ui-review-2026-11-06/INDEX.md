@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-023 祭坛交付距离边界反馈
+
+[18张320/390/844前后原图](altar-arrival/INDEX.md) · [准确来源](altar-arrival/screenshots.json) · [真实点按/走近/扣心与边界回归](altar-arrival/validation.json) · [检查](altar-arrival/checks.log)。
+
+复用旧普通三夜记录；当前夹具在24px处显示献祭步骤却不能献出，原提示26px/操作22px范围不一致。只把原操作范围之外改为靠近提示与本次未献出的反馈；保留原距离、胜负/库存、夜数条件及面对空田的种植/缺种优先。新图均明示夹具，待协调逐图审查，不称新的自然三夜或真机通过。
+
 ## 独立维护批次：UI-022 第一晚近怪建造操作反馈
 
 [24张前后原图](first-dusk-feedback/INDEX.md) · [自然首日/第一晚及独立输入夹具](first-dusk-feedback/validation.json) · [准确源码/视口](first-dusk-feedback/screenshots.json) · [检查](first-dusk-feedback/checks.log)。
