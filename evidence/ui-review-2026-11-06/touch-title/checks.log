@@ -1,0 +1,22 @@
+Source: fix/touch-title-instructions, parent 61383ce9246a604aacbc05368373ab8ade9e2610 plus product dirty.
+After actual HTTP/Windows product SHA256: d20ffe7014c4ec9a271dc805951b126eaa201408aa547641e387a370a0a9b2c3.
+node --check game.js: PASS.
+node --check tests/touch-title.mjs: PASS.
+node tests/static.mjs: STATIC_OK (static.log).
+node tests/touch-title.mjs --before --capture: TOUCH_TITLE_OK chromium before, four ordinary new/reselect viewports (before.log).
+node tests/touch-title.mjs --capture: TOUCH_TITLE_OK chromium after, four ordinary new/reselect viewports; actual Chromium swipes/coordinate taps/direction/gather/release (after.log).
+node tests/e2e.mjs: E2E_OK full Windows WebKit suite (e2e.log).
+New integrated TOUCH_TITLE_OK webkit: four viewports, normal pause/reselect reload, actual coordinate taps, keyboard scroll/holds, reversible media text.
+Existing integrated VICTORY_RESTART_OK webkit after4: real native Tab/Space replay/selection/start and hidden-title gameplay Space preserved.
+Existing night fold keyboard/scroll, help return/pause, map placement, resources/farming/mana, offer boundaries and core >=44px controls: PASS as recorded in full e2e.log.
+WebKit AUDIO_NATIVE_UNAVAILABLE: no native Web Audio API in this environment; compatibility only, not native recovery verification.
+Independent read-only [reviewer] touch-title-review: No significant issues found (review.log).
+node tests/ui-review.mjs --check-coverage: UI_COVERAGE_OK recorded baseline172/history305/supplemental586, read-only; NOT new-build full-matrix coverage.
+Evidence audit: EVIDENCE_OK 27 unique native-size PNGs; all three 1280 desktop before/after PNG bytes identical; after served hash matches; old root manifest deeply identical after removing only UI-026/batch; protected natural-loop dirty SHA256 unchanged.
+git diff --check: PASS; unrelated natural-loop LF/CRLF warning retained, not staged or rewritten.
+D_ENV_OK: every build/test/screenshot process had D TEMP/TMP/TMPDIR/browser+tool caches and APPDATA/LOCALAPPDATA; installed C browser binaries read-only, no installs (environment.log/environment.ps1).
+BROWSER_PROFILE_D_OK Chromium actual user-data-dir; live WebKit profile/artifacts under same D run directory (before.log/after.log/live-temp-paths.log).
+CLEANUP_OK: known WebKit launch PID absent via native Get-Process, complete graceful-close log, awaited Chromium browser.close and empty profiles/artifacts; exact inspected owned D child paths removed, dedicated run leaf empty (cleanup.log).
+Initial browser command-line/locator-input errors and cleanup shell/WMI errors retained with limitations; no test skipping/timeout extension/product workaround.
+No merge, Pages/Tencent deployment, user saves, old candidate or natural-loop diagnostics changed.
+PR same-SHA Linux CI is checked after commit/push and kept in local ci-result.log, not a result-only follow-up commit.

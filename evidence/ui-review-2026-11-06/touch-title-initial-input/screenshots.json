@@ -1,0 +1,452 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "title-first",
+      "state": "title-first / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "61383ce9246a604aacbc05368373ab8ade9e2610",
+        "dirty": false,
+        "source_sha256": "4c8dfe192041174e40502eda46e67639d300be8fd2470d8202339b0fff9a11cb",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game and pause/reselect reload; read-only CUBE observation, no fixture",
+      "relative_image_path": "images/title-first--320x568--before--4c8dfe19.png",
+      "issue_ids": [
+        "UI-026"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T13:18:58.491Z",
+      "data": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离上下文正常打开标题，记录现有四步；原生上滑到末尾操作提示",
+        "可见骑士卡/开始真实点按，首次实际跳故事/预演；真实方向按钮和按住采集/攻击采树",
+        "点怎么玩暂停→回选角真实重载，原生下滑回顶，检查重开四步和末尾提示",
+        "内存响应61383ce原Git产品，不改工作区/用户存档"
+      ]
+    },
+    {
+      "screen_id": "title-footer",
+      "state": "title-footer / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "61383ce9246a604aacbc05368373ab8ade9e2610",
+        "dirty": false,
+        "source_sha256": "4c8dfe192041174e40502eda46e67639d300be8fd2470d8202339b0fff9a11cb",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game and pause/reselect reload; read-only CUBE observation, no fixture",
+      "relative_image_path": "images/title-footer--320x568--before--4c8dfe19.png",
+      "issue_ids": [
+        "UI-026"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T13:18:59.450Z",
+      "data": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 641,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离上下文正常打开标题，记录现有四步；原生上滑到末尾操作提示",
+        "可见骑士卡/开始真实点按，首次实际跳故事/预演；真实方向按钮和按住采集/攻击采树",
+        "点怎么玩暂停→回选角真实重载，原生下滑回顶，检查重开四步和末尾提示",
+        "内存响应61383ce原Git产品，不改工作区/用户存档"
+      ]
+    },
+    {
+      "screen_id": "title-reopened",
+      "state": "title-reopened / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "61383ce9246a604aacbc05368373ab8ade9e2610",
+        "dirty": false,
+        "source_sha256": "4c8dfe192041174e40502eda46e67639d300be8fd2470d8202339b0fff9a11cb",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game and pause/reselect reload; read-only CUBE observation, no fixture",
+      "relative_image_path": "images/title-reopened--320x568--before--4c8dfe19.png",
+      "issue_ids": [
+        "UI-026"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T13:19:01.306Z",
+      "data": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": "1",
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离上下文正常打开标题，记录现有四步；原生上滑到末尾操作提示",
+        "可见骑士卡/开始真实点按，首次实际跳故事/预演；真实方向按钮和按住采集/攻击采树",
+        "点怎么玩暂停→回选角真实重载，原生下滑回顶，检查重开四步和末尾提示",
+        "内存响应61383ce原Git产品，不改工作区/用户存档"
+      ]
+    },
+    {
+      "screen_id": "title-first",
+      "state": "title-first / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "61383ce9246a604aacbc05368373ab8ade9e2610",
+        "dirty": false,
+        "source_sha256": "4c8dfe192041174e40502eda46e67639d300be8fd2470d8202339b0fff9a11cb",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game and pause/reselect reload; read-only CUBE observation, no fixture",
+      "relative_image_path": "images/title-first--390x844--before--4c8dfe19.png",
+      "issue_ids": [
+        "UI-026"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T13:19:01.554Z",
+      "data": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离上下文正常打开标题，记录现有四步；原生上滑到末尾操作提示",
+        "可见骑士卡/开始真实点按，首次实际跳故事/预演；真实方向按钮和按住采集/攻击采树",
+        "点怎么玩暂停→回选角真实重载，原生下滑回顶，检查重开四步和末尾提示",
+        "内存响应61383ce原Git产品，不改工作区/用户存档"
+      ]
+    },
+    {
+      "screen_id": "title-footer",
+      "state": "title-footer / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "61383ce9246a604aacbc05368373ab8ade9e2610",
+        "dirty": false,
+        "source_sha256": "4c8dfe192041174e40502eda46e67639d300be8fd2470d8202339b0fff9a11cb",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game and pause/reselect reload; read-only CUBE observation, no fixture",
+      "relative_image_path": "images/title-footer--390x844--before--4c8dfe19.png",
+      "issue_ids": [
+        "UI-026"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T13:19:02.090Z",
+      "data": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 338,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离上下文正常打开标题，记录现有四步；原生上滑到末尾操作提示",
+        "可见骑士卡/开始真实点按，首次实际跳故事/预演；真实方向按钮和按住采集/攻击采树",
+        "点怎么玩暂停→回选角真实重载，原生下滑回顶，检查重开四步和末尾提示",
+        "内存响应61383ce原Git产品，不改工作区/用户存档"
+      ]
+    },
+    {
+      "screen_id": "title-reopened",
+      "state": "title-reopened / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "61383ce9246a604aacbc05368373ab8ade9e2610",
+        "dirty": false,
+        "source_sha256": "4c8dfe192041174e40502eda46e67639d300be8fd2470d8202339b0fff9a11cb",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game and pause/reselect reload; read-only CUBE observation, no fixture",
+      "relative_image_path": "images/title-reopened--390x844--before--4c8dfe19.png",
+      "issue_ids": [
+        "UI-026"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T13:19:03.913Z",
+      "data": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": "1",
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离上下文正常打开标题，记录现有四步；原生上滑到末尾操作提示",
+        "可见骑士卡/开始真实点按，首次实际跳故事/预演；真实方向按钮和按住采集/攻击采树",
+        "点怎么玩暂停→回选角真实重载，原生下滑回顶，检查重开四步和末尾提示",
+        "内存响应61383ce原Git产品，不改工作区/用户存档"
+      ]
+    },
+    {
+      "screen_id": "title-first",
+      "state": "title-first / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "61383ce9246a604aacbc05368373ab8ade9e2610",
+        "dirty": false,
+        "source_sha256": "4c8dfe192041174e40502eda46e67639d300be8fd2470d8202339b0fff9a11cb",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game and pause/reselect reload; read-only CUBE observation, no fixture",
+      "relative_image_path": "images/title-first--844x390--before--4c8dfe19.png",
+      "issue_ids": [
+        "UI-026"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T13:19:04.180Z",
+      "data": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离上下文正常打开标题，记录现有四步；原生上滑到末尾操作提示",
+        "可见骑士卡/开始真实点按，首次实际跳故事/预演；真实方向按钮和按住采集/攻击采树",
+        "点怎么玩暂停→回选角真实重载，原生下滑回顶，检查重开四步和末尾提示",
+        "内存响应61383ce原Git产品，不改工作区/用户存档"
+      ]
+    },
+    {
+      "screen_id": "title-footer",
+      "state": "title-footer / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "61383ce9246a604aacbc05368373ab8ade9e2610",
+        "dirty": false,
+        "source_sha256": "4c8dfe192041174e40502eda46e67639d300be8fd2470d8202339b0fff9a11cb",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game and pause/reselect reload; read-only CUBE observation, no fixture",
+      "relative_image_path": "images/title-footer--844x390--before--4c8dfe19.png",
+      "issue_ids": [
+        "UI-026"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T13:19:06.532Z",
+      "data": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 1147,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离上下文正常打开标题，记录现有四步；原生上滑到末尾操作提示",
+        "可见骑士卡/开始真实点按，首次实际跳故事/预演；真实方向按钮和按住采集/攻击采树",
+        "点怎么玩暂停→回选角真实重载，原生下滑回顶，检查重开四步和末尾提示",
+        "内存响应61383ce原Git产品，不改工作区/用户存档"
+      ]
+    }
+  ]
+}

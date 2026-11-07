@@ -1,0 +1,11 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+cdpSession.send: Protocol error (Browser.getBrowserCommandLine): Command line not returned because --enable-automation not set.
+    at D:\work\projects\cube-epoch\tests\touch-title.mjs:204:47 {
+  log: [],
+  name: 'Error'
+}
+
+Node.js v24.22.1

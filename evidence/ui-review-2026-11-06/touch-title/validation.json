@@ -1,0 +1,1215 @@
+{
+  "before": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "controlled": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.2671999999940395,
+          "x": 395.99999999866,
+          "y": 362.35347199999995,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "settled": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.45079999999404,
+          "x": 396.0000000294392,
+          "y": 362.35347199999995,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "reopened": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": "1",
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "input_log": [
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:19:37.062Z"
+        },
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:37.256Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:37.268Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:37.350Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:37.391Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:19:37.715Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:19:37.798Z"
+        },
+        {
+          "action": "Space",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:19:38.682Z"
+        },
+        {
+          "action": "#btn-help",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:38.889Z"
+        },
+        {
+          "action": "#overlay-actions button:nth-child(2)",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:38.928Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "controlled": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.16530000000596,
+          "x": 395.9999999870529,
+          "y": 360.7609600000001,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "settled": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.3320000000059598,
+          "x": 396.0000000305209,
+          "y": 360.7609600000001,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "reopened": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": "1",
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "input_log": [
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:19:39.665Z"
+        },
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:39.836Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:39.842Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:39.884Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:39.928Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:19:40.201Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:19:40.250Z"
+        },
+        {
+          "action": "Space",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:19:41.101Z"
+        },
+        {
+          "action": "#btn-help",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:41.320Z"
+        },
+        {
+          "action": "#overlay-actions button:nth-child(2)",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:41.347Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "controlled": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.16519999999702,
+          "x": 395.9999999994637,
+          "y": 360.75648,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "settled": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.3319999999970196,
+          "x": 396.00000004293895,
+          "y": 360.75648,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "reopened": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": "1",
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "input_log": [
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:19:42.083Z"
+        },
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:19:42.550Z"
+        },
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:19:43.034Z"
+        },
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:43.220Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:43.226Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:43.272Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:43.313Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:19:43.587Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:19:43.637Z"
+        },
+        {
+          "action": "Space",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:19:44.488Z"
+        },
+        {
+          "action": "#btn-help",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:44.703Z"
+        },
+        {
+          "action": "#overlay-actions button:nth-child(2)",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:19:44.734Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": false,
+        "coarse": false,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "controlled": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": false,
+        "coarse": false,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.0834000000000001,
+          "x": 395.5579781727843,
+          "y": 358.9440000000002,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "settled": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": false,
+        "coarse": false,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.2335999999999994,
+          "x": 395.55797823425274,
+          "y": 358.9440000000002,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "reopened": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": false,
+        "coarse": false,
+        "scroll_y": 0,
+        "title": true,
+        "seen": "1",
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "input_log": [
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:19:45.370Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:19:45.386Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:19:45.417Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:19:45.448Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native keyboard down/up; not a WebKit touch hold",
+          "at": "2026-11-07T13:19:45.688Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native keyboard down/up; not a WebKit touch hold",
+          "at": "2026-11-07T13:19:45.705Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard down/up; not a WebKit touch hold",
+          "at": "2026-11-07T13:19:46.528Z"
+        },
+        {
+          "action": "#btn-help",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:19:46.739Z"
+        },
+        {
+          "action": "#overlay-actions button:nth-child(2)",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:19:46.752Z"
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "controlled": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 5,
+          "time": 1.181500000017881,
+          "x": 395.99999999385716,
+          "y": 360.76096,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "settled": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 5,
+          "time": 1.3482000000178809,
+          "x": 396.0000000373246,
+          "y": 360.76096,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "reopened": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": "1",
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "input_log": [
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:20:25.903Z"
+        },
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:20:26.353Z"
+        },
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:26.539Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:26.546Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:26.611Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:26.650Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:20:26.940Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:20:26.989Z"
+        },
+        {
+          "action": "Space",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:20:27.840Z"
+        },
+        {
+          "action": "#btn-help",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:28.075Z"
+        },
+        {
+          "action": "#overlay-actions button:nth-child(2)",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:28.103Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "controlled": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 5,
+          "time": 1.1652999999999993,
+          "x": 395.99999999439325,
+          "y": 360.7654400000001,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "settled": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 5,
+          "time": 1.3487999999999989,
+          "x": 396.0000000383087,
+          "y": 360.7654400000001,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "reopened": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": "1",
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "input_log": [
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:20:28.822Z"
+        },
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:29.015Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:29.020Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:29.053Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:29.083Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:20:29.358Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:20:29.408Z"
+        },
+        {
+          "action": "Space",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:20:30.258Z"
+        },
+        {
+          "action": "#btn-help",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:30.521Z"
+        },
+        {
+          "action": "#overlay-actions button:nth-child(2)",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:30.538Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "controlled": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.1653999999999998,
+          "x": 395.9999999968033,
+          "y": 360.7609600000001,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "settled": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.3322,
+          "x": 396.00000004035275,
+          "y": 360.7609600000001,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "reopened": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": true,
+        "seen": "1",
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "input_log": [
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:20:31.274Z"
+        },
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:20:31.725Z"
+        },
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:20:32.175Z"
+        },
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:20:32.625Z"
+        },
+        {
+          "action": "swipe up",
+          "input": "native Chromium touch scroll",
+          "at": "2026-11-07T13:20:33.059Z"
+        },
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:33.225Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:33.231Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:33.280Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:33.321Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:20:33.595Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:20:33.645Z"
+        },
+        {
+          "action": "Space",
+          "input": "native touch hold/release",
+          "at": "2026-11-07T13:20:34.496Z"
+        },
+        {
+          "action": "#btn-help",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:34.761Z"
+        },
+        {
+          "action": "#overlay-actions button:nth-child(2)",
+          "input": "native coordinate tap; visible center, no automatic scrolling",
+          "at": "2026-11-07T13:20:34.793Z"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": false,
+        "coarse": false,
+        "scroll_y": 0,
+        "title": true,
+        "seen": null,
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "controlled": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": false,
+        "coarse": false,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 5,
+          "time": 1.0785999999821185,
+          "x": 395.5538782981115,
+          "y": 358.9504000000001,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "settled": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": false,
+        "coarse": false,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 5,
+          "time": 1.245399999982118,
+          "x": 395.5538783601764,
+          "y": 358.9504000000001,
+          "paused": false,
+          "over": false
+        },
+        "held": 0
+      },
+      "reopened": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": false,
+        "coarse": false,
+        "scroll_y": 0,
+        "title": true,
+        "seen": "1",
+        "start_disabled": true,
+        "game": null,
+        "held": 0
+      },
+      "input_log": [
+        {
+          "action": ".class-card[data-class=\"knight\"]",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:20:35.375Z"
+        },
+        {
+          "action": "#btn-start",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:20:35.383Z"
+        },
+        {
+          "action": "#btn-skip-intro",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:20:35.414Z"
+        },
+        {
+          "action": "#btn-skip-brief",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:20:35.440Z"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native keyboard down/up; not a WebKit touch hold",
+          "at": "2026-11-07T13:20:35.680Z"
+        },
+        {
+          "action": "ArrowRight",
+          "input": "native keyboard down/up; not a WebKit touch hold",
+          "at": "2026-11-07T13:20:35.696Z"
+        },
+        {
+          "action": "Space",
+          "input": "native keyboard down/up; not a WebKit touch hold",
+          "at": "2026-11-07T13:20:36.518Z"
+        },
+        {
+          "action": "#btn-help",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:20:36.734Z"
+        },
+        {
+          "action": "#overlay-actions button:nth-child(2)",
+          "input": "native coordinate click",
+          "at": "2026-11-07T13:20:36.752Z"
+        }
+      ]
+    }
+  ]
+}

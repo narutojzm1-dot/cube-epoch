@@ -154,8 +154,26 @@
   const mouse = { x: 0, y: 0, down: false, pressed: false, right: false, inside: false };
   const touchHolds = new Map();
   const touchLayout = window.matchMedia("(any-pointer: coarse), (max-width: 760px)");
+  const titleStepText = [...screenTitle.querySelectorAll(".how-to li")].map((li) => li.lastChild);
+  const desktopTitleSteps = titleStepText.map((text) => text.textContent);
+  const titleHint = screenTitle.querySelector(".title-actions .hint");
+  const desktopTitleHint = titleHint.textContent;
   let canvasTouch = null;
   let touchPressed = false;
+
+  function syncTitleInstructions() {
+    const touchSteps = [
+      " 方向按钮走到树旁，按住「采集/攻击」砍木",
+      " 点背包「栏」选栅栏，点篝火旁发光格围起来",
+      desktopTitleSteps[2],
+      " 凑齐材料点「交互 E」合成，天亮送到北边祭坛",
+    ];
+    titleStepText.forEach((text, i) => {
+      text.textContent = touchLayout.matches ? touchSteps[i] : desktopTitleSteps[i];
+    });
+    titleHint.textContent = touchLayout.matches
+      ? desktopTitleHint.replace("Esc 看操作。", "进场后点「怎么玩」看操作。") : desktopTitleHint;
+  }
 
   function held(code) {
     return keys.has(code) || [...touchHolds.values()].some((button) => button.dataset.hold === code);
@@ -2686,7 +2704,11 @@
     if (touchLayout.matches && (item.dataset.build || item.dataset.k === "wheat")) playDetails.open = false;
   });
   playDetails.addEventListener("toggle", resetInput);
-  touchLayout.addEventListener("change", () => { playDetails.open = !touchLayout.matches; });
+  syncTitleInstructions();
+  touchLayout.addEventListener("change", () => {
+    playDetails.open = !touchLayout.matches;
+    syncTitleInstructions();
+  });
 
   window.addEventListener("keydown", (e) => {
     if (intro.active) {
