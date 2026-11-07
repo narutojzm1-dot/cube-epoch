@@ -645,6 +645,27 @@ h1 {
   #btn-skip-brief { min-height: 44px; flex-shrink: 0; }
 }
 
+@media (any-pointer: coarse) and (min-width: 981px) and (min-height: 501px) {
+  #screen-game { grid-template-rows: auto minmax(0, 1fr) auto; }
+  .play-main {
+    min-height: 0;
+    height: 100%;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    grid-template-rows: minmax(0, 1fr) 60px;
+    gap: 6px 12px;
+  }
+  .stage {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 0;
+    height: 100%;
+    grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  }
+  #game { width: auto; height: auto; max-width: 100%; max-height: 100%; }
+  .play-notices { grid-column: 1; grid-row: 2; }
+  .touch-controls { grid-column: 2; grid-row: 1 / span 2; align-self: start; }
+}
+
 @media (any-pointer: coarse) and (orientation: landscape) and (max-height: 500px) {
   .hud { grid-template-columns: auto 1fr auto; }
   .hud-left { grid-column: 1; grid-row: 1; flex-direction: column; }

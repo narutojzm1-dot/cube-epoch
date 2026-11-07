@@ -1,0 +1,75 @@
+WIDE_TOUCH_REPRODUCED {"scroll":{"x":0,"y":160},"document":{"width":1280,"height":1012},"canvas":{"x":96,"y":-65,"width":1088,"height":652.796875,"right":1184,"bottom":587.796875},"controls_bottom":799.796875}
+WIDE_TOUCH_BASELINE 9 measured cases; 5 recorded original PNGs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: do not change the other viewport canvas
++ actual - expected
+
+  {
++   bottom: 570.59375,
++   height: 477.59375,
++   right: 892,
++   width: 796,
+-   bottom: 587.796875,
+-   height: 652.796875,
+-   right: 1184,
+-   width: 1088,
+    x: 96,
++   y: 93
+-   y: -65
+  }
+
+    at testWideTouchLayout (file:///D:/work/projects/cube-epoch/tests/layout-ui.mjs:436:18)
+    at async file:///D:/work/projects/cube-epoch/tests/layout-ui.mjs:683:9 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: {
+    x: 96,
+    y: 93,
+    width: 796,
+    height: 477.59375,
+    right: 892,
+    bottom: 570.59375
+  },
+  expected: {
+    x: 96,
+    y: -65,
+    width: 1088,
+    height: 652.796875,
+    right: 1184,
+    bottom: 587.796875
+  },
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 9 measured cases; 14 recorded original PNGs
+WIDE_NATIVE_GATHER wood 2->6; native movement + held harvest
+TOUCH_GESTURES_OK Chromium native two-touch hold/drag/end/cancel; 1280x800 no document scroll or stuck movement
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":109.5,"y":95,"width":470,"height":282,"right":579.5,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406,"y":280.703125,"width":816,"height":489.59375,"right":1222,"bottom":770.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+WIDE_TOUCH_EDGE_OK:981x501 height-limited and1920x1080; no extra PNGs captured
+
+> test
+> node tests/static.mjs && node tests/e2e.mjs
+
+STATIC_OK
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+DEVICE_HINTS_OK 84 cases; 0 actual-viewport PNGs
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":109.5,"y":95,"width":470,"height":282,"right":579.5,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406,"y":280.703125,"width":816,"height":489.59375,"right":1222,"bottom":770.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+E2E_OK
+UI_COVERAGE_OK recorded baseline 172/172; history 305; supplemental 262; read-only, no images captured; not a new-build full-matrix claim
+INDEPENDENT_REVIEW_OK scoped pending CSS/tests/evidence; reviewer: "No significant issues found in the reviewed changes." Not coordinator visual approval.
