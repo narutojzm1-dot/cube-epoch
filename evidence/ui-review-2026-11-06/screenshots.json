@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "first-night-wall-guidance",
+      "base_sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
+      "index": "first-night-wall-guidance/INDEX.md",
+      "screenshots": "first-night-wall-guidance/screenshots.json",
+      "issue_ids": ["UI-030"],
+      "status": "已截",
+      "visual_review": "68张当前前后与12张历史原图待协调审查：普通320/390/桌面采木放首墙并自然入夜，844明确边界夹具。仅触屏提醒朝墙拆墙/先侧移，不改规则，不称完整首夜存活、实体设备或全界面通过"
+    },
+    {
       "id": "canvas-black-area",
       "base_sha": "52195fc2e722f78fba754a343eab3a61c1afc72b",
       "index": "canvas-black-area/INDEX.md",
@@ -238,6 +247,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-030",
+      "title": "首夜站在墙后打的文字会引导触屏按住攻击拆自己的第一面栅栏",
+      "status": "普通新局真实复现，仅适配触屏首夜toast与现有步骤，前后原图待协调逐图审查",
+      "before": "first-night-wall-guidance before",
+      "after": "first-night-wall-guidance after"
+    },
     {
       "id": "UI-029",
       "title": "宽屏触控舞台被撑高、画布居中留下首局大黑区，开背包还会下移地图",

@@ -1,0 +1,5188 @@
+{
+  "records": [
+    {
+      "manifest": "before-normal.json",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "natural": true,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 76.04360000000734,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.0368017149482,
+          "y": 360.1582199999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 76.12700000000736,
+        "cycle": 0.08339999999999417,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.0368017149482,
+          "y": 360.1582199999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 76.62750000000744,
+        "cycle": 0.5838999999999943,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.0368017149482,
+          "y": 360.1582199999999,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 77.04450000000752,
+        "cycle": 1.000899999999994,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.0368017149482,
+          "y": 379.5128199999996,
+          "dir": 0,
+          "mana": 7.562950000000005
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 77.09460000000753,
+        "cycle": 1.0509999999999995,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.0368017149482,
+          "y": 380.9968311999997,
+          "dir": 0,
+          "mana": 6.630585000000013
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 484.28125
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 264,
+          "y": 315.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 144.31647437300026,
+          "y": 187.2461533251954
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 519.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 216.8125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 146.48957834936238,
+          "y": 187.2461533251954
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "manifest": "before-normal.json",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "natural": true,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 76.04410000001042,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.0361499540963,
+          "y": 360.1524199999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 76.11070000001043,
+        "cycle": 0.06660000000000582,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.0361499540963,
+          "y": 360.1524199999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 76.61130000001052,
+        "cycle": 0.5671999999999973,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.0361499540963,
+          "y": 360.1524199999999,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 77.04500000001062,
+        "cycle": 1.0009000000000083,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.0361499540963,
+          "y": 379.50702000000035,
+          "dir": 0,
+          "mana": 7.585495000000022
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 77.09490000001063,
+        "cycle": 1.0508000000000024,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.0361499540963,
+          "y": 380.9870524000001,
+          "dir": 0,
+          "mana": 6.652860000000015
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 836
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 334,
+          "y": 357.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 175.75143998662517,
+          "y": 208.21839385579437
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 561.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 332.3125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 178.41979786672374,
+          "y": 208.21839385579437
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "manifest": "before-normal.json",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "natural": true,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 76.02830000000407,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.2353326504029,
+          "y": 358.5115999999998,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 76.14500000000409,
+        "cycle": 0.11669999999999711,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.2353326504029,
+          "y": 358.5115999999998,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 76.6454000000042,
+        "cycle": 0.617100000000006,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.2353326504029,
+          "y": 358.5115999999998,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 77.11250000000427,
+        "cycle": 1.0841999999999965,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.2353326504029,
+          "y": 378.8231999999996,
+          "dir": 0,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 77.12920000000429,
+        "cycle": 1.1009000000000082,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.2353326504029,
+          "y": 379.50122000000005,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 450.4831774999998,
+          "y": 351.49922154947967
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 456.1021100321228,
+          "y": 351.49922154947967
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        }
+      ]
+    },
+    {
+      "manifest": "after-normal-79078fbf.json",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "natural": true,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 76.04449999998035,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 360.15995999999984,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 76.11119999998036,
+        "cycle": 0.06669999999999708,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 360.15995999999984,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 76.61169999998046,
+        "cycle": 0.5671999999999972,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 360.15995999999984,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 77.04539999998053,
+        "cycle": 1.0008999999999941,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 379.5145599999997,
+          "dir": 0,
+          "mana": 7.585494999999999
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 77.09539999998054,
+        "cycle": 1.050899999999994,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.04021798676706,
+          "y": 380.99658179999966,
+          "dir": 0,
+          "mana": 6.652995
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 268.28125
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 264,
+          "y": 315.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 144.31338725050009,
+          "y": 187.2444786035158
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 519.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 216.8125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 146.4862901877367,
+          "y": 187.2444786035158
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "manifest": "after-normal-79078fbf.json",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "natural": true,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 76.0280000000132,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 360.15822000000003,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 76.0947000000132,
+        "cycle": 0.0666999999999971,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 360.15822000000003,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 76.5950000000133,
+        "cycle": 0.5670000000000002,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 360.15822000000003,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 77.02880000001339,
+        "cycle": 1.0008000000000026,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 379.5070200000003,
+          "dir": 0,
+          "mana": 7.585630000000009
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 77.07890000001339,
+        "cycle": 1.0508999999999937,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 374.03032754788023,
+          "y": 380.9898131999999,
+          "dir": 0,
+          "mana": 6.6532649999999975
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 781.09375
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "#btn-first-fence",
+          "type": "native tap",
+          "x": 334,
+          "y": 357.796875
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 175.7602095866253,
+          "y": 208.21154270019525
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 561.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 332.3125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 178.42667558406646,
+          "y": 208.21154270019525
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "manifest": "after-normal-79078fbf.json",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "natural": true,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 76.03810000000387,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 358.5115999999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 76.10480000000388,
+        "cycle": 0.0666999999999971,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 358.5115999999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 76.57190000000398,
+        "cycle": 0.533800000000003,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 358.5115999999999,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 77.00550000000406,
+        "cycle": 0.967399999999994,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 378.82899999999916,
+          "dir": 0,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 77.02230000000407,
+        "cycle": 0.984199999999997,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 375.23278842553043,
+          "y": 379.51107999999925,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowRight",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "ArrowLeft",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 450.4976049999994,
+          "y": 351.49922154947944
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 456.1084387914931,
+          "y": 351.49922154947944
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        }
+      ]
+    },
+    {
+      "manifest": "before-fixture-54938081.json",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "natural": false,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 0.03040000000298028,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 0.11390000000298028,
+        "cycle": 0.08349999999999999,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 0.5976000000029802,
+        "cycle": 0.5671999999999998,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 1.0481000000029803,
+        "cycle": 1.0177,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 379.2918,
+          "dir": 0,
+          "mana": 7.608174999999998
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 1.0980000000029804,
+        "cycle": 1.0676,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 380.76854380000003,
+          "dir": 0,
+          "mana": 6.675539999999998
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 439.390625
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 519.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 216.8125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 142.675,
+          "y": 189.32340494791669
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "manifest": "before-fixture-54938081.json",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "natural": false,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 0.054299999999999946,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 0.15439999999999998,
+        "cycle": 0.10010000000000002,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 0.7215000000000001,
+        "cycle": 0.6672000000000002,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 7.022545
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 1.2384999999999995,
+        "cycle": 1.1841999999999997,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 380.2429999999998,
+          "dir": 0,
+          "mana": 7.720495
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 1.3219999999999992,
+        "cycle": 1.2676999999999994,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 382.1244352619998,
+          "dir": 0,
+          "mana": 6.83322
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 781.09375
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 561.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 332.3125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 173.7375,
+          "y": 210.76090494791669
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "manifest": "before-fixture-54938081.json",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "natural": false,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 0.03990000001192093,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 0.14000000001192095,
+        "cycle": 0.10010000000000004,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 0.6237000000119209,
+        "cycle": 0.5838,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 1.0742000000119207,
+        "cycle": 1.0343,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 378.3231999999998,
+          "dir": 0,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 1.090800000011921,
+        "cycle": 1.0509000000000002,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 378.99715999999984,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 449.225,
+          "y": 352.77180989583337
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        }
+      ]
+    },
+    {
+      "manifest": "before-fixture-54938081.json",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "natural": false,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 0.03140000002086163,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 0.11470000002086181,
+        "cycle": 0.08330000000000018,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 0.615100000020862,
+        "cycle": 0.5837000000000003,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 1.082100000020862,
+        "cycle": 1.0507000000000002,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 379.2860000000001,
+          "dir": 0,
+          "mana": 7.63045
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 1.1322000000208619,
+        "cycle": 1.1008,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 380.7708638000001,
+          "dir": 0,
+          "mana": 6.698085
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        }
+      },
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 213.5,
+          "y": 246.796875
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 422,
+          "y": 316.59375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 794,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 504,
+          "y": 97
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 422,
+          "y": 361.5
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 422,
+          "y": 154.5
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 257.24248046875,
+          "y": 171.07535807291669
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "manifest": "after-fixture-54938081.json",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "natural": false,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 0.04869999999403955,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 0.09869999999403956,
+        "cycle": 0.05,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 0.5991999999940394,
+        "cycle": 0.5504999999999999,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 1.0661999999940392,
+        "cycle": 1.0174999999999998,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 379.28599999999983,
+          "dir": 0,
+          "mana": 7.63045
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 1.1165999999940392,
+        "cycle": 1.0678999999999998,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 380.7759793999998,
+          "dir": 0,
+          "mana": 6.69849
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        }
+      },
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 82.5,
+          "y": 268.28125
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 160,
+          "y": 477.78125
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 270,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 272,
+          "y": 123
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 519.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 160,
+          "y": 216.8125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 142.675,
+          "y": 189.32340494791669
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "manifest": "after-fixture-54938081.json",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "natural": false,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 0.030600000011920883,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 0.11410000001192089,
+        "cycle": 0.08349999999999999,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 0.614500000011921,
+        "cycle": 0.5839000000000001,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 1.0649000000119206,
+        "cycle": 1.0342999999999998,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 379.28599999999983,
+          "dir": 0,
+          "mana": 7.60804
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 1.1149000000119205,
+        "cycle": 1.0842999999999996,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 380.7668037999998,
+          "dir": 0,
+          "mana": 6.67554
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 2,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        }
+      },
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 100,
+          "y": 781.09375
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 195,
+          "y": 754.1875
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 340,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 342,
+          "y": 123
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 561.796875
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 195,
+          "y": 332.3125
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 173.7375,
+          "y": 210.76090494791669
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    },
+    {
+      "manifest": "after-fixture-54938081.json",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "natural": false,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 0.04859999998509884,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 0.14869999998509886,
+        "cycle": 0.10010000000000004,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 0.615699999985099,
+        "cycle": 0.5671,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "第一夜：怪分波朝篝火来。站在墙后打。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 1.0493999999850991,
+        "cycle": 1.0008000000000001,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 378.3116,
+          "dir": 0,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 1.066099999985099,
+        "cycle": 1.0175,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 378.98962,
+          "dir": 1,
+          "mana": 7
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "inputs": [
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native mouse click",
+          "x": 777.75,
+          "y": 501.34375
+        },
+        {
+          "action": "#btn-start",
+          "type": "native mouse click",
+          "x": 640,
+          "y": 744.09375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native mouse click",
+          "x": 1230,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native mouse click",
+          "x": 846,
+          "y": 396.09375
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "map22,22",
+          "type": "native mouse click",
+          "x": 449.225,
+          "y": 352.77180989583337
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up"
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up"
+        }
+      ]
+    },
+    {
+      "manifest": "after-fixture-54938081.json",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "natural": false,
+      "firstNight": {
+        "day": false,
+        "nights": 1,
+        "time": 0.05340000000894088,
+        "cycle": 0,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        }
+      },
+      "guide": {
+        "day": false,
+        "nights": 1,
+        "time": 0.17020000000894106,
+        "cycle": 0.1168000000000002,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 8
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 0,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": true,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        }
+      },
+      "dismantled": {
+        "day": false,
+        "nights": 1,
+        "time": 0.737300000008941,
+        "cycle": 0.6839000000000002,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 358,
+          "dir": 1,
+          "mana": 7.022545
+        },
+        "build": "fence",
+        "wall": 1,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ],
+          [
+            22,
+            22
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "面朝怪按住「采集/攻击」；朝墙会拆墙。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        }
+      },
+      "ready": {
+        "day": false,
+        "nights": 1,
+        "time": 1.2710000000089408,
+        "cycle": 1.2176,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 380.2488000000001,
+          "dir": 0,
+          "mana": 7.7430400000000015
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        }
+      },
+      "safe": {
+        "day": false,
+        "nights": 1,
+        "time": 1.354400000008941,
+        "cycle": 1.3010000000000002,
+        "dayLen": 76,
+        "wave": 0,
+        "wavesTotal": 2,
+        "over": false,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 378,
+          "y": 382.128042456,
+          "dir": 0,
+          "mana": 6.8556300000000014
+        },
+        "build": "fence",
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "campHp": 100,
+        "enemies": [],
+        "bolts": 1,
+        "toast": "围上了。还差 3 面，点下一个发光格。",
+        "toastVisible": true,
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "guide": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "details": false,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        }
+      },
+      "inputs": [
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": ".class-card[data-class=\"mage\"]",
+          "type": "native tap",
+          "x": 213.5,
+          "y": 244.796875
+        },
+        {
+          "action": "title scroll",
+          "type": "native touch swipe"
+        },
+        {
+          "action": "#btn-start",
+          "type": "native tap",
+          "x": 422,
+          "y": 316.59375
+        },
+        {
+          "action": "#btn-skip-intro",
+          "type": "native tap",
+          "x": 794,
+          "y": 30.5
+        },
+        {
+          "action": "#btn-skip-brief",
+          "type": "native tap",
+          "x": 504,
+          "y": 97
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 422,
+          "y": 361.5
+        },
+        {
+          "action": "#play-details summary",
+          "type": "native tap",
+          "x": 422,
+          "y": 154.5
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "map22,22",
+          "type": "native tap",
+          "x": 257.24248046875,
+          "y": 171.07535807291669
+        },
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release"
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release"
+        }
+      ]
+    }
+  ]
+}

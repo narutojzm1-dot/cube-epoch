@@ -911,6 +911,7 @@
     const touchBody = {
       move: "按方向按钮移动。金框指着附近的树，先走过去。",
       chop: "面朝金框的树，按住「采集/攻击」。木头会飞进背包，用来围栅栏。",
+      night: "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
       offer: "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
     };
     guideBody.textContent = step.id === "offer" && state.inv.heart > 0 ? storedHeartHint()
@@ -2065,7 +2066,9 @@
         state.nights += 1;
         startNightWaves();
         toast(state.nights === 1
-          ? "第一夜：怪分波朝篝火来。站在墙后打。"
+          ? touchLayout.matches
+            ? "面朝怪按住「采集/攻击」；朝墙会拆墙。"
+            : "第一夜：怪分波朝篝火来。站在墙后打。"
           : state.nights === 2
             ? `第二夜：共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`
             : `第 ${state.nights} 夜：金色立方来了，共 ${state.wavesTotal} 波。它更肉，站在墙后打。`, 3.2);
