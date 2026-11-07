@@ -102,7 +102,8 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
           assert.equal(data.hint, desktopHint);
         } else {
           assert.match(data.steps[0], /方向按钮.*按住「采集\/攻击」/);
-          assert.match(data.steps[1], /点背包「栏」.*点篝火旁发光格/);
+          assert.match(data.steps[1], before ? /点背包「栏」.*点篝火旁发光格/
+            : /点「栅栏」.*直接用木头.*篝火旁发光格/);
           assert.equal(data.steps[2], desktopSteps[2]);
           assert.match(data.steps[3], /点「交互 E」合成.*北边祭坛/);
           assert.match(data.hint, /第一次.*再玩.*「怎么玩」/);
@@ -166,11 +167,11 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
             for (const change of changes) {
               if (change.type !== "childList") continue;
               const text = [...change.addedNodes].map((node) => node.textContent).join("");
-              if (text.startsWith("木头进背包了。")) {
+              if (/^木头进(?:背包了|包)。/.test(text)) {
                 window.__firstWoodToastEvents.push({ kind: "message", text, time: CUBE.getState().time, real_ms: performance.now() });
               }
             }
-            if (!el.textContent.startsWith("木头进背包了。")) return;
+            if (!/^木头进(?:背包了|包)。/.test(el.textContent)) return;
             const next = !el.classList.contains("hidden");
             if (next !== visible) {
               window.__firstWoodToastEvents.push({ kind: next ? "show" : "hide", time: CUBE.getState().time, real_ms: performance.now() });
@@ -213,8 +214,8 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
       const settled = await read();
       assert.ok(Math.hypot(settled.game.x - controlled.game.x, settled.game.y - controlled.game.y) < 0.3);
       if (woodFeedback) {
-        const expected = "木头进背包了。" + (mode.touch && !before ? "点背包「栏」选栅栏" : "按 1 选栅栏")
-          + "，料不够再砍一棵，点发光格围上。";
+        const expected = before ? "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。"
+          : mode.touch ? "木头进包。点「栅栏」，不用先合成。" : "木头进包。按 1 选栅栏，不用先合成。";
         assert.equal(settled.toast.text, expected); assert.equal(settled.toast.visible, true);
         assert.equal(settled.game.gathered, true);
         const metrics = await inspect(page);

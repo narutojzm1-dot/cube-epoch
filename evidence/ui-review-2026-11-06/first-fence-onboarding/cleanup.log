@@ -1,0 +1,10 @@
+Owned browser/test run: D:\work\tmp\cube-epoch\first-fence-790cd307
+Recorded browser parents26788,43512,75992,81640,84016,85448,93380,94344,95736,96092,96428 checked by specific PID: live0.
+Browser close/context/server finally blocks completed; full gate E2E_OK before cleanup.
+Inspected owned direct children appdata/browser-cache/localappdata/npm-cache/tmp/tool-cache.
+Removed each exact literal child path after all owned browser processes exited.
+Verified owned run leaf retained and empty; project PNG/JSON/log evidence remains on D.
+One auto-generated C Temp tool-output file1794068871507-copilot-tool-output-d430b56ed97b4592b4750974995b65de.txt (~28KB) moved to this owned D tmp then removed with exact tmp child; original C copy absent.
+Protected natural-loop checksum unchanged; no user save/browser installation/other run/user feedback directory removed.
+Separate D:\work\tmp\cube-epoch\first-fence-cli-790cd307 used for git/gh TEMP/TMP/TMPDIR/LOCALAPPDATA and caches.
+CLI leaf cleanup deferred until PR and same-SHA CI retrieval finish; subsequent completion-only CI/cleanup log kept locally, not a results-only follow-up commit.

@@ -1,0 +1,49 @@
+First fence onboarding / UI-028
+Branch fix/first-fence-onboarding, parent63182223ae90bf06118ed21639853cdab9be848f.
+Product HTTP/Windows files SHA256749123ae9a91a064e1ead93c50d33e56c699b4e0628b36ea35da6d809289dc2e.
+Before HTTP Git-LF snapshot6318222 SHA256 prefixcbe5a7cb.
+Capture metadata correctly retains HEAD6318222/after product dirty; no future commit hash backfill.
+
+PASS node --check game.js / tests/first-fence.mjs / tests/build-guidance.mjs / tests/touch-title.mjs / tests/e2e.mjs.
+PASS node tests/static.mjs STATIC_OK, final product.
+PASS node tests/e2e.mjs E2E_OK, complete final Windows WebKit suite, e2e.log.
+PASS Chromium before --panels-only --capture and final after --capture:
+four ordinary mage new games320/390/1280/844, native touch swipes/taps/holds or desktop keyboard/mouse.
+Initial2wood, deliberate plot costs1; first fence at(22,22) with1wood refuses and preserves4gaps/inventory;
+real tree gathering/pickups replenishes, cancel/ready, misselect plot/torch, reselect fence;
+real mapped point(22,22) costs2wood, stored fence0 unchanged, gaps4to3, released inputs0, help/resume.
+Final after wood before/after placement: 3205to3,3904to2,12804to2,8445to3.
+PASS first-day original60px feedback/unchanged map geometry; current text complete glyph lines and quick target100x60 hit, core controls>=44.
+PASS native phone inventory open/close with three complete item label/count/status/cost rectangles and44px hits; help first-screen continue, original content scroll.
+PASS desktop Tab/Space fence activation and returning focus to canvas; original numeric/mouse actions.
+PASS separate320stock fixture: exact native next-gap refusal1wood, set2wood and observe only two frames.
+Before original "材料还差：木 1" stays; after only exact first-day shortage removed immediately.
+Native cancel produces "已取消建造。" which remains across the same stock change. No generic toast expansion.
+PASS separate320day-end cycle boundary, not natural elapsed night: original night wave returns, new lesson/quick entry gone, build/inventory/releases unchanged.
+PASS complete WebKit generic build-help normal gather/place/cancel/reselect/scroll and native Home/End positive/negative; night mana/material scroll/fold8 sessions unchanged.
+PASS TOUCH_TITLE_OK and FIRST_WOOD_TOAST_OK; single pickup, real-clock natural3.4 lifetime and original parameter.
+WebKit continuous directional/gather holds use actual keyboard, not native sustained touch; native taps separate. Chromium is browser simulated touch, not physical devices.
+
+PASS independent reviewer follow-up, no significant issues; earlier per-write append finding repaired, details review.log.
+PASS same-source title recapture canonical-path invariant and final manifest audit:
+current72 (ordinary68, explicit320stock-fixture4), history80, unique retained native PNG152,14758539bytes.
+57 superseded metadata records image_retained:false are NOT retained original screenshots.
+PASS all PNG dimensions equal original viewport, after hash matches final HTTP files, local Markdown direct image links exist.
+PASS root old screenshots JSON and old Markdown content unchanged after removing only UI-028 batch, protected natural-loop SHA256964230c5914271f326300ca2c0fe82122b87f43d3bf2111d5b2363a75089596d.
+PASS node tests/ui-review.mjs --check-coverage under D environment:
+recorded baseline172/172; history305; supplemental664; read-only, not a new-build full-interface matrix.
+
+Original failed attempts retained, not represented as passed gates:
+initial-before entry/scroll/placement retries; initial-after cost label/layout/stock wrapping;
+e2e-first-help-focus-failure.log then generic-help-desktop-focus-failure.log:
+new native skip-guide setup leaves mobileSUMMARY or desktop details-content focused, so Space/ArrowDown acts on UI.
+Resolved only keyboard test setup focus to canvas, preserving original UI keyboard semantics and real scroll/cancel/place tests.
+targeted-webkit.log passes repaired generic and ordinary first fence; final complete e2e.log passes all gates.
+panels-before-unspecific-fixture.log exit0 is invalid fixture evidence: old "还差3面" falsely matched "差".
+Resolved exact rejection wait, repeated native action and before/after capture. Superseded same-path metadata explicitly not retained.
+
+D environment/profile/cache paths verified before browsers; existing C browser executables read-only, no package installs.
+One tool-generated ~28KB shell-status output automatically wrote C Temp; exact file moved to owned D tmp, C copy absent.
+No physical-device/fully blind-player/new natural-three-night/publice354 black-area diagnosis claimed. Screenshots await coordinator visual review.
+No economy, map, input placement rules, cost, rhythm, win/loss, save, merge, Pages or Tencent changes.
+PR24 remains OPEN at6318222. New PR/CI are subsequent same-commit checks; completion-only GitHub logs kept locally, not pushed as results-only commits.

@@ -204,6 +204,21 @@ export async function testBuildGuidance(browser, origin, { before = false, captu
         } finally { await page.evaluate((paused) => { CUBE.getState().paused = paused; }, wasPaused); }
       };
       await page.goto(origin); await enterPlay(page, "mage");
+      if (!before) {
+        if (mode.touch) await activate("#play-details summary");
+        await activate("#btn-skip-guide");
+        if (mode.touch) await activate("#play-details summary");
+        if (!session) {
+          const beforeFocus = await page.evaluate(() => ({ tag: document.activeElement.tagName,
+            id: document.activeElement.id, className: document.activeElement.className,
+            detailsOpen: document.getElementById("play-details").open }));
+          await page.locator("#game").focus();
+          console.log("GENERIC_HELP_FOCUS_SETUP", JSON.stringify({ viewport, beforeFocus,
+            afterFocus: await page.evaluate(() => document.activeElement.tagName),
+            input: mode.touch ? "WebKit keyboard hold setup after native summary close; not a native touch hold"
+              : "desktop keyboard gameplay focus setup after native guide skip" }));
+        }
+      }
       const initial = await read();
       await hold("ArrowDown", () => CUBE.getState().player.y >= 358);
       await hold("ArrowRight", () => CUBE.getState().player.dir === 2);

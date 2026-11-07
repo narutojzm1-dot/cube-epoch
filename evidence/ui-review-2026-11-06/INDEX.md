@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-028 普通新玩家的第一面栅栏
+
+[72张原生视口前后图](first-fence-onboarding/INDEX.md) · [普通采木、拒绝、纠正、扣料与真实落点](first-fence-onboarding/validation.json) · [逐图来源与中间图](first-fence-onboarding/screenshots.json)。
+
+按用户公网e354实玩反馈，将缩写入口改为完整名称，分开现成数量与成本/选中；首日采木后的栅栏入口紧邻地图与操作，短反馈只说当前一步，说明直接用木头、不用先合成。四视口正常输入核法师2木落第一面、缺口4→3，键鼠Tab/Space/数字键与模拟原生触控分开。68张普通入口/玩法/背包/帮助图、4张320资源边界夹具图及80张中间图待协调逐图审查；专用不足提示补足即撤、其他通知保留，库存/日末夹具不称自然守夜。57条同源重放旧元数据不是保留原图。旧批次/诊断和PR #24不改，不合并、不发布。
+
 ## 独立维护批次：UI-027 首批木头成功提示的触屏背包路径
 
 [6张320/390/桌面同态前后原图](first-wood-toast/INDEX.md) · [普通输入/资源/一次触发与自然隐藏](first-wood-toast/validation.json) · [源码与实际矩形](first-wood-toast/screenshots.json) · [检查](first-wood-toast/checks.log)。

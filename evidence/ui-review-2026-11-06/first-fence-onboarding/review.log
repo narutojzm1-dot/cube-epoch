@@ -1,0 +1,16 @@
+Independent read-only ship-gate reviews; no reviewer modified files or launched browser tests.
+
+first-fence-review (earlier main product diff):
+No significant issues found.
+
+fence-evidence-review (earlier focused evidence review):
+MEDIUM: entry-time dedup did not prevent each subsequent capture append from reintroducing conflicting same-path screenshot metadata.
+Resolution: saveScreenshot removes matching current/history records before each write and retains superseded metadata only with image_retained:false.
+Same-source before/after title recapture verified unique retained PNG paths. Final audit: current72/history80, 152 unique retained native PNGs, metadata_not_retained57.
+
+fence-final-review ([reviewer] Review final scoped repairs):
+Scope: neutral first-wood instruction and exact first-day shortage clearing; per-write metadata upsert; native inventory/help panel capture and clipping/hit tests; exact refusal/two-frame stock fixture plus unrelated-notice negative; native skip-guide and explicit keyboard canvas focus setup preserving scrolling checks.
+Result: No significant issues found in the reviewed changes.
+
+The first panels-before stock fixture used an unspecific "差" wait and matched the old successful "还差3面" message. Its exit0 is not accepted as valid fixture evidence. Original log retained; exact refusal waits, repeated native input and final before/after capture validate the corrected fixture.
+Visual approval is pending coordinator/user screenshot review, not implied by independent code review or tests.

@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "first-fence-onboarding",
+      "base_sha": "63182223ae90bf06118ed21639853cdab9be848f",
+      "index": "first-fence-onboarding/INDEX.md",
+      "screenshots": "first-fence-onboarding/screenshots.json",
+      "issue_ids": ["UI-028"],
+      "status": "已截",
+      "visual_review": "72张当前原图待协调审查：68张普通首面栅栏/标题/手机背包/完整帮助前后、4张320资源边界夹具。正常触屏与键鼠采木、缺料不扣、误选纠正、2木直接放置缺口4→3。80张中间图另列；57条同源重放旧元数据不保留图片。专用不足补足即撤/其他通知保留、首日结束夹具单列，不称自然守夜/真机/全界面批准"
+    },
+    {
       "id": "first-wood-toast",
       "base_sha": "7784c189d4e93ddb038681c78bbe2540003ca6ef",
       "index": "first-wood-toast/INDEX.md",
@@ -220,6 +229,12 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-028",
+      "title": "首日栏0入口、重复说明与误选状态让普通新玩家不知道如何直接造栅栏",
+      "status": "已补普通输入与54张原图，待协调逐图审查；测试通过不代表可读性获批",
+      "after": "first-fence-onboarding"
+    },
     {
       "id": "UI-027",
       "title": "触屏首批木头成功toast仍写按1选栅栏而不是背包栏路径",
