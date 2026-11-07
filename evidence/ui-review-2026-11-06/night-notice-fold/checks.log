@@ -1,0 +1,53 @@
+Night notice fold slice; baseline 5f451b62d87f37e29bfe4f727057a6066808b00f.
+Original provider interruption 10054 was reported by the user; no provider failure observed in this resumed slice.
+
+Native Chromium reproduction on unchanged baseline:
+  Real full-mana attacks held/released; wave+shortage+instruction.
+  320x568 feed 307.796875..345.796875, prompt 333.796875..377.796875.
+  Prompt height44, visible12. This is UI clipping, not a failed attack/release or product balance issue.
+
+node tests\night-notice-fold.mjs --before --capture
+  PASS: NIGHT_NOTICE_FOLD_OK 8 before sessions; 16 viewport originals; chromium.
+node --check game.js
+node --check tests\night-notice-fold.mjs
+node tests\static.mjs
+  PASS: syntax and STATIC_OK.
+node tests\night-notice-fold.mjs --capture
+  PASS: NIGHT_NOTICE_FOLD_OK 8 after sessions; 16 viewport originals; chromium.
+  Short current feedback complete; secondary instruction height0 on touch night.
+  Existing help contains active full toast/prompt/build text; manual pause/continue.
+  Native touch hold/end, movement release, skill tap, map refusal, selection/cancellation.
+  Original day scroll via keyboard and native Chromium pan; first-screen targets>=44px, scroll0.
+Bounded Chromium media/long-feedback probe
+  PASS: 320 fine-pointer, 1280 coarse-pointer; folded help and full long feedback,
+  original scroll and resume/core reachable. Keyboard hold; coarse buttons native tap.
+
+Independent [reviewer] notice-review, READ ONLY:
+  No significant issues found.
+  Did not run tests or independently verify rendering/screen readers.
+  Noted new focused suite omitted narrow fine/wide coarse modes; subsequent bounded
+  behavior probe covers those two modes without duplicate image matrix.
+
+node tests\e2e.mjs
+  PASS / exit0 / E2E_OK; complete output in integration.log.
+  NIGHT_NOTICE_FOLD_OK 8 after sessions, webkit, native touch holds=false.
+  Existing core/night/resource/crop/skill/plant/mana/device/wide regressions passed.
+  Existing WebKit AUDIO_NATIVE_UNAVAILABLE remains an environment/API limitation,
+  not a native audio recovery pass or regression caused by this UI change.
+node tests\ui-review.mjs --check-coverage
+  PASS: baseline172/172, history305, supplemental412; read-only/no recaptures,
+  not a new-build full-matrix or visual approval claim.
+Evidence integrity / git diff --check
+  PASS:32 PNG headers match their exact native viewport; all after source hashes
+  match current product bytes 73fa0632bd1c368e6eb0811360109e9f7f76f3b4501c3f2f7ca61386bb49ab9c.
+  Older root entries/baseline/history/batches unchanged.
+  Protected natural-loop result hash remains:
+  964230C5914271F326300CA2C0FE82122B87F43D3BF2111D5B2363A75089596D.
+
+Fixture restrictions:
+  Screenshot suite injects night/location/target and mana0.2 or wood1/fence0.
+  Not natural night survival/resource depletion/economic validation.
+  Screenshots freeze only simulation; natural toast expiry is not fast-forwarded.
+  Native Chromium touch and WebKit keyboard holds are distinct.
+  No user saves, natural-loop result writes, merges, deployments, CI reruns or workflow edits.
+  Image visibility checks do not equal coordinator visual approval.

@@ -7,6 +7,7 @@ import { testFarmerSkillFeedback } from "./farmer-skill-feedback.mjs";
 import { testPlantingFeedback } from "./planting-feedback.mjs";
 import { testAudioRecovery } from "./audio-recovery.mjs";
 import { testManaFeedback } from "./mana-feedback.mjs";
+import { testNightNoticeFold } from "./night-notice-fold.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -442,6 +443,7 @@ await testFarmerSkillFeedback(browser, origin);
 await testPlantingFeedback(browser, origin);
 await testAudioRecovery(browser, origin);
 await testManaFeedback(browser, origin);
+await testNightNoticeFold(browser, origin);
 await testDeviceHints(browser, origin);
 await testWideTouchLayout(browser, origin);
 await browser.close();
