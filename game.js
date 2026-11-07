@@ -142,6 +142,7 @@
   const keysHintEl = document.getElementById("keys-hint");
   const nightFx = document.createElement("canvas");
   const nightCtx = nightFx.getContext("2d");
+  const ALTAR_APPROACH_REFUSAL = "这次没献出：再靠近祭坛。";
 
   let selectedClass = null;
   let audioCtx = null;
@@ -1489,7 +1490,7 @@
       return;
     }
     if (canOffer() && dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
-      toast("这次没献出：再靠近祭坛。");
+      toast(ALTAR_APPROACH_REFUSAL);
       return;
     }
     toast("靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。");
@@ -2139,6 +2140,11 @@
     else if (t === T.FARM) prompt = touchLayout.matches ? `${interactHint}播种（要有种子）` : "按 E 或左键播种（要有种子）";
     else if (!state.day && state.enemies.length) prompt = `守住篝火 · ${combatHint}`;
     setPrompt(prompt);
+    if (toastTimer > 0 && toastEl.textContent === ALTAR_APPROACH_REFUSAL
+      && canOffer() && dist(p.x, p.y, state.altar.x, state.altar.y) < 22) {
+      toastTimer = 0;
+      toastEl.classList.add("hidden");
+    }
     syncGuide();
     for (const pt of state.particles) {
       pt.x += pt.vx * dt;
