@@ -1,0 +1,16 @@
+file:///D:/work/projects/cube-epoch/tests/build-guidance.mjs:124
+        throw new Error(`first guidance placement ${engine} ${mode.width}: ${JSON.stringify({ firstPoint, state: await read() })}`, { cause: error });
+              ^
+
+Error: first guidance placement chromium 1280: {"firstPoint":{"x":525.7725148165329,"y":351.5425034830731},"state":{"inv":{"wood":5,"stone":0,"gold":0,"wheat":0,"seed":2,"fence":0,"torch":1,"plot":0,"heart":0},"build":"torch","day":true,"nights":0,"paused":false,"hp":78,"campHp":100,"dir":2,"x":395.22712972533566,"y":358.4941999999999,"held":0,"helpLabel":"怎么玩","banner":"建造火把 · 1木 · 左键点空地放下火把 · 按 0 取消","cancelRects":[],"feed":{"height":60,"full":60,"top":0},"toast":"左键点空地放火把；按 0 取消。","firstTile":2,"secondTile":1}}
+    at testBuildGuidance (file:///D:/work/projects/cube-epoch/tests/build-guidance.mjs:124:15)
+    at async file:///D:/work/projects/cube-epoch/tests/build-guidance.mjs:198:9 {
+  [cause]: page.waitForFunction: Timeout 30000ms exceeded.
+      at testBuildGuidance (D:\work\projects\cube-epoch\tests\build-guidance.mjs:122:20)
+      at async file:///D:/work/projects/cube-epoch/tests/build-guidance.mjs:198:9 {
+    log: [],
+    name: 'TimeoutError'
+  }
+}
+
+Node.js v24.22.1

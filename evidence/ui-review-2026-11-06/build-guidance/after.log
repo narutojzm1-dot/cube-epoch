@@ -1,0 +1,5 @@
+BUILD_GUIDANCE_INPUT_READY {"viewport":{"width":320,"height":568},"hitstop":-0.004900000000000092}
+BUILD_GUIDANCE_INPUT_READY {"viewport":{"width":390,"height":844},"hitstop":-0.004900000000000092}
+BUILD_GUIDANCE_INPUT_READY {"viewport":{"width":844,"height":390},"hitstop":-0.005000000000000001}
+BUILD_GUIDANCE_INPUT_READY {"viewport":{"width":1280,"height":800},"hitstop":0.011600000000000135}
+BUILD_GUIDANCE_OK chromium after 4 normal gather/place/help/cancel/reselect paths; 8 original PNGs
