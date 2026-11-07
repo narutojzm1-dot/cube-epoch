@@ -1,0 +1,6958 @@
+{
+  "before": [
+    {
+      "screen_id": "dawn-arrival-input",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "dawn": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1,
+        "cycle": 0,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "edge": {
+        "day": true,
+        "nights": 3,
+        "time": 287.0999000000003,
+        "cycle": 2.9998999999999967,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "rejected": {
+        "day": true,
+        "nights": 3,
+        "time": 287.16670000000033,
+        "cycle": 3.0666999999999964,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "arrived": {
+        "day": true,
+        "nights": 3,
+        "time": 287.3166000000003,
+        "cycle": 3.2165999999999966,
+        "nightLen": 32,
+        "distance": 18.468863999999996,
+        "x": 392,
+        "y": 122.468864,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "offered": {
+        "day": true,
+        "nights": 3,
+        "time": 287.40000000000026,
+        "cycle": 3.2999999999999963,
+        "nightLen": 32,
+        "distance": 17.453099738880013,
+        "x": 392,
+        "y": 121.45309973888001,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "exact22",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05010000000004,
+        "cycle": 0.05010000000000002,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.15010000000007,
+        "cycle": 0.15010000000000004,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "inside22",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999997,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.08340000000004,
+        "cycle": 0.08339999999999997,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "outside-hint26",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999998,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.08340000000004,
+        "cycle": 0.08339999999999997,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "night",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "祭坛夜里封着。先守住篝火，天亮再献。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "early",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 2,
+        "time": 284.0333,
+        "cycle": 0.033299999999999955,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 2,
+        "time": 284.08340000000004,
+        "cycle": 0.08339999999999999,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "还要再守 1 夜。天亮后才能献祭。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "no-heart",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0667,
+        "cycle": 0.06669999999999998,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.15000000000003,
+        "cycle": 0.14999999999999994,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "祭坛还空着。先去工作台合成方块之心。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-priority",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033300000000000066,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1,
+        "cycle": 0.09999999999999999,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "farmTile": 8,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-empty",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0334,
+        "cycle": 0.03340000000000004,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.08329999999995,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "没有种子了。收麦可以再拿到种子。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "dawn-arrival-input",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dawn": {
+        "day": true,
+        "nights": 3,
+        "time": 284.11659999999995,
+        "cycle": 0,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "edge": {
+        "day": true,
+        "nights": 3,
+        "time": 287.11650000000014,
+        "cycle": 2.9998999999999967,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "rejected": {
+        "day": true,
+        "nights": 3,
+        "time": 287.18310000000014,
+        "cycle": 3.0664999999999965,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "arrived": {
+        "day": true,
+        "nights": 3,
+        "time": 287.3331000000001,
+        "cycle": 3.2164999999999964,
+        "nightLen": 32,
+        "distance": 18.470208,
+        "x": 392,
+        "y": 122.470208,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "offered": {
+        "day": true,
+        "nights": 3,
+        "time": 287.39980000000014,
+        "cycle": 3.283199999999996,
+        "nightLen": 32,
+        "distance": 17.543150892800014,
+        "x": 392,
+        "y": 121.54315089280001,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "exact22",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08329999999999996,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.23330000000004,
+        "cycle": 0.2333,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "inside22",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03340000000000009,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08330000000000007,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "outside-hint26",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999998,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.08340000000004,
+        "cycle": 0.08339999999999999,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "night",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08330000000000007,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "祭坛夜里封着。先守住篝火，天亮再献。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "early",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 2,
+        "time": 284.03319999999997,
+        "cycle": 0.03319999999999999,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 2,
+        "time": 284.08329999999995,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "还要再守 1 夜。天亮后才能献祭。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "no-heart",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05,
+        "cycle": 0.05,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.3167000000001,
+        "cycle": 0.3167,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "祭坛还空着。先去工作台合成方块之心。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-priority",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999997,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08330000000000007,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "farmTile": 8,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-empty",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0501,
+        "cycle": 0.050099999999999964,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1334,
+        "cycle": 0.1334,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "没有种子了。收麦可以再拿到种子。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "dawn-arrival-input",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "dawn": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1,
+        "cycle": 0,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "edge": {
+        "day": true,
+        "nights": 3,
+        "time": 287.0999000000003,
+        "cycle": 2.999899999999998,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "rejected": {
+        "day": true,
+        "nights": 3,
+        "time": 287.1833000000003,
+        "cycle": 3.0832999999999977,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "arrived": {
+        "day": true,
+        "nights": 3,
+        "time": 287.33330000000035,
+        "cycle": 3.233299999999997,
+        "nightLen": 32,
+        "distance": 18.46246399999997,
+        "x": 392,
+        "y": 122.46246399999997,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "offered": {
+        "day": true,
+        "nights": 3,
+        "time": 287.4500000000004,
+        "cycle": 3.3499999999999974,
+        "nightLen": 32,
+        "distance": 17.342227749574363,
+        "x": 392,
+        "y": 121.34222774957436,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "exact22",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0667,
+        "cycle": 0.06670000000000004,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1333,
+        "cycle": 0.13330000000000009,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "inside22",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999997,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08329999999999996,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "outside-hint26",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05,
+        "cycle": 0.05,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1,
+        "cycle": 0.1,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "night",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "祭坛夜里封着。先守住篝火，天亮再献。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "early",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 2,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 2,
+        "time": 284.0999,
+        "cycle": 0.09989999999999997,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "还要再守 1 夜。天亮后才能献祭。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "no-heart",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999998,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08329999999999996,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "祭坛还空着。先去工作台合成方块之心。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-priority",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.033400000000000034,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "farmTile": 8,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-empty",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03319999999997,
+        "cycle": 0.03319999999999999,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1,
+        "cycle": 0.10000000000000002,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "没有种子了。收麦可以再拿到种子。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "dawn-arrival-input",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "dawn": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1166,
+        "cycle": 0,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "edge": {
+        "day": true,
+        "nights": 3,
+        "time": 287.1165000000001,
+        "cycle": 2.9998999999999976,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "rejected": {
+        "day": true,
+        "nights": 3,
+        "time": 287.1332000000001,
+        "cycle": 3.0165999999999977,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "arrived": {
+        "day": true,
+        "nights": 3,
+        "time": 287.19980000000004,
+        "cycle": 3.083199999999998,
+        "nightLen": 32,
+        "distance": 20.601984,
+        "x": 392,
+        "y": 124.601984,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "offered": {
+        "day": true,
+        "nights": 3,
+        "time": 287.19980000000004,
+        "cycle": 3.083199999999998,
+        "nightLen": 32,
+        "distance": 20.601984,
+        "x": 392,
+        "y": 124.601984,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "exact22",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033300000000000066,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033300000000000066,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "inside22",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999998,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999998,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "outside-hint26",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "night",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033299999999999955,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033299999999999955,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "祭坛夜里封着。先守住篝火，天亮再献。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "early",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 2,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 2,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "还要再守 1 夜。天亮后才能献祭。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "no-heart",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "祭坛还空着。先去工作台合成方块之心。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-priority",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999998,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999998,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "播下了。长大后按住左键收。",
+        "farmTile": 8,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-empty",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05,
+        "cycle": 0.05,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05,
+        "cycle": 0.05,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "没有种子了。收麦可以再拿到种子。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  ],
+  "after": [
+    {
+      "screen_id": "dawn-arrival-input",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "dawn": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1,
+        "cycle": 0,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "edge": {
+        "day": true,
+        "nights": 3,
+        "time": 287.09990000000016,
+        "cycle": 2.9998999999999967,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "rejected": {
+        "day": true,
+        "nights": 3,
+        "time": 287.14980000000014,
+        "cycle": 3.0497999999999967,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "arrived": {
+        "day": true,
+        "nights": 3,
+        "time": 287.2498000000001,
+        "cycle": 3.149799999999997,
+        "nightLen": 32,
+        "distance": 19.529344000000023,
+        "x": 392,
+        "y": 123.52934400000002,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "offered": {
+        "day": true,
+        "nights": 3,
+        "time": 287.2998000000001,
+        "cycle": 3.1997999999999966,
+        "nightLen": 32,
+        "distance": 18.728688704000035,
+        "x": 392,
+        "y": 122.72868870400004,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "exact22",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "inside22",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0832,
+        "cycle": 0.08320000000000005,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "outside-hint26",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.08329999999995,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "night",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0834,
+        "cycle": 0.08339999999999997,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "祭坛夜里封着。先守住篝火，天亮再献。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "early",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 2,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 2,
+        "time": 284.08329999999995,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "还要再守 1 夜。天亮后才能献祭。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "no-heart",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "祭坛还空着。先去工作台合成方块之心。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-priority",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "farmTile": 8,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-empty",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033299999999999955,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0834,
+        "cycle": 0.08339999999999997,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "没有种子了。收麦可以再拿到种子。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "dawn-arrival-input",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dawn": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1166,
+        "cycle": 0,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "edge": {
+        "day": true,
+        "nights": 3,
+        "time": 287.1165000000003,
+        "cycle": 2.9998999999999967,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "rejected": {
+        "day": true,
+        "nights": 3,
+        "time": 287.1665000000003,
+        "cycle": 3.0498999999999965,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "arrived": {
+        "day": true,
+        "nights": 3,
+        "time": 287.28320000000036,
+        "cycle": 3.1665999999999963,
+        "nightLen": 32,
+        "distance": 19.53260800000001,
+        "x": 392,
+        "y": 123.53260800000001,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "offered": {
+        "day": true,
+        "nights": 3,
+        "time": 287.3332000000004,
+        "cycle": 3.216599999999996,
+        "nightLen": 32,
+        "distance": 18.73195270400001,
+        "x": 392,
+        "y": 122.73195270400001,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "exact22",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033299999999999955,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08329999999999996,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "inside22",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.08340000000004,
+        "cycle": 0.08340000000000004,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "outside-hint26",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "night",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": false,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999998,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0833,
+        "cycle": 0.08329999999999996,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "祭坛夜里封着。先守住篝火，天亮再献。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "early",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 2,
+        "time": 284.0334,
+        "cycle": 0.03340000000000004,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 2,
+        "time": 284.0833999999999,
+        "cycle": 0.08340000000000003,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "还要再守 1 夜。天亮后才能献祭。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "no-heart",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.03330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.08329999999995,
+        "cycle": 0.08330000000000001,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "祭坛还空着。先去工作台合成方块之心。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-priority",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999998,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.08340000000004,
+        "cycle": 0.08339999999999997,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "farmTile": 8,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-empty",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05,
+        "cycle": 0.05,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1,
+        "cycle": 0.1,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "没有种子了。收麦可以再拿到种子。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "dawn-arrival-input",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "dawn": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1166,
+        "cycle": 0,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "edge": {
+        "day": true,
+        "nights": 3,
+        "time": 287.11660000000023,
+        "cycle": 2.999999999999995,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "rejected": {
+        "day": true,
+        "nights": 3,
+        "time": 287.2834000000003,
+        "cycle": 3.1667999999999945,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "arrived": {
+        "day": true,
+        "nights": 3,
+        "time": 287.4666000000003,
+        "cycle": 3.3499999999999934,
+        "nightLen": 32,
+        "distance": 17.39500799999999,
+        "x": 392,
+        "y": 121.39500799999999,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "offered": {
+        "day": true,
+        "nights": 3,
+        "time": 287.5499000000003,
+        "cycle": 3.4332999999999925,
+        "nightLen": 32,
+        "distance": 16.380683570559995,
+        "x": 392,
+        "y": 120.38068357056,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "exact22",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0334,
+        "cycle": 0.03340000000000004,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.09999999999997,
+        "cycle": 0.1,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "inside22",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05,
+        "cycle": 0.05,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1832,
+        "cycle": 0.18319999999999997,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "点「交互 E」献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "outside-hint26",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05,
+        "cycle": 0.049999999999999996,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.15000000000003,
+        "cycle": 0.14999999999999988,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "night",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": false,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033299999999999955,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": false,
+        "nights": 3,
+        "time": 284.08329999999995,
+        "cycle": 0.08329999999999996,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "祭坛夜里封着。先守住篝火，天亮再献。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "early",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 2,
+        "time": 284.0332,
+        "cycle": 0.03319999999999999,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 2,
+        "time": 284.1666,
+        "cycle": 0.16660000000000005,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "还要再守 1 夜。天亮后才能献祭。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "no-heart",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0334,
+        "cycle": 0.033400000000000096,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.15,
+        "cycle": 0.15000000000000002,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "祭坛还空着。先去工作台合成方块之心。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-priority",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05,
+        "cycle": 0.05,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.3334,
+        "cycle": 0.33339999999999986,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "farmTile": 8,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-empty",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03319999999997,
+        "cycle": 0.03320000000000005,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0832,
+        "cycle": 0.08320000000000005,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "没有种子了。收麦可以再拿到种子。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "dawn-arrival-input",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "dawn": {
+        "day": true,
+        "nights": 3,
+        "time": 284.1166,
+        "cycle": 0,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "edge": {
+        "day": true,
+        "nights": 3,
+        "time": 287.0999000000003,
+        "cycle": 2.9832999999999976,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "天亮了。可以去北边祭坛献祭了。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "rejected": {
+        "day": true,
+        "nights": 3,
+        "time": 287.11650000000026,
+        "cycle": 2.9998999999999976,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "arrived": {
+        "day": true,
+        "nights": 3,
+        "time": 287.1999000000003,
+        "cycle": 3.0832999999999973,
+        "nightLen": 32,
+        "distance": 20.59692800000002,
+        "x": 392,
+        "y": 124.59692800000002,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "offered": {
+        "day": true,
+        "nights": 3,
+        "time": 287.1999000000003,
+        "cycle": 3.0832999999999973,
+        "nightLen": 32,
+        "distance": 20.59692800000002,
+        "x": 392,
+        "y": 124.59692800000002,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "exact22",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05,
+        "cycle": 0.05,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.16670000000005,
+        "cycle": 0.16670000000000007,
+        "nightLen": 32,
+        "distance": 22,
+        "x": 392,
+        "y": 126,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "这次没献出：再靠近祭坛。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "inside22",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999997,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.03340000000003,
+        "cycle": 0.03339999999999997,
+        "nightLen": 32,
+        "distance": 21.900000000000006,
+        "x": 392,
+        "y": 125.9,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": true,
+        "over": true,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "按 E献上方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "outside-hint26",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033299999999999955,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0666,
+        "cycle": 0.06660000000000002,
+        "nightLen": 32,
+        "distance": 26,
+        "x": 392,
+        "y": 130,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "",
+        "toast": "靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "night",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": false,
+        "nights": 3,
+        "time": 284.06669999999997,
+        "cycle": 0.06669999999999993,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": false,
+        "nights": 3,
+        "time": 284.1166,
+        "cycle": 0.1165999999999999,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "守住篝火！怪从地图边缘朝营地来",
+        "prompt": "祭坛夜里封着，先守篝火",
+        "toast": "祭坛夜里封着。先守住篝火，天亮再献。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "early",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 2,
+        "time": 284.03340000000003,
+        "cycle": 0.03340000000000009,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 2,
+        "time": 284.05,
+        "cycle": 0.05,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "objective": "先再守 1 夜，天亮才能献祭",
+        "prompt": "再守 1 夜，天亮才能献",
+        "toast": "还要再守 1 夜。天亮后才能献祭。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "no-heart",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033300000000000066,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033300000000000066,
+        "nightLen": 32,
+        "distance": 12,
+        "x": 392,
+        "y": 116,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "win": false,
+        "over": false,
+        "canOffer": false,
+        "target": {
+          "x": 312,
+          "y": 248,
+          "tx": 19,
+          "ty": 15,
+          "kind": "tree"
+        },
+        "objective": "采集 木 2/4  石 0/5  金 0/3  麦 0/3，顺手补墙",
+        "prompt": "先去工作台合成方块之心",
+        "toast": "祭坛还空着。先去工作台合成方块之心。",
+        "farmTile": 11,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-priority",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0333,
+        "cycle": 0.033299999999999955,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05,
+        "cycle": 0.05,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "播下了。长大后按住左键收。",
+        "farmTile": 8,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "screen_id": "farm-empty",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "day": true,
+        "nights": 3,
+        "time": 284.05010000000004,
+        "cycle": 0.050099999999999964,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "actual": {
+        "day": true,
+        "nights": 3,
+        "time": 284.0667,
+        "cycle": 0.06669999999999998,
+        "nightLen": 32,
+        "distance": 24,
+        "x": 392,
+        "y": 128,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "win": false,
+        "over": false,
+        "canOffer": true,
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "prompt": "再靠近祭坛，才能献上方块之心",
+        "toast": "没有种子了。收麦可以再拿到种子。",
+        "farmTile": 7,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  ]
+}

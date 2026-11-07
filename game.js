@@ -1488,6 +1488,10 @@
       plant(f.tx, f.ty);
       return;
     }
+    if (canOffer() && dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
+      toast("这次没献出：再靠近祭坛。");
+      return;
+    }
     toast("靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。");
   }
 
@@ -2112,7 +2116,8 @@
     } else if (dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
       if (!state.day) prompt = "祭坛夜里封着，先守篝火";
       else if (!survivedNights()) prompt = `再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献`;
-      else if (state.inv.heart > 0) prompt = `${interactHint}献上方块之心`;
+      else if (state.inv.heart > 0) prompt = dist(p.x, p.y, state.altar.x, state.altar.y) < 22
+        ? `${interactHint}献上方块之心` : "再靠近祭坛，才能献上方块之心";
       else prompt = "先去工作台合成方块之心";
     } else if (!state.day && state.enemies.some((e) => dist(e.x, e.y, p.x, p.y) < 42)) {
       prompt = `${combatHint} · ${touchLayout.matches ? "选栏再点坏墙修理" : "按 1 后点坏墙修理"}`;

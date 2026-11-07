@@ -1,0 +1,16 @@
+UI-023 altar arrival edge feedback; baseline2dcb7cdbe4ff286731c6510202f09db39cd11418.
+Reused old a342ef0 ordinary390 knight three-night INDEX/two original images/raw finish event:288.4034 game seconds,3 nights,18kills,heart0/wintrue. Original exit1/partial video limitations retained; not a current-source natural rerun.
+Chromium before PASS36 explicit fixtures: real engine third-night32s last0.1→dawn,24px native interaction does not spend/offer despite promised prompt; real movement/release then inside22 succeeds.
+Chromium after PASS36:24px current prompt says approach; native refusal explicit/no stock spent; real approach restores original interaction prompt and heart1→0/original victory.
+Per-engine input: Chromium native touchStart/end mobile movement and UI taps; WebKit native mouse holds/releases + mobile UI taps; desktop actual ArrowUp/down-up and E. No direct action API for movement/offering.
+Strict boundary22 still rejects;21.9 succeeds;26 outside hint retains generic feedback. Night/two-night/no-heart gates and all other inventories preserved.
+Facing FARM still plants with original seed1 consumption or returns original no-seed feedback; new ready-altar fallback placed after existing planting handler.
+18 affected320/390/844 actual-size PNGs,9before9after, fixture origin fully disclosed. Each core control >=44px and first-screen hit target; new current prompt/toast fit whole feed. No CSS/map/zoom changes.
+before GitLF served SHA256 dd1d4b545f17ebcfdd0ff4daafb98f8bedd1ee098d836f7287f0d1a2a148ca0a; after Windows SHA256 f45b0d0c55a15577f7a87356c2a8176e4195a5021363352123eaabf2bceec684.
+node --check game.js PASS; node tests/static.mjs STATIC_OK.
+Independent readonly ship-gate reviewer PASS: no significant issues; no writing/second worktree.
+Full required Windows WebKit regression PASS in altar-integration, exit0: ALTAR_ARRIVAL_OK webkit36 and E2E_OK; existing night fold/help/native keyboard scroll/map placement/near-combat cases pass, integration.log. Reused final result, no unchanged suite reruns.
+Artifact audit PASS18 unique actual-size PNGs,36 records/version, real24→inside22 input and heart1→0/original win; source hashes exact and root old records deep-equal after removing UI-023/new batch.
+Read-only UI_COVERAGE_OK baseline172/history305/supplemental529; no recaptures or current-source full-matrix claim.
+Protected natural-loop result.json SHA256 964230C5914271F326300CA2C0FE82122B87F43D3BF2111D5B2363A75089596D; exclude from commit.
+No timing/cost/drop/economy/win/save/placement/combat changes, no merge/deployment/server changes. Visual review pending coordinator, not real-device acceptance.
