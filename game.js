@@ -118,6 +118,10 @@
   const touchSkillCd = document.getElementById("touch-skill-cd");
   const promptEl = document.getElementById("prompt");
   const buildBanner = document.getElementById("build-banner");
+  const fenceStep = document.getElementById("fence-step");
+  const btnFirstFence = document.getElementById("btn-first-fence");
+  const fenceActionLabel = document.getElementById("fence-action-label");
+  const fenceActionCost = document.getElementById("fence-action-cost");
   const waveBanner = document.getElementById("wave-banner");
   const screenIntro = document.getElementById("screen-intro");
   const introText = document.getElementById("intro-text");
@@ -164,7 +168,7 @@
   function syncTitleInstructions() {
     const touchSteps = [
       " 方向按钮走到树旁，按住「采集/攻击」砍木",
-      " 点背包「栏」选栅栏，点篝火旁发光格围起来",
+      " 点「栅栏」，直接用木头放到篝火旁发光格",
       desktopTitleSteps[2],
       " 凑齐材料点「交互 E」合成，天亮送到北边祭坛",
     ];
@@ -417,6 +421,22 @@
     const stored = state.inv.fence || 0;
     const needPay = Math.max(0, gaps - stored);
     return needPay * (buildCost("fence").wood || 0);
+  }
+  function firstFenceLesson() {
+    return state && !state.over && !state.briefing && !intro.active && state.day && state.nights === 0
+      && !state.skippedGuide && !campWalled() && (state.flags.gathered || (state.flags.moved && state.build));
+  }
+
+  function firstFenceStep() {
+    if (state.build === "plot" || state.build === "torch") {
+      return `已选${state.build === "plot" ? "田地" : "火把"}。围营请点「栅栏」。`;
+    }
+    if (!canAffordNextFence()) {
+      const missing = Math.max(0, buildCost("fence").wood - state.inv.wood);
+      return `差 ${missing} 木。朝金框${touchLayout.matches ? "按住采集" : "按住左键"}砍树。`;
+    }
+    if (state.build === "fence") return `走近篝火，点发光空格。还差 ${campGaps().length} 面。`;
+    return state.inv.fence > 0 ? "有现成栅栏。选栅栏，再点发光空格。" : "木头够用。选栅栏，不用先合成。";
   }
   // 再玩的人跳过开场
   function hasSeenWorld() {
@@ -928,7 +948,7 @@
     if (!canAffordNextFence()) {
       return `围营还差 ${gaps} 面墙、大约 ${needWood} 木。先对着金框的树${touchLayout.matches ? "按住「采集/攻击」" : "按空格或按住左键"}再砍。`;
     }
-    return `${touchLayout.matches ? "点背包「栏」选栅栏" : "按 1 选栅栏"}，再点篝火旁发光格（还差 ${gaps} 面）。自己能穿过栅栏。木头还要留给方块之心。`;
+    return `${touchLayout.matches ? "点「栅栏」" : "按 1 选栅栏"}，直接用木头放到篝火旁发光格（还差 ${gaps} 面），不用先合成。自己能穿过栅栏。`;
   }
 
   function setPrompt(text) {
@@ -1068,12 +1088,15 @@
       "WASD  移动",
       "空格  砍/挖/打面前的东西",
       "1 栅栏　2 火把　3 田（按 0 取消）",
+      `栅栏直接用木头放置，不用先合成；现成栅栏优先用，每面 ${costText("fence")}。`,
+      "走近篝火，选栅栏，再点旁边发光的空格。触屏再点同一栅栏入口取消。",
       "点空地放下；点坏墙修理。空格拆除。自己能穿过栅栏。",
       "先把篝火四边围上，再留木头合成方块之心。",
       "E  工作台合成 / 祭坛献祭 / 播种",
       "Q 或右键  职业技能",
       "点「麦」或 H  回血",
-      "触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点背包栏/火/田选建造，再点地图。",
+      "触屏：方向按钮移动，按住「采集/攻击」；点「交互 E」合成/播种/献祭，点「技能 Q」放技能。点栅栏/火把/田地选建造，再点地图。",
+      `配方：方块之心木4石5金3麦3；火把 ${costText("torch")}；田地 ${costText("plot")}。`,
       "",
       "栅栏挡地面怪，挡不住蝙蝠。第三夜金色立方更硬。火把夜里照明。篝火灭了就失败。祭坛只在天亮后、守过三夜才能献。",
     ].join("\n");
@@ -1131,7 +1154,7 @@
       const target = kind === "fence" ? "空地/坏墙" : kind === "torch" ? "空地放火把" : "空地开田";
       const cancel = touchLayout.matches ? `再点背包「${labelOf(kind)}」取消` : "按 0 取消";
       const combat = buildCombatHint();
-      toast(combat ? `已选${labelOf(kind)}；${combat}。`
+      toast(firstFenceLesson() ? firstFenceStep() : combat ? `已选${labelOf(kind)}；${combat}。`
         : `${touchLayout.matches ? "点" : "左键点"}${target}；${cancel}。`);
     }
     syncHud();
@@ -1189,10 +1212,13 @@
     } else if (canPay(cost)) {
       pay(cost);
     } else {
-      toast("材料还差：" + missingMaterials(cost).join("、"));
+      toast(kind === "fence" && firstFenceLesson() ? firstFenceStep()
+        : "材料还差：" + missingMaterials(cost).join("、"));
       return true;
     }
     const openBefore = kind === "fence" && !campWalled();
+    const lesson = firstFenceLesson();
+    const gapsBefore = campGaps().length;
     if (kind === "fence") {
       setTile(tx, ty, T.FENCE);
       state.fenceHp.set(`${tx},${ty}`, FENCE_MAX);
@@ -1209,7 +1235,10 @@
     } else if (kind === "fence" && openBefore) {
       // 围上一面也给一句，免得以为围完了
       const left = campGaps().length;
-      toast(`围上了。还差 ${left} 面，点下一个发光格。`, 2.4);
+      toast(lesson && gapsBefore === 4 && left === 3
+        ? "第一面栅栏好了！还差 3 面。"
+        : lesson ? `栅栏放好了。营地还差 ${left} 面。`
+          : `围上了。还差 ${left} 面，点下一个发光格。`, 2.4);
     } else {
       toast({ fence: "栅栏放好了。", torch: "火把放好了。", plot: "田开好了。" }[kind]);
     }
@@ -1857,7 +1886,8 @@
         if (d.kind === "wood" && !state.flags.gathered) {
           state.flags.gathered = true;
           // 第一批木头还在飞，不按当前一颗判断够不够
-          toast(`木头进背包了。${touchLayout.matches ? "点背包「栏」选栅栏" : "按 1 选栅栏"}，料不够再砍一棵，点发光格围上。`, 3.4);
+          toast(touchLayout.matches ? "木头进包。点「栅栏」，不用先合成。"
+            : "木头进包。按 1 选栅栏，不用先合成。", 3.4);
         }
         if (d.kind === "wheat" && !state.flags.sawWheat) {
           state.flags.sawWheat = true;
@@ -2223,6 +2253,28 @@
     clockEl.textContent = `${state.day ? "白天" : "夜晚"} ${m}:${s}`;
     clockEl.className = "clock " + (state.day ? "day" : "night");
     objectiveEl.textContent = objectiveText();
+    const lesson = firstFenceLesson();
+    if (toastTimer > 0 && /^差 \d+ 木。朝金框(?:按住采集|按住左键)砍树。$/.test(toastEl.textContent)
+      && (!lesson || canAffordNextFence())) {
+      toastTimer = 0;
+      toastEl.classList.add("hidden");
+    }
+    screenGame.classList.toggle("first-fence-lesson", !!lesson);
+    btnFirstFence.classList.toggle("hidden", !lesson);
+    fenceStep.textContent = firstFenceStep();
+    const duplicatePrompt = (state.build && promptEl.textContent === buildPlacementText(state.build))
+      || /砍树|这段好了/.test(promptEl.textContent);
+    promptEl.classList.toggle("fence-duplicate", !!lesson && duplicatePrompt);
+    fenceStep.classList.toggle("hidden", !lesson || !toastEl.classList.contains("hidden")
+      || (!promptEl.classList.contains("hidden") && !duplicatePrompt));
+    if (lesson) {
+      objectiveEl.textContent = `白天围营 · 还差 ${campGaps().length} 面栅栏`;
+      guideSummary.textContent = "背包 / 其他建造";
+    }
+    fenceActionLabel.textContent = state.build === "fence" ? "已选栅栏" : "栅栏";
+    fenceActionCost.textContent = state.inv.fence > 0 ? `现成 ${state.inv.fence} 面`
+      : canAffordNextFence() ? `${costText("fence")} / 面` : `差${buildCost("fence").wood - state.inv.wood}木`;
+    btnFirstFence.setAttribute("aria-pressed", String(state.build === "fence"));
     skillCdEl.textContent = p.skillCd > 0 ? `${p.skillCd.toFixed(1)}s` : "就绪";
     touchSkillCd.textContent = skillCdEl.textContent;
     btnHelp.textContent = touchLayout.matches && state.day && state.build ? "建造说明" : "怎么玩";
@@ -2260,6 +2312,15 @@
       }
       el.classList.toggle("ready", k === "heart" && state.inv.heart > 0);
       el.classList.toggle("on", el.dataset.build && state.build === el.dataset.build);
+      if (el.dataset.build) {
+        const kind = el.dataset.build, selected = state.build === kind;
+        const status = state.inv[k] > 0 ? "先用现成" : canPay(buildCost(kind))
+          ? costText(kind) + ({ fence: "/面", torch: "/盏", plot: "/块" })[kind]
+          : "差" + missingMaterials(buildCost(kind)).map((part) => part.split(" ").reverse().join("")).join("、");
+        el.querySelector(".build-status").textContent = status;
+        el.querySelector(".build-selected").classList.toggle("hidden", !selected);
+        el.classList.toggle("recommended", !!lesson && kind === "fence" && !selected && canAffordNextFence());
+      }
     }
   }
 
@@ -2696,6 +2757,11 @@
     state.skippedGuide = true;
     syncGuide();
   });
+  btnFirstFence.addEventListener("click", () => {
+    if (!canTouchPlay()) return;
+    setBuild("fence", { toggle: true });
+    canvas.focus({ preventScroll: true });
+  });
   document.getElementById("inv").addEventListener("click", (e) => {
     const item = e.target.closest(".item");
     if (!item) return;
@@ -2731,7 +2797,8 @@
       if ((e.target.matches("#notice-feed, .details-content")
         || (state?.paused && e.target.id === "overlay-body")) && navigation.includes(e.code)) return;
       if (["Space", "Enter"].includes(e.code)
-        && ((!screenTitle.classList.contains("hidden") && e.target.closest(".class-card, #btn-start"))
+        && ((e.target === btnFirstFence)
+          || (!screenTitle.classList.contains("hidden") && e.target.closest(".class-card, #btn-start"))
           || (state?.over && !overlay.classList.contains("hidden") && e.target.closest("#overlay-actions button")))) return;
     }
     keys.add(e.code);

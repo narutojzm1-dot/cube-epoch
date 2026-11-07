@@ -1,0 +1,18 @@
+BROWSER_PROFILE_D_OK D:\work\tmp\cube-epoch\first-fence-790cd307\tmp\playwright_chromiumdev_profile-Sg3cBg
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: normal activation must be visible: #btn-skip-intro
+    at activate (file:///D:/work/projects/cube-epoch/tests/first-fence.mjs:44:16)
+    at async testFirstFence (file:///D:/work/projects/cube-epoch/tests/first-fence.mjs:155:7)
+    at async file:///D:/work/projects/cube-epoch/tests/first-fence.mjs:228:5 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: null,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

@@ -1,0 +1,31 @@
+2026-11-07T16:11:43.864Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\webkit-2336\Playwright.exe --inspector-pipe --disable-accelerated-compositing --headless --no-startup-window
+2026-11-07T16:11:43.871Z pw:browser <launched> pid=93380
+GENERIC_HELP_FOCUS_SETUP {"viewport":{"width":320,"height":568},"beforeFocus":{"tag":"SUMMARY","detailsOpen":false},"afterFocus":"CANVAS","input":"WebKit keyboard hold setup after native summary close; not a native touch hold"}
+BUILD_GUIDANCE_INPUT_READY {"viewport":{"width":320,"height":568},"hitstop":-0.0010000000000000009}
+HELP_RETURN_SCROLL_OK {"engine":"webkit","viewport":{"width":320,"height":568},"input":"native End/Home/End after focusing tabindex0 help body; no mobile WebKit wheel API","start":{"id":"overlay-body","top":0,"full":998,"height":381},"end":{"id":"overlay-body","top":617,"full":998,"height":381},"paused":true,"timeFrozen":true,"buttons":[{"x":40,"y":484,"width":76,"height":44,"bottom":528,"visible":true},{"x":126,"y":484,"width":92,"height":44,"bottom":528,"visible":true}]}
+HELP_RETURN_SCROLL_OK {"engine":"webkit","viewport":{"width":320,"height":568},"input":"native End/Home/End after focusing tabindex0 help body; no mobile WebKit wheel API","start":{"id":"overlay-body","top":0,"full":973,"height":381},"end":{"id":"overlay-body","top":592,"full":973,"height":381},"paused":true,"timeFrozen":true,"buttons":[{"x":40,"y":484,"width":76,"height":44,"bottom":528,"visible":true},{"x":126,"y":484,"width":92,"height":44,"bottom":528,"visible":true}]}
+GENERIC_HELP_FOCUS_SETUP {"viewport":{"width":390,"height":844},"beforeFocus":{"tag":"SUMMARY","detailsOpen":false},"afterFocus":"CANVAS","input":"WebKit keyboard hold setup after native summary close; not a native touch hold"}
+BUILD_GUIDANCE_INPUT_READY {"viewport":{"width":390,"height":844},"hitstop":-0.0020000000000000018}
+HELP_RETURN_SCROLL_OK {"engine":"webkit","viewport":{"width":390,"height":844},"input":"native End/Home/End after focusing tabindex0 help body; no mobile WebKit wheel API","start":{"id":"overlay-body","top":0,"full":896,"height":657},"end":{"id":"overlay-body","top":239,"full":896,"height":657},"paused":true,"timeFrozen":true,"buttons":[{"x":40,"y":759.984375,"width":76,"height":44,"bottom":803.984375,"visible":true},{"x":126,"y":759.984375,"width":92,"height":44,"bottom":803.984375,"visible":true}]}
+GENERIC_HELP_FOCUS_SETUP {"viewport":{"width":844,"height":390},"beforeFocus":{"tag":"SUMMARY","detailsOpen":false},"afterFocus":"CANVAS","input":"WebKit keyboard hold setup after native summary close; not a native touch hold"}
+BUILD_GUIDANCE_INPUT_READY {"viewport":{"width":844,"height":390},"hitstop":-0.0020000000000000018}
+HELP_RETURN_SCROLL_OK {"engine":"webkit","viewport":{"width":844,"height":390},"input":"native End/Home/End after focusing tabindex0 help body; no mobile WebKit wheel API","start":{"id":"overlay-body","top":0,"full":691,"height":203},"end":{"id":"overlay-body","top":488,"full":691,"height":203},"paused":true,"timeFrozen":true,"buttons":[{"x":186,"y":306,"width":76,"height":44,"bottom":350,"visible":true},{"x":272,"y":306,"width":92,"height":44,"bottom":350,"visible":true}]}
+HELP_RETURN_SCROLL_OK {"engine":"webkit","viewport":{"width":844,"height":390},"input":"native End/Home/End after focusing tabindex0 help body; no mobile WebKit wheel API","start":{"id":"overlay-body","top":0,"full":640,"height":203},"end":{"id":"overlay-body","top":437,"full":640,"height":203},"paused":true,"timeFrozen":true,"buttons":[{"x":186,"y":306,"width":76,"height":44,"bottom":350,"visible":true},{"x":272,"y":306,"width":92,"height":44,"bottom":350,"visible":true}]}
+2026-11-07T16:12:27.955Z pw:browser [pid=93380] <gracefully close start>
+2026-11-07T16:12:27.989Z pw:browser [pid=93380] <process did exit: exitCode=0, signal=null>
+2026-11-07T16:12:27.990Z pw:browser [pid=93380] starting temporary directories cleanup
+2026-11-07T16:12:27.991Z pw:browser [pid=93380] finished temporary directories cleanup
+2026-11-07T16:12:27.991Z pw:browser [pid=93380] <gracefully close end>
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 30000ms exceeded.
+    at hold (D:\work\projects\cube-epoch\tests\build-guidance.mjs:50:26)
+    at async testBuildGuidance (D:\work\projects\cube-epoch\tests\build-guidance.mjs:221:7)
+    at async file:///D:/work/projects/cube-epoch/[eval1]:7:7 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

@@ -1,0 +1,13 @@
+BROWSER_PROFILE_D_OK D:\work\tmp\cube-epoch\first-fence-790cd307\tmp\playwright_chromiumdev_profile-REpPL7
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 30000ms exceeded.
+    at testFirstFence (D:\work\projects\cube-epoch\tests\first-fence.mjs:177:18)
+    at async file:///D:/work/projects/cube-epoch/tests/first-fence.mjs:240:5 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

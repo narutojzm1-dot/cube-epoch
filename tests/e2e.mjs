@@ -15,6 +15,7 @@ import { testBuildCombatFeedback } from "./first-dusk-feedback.mjs";
 import { testAltarArrival } from "./altar-arrival.mjs";
 import { testVictoryRestart } from "./victory-restart.mjs";
 import { testTouchTitle, testFirstWoodToast } from "./touch-title.mjs";
+import { testFirstFence } from "./first-fence.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -459,6 +460,7 @@ await testAltarArrival(browser, origin);
 await testVictoryRestart(browser, origin);
 await testTouchTitle(browser, origin);
 await testFirstWoodToast(browser, origin);
+await testFirstFence(browser, origin);
 await testDeviceHints(browser, origin);
 await testWideTouchLayout(browser, origin);
 await browser.close();
