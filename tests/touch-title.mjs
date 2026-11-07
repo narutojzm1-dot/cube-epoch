@@ -19,7 +19,7 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
   const buffers = await Promise.all(files.map((file) => before
     ? execFileSync("git", ["show", `${baseline}:${file}`]) : readFile(join(ROOT, file))));
   const hash = createHash("sha256").update(Buffer.concat(buffers)).digest("hex");
-  const original = execFileSync("git", ["show", `${baseline}:index.html`], { encoding: "utf8" });
+  const original = buffers[0].toString("utf8");
   const desktopSteps = [...original.matchAll(/<li><b>\d<\/b> (.*?)<\/li>/g)].map((match) => match[1]);
   const desktopHint = original.match(/<p class="hint">(.*?)<\/p>/)[1];
   const build = { sha: before ? baseline : execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8" }).trim(),

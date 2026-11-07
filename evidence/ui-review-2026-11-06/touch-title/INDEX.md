@@ -47,3 +47,15 @@
 当前图**已截，待父协调逐图审查**；本机只复看受影响关键原图，不等于用户视觉通过。未覆盖真机、人类盲玩、新自然三夜、所有界面重拍或触屏多指跨结算。WebKit原生音频API限制沿用既有记录，不把兼容检查称作原生音频恢复验证。
 
 保留旧候选与natural-loop dirty，后续候选仅记实证：本批首日采树成功toast仍写「按1选栅栏」，与触屏背包「栏」措辞不一致（未在本片扩修）。检查见 [checks.log](checks.log)，独立只读代码审查见 [review.log](review.log)。只叠加开放PR，不合并、不发布。
+
+## PR #23 · 浅克隆检查补修
+
+产品提交e35452c，1cea3fc仅纠正8张初次部分运行图的说明。该head的Linux [run 42377820325 / e2e job 128418941822](https://github.com/narutojzm1-dot/cube-epoch/actions/runs/42377820325/job/128418941822) static成功、e2e失败；[原结果](ci-1cea3fc-failed.json)、[原job日志](ci-1cea3fc-e2e-failed.log)保留。日志明确`fetch-depth: 1`，现有胜利Tab/Space回归通过后，新增testTouchTitle尚未开始交互便在22行无条件`git show 61383ce:index.html`找不到祖先对象而失败。此前本机gh watcher的TLS handshake timeout是另一个通信错误，不等于此真实CI失败。
+
+原job日志空输出行带GitHub时间戳分隔尾空格，按原文保留，不为消除diff警告裁改；代码/文档及其他证据的diff检查正常，只有这份外部原始数据排除尾空格检查。
+
+最小修复仅一行测试读取：桌面原文从已经读取/实际服务的`buffers[0]` HTML取，而非在普通after运行额外访问祖先Git对象；显式本机`--before`仍按原逻辑读历史缓冲区。未改fetch-depth、增加网络/历史回退、延长超时、跳过断言或改产品。浅克隆的实际完整回归由新head的GitHub CI验证，不额外克隆仓库/创建第二工作区。
+
+产品三文件、27原图及其来源元数据不变，served SHA256仍`d20ffe7014c4ec9a271dc805951b126eaa201408aa547641e387a370a0a9b2c3`，未重新刷图。新测试模块在本机Chromium和Windows WebKit四视口各完整复测通过，真实触控/键盘正反断言保留，见 [Chromium](linux-shallow-chromium.log)、[WebKit](linux-shallow-webkit.log)；未变旧完整本机回归复用原日志，不冒称当前浅克隆已在本机模拟。独立窄范围代码审查通过。
+
+补修运行使用另一个专用D盘leaf `D:\work\tmp\cube-epoch\touch-title-linux-790cd307`，启动前 [环境证明](linux-shallow-environment.log)和实际浏览器profile路径已核；浏览器/临时服务关闭后只清理核实的本次缓存/配置子目录，leaf留空，见 [cleanup](linux-shallow-cleanup.log)。新head同SHA CI完成后仅本地留ci-result.log，不做结果-only再推送，不合并/发布。

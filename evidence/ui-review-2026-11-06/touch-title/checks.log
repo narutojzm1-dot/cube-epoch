@@ -20,3 +20,14 @@ CLEANUP_OK: known WebKit launch PID absent via native Get-Process, complete grac
 Initial browser command-line/locator-input errors and cleanup shell/WMI errors retained with limitations; no test skipping/timeout extension/product workaround.
 No merge, Pages/Tencent deployment, user saves, old candidate or natural-loop diagnostics changed.
 PR same-SHA Linux CI is checked after commit/push and kept in local ci-result.log, not a result-only follow-up commit.
+
+Follow-up CI failure evidence: run42377820325 / job128418941822 on 1cea3fc, static SUCCESS / e2e FAILURE. Original fetch-depth1 job log and result retained in ci-1cea3fc-e2e-failed.log / ci-1cea3fc-failed.json.
+Actual failure: tests/touch-title.mjs:22 unconditional git show 61383ce:index.html unavailable in shallow checkout, before title input started; preceding VICTORY_RESTART_OK and other unchanged regressions passed.
+Separate gh watcher transport TLS handshake timeout retained locally in ci-watch.log; direct API later confirmed actual CI failure, not assumed from watcher exit.
+Fix: read desktop expected original HTML from already loaded buffers[0], preserving opt-in --before historical capture. No product, fetch-depth, native input/keyboard assertions, timeouts or skips changed.
+node --check tests/touch-title.mjs: PASS after one-line fix.
+Complete targeted testTouchTitle after-mode: TOUCH_TITLE_OK Chromium four viewports (linux-shallow-chromium.log) and Windows WebKit four viewports (linux-shallow-webkit.log).
+Independent narrow [reviewer] shallow-title-review: No significant issues found.
+Unchanged product/static/other local full-suite sections and current 27 images reused; real shallow-checkout full suite is verified on the new GitHub head, not claimed as local shallow simulation.
+D_ENV_OK and actual Chromium/WebKit D profile paths verified before focused checks; new dedicated linux-790cd307 D leaf cleaned after browsers/servers exited (linux-shallow-environment.log / linux-shallow-cleanup.log).
+Original GitHub job log contains timestamp-separator trailing whitespace on blank output lines; retained verbatim. Initial cached diff --check correctly reported these data lines and stopped before commit. Follow-up diff --check covers every staged code/document/other evidence file, excluding only this verbatim external log, not any code.
