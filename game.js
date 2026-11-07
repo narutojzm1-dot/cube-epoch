@@ -1549,14 +1549,18 @@
       toast("矿脉在发亮。去东边看看。");
       beep(480, 0.1, "square", 0.05);
     } else if (p.cls === "farmer") {
+      let ripened = 0;
+      const hpBefore = p.hp;
       for (const [key, c] of state.crops) {
+        if (c.stage < 2) ripened++;
         c.stage = 2;
         c.grow = 0;
         const [tx, ty] = key.split(",").map(Number);
         burst(tx * TILE + 8, ty * TILE + 8, "#8dff9a", 8);
       }
       p.hp = Math.min(p.maxHp, p.hp + 24);
-      toast("田里的麦子一下熟了。");
+      const recovery = p.hp > hpBefore ? "回复生命" : "生命已满";
+      toast(ripened > 0 ? `催熟 ${ripened} 块麦田，${recovery}。` : `没有待催熟的麦苗，${recovery}。`);
       beep(560, 0.1, "triangle", 0.05);
     } else if (p.cls === "mage") {
       for (let i = 0; i < 8; i++) {

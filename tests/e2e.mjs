@@ -3,6 +3,7 @@ import { testNightUI } from "./night-ui.mjs";
 import { testCoreLayout, testDeviceHints, testWideTouchLayout } from "./layout-ui.mjs";
 import { testMaterialFeedback, testHeartDelivery } from "./material-feedback.mjs";
 import { testCropFeedback } from "./crop-feedback.mjs";
+import { testFarmerSkillFeedback } from "./farmer-skill-feedback.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -434,6 +435,7 @@ await testCoreLayout(browser, origin);
 await testMaterialFeedback(browser, origin);
 await testHeartDelivery(browser, origin);
 await testCropFeedback(browser, origin);
+await testFarmerSkillFeedback(browser, origin);
 await testDeviceHints(browser, origin);
 await testWideTouchLayout(browser, origin);
 await browser.close();

@@ -1,13 +1,22 @@
 {
   "supplemental_batches": [
     {
+      "id": "farmer-skill-feedback",
+      "base_sha": "557c41e17103c9593789e44ffe2b3a148cb13f34",
+      "index": "farmer-skill-feedback/INDEX.md",
+      "screenshots": "farmer-skill-feedback/screenshots.json",
+      "issue_ids": ["UI-013"],
+      "status": "已截",
+      "visual_review": "28张真实首屏前后原图待协调人逐图审查；320/390/844原生触屏、1280桌面。正常首局及明示空田/伤血/夜间fixture，真实播种/技能输入；非自然夜守、三夜或真机验收"
+    },
+    {
       "id": "crop-feedback",
       "base_sha": "a11106c567b668e57ed38d775de243094660ed6b",
       "index": "crop-feedback/INDEX.md",
       "screenshots": "crop-feedback/screenshots.json",
       "issue_ids": ["UI-012"],
       "status": "已截",
-      "visual_review": "22张真实首屏原图待协调人审查；320/390/844原生触屏及1280桌面，空田fixture后实际播种/自然生长/采集，不代表自然三夜或真机验收"
+      "visual_review": "协调人10:02已看320萌芽、390自然成熟两图，所看状态局部通过；不是22图全量通过/真机验收。正常生长采集与另行夜战fixture限制保留，其余待审"
     },
     {
       "id": "heart-delivery",
@@ -85,6 +94,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-013",
+      "title": "丰收术在无待熟麦苗时仍声称催熟，未说明实际回血结果",
+      "status": "已修复，待协调人逐图审查",
+      "before": "farmer-skill-feedback/ripe-full before",
+      "after": "farmer-skill-feedback/ripe-full after"
+    },
     {
       "id": "UI-012",
       "title": "白天未成熟麦苗长按无产出但没有状态说明",
