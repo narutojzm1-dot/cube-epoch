@@ -2583,8 +2583,9 @@
     else looping = false;
   }
 
-  function showOverlay(title, body, actions) {
+  function showOverlay(title, body, actions, pauseHelp = false) {
     resetInput();
+    overlay.classList.toggle("pause-help", pauseHelp);
     overlayTitle.textContent = title;
     overlayBody.textContent = body;
     overlayActions.innerHTML = "";
@@ -2595,6 +2596,7 @@
       overlayActions.appendChild(b);
     }
     overlay.classList.remove("hidden");
+    overlayBody.scrollTop = 0;
   }
 
   function togglePause() {
@@ -2608,7 +2610,7 @@
           last = performance.now();
         }],
         ["回选角", () => location.reload()],
-      ]);
+      ], true);
     } else {
       overlay.classList.add("hidden");
       last = performance.now();
@@ -2683,7 +2685,8 @@
     const navigation = ["Space", "Enter", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Home", "End", "PageUp", "PageDown"];
     if (e.target instanceof HTMLElement) {
       if (e.target.closest("summary") && ["Space", "Enter"].includes(e.code)) return;
-      if (e.target.matches("#notice-feed, .details-content") && navigation.includes(e.code)) return;
+      if ((e.target.matches("#notice-feed, .details-content")
+        || (state?.paused && e.target.id === "overlay-body")) && navigation.includes(e.code)) return;
     }
     keys.add(e.code);
     if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Digit0", "Digit1", "Digit2", "Digit3"].includes(e.code)) e.preventDefault();

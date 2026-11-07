@@ -1,0 +1,13 @@
+BUILD_GUIDANCE_INPUT_READY {"viewport":{"width":320,"height":568},"hitstop":-0.005000000000000001}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 30000ms exceeded.
+    at testBuildGuidance (D:\work\projects\cube-epoch\tests\build-guidance.mjs:263:20)
+    at async file:///D:/work/projects/cube-epoch/tests/build-guidance.mjs:300:9 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1
