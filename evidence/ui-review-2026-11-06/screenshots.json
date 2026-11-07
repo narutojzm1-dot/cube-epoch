@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "victory-restart",
+      "base_sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+      "index": "victory-restart/INDEX.md",
+      "screenshots": "victory-restart/screenshots.json",
+      "issue_ids": ["UI-025"],
+      "status": "已截",
+      "visual_review": "24张320/390/844原图待协调逐图审查；明示胜利边界后的同输入节点不同结果，原生Tab/Space重开选角进场和tap重开/首日控制，非自然三夜/真机/跨结算触屏多指验收"
+    },
+    {
       "id": "altar-refusal-refresh",
       "base_sha": "aab67feb0d08a999cfe6e849aa4bc4aad7eab31e",
       "index": "altar-refusal-refresh/INDEX.md",
@@ -193,6 +202,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-025",
+      "title": "胜利后聚焦再玩、角色卡和开始按Space被全局玩法监听取消",
+      "status": "已修可见选角与结算按钮的原生Space激活，待协调逐图审查",
+      "before": "victory-restart/replay-space role-space start-space before",
+      "after": "victory-restart/replay-space role-space start-space after"
+    },
     {
       "id": "UI-024",
       "title": "24px拒绝后已走近可献范围，旧专用拒绝仍与可献提示冲突",

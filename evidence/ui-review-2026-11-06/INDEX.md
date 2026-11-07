@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-025 胜利后Space重开、选角与进场
+
+[24张320/390/844前后原图](victory-restart/INDEX.md) · [真实Tab/Space/tap与首日控制记录](victory-restart/validation.json) · [来源](victory-restart/screenshots.json) · [检查](victory-restart/checks.log)。
+
+胜利后原生tap重开无残留，但聚焦再玩、角色和开始按Space都被玩法监听拦住；只恢复可见选角/结算按钮的原生激活，不动游戏Space、暂停、规则或存档。复用明示胜利边界，before真实Enter绕行、after不需绕行；新首日移动/采集/释放及键盘旧按压探针通过。当前图待逐项审查，临时大输出用D盘专用目录。
+
 ## 独立维护批次：UI-024 走近祭坛后撤掉过期专用拒绝
 
 [6张320/390/844同态前后原图](altar-refusal-refresh/INDEX.md) · [真实输入及通知替换负覆盖](altar-refusal-refresh/validation.json) · [来源](altar-refusal-refresh/screenshots.json) · [检查](altar-refusal-refresh/checks.log)。

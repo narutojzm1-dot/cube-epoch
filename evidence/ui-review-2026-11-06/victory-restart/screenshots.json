@@ -1,0 +1,3721 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "replay-space",
+      "state": "replay-space / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/replay-space--320x568--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:18.575Z",
+      "data": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.0467,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 329.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 329.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 355.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 94.5,
+            "right": 304,
+            "bottom": 644.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」献上方块之心",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "role-space",
+      "state": "role-space / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/role-space--320x568--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:18.796Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "focus": "mage",
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 625
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "start-space",
+      "state": "start-space / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/start-space--320x568--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:18.962Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "btn-start",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 625
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "first-day-controls",
+      "state": "first-day-controls / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/first-day-controls--320x568--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:20.526Z",
+      "data": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.476699999997019,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 396.00000000239896,
+          "y": 360.1466199999999,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 329.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "replay-space",
+      "state": "replay-space / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/replay-space--390x844--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:21.309Z",
+      "data": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.04999999999995,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 353.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 379.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 94.5,
+            "right": 374,
+            "bottom": 686.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」献上方块之心",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "role-space",
+      "state": "role-space / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/role-space--390x844--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:21.550Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "focus": "mage",
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 221
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "start-space",
+      "state": "start-space / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/start-space--390x844--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:21.733Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "btn-start",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 338
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "first-day-controls",
+      "state": "first-day-controls / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/first-day-controls--390x844--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:23.393Z",
+      "data": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.5555999999970187,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 396.0000000019195,
+          "y": 361.581192,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "replay-space",
+      "state": "replay-space / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/replay-space--844x390--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:24.179Z",
+      "data": {
+        "title": false,
+        "overlay": true,
+        "selected": "knight",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 3,
+          "kills": 0,
+          "time": 284.0618,
+          "paused": true,
+          "over": true,
+          "win": true,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 116,
+          "hp": 165,
+          "maxHp": 165,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 54,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 253.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 320
+          },
+          "toast": {
+            "x": 6,
+            "y": 260,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 286
+          },
+          "prompt": {
+            "x": 6,
+            "y": 286,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 312
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 378,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 472.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 324,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 372
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 54,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 150,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 102,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 54,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 98,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 102,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 146,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 150,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 194,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」献上方块之心",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "role-space",
+      "state": "role-space / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/role-space--844x390--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:24.430Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "focus": "mage",
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 955
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "start-space",
+      "state": "start-space / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/start-space--844x390--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:24.624Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "btn-start",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 1147
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "first-day-controls",
+      "state": "first-day-controls / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": false,
+        "source_sha256": "890bbb992ffc4aea5df26e72a900c776c49913287cb26f5e3c589002d769b446"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/first-day-controls--844x390--before--890bbb99.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:41:26.200Z",
+      "data": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.4813000000029788,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 6,
+          "x": 396.0000000028998,
+          "y": 360.14255999999995,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 301
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 393,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 487.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "内存响应44aa679原Git产品，不覆盖工作区"
+      ]
+    },
+    {
+      "screen_id": "replay-space",
+      "state": "replay-space / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/replay-space--320x568--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:06.865Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "role-space",
+      "state": "role-space / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/role-space--320x568--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:07.044Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 625
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "start-space",
+      "state": "start-space / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/start-space--320x568--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:07.172Z",
+      "data": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.022099999994039537,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 329.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 94.5,
+            "right": 304,
+            "bottom": 644.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "first-day-controls",
+      "state": "first-day-controls / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/first-day-controls--320x568--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:08.707Z",
+      "data": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.5053999999940384,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 396.0000000023533,
+          "y": 360.14661999999987,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 329.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "replay-space",
+      "state": "replay-space / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/replay-space--390x844--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:09.462Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "role-space",
+      "state": "role-space / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/role-space--390x844--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:09.659Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 221
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "start-space",
+      "state": "start-space / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/start-space--390x844--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:09.792Z",
+      "data": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.022899999999999976,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 94.5,
+            "right": 374,
+            "bottom": 686.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "first-day-controls",
+      "state": "first-day-controls / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/first-day-controls--390x844--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:11.310Z",
+      "data": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.4895999999999987,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 396.00000000247735,
+          "y": 360.14081999999996,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "replay-space",
+      "state": "replay-space / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/replay-space--844x390--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:12.078Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": null,
+        "startDisabled": true,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "role-space",
+      "state": "role-space / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/role-space--844x390--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:12.298Z",
+      "data": {
+        "title": true,
+        "overlay": false,
+        "selected": "mage",
+        "focus": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 955
+        },
+        "game": null
+      },
+      "metrics": null,
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "start-space",
+      "state": "start-space / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/start-space--844x390--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:12.431Z",
+      "data": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 0.022699999997019743,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 2,
+          "x": 392,
+          "y": 344,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": false,
+            "chopped": false,
+            "gathered": false,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 301
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 393,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 487.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第一步：走起来"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    },
+    {
+      "screen_id": "first-day-controls",
+      "state": "first-day-controls / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "44aa6793a2d29471d80479cd71fb0c57a07036a0",
+        "dirty": true,
+        "source_sha256": "1452e9f2b714c7676339a1dbc095520b7e3a0ec4e446f8ebc8d53bfde6d64abe"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "isolated normal UI entry, explicit victory boundary fixture, native replay/selection and fresh first day",
+      "relative_image_path": "images/first-day-controls--844x390--after--1452e9f2.png",
+      "issue_ids": [
+        "UI-025"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T12:42:13.966Z",
+      "data": {
+        "title": false,
+        "overlay": false,
+        "selected": "mage",
+        "startDisabled": false,
+        "seen": "1",
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "game": {
+          "cls": "mage",
+          "day": true,
+          "nights": 0,
+          "kills": 0,
+          "time": 1.4892999999970185,
+          "paused": false,
+          "over": false,
+          "win": false,
+          "heart": 0,
+          "wood": 5,
+          "x": 396.0000000024884,
+          "y": 360.14487999999983,
+          "hp": 78,
+          "maxHp": 78,
+          "flags": {
+            "moved": true,
+            "chopped": true,
+            "gathered": true,
+            "crafted": false,
+            "offered": false,
+            "planted": false,
+            "sawWheat": false,
+            "built": false
+          }
+        }
+      },
+      "metrics": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "document": {
+          "width": 844,
+          "height": 390
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 109.328125,
+            "y": 69,
+            "width": 333.328125,
+            "height": 199.984375,
+            "right": 442.65625,
+            "bottom": 268.984375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 60,
+            "right": 546,
+            "bottom": 335
+          },
+          "toast": {
+            "x": 6,
+            "y": 275,
+            "width": 540,
+            "height": 26,
+            "right": 546,
+            "bottom": 301
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 393,
+            "width": 812,
+            "height": 94.5,
+            "right": 828,
+            "bottom": 487.5
+          },
+          "play-details": {
+            "x": 6,
+            "y": 339,
+            "width": 832,
+            "height": 48,
+            "right": 838,
+            "bottom": 387
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 606,
+            "y": 69,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 558,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 602,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 606,
+            "y": 165,
+            "width": 44,
+            "height": 44,
+            "right": 650,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 654,
+            "y": 117,
+            "width": 44,
+            "height": 44,
+            "right": 698,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 706,
+            "y": 69,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 113,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 706,
+            "y": 117,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 161,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 706,
+            "y": 165,
+            "width": 132,
+            "height": 44,
+            "right": 838,
+            "bottom": 209,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始并跳过开场/预演",
+        "明示胜利边界夹具：三夜后白天、心1、祭坛南12px、时间284、空敌；真实交互献出",
+        "原生Tab到再玩一局，按Space；旧版被挡后用Enter作为实测绕行",
+        "重载选角页，原生Tab到法师按Space；再Tab到开始按Space，旧版分别用Enter绕行",
+        "验证新局无结算/旧按压、初始心0/夜0；真实移动/释放并按Space采树",
+        "拍摄当前dirty源码；无时间加速/用户存档改动"
+      ]
+    }
+  ]
+}
