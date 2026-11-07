@@ -1,0 +1,46 @@
+HEART_DELIVERY_OK 12 after cases; 10 original PNGs
+BEFORE_CAPTURE_OK 12 cases; 10 originals captured from unchanged delivered product d2bc02e.
+CAPTURE_ATTEMPT_1_FAILED desktop reused phone-only details-closed assertion; fixed only test guard. Nine original phone/landscape images retained under session files/heart-delivery-attempt-1, not counted in this batch.
+CAPTURE_ATTEMPT_2_FAILED desktop prompt snapshot raced the next render frame (empty instead of "按 E合成方块之心"); fixture interaction now waits two animation frames before measuring. Nine original images retained under session files/heart-delivery-attempt-2, not counted.
+BEFORE_RUNNER_VERIFIED 12 cases, no screenshots; then final before capture succeeded. No game change was made to resolve these runner errors.
+
+> test
+> node tests/static.mjs && node tests/e2e.mjs
+
+STATIC_OK
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+HEART_DELIVERY_OK 12 after cases; 0 original PNGs
+DEVICE_HINTS_OK 84 cases; 0 actual-viewport PNGs
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":109.5,"y":95,"width":470,"height":282,"right":579.5,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406,"y":280.703125,"width":816,"height":489.59375,"right":1222,"bottom":770.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+E2E_OK
+UI_COVERAGE_OK recorded baseline 172/172; history 305; supplemental 282; read-only, no images captured; not a new-build full-matrix claim
+HEART_DELIVERY_OK 8 before cases; 6 original PNGs
+HEART_DELIVERY_OK 8 after cases; 6 original PNGs
+INDEPENDENT_REVIEW_BUG game.js:825 first/second night must not imply next dawn delivery because nights increments at dusk. Fixed only early-night stored-heart feedback to "先守满三夜"; third-night/day text unchanged.
+REVIEW_FIX_COVERAGE added first/second-night assertions in all four viewports; 12 extra before/after native viewport PNGs. Existing 20 images retain their actual earlier build provenance and are not reshot or relabeled.
+
+> test
+> node tests/static.mjs && node tests/e2e.mjs
+
+STATIC_OK
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+HEART_DELIVERY_OK 20 after cases; 0 original PNGs
+DEVICE_HINTS_OK 84 cases; 0 actual-viewport PNGs
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":109.5,"y":95,"width":470,"height":282,"right":579.5,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406,"y":280.703125,"width":816,"height":489.59375,"right":1222,"bottom":770.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+E2E_OK
+UI_COVERAGE_OK recorded baseline 172/172; history 305; supplemental 294; read-only, no images captured; not a new-build full-matrix claim
+FINAL_LOCAL_GATES_OK game.js syntax + static + e2e20 owned-heart scenarios and existing cost/input/altar guards + coverage + diff whitespace. Independent review finding fixed and retested; coordinator visual review pending.

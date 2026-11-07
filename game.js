@@ -820,6 +820,14 @@
     return state.day && survivedNights() && state.inv.heart > 0;
   }
 
+  function storedHeartHint() {
+    if (canOffer()) return "方块之心已备好，去北边祭坛献祭。";
+    if (!state.day) return survivedNights()
+      ? "方块之心已备好，守住篝火，天亮再献。"
+      : "方块之心已备好，先守满三夜，天亮再献。";
+    return `方块之心已备好，再守 ${WIN_NIGHTS - state.nights} 夜，天亮再献。`;
+  }
+
   function currentGuide() {
     if (!state || state.skippedGuide) return null;
     if (!state.day) return GUIDE[3];
@@ -863,7 +871,8 @@
       chop: "面朝金框的树，按住「采集/攻击」。木头会飞进背包，用来围栅栏。",
       offer: "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
     };
-    guideBody.textContent = step.id === "build" ? wallGuideBody()
+    guideBody.textContent = step.id === "offer" && state.inv.heart > 0 ? storedHeartHint()
+      : step.id === "build" ? wallGuideBody()
       : (touchLayout.matches && touchBody[step.id]) || step.body;
     syncKeysHint(step);
   }
@@ -886,7 +895,8 @@
         ? "此刻：按 1 选栅栏，再点篝火旁发光的格子"
         : "此刻：木头不够围营，再砍金框里的树";
     } else if (step.id === "night") keysHintEl.textContent = "此刻：夜里守篝火 · 左键打怪 · 墙破了按 1 补";
-    else if (step.id === "offer") keysHintEl.textContent = "此刻：工作台按 E 合成，天亮送到北边祭坛";
+    else if (step.id === "offer") keysHintEl.textContent = state.inv.heart > 0
+      ? "此刻：北边祭坛按 E 献祭" : "此刻：工作台按 E 合成，天亮送到北边祭坛";
   }
 
   // 围营步的动态说明
@@ -1451,7 +1461,7 @@
   function craft() {
     const inv = state.inv;
     if (inv.heart > 0) {
-      toast("方块之心已经在背包里。送到北边祭坛。");
+      toast(storedHeartHint());
       return;
     }
     const miss = missingMaterials(NEED);
@@ -2058,7 +2068,8 @@
     const holdHint = touchLayout.matches ? "按住「采集/攻击」" : "按住左键";
     const combatHint = touchLayout.matches ? "按住「采集/攻击」 · 点「技能 Q」" : "左键攻击 · Q 技能";
     if (dist(p.x, p.y, state.bench.x, state.bench.y) < 26 && (state.flags.chopped || materialsReady() || state.inv.heart)) {
-      prompt = materialsReady() || state.inv.heart ? `${interactHint}合成方块之心` : `${interactHint}查看还差哪些材料`;
+      prompt = state.inv.heart > 0 ? storedHeartHint()
+        : materialsReady() ? `${interactHint}合成方块之心` : `${interactHint}查看还差哪些材料`;
     } else if (dist(p.x, p.y, state.altar.x, state.altar.y) < 26) {
       if (!state.day) prompt = "祭坛夜里封着，先守篝火";
       else if (!survivedNights()) prompt = `再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献`;
