@@ -1,0 +1,3477 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "sfx-resume",
+      "state": "sfx-resume / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": false,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/sfx-resume--320x568--before--295f970e.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:03.761Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "suspended",
+          "current_time": 0.312,
+          "gain_levels": [
+            0,
+            0
+          ],
+          "oscillators": 17,
+          "label": "仅音效",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 60,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 44,
+              "right": 314,
+              "bottom": 329.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 94.5,
+              "right": 304,
+              "bottom": 644.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "原生点声音按钮或按M，从声音开切仅音效",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "all-resume",
+      "state": "all-resume / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": false,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/all-resume--320x568--before--295f970e.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:04.093Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "suspended",
+          "current_time": 0.312,
+          "gain_levels": [
+            0.25999999046325684,
+            0.05000000074505806
+          ],
+          "oscillators": 18,
+          "label": "声音开",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 60,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 44,
+              "right": 314,
+              "bottom": 329.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 94.5,
+              "right": 304,
+              "bottom": 644.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 5.7s",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "仅音效后再次挂起；切静音，再切声音开",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "sfx-resume",
+      "state": "sfx-resume / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": false,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/sfx-resume--390x844--before--295f970e.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:04.629Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "suspended",
+          "current_time": 0.312,
+          "gain_levels": [
+            0,
+            0
+          ],
+          "oscillators": 17,
+          "label": "仅音效",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 60,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 353.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 94.5,
+              "right": 374,
+              "bottom": 686.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "原生点声音按钮或按M，从声音开切仅音效",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "all-resume",
+      "state": "all-resume / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": false,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/all-resume--390x844--before--295f970e.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:04.963Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "suspended",
+          "current_time": 0.312,
+          "gain_levels": [
+            0.25999999046325684,
+            0.05000000074505806
+          ],
+          "oscillators": 18,
+          "label": "声音开",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 60,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 353.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 94.5,
+              "right": 374,
+              "bottom": 686.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 5.7s",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "仅音效后再次挂起；切静音，再切声音开",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "sfx-resume",
+      "state": "sfx-resume / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": false,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/sfx-resume--844x390--before--295f970e.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:05.500Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "suspended",
+          "current_time": 0.312,
+          "gain_levels": [
+            0,
+            0
+          ],
+          "oscillators": 16,
+          "label": "仅音效",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 54,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 253.984375
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 60,
+              "right": 546,
+              "bottom": 320
+            },
+            "toast": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 286
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 378,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 472.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 324,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 372
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 54,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 150,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 54,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 102,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 706,
+              "y": 150,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "原生点声音按钮或按M，从声音开切仅音效",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "all-resume",
+      "state": "all-resume / before",
+      "version": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": false,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/all-resume--844x390--before--295f970e.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:05.851Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "suspended",
+          "current_time": 0.312,
+          "gain_levels": [
+            0.25999999046325684,
+            0.05000000074505806
+          ],
+          "oscillators": 17,
+          "label": "声音开",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 54,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 253.984375
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 60,
+              "right": 546,
+              "bottom": 320
+            },
+            "toast": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 286
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 378,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 472.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 324,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 372
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 54,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 150,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 54,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 102,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 5.7s",
+              "x": 706,
+              "y": 150,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "仅音效后再次挂起；切静音，再切声音开",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "all-resume",
+      "state": "all-resume / before",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": false,
+        "source_sha256": "295f970e60da09f874f7fcbf0df3f33cd8f04f5846c42523431f74f50817db5c"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "keyboard M",
+      "full_page": false,
+      "relative_image_path": "images/all-resume--1280x800--before--295f970e.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:06.550Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "suspended",
+          "current_time": 0.32,
+          "gain_levels": [
+            0.25999999046325684,
+            0.05000000074505806
+          ],
+          "oscillators": 16,
+          "label": "声音开",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "document": {
+            "width": 1280,
+            "height": 800
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 96,
+              "y": 93,
+              "width": 796,
+              "height": 477.59375,
+              "right": 892,
+              "bottom": 570.59375
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 96,
+              "y": 578.59375,
+              "width": 796,
+              "height": 35,
+              "right": 892,
+              "bottom": 613.59375
+            },
+            "toast": {
+              "x": 96,
+              "y": 578.59375,
+              "width": 796,
+              "height": 35,
+              "right": 892,
+              "bottom": 613.59375
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 914,
+              "y": 147,
+              "width": 260,
+              "height": 112.5,
+              "right": 1174,
+              "bottom": 259.5
+            },
+            "play-details": {
+              "x": 904,
+              "y": 93,
+              "width": 280,
+              "height": 409.09375,
+              "right": 1184,
+              "bottom": 502.09375
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "←",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "↓",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "→",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "技能 Q 5.8s",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            }
+          ],
+          "canvas_backing": {
+            "width": 960,
+            "height": 576
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": true,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "仅音效后再次挂起；切静音，再切声音开",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "sfx-resume",
+      "state": "sfx-resume / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": true,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/sfx-resume--320x568--after--d52f5123.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:27.342Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "running",
+          "current_time": 0.33066666666666666,
+          "gain_levels": [
+            0,
+            0
+          ],
+          "oscillators": 17,
+          "label": "仅音效",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 60,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 44,
+              "right": 314,
+              "bottom": 329.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 94.5,
+              "right": 304,
+              "bottom": 644.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "原生点声音按钮或按M，从声音开切仅音效",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "all-resume",
+      "state": "all-resume / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": true,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/all-resume--320x568--after--d52f5123.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:27.642Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "running",
+          "current_time": 0.5306666666666666,
+          "gain_levels": [
+            0.25999999046325684,
+            0.05000000074505806
+          ],
+          "oscillators": 18,
+          "label": "声音开",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "document": {
+            "width": 320,
+            "height": 568
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 308,
+              "height": 184.796875,
+              "right": 314,
+              "bottom": 279.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 60,
+              "right": 314,
+              "bottom": 345.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 285.796875,
+              "width": 308,
+              "height": 44,
+              "right": 314,
+              "bottom": 329.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 549.796875,
+              "width": 288,
+              "height": 94.5,
+              "right": 304,
+              "bottom": 644.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 495.796875,
+              "width": 308,
+              "height": 48,
+              "right": 314,
+              "bottom": 543.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 351.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 447.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 399.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 351.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 395.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 399.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 443.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 5.8s",
+              "x": 154,
+              "y": 447.796875,
+              "width": 160,
+              "height": 44,
+              "right": 314,
+              "bottom": 491.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "仅音效后再次挂起；切静音，再切声音开",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "sfx-resume",
+      "state": "sfx-resume / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": true,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/sfx-resume--390x844--after--d52f5123.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:28.211Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "running",
+          "current_time": 0.33066666666666666,
+          "gain_levels": [
+            0,
+            0
+          ],
+          "oscillators": 17,
+          "label": "仅音效",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 60,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 353.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 94.5,
+              "right": 374,
+              "bottom": 686.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "原生点声音按钮或按M，从声音开切仅音效",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "all-resume",
+      "state": "all-resume / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": true,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/all-resume--390x844--after--d52f5123.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:28.510Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "running",
+          "current_time": 0.5306666666666666,
+          "gain_levels": [
+            0.25999999046325684,
+            0.05000000074505806
+          ],
+          "oscillators": 18,
+          "label": "声音开",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "width": 390,
+            "height": 844
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 6,
+              "y": 95,
+              "width": 378,
+              "height": 226.796875,
+              "right": 384,
+              "bottom": 321.796875
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 60,
+              "right": 384,
+              "bottom": 387.796875
+            },
+            "toast": {
+              "x": 6,
+              "y": 327.796875,
+              "width": 378,
+              "height": 26,
+              "right": 384,
+              "bottom": 353.796875
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 591.796875,
+              "width": 358,
+              "height": 94.5,
+              "right": 374,
+              "bottom": 686.296875
+            },
+            "play-details": {
+              "x": 6,
+              "y": 537.796875,
+              "width": 378,
+              "height": 48,
+              "right": 384,
+              "bottom": 585.796875
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 54,
+              "y": 393.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 6,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 50,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 54,
+              "y": 489.796875,
+              "width": 44,
+              "height": 44,
+              "right": 98,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 102,
+              "y": 441.796875,
+              "width": 44,
+              "height": 44,
+              "right": 146,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 154,
+              "y": 393.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 437.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 154,
+              "y": 441.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 485.796875,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 5.8s",
+              "x": 154,
+              "y": 489.796875,
+              "width": 230,
+              "height": 44,
+              "right": 384,
+              "bottom": 533.796875,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "仅音效后再次挂起；切静音，再切声音开",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "sfx-resume",
+      "state": "sfx-resume / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": true,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/sfx-resume--844x390--after--d52f5123.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:29.083Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "running",
+          "current_time": 0.3413333333333333,
+          "gain_levels": [
+            0,
+            0
+          ],
+          "oscillators": 17,
+          "label": "仅音效",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 54,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 253.984375
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 60,
+              "right": 546,
+              "bottom": 320
+            },
+            "toast": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 286
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 378,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 472.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 324,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 372
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 54,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 150,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 54,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 102,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 就绪",
+              "x": 706,
+              "y": 150,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "原生点声音按钮或按M，从声音开切仅音效",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "all-resume",
+      "state": "all-resume / after",
+      "version": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": true,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "native sound-button taps",
+      "full_page": false,
+      "relative_image_path": "images/all-resume--844x390--after--d52f5123.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:29.399Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "running",
+          "current_time": 0.552,
+          "gain_levels": [
+            0.25999999046325684,
+            0.05000000074505806
+          ],
+          "oscillators": 18,
+          "label": "声音开",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "document": {
+            "width": 844,
+            "height": 390
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 109.328125,
+              "y": 54,
+              "width": 333.328125,
+              "height": 199.984375,
+              "right": 442.65625,
+              "bottom": 253.984375
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 60,
+              "right": 546,
+              "bottom": 320
+            },
+            "toast": {
+              "x": 6,
+              "y": 260,
+              "width": 540,
+              "height": 26,
+              "right": 546,
+              "bottom": 286
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 16,
+              "y": 378,
+              "width": 812,
+              "height": 94.5,
+              "right": 828,
+              "bottom": 472.5
+            },
+            "play-details": {
+              "x": 6,
+              "y": 324,
+              "width": 832,
+              "height": 48,
+              "right": 838,
+              "bottom": 372
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 606,
+              "y": 54,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "←",
+              "x": 558,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 602,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "↓",
+              "x": 606,
+              "y": 150,
+              "width": 44,
+              "height": 44,
+              "right": 650,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "→",
+              "x": 654,
+              "y": 102,
+              "width": 44,
+              "height": 44,
+              "right": 698,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 706,
+              "y": 54,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 98,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 706,
+              "y": 102,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 146,
+              "touch_action": "none",
+              "hit_target": true
+            },
+            {
+              "label": "技能 Q 5.8s",
+              "x": 706,
+              "y": 150,
+              "width": 132,
+              "height": 44,
+              "right": 838,
+              "bottom": 194,
+              "touch_action": "none",
+              "hit_target": true
+            }
+          ],
+          "canvas_backing": {
+            "width": 640,
+            "height": 384
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": false,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "仅音效后再次挂起；切静音，再切声音开",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    },
+    {
+      "screen_id": "all-resume",
+      "state": "all-resume / after",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "b292b989c1aefb2f3e4103aab4d636d04e9e5bfe",
+        "dirty": true,
+        "source_sha256": "d52f5123fa405b3cc70d52076ecbadbbb438d1682df433b62627b0d6cf2945a3"
+      },
+      "source": "normal knight entry; actual AudioContext.suspend fixture",
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "input": "keyboard M",
+      "full_page": false,
+      "relative_image_path": "images/all-resume--1280x800--after--d52f5123.png",
+      "issue_ids": [
+        "UI-015"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查；图片不证明听感",
+      "captured_at": "2026-11-07T03:39:30.067Z",
+      "result": {
+        "audio": {
+          "native_audio_available": true,
+          "contexts": 1,
+          "state": "running",
+          "current_time": 0.4613333333333333,
+          "gain_levels": [
+            0.25999999046325684,
+            0.05000000074505806
+          ],
+          "oscillators": 16,
+          "label": "声音开",
+          "inv": {
+            "wood": 2,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "hp": 165,
+          "over": false
+        },
+        "metrics": {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "document": {
+            "width": 1280,
+            "height": 800
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rects": {
+            "game": {
+              "x": 96,
+              "y": 93,
+              "width": 796,
+              "height": 477.59375,
+              "right": 892,
+              "bottom": 570.59375
+            },
+            "wave-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "notice-feed": {
+              "x": 96,
+              "y": 578.59375,
+              "width": 796,
+              "height": 35,
+              "right": 892,
+              "bottom": 613.59375
+            },
+            "toast": {
+              "x": 96,
+              "y": 578.59375,
+              "width": 796,
+              "height": 35,
+              "right": 892,
+              "bottom": 613.59375
+            },
+            "prompt": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "build-banner": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0
+            },
+            "guide": {
+              "x": 914,
+              "y": 147,
+              "width": 260,
+              "height": 112.5,
+              "right": 1174,
+              "bottom": 259.5
+            },
+            "play-details": {
+              "x": 904,
+              "y": 93,
+              "width": 280,
+              "height": 409.09375,
+              "right": 1184,
+              "bottom": 502.09375
+            }
+          },
+          "buttons": [
+            {
+              "label": "↑",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "←",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "↓",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "→",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "采集/攻击 按住 · 空格",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "交互 E 合成 / 播种 / 献祭",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            },
+            {
+              "label": "技能 Q 5.9s",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "right": 0,
+              "bottom": 0,
+              "touch_action": "auto",
+              "hit_target": false
+            }
+          ],
+          "canvas_backing": {
+            "width": 960,
+            "height": 576
+          },
+          "notice_text": [
+            {
+              "id": "toast",
+              "text": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+              "hidden": false
+            },
+            {
+              "id": "prompt",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "build-banner",
+              "text": "",
+              "hidden": true
+            },
+            {
+              "id": "wave-banner",
+              "text": "",
+              "hidden": true
+            }
+          ],
+          "details_open": true,
+          "guide_title": "第一步：走起来"
+        }
+      },
+      "repro_steps": [
+        "隔离上下文正常选骑士并跳过开场/预演；保留正常库存，不碰用户存档",
+        "只记录原生AudioContext/节点，实际调用原生suspend模拟挂起；不伪造音频API/音源，不改游戏时钟",
+        "仅音效后再次挂起；切静音，再切声音开",
+        "记录真实上下文状态/音频时钟/原音乐与底音增益；图片仅冻结游戏模拟，100%真实首屏"
+      ]
+    }
+  ],
+  "visual_review": "待协调人逐图审查；实际恢复以validation.json的音频行为为证"
+}
