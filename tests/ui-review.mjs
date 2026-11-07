@@ -86,7 +86,10 @@ if (process.argv.includes("--check-coverage")) {
     for (const row of data.screenshots) {
       if (row.status !== "已截" || !row.relative_image_path) throw new Error(`Incomplete batch: ${batch.id}`);
       const png = await readFile(join(OUT, batch.id, ...row.relative_image_path.split("/")));
-      if (!row.full_page && (png.readUInt32BE(16) !== row.viewport.width || png.readUInt32BE(20) !== row.viewport.height)) {
+      const dpr = row.device_scale_factor ?? 1;
+      if (!Number.isFinite(dpr) || dpr <= 0) throw new Error(`Invalid screenshot DPR: ${batch.id} ${row.relative_image_path}`);
+      if (!row.full_page && (png.readUInt32BE(16) !== Math.round(row.viewport.width * dpr)
+        || png.readUInt32BE(20) !== Math.round(row.viewport.height * dpr))) {
         throw new Error(`Not an actual viewport PNG: ${batch.id} ${row.relative_image_path}`);
       }
     }

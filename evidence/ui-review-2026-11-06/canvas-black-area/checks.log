@@ -1,0 +1,34 @@
+FINAL_LOCAL_STATIC_OK npm run test:static; node --check game.js.
+FINAL_LOCAL_E2E_OK node tests/e2e.mjs; e2e-final-pass.log; final-pass-cleanup.log.
+FINAL_SOURCE native first-wood frame budgets 3.391/3.394/3.355, wall 3.390/3.393/3.524; single natural notification, unchanged 3.4 parameter.
+FINAL_SOURCE FIRST_FENCE_OK four ordinary mage input paths plus explicitly labeled day boundary.
+FINAL_SOURCE CANVAS_PROBE_OK WebKit 29 native states, phase path assertions, no world/save injection.
+FINAL_SOURCE WIDE_TOUCH_OK 11 measured cases; 0 new PNGs from that check.
+PUBLIC_OK actual e35452c582ef21e4290c9794d60146c6e37c2848, all 7 static resources match captured version.json in every context; GET only.
+PUBLIC_TLS strict curl successful; browser ignoreHTTPSErrors=true capture is not certificate assurance.
+ORIGINAL_PNG_OK public/before/after each29, total87 unique, 15932573 bytes; DPR1/2/3 physical dimensions, no resizing.
+AFTER_CHROMIUM_OK 29 ordinary native states; top/bottom stage margins <1px, bitmap5samples alpha255, no page scroll, minimum44px controls.
+GEOMETRY wide1484 touch closed/open vertical margins165.703/189.703px ->0; unchanged320/390/844 and fine-pointer canvas rectangles.
+GEOMETRY normal844 horizontal letterboxing retained; not cropped or mistaken for this defect.
+PRODUCT_FILES game.js/index.html unchanged; product3file combined Windows HTTP/files SHA256 9306fde18c152cc62547e5b5d62759232417d5014aa568d37e05a515d13def6b.
+UI_COVERAGE_OK baseline172/172, history305, supplemental751; read-only old+new records, NOT a new-build full-matrix capture.
+COVERAGE first old validator rejected a real2968x2080 DPR2 PNG. Fixed declared-DPR dimension checking, no high-DPR skip. coverage.log.
+INDEPENDENT_REVIEW main and narrow follow-ups completed; review.log/review-followup.log. Phase-shadowing finding fixed and final full regression passes.
+BEFORE_GUARD_NEGATIVE_OK unchanged-parent-only explicit capture rejected current dirty product; before-guard.log. No retained before image changed.
+TOAST_CLOCK_NORMAL_OK 320/390/1280 original inputs; frame~3.386, wall~3.382.
+TOAST_CLOCK_STRESS_OK isolated renderer-load fixture; frame3.351-3.384, wall4.450-4.482; old wall bound would fail despite unchanged timer.
+TOAST_CLOCK_LATE_HIDE_REJECTED isolated DOM400ms hide-delay fixture; correct duration assertion rejection; no screenshots/source/world/save modifications.
+HISTORICAL_FAILURE hint precision wait once timed out; e2e-device-hint-timeout.log. Exact original state not captured then; later diagnostic-only catch added, focused84hints/wide11 and complete reruns passed. Cause not conclusively established.
+HISTORICAL_FAILURE final-source attempt had old wall-duration assertion3.628; e2e-final-source.log. Fixed clock metric, original game timer/input/timeout untouched.
+HISTORICAL_FAILURE assertion import missing after adding phase regression; e2e-final-complete.log. Imported node:assert/strict; final-tail.log and complete e2e-final-pass.log both pass.
+HISTORICAL_FAILURE early844 full-card visibility assumptions corrected to real44px visible hit; public/before-short-title-failure.log retained.
+INVALID_PROOF shadowed-phase run captured no PNGs; phase-label-shadowed.log is geometry-only, not phase proof.
+INVALID_PROOF attempted response3.8 mutation hit source-hash guard first, not duration guard; toast-clock-hash-guard.log retained.
+INVALID_PROOF early globalDOMprototype late-hide fixture failed native startup, not duration guard; toast-clock-delayed-prototype.log retained. Final observer-only negative succeeds.
+PROTECTION natural-loop-a342ef0/result.json SHA256 964230c5914271f326300ca2c0fe82122b87f43d3bf2111d5b2363a75089596d; old metadata preserved excluding only UI029 addition.
+OFFICE owned GUID D:\.tmp\agents\cube-epoch roots; process TEMP/TMP/TMPDIR/profile/cache onD, existingC binaries read-only; own browser exits and exact cleanup logged.
+CLEANUP_TEST normal, simulated exception/timeout/cooperative-cancel and independent decoy protection tested; NOT actual forced OS termination.
+LIMITATIONS no physical devices, exact original browser/DPR identification, new natural3night run, or new night/result PNGs. WindowsWebKit nativeAudio API unavailable; compatibility labels/gameplay only there.
+VISUAL_REVIEW_PENDING all87 current batch originals await user/coordinator review; test success is not layout approval.
+RELEASE_NONE no main push/merge, Pages/Tencent deployment or public package modification. Existing PR25 kept independent.
+CI pending commit/push; exact-head Linux static/e2e result will be retained separately after completion, not retroactively stamped into captures.

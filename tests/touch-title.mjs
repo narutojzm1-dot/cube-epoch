@@ -67,6 +67,11 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
         await page.waitForTimeout(120);
       };
       const activate = async (selector, reload = false) => {
+        await page.waitForFunction((selector) => {
+          const el = document.querySelector(selector), box = el?.getBoundingClientRect();
+          return el?.getClientRects().length && !el.disabled && box.y + box.height / 2 >= 0 && box.y + box.height / 2 < innerHeight
+            && el.contains(document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2));
+        }, selector);
         const box = await page.locator(selector).boundingBox();
         assert.ok(box && box.y + box.height / 2 >= 0 && box.y + box.height / 2 < viewport.height,
           `activation must already be in viewport: ${selector}`);
@@ -163,19 +168,28 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
           const el = document.getElementById("toast");
           window.__firstWoodToastEvents = [];
           let visible = false;
+          let frameSeconds = 0, previousFrame, frameId;
+          // Toasts use the game's capped frame budget, not load-dependent wall time.
+          const sampleFrame = (now) => {
+            if (previousFrame !== undefined) frameSeconds += Math.min((now - previousFrame) / 1000, 0.05);
+            previousFrame = now;
+            frameId = requestAnimationFrame(sampleFrame);
+          };
+          frameId = requestAnimationFrame(sampleFrame);
           new MutationObserver((changes) => {
             for (const change of changes) {
               if (change.type !== "childList") continue;
               const text = [...change.addedNodes].map((node) => node.textContent).join("");
               if (/^木头进(?:背包了|包)。/.test(text)) {
-                window.__firstWoodToastEvents.push({ kind: "message", text, time: CUBE.getState().time, real_ms: performance.now() });
+                window.__firstWoodToastEvents.push({ kind: "message", text, time: CUBE.getState().time, real_ms: performance.now(), frame_seconds: frameSeconds });
               }
             }
             if (!/^木头进(?:背包了|包)。/.test(el.textContent)) return;
             const next = !el.classList.contains("hidden");
             if (next !== visible) {
-              window.__firstWoodToastEvents.push({ kind: next ? "show" : "hide", time: CUBE.getState().time, real_ms: performance.now() });
+              window.__firstWoodToastEvents.push({ kind: next ? "show" : "hide", time: CUBE.getState().time, real_ms: performance.now(), frame_seconds: frameSeconds });
               visible = next;
+              if (!next) cancelAnimationFrame(frameId);
             }
           }).observe(el, { childList: true, attributes: true, attributeFilter: ["class"] });
         });
@@ -226,11 +240,13 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
         assert.equal(messages.length, 1, "remaining wood pickups must not retrigger the first-wood toast");
         const hidden = expired.wood_events.find((event) => event.kind === "hide");
         const duration = hidden.time - messages[0].time, realDuration = (hidden.real_ms - messages[0].real_ms) / 1000;
-        assert.ok(realDuration >= 3.3 && realDuration <= 3.55, `natural toast duration changed: ${realDuration}`);
-        console.log(`FIRST_WOOD_DURATION ${viewport.width} game=${duration} real=${realDuration}`);
+        const frameDuration = hidden.frame_seconds - messages[0].frame_seconds;
+        assert.ok(frameDuration >= 3.3 && frameDuration <= 3.55, `natural toast duration changed: frame=${frameDuration} real=${realDuration}`);
+        assert.ok(realDuration >= 3.3, `first-wood toast expired too early: ${realDuration}`);
+        console.log(`FIRST_WOOD_DURATION ${viewport.width} game=${duration} frame=${frameDuration} real=${realDuration}`);
         assert.equal(expired.toast.visible, false); assert.equal(expired.game.gathered, true);
         assert.ok(expired.game.wood >= controlled.game.wood);
-        records.push({ viewport, controlled, settled, expired, duration, real_duration: realDuration, input_log: inputs });
+        records.push({ viewport, controlled, settled, expired, duration, frame_duration: frameDuration, real_duration: realDuration, input_log: inputs });
         assert.deepEqual(errors, []);
         if (cdp) await cdp.detach();
         continue;

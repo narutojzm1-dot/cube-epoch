@@ -1,0 +1,63 @@
+2026-11-07T18:29:16.994Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=D:\.tmp\agents\cube-epoch\clock-fixture-final-c2872bf350494a77834ebbe14cef7057\tmp\playwright_chromiumdev_profile-4gPPwa --remote-debugging-pipe --no-startup-window
+2026-11-07T18:29:17.001Z pw:browser <launched> pid=92884
+FIRST_WOOD_INPUT 320 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.31419999999403947,"x":392,"y":360.01919999999996,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.36419999999403946,"x":394.1376,"y":360.76287999999994,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.2147999999940395,"x":395.9999999955788,"y":360.76287999999994,"paused":false,"over":false,"gathered":true}
+2026-11-07T18:29:20.859Z pw:browser [pid=92884][err] [92884:99112:1108/022920.858:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+FIRST_WOOD_DURATION 320 game=3.336100000000002 frame=3.3861000000000017 real=3.3815999999940396
+FIRST_WOOD_INPUT 390 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.33029999997615817,"x":392,"y":360.0128000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.38029999997615804,"x":394.13120000000004,"y":360.7609600000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":5,"time":1.2143999999761577,"x":395.99999998291935,"y":360.7609600000002,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 390 game=3.336000000000005 frame=3.386100000000006 real=3.3816000000089406
+FIRST_WOOD_INPUT 1280 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.268900000011921,"x":392,"y":358.95680000000004,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.28550000001192094,"x":393.0624,"y":358.95680000000004,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.102900000011921,"x":395.55284208105144,"y":358.95680000000004,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 1280 game=3.3360999999999983 frame=3.386099999999998 real=3.3815
+FIRST_WOOD_TOAST_OK chromium after: 320/390 touch layout + desktop, ordinary native gather/release, single pickup feedback, natural3.4s, fully visible toast
+TOAST_CLOCK_NORMAL_OK three original-input viewports
+TOAST_CLOCK_STRESS_BEGIN isolated render-load fixture; source/world/save unchanged
+FIRST_WOOD_INPUT 320 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.31329999999701974,"x":392,"y":360.0064,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.36329999999701973,"x":394.1312,"y":360.75455999999997,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.19749999999702,"x":395.9999999822405,"y":360.75455999999997,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 320 game=3.3341999999999965 frame=3.384299999999995 real=4.44920000000298
+FIRST_WOOD_INPUT 390 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3140999999970199,"x":392,"y":360.0128000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.36409999999701986,"x":394.1376,"y":360.7564800000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.1981999999970199,"x":395.999999982446,"y":360.7564800000002,"paused":false,"over":false,"gathered":true}
+2026-11-07T18:29:45.512Z pw:browser [pid=92884][err] [92884:99112:1108/022945.512:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+FIRST_WOOD_DURATION 390 game=3.368699999999998 frame=3.385399999999998 real=4.450600000008941
+FIRST_WOOD_INPUT 1280 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.2648000000059605,"x":392,"y":358.9376000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.2815000000059605,"x":393.0688,"y":358.9376000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.09890000000596,"x":395.5599695572614,"y":358.9376000000002,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_DURATION 1280 game=3.334799999999995 frame=3.384799999999994 real=4.465699999988079
+FIRST_WOOD_TOAST_OK chromium after: 320/390 touch layout + desktop, ordinary native gather/release, single pickup feedback, natural3.4s, fully visible toast
+TOAST_CLOCK_STRESS_OK
+2026-11-07T18:30:25.322Z pw:browser [pid=92884] <gracefully close start>
+2026-11-07T18:30:25.469Z pw:browser [pid=92884] <process did exit: exitCode=0, signal=null>
+2026-11-07T18:30:25.469Z pw:browser [pid=92884] starting temporary directories cleanup
+2026-11-07T18:30:25.479Z pw:browser [pid=92884] finished temporary directories cleanup
+2026-11-07T18:30:25.479Z pw:browser [pid=92884] <gracefully close end>
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /natural toast duration changed: frame=/. Input:
+
+'TimeoutError: page.waitForFunction: Timeout 30000ms exceeded.'
+
+    at async file:///D:/work/projects/cube-epoch/evidence/ui-review-2026-11-06/canvas-black-area/toast-clock-probes.mjs:52:3 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: page.waitForFunction: Timeout 30000ms exceeded.
+      at activate (D:\work\projects\cube-epoch\tests\touch-title.mjs:70:20)
+      at testTouchTitle (D:\work\projects\cube-epoch\tests\touch-title.mjs:160:13)
+      at async testFirstWoodToast (D:\work\projects\cube-epoch\tests\touch-title.mjs:288:3)
+      at async file:///D:/work/projects/cube-epoch/evidence/ui-review-2026-11-06/canvas-black-area/toast-clock-probes.mjs:52:3 {
+    log: [],
+    name: 'TimeoutError'
+  },
+  expected: /natural toast duration changed: frame=/,
+  operator: 'rejects',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

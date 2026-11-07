@@ -1,3 +1,4 @@
+import assert from "node:assert/strict";
 import { serve, launch, enterPlay } from "./helpers.mjs";
 import { testNightUI } from "./night-ui.mjs";
 import { testCoreLayout, testDeviceHints, testWideTouchLayout } from "./layout-ui.mjs";
@@ -16,6 +17,7 @@ import { testAltarArrival } from "./altar-arrival.mjs";
 import { testVictoryRestart } from "./victory-restart.mjs";
 import { testTouchTitle, testFirstWoodToast } from "./touch-title.mjs";
 import { testFirstFence } from "./first-fence.mjs";
+import { testCanvasBlackArea } from "./canvas-black-area.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -461,6 +463,10 @@ await testVictoryRestart(browser, origin);
 await testTouchTitle(browser, origin);
 await testFirstWoodToast(browser, origin);
 await testFirstFence(browser, origin);
+const canvasSnapshots = await testCanvasBlackArea(browser, origin, { enforce: true });
+assert.equal(canvasSnapshots.length, 29);
+assert.ok(canvasSnapshots.every((row) => row.relative_image_path.includes("--after--")),
+  "current canvas evidence must not be classified as parent or remote version data");
 await testDeviceHints(browser, origin);
 await testWideTouchLayout(browser, origin);
 await browser.close();

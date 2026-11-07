@@ -1,0 +1,5 @@
+
+> test:static
+> node tests/static.mjs
+
+STATIC_OK
