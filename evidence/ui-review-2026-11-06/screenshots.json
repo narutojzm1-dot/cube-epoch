@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "map-placement",
+      "base_sha": "a510ac1200163f88e5579d888df8ea772a38c57b",
+      "index": "map-placement/INDEX.md",
+      "screenshots": "map-placement/screenshots.json",
+      "issue_ids": ["UI-019"],
+      "status": "已截",
+      "visual_review": "16张320/390/844触控及1280键鼠前后原图待协调逐图审查；普通首局路径+明确只读调试观测桥，不是纯净生产字节或真机。原图正常输入与后续合成取消/兼容事件边界分开，旧图保留"
+    },
+    {
       "id": "build-success-feedback",
       "base_sha": "c6165aed7dc2548986a43150a36b45356349472e",
       "index": "build-success-feedback/INDEX.md",
@@ -139,6 +148,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-019",
+      "title": "快速触屏点图候选被兼容mouseleave清掉，844反向点空地误放",
+      "status": "已修复，待协调人逐图审查",
+      "before": "map-placement/map-after-tap before",
+      "after": "map-placement/map-after-tap after"
+    },
     {
       "id": "UI-018",
       "title": "补料后成功放火把仍显示旧缺料提示，部分成功放置没有确认",
