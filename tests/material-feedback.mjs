@@ -35,18 +35,28 @@ const cases = [
   { id: "craft-enough", inv: { wood: 4, stone: 5, gold: 3, wheat: 3 },
     delta: { wood: -4, stone: -5, gold: -3, wheat: -3, heart: 1 }, capture: true },
   { id: "craft-stored", inv: { heart: 1, wood: 4, stone: 5, gold: 3, wheat: 3 },
-    message: "方块之心已经在背包里。送到北边祭坛。" },
+    message: "方块之心已备好，再守 3 夜，天亮再献。" },
 ];
 
 async function scenario(page, origin, c, version) {
   await page.goto(origin);
   await enterPlay(page, c.role || "knight");
-  const before = await page.evaluate(({ inv, kind, repair }) => {
+  const before = await page.evaluate(({ inv, kind, repair, delivery }) => {
     const s = window.CUBE.getState();
     for (const key of Object.keys(s.inv)) s.inv[key] = inv[key] || 0;
     s.player.x = kind ? s.camp.x + 32 : s.bench.x;
     s.player.y = kind ? s.camp.y + 16 : s.bench.y + 12;
     s.player.vx = s.player.vy = 0;
+    if (delivery) {
+      s.day = delivery.day;
+      s.nights = delivery.nights;
+      s.flags.moved = s.flags.chopped = true;
+      const tx = Math.floor(s.camp.x / 16), ty = Math.floor(s.camp.y / 16);
+      for (const [dx, dy] of [[0, -1], [-1, 0], [1, 0], [0, 1]]) {
+        s.tiles[(ty + dy) * 48 + tx + dx] = 12;
+        s.fenceHp.set(`${tx + dx},${ty + dy}`, 80);
+      }
+    }
     if (kind) {
       s.tiles[20 * 48 + 22] = repair ? 12 : 1;
       if (repair) s.fenceHp.set("22,20", 20);
@@ -68,6 +78,8 @@ async function scenario(page, origin, c, version) {
         y: r.y + (20 * 16 + 8 - cam.y) * r.height / 192 };
     });
     await page.touchscreen.tap(point.x, point.y);
+  } else if (c.mouse) {
+    await page.keyboard.press("e");
   } else {
     await page.locator("#touch-interact").tap();
   }
@@ -86,6 +98,8 @@ async function scenario(page, origin, c, version) {
     });
     throw new Error(`${c.id} / ${version}: ${JSON.stringify(debug)}`, { cause: error });
   });
+  if (c.delivery) await page.evaluate(() => new Promise((resolve) =>
+    requestAnimationFrame(() => requestAnimationFrame(resolve))));
   const result = await page.evaluate(() => {
     const s = window.CUBE.getState();
     const rect = (el) => {
@@ -98,8 +112,13 @@ async function scenario(page, origin, c, version) {
     return {
       inv: { ...s.inv }, tile: s.tiles[20 * 48 + 22], fence_hp: s.fenceHp.get("22,20") || null,
       held: document.querySelectorAll("#touch-controls .held").length,
+      touch_layout: matchMedia("(any-pointer: coarse), (max-width: 760px)").matches,
       scroll: { x: scrollX, y: scrollY }, details_open: document.getElementById("play-details").open,
       message: toast.textContent, canvas: rect(canvas), canvas_backing: { width: canvas.width, height: canvas.height },
+      prompt: document.getElementById("prompt").textContent,
+      prompt_rect: rect(document.getElementById("prompt")),
+      guide_body: document.getElementById("guide-body").textContent,
+      keys_hint: document.getElementById("keys-hint").textContent,
       feed: rect(feed), toast: rect(toast), document_width: document.documentElement.scrollWidth,
       controls: [...document.querySelectorAll("#touch-controls button")].map((el) => {
         const r = rect(el);
@@ -116,8 +135,120 @@ async function scenario(page, origin, c, version) {
   if (c.repair && c.message) assert.equal(result.fence_hp, 20, "shortage must not repair");
   assert.equal(result.held, 0, "native tap must release");
   assert.deepEqual(result.scroll, { x: 0, y: 0 }, "native actions must not scroll");
-  assert.equal(result.details_open, false, "core controls must be reachable after choosing construction");
+  if (!c.mouse) assert.equal(result.details_open, false, "core controls must be reachable after choosing construction");
   return { before, ...result };
+}
+
+export async function testHeartDelivery(browser, origin, { capture = false, before = false, only = null } = {}) {
+  const dir = join(ROOT, "evidence", "ui-review-2026-11-06", "heart-delivery");
+  const sha = execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT }).toString().trim();
+  const dirty = !!execFileSync("git", ["status", "--porcelain", "--", "index.html", "style.css", "game.js"], { cwd: ROOT }).toString().trim();
+  if (before && !only) {
+    assert.equal(sha, "d2bc02e15e112dcd5e247064490e42cd5c3021fe");
+    assert.equal(dirty, false, "before originals require the unchanged delivered product");
+  }
+  const files = ["index.html", "style.css", "game.js"];
+  const buffers = before && only
+    ? files.map((f) => execFileSync("git", ["show", `d2bc02e15e112dcd5e247064490e42cd5c3021fe:${f}`], { cwd: ROOT }))
+    : await Promise.all(files.map((f) => readFile(join(ROOT, f))));
+  const hash = createHash("sha256").update(Buffer.concat(buffers)).digest("hex");
+  const deliveryCases = [
+    { id: "stored-before-nights", delivery: { day: true, nights: 0 }, message: "方块之心已备好，再守 3 夜，天亮再献。" },
+    { id: "stored-third-night", delivery: { day: false, nights: 3 }, message: "方块之心已备好，守住篝火，天亮再献。" },
+    { id: "stored-ready", delivery: { day: true, nights: 3 }, message: "方块之心已备好，去北边祭坛献祭。" },
+    { id: "stored-first-night", delivery: { day: false, nights: 1 }, message: "方块之心已备好，先守满三夜，天亮再献。" },
+    { id: "stored-second-night", delivery: { day: false, nights: 2 }, message: "方块之心已备好，先守满三夜，天亮再献。" },
+  ];
+  const screenshots = [], checks = [];
+  const version = before ? "before" : "after";
+  for (const viewport of [...viewports, { width: 844, height: 390 }, { width: 1280, height: 800 }]) {
+    const touch = viewport.width !== 1280;
+    const context = await browser.newContext({ viewport, isMobile: touch, hasTouch: touch, deviceScaleFactor: 1 });
+    try {
+      const page = await context.newPage(), errors = [];
+      page.on("pageerror", (e) => errors.push(e.message));
+      if (before && only) {
+        await page.route(origin, (r) => r.fulfill({ body: buffers[0], contentType: "text/html" }));
+        for (let i = 0; i < files.length; i++) await page.route(`**/${files[i]}`, (r) => r.fulfill({
+          body: buffers[i], contentType: i === 0 ? "text/html" : i === 1 ? "text/css" : "text/javascript",
+        }));
+      }
+      for (const c of deliveryCases.filter((c) => !only || only.includes(c.id))) {
+        const result = await scenario(page, origin, { ...c,
+          mouse: !touch,
+          before: "方块之心已经在背包里。送到北边祭坛。",
+          inv: { heart: 1, wood: 4, stone: 5, gold: 3, wheat: 3, seed: 2 },
+        }, version);
+        assert.equal(result.prompt, before ? `${touch ? "点「交互 E」" : "按 E"}合成方块之心` : c.message);
+        assert.equal(result.touch_layout, touch, "actual media/input layout must match the recorded context");
+        if (!before && c.delivery.day && c.delivery.nights === 3) {
+          assert.equal(result.guide_body, c.message);
+          if (!touch) assert.equal(result.keys_hint, "此刻：北边祭坛按 E 献祭");
+        }
+        if (touch && viewport.width < 400) checkLayout(result, viewport);
+        if (touch && !before) assert.ok(result.prompt_rect.bottom <= result.feed.bottom + 0.5,
+          "stored-heart prompt and toast must both fit the bounded feedback area");
+        if (touch && viewport.width === 844) {
+          for (const r of [result.canvas, ...result.controls]) {
+            assert.ok(r.x >= 0 && r.y >= 0 && r.right <= viewport.width + 0.5 && r.bottom <= viewport.height + 0.5);
+          }
+          for (const b of result.controls) assert.ok(b.width >= 44 && b.height >= 44 && b.hit_target);
+          assert.ok(result.toast.bottom <= result.feed.bottom + 0.5);
+        }
+        if (touch) await page.locator("#touch-interact").tap();
+        else await page.keyboard.press("e");
+        const repeated = await page.evaluate(() => ({
+          inv: { ...window.CUBE.getState().inv }, held: document.querySelectorAll("#touch-controls .held").length,
+          scroll: { x: scrollX, y: scrollY },
+        }));
+        assert.deepEqual(repeated.inv, result.inv,
+          "repeated interaction with stored heart must not recraft or consume");
+        assert.equal(repeated.held, 0, "repeat must release the touch button");
+        assert.deepEqual(repeated.scroll, { x: 0, y: 0 }, "repeated interaction must not scroll");
+        assert.equal(await page.evaluate(() => window.CUBE.getState().over), false, "bench interaction must not win");
+        checks.push({ screen_id: c.id, version, viewport, input: touch ? "native touch" : "mouse/keyboard", result });
+        if (capture && (touch || c.id === "stored-ready")) {
+          await page.evaluate(() => { window.CUBE.getState().paused = true; });
+          const filename = `${c.id}--${viewport.width}x${viewport.height}--${version}--${hash.slice(0, 8)}.png`;
+          await mkdir(join(dir, "images"), { recursive: true });
+          await page.screenshot({ path: join(dir, "images", filename), fullPage: false });
+          screenshots.push({
+            screen_id: c.id, state: `${c.id} / ${version}`, viewport, language: "zh-CN",
+            build: { sha: before ? "d2bc02e15e112dcd5e247064490e42cd5c3021fe" : sha,
+              dirty: !before && dirty, source_sha256: hash }, source: "fixture / isolated browser context",
+            platform: "Web / WebKit", ui_scale: "100%", device_scale_factor: 1, full_page: false,
+            input: touch ? "native touch" : "mouse/keyboard", touchLayout: touch,
+            relative_image_path: `images/${filename}`, issue_ids: ["UI-011"], status: "已截",
+            visual_review: "待协调人逐图审查", captured_at: new Date().toISOString(), metrics: result,
+            repro_steps: [
+              "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+              before && only ? "内存route提供d2bc02e原HTML/CSS/JS，不切换工作区"
+                : "实际工作区源码，产品SHA/dirty/hash见build",
+              `fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=${c.delivery.day}，夜数=${c.delivery.nights}`,
+              "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+              touch ? "正常运行中原生点「交互 E」两次" : "正常运行中按 E 两次",
+              "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图",
+            ],
+          });
+        }
+      }
+      assert.deepEqual(errors, []);
+    } finally { await context.close(); }
+  }
+  if (capture) {
+    const previous = before && !only ? [] : JSON.parse(await readFile(join(dir, "screenshots.json"), "utf8")).screenshots
+      .filter((s) => !screenshots.some((n) => n.state === s.state && n.viewport.width === s.viewport.width
+        && n.viewport.height === s.viewport.height));
+    await writeFile(join(dir, "screenshots.json"), JSON.stringify({ screenshots: [...previous, ...screenshots],
+      visual_review: "待协调人实际复看" }, null, 2) + "\n");
+    const validation = before && !only ? {} : JSON.parse(await readFile(join(dir, "validation.json"), "utf8"));
+    const key = before ? "before_checks" : "after_checks";
+    validation[key] = [...(validation[key] || []).filter((c) => !checks.some((n) =>
+      n.screen_id === c.screen_id && n.viewport.width === c.viewport.width && n.viewport.height === c.viewport.height)), ...checks];
+    validation.no_user_save_access = true;
+    await writeFile(join(dir, "validation.json"), JSON.stringify(validation, null, 2) + "\n");
+  }
+  console.log(`HEART_DELIVERY_OK ${checks.length} ${version} cases; ${screenshots.length} original PNGs`);
 }
 
 function checkLayout(result, viewport) {

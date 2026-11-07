@@ -1,0 +1,5709 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "stored-before-nights",
+      "state": "stored-before-nights / before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-before-nights--320x568--before--089fda92.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:06:20.760Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=0",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-third-night",
+      "state": "stored-third-night / before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-third-night--320x568--before--089fda92.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:06:21.713Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-ready",
+      "state": "stored-ready / before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-ready--320x568--before--089fda92.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:06:22.668Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "guide_body": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-before-nights",
+      "state": "stored-before-nights / before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-before-nights--390x844--before--089fda92.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:06:23.903Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=0",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-third-night",
+      "state": "stored-third-night / before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-third-night--390x844--before--089fda92.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:06:24.901Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-ready",
+      "state": "stored-ready / before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-ready--390x844--before--089fda92.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:06:25.876Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "guide_body": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-before-nights",
+      "state": "stored-before-nights / before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-before-nights--844x390--before--089fda92.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:06:27.023Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 109.328125,
+          "y": 54,
+          "right": 442.65625,
+          "bottom": 253.984375,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 320,
+          "width": 540,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 286,
+          "width": 540,
+          "height": 26
+        },
+        "document_width": 844,
+        "controls": [
+          {
+            "x": 606,
+            "y": 54,
+            "right": 650,
+            "bottom": 98,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 558,
+            "y": 102,
+            "right": 602,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 606,
+            "y": 150,
+            "right": 650,
+            "bottom": 194,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 654,
+            "y": 102,
+            "right": 698,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 54,
+            "right": 838,
+            "bottom": 98,
+            "width": 132,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 102,
+            "right": 838,
+            "bottom": 146,
+            "width": 132,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 150,
+            "right": 838,
+            "bottom": 194,
+            "width": 132,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=0",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-third-night",
+      "state": "stored-third-night / before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-third-night--844x390--before--089fda92.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:06:28.087Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 109.328125,
+          "y": 54,
+          "right": 442.65625,
+          "bottom": 253.984375,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 320,
+          "width": 540,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 286,
+          "width": 540,
+          "height": 26
+        },
+        "document_width": 844,
+        "controls": [
+          {
+            "x": 606,
+            "y": 54,
+            "right": 650,
+            "bottom": 98,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 558,
+            "y": 102,
+            "right": 602,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 606,
+            "y": 150,
+            "right": 650,
+            "bottom": 194,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 654,
+            "y": 102,
+            "right": 698,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 54,
+            "right": 838,
+            "bottom": 98,
+            "width": 132,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 102,
+            "right": 838,
+            "bottom": 146,
+            "width": 132,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 150,
+            "right": 838,
+            "bottom": 194,
+            "width": 132,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-ready",
+      "state": "stored-ready / before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-ready--844x390--before--089fda92.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:06:29.206Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 109.328125,
+          "y": 54,
+          "right": 442.65625,
+          "bottom": 253.984375,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "guide_body": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 320,
+          "width": 540,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 286,
+          "width": 540,
+          "height": 26
+        },
+        "document_width": 844,
+        "controls": [
+          {
+            "x": 606,
+            "y": 54,
+            "right": 650,
+            "bottom": 98,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 558,
+            "y": 102,
+            "right": 602,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 606,
+            "y": 150,
+            "right": 650,
+            "bottom": 194,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 654,
+            "y": 102,
+            "right": 698,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 54,
+            "right": 838,
+            "bottom": 98,
+            "width": 132,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 102,
+            "right": 838,
+            "bottom": 146,
+            "width": 132,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 150,
+            "right": 838,
+            "bottom": 194,
+            "width": 132,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-ready",
+      "state": "stored-ready / before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "089fda92f69f14c61be5609146588a2c405f5393d09c397a20d8c9af15f585fb"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "mouse/keyboard",
+      "touchLayout": false,
+      "relative_image_path": "images/stored-ready--1280x800--before--089fda92.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:06:33.573Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": true,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 96,
+          "y": 93,
+          "right": 892,
+          "bottom": 570.59375,
+          "width": 796,
+          "height": 477.59375
+        },
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "prompt": "按 E合成方块之心",
+        "guide_body": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "keys_hint": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "feed": {
+          "x": 96,
+          "y": 578.59375,
+          "right": 892,
+          "bottom": 644.59375,
+          "width": 796,
+          "height": 66
+        },
+        "toast": {
+          "x": 96,
+          "y": 578.59375,
+          "right": 892,
+          "bottom": 613.59375,
+          "width": 796,
+          "height": 35
+        },
+        "document_width": 1280,
+        "controls": [
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "↑",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "←",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "↓",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "→",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "技能 Q 就绪",
+            "hit_target": false
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中按 E 两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-before-nights",
+      "state": "stored-before-nights / after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b817741c587e3159598a216aa3014ffe06a30c2187bc0164abd6c1c48eb1570"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-before-nights--320x568--after--5b817741.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:07:19.259Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，再守 3 夜，天亮再献。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，再守 3 夜，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 311.796875,
+          "right": 314,
+          "bottom": 337.796875,
+          "width": 308,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=0",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-third-night",
+      "state": "stored-third-night / after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b817741c587e3159598a216aa3014ffe06a30c2187bc0164abd6c1c48eb1570"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-third-night--320x568--after--5b817741.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:07:20.212Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，守住篝火，天亮再献。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，守住篝火，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 311.796875,
+          "right": 314,
+          "bottom": 337.796875,
+          "width": 308,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-ready",
+      "state": "stored-ready / after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b817741c587e3159598a216aa3014ffe06a30c2187bc0164abd6c1c48eb1570"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-ready--320x568--after--5b817741.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:07:21.146Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，去北边祭坛献祭。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，去北边祭坛献祭。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 311.796875,
+          "right": 314,
+          "bottom": 337.796875,
+          "width": 308,
+          "height": 26
+        },
+        "guide_body": "方块之心已备好，去北边祭坛献祭。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-before-nights",
+      "state": "stored-before-nights / after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b817741c587e3159598a216aa3014ffe06a30c2187bc0164abd6c1c48eb1570"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-before-nights--390x844--after--5b817741.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:07:22.407Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，再守 3 夜，天亮再献。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，再守 3 夜，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 353.796875,
+          "right": 384,
+          "bottom": 379.796875,
+          "width": 378,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=0",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-third-night",
+      "state": "stored-third-night / after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b817741c587e3159598a216aa3014ffe06a30c2187bc0164abd6c1c48eb1570"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-third-night--390x844--after--5b817741.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:07:23.514Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，守住篝火，天亮再献。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，守住篝火，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 353.796875,
+          "right": 384,
+          "bottom": 379.796875,
+          "width": 378,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-ready",
+      "state": "stored-ready / after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b817741c587e3159598a216aa3014ffe06a30c2187bc0164abd6c1c48eb1570"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-ready--390x844--after--5b817741.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:07:24.575Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，去北边祭坛献祭。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，去北边祭坛献祭。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 353.796875,
+          "right": 384,
+          "bottom": 379.796875,
+          "width": 378,
+          "height": 26
+        },
+        "guide_body": "方块之心已备好，去北边祭坛献祭。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-before-nights",
+      "state": "stored-before-nights / after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b817741c587e3159598a216aa3014ffe06a30c2187bc0164abd6c1c48eb1570"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-before-nights--844x390--after--5b817741.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:07:25.822Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，再守 3 夜，天亮再献。",
+        "canvas": {
+          "x": 109.328125,
+          "y": 54,
+          "right": 442.65625,
+          "bottom": 253.984375,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，再守 3 夜，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 286,
+          "right": 546,
+          "bottom": 312,
+          "width": 540,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 320,
+          "width": 540,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 286,
+          "width": 540,
+          "height": 26
+        },
+        "document_width": 844,
+        "controls": [
+          {
+            "x": 606,
+            "y": 54,
+            "right": 650,
+            "bottom": 98,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 558,
+            "y": 102,
+            "right": 602,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 606,
+            "y": 150,
+            "right": 650,
+            "bottom": 194,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 654,
+            "y": 102,
+            "right": 698,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 54,
+            "right": 838,
+            "bottom": 98,
+            "width": 132,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 102,
+            "right": 838,
+            "bottom": 146,
+            "width": 132,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 150,
+            "right": 838,
+            "bottom": 194,
+            "width": 132,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=0",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-third-night",
+      "state": "stored-third-night / after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b817741c587e3159598a216aa3014ffe06a30c2187bc0164abd6c1c48eb1570"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-third-night--844x390--after--5b817741.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:07:26.912Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，守住篝火，天亮再献。",
+        "canvas": {
+          "x": 109.328125,
+          "y": 54,
+          "right": 442.65625,
+          "bottom": 253.984375,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，守住篝火，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 286,
+          "right": 546,
+          "bottom": 312,
+          "width": 540,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 320,
+          "width": 540,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 286,
+          "width": 540,
+          "height": 26
+        },
+        "document_width": 844,
+        "controls": [
+          {
+            "x": 606,
+            "y": 54,
+            "right": 650,
+            "bottom": 98,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 558,
+            "y": 102,
+            "right": 602,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 606,
+            "y": 150,
+            "right": 650,
+            "bottom": 194,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 654,
+            "y": 102,
+            "right": 698,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 54,
+            "right": 838,
+            "bottom": 98,
+            "width": 132,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 102,
+            "right": 838,
+            "bottom": 146,
+            "width": 132,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 150,
+            "right": 838,
+            "bottom": 194,
+            "width": 132,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-ready",
+      "state": "stored-ready / after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b817741c587e3159598a216aa3014ffe06a30c2187bc0164abd6c1c48eb1570"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-ready--844x390--after--5b817741.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:07:28.011Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，去北边祭坛献祭。",
+        "canvas": {
+          "x": 109.328125,
+          "y": 54,
+          "right": 442.65625,
+          "bottom": 253.984375,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，去北边祭坛献祭。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 286,
+          "right": 546,
+          "bottom": 312,
+          "width": 540,
+          "height": 26
+        },
+        "guide_body": "方块之心已备好，去北边祭坛献祭。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 320,
+          "width": 540,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 286,
+          "width": 540,
+          "height": 26
+        },
+        "document_width": 844,
+        "controls": [
+          {
+            "x": 606,
+            "y": 54,
+            "right": 650,
+            "bottom": 98,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 558,
+            "y": 102,
+            "right": 602,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 606,
+            "y": 150,
+            "right": 650,
+            "bottom": 194,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 654,
+            "y": 102,
+            "right": 698,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 54,
+            "right": 838,
+            "bottom": 98,
+            "width": 132,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 102,
+            "right": 838,
+            "bottom": 146,
+            "width": 132,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 150,
+            "right": 838,
+            "bottom": 194,
+            "width": 132,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-ready",
+      "state": "stored-ready / after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b817741c587e3159598a216aa3014ffe06a30c2187bc0164abd6c1c48eb1570"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "mouse/keyboard",
+      "touchLayout": false,
+      "relative_image_path": "images/stored-ready--1280x800--after--5b817741.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:07:32.093Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": true,
+        "message": "方块之心已备好，去北边祭坛献祭。",
+        "canvas": {
+          "x": 96,
+          "y": 93,
+          "right": 892,
+          "bottom": 570.59375,
+          "width": 796,
+          "height": 477.59375
+        },
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "prompt": "方块之心已备好，去北边祭坛献祭。",
+        "prompt_rect": {
+          "x": 96,
+          "y": 613.59375,
+          "right": 892,
+          "bottom": 644.59375,
+          "width": 796,
+          "height": 31
+        },
+        "guide_body": "方块之心已备好，去北边祭坛献祭。",
+        "keys_hint": "此刻：北边祭坛按 E 献祭",
+        "feed": {
+          "x": 96,
+          "y": 578.59375,
+          "right": 892,
+          "bottom": 644.59375,
+          "width": 796,
+          "height": 66
+        },
+        "toast": {
+          "x": 96,
+          "y": 578.59375,
+          "right": 892,
+          "bottom": 613.59375,
+          "width": 796,
+          "height": 35
+        },
+        "document_width": 1280,
+        "controls": [
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "↑",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "←",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "↓",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "→",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": false
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0,
+            "label": "技能 Q 就绪",
+            "hit_target": false
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=true，夜数=3",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中按 E 两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-first-night",
+      "state": "stored-first-night / before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "5a9909d6477f2f6ae66d39da60f8e1f0a165ba38946492885e5d2d2e4ef5c01a"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-first-night--320x568--before--5a9909d6.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:14:49.021Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "prompt_rect": {
+          "x": 6,
+          "y": 311.796875,
+          "right": 314,
+          "bottom": 337.796875,
+          "width": 308,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "内存route提供d2bc02e原HTML/CSS/JS，不切换工作区",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=1",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-second-night",
+      "state": "stored-second-night / before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "5a9909d6477f2f6ae66d39da60f8e1f0a165ba38946492885e5d2d2e4ef5c01a"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-second-night--320x568--before--5a9909d6.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:14:49.946Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "prompt_rect": {
+          "x": 6,
+          "y": 311.796875,
+          "right": 314,
+          "bottom": 337.796875,
+          "width": 308,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "内存route提供d2bc02e原HTML/CSS/JS，不切换工作区",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=2",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-first-night",
+      "state": "stored-first-night / before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "5a9909d6477f2f6ae66d39da60f8e1f0a165ba38946492885e5d2d2e4ef5c01a"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-first-night--390x844--before--5a9909d6.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:14:51.004Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "prompt_rect": {
+          "x": 6,
+          "y": 353.796875,
+          "right": 384,
+          "bottom": 379.796875,
+          "width": 378,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "内存route提供d2bc02e原HTML/CSS/JS，不切换工作区",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=1",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-second-night",
+      "state": "stored-second-night / before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "5a9909d6477f2f6ae66d39da60f8e1f0a165ba38946492885e5d2d2e4ef5c01a"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-second-night--390x844--before--5a9909d6.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:14:51.931Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "prompt_rect": {
+          "x": 6,
+          "y": 353.796875,
+          "right": 384,
+          "bottom": 379.796875,
+          "width": 378,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "内存route提供d2bc02e原HTML/CSS/JS，不切换工作区",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=2",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-first-night",
+      "state": "stored-first-night / before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "5a9909d6477f2f6ae66d39da60f8e1f0a165ba38946492885e5d2d2e4ef5c01a"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-first-night--844x390--before--5a9909d6.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:14:52.994Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 109.328125,
+          "y": 54,
+          "right": 442.65625,
+          "bottom": 253.984375,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "prompt_rect": {
+          "x": 6,
+          "y": 286,
+          "right": 546,
+          "bottom": 312,
+          "width": 540,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 320,
+          "width": 540,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 286,
+          "width": 540,
+          "height": 26
+        },
+        "document_width": 844,
+        "controls": [
+          {
+            "x": 606,
+            "y": 54,
+            "right": 650,
+            "bottom": 98,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 558,
+            "y": 102,
+            "right": 602,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 606,
+            "y": 150,
+            "right": 650,
+            "bottom": 194,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 654,
+            "y": 102,
+            "right": 698,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 54,
+            "right": 838,
+            "bottom": 98,
+            "width": 132,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 102,
+            "right": 838,
+            "bottom": 146,
+            "width": 132,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 150,
+            "right": 838,
+            "bottom": 194,
+            "width": 132,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "内存route提供d2bc02e原HTML/CSS/JS，不切换工作区",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=1",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-second-night",
+      "state": "stored-second-night / before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": false,
+        "source_sha256": "5a9909d6477f2f6ae66d39da60f8e1f0a165ba38946492885e5d2d2e4ef5c01a"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-second-night--844x390--before--5a9909d6.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:14:53.909Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已经在背包里。送到北边祭坛。",
+        "canvas": {
+          "x": 109.328125,
+          "y": 54,
+          "right": 442.65625,
+          "bottom": 253.984375,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "点「交互 E」合成方块之心",
+        "prompt_rect": {
+          "x": 6,
+          "y": 286,
+          "right": 546,
+          "bottom": 312,
+          "width": 540,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 320,
+          "width": 540,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 286,
+          "width": 540,
+          "height": 26
+        },
+        "document_width": 844,
+        "controls": [
+          {
+            "x": 606,
+            "y": 54,
+            "right": 650,
+            "bottom": 98,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 558,
+            "y": 102,
+            "right": 602,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 606,
+            "y": 150,
+            "right": 650,
+            "bottom": 194,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 654,
+            "y": 102,
+            "right": 698,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 54,
+            "right": 838,
+            "bottom": 98,
+            "width": 132,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 102,
+            "right": 838,
+            "bottom": 146,
+            "width": 132,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 150,
+            "right": 838,
+            "bottom": 194,
+            "width": 132,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "内存route提供d2bc02e原HTML/CSS/JS，不切换工作区",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=2",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-first-night",
+      "state": "stored-first-night / after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b3fb087e628a411b38fc9be4502afef1b077b1e72e951758ba5e37b394bc128"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-first-night--320x568--after--5b3fb087.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:14:57.408Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，先守满三夜，天亮再献。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，先守满三夜，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 311.796875,
+          "right": 314,
+          "bottom": 337.796875,
+          "width": 308,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "实际工作区源码，产品SHA/dirty/hash见build",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=1",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-second-night",
+      "state": "stored-second-night / after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b3fb087e628a411b38fc9be4502afef1b077b1e72e951758ba5e37b394bc128"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-second-night--320x568--after--5b3fb087.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:14:58.305Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，先守满三夜，天亮再献。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 314,
+          "bottom": 279.796875,
+          "width": 308,
+          "height": 184.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，先守满三夜，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 311.796875,
+          "right": 314,
+          "bottom": 337.796875,
+          "width": 308,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 345.796875,
+          "width": 308,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 285.796875,
+          "right": 314,
+          "bottom": 311.796875,
+          "width": 308,
+          "height": 26
+        },
+        "document_width": 320,
+        "controls": [
+          {
+            "x": 54,
+            "y": 351.796875,
+            "right": 98,
+            "bottom": 395.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 399.796875,
+            "right": 50,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 447.796875,
+            "right": 98,
+            "bottom": 491.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 399.796875,
+            "right": 146,
+            "bottom": 443.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 351.796875,
+            "right": 314,
+            "bottom": 395.796875,
+            "width": 160,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 399.796875,
+            "right": 314,
+            "bottom": 443.796875,
+            "width": 160,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 447.796875,
+            "right": 314,
+            "bottom": 491.796875,
+            "width": 160,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "实际工作区源码，产品SHA/dirty/hash见build",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=2",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-first-night",
+      "state": "stored-first-night / after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b3fb087e628a411b38fc9be4502afef1b077b1e72e951758ba5e37b394bc128"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-first-night--390x844--after--5b3fb087.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:14:59.361Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，先守满三夜，天亮再献。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，先守满三夜，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 353.796875,
+          "right": 384,
+          "bottom": 379.796875,
+          "width": 378,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "实际工作区源码，产品SHA/dirty/hash见build",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=1",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-second-night",
+      "state": "stored-second-night / after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b3fb087e628a411b38fc9be4502afef1b077b1e72e951758ba5e37b394bc128"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-second-night--390x844--after--5b3fb087.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:15:00.289Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，先守满三夜，天亮再献。",
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "right": 384,
+          "bottom": 321.796875,
+          "width": 378,
+          "height": 226.796875
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，先守满三夜，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 353.796875,
+          "right": 384,
+          "bottom": 379.796875,
+          "width": 378,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 387.796875,
+          "width": 378,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 327.796875,
+          "right": 384,
+          "bottom": 353.796875,
+          "width": 378,
+          "height": 26
+        },
+        "document_width": 390,
+        "controls": [
+          {
+            "x": 54,
+            "y": 393.796875,
+            "right": 98,
+            "bottom": 437.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 6,
+            "y": 441.796875,
+            "right": 50,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 54,
+            "y": 489.796875,
+            "right": 98,
+            "bottom": 533.796875,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 102,
+            "y": 441.796875,
+            "right": 146,
+            "bottom": 485.796875,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 393.796875,
+            "right": 384,
+            "bottom": 437.796875,
+            "width": 230,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 441.796875,
+            "right": 384,
+            "bottom": 485.796875,
+            "width": 230,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 154,
+            "y": 489.796875,
+            "right": 384,
+            "bottom": 533.796875,
+            "width": 230,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "实际工作区源码，产品SHA/dirty/hash见build",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=2",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-first-night",
+      "state": "stored-first-night / after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b3fb087e628a411b38fc9be4502afef1b077b1e72e951758ba5e37b394bc128"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-first-night--844x390--after--5b3fb087.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:15:01.348Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，先守满三夜，天亮再献。",
+        "canvas": {
+          "x": 109.328125,
+          "y": 54,
+          "right": 442.65625,
+          "bottom": 253.984375,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，先守满三夜，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 286,
+          "right": 546,
+          "bottom": 312,
+          "width": 540,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 320,
+          "width": 540,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 286,
+          "width": 540,
+          "height": 26
+        },
+        "document_width": 844,
+        "controls": [
+          {
+            "x": 606,
+            "y": 54,
+            "right": 650,
+            "bottom": 98,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 558,
+            "y": 102,
+            "right": 602,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 606,
+            "y": 150,
+            "right": 650,
+            "bottom": 194,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 654,
+            "y": 102,
+            "right": 698,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 54,
+            "right": 838,
+            "bottom": 98,
+            "width": 132,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 102,
+            "right": 838,
+            "bottom": 146,
+            "width": 132,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 150,
+            "right": 838,
+            "bottom": 194,
+            "width": 132,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "实际工作区源码，产品SHA/dirty/hash见build",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=1",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    },
+    {
+      "screen_id": "stored-second-night",
+      "state": "stored-second-night / after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+        "dirty": true,
+        "source_sha256": "5b3fb087e628a411b38fc9be4502afef1b077b1e72e951758ba5e37b394bc128"
+      },
+      "source": "fixture / isolated browser context",
+      "platform": "Web / WebKit",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "input": "native touch",
+      "touchLayout": true,
+      "relative_image_path": "images/stored-second-night--844x390--after--5b3fb087.png",
+      "issue_ids": [
+        "UI-011"
+      ],
+      "status": "已截",
+      "visual_review": "待协调人逐图审查",
+      "captured_at": "2026-11-07T01:15:02.274Z",
+      "metrics": {
+        "before": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 2,
+          "fence": 0,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "tile": 12,
+        "fence_hp": 80,
+        "held": 0,
+        "touch_layout": true,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "details_open": false,
+        "message": "方块之心已备好，先守满三夜，天亮再献。",
+        "canvas": {
+          "x": 109.328125,
+          "y": 54,
+          "right": 442.65625,
+          "bottom": 253.984375,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "prompt": "方块之心已备好，先守满三夜，天亮再献。",
+        "prompt_rect": {
+          "x": 6,
+          "y": 286,
+          "right": 546,
+          "bottom": 312,
+          "width": 540,
+          "height": 26
+        },
+        "guide_body": "怪朝篝火走，站在墙后打，缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+        "keys_hint": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "feed": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 320,
+          "width": 540,
+          "height": 60
+        },
+        "toast": {
+          "x": 6,
+          "y": 260,
+          "right": 546,
+          "bottom": 286,
+          "width": 540,
+          "height": 26
+        },
+        "document_width": 844,
+        "controls": [
+          {
+            "x": 606,
+            "y": 54,
+            "right": 650,
+            "bottom": 98,
+            "width": 44,
+            "height": 44,
+            "label": "↑",
+            "hit_target": true
+          },
+          {
+            "x": 558,
+            "y": 102,
+            "right": 602,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "←",
+            "hit_target": true
+          },
+          {
+            "x": 606,
+            "y": 150,
+            "right": 650,
+            "bottom": 194,
+            "width": 44,
+            "height": 44,
+            "label": "↓",
+            "hit_target": true
+          },
+          {
+            "x": 654,
+            "y": 102,
+            "right": 698,
+            "bottom": 146,
+            "width": 44,
+            "height": 44,
+            "label": "→",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 54,
+            "right": 838,
+            "bottom": 98,
+            "width": 132,
+            "height": 44,
+            "label": "采集/攻击 按住 · 空格",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 102,
+            "right": 838,
+            "bottom": 146,
+            "width": 132,
+            "height": 44,
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "hit_target": true
+          },
+          {
+            "x": 706,
+            "y": 150,
+            "right": 838,
+            "bottom": 194,
+            "width": 132,
+            "height": 44,
+            "label": "技能 Q 就绪",
+            "hit_target": true
+          }
+        ]
+      },
+      "repro_steps": [
+        "隔离临时上下文；正常选骑士并跳过开场/预演，不接触用户存档",
+        "实际工作区源码，产品SHA/dirty/hash见build",
+        "fixture: 玩家工作台南12px，库存心1/木4/石5/金3/麦3/种2，其余0；白天=false，夜数=2",
+        "fixture: 已移动/砍树，营火四邻栅栏HP80；只设置测试状态，不声称自然三夜",
+        "正常运行中原生点「交互 E」两次",
+        "仅截图时冻结模拟；真实首屏、100%缩放，不缩放/拼接原图"
+      ]
+    }
+  ],
+  "visual_review": "待协调人实际复看"
+}

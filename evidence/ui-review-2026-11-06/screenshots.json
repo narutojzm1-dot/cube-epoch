@@ -1,13 +1,22 @@
 {
   "supplemental_batches": [
     {
+      "id": "heart-delivery",
+      "base_sha": "d2bc02e15e112dcd5e247064490e42cd5c3021fe",
+      "index": "heart-delivery/INDEX.md",
+      "screenshots": "heart-delivery/screenshots.json",
+      "issue_ids": ["UI-011"],
+      "status": "已截",
+      "visual_review": "32张五阶段真实首屏前后图待协调人审查；320/390/844触屏及1280鼠标键盘可交付态，全部隔离fixture，未变的前三状态复用原构建图，不代表自然通关或真机验收"
+    },
+    {
       "id": "wide-touch-layout",
       "base_sha": "01f5c71835d6e78edeb53ffe8fa01749fd3afd42",
       "index": "wide-touch-layout/INDEX.md",
       "screenshots": "wide-touch-layout/screenshots.json",
       "issue_ids": ["UI-010"],
       "status": "已截",
-      "visual_review": "14张真实原图待协调人复看；1280触屏五状态前后，320/390/1280鼠标/844横屏抽样。不外推旧片局部批准或真机结论"
+      "visual_review": "协调人09:00已实际看1280粗指针选栏前后，所看状态局部通过；不是14图全量批准或真机验收，详情既有遮挡保留，其余待审"
     },
     {
       "id": "device-hints",
@@ -67,6 +76,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-011",
+      "title": "已有方块之心仍提示合成，未满足条件也直接催去祭坛",
+      "status": "已修复，待协调人逐图审查",
+      "before": "heart-delivery/stored-before-nights before",
+      "after": "heart-delivery/stored-before-nights after"
+    },
     {
       "id": "UI-010",
       "title": "1280宽屏粗指针核心操作需要整页滚动",
