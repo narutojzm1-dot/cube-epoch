@@ -1,0 +1,4 @@
+Completed full WebKit gate: E2E_OK; all owned test/browser commands exited.
+Exact recorded browser PIDs 55264 and 71400 absent (Get-Process verification before cleanup).
+Tool spill limitation: 20515-byte stdout was automatically stored by the tool at C:\Users\JIANGZ~1\AppData\Local\Temp\1794063610026-copilot-tool-output-a2d27975a81b442a904c94b30fe6e8d9.txt; moved to owned D scope-inspection.txt and exact C file removed.
+D_CLEANUP_OK owned run leaf retained empty; environment script/logs/originals retained in D project; no user saves/caches/old runs touched.

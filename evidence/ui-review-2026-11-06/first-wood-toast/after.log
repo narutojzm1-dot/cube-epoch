@@ -1,0 +1,11 @@
+BROWSER_PROFILE_D_OK D:\work\tmp\cube-epoch\first-wood-790cd307\tmp\playwright_chromiumdev_profile-0oafK6
+FIRST_WOOD_INPUT 320 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3114999999970198,"x":392,"y":360.0128000000001,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3614999999970198,"x":394.13120000000004,"y":360.76096000000007,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 320 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.1954999999970202,"x":395.99999999541734,"y":360.76096000000007,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_INPUT 390 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.32539999999403957,"x":392,"y":360.0128000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.3755999999940396,"x":394.144,"y":360.7609600000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 390 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":6,"time":1.209499999994039,"x":395.99999999206665,"y":360.7609600000002,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_INPUT 1280 ArrowDown {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.271600000011921,"x":392,"y":358.9440000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 ArrowRight {"cls":"knight","day":true,"nights":0,"heart":0,"wood":2,"time":0.28830000001192096,"x":393.0688,"y":358.9440000000002,"paused":false,"over":false,"gathered":false}
+FIRST_WOOD_INPUT 1280 Space {"cls":"knight","day":true,"nights":0,"heart":0,"wood":5,"time":1.1057000000119206,"x":395.5598612096087,"y":358.9440000000002,"paused":false,"over":false,"gathered":true}
+FIRST_WOOD_TOAST_OK chromium after: 320/390 touch layout + desktop, ordinary native gather/release, single pickup feedback, natural3.4s, fully visible toast

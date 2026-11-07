@@ -1,0 +1,1612 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "first-wood-toast",
+      "state": "first-wood-toast / before",
+      "version": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "7784c189d4e93ddb038681c78bbe2540003ca6ef",
+        "dirty": false,
+        "source_sha256": "4d8cf9e8d0ff948c1227ae87efc341c024832b9d3f83922152712042a4a0bf76",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game/native gather; read-only toast DOM observer and CUBE observation, no fixture",
+      "relative_image_path": "images/first-wood-toast--320x568--before--4d8cf9e8.png",
+      "issue_ids": [
+        "UI-027"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T14:34:18.511Z",
+      "data": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.5211000000000003,
+          "x": 396.0000000263389,
+          "y": 362.353472,
+          "paused": false,
+          "over": false,
+          "gathered": true
+        },
+        "toast": {
+          "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+          "visible": true
+        },
+        "wood_events": [
+          {
+            "kind": "message",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "time": 1.3376000000000003
+          },
+          {
+            "kind": "show",
+            "time": 1.3376000000000003
+          }
+        ],
+        "held": 0
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 329.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离普通新局，实际滚到骑士/开始并点按，首次跳过故事/预演",
+        "真实方向/采集按住→首批木头自动进背包→释放，记录成功toast；只读DOM观察触发次数/自然时长",
+        "内存响应7784c18原Git产品，不改工作区/用户存档"
+      ]
+    },
+    {
+      "screen_id": "first-wood-toast",
+      "state": "first-wood-toast / before",
+      "version": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "7784c189d4e93ddb038681c78bbe2540003ca6ef",
+        "dirty": false,
+        "source_sha256": "4d8cf9e8d0ff948c1227ae87efc341c024832b9d3f83922152712042a4a0bf76",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game/native gather; read-only toast DOM observer and CUBE observation, no fixture",
+      "relative_image_path": "images/first-wood-toast--390x844--before--4d8cf9e8.png",
+      "issue_ids": [
+        "UI-027"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T14:34:24.080Z",
+      "data": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.5056000000089398,
+          "x": 396.0000000300752,
+          "y": 362.35033600000014,
+          "paused": false,
+          "over": false,
+          "gathered": true
+        },
+        "toast": {
+          "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+          "visible": true
+        },
+        "wood_events": [
+          {
+            "kind": "message",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "time": 1.3055000000089398
+          },
+          {
+            "kind": "show",
+            "time": 1.3055000000089398
+          }
+        ],
+        "held": 0
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离普通新局，实际滚到骑士/开始并点按，首次跳过故事/预演",
+        "真实方向/采集按住→首批木头自动进背包→释放，记录成功toast；只读DOM观察触发次数/自然时长",
+        "内存响应7784c18原Git产品，不改工作区/用户存档"
+      ]
+    },
+    {
+      "screen_id": "first-wood-toast",
+      "state": "first-wood-toast / before",
+      "version": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "7784c189d4e93ddb038681c78bbe2540003ca6ef",
+        "dirty": false,
+        "source_sha256": "4d8cf9e8d0ff948c1227ae87efc341c024832b9d3f83922152712042a4a0bf76",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game/native gather; read-only toast DOM observer and CUBE observation, no fixture",
+      "relative_image_path": "images/first-wood-toast--1280x800--before--4d8cf9e8.png",
+      "issue_ids": [
+        "UI-027"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T14:34:29.016Z",
+      "data": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": false,
+        "coarse": false,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 5,
+          "time": 1.2845999999880784,
+          "x": 395.55683632349906,
+          "y": 358.9504000000002,
+          "paused": false,
+          "over": false,
+          "gathered": true
+        },
+        "toast": {
+          "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+          "visible": true
+        },
+        "wood_events": [
+          {
+            "kind": "message",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "time": 1.117799999988079
+          },
+          {
+            "kind": "show",
+            "time": 1.117799999988079
+          }
+        ],
+        "held": 0
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 93,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 570.59375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 578.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 613.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 578.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 613.59375
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 914,
+            "y": 147,
+            "width": 260,
+            "height": 130.5,
+            "right": 1174,
+            "bottom": 277.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 93,
+            "width": 280,
+            "height": 427.09375,
+            "right": 1184,
+            "bottom": 520.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离普通新局，实际滚到骑士/开始并点按，首次跳过故事/预演",
+        "真实方向/采集按住→首批木头自动进背包→释放，记录成功toast；只读DOM观察触发次数/自然时长",
+        "内存响应7784c18原Git产品，不改工作区/用户存档"
+      ]
+    },
+    {
+      "screen_id": "first-wood-toast",
+      "state": "first-wood-toast / after",
+      "version": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "7784c189d4e93ddb038681c78bbe2540003ca6ef",
+        "dirty": true,
+        "source_sha256": "2b692debdbd2a66242f108621cde6d4c33360b40dee03a43eb2b7956cb383891",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game/native gather; read-only toast DOM observer and CUBE observation, no fixture",
+      "relative_image_path": "images/first-wood-toast--320x568--after--2b692deb.png",
+      "issue_ids": [
+        "UI-027"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T14:37:20.671Z",
+      "data": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.3789999999970202,
+          "x": 396.00000003933604,
+          "y": 360.76096000000007,
+          "paused": false,
+          "over": false,
+          "gathered": true
+        },
+        "toast": {
+          "text": "木头进背包了。点背包「栏」选栅栏，料不够再砍一棵，点发光格围上。",
+          "visible": true
+        },
+        "wood_events": [
+          {
+            "kind": "message",
+            "text": "木头进背包了。点背包「栏」选栅栏，料不够再砍一棵，点发光格围上。",
+            "time": 1.1954999999970202
+          },
+          {
+            "kind": "show",
+            "time": 1.1954999999970202
+          }
+        ],
+        "held": 0
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 44,
+            "right": 314,
+            "bottom": 329.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。点背包「栏」选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离普通新局，实际滚到骑士/开始并点按，首次跳过故事/预演",
+        "真实方向/采集按住→首批木头自动进背包→释放，记录成功toast；只读DOM观察触发次数/自然时长",
+        "当前产品dirty源码，无资源/世界/时间注入"
+      ]
+    },
+    {
+      "screen_id": "first-wood-toast",
+      "state": "first-wood-toast / after",
+      "version": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "7784c189d4e93ddb038681c78bbe2540003ca6ef",
+        "dirty": true,
+        "source_sha256": "2b692debdbd2a66242f108621cde6d4c33360b40dee03a43eb2b7956cb383891",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game/native gather; read-only toast DOM observer and CUBE observation, no fixture",
+      "relative_image_path": "images/first-wood-toast--390x844--after--2b692deb.png",
+      "issue_ids": [
+        "UI-027"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T14:37:26.157Z",
+      "data": {
+        "steps": [
+          "方向按钮走到树旁，按住「采集/攻击」砍木",
+          "点背包「栏」选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料点「交互 E」合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。进场后点「怎么玩」看操作。",
+        "touchLayout": true,
+        "coarse": true,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 6,
+          "time": 1.3762999999940384,
+          "x": 396.0000000355966,
+          "y": 360.7609600000002,
+          "paused": false,
+          "over": false,
+          "gathered": true
+        },
+        "toast": {
+          "text": "木头进背包了。点背包「栏」选栅栏，料不够再砍一棵，点发光格围上。",
+          "visible": true
+        },
+        "wood_events": [
+          {
+            "kind": "message",
+            "text": "木头进背包了。点背包「栏」选栅栏，料不够再砍一棵，点发光格围上。",
+            "time": 1.209499999994039
+          },
+          {
+            "kind": "show",
+            "time": 1.209499999994039
+          }
+        ],
+        "held": 0
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 44,
+            "right": 384,
+            "bottom": 371.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 591.796875,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 704.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 537.796875,
+            "width": 378,
+            "height": 48,
+            "right": 384,
+            "bottom": 585.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。点背包「栏」选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离普通新局，实际滚到骑士/开始并点按，首次跳过故事/预演",
+        "真实方向/采集按住→首批木头自动进背包→释放，记录成功toast；只读DOM观察触发次数/自然时长",
+        "当前产品dirty源码，无资源/世界/时间注入"
+      ]
+    },
+    {
+      "screen_id": "first-wood-toast",
+      "state": "first-wood-toast / after",
+      "version": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "7784c189d4e93ddb038681c78bbe2540003ca6ef",
+        "dirty": true,
+        "source_sha256": "2b692debdbd2a66242f108621cde6d4c33360b40dee03a43eb2b7956cb383891",
+        "source_files": [
+          "index.html",
+          "style.css",
+          "game.js"
+        ]
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "full_page": false,
+      "source": "normal isolated new game/native gather; read-only toast DOM observer and CUBE observation, no fixture",
+      "relative_image_path": "images/first-wood-toast--1280x800--after--2b692deb.png",
+      "issue_ids": [
+        "UI-027"
+      ],
+      "status": "已截",
+      "visual_review": "待协调逐图审查",
+      "captured_at": "2026-11-07T14:37:31.114Z",
+      "data": {
+        "steps": [
+          "WASD 走到树旁，空格或按住左键砍木",
+          "按 1 选栅栏，点篝火旁发光格围起来",
+          "夜里守住篝火，撑过三夜",
+          "凑齐材料按 E 合成，天亮送到北边祭坛"
+        ],
+        "hint": "第一次会先讲故事并指认营地。再玩点开始即可进场。Esc 看操作。",
+        "touchLayout": false,
+        "coarse": false,
+        "scroll_y": 0,
+        "title": false,
+        "seen": "1",
+        "start_disabled": false,
+        "game": {
+          "cls": "knight",
+          "day": true,
+          "nights": 0,
+          "heart": 0,
+          "wood": 5,
+          "time": 1.2891000000119197,
+          "x": 395.5598612723574,
+          "y": 358.9440000000002,
+          "paused": false,
+          "over": false,
+          "gathered": true
+        },
+        "toast": {
+          "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+          "visible": true
+        },
+        "wood_events": [
+          {
+            "kind": "message",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "time": 1.1057000000119206
+          },
+          {
+            "kind": "show",
+            "time": 1.1057000000119206
+          }
+        ],
+        "held": 0
+      },
+      "metrics": {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "document": {
+          "width": 1280,
+          "height": 800
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 96,
+            "y": 93,
+            "width": 796,
+            "height": 477.59375,
+            "right": 892,
+            "bottom": 570.59375
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 96,
+            "y": 578.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 613.59375
+          },
+          "toast": {
+            "x": 96,
+            "y": 578.59375,
+            "width": 796,
+            "height": 35,
+            "right": 892,
+            "bottom": 613.59375
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 914,
+            "y": 147,
+            "width": 260,
+            "height": 130.5,
+            "right": 1174,
+            "bottom": 277.5
+          },
+          "play-details": {
+            "x": 904,
+            "y": 93,
+            "width": 280,
+            "height": 427.09375,
+            "right": 1184,
+            "bottom": 520.09375
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0,
+            "touch_action": "auto",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 960,
+          "height": 576
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第三步：围营地"
+      },
+      "repro_steps": [
+        "隔离普通新局，实际滚到骑士/开始并点按，首次跳过故事/预演",
+        "真实方向/采集按住→首批木头自动进背包→释放，记录成功toast；只读DOM观察触发次数/自然时长",
+        "当前产品dirty源码，无资源/世界/时间注入"
+      ]
+    }
+  ]
+}

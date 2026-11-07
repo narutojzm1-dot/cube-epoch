@@ -1857,7 +1857,7 @@
         if (d.kind === "wood" && !state.flags.gathered) {
           state.flags.gathered = true;
           // 第一批木头还在飞，不按当前一颗判断够不够
-          toast("木头进背包了。按 1 选栅栏，料不够再砍一棵，点发光格围上。", 3.4);
+          toast(`木头进背包了。${touchLayout.matches ? "点背包「栏」选栅栏" : "按 1 选栅栏"}，料不够再砍一棵，点发光格围上。`, 3.4);
         }
         if (d.kind === "wheat" && !state.flags.sawWheat) {
           state.flags.sawWheat = true;

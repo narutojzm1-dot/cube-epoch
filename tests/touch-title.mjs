@@ -10,10 +10,12 @@ import { chromium } from "playwright-core";
 import { ROOT, serve } from "./helpers.mjs";
 import { inspect, assertFirstScreen } from "./layout-ui.mjs";
 
-const baseline = "61383ce9246a604aacbc05368373ab8ade9e2610";
-const out = join(ROOT, "evidence", "ui-review-2026-11-06", "touch-title");
+const titleBaseline = "61383ce9246a604aacbc05368373ab8ade9e2610";
+const titleOut = join(ROOT, "evidence", "ui-review-2026-11-06", "touch-title");
 
-export async function testTouchTitle(browser, origin, { before = false, capture = false } = {}) {
+export async function testTouchTitle(browser, origin, { before = false, capture = false, woodFeedback = false } = {}) {
+  const baseline = woodFeedback ? "7784c189d4e93ddb038681c78bbe2540003ca6ef" : titleBaseline;
+  const out = woodFeedback ? join(ROOT, "evidence", "ui-review-2026-11-06", "first-wood-toast") : titleOut;
   const engine = browser.browserType().name(), version = before ? "before" : "after";
   const files = ["index.html", "style.css", "game.js"];
   const buffers = await Promise.all(files.map((file) => before
@@ -30,7 +32,8 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
     ? JSON.parse(await readFile(manifestFile, "utf8")) : { screenshots: [] };
   const records = [];
   for (const mode of [{ width: 320, height: 568, touch: true }, { width: 390, height: 844, touch: true },
-    { width: 844, height: 390, touch: true }, { width: 1280, height: 800, touch: false }]) {
+    { width: 844, height: 390, touch: true }, { width: 1280, height: 800, touch: false }]
+    .filter((mode) => !woodFeedback || mode.width !== 844)) {
     const viewport = { width: mode.width, height: mode.height };
     const context = await browser.newContext({ viewport, hasTouch: mode.touch, isMobile: mode.touch, deviceScaleFactor: 1 });
     try {
@@ -73,7 +76,7 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
         await (mode.touch ? page.touchscreen.tap(x, y) : page.mouse.click(x, y));
         if (navigation) await navigation;
       };
-      const read = () => page.evaluate(() => {
+      const read = () => page.evaluate((trackWood) => {
         const s = CUBE.getState();
         return { steps: [...document.querySelectorAll(".how-to li")].map((li) => li.lastChild.textContent.trim()),
           hint: document.querySelector(".title-actions .hint").textContent,
@@ -82,16 +85,19 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
           title: !document.getElementById("screen-title").classList.contains("hidden"),
           seen: localStorage.getItem("cube-epoch-seen"), start_disabled: document.getElementById("btn-start").disabled,
           game: s ? { cls: s.cls, day: s.day, nights: s.nights, heart: s.inv.heart, wood: s.inv.wood,
-            time: s.time, x: s.player.x, y: s.player.y, paused: s.paused, over: s.over } : null,
+            time: s.time, x: s.player.x, y: s.player.y, paused: s.paused, over: s.over, gathered: s.flags.gathered } : null,
+          toast: { text: document.getElementById("toast").textContent,
+            visible: !document.getElementById("toast").classList.contains("hidden") },
+          wood_events: trackWood ? window.__firstWoodToastEvents : null,
           held: document.querySelectorAll("#touch-controls .held").length };
-      });
+      }, woodFeedback);
       const checkTitle = async () => {
         const data = await read();
         assert.equal(data.title, true);
         assert.equal(data.game, null);
         assert.equal(data.start_disabled, true);
         assert.equal(data.touchLayout, mode.touch);
-        if (before || !mode.touch) {
+        if ((before && !woodFeedback) || !mode.touch) {
           assert.deepEqual(data.steps, desktopSteps);
           assert.equal(data.hint, desktopHint);
         } else {
@@ -105,7 +111,8 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
         return data;
       };
       const shot = async (id) => {
-        if (!capture || (id === "first-day-controls" && (!mode.touch || before))) return;
+        if (!capture || (woodFeedback ? id !== "first-wood-toast"
+          : id === "first-day-controls" && (!mode.touch || before))) return;
         const data = await read(), metrics = data.game ? await inspect(page) : null;
         if (metrics) assertFirstScreen(metrics, mode.touch);
         const filename = `${id}--${viewport.width}x${viewport.height}--${version}--${hash.slice(0, 8)}.png`;
@@ -113,10 +120,15 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
         await page.screenshot({ path: join(out, "images", filename), fullPage: false });
         manifest.screenshots.push({ screen_id: id, state: `${id} / ${version}`, version, viewport,
           language: "zh-CN", build, platform: `Web / ${engine}`, ui_scale: "100%", device_scale_factor: 1,
-          full_page: false, source: "normal isolated new game and pause/reselect reload; read-only CUBE observation, no fixture",
-          relative_image_path: `images/${filename}`, issue_ids: ["UI-026"], status: "已截",
+          full_page: false, source: woodFeedback
+            ? "normal isolated new game/native gather; read-only toast DOM observer and CUBE observation, no fixture"
+            : "normal isolated new game and pause/reselect reload; read-only CUBE observation, no fixture",
+          relative_image_path: `images/${filename}`, issue_ids: [woodFeedback ? "UI-027" : "UI-026"], status: "已截",
           visual_review: "待协调逐图审查", captured_at: new Date().toISOString(), data, metrics,
-          repro_steps: ["隔离上下文正常打开标题，记录现有四步；原生上滑到末尾操作提示",
+          repro_steps: woodFeedback ? ["隔离普通新局，实际滚到骑士/开始并点按，首次跳过故事/预演",
+            "真实方向/采集按住→首批木头自动进背包→释放，记录成功toast；只读DOM观察触发次数/自然时长",
+            before ? "内存响应7784c18原Git产品，不改工作区/用户存档" : "当前产品dirty源码，无资源/世界/时间注入"]
+            : ["隔离上下文正常打开标题，记录现有四步；原生上滑到末尾操作提示",
             "可见骑士卡/开始真实点按，首次实际跳故事/预演；真实方向按钮和按住采集/攻击采树",
             "点怎么玩暂停→回选角真实重载，原生下滑回顶，检查重开四步和末尾提示",
             before ? "内存响应61383ce原Git产品，不改工作区/用户存档" : "当前产品源码；无时间、资源或世界注入"] });
@@ -143,6 +155,30 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
       await activate("#btn-start"); await activate("#btn-skip-intro"); await activate("#btn-skip-brief");
       await page.waitForSelector("#screen-game:not(.hidden)");
       assertFirstScreen(await inspect(page), mode.touch);
+      if (woodFeedback) {
+        assert.equal((await read()).game.gathered, false);
+        assert.doesNotMatch((await read()).toast.text, /^木头进背包了。/);
+        await page.evaluate(() => {
+          const el = document.getElementById("toast");
+          window.__firstWoodToastEvents = [];
+          let visible = false;
+          new MutationObserver((changes) => {
+            for (const change of changes) {
+              if (change.type !== "childList") continue;
+              const text = [...change.addedNodes].map((node) => node.textContent).join("");
+              if (text.startsWith("木头进背包了。")) {
+                window.__firstWoodToastEvents.push({ kind: "message", text, time: CUBE.getState().time, real_ms: performance.now() });
+              }
+            }
+            if (!el.textContent.startsWith("木头进背包了。")) return;
+            const next = !el.classList.contains("hidden");
+            if (next !== visible) {
+              window.__firstWoodToastEvents.push({ kind: next ? "show" : "hide", time: CUBE.getState().time, real_ms: performance.now() });
+              visible = next;
+            }
+          }).observe(el, { childList: true, attributes: true, attributeFilter: ["class"] });
+        });
+      }
       for (const [code, predicate] of [["ArrowDown", () => CUBE.getState().player.y >= 358],
         ["ArrowRight", () => CUBE.getState().player.dir === 2],
         ["Space", () => CUBE.getState().inv.wood > 2]]) {
@@ -152,12 +188,23 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
           await cdp.send("Input.dispatchTouchEvent", { type: "touchStart",
             touchPoints: [{ x: box.x + box.width / 2, y: box.y + box.height / 2, id: 1 }] });
           try { await page.waitForFunction(predicate); }
+          catch (error) {
+            if (capture && woodFeedback) {
+              await writeFile(join(out, "input-failure.json"), JSON.stringify({
+                viewport, code, data: await read(), metrics: await inspect(page),
+                error: String(error), source: build,
+              }, null, 2) + "\n");
+              await page.screenshot({ path: join(out, "input-failure.png"), fullPage: false });
+            }
+            throw error;
+          }
           finally { await cdp.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] }); }
         } else {
           await page.keyboard.down(code);
           try { await page.waitForFunction(predicate); } finally { await page.keyboard.up(code); }
         }
         log(code, cdp ? "native touch hold/release" : "native keyboard down/up; not a WebKit touch hold");
+        if (woodFeedback) console.log(`FIRST_WOOD_INPUT ${viewport.width} ${code} ${JSON.stringify((await read()).game)}`);
       }
       const controlled = await read();
       assert.equal(controlled.held, 0); assert.ok(controlled.game.wood > 2);
@@ -165,6 +212,28 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
       await page.waitForTimeout(200);
       const settled = await read();
       assert.ok(Math.hypot(settled.game.x - controlled.game.x, settled.game.y - controlled.game.y) < 0.3);
+      if (woodFeedback) {
+        const expected = "木头进背包了。" + (mode.touch && !before ? "点背包「栏」选栅栏" : "按 1 选栅栏")
+          + "，料不够再砍一棵，点发光格围上。";
+        assert.equal(settled.toast.text, expected); assert.equal(settled.toast.visible, true);
+        assert.equal(settled.game.gathered, true);
+        const metrics = await inspect(page);
+        assert.ok(metrics.rects.toast.bottom <= metrics.rects["notice-feed"].bottom);
+        await shot("first-wood-toast");
+        await page.waitForFunction(() => window.__firstWoodToastEvents.some((event) => event.kind === "hide"));
+        const expired = await read(), messages = expired.wood_events.filter((event) => event.kind === "message");
+        assert.equal(messages.length, 1, "remaining wood pickups must not retrigger the first-wood toast");
+        const hidden = expired.wood_events.find((event) => event.kind === "hide");
+        const duration = hidden.time - messages[0].time, realDuration = (hidden.real_ms - messages[0].real_ms) / 1000;
+        assert.ok(realDuration >= 3.3 && realDuration <= 3.55, `natural toast duration changed: ${realDuration}`);
+        console.log(`FIRST_WOOD_DURATION ${viewport.width} game=${duration} real=${realDuration}`);
+        assert.equal(expired.toast.visible, false); assert.equal(expired.game.gathered, true);
+        assert.ok(expired.game.wood >= controlled.game.wood);
+        records.push({ viewport, controlled, settled, expired, duration, real_duration: realDuration, input_log: inputs });
+        assert.deepEqual(errors, []);
+        if (cdp) await cdp.detach();
+        continue;
+      }
       await shot("first-day-controls");
       await activate("#btn-help");
       await page.waitForSelector("#overlay:not(.hidden)");
@@ -194,7 +263,13 @@ export async function testTouchTitle(browser, origin, { before = false, capture 
     validation[version] = records;
     await writeFile(validationFile, JSON.stringify(validation, null, 2) + "\n");
   }
-  console.log(`TOUCH_TITLE_OK ${engine} ${version}: four viewports, ordinary new/reselect titles, actual movement/gather/release, desktop text and reversible media layout`);
+  console.log(woodFeedback
+    ? `FIRST_WOOD_TOAST_OK ${engine} ${version}: 320/390 touch layout + desktop, ordinary native gather/release, single pickup feedback, natural3.4s, fully visible toast`
+    : `TOUCH_TITLE_OK ${engine} ${version}: four viewports, ordinary new/reselect titles, actual movement/gather/release, desktop text and reversible media layout`);
+}
+
+export async function testFirstWoodToast(browser, origin) {
+  await testTouchTitle(browser, origin, { woodFeedback: true });
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
@@ -208,6 +283,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     assert.ok(resolve(profile).startsWith(resolve(tmpdir()) + sep), "browser profile must use configured temporary directory");
     console.log("BROWSER_PROFILE_D_OK " + profile);
     await session.detach();
-    await testTouchTitle(browser, origin, { before: process.argv.includes("--before"), capture: process.argv.includes("--capture") });
+    await testTouchTitle(browser, origin, { before: process.argv.includes("--before"),
+      capture: process.argv.includes("--capture"), woodFeedback: process.argv.includes("--first-wood") });
   } finally { await browser.close(); await new Promise((done) => server.close(done)); }
 }

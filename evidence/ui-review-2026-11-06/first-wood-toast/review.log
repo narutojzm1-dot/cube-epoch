@@ -1,0 +1,9 @@
+Independent required read-only [reviewer] first-wood-review / code-review.
+Scope: one-line game.js first-wood toast diff, ordinary first-wood mode in tests/touch-title.mjs and tests/e2e.mjs entry.
+Result: No significant issues found in the reviewed changes.
+Reviewer did not edit/run tests/builds/screenshots, spawn workers/worktrees or publish.
+Code review is not coordinator visual approval; initial native-input timeout is retained, not claimed diagnosed/fixed.
+
+Independent narrow [reviewer] wood-clock-review / code-review after actual full WebKit game-clock assertion failure.
+Scope: performance.now() toast lifetime versus original hitstop/state.time relationship; existing tolerance and all product rules unchanged.
+Result: No significant issues found in the reviewed changes.

@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-027 首批木头成功提示的触屏背包路径
+
+[6张320/390/桌面同态前后原图](first-wood-toast/INDEX.md) · [普通输入/资源/一次触发与自然隐藏](first-wood-toast/validation.json) · [源码与实际矩形](first-wood-toast/screenshots.json) · [检查](first-wood-toast/checks.log)。
+
+仅将首次拾木toast的「按1」按既有触屏判定改为「点背包「栏」选栅栏」，键鼠整句、触发标记、3.4秒参数和所有规则不变。普通触屏真采集、剩余木头入包只触发一次，6图待协调逐图审查；首次自动化按住超时原log保留，未混称已诊断。D盘专用profile/cache，旧证据/诊断复用且不改。
+
 ## 独立维护批次：UI-026 手机首次/重开选角操作说明
 
 [27张原图：四视口标题同态前后与三手机首日](touch-title/INDEX.md) · [普通新局/暂停回选角及真实移动采集](touch-title/validation.json) · [源码/矩形](touch-title/screenshots.json) · [D盘环境](touch-title/environment.log) · [检查](touch-title/checks.log)。
