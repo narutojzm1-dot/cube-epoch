@@ -1175,6 +1175,8 @@
       // 围上一面也给一句，免得以为围完了
       const left = campGaps().length;
       toast(`围上了。还差 ${left} 面，点下一个发光格。`, 2.4);
+    } else {
+      toast({ fence: "栅栏放好了。", torch: "火把放好了。", plot: "田开好了。" }[kind]);
     }
     return true;
   }
