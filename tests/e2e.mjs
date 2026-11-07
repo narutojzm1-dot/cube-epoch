@@ -2,6 +2,7 @@ import { serve, launch, enterPlay } from "./helpers.mjs";
 import { testNightUI } from "./night-ui.mjs";
 import { testCoreLayout, testDeviceHints, testWideTouchLayout } from "./layout-ui.mjs";
 import { testMaterialFeedback, testHeartDelivery } from "./material-feedback.mjs";
+import { testCropFeedback } from "./crop-feedback.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -432,6 +433,7 @@ await testNightUI(browser, origin);
 await testCoreLayout(browser, origin);
 await testMaterialFeedback(browser, origin);
 await testHeartDelivery(browser, origin);
+await testCropFeedback(browser, origin);
 await testDeviceHints(browser, origin);
 await testWideTouchLayout(browser, origin);
 await browser.close();

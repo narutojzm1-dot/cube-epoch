@@ -1,0 +1,27 @@
+REPRO a11106c / Chromium native320 touch: actual sow seed2->1, stage0 grow3.05 and stage1 grow0.33 with held harvest300ms, wheat0 and prompt empty, held0, scrollY0.
+BEFORE_CAPTURE_ATTEMPT_FAILED mature harvest held only300ms, shorter than the existing knight harvest threshold; no resource arrived and wait timed out. Test-only fix waits for the actual harvest then releases; no game timing/rule changed.
+BEFORE_CAPTURE_OK 20 checks,8 originals. Two already saved valid before images reused with original source/metadata, not reshot.
+AFTER_CAPTURE_ATTEMPT_FAILED inventory compared after wheat pickup but before separate seed drop reached player; expected seed2, actual1. Test-only fix waits for both existing drops to be collected and reads crop/tile/inventory atomically; no pickup/yield rule changed.
+AFTER_CAPTURE_OK 20 checks,14 originals; three already saved valid after images reused with original source/metadata, not reshot. Chromium native touch E/held harvest + desktop keyboard; natural growth and original harvest/replant semantics verified.
+EVIDENCE_SCOPE 22 native-size originals; growth-flow does not inject resources/crop phases/clock. Only post-flow unpictured night-priority probe injects night/stage1/harmless far enemy. Not natural three-night victory or hardware/visual approval.
+
+> test
+> node tests/static.mjs && node tests/e2e.mjs
+
+STATIC_OK
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+HEART_DELIVERY_OK 20 after cases; 0 original PNGs
+CROP_FEEDBACK_OK 20 after checks; natural growth + unchanged harvest + night priority; 0 actual-viewport originals; webkit; harvest=keyboard, touch E native
+DEVICE_HINTS_OK 84 cases; 0 actual-viewport PNGs
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":109.5,"y":95,"width":470,"height":282,"right":579.5,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406,"y":280.703125,"width":816,"height":489.59375,"right":1222,"bottom":770.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+E2E_OK
+UI_COVERAGE_OK recorded baseline 172/172; history 305; supplemental 316; read-only, no images captured; not a new-build full-matrix claim
+INDEPENDENT_READ_ONLY_REVIEW_OK "No significant issues found in the reviewed changes." No second writing agent/worktree; no coordinator visual approval implied.
+FINAL_LOCAL_GATES_OK syntax + static/e2e (20 crop checks and existing resource/input/night/altar gates) + coverage/diff whitespace; source/evidence integrity verified, user diagnostic untouched.
