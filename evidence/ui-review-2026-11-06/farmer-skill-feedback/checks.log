@@ -1,0 +1,49 @@
+Product baseline: 557c41e17103c9593789e44ffe2b3a148cb13f34
+Before served-byte SHA256: f854c81c0b1ba44a94cae652f8bfc7c5f3eb82c17ea8528429971fe5c5fe092f
+After dirty served-byte SHA256: 51a0cbc70ebe7ba282df9ce2f70aaaf12fc1e8f66bbd6185bf5e7fcad0612cb7
+
+node --check tests\farmer-skill-feedback.mjs
+exit 0
+node tests\farmer-skill-feedback.mjs --before --capture
+FARMER_SKILL_FEEDBACK_OK 20 before cases; actual ripening/heal + cap/cooldown/inventory guards; 14 original PNGs
+
+node --check game.js
+exit 0
+node tests\static.mjs
+STATIC_OK
+node tests\farmer-skill-feedback.mjs --capture
+FARMER_SKILL_FEEDBACK_OK 20 after cases; actual ripening/heal + cap/cooldown/inventory guards; 14 original PNGs
+
+Independent read-only reviewer [reviewer] Review farmer skill feedback
+Scope: game.js diff, new tests\farmer-skill-feedback.mjs, tests\e2e.mjs registration; no writes/tests/worktrees.
+No significant issues found in the reviewed changes.
+
+node --check tests\e2e.mjs
+exit 0
+node tests\e2e.mjs
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+HEART_DELIVERY_OK 20 after cases; 0 original PNGs
+CROP_FEEDBACK_OK 20 after checks; natural growth + unchanged harvest + night priority; 0 actual-viewport originals; webkit; harvest=keyboard, touch E native
+FARMER_SKILL_FEEDBACK_OK 20 after cases; actual ripening/heal + cap/cooldown/inventory guards; 0 original PNGs
+DEVICE_HINTS_OK 84 cases; 0 actual-viewport PNGs
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1280,"height":800},"canvas":{"x":86,"y":140.703125,"width":816,"height":489.59375,"right":902,"bottom":630.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_DETAILS_CLOSE_OK manual collapse + native fence selection return to first viewport without scroll
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":981,"height":501},"canvas":{"x":109.5,"y":95,"width":470,"height":282,"right":579.5,"bottom":377},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_FIXED {"scroll":{"x":0,"y":0},"document":{"width":1920,"height":1080},"canvas":{"x":406,"y":280.703125,"width":816,"height":489.59375,"right":1222,"bottom":770.296875},"controls_bottom":235,"minimum_target":44}
+WIDE_TOUCH_OK 11 measured cases; 0 recorded original PNGs
+E2E_OK
+exit 0
+
+node tests\ui-review.mjs --check-coverage
+UI_COVERAGE_OK recorded baseline 172/172; history 305; supplemental 344; read-only, no images captured; not a new-build full-matrix claim
+FARMER_EVIDENCE_INTEGRITY_OK 28 actual-viewport originals; old matrices/batches preserved; protected diagnostic unchanged
+git diff --check (only current slice)
+exit 0
+
+No user save read/write. Night images use explicitly documented isolated fixtures, not natural night survival.
+All 28 originals await coordinator visual review. Browser-native touch taps are not physical-device acceptance.
+Unrelated natural-loop result.json retained locally and excluded from staging.
+No merge, Pages/Tencent deployment, CI cancellation/re-run or server changes.
