@@ -42,7 +42,7 @@
 
 所有本次浏览器已关闭，WebKit实际launch PID用Get-Process核实消失，Chromium执行完awaited close后profile/artifacts为空。只删除核实的六个D盘运行子目录及已复制留证的环境脚本，专用运行目录留空，见 [cleanup.log](cleanup.log)。首次清理检查的PowerShell语法/WMI「无效类」及空目录层级保守停止记录在 [cleanup-initial-errors.log](cleanup-initial-errors.log)，未用WMI失败后的成功标记当验证，未按进程名杀其他程序。
 
-首次命令行检查因默认未设enable-automation失败，见 [preflight-initial.log](preflight-initial.log)，随后仅验证启动添加该标志。第二次locator.tap虽然中心已可见，仍自动滚动整张角色卡导致开始按钮不在视口；原失败日志/2图/元数据保留在 [touch-title-initial-input](../touch-title-initial-input/)，当前测试改用真实坐标tap，不放宽可见断言。两者是测试启动/输入方式问题，无产品写入，不混入当前27张覆盖。
+首次命令行检查因默认未设enable-automation失败，见 [preflight-initial.log](preflight-initial.log)，随后仅验证启动添加该标志。第二次locator.tap虽然中心已可见，仍自动滚动整张角色卡导致开始按钮不在视口；原失败日志/8图/元数据保留在 [touch-title-initial-input](../touch-title-initial-input/)。该部分运行完成320/390各首次、末尾、普通回选角三图，844仅首次/末尾两图后失败，1280未运行，未写最终validation；不把模板复现步骤当作整轮完成。当前测试改用真实坐标tap，不放宽可见断言。两者是测试启动/输入方式问题，无产品写入，不混入当前27张覆盖。
 
 当前图**已截，待父协调逐图审查**；本机只复看受影响关键原图，不等于用户视觉通过。未覆盖真机、人类盲玩、新自然三夜、所有界面重拍或触屏多指跨结算。WebKit原生音频API限制沿用既有记录，不把兼容检查称作原生音频恢复验证。
 
