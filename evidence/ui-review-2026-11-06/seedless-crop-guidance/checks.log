@@ -1,0 +1,63 @@
+UI-035 seedless crop guidance
+
+Reproduced with normal starting seeds2 consumed by two native planting actions.
+Daytime, missing wheat1, immature crops and empty farm: before target=farm,
+empty-field interaction refused without inventory change; existing growing
+crop prompt already says to wait. After target=crop; same local wait prompt.
+Only currentTarget wheat branch changed: mature crop first, farm if seeds>0,
+then immature crop. No growth, recipe, resource, input, save or win change.
+
+PASS before-complete.log: Chromium before20 cases /24 original screenshots.
+PASS after.log: Chromium after20 cases /24 original screenshots.
+Native CDP direction/harvest holds and touch interaction on320/390/844;
+1280 keyboard/mouse. WebKit sustained input is explicitly keyboard fallback.
+Actual seed2->1->0, failed empty-field planting costs nothing; natural growth
+through original7/8-second stages, ripe collection returns wheat1/seed1.
+Existing held-input automatic replant may immediately spend returned seed1;
+this original behavior is retained and recorded, not mistaken for missing drop.
+Wheat2->3 makes original recipe ready and target workbench. Walls/other inventory
+preserved. Night, heart-owned, missing-gold and wall-gap controls unchanged.
+
+PASS static.log: node --check game.js; node tests/static.mjs.
+PASS review.log: independent review, no significant findings.
+PASS index-check.log:48 current and6 historical PNGs, original viewport sizes.
+PASS coverage.log: only affected batch appended; previous matrix reused read-only.
+PASS preservation.log: remove only UI035/batch -> exact prior root JSON data,
+and old protected diagnostic SHA256 unchanged.
+
+Full existing plain WebKit command: node tests/e2e.mjs, e2e.log FAILED at
+unchanged first-night Space wall-demolition wait (first-night-guidance.mjs:219).
+New seedless20, old altar11 and workbench15 cases had already passed.
+First failure's input/root cause was not established; guidance's wheat branch
+is not active during night. No first-night code/assertion/input/budget changed.
+e2e-final.log replays exact full assertions with existing read-only native
+key/pointer/toggle observer from bench-guide-priority/input-probe.mjs.
+It also FAILED in the original wall-demolition wait. The trace then established
+an 844-wide fixture race: Space keydown at real_ms339, delayed details-close
+toggle at340 -> game's existing resetInput() clears held Space, wall stays12.
+See first-night-failure-trace.log; prior failure logs retained unchanged.
+
+Necessary fixture-only synchronization: tests/first-night-guidance.mjs installs
+and awaits a once toggle-complete promise around the same native summary click,
+reusing established altar-guide-priority pattern. Product resetInput/toggle and
+every old first-night predicate/assertion/input/timeout remain unchanged.
+PASS first-night-toggle.log: original night1/2/3/4 x4 viewport cases with
+read-only toggle/Space trace; details reset now completes before next hold.
+Independent follow-up review found no significant issues and confirmed listener
+ordering and unchanged original demolition assertion and timeout.
+PASS e2e-complete.log: plain full gate after verified fixture synchronization,
+E2E_OK, new seedless20 and all old first-night night1/2/3/4 cases passed.
+Not a blind rerun or relaxed assertion. Original failures and root trace retained.
+
+Historical before.log: first executor photographed state before next UI update;
+2 partial images preserved. before-final.log: repeated north-facing movement
+entered crop tile, facing grass and blank prompt; actual player/crop data
+preserved with4 images. Executor now waits2 frames and performs real vertical
+repositioning, without writing player/crop state after prerequisite or altering
+gameplay to satisfy a test. before-complete.log is the valid complete baseline.
+
+Isolated fixed material/location/prior-harvest/walled daytime prerequisite with
+tutorial retained. Not a natural complete resource-gathering or three-night run.
+No physical Android/iOS, system gestures or safe-area validation.
+Visual review pending user/coordinator. No publication, merge or server changes.
+Per-run D-drive environment and exact cleanup logs retained.

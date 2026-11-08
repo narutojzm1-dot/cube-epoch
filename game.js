@@ -1053,7 +1053,9 @@
       const crop = nearestOf((tile, tx, ty) => tile === T.CROP && (state.crops.get(`${tx},${ty}`)?.stage || 0) >= 2);
       if (crop) return { ...crop, kind: "crop" };
       const farm = nearestOf((tile) => tile === T.FARM);
-      if (farm) return { ...farm, kind: "farm" };
+      if (farm && state.inv.seed > 0) return { ...farm, kind: "farm" };
+      const growing = nearestOf((tile, tx, ty) => tile === T.CROP && (state.crops.get(`${tx},${ty}`)?.stage || 0) < 2);
+      if (growing) return { ...growing, kind: "crop" };
     }
     return { x: state.bench.x, y: state.bench.y, kind: "bench" };
   }

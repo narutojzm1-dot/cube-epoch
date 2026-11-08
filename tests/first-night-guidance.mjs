@@ -48,7 +48,12 @@ export async function testFirstNightGuidance(browser, origin, { before = false, 
         assert.ok(r.y < viewport.height && r.y + r.height > 0);
         assert.equal(await page.evaluate(({ selector, x, y }) =>
           document.querySelector(selector).contains(document.elementFromPoint(x, y)), { selector, x, y }), true);
+        if (selector === "#play-details summary") await page.evaluate(() => {
+          window.__detailsSettled = new Promise((resolve) =>
+            document.getElementById("play-details").addEventListener("toggle", resolve, { once: true }));
+        });
         await (mode.touch ? page.touchscreen.tap(x, y) : page.mouse.click(x, y));
+        if (selector === "#play-details summary") await page.evaluate(() => window.__detailsSettled);
         inputs.push({ action: selector, type: mode.touch ? "native tap" : "native mouse click", x, y });
       };
       const swipeUp = async () => {
