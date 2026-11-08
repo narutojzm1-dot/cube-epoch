@@ -1,6 +1,17 @@
 {
   "supplemental_batches": [
     {
+      "id": "exhausted-wheat-supply",
+      "base_sha": "a09aaa5de95fc7af473abb156fbb8a4aa9eaf600",
+      "index": "exhausted-wheat-supply/INDEX.md",
+      "screenshots": "exhausted-wheat-supply/screenshots.json",
+      "issue_ids": [
+        "UI-036"
+      ],
+      "status": "已截",
+      "visual_review": "54张当前320/390/桌面前后及54张启动夹具历史原图待审；9真实采收/6播种/2吃麦与种自然过期形成耗尽，固定第三白天复用，原夜怪可掉麦/种但不保证；非自然三夜通关或实体设备"
+    },
+    {
       "id": "seedless-crop-guidance",
       "base_sha": "f652c884155ef060ce6505c33f41731080d4382b",
       "index": "seedless-crop-guidance/INDEX.md",
@@ -292,6 +303,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-036",
+      "title": "缺麦无种无苗，原地图与教程仍让去工作台合成",
+      "status": "仅该耗尽补给状态提示夜守篝火打怪可能掉麦/种；54张当前及54张夹具瞬态历史原图待审",
+      "before": "exhausted-wheat-supply before",
+      "after": "exhausted-wheat-supply after"
+    },
     {
       "id": "UI-035",
       "title": "白天缺麦且种子0，存在未熟麦苗与空田时，金框仍指无法播种的空田",

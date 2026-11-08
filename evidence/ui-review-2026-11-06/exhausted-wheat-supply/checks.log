@@ -1,0 +1,25 @@
+SOURCE: a09aaa5de95fc7af473abb156fbb8a4aa9eaf600 + dirty product changes
+PRODUCT_SHA256: 3d28b5ffe3f4f34e24ca5b51a19a54ad6d6ac02b4d6253dfe9e97452b270691b
+PASS node --check game.js / tests/exhausted-wheat-supply.mjs / reach-state.mjs / build-index.mjs
+PASS node tests/static.mjs: static-final.log; earlier static.log preserved
+PASS targeted new WebKit: webkit-controls.log;12 UI/control records,18 native night kills
+PASS corrected before Chromium native touch/desktop: before-corrected.log;12 records,27 original PNGs,18 native night kills
+PASS corrected after Chromium native touch/desktop: after-corrected.log;12 records,27 original PNGs,18 native night kills
+PASS complete plain WebKit: e2e-checked.log; new12 + night18, original seedless20, original first-night fixture night1/night2/night3/night4, E2E_OK
+PASS independent code review and three narrow same-task follow-ups: review.log
+PASS protection query: PR25–32 OPEN at original heads; protected-prs.json; retention-cleanup.log
+PASS old tracked natural-loop-a342ef0/result.json SHA256 unchanged: 964230C5914271F326300CA2C0FE82122B87F43D3BF2111D5B2363A75089596D
+
+Full WebKit's non-capture behavior is unchanged by the final capture-only startup-toast wait; final capture path separately exercised in the corrected before/after runs.
+Original first-night test file, assertions and budgets were not modified.
+Previous proof/old crop/new maturity failure logs retained; causes only asserted where actual state demonstrated them, see validation.json.
+The successful formation JSON shows9 actual mouse harvest holds,6 E planting actions and2 H uses; old console11 substring count corrected for future runs only.
+
+PASS evidence builder/108 PNG signature-size/hash audit: index-check.log;54 current/54 retained history, actual9 harvest/6 plant/2 H
+PASS prior-matrix exact preservation after removing only appended UI-036: index-check.log
+PASS read-only old-matrix and supplemental coverage reuse: coverage-check.log
+Desktop recorded native-keyboard labels had a generic WebKit-touch-fallback suffix despite Chromium fine-pointer caller. Raw capture labels retained and annotated in screenshots.json; future emitted label corrected, no input behavior change.
+Pending until separately verified: same-commit Linux PR static/e2e.
+NOT COVERED: physical iOS/Android, system gestures/safe areas, new landscape captures, continuous natural walking/full natural three-night win, user-approved visual review.
+No main push, merge, Pages/Tencent deploy or production server changes.
+Every local browser/cache/profile/temp root was on owned D storage, processes closed before exact cleanup; see per-run cleanup logs.

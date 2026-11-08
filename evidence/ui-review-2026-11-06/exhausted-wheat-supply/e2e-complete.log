@@ -1,0 +1,33 @@
+2026-11-08T12:04:57.593Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\webkit-2336\Playwright.exe --inspector-pipe --disable-accelerated-compositing --headless --no-startup-window
+2026-11-08T12:04:57.599Z pw:browser <launched> pid=66144
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+HEART_DELIVERY_OK 20 after cases; 0 original PNGs
+CROP_FEEDBACK_OK 20 after checks; natural growth + unchanged harvest + night priority; 0 actual-viewport originals; webkit; harvest=keyboard, touch E native
+SEEDLESS_CROP_GUIDANCE_OK webkit after 20 cases 0 original PNGs
+2026-11-08T12:09:32.216Z pw:browser [pid=66144] <kill>
+2026-11-08T12:09:32.216Z pw:browser [pid=66144] <will force kill>
+2026-11-08T12:09:33.821Z pw:browser [pid=66144] taskkill stdout: SUCCESS: The process with PID 97304 (child process of PID 51612) has been terminated.
+SUCCESS: The process with PID 57180 (child process of PID 54668) has been terminated.
+SUCCESS: The process with PID 42624 (child process of PID 31908) has been terminated.
+SUCCESS: The process with PID 51612 (child process of PID 66144) has been terminated.
+SUCCESS: The process with PID 54668 (child process of PID 66144) has been terminated.
+SUCCESS: The process with PID 31908 (child process of PID 66144) has been terminated.
+SUCCESS: The process with PID 66144 (child process of PID 64304) has been terminated.
+
+2026-11-08T12:09:33.821Z pw:browser [pid=66144] starting temporary directories cleanup
+2026-11-08T12:09:33.822Z pw:browser [pid=66144] finished temporary directories cleanup
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 20000ms exceeded.
+    at testExhaustedWheatSupply (D:\work\projects\cube-epoch\tests\exhausted-wheat-supply.mjs:134:18)
+    at async file:///D:/work/projects/cube-epoch/tests/e2e.mjs:458:1 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

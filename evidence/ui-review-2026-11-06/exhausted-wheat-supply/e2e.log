@@ -1,0 +1,33 @@
+2026-11-08T11:50:02.629Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\webkit-2336\Playwright.exe --inspector-pipe --disable-accelerated-compositing --headless --no-startup-window
+2026-11-08T11:50:02.636Z pw:browser <launched> pid=60212
+MOBILE_OK movement + multitouch + gather + build/repair + release + plant + skill + combat + craft + offer gates
+NIGHT_UI_OK four viewports: third/fourth night, broken wall, real dawn transition, non-overlapping touch notices
+CORE_LAYOUT_OK four viewports; daytime/nighttime notices, knight/mage core targets in first viewport, tutorial/backpack access, native taps do not scroll
+MATERIAL_FEEDBACK_OK 30 native-touch cases; 0 original screenshots
+HEART_DELIVERY_OK 20 after cases; 0 original PNGs
+CROP_FEEDBACK_OK 20 after checks; natural growth + unchanged harvest + night priority; 0 actual-viewport originals; webkit; harvest=keyboard, touch E native
+2026-11-08T11:54:18.906Z pw:browser [pid=60212] <kill>
+2026-11-08T11:54:18.906Z pw:browser [pid=60212] <will force kill>
+2026-11-08T11:54:19.342Z pw:browser [pid=60212] taskkill stdout: SUCCESS: The process with PID 79836 (child process of PID 80716) has been terminated.
+SUCCESS: The process with PID 30808 (child process of PID 92292) has been terminated.
+SUCCESS: The process with PID 87672 (child process of PID 76444) has been terminated.
+SUCCESS: The process with PID 80716 (child process of PID 60212) has been terminated.
+SUCCESS: The process with PID 92292 (child process of PID 60212) has been terminated.
+SUCCESS: The process with PID 76444 (child process of PID 60212) has been terminated.
+SUCCESS: The process with PID 60212 (child process of PID 67248) has been terminated.
+
+2026-11-08T11:54:19.342Z pw:browser [pid=60212] starting temporary directories cleanup
+2026-11-08T11:54:19.343Z pw:browser [pid=60212] finished temporary directories cleanup
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 5000ms exceeded.
+    at hold (D:\work\projects\cube-epoch\tests\seedless-crop-guidance.mjs:76:26)
+    at async testSeedlessCropGuidance (D:\work\projects\cube-epoch\tests\seedless-crop-guidance.mjs:168:7)
+    at async file:///D:/work/projects/cube-epoch/tests/e2e.mjs:457:1 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

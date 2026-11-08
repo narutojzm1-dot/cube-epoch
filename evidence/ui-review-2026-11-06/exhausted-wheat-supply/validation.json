@@ -1,0 +1,3888 @@
+{
+  "before": [
+    {
+      "id": "native-exhausted-route",
+      "phase": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "time": 3.714400000011916,
+        "cycle": 3.4529999999999954,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "guide": {
+        "time": 3.831100000011916,
+        "cycle": 3.569699999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": true,
+        "held": 0
+      },
+      "rejected": {
+        "time": 4.181400000011916,
+        "cycle": 3.919999999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 329.5468095999999,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "点「交互 E」查看还差哪些材料",
+        "toast": "还差：麦 2",
+        "details": false,
+        "held": 0
+      },
+      "returned": {
+        "time": 4.53170000001192,
+        "cycle": 4.270299999999999,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 347.3404982144002,
+          "dir": 0
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "还差：麦 2",
+        "details": false,
+        "held": 0
+      },
+      "inputs": [
+        {
+          "action": "#play-details summary",
+          "input": "native touch tap",
+          "x": 160,
+          "y": 519.796875,
+          "time": 3.7977000000119165
+        },
+        {
+          "action": "#play-details summary",
+          "input": "native touch tap",
+          "x": 160,
+          "y": 216.8125,
+          "time": 3.8978000000119155
+        },
+        {
+          "action": "ArrowUp",
+          "input": "native CDP touch hold/release",
+          "start": {
+            "time": 3.914400000011916,
+            "cycle": 3.652999999999995,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 344,
+              "dir": 3
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "",
+            "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "details": false,
+            "held": 0
+          },
+          "end": {
+            "time": 4.131400000011915,
+            "cycle": 3.869999999999995,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 331.1807999999999,
+              "dir": 3
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "点「交互 E」查看还差哪些材料",
+            "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "details": false,
+            "held": 0
+          },
+          "rect": {
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "#touch-interact",
+          "input": "native touch tap",
+          "x": 234,
+          "y": 421.796875,
+          "time": 4.1480000000119155
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native CDP touch hold/release",
+          "start": {
+            "time": 4.214800000011915,
+            "cycle": 3.953399999999995,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 329.1100965119999,
+              "dir": 3
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "点「交互 E」查看还差哪些材料",
+            "toast": "还差：麦 2",
+            "details": false,
+            "held": 0
+          },
+          "end": {
+            "time": 4.4984000000119195,
+            "cycle": 4.236999999999998,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 346.0731062144002,
+              "dir": 0
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "",
+            "toast": "还差：麦 2",
+            "details": false,
+            "held": 0
+          },
+          "rect": {
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44
+          }
+        }
+      ]
+    },
+    {
+      "id": "seed-and-natural-growth-controls",
+      "phase": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "seeded": {
+        "time": 3.7598999999821143,
+        "cycle": 3.4860999999999955,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "点「交互 E」播种（要有种子）",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "growing": {
+        "time": 3.8433999999821147,
+        "cycle": 3.569599999999996,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 0,
+            "grow": 0.033300000000000184
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "麦苗还在长，成熟后再收。",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "details": false,
+        "held": 0
+      },
+      "ripe": {
+        "time": 18.85589999998206,
+        "cycle": 18.58209999999994,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "按住「采集/攻击」收麦",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "details": false,
+        "held": 0
+      }
+    },
+    {
+      "id": "control-recipe-ready",
+      "phase": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "data": {
+        "time": 3.6863000000238397,
+        "cycle": 3.452799999999999,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "去工作台点「交互 E」合成方块之心",
+        "guide": "去工作台点「交互 E」合成方块之心",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    },
+    {
+      "id": "control-heart-ready",
+      "phase": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "data": {
+        "time": 3.690000000011918,
+        "cycle": 3.4528999999999974,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "gaps": [],
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "guide": "方块之心已备好，去北边祭坛献祭。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    },
+    {
+      "id": "native-exhausted-route",
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "time": 3.714299999982114,
+        "cycle": 3.452699999999997,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "guide": {
+        "time": 3.8310999999821136,
+        "cycle": 3.5694999999999966,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": true,
+        "held": 0
+      },
+      "rejected": {
+        "time": 4.181399999982115,
+        "cycle": 3.919799999999996,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 329.5532095999999,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "点「交互 E」查看还差哪些材料",
+        "toast": "还差：麦 2",
+        "details": false,
+        "held": 0
+      },
+      "returned": {
+        "time": 4.548299999982119,
+        "cycle": 4.286699999999999,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 347.2540570444801,
+          "dir": 0
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "还差：麦 2",
+        "details": false,
+        "held": 0
+      },
+      "inputs": [
+        {
+          "action": "#play-details summary",
+          "input": "native touch tap",
+          "x": 195,
+          "y": 561.796875,
+          "time": 3.7976999999821137
+        },
+        {
+          "action": "#play-details summary",
+          "input": "native touch tap",
+          "x": 195,
+          "y": 350.3125,
+          "time": 3.9144999999821137
+        },
+        {
+          "action": "ArrowUp",
+          "input": "native CDP touch hold/release",
+          "start": {
+            "time": 3.9144999999821137,
+            "cycle": 3.6528999999999967,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 344,
+              "dir": 3
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "",
+            "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "details": false,
+            "held": 0
+          },
+          "end": {
+            "time": 4.131399999982114,
+            "cycle": 3.869799999999996,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 331.1871999999999,
+              "dir": 3
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "点「交互 E」查看还差哪些材料",
+            "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "details": false,
+            "held": 0
+          },
+          "rect": {
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "#touch-interact",
+          "input": "native touch tap",
+          "x": 269,
+          "y": 463.796875,
+          "time": 4.147999999982114
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native CDP touch hold/release",
+          "start": {
+            "time": 4.231499999982116,
+            "cycle": 3.969899999999996,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 328.99121425279986,
+              "dir": 3
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "点「交互 E」查看还差哪些材料",
+            "toast": "还差：麦 2",
+            "details": false,
+            "held": 0
+          },
+          "end": {
+            "time": 4.514999999982119,
+            "cycle": 4.253399999999998,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 345.9853210444801,
+              "dir": 0
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "",
+            "toast": "还差：麦 2",
+            "details": false,
+            "held": 0
+          },
+          "rect": {
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44
+          }
+        }
+      ]
+    },
+    {
+      "id": "seed-and-natural-growth-controls",
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "seeded": {
+        "time": 3.7176000000119163,
+        "cycle": 3.452799999999997,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "点「交互 E」播种（要有种子）",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "growing": {
+        "time": 3.817600000011916,
+        "cycle": 3.552799999999997,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 0,
+            "grow": 0.03329999999999973
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "麦苗还在长，成熟后再收。",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "details": false,
+        "held": 0
+      },
+      "ripe": {
+        "time": 18.83020000001181,
+        "cycle": 18.565399999999894,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "按住「采集/攻击」收麦",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "details": false,
+        "held": 0
+      }
+    },
+    {
+      "id": "control-recipe-ready",
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "data": {
+        "time": 3.7042999999999973,
+        "cycle": 3.4527999999999985,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "去工作台点「交互 E」合成方块之心",
+        "guide": "去工作台点「交互 E」合成方块之心",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    },
+    {
+      "id": "control-heart-ready",
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "data": {
+        "time": 3.6722000000178774,
+        "cycle": 3.436099999999996,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "gaps": [],
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "guide": "方块之心已备好，去北边祭坛献祭。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    },
+    {
+      "id": "native-exhausted-route",
+      "phase": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "time": 3.706100000023837,
+        "cycle": 3.436099999999997,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "details": true,
+        "held": 0
+      },
+      "guide": {
+        "time": 3.823000000023836,
+        "cycle": 3.552999999999996,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "details": false,
+        "held": 0
+      },
+      "rejected": {
+        "time": 4.106500000023837,
+        "cycle": 3.836499999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 330.9905279999999,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "按 E查看还差哪些材料",
+        "toast": "还差：麦 2",
+        "details": true,
+        "held": 0
+      },
+      "returned": {
+        "time": 4.440100000023843,
+        "cycle": 4.170099999999998,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 346.27934289280023,
+          "dir": 0
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "",
+        "toast": "还差：麦 2",
+        "details": true,
+        "held": 0
+      },
+      "inputs": [
+        {
+          "action": "#play-details summary",
+          "input": "native mouse click",
+          "x": 1044,
+          "y": 117,
+          "time": 3.7896000000238366
+        },
+        {
+          "action": "#play-details summary",
+          "input": "native mouse click",
+          "x": 1044,
+          "y": 117,
+          "time": 3.889700000023836
+        },
+        {
+          "action": "ArrowUp",
+          "input": "native keyboard hold (WebKit touch fallback)",
+          "start": {
+            "time": 3.889700000023836,
+            "cycle": 3.619699999999996,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 344,
+              "dir": 3
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+            "prompt": "",
+            "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+            "details": true,
+            "held": 0
+          },
+          "end": {
+            "time": 4.073100000023837,
+            "cycle": 3.8030999999999957,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 332.2623999999999,
+              "dir": 3
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+            "prompt": "按 E查看还差哪些材料",
+            "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+            "details": true,
+            "held": 0
+          },
+          "rect": null
+        },
+        {
+          "action": "interact",
+          "input": "native E"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native keyboard hold (WebKit touch fallback)",
+          "start": {
+            "time": 4.173200000023838,
+            "cycle": 3.9031999999999947,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 330.06347089279996,
+              "dir": 3
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+            "prompt": "按 E查看还差哪些材料",
+            "toast": "还差：麦 2",
+            "details": true,
+            "held": 0
+          },
+          "end": {
+            "time": 4.406700000023842,
+            "cycle": 4.136699999999997,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 345.0074708928002,
+              "dir": 0
+            },
+            "target": {
+              "x": 392,
+              "y": 312,
+              "kind": "bench"
+            },
+            "gaps": [],
+            "objective": "采集 麦 1/3，顺手补墙",
+            "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+            "guideSummary": "第五步：天亮献祭",
+            "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+            "prompt": "",
+            "toast": "还差：麦 2",
+            "details": true,
+            "held": 0
+          },
+          "rect": null
+        }
+      ]
+    },
+    {
+      "id": "seed-and-natural-growth-controls",
+      "phase": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "seeded": {
+        "time": 3.6914999999761524,
+        "cycle": 3.452899999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "按 E 或左键播种（要有种子）",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "details": true,
+        "held": 0
+      },
+      "growing": {
+        "time": 3.7915999999761523,
+        "cycle": 3.552999999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 0,
+            "grow": 0.033400000000000096
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "麦苗还在长，成熟后再收。",
+        "toast": "播下了。长大后按住左键收。",
+        "details": true,
+        "held": 0
+      },
+      "ripe": {
+        "time": 18.804099999976057,
+        "cycle": 18.5654999999999,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "按住左键收麦",
+        "toast": "播下了。长大后按住左键收。",
+        "details": true,
+        "held": 0
+      }
+    },
+    {
+      "id": "control-recipe-ready",
+      "phase": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "data": {
+        "time": 3.7048999999701944,
+        "cycle": 3.469499999999998,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "去工作台按 E合成方块之心",
+        "guide": "去工作台按 E合成方块之心",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "details": true,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    },
+    {
+      "id": "control-heart-ready",
+      "phase": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "data": {
+        "time": 3.6905000000178747,
+        "cycle": 3.452999999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "gaps": [],
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "guide": "方块之心已备好，去北边祭坛献祭。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：北边祭坛按 E 献祭",
+        "prompt": "",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "details": true,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    }
+  ],
+  "after": [
+    {
+      "id": "native-exhausted-route",
+      "phase": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "initial": {
+        "time": 3.6985999999880734,
+        "cycle": 3.452999999999996,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "guide": {
+        "time": 3.798599999988073,
+        "cycle": 3.5529999999999955,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": true,
+        "held": 0
+      },
+      "rejected": {
+        "time": 4.132199999988074,
+        "cycle": 3.8865999999999947,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 329.5518655999999,
+          "dir": 3
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "点「交互 E」查看还差哪些材料",
+        "toast": "还差：麦 2",
+        "details": false,
+        "held": 0
+      },
+      "returned": {
+        "time": 4.482599999988076,
+        "cycle": 4.2369999999999965,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 347.3469085120001,
+          "dir": 0
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "还差：麦 2",
+        "details": false,
+        "held": 0
+      },
+      "inputs": [
+        {
+          "action": "#play-details summary",
+          "input": "native touch tap",
+          "x": 160,
+          "y": 519.796875,
+          "time": 3.765299999988073
+        },
+        {
+          "action": "#play-details summary",
+          "input": "native touch tap",
+          "x": 160,
+          "y": 216.8125,
+          "time": 3.865299999988073
+        },
+        {
+          "action": "ArrowUp",
+          "input": "native CDP touch hold/release",
+          "start": {
+            "time": 3.865299999988073,
+            "cycle": 3.6196999999999955,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 344,
+              "dir": 3
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "",
+            "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "details": false,
+            "held": 0
+          },
+          "end": {
+            "time": 4.082199999988073,
+            "cycle": 3.836599999999995,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 331.1871999999999,
+              "dir": 3
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "点「交互 E」查看还差哪些材料",
+            "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "details": false,
+            "held": 0
+          },
+          "rect": {
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "#touch-interact",
+          "input": "native touch tap",
+          "x": 234,
+          "y": 421.796875,
+          "time": 4.098899999988073
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native CDP touch hold/release",
+          "start": {
+            "time": 4.165699999988074,
+            "cycle": 3.920099999999995,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 329.1145378559999,
+              "dir": 3
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "点「交互 E」查看还差哪些材料",
+            "toast": "还差：麦 2",
+            "details": false,
+            "held": 0
+          },
+          "end": {
+            "time": 4.449099999988076,
+            "cycle": 4.2034999999999965,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 346.07190051200007,
+              "dir": 0
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "",
+            "toast": "还差：麦 2",
+            "details": false,
+            "held": 0
+          },
+          "rect": {
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44
+          }
+        }
+      ]
+    },
+    {
+      "id": "seed-and-natural-growth-controls",
+      "phase": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "seeded": {
+        "time": 3.7588999999940342,
+        "cycle": 3.5195999999999956,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "点「交互 E」播种（要有种子）",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "growing": {
+        "time": 4.376099999994038,
+        "cycle": 4.136799999999996,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 0,
+            "grow": 0.13340000000000052
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "麦苗还在长，成熟后再收。",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "details": false,
+        "held": 0
+      },
+      "ripe": {
+        "time": 19.288399999993924,
+        "cycle": 19.049099999999893,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "按住「采集/攻击」收麦",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "details": false,
+        "held": 0
+      }
+    },
+    {
+      "id": "control-recipe-ready",
+      "phase": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "data": {
+        "time": 3.330200000005955,
+        "cycle": 3.002499999999996,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "去工作台点「交互 E」合成方块之心",
+        "guide": "去工作台点「交互 E」合成方块之心",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    },
+    {
+      "id": "control-heart-ready",
+      "phase": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "data": {
+        "time": 3.706900000047677,
+        "cycle": 3.4527999999999945,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "gaps": [],
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "guide": "方块之心已备好，去北边祭坛献祭。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    },
+    {
+      "id": "native-exhausted-route",
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "time": 3.713699999999997,
+        "cycle": 3.4528999999999987,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "guide": {
+        "time": 3.813799999999998,
+        "cycle": 3.5529999999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": true,
+        "held": 0
+      },
+      "rejected": {
+        "time": 4.1641,
+        "cycle": 3.903299999999999,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 329.5551295999998,
+          "dir": 3
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "点「交互 E」查看还差哪些材料",
+        "toast": "还差：麦 2",
+        "details": false,
+        "held": 0
+      },
+      "returned": {
+        "time": 4.514400000000002,
+        "cycle": 4.2536,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 347.33874724479995,
+          "dir": 0
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "还差：麦 2",
+        "details": false,
+        "held": 0
+      },
+      "inputs": [
+        {
+          "action": "#play-details summary",
+          "input": "native touch tap",
+          "x": 195,
+          "y": 561.796875,
+          "time": 3.7804999999999978
+        },
+        {
+          "action": "#play-details summary",
+          "input": "native touch tap",
+          "x": 195,
+          "y": 368.3125,
+          "time": 3.897099999999998
+        },
+        {
+          "action": "ArrowUp",
+          "input": "native CDP touch hold/release",
+          "start": {
+            "time": 3.897099999999998,
+            "cycle": 3.6362999999999994,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 344,
+              "dir": 3
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "",
+            "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "details": false,
+            "held": 0
+          },
+          "end": {
+            "time": 4.113999999999999,
+            "cycle": 3.853199999999999,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 331.19359999999983,
+              "dir": 3
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "点「交互 E」查看还差哪些材料",
+            "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+            "details": false,
+            "held": 0
+          },
+          "rect": {
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "#touch-interact",
+          "input": "native touch tap",
+          "x": 269,
+          "y": 463.796875,
+          "time": 4.130699999999999
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native CDP touch hold/release",
+          "start": {
+            "time": 4.1975,
+            "cycle": 3.9366999999999988,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 329.11933849599984,
+              "dir": 3
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "点「交互 E」查看还差哪些材料",
+            "toast": "还差：麦 2",
+            "details": false,
+            "held": 0
+          },
+          "end": {
+            "time": 4.480900000000002,
+            "cycle": 4.2200999999999995,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 346.0623952448,
+              "dir": 0
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+            "prompt": "",
+            "toast": "还差：麦 2",
+            "details": false,
+            "held": 0
+          },
+          "rect": {
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44
+          }
+        }
+      ]
+    },
+    {
+      "id": "seed-and-natural-growth-controls",
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "seeded": {
+        "time": 3.690599999988077,
+        "cycle": 3.452799999999999,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "点「交互 E」播种（要有种子）",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "growing": {
+        "time": 3.790699999988077,
+        "cycle": 3.552899999999999,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 0,
+            "grow": 0.033300000000000184
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "麦苗还在长，成熟后再收。",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "details": false,
+        "held": 0
+      },
+      "ripe": {
+        "time": 18.803099999987943,
+        "cycle": 18.565299999999866,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "按住「采集/攻击」收麦",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "details": false,
+        "held": 0
+      }
+    },
+    {
+      "id": "control-recipe-ready",
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "data": {
+        "time": 3.6753000000357576,
+        "cycle": 3.436299999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "去工作台点「交互 E」合成方块之心",
+        "guide": "去工作台点「交互 E」合成方块之心",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    },
+    {
+      "id": "control-heart-ready",
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "data": {
+        "time": 3.6925999999940347,
+        "cycle": 3.4527999999999963,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "gaps": [],
+        "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+        "guide": "方块之心已备好，去北边祭坛献祭。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q",
+        "prompt": "",
+        "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+        "details": false,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    },
+    {
+      "id": "native-exhausted-route",
+      "phase": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "initial": {
+        "time": 3.7058999999582714,
+        "cycle": 3.452899999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "此刻：缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "prompt": "",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "details": true,
+        "held": 0
+      },
+      "guide": {
+        "time": 3.8392999999582713,
+        "cycle": 3.586299999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "此刻：缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "prompt": "",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "details": false,
+        "held": 0
+      },
+      "rejected": {
+        "time": 4.156299999958273,
+        "cycle": 3.903299999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 330.9841279999998,
+          "dir": 3
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "此刻：缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "prompt": "按 E查看还差哪些材料",
+        "toast": "还差：麦 2",
+        "details": true,
+        "held": 0
+      },
+      "returned": {
+        "time": 4.4898999999582765,
+        "cycle": 4.236899999999996,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 346.27294289279996,
+          "dir": 0
+        },
+        "target": {
+          "x": 360,
+          "y": 344,
+          "kind": "camp"
+        },
+        "gaps": [],
+        "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "guideSummary": "当前目标",
+        "keys": "此刻：缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+        "prompt": "",
+        "toast": "还差：麦 2",
+        "details": true,
+        "held": 0
+      },
+      "inputs": [
+        {
+          "action": "#play-details summary",
+          "input": "native mouse click",
+          "x": 1044,
+          "y": 117,
+          "time": 3.805899999958271
+        },
+        {
+          "action": "#play-details summary",
+          "input": "native mouse click",
+          "x": 1044,
+          "y": 117,
+          "time": 3.9226999999582715
+        },
+        {
+          "action": "ArrowUp",
+          "input": "native keyboard hold (WebKit touch fallback)",
+          "start": {
+            "time": 3.9226999999582715,
+            "cycle": 3.6696999999999953,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 344,
+              "dir": 3
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "此刻：缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "prompt": "",
+            "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+            "details": true,
+            "held": 0
+          },
+          "end": {
+            "time": 4.122899999958272,
+            "cycle": 3.8698999999999946,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 332.25599999999986,
+              "dir": 3
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "此刻：缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "prompt": "按 E查看还差哪些材料",
+            "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+            "details": true,
+            "held": 0
+          },
+          "rect": null
+        },
+        {
+          "action": "interact",
+          "input": "native E"
+        },
+        {
+          "action": "ArrowDown",
+          "input": "native keyboard hold (WebKit touch fallback)",
+          "start": {
+            "time": 4.222999999958274,
+            "cycle": 3.9699999999999944,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 330.05707089279986,
+              "dir": 3
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "此刻：缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "prompt": "按 E查看还差哪些材料",
+            "toast": "还差：麦 2",
+            "details": true,
+            "held": 0
+          },
+          "end": {
+            "time": 4.456499999958276,
+            "cycle": 4.203499999999996,
+            "day": true,
+            "nights": 3,
+            "paused": false,
+            "over": false,
+            "win": false,
+            "inv": {
+              "wood": 4,
+              "stone": 5,
+              "gold": 3,
+              "wheat": 1,
+              "seed": 0,
+              "fence": 2,
+              "torch": 0,
+              "plot": 0,
+              "heart": 0
+            },
+            "crops": [],
+            "drops": [],
+            "player": {
+              "x": 392,
+              "y": 345.0010708928,
+              "dir": 0
+            },
+            "target": {
+              "x": 360,
+              "y": 344,
+              "kind": "camp"
+            },
+            "gaps": [],
+            "objective": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guide": "缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "guideSummary": "当前目标",
+            "keys": "此刻：缺麦没种：夜守篝火打怪，可能掉麦或种子。",
+            "prompt": "",
+            "toast": "还差：麦 2",
+            "details": true,
+            "held": 0
+          },
+          "rect": null
+        }
+      ]
+    },
+    {
+      "id": "seed-and-natural-growth-controls",
+      "phase": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "seeded": {
+        "time": 3.690600000029797,
+        "cycle": 3.452799999999996,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "按 E 或左键播种（要有种子）",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "details": true,
+        "held": 0
+      },
+      "growing": {
+        "time": 3.790700000029797,
+        "cycle": 3.5528999999999957,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 0,
+            "grow": 0.033300000000000184
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "麦苗还在长，成熟后再收。",
+        "toast": "播下了。长大后按住左键收。",
+        "details": true,
+        "held": 0
+      },
+      "ripe": {
+        "time": 18.803200000029694,
+        "cycle": 18.5653999999999,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "gaps": [],
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台按 E 合成方块之心。撑过三夜，天亮后送到北边祭坛。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "按住左键收麦",
+        "toast": "播下了。长大后按住左键收。",
+        "details": true,
+        "held": 0
+      }
+    },
+    {
+      "id": "control-recipe-ready",
+      "phase": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "data": {
+        "time": 3.690200000011916,
+        "cycle": 3.4528999999999965,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 3,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 312,
+          "kind": "bench"
+        },
+        "gaps": [],
+        "objective": "去工作台按 E合成方块之心",
+        "guide": "去工作台按 E合成方块之心",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：工作台按 E 合成，天亮送到北边祭坛",
+        "prompt": "",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "details": true,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    },
+    {
+      "id": "control-heart-ready",
+      "phase": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "data": {
+        "time": 3.7065000000178765,
+        "cycle": 3.452899999999995,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "win": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 1
+        },
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 392,
+          "y": 344,
+          "dir": 3
+        },
+        "target": {
+          "x": 392,
+          "y": 104,
+          "kind": "altar"
+        },
+        "gaps": [],
+        "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+        "guide": "方块之心已备好，去北边祭坛献祭。",
+        "guideSummary": "第五步：天亮献祭",
+        "keys": "此刻：北边祭坛按 E 献祭",
+        "prompt": "",
+        "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+        "details": true,
+        "held": 0
+      },
+      "source": "separate positive control fixture"
+    }
+  ],
+  "historical_manifests": [
+    "before-7cf1cec6.json",
+    "after-72476922.json"
+  ],
+  "reachable_proof": {
+    "file": "reachable-state.json",
+    "actions": {
+      "native canvas mouse hold harvest": 9,
+      "native E plant": 6,
+      "native H consume harvested wheat": 2
+    },
+    "initial": {
+      "time": 0.28539999998807913,
+      "cycle": 0.22390000000000002,
+      "day": true,
+      "nights": 0,
+      "over": false,
+      "inv": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 0,
+        "seed": 2,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "hp": 10,
+      "campHp": 100,
+      "crops": [
+        {
+          "key": "21,27",
+          "stage": 2,
+          "grow": 0
+        },
+        {
+          "key": "24,28",
+          "stage": 2,
+          "grow": 0
+        },
+        {
+          "key": "26,27",
+          "stage": 2,
+          "grow": 0
+        }
+      ],
+      "drops": [],
+      "player": {
+        "x": 392,
+        "y": 344,
+        "dir": 0
+      }
+    },
+    "final": {
+      "time": 90.76049999999495,
+      "cycle": 14.69559999999993,
+      "day": false,
+      "nights": 1,
+      "over": false,
+      "inv": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 1,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "hp": 165,
+      "campHp": 100,
+      "crops": [],
+      "drops": [],
+      "player": {
+        "x": 591.98,
+        "y": 431.98,
+        "dir": 3
+      }
+    },
+    "source": "isolated fixed materials/wounded-player/field locations; original three mature crops preserved and actually harvested; default two seeds actually planted; no RNG, seed/crop/stage/life/time manipulation after setup",
+    "limitations": "location-only boundary fixtures between actions, not a continuous natural walking route or full three-night run; native mouse/E/H, original random drops and actual expiry",
+    "console_count_correction": "reach-safe.log harvests=11 counted two H actions containing 'harvested'; exact raw inputs are 9 mouse harvest holds + 6 E plant + 2 H. Only the future console filter was corrected; successful random sample was not rerun."
+  },
+  "night_loot": [
+    {
+      "file": "night-supply-01b34a18.json",
+      "engine": "chromium",
+      "controlled_cases": 2,
+      "unmodified_samples": 16,
+      "wheat_events": 6,
+      "seed_events": 2,
+      "not_guaranteed": true
+    },
+    {
+      "file": "night-supply-72476922.json",
+      "engine": "not in original file; Chromium caller recorded in after.log",
+      "controlled_cases": 2,
+      "unmodified_samples": 8,
+      "wheat_events": 2,
+      "seed_events": 0,
+      "not_guaranteed": true
+    },
+    {
+      "file": "night-supply-74041f53.json",
+      "engine": "chromium",
+      "controlled_cases": 2,
+      "unmodified_samples": 16,
+      "wheat_events": 9,
+      "seed_events": 5,
+      "not_guaranteed": true
+    },
+    {
+      "file": "night-supply-ad04e841.json",
+      "engine": "webkit",
+      "controlled_cases": 2,
+      "unmodified_samples": 16,
+      "wheat_events": 10,
+      "seed_events": 3,
+      "not_guaranteed": true
+    }
+  ],
+  "checks": {
+    "static": "static.log",
+    "targeted_webkit": "webkit-controls.log",
+    "full_webkit": "e2e-checked.log",
+    "reviewer": "review.log",
+    "linux_ci": "pending same-SHA pull_request checks after topic push"
+  },
+  "failure_history": [
+    "reach.log: original mouse aim affected E-facing; cursor subsequently moved outside canvas before native E.",
+    "reach-complete.log / reach-progress-21186443.json: earlier natural growth wait failed, no final state captured; cause not asserted.",
+    "e2e.log: old seedless Space harvest wait failed; cause not established from that log.",
+    "e2e-final.log: old seedless empty-field interaction demonstrably crossed tile32 to x528.8503/tile33 after key release; corrected only fixture settle/within-cell native alignment, same original budgets and crop/cost assertions.",
+    "e2e-complete.log: new growth control's chosen20s wall budget failed, no final state captured. New wait now follows existing crop-feedback default30s and asserts >=14 engine seconds of original growth; no claim of a proven renderer cause.",
+    "First54 PNGs retain fixture-restoration startup toast and are classified historical; corrected captures await natural toast expiry."
+  ],
+  "unchanged": "Original first-night test file, original first-night assertions, gameplay growth, loot probabilities, costs, resources, map, day/night and victory/save rules unchanged.",
+  "limitations": "Fixed depletion-position/material/injury/field prerequisites plus fixed three-dawn replay; not continuous natural walking, full natural three-night victory, physical iOS/Android, or user-approved visual review."
+}

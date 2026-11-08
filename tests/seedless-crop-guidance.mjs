@@ -78,13 +78,22 @@ export async function testSeedlessCropGuidance(browser, origin, { before = false
           if (cdp) await cdp.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
           else await page.keyboard.up(code);
         }
+        await page.waitForFunction(() => {
+          const p = CUBE.getState().player;
+          return Math.abs(p.vx) < 0.1 && Math.abs(p.vy) < 0.1;
+        }, null, { timeout: 5000 });
         const released = await read();
         inputs.push({ action: `${code}-release`, input, time: released.time, player: released.player });
         assert.equal(released.held, 0);
       };
       const faceNorth = async () => {
-        if ((await read()).player.y < 410) await hold("ArrowDown", () => CUBE.getState().player.y >= 410);
-        await hold("ArrowUp", () => CUBE.getState().player.dir === 3 && CUBE.getState().player.y <= 409);
+        for (let attempt = 0; attempt < 3; attempt++) {
+          if ((await read()).player.y < 410) await hold("ArrowDown", () => CUBE.getState().player.y >= 410);
+          await hold("ArrowUp", () => CUBE.getState().player.dir === 3 && CUBE.getState().player.y <= 413);
+          const p = (await read()).player;
+          if (p.y >= 400 && p.y < 414) return;
+        }
+        assert.fail("native north-facing alignment did not reach the farm approach row");
       };
       const shot = async (id) => {
         await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
@@ -139,7 +148,7 @@ export async function testSeedlessCropGuidance(browser, origin, { before = false
       await page.waitForFunction(() => CUBE.getState().crops.has("30,24"));
       const seeded = await shot("one-seed-left");
       assert.equal(seeded.inv.seed, 1); assert.equal(seeded.target.kind, "farm");
-      await hold("ArrowRight", () => CUBE.getState().player.x >= 504);
+      await hold("ArrowRight", () => CUBE.getState().player.x >= 498);
       await faceNorth();
       await interact();
       await page.waitForFunction(() => CUBE.getState().crops.has("31,24"));
@@ -147,13 +156,13 @@ export async function testSeedlessCropGuidance(browser, origin, { before = false
       assert.deepEqual(depleted.inv, { ...initial.inv, seed: 0 });
       assert.equal(depleted.target.kind, before ? "farm" : "crop");
       assert.equal(depleted.prompt, "麦苗还在长，成熟后再收。");
-      await hold("ArrowRight", () => CUBE.getState().player.x >= 520);
+      await hold("ArrowRight", () => CUBE.getState().player.x >= 514);
       await faceNorth();
       await interact();
       await page.waitForFunction(() => document.getElementById("toast").textContent === "没有种子了。收麦可以再拿到种子。");
       const refused = await shot("empty-field-refusal");
       assert.deepEqual(refused.inv, depleted.inv); assert.equal(refused.farms[2], 7);
-      await hold("ArrowLeft", () => CUBE.getState().player.x <= 504);
+      await hold("ArrowLeft", () => CUBE.getState().player.x <= 510);
       await faceNorth();
       await page.waitForFunction(() => CUBE.getState().crops.get("31,24")?.stage === 1);
       await page.waitForFunction(() => document.getElementById("toast").classList.contains("hidden"));

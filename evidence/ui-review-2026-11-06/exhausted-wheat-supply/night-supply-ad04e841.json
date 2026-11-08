@@ -1,0 +1,675 @@
+{
+  "records": [
+    {
+      "id": "controlled-possible",
+      "rng": 0.01,
+      "start": {
+        "time": 0.5149999999999999,
+        "kills": 0,
+        "inv": {
+          "wood": 2,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 0.608,
+        "kills": 1,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 1,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "explicit RNG-extrema loot-branch control, not natural probability evidence"
+    },
+    {
+      "id": "controlled-no-drop",
+      "rng": 0.99,
+      "start": {
+        "time": 0.608,
+        "kills": 1,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 1,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 0.658,
+        "kills": 2,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 1,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "explicit RNG-extrema loot-branch control, not natural probability evidence"
+    },
+    {
+      "id": "unmodified-rng-1",
+      "start": {
+        "time": 0.658,
+        "kills": 2,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 1,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 0.7070000000000001,
+        "kills": 3,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 1,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-2",
+      "start": {
+        "time": 0.7070000000000001,
+        "kills": 3,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 1,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 0.8060000000000002,
+        "kills": 4,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 2,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-3",
+      "start": {
+        "time": 0.8060000000000002,
+        "kills": 4,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 2,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 0.9050000000000002,
+        "kills": 5,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 3,
+          "seed": 4,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-4",
+      "start": {
+        "time": 0.9050000000000002,
+        "kills": 5,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 3,
+          "seed": 4,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 0.9530000000000003,
+        "kills": 6,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 3,
+          "seed": 4,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-5",
+      "start": {
+        "time": 0.9530000000000003,
+        "kills": 6,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 3,
+          "seed": 4,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.0510000000000004,
+        "kills": 7,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 4,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-6",
+      "start": {
+        "time": 1.0510000000000004,
+        "kills": 7,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 4,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.1000000000000003,
+        "kills": 8,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 4,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-7",
+      "start": {
+        "time": 1.1000000000000003,
+        "kills": 8,
+        "inv": {
+          "wood": 3,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 4,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.2000000000000004,
+        "kills": 9,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 5,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-8",
+      "start": {
+        "time": 1.2000000000000004,
+        "kills": 9,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 5,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.2500000000000004,
+        "kills": 10,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 5,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-9",
+      "start": {
+        "time": 1.2500000000000004,
+        "kills": 10,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 5,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.3500000000000005,
+        "kills": 11,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 6,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-10",
+      "start": {
+        "time": 1.3500000000000005,
+        "kills": 11,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 6,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.4490000000000005,
+        "kills": 12,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 7,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-11",
+      "start": {
+        "time": 1.4490000000000005,
+        "kills": 12,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 7,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.4990000000000006,
+        "kills": 13,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 7,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-12",
+      "start": {
+        "time": 1.4990000000000006,
+        "kills": 13,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 1,
+          "wheat": 7,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.5960000000000005,
+        "kills": 14,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 2,
+          "wheat": 8,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-13",
+      "start": {
+        "time": 1.5960000000000005,
+        "kills": 14,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 2,
+          "wheat": 8,
+          "seed": 5,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.6930000000000005,
+        "kills": 15,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 2,
+          "wheat": 8,
+          "seed": 6,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-14",
+      "start": {
+        "time": 1.6930000000000005,
+        "kills": 15,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 2,
+          "wheat": 8,
+          "seed": 6,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.7930000000000006,
+        "kills": 16,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 2,
+          "wheat": 9,
+          "seed": 6,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-15",
+      "start": {
+        "time": 1.7930000000000006,
+        "kills": 16,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 2,
+          "wheat": 9,
+          "seed": 6,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.8880000000000006,
+        "kills": 17,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 2,
+          "wheat": 10,
+          "seed": 6,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    },
+    {
+      "id": "unmodified-rng-16",
+      "start": {
+        "time": 1.8880000000000006,
+        "kills": 17,
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 2,
+          "wheat": 10,
+          "seed": 6,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "after": {
+        "time": 1.9880000000000007,
+        "kills": 18,
+        "inv": {
+          "wood": 5,
+          "stone": 0,
+          "gold": 2,
+          "wheat": 11,
+          "seed": 6,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "drops": []
+      },
+      "input": "native Space key hold/release",
+      "source": "original unmodified random loot sample; no drop guaranteed"
+    }
+  ],
+  "engine": "webkit",
+  "source": "night1 completed-wave, wounded32-maxHP slime at20HP/zero-damage location fixture; native kills; original loot code",
+  "not_guaranteed": true
+}

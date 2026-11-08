@@ -1,0 +1,21 @@
+2026-11-08T11:36:48.403Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=D:\.tmp\agents\cube-epoch\exhausted-wheat-reach-complete-47c5015db98d41be8a929a7921186443\tmp\playwright_chromiumdev_profile-eh1wCZ --remote-debugging-pipe --no-startup-window
+2026-11-08T11:36:48.411Z pw:browser <launched> pid=93208
+2026-11-08T11:36:52.135Z pw:browser [pid=93208][err] [93208:91864:1108/193652.135:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+2026-11-08T11:37:20.754Z pw:browser [pid=93208][err] [93208:91864:1108/193720.753:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+2026-11-08T11:38:18.154Z pw:browser [pid=93208][err] [93208:91864:1108/193818.154:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+2026-11-08T11:38:39.832Z pw:browser [pid=93208] <gracefully close start>
+2026-11-08T11:38:39.990Z pw:browser [pid=93208] <process did exit: exitCode=0, signal=null>
+2026-11-08T11:38:39.991Z pw:browser [pid=93208] starting temporary directories cleanup
+2026-11-08T11:38:40.001Z pw:browser [pid=93208] finished temporary directories cleanup
+2026-11-08T11:38:40.001Z pw:browser [pid=93208] <gracefully close end>
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 20000ms exceeded.
+    at D:\work\projects\cube-epoch\evidence\ui-review-2026-11-06\exhausted-wheat-supply\reach-state.mjs:88:16 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

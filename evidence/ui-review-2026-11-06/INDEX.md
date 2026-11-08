@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-036 缺麦且无种无苗时的补给路径
+
+[54张当前320/390/桌面前后原图及54张夹具启动瞬态历史](exhausted-wheat-supply/INDEX.md) · [逐图源码/画布/输入](exhausted-wheat-supply/screenshots.json) · [真实耗尽形成、路线与夜怪概率样本](exhausted-wheat-supply/validation.json)。
+
+原三株成熟麦真实收完、默认2种实际播种，9次鼠标采收/6次E播种/2次H吃麦，遗落种自然过期形成麦1种0作物0；固定第三白天复用该库存/空苗前置，真实触屏/键鼠走近工作台只能拒绝缺麦。仅此状态提示「夜守篝火打怪，可能掉麦或种子」，金框改指篝火；成熟麦/未熟苗/有种/配方就绪/已有心保持，掉落与全部规则不改。初次图中的新局采树toast属于恢复夹具启动瞬态，保留并待其自然过期补当前图，不扩修产品通知。不称连续自然走位/三夜通关或实体设备；视觉待用户/协调审查，#25–32及诊断保留，不合并、不部署。
+
 ## 独立维护批次：UI-035 缺麦且无种子时指向麦苗
 
 [48张当前同态前后原图及6张执行器部分历史](seedless-crop-guidance/INDEX.md) · [逐图源码/画布/输入](seedless-crop-guidance/screenshots.json) · [真实种植、自然成熟与采收](seedless-crop-guidance/validation.json)。

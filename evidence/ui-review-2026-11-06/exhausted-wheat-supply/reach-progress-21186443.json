@@ -1,0 +1,3178 @@
+{
+  "initial": {
+    "time": 0.2542000000178814,
+    "cycle": 0.20880000000596047,
+    "day": true,
+    "nights": 0,
+    "over": false,
+    "inv": {
+      "wood": 4,
+      "stone": 5,
+      "gold": 3,
+      "wheat": 0,
+      "seed": 2,
+      "fence": 2,
+      "torch": 0,
+      "plot": 0,
+      "heart": 0
+    },
+    "hp": 10,
+    "campHp": 100,
+    "crops": [
+      {
+        "key": "21,27",
+        "stage": 2,
+        "grow": 0
+      },
+      {
+        "key": "24,28",
+        "stage": 2,
+        "grow": 0
+      },
+      {
+        "key": "26,27",
+        "stage": 2,
+        "grow": 0
+      }
+    ],
+    "drops": [],
+    "player": {
+      "x": 392,
+      "y": 344,
+      "dir": 0
+    }
+  },
+  "records": [
+    {
+      "action": "location-only boundary fixture",
+      "x": 304.02,
+      "y": 479.98,
+      "dir": 3,
+      "data": {
+        "time": 0.2710000000178815,
+        "cycle": 0.22560000000596053,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 10,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 304.02,
+          "y": 479.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native canvas mouse hold harvest",
+      "key": "21,27",
+      "point": {
+        "x": 593.4502500000001,
+        "y": 232.34792643229164,
+        "canvas": {
+          "x": 96,
+          "y": 93,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "start": {
+        "time": 0.2710000000178815,
+        "cycle": 0.22560000000596053,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 10,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "21,27",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 304.02,
+          "y": 479.98,
+          "dir": 3
+        }
+      },
+      "dropped": {
+        "time": 0.6212000000178813,
+        "cycle": 0.5758000000059604,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 10,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 6.617799799999998,
+            "vz": -36.994000000000014,
+            "life": 17.9833,
+            "distance": 56.610960069583726
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 7.617799799999998,
+            "vz": -36.994000000000014,
+            "life": 17.9833,
+            "distance": 56.54025822367637
+          }
+        ],
+        "player": {
+          "x": 304.02,
+          "y": 479.98,
+          "dir": 3
+        }
+      },
+      "settled": {
+        "time": 1.271700000017881,
+        "cycle": 1.22630000000596,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 10,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0.6679376999999993,
+            "vz": 3.2790000000000115,
+            "life": 17.33279999999999,
+            "distance": 56.610960069583726
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0.8120987399999988,
+            "vz": -0.6053999999999675,
+            "life": 17.33279999999999,
+            "distance": 56.54025822367637
+          }
+        ],
+        "player": {
+          "x": 304.02,
+          "y": 479.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 431.98,
+      "y": 495.98,
+      "dir": 3,
+      "data": {
+        "time": 1.288500000017881,
+        "cycle": 1.24310000000596,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 10,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0.5620472999999996,
+            "vz": 6.303000000000003,
+            "life": 17.315999999999992,
+            "distance": 101.52044523149021
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0.7714662599999985,
+            "vz": 2.418600000000024,
+            "life": 17.315999999999992,
+            "distance": 104.27962792415403
+          }
+        ],
+        "player": {
+          "x": 431.98,
+          "y": 495.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native canvas mouse hold harvest",
+      "key": "24,28",
+      "point": {
+        "x": 394.54974999999996,
+        "y": 272.09765625,
+        "canvas": {
+          "x": 96,
+          "y": 93,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "start": {
+        "time": 1.288500000017881,
+        "cycle": 1.24310000000596,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 10,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "24,28",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0.5620472999999996,
+            "vz": 6.303000000000003,
+            "life": 17.315999999999992,
+            "distance": 101.52044523149021
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0.7714662599999985,
+            "vz": 2.418600000000024,
+            "life": 17.315999999999992,
+            "distance": 104.27962792415403
+          }
+        ],
+        "player": {
+          "x": 431.98,
+          "y": 495.98,
+          "dir": 3
+        }
+      },
+      "dropped": {
+        "time": 1.6554000000178795,
+        "cycle": 1.6100000000059584,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 10,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0,
+            "vz": -0.6953255678057052,
+            "life": 16.949099999999987,
+            "distance": 101.52044523149021
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0,
+            "vz": -0.6953255859252322,
+            "life": 16.949099999999987,
+            "distance": 104.27962792415403
+          },
+          {
+            "kind": "wheat",
+            "x": 407.30533093239995,
+            "y": 467.96911283239996,
+            "z": 10.182299399999998,
+            "vz": -34.00600000000001,
+            "life": 17.9667,
+            "distance": 37.328931052356715
+          },
+          {
+            "kind": "seed",
+            "x": 405.30360007239995,
+            "y": 471.30533093239995,
+            "z": 12.182299399999998,
+            "vz": -34.00600000000001,
+            "life": 17.9667,
+            "distance": 36.338266423879396
+          }
+        ],
+        "player": {
+          "x": 431.98,
+          "y": 495.98,
+          "dir": 3
+        }
+      },
+      "settled": {
+        "time": 2.305900000017879,
+        "cycle": 2.260500000005958,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 10,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0,
+            "vz": -0.6805964130398593,
+            "life": 16.29859999999998,
+            "distance": 101.52044523149021
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0,
+            "vz": -0.6805964130398593,
+            "life": 16.29859999999998,
+            "distance": 104.27962792415403
+          }
+        ],
+        "player": {
+          "x": 431.98,
+          "y": 495.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native H consume harvested wheat",
+      "before": {
+        "time": 2.339300000017879,
+        "cycle": 2.293900000005958,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 10,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0,
+            "vz": -0.6854936771735796,
+            "life": 16.26519999999998,
+            "distance": 101.52044523149021
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0,
+            "vz": -0.6854936771735796,
+            "life": 16.26519999999998,
+            "distance": 104.27962792415403
+          }
+        ],
+        "player": {
+          "x": 431.98,
+          "y": 495.98,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 2.356000000017879,
+        "cycle": 2.310600000005958,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0,
+            "vz": -0.6961518968479163,
+            "life": 16.24849999999998,
+            "distance": 101.52044523149021
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0,
+            "vz": -0.6961518968479163,
+            "life": 16.24849999999998,
+            "distance": 104.27962792415403
+          }
+        ],
+        "player": {
+          "x": 431.98,
+          "y": 495.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 463.98,
+      "y": 479.98,
+      "dir": 3,
+      "data": {
+        "time": 2.356000000017879,
+        "cycle": 2.310600000005958,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0,
+            "vz": -0.6961518968479163,
+            "life": 16.24849999999998,
+            "distance": 123.94257057201938
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0,
+            "vz": -0.6961518968479163,
+            "life": 16.24849999999998,
+            "distance": 126.4658088180359
+          }
+        ],
+        "player": {
+          "x": 463.98,
+          "y": 479.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native canvas mouse hold harvest",
+      "key": "26,27",
+      "point": {
+        "x": 394.54974999999996,
+        "y": 232.34792643229164,
+        "canvas": {
+          "x": 96,
+          "y": 93,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "start": {
+        "time": 2.356000000017879,
+        "cycle": 2.310600000005958,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,27",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0,
+            "vz": -0.6961518968479163,
+            "life": 16.24849999999998,
+            "distance": 123.94257057201938
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0,
+            "vz": -0.6961518968479163,
+            "life": 16.24849999999998,
+            "distance": 126.4658088180359
+          }
+        ],
+        "player": {
+          "x": 463.98,
+          "y": 479.98,
+          "dir": 3
+        }
+      },
+      "dropped": {
+        "time": 2.7063000000178783,
+        "cycle": 2.6609000000059573,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0,
+            "vz": -0.6953134480904954,
+            "life": 15.898199999999974,
+            "distance": 123.94257057201938
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0,
+            "vz": -0.6953134480904954,
+            "life": 15.898199999999974,
+            "distance": 126.4658088180359
+          },
+          {
+            "kind": "wheat",
+            "x": 421,
+            "y": 438,
+            "z": 8.617799799999993,
+            "vz": -36.994000000000035,
+            "life": 17.9833,
+            "distance": 60.07995339545466
+          },
+          {
+            "kind": "seed",
+            "x": 432.1606259999999,
+            "y": 448.1606259999999,
+            "z": 6.617799799999994,
+            "vz": -36.994000000000035,
+            "life": 17.9833,
+            "distance": 44.99939025702198
+          }
+        ],
+        "player": {
+          "x": 463.98,
+          "y": 479.98,
+          "dir": 3
+        }
+      },
+      "settled": {
+        "time": 3.3568000000178757,
+        "cycle": 3.3114000000059547,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 4,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 346,
+            "y": 442,
+            "z": 0,
+            "vz": -0.6882486737221986,
+            "life": 15.247699999999966,
+            "distance": 123.94257057201938
+          },
+          {
+            "kind": "seed",
+            "x": 344,
+            "y": 440,
+            "z": 0,
+            "vz": -0.6882486737221986,
+            "life": 15.247699999999966,
+            "distance": 126.4658088180359
+          },
+          {
+            "kind": "wheat",
+            "x": 421,
+            "y": 438,
+            "z": 0.8774977799999982,
+            "vz": -4.536599999999941,
+            "life": 17.33279999999999,
+            "distance": 60.07995339545466
+          }
+        ],
+        "player": {
+          "x": 463.98,
+          "y": 479.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 168,
+      "y": 408,
+      "dir": 3,
+      "data": {
+        "time": 20.70460000001775,
+        "cycle": 20.659200000005832,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 4,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 168,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native E plant",
+      "round": 0,
+      "before": {
+        "time": 20.70460000001775,
+        "cycle": 20.659200000005832,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 4,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 168,
+          "y": 408,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 20.738000000017752,
+        "cycle": 20.692600000005836,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 168,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 296,
+      "y": 408,
+      "dir": 3,
+      "data": {
+        "time": 20.738000000017752,
+        "cycle": 20.692600000005836,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 296,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native E plant",
+      "round": 0,
+      "before": {
+        "time": 20.754700000017753,
+        "cycle": 20.709300000005836,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 3,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0.016700000000000728
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 296,
+          "y": 408,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 20.77140000001775,
+        "cycle": 20.726000000005833,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0.03339999999999782
+          },
+          {
+            "key": "18,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 296,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 424,
+      "y": 408,
+      "dir": 3,
+      "data": {
+        "time": 20.77140000001775,
+        "cycle": 20.726000000005833,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0.03339999999999782
+          },
+          {
+            "key": "18,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 424,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native E plant",
+      "round": 0,
+      "before": {
+        "time": 20.77140000001775,
+        "cycle": 20.726000000005833,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0.03339999999999782
+          },
+          {
+            "key": "18,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 424,
+          "y": 408,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 20.788000000017753,
+        "cycle": 20.742600000005837,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0.05
+          },
+          {
+            "key": "18,24",
+            "stage": 0,
+            "grow": 0.016600000000002182
+          },
+          {
+            "key": "26,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 424,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 552,
+      "y": 408,
+      "dir": 3,
+      "data": {
+        "time": 20.788000000017753,
+        "cycle": 20.742600000005837,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0.05
+          },
+          {
+            "key": "18,24",
+            "stage": 0,
+            "grow": 0.016600000000002182
+          },
+          {
+            "key": "26,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native E plant",
+      "round": 0,
+      "before": {
+        "time": 20.788000000017753,
+        "cycle": 20.742600000005837,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0.05
+          },
+          {
+            "key": "18,24",
+            "stage": 0,
+            "grow": 0.016600000000002182
+          },
+          {
+            "key": "26,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 20.804800000017753,
+        "cycle": 20.759400000005837,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0.06679999999999928
+          },
+          {
+            "key": "18,24",
+            "stage": 0,
+            "grow": 0.033400000000001456
+          },
+          {
+            "key": "26,24",
+            "stage": 0,
+            "grow": 0.016799999999999274
+          },
+          {
+            "key": "34,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 128.02,
+      "y": 431.98,
+      "dir": 3,
+      "data": {
+        "time": 35.81720000001779,
+        "cycle": 35.771800000005875,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "18,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 128.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native canvas mouse hold harvest",
+      "key": "10,24",
+      "point": {
+        "x": 513.9000000000001,
+        "y": 232.34792643229164,
+        "canvas": {
+          "x": 96,
+          "y": 93,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "start": {
+        "time": 35.81720000001779,
+        "cycle": 35.771800000005875,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "18,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 128.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "dropped": {
+        "time": 36.16740000001781,
+        "cycle": 36.12200000000589,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "18,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 159.0648520000006,
+            "y": 399.30034799999936,
+            "z": 11.614399199999951,
+            "vz": -37.01200000000026,
+            "life": 17.983400000000003,
+            "distance": 45.07485430418037
+          },
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 6.6143991999999505,
+            "vz": -37.01200000000026,
+            "life": 17.983400000000003,
+            "distance": 57.25173185153442
+          }
+        ],
+        "player": {
+          "x": 128.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "settled": {
+        "time": 36.81800000001786,
+        "cycle": 36.772600000005944,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "18,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0.6666802800000361,
+            "vz": 3.3023999999991402,
+            "life": 17.33280000000003,
+            "distance": 57.25173185153442
+          }
+        ],
+        "player": {
+          "x": 128.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native H consume harvested wheat",
+      "before": {
+        "time": 36.834800000017864,
+        "cycle": 36.78940000000595,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 24,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "18,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0.5603967600000234,
+            "vz": 6.326399999999664,
+            "life": 17.316000000000027,
+            "distance": 57.25173185153442
+          }
+        ],
+        "player": {
+          "x": 128.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 36.834800000017864,
+        "cycle": 36.78940000000595,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 38,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "18,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0.5603967600000234,
+            "vz": 6.326399999999664,
+            "life": 17.316000000000027,
+            "distance": 57.25173185153442
+          }
+        ],
+        "player": {
+          "x": 128.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 256.02,
+      "y": 431.98,
+      "dir": 3,
+      "data": {
+        "time": 36.834800000017864,
+        "cycle": 36.78940000000595,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 38,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "18,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0.5603967600000234,
+            "vz": 6.326399999999664,
+            "life": 17.316000000000027,
+            "distance": 95.76471584043884
+          }
+        ],
+        "player": {
+          "x": 256.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native canvas mouse hold harvest",
+      "key": "18,24",
+      "point": {
+        "x": 593.4502500000001,
+        "y": 232.34792643229164,
+        "canvas": {
+          "x": 96,
+          "y": 93,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "start": {
+        "time": 36.851300000017865,
+        "cycle": 36.80590000000595,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 38,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "18,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0.40700616000002887,
+            "vz": 9.296399999999664,
+            "life": 17.299500000000027,
+            "distance": 95.76471584043884
+          }
+        ],
+        "player": {
+          "x": 256.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "dropped": {
+        "time": 37.201700000017894,
+        "cycle": 37.15630000000598,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 38,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.7007266172398398,
+            "life": 16.949100000000037,
+            "distance": 95.76471584043884
+          },
+          {
+            "kind": "wheat",
+            "x": 286.1660959999988,
+            "y": 401.8339040000012,
+            "z": 9.6211968000001,
+            "vz": -36.97599999999947,
+            "life": 17.983199999999997,
+            "distance": 42.633017815799626
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 6.6211968000000985,
+            "vz": -36.97599999999947,
+            "life": 17.983199999999997,
+            "distance": 59.385526856297254
+          }
+        ],
+        "player": {
+          "x": 256.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "settled": {
+        "time": 37.852200000017945,
+        "cycle": 37.80680000000603,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 38,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6957455098599419,
+            "life": 16.29860000000006,
+            "distance": 95.76471584043884
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0.669821880000036,
+            "vz": 3.2501999999995075,
+            "life": 17.33270000000002,
+            "distance": 59.385526856297254
+          }
+        ],
+        "player": {
+          "x": 256.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native H consume harvested wheat",
+      "before": {
+        "time": 37.868900000017945,
+        "cycle": 37.82350000000603,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 38,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6930763470418602,
+            "life": 16.281900000000064,
+            "distance": 95.76471584043884
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0.5653433400000711,
+            "vz": 6.256199999998984,
+            "life": 17.316000000000024,
+            "distance": 59.385526856297254
+          }
+        ],
+        "player": {
+          "x": 256.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 37.868900000017945,
+        "cycle": 37.82350000000603,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 52,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6930763470418602,
+            "life": 16.281900000000064,
+            "distance": 95.76471584043884
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0.5653433400000711,
+            "vz": 6.256199999998984,
+            "life": 17.316000000000024,
+            "distance": 59.385526856297254
+          }
+        ],
+        "player": {
+          "x": 256.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 463.98,
+      "y": 431.98,
+      "dir": 3,
+      "data": {
+        "time": 37.88560000001795,
+        "cycle": 37.840200000006035,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 52,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6938770958876775,
+            "life": 16.26520000000006,
+            "distance": 297.67700750981766
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0.4106646000000346,
+            "vz": 9.262199999999769,
+            "life": 17.29930000000002,
+            "distance": 169.993413990072
+          }
+        ],
+        "player": {
+          "x": 463.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native canvas mouse hold harvest",
+      "key": "26,24",
+      "point": {
+        "x": 394.54974999999996,
+        "y": 232.34792643229164,
+        "canvas": {
+          "x": 96,
+          "y": 93,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "start": {
+        "time": 37.88560000001795,
+        "cycle": 37.840200000006035,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 52,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "26,24",
+            "stage": 2,
+            "grow": 0
+          },
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6938770958876775,
+            "life": 16.26520000000006,
+            "distance": 297.67700750981766
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0.4106646000000346,
+            "vz": 9.262199999999769,
+            "life": 17.29930000000002,
+            "distance": 169.993413990072
+          }
+        ],
+        "player": {
+          "x": 463.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "dropped": {
+        "time": 38.25250000001798,
+        "cycle": 38.207100000006065,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 52,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6883058998472236,
+            "life": 15.89830000000008,
+            "distance": 297.67700750981766
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0,
+            "vz": -0.688305899022658,
+            "life": 16.93240000000004,
+            "distance": 169.993413990072
+          },
+          {
+            "kind": "wheat",
+            "x": 432.9351479999994,
+            "y": 400.1177479999994,
+            "z": 8.614399199999951,
+            "vz": -37.01200000000026,
+            "life": 17.983400000000003,
+            "distance": 44.48579479129812
+          },
+          {
+            "kind": "seed",
+            "x": 432.9351479999994,
+            "y": 399.30034799999936,
+            "z": 8.614399199999951,
+            "vz": -37.01200000000026,
+            "life": 17.983400000000003,
+            "distance": 45.07485430418039
+          }
+        ],
+        "player": {
+          "x": 463.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "settled": {
+        "time": 38.919800000018036,
+        "cycle": 38.87440000000612,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 52,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6915807914727218,
+            "life": 15.231000000000085,
+            "distance": 297.67700750981766
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0,
+            "vz": -0.6915807914727218,
+            "life": 16.265100000000057,
+            "distance": 169.993413990072
+          }
+        ],
+        "player": {
+          "x": 463.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native H consume harvested wheat",
+      "before": {
+        "time": 38.93640000001803,
+        "cycle": 38.891000000006116,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 52,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.688925762558105,
+            "life": 15.214400000000087,
+            "distance": 297.67700750981766
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0,
+            "vz": -0.688925762558105,
+            "life": 16.24850000000006,
+            "distance": 169.993413990072
+          }
+        ],
+        "player": {
+          "x": 463.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 38.93640000001803,
+        "cycle": 38.891000000006116,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 66,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.688925762558105,
+            "life": 15.214400000000087,
+            "distance": 297.67700750981766
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0,
+            "vz": -0.688925762558105,
+            "life": 16.24850000000006,
+            "distance": 169.993413990072
+          }
+        ],
+        "player": {
+          "x": 463.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 591.98,
+      "y": 431.98,
+      "dir": 3,
+      "data": {
+        "time": 38.95310000001804,
+        "cycle": 38.90770000000612,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 66,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6951222712328041,
+            "life": 15.197700000000083,
+            "distance": 424.86525016762675
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0,
+            "vz": -0.6951222712328041,
+            "life": 16.231800000000057,
+            "distance": 295.8321159035983
+          }
+        ],
+        "player": {
+          "x": 591.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native canvas mouse hold harvest",
+      "key": "34,24",
+      "point": {
+        "x": 394.54974999999996,
+        "y": 232.34792643229164,
+        "canvas": {
+          "x": 96,
+          "y": 93,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "start": {
+        "time": 38.95310000001804,
+        "cycle": 38.90770000000612,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 66,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "34,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6951222712328041,
+            "life": 15.197700000000083,
+            "distance": 424.86525016762675
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0,
+            "vz": -0.6951222712328041,
+            "life": 16.231800000000057,
+            "distance": 295.8321159035983
+          }
+        ],
+        "player": {
+          "x": 591.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "dropped": {
+        "time": 39.303400000018065,
+        "cycle": 39.25800000000615,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 66,
+        "campHp": 100,
+        "crops": [],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6938187963971398,
+            "life": 14.847400000000091,
+            "distance": 424.86525016762675
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0,
+            "vz": -0.6938187963971398,
+            "life": 15.88150000000007,
+            "distance": 295.8321159035983
+          },
+          {
+            "kind": "wheat",
+            "x": 560.1606259999987,
+            "y": 400.16062599999873,
+            "z": 8.6177997999999,
+            "vz": -36.994000000000526,
+            "life": 17.983300000000003,
+            "distance": 44.99939025702366
+          },
+          {
+            "kind": "seed",
+            "x": 554,
+            "y": 390,
+            "z": 9.6177997999999,
+            "vz": -36.994000000000526,
+            "life": 17.983300000000003,
+            "distance": 56.610960069583726
+          }
+        ],
+        "player": {
+          "x": 591.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "settled": {
+        "time": 39.953900000018116,
+        "cycle": 39.9085000000062,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 66,
+        "campHp": 100,
+        "crops": [],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6953100538694842,
+            "life": 14.1969000000001,
+            "distance": 424.86525016762675
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0,
+            "vz": -0.6953100538694842,
+            "life": 15.23100000000008,
+            "distance": 295.8321159035983
+          },
+          {
+            "kind": "seed",
+            "x": 554,
+            "y": 390,
+            "z": 0.8619800999999838,
+            "vz": -8.421000000000518,
+            "life": 17.332800000000027,
+            "distance": 56.610960069583726
+          }
+        ],
+        "player": {
+          "x": 591.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native H consume harvested wheat",
+      "before": {
+        "time": 39.97060000001812,
+        "cycle": 39.92520000000621,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 66,
+        "campHp": 100,
+        "crops": [],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6932069838393904,
+            "life": 14.180200000000097,
+            "distance": 424.86525016762675
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0,
+            "vz": -0.6932069838393904,
+            "life": 15.214300000000076,
+            "distance": 295.8321159035983
+          },
+          {
+            "kind": "seed",
+            "x": 554,
+            "y": 390,
+            "z": 0.952410600000003,
+            "vz": -5.414999999999733,
+            "life": 17.316100000000024,
+            "distance": 56.610960069583726
+          }
+        ],
+        "player": {
+          "x": 591.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 39.97060000001812,
+        "cycle": 39.92520000000621,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [],
+        "drops": [
+          {
+            "kind": "seed",
+            "x": 169,
+            "y": 392,
+            "z": 0,
+            "vz": -0.6932069838393904,
+            "life": 14.180200000000097,
+            "distance": 424.86525016762675
+          },
+          {
+            "kind": "seed",
+            "x": 299,
+            "y": 391,
+            "z": 0,
+            "vz": -0.6932069838393904,
+            "life": 15.214300000000076,
+            "distance": 295.8321159035983
+          },
+          {
+            "kind": "seed",
+            "x": 554,
+            "y": 390,
+            "z": 0.952410600000003,
+            "vz": -5.414999999999733,
+            "life": 17.316100000000024,
+            "distance": 56.610960069583726
+          }
+        ],
+        "player": {
+          "x": 591.98,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 168,
+      "y": 408,
+      "dir": 3,
+      "data": {
+        "time": 57.301700000019565,
+        "cycle": 57.25630000000765,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 168,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native E plant",
+      "round": 1,
+      "before": {
+        "time": 57.301700000019565,
+        "cycle": 57.25630000000765,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 168,
+          "y": 408,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 57.318400000019565,
+        "cycle": 57.27300000000765,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 168,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 128.02,
+      "y": 431.98,
+      "dir": 3,
+      "data": {
+        "time": 72.33080000002136,
+        "cycle": 72.28540000000945,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 128.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native canvas mouse hold harvest",
+      "key": "10,24",
+      "point": {
+        "x": 513.9000000000001,
+        "y": 232.34792643229164,
+        "canvas": {
+          "x": 96,
+          "y": 93,
+          "width": 796,
+          "height": 477.59375
+        }
+      },
+      "start": {
+        "time": 72.33080000002136,
+        "cycle": 72.28540000000945,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 2,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 128.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "dropped": {
+        "time": 72.68100000002143,
+        "cycle": 72.63560000000952,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 170,
+            "y": 389,
+            "z": 7.614399199999703,
+            "vz": -37.01200000000157,
+            "life": 17.98340000000001,
+            "distance": 60.07995339545463
+          },
+          {
+            "kind": "seed",
+            "x": 158.24745200000356,
+            "y": 398.48294799999604,
+            "z": 7.614399199999703,
+            "vz": -37.01200000000157,
+            "life": 17.98340000000001,
+            "distance": 45.119301270115976
+          }
+        ],
+        "player": {
+          "x": 128.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      },
+      "settled": {
+        "time": 73.34830000002155,
+        "cycle": 73.30290000000964,
+        "day": true,
+        "nights": 0,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [],
+        "drops": [
+          {
+            "kind": "wheat",
+            "x": 170,
+            "y": 389,
+            "z": 0.7708368000000313,
+            "vz": 2.423999999998957,
+            "life": 17.316100000000002,
+            "distance": 60.07995339545463
+          }
+        ],
+        "player": {
+          "x": 128.02,
+          "y": 431.98,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "location-only boundary fixture",
+      "x": 168,
+      "y": 408,
+      "dir": 3,
+      "data": {
+        "time": 90.67930000002485,
+        "cycle": 14.628799999999949,
+        "day": false,
+        "nights": 1,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 168,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    },
+    {
+      "action": "native E plant",
+      "round": 2,
+      "before": {
+        "time": 90.67930000002485,
+        "cycle": 14.628799999999949,
+        "day": false,
+        "nights": 1,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [],
+        "drops": [],
+        "player": {
+          "x": 168,
+          "y": 408,
+          "dir": 3
+        }
+      },
+      "after": {
+        "time": 90.69600000002485,
+        "cycle": 14.645499999999945,
+        "day": false,
+        "nights": 1,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 0,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "hp": 80,
+        "campHp": 100,
+        "crops": [
+          {
+            "key": "10,24",
+            "stage": 0,
+            "grow": 0
+          }
+        ],
+        "drops": [],
+        "player": {
+          "x": 168,
+          "y": 408,
+          "dir": 3
+        }
+      }
+    }
+  ],
+  "latest": {
+    "time": 90.69600000002485,
+    "cycle": 14.645499999999945,
+    "day": false,
+    "nights": 1,
+    "over": false,
+    "inv": {
+      "wood": 4,
+      "stone": 5,
+      "gold": 3,
+      "wheat": 0,
+      "seed": 0,
+      "fence": 2,
+      "torch": 0,
+      "plot": 0,
+      "heart": 0
+    },
+    "hp": 80,
+    "campHp": 100,
+    "crops": [
+      {
+        "key": "10,24",
+        "stage": 0,
+        "grow": 0
+      }
+    ],
+    "drops": [],
+    "player": {
+      "x": 168,
+      "y": 408,
+      "dir": 3
+    }
+  }
+}
