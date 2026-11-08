@@ -864,6 +864,12 @@
   function canGuideHeartCraft() {
     return state.day && survivedNights() && !state.inv.heart && materialsReady();
   }
+  const WHEAT_SUPPLY_HINT = "缺麦没种：夜守篝火打怪，可能掉麦或种子。";
+  function needsNightWheatSupply() {
+    return state.day && !state.inv.heart && state.inv.wheat < NEED.wheat && state.inv.seed <= 0
+      && state.inv.wood >= NEED.wood && state.inv.stone >= NEED.stone && state.inv.gold >= NEED.gold
+      && campWalled() && !state.crops.size && !state.drops.some((d) => d.kind === "wheat" || d.kind === "seed");
+  }
 
   function storedHeartHint() {
     if (canOffer()) return "方块之心已备好，去北边祭坛献祭。";
@@ -909,8 +915,8 @@
       return;
     }
     guideEl.classList.remove("compact");
-    guideTitle.textContent = step.title;
-    guideSummary.textContent = step.title;
+    guideTitle.textContent = needsNightWheatSupply() ? "当前目标" : step.title;
+    guideSummary.textContent = guideTitle.textContent;
     // 围营步按缺口/木料重写，GUIDE[2].body 仍留着当兜底
     const touchBody = {
       move: "按方向按钮移动。金框指着附近的树，先走过去。",
@@ -918,7 +924,8 @@
       night: "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
       offer: "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
     };
-    guideBody.textContent = step.id === "offer" && state.inv.heart > 0 ? storedHeartHint()
+    guideBody.textContent = needsNightWheatSupply() ? WHEAT_SUPPLY_HINT
+      : step.id === "offer" && state.inv.heart > 0 ? storedHeartHint()
       : step.id === "offer" && canGuideHeartCraft() ? objectiveText()
       : step.id === "build" ? wallGuideBody()
       : (touchLayout.matches && touchBody[step.id]) || step.body;
@@ -930,6 +937,10 @@
     if (!keysHintEl) return;
     if (touchLayout.matches) {
       keysHintEl.textContent = "方向按钮移动 · 按住采集/攻击 · 点栏/火/田后点地图 · 交互 E · 技能 Q";
+      return;
+    }
+    if (needsNightWheatSupply()) {
+      keysHintEl.textContent = "此刻：" + WHEAT_SUPPLY_HINT;
       return;
     }
     if (!step) {
@@ -1056,6 +1067,7 @@
       if (farm && state.inv.seed > 0) return { ...farm, kind: "farm" };
       const growing = nearestOf((tile, tx, ty) => tile === T.CROP && (state.crops.get(`${tx},${ty}`)?.stage || 0) < 2);
       if (growing) return { ...growing, kind: "crop" };
+      if (needsNightWheatSupply()) return { x: state.camp.x, y: state.camp.y, kind: "camp" };
     }
     return { x: state.bench.x, y: state.bench.y, kind: "bench" };
   }
@@ -2238,6 +2250,7 @@
     if (canOffer()) return `天亮了。把方块之心送到北边祭坛（${interactHint}）`;
     if (state.inv.heart > 0 && !survivedNights()) return `先再守 ${WIN_NIGHTS - state.nights} 夜，天亮才能献祭`;
     if (materialsReady() && !state.inv.heart) return `去工作台${interactHint}合成方块之心`;
+    if (needsNightWheatSupply()) return WHEAT_SUPPLY_HINT;
     if (!campWalled()) {
       const gaps = campGaps().length;
       if (!state.flags.chopped) return touchLayout.matches
