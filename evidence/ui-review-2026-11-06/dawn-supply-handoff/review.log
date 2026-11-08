@@ -1,0 +1,8 @@
+Independent reviewer2f30fd99-0e4b-437e-a79f-d4ed8b71cf52
+Description: [reviewer] Dawn supply handoff
+Scope: game.js, tests/dawn-supply-handoff.mjs, tests/e2e.mjs
+Base1ad39a6a8d129ae182c98384434b4e020da7252d; current branch fix/dawn-supply-handoff
+Response: No significant issues found in the reviewed changes.
+Reviewed native within-cell correction/guard and segmented real movement with unchanged new per-hold5s budget.
+No original first-night file, assertion or budget, game map/time/economy/drop/cost/win/save logic changes.
+Visual review remains pending user/coordinator.

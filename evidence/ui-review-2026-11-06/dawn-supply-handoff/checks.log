@@ -1,0 +1,17 @@
+UI-037 / fix/dawn-supply-handoff / base 1ad39a6a8d129ae182c98384434b4e020da7252d
+PASS node --check game.js
+PASS node tests/static.mjs (static.log)
+PASS targeted WebKit: 4 observed-supply fixture replays (webkit-final.log)
+PASS original complete node tests/e2e.mjs: E2E_OK; original first-night night1..4 assertions retained (e2e.log)
+PASS independent reviewer 2f30fd99-0e4b-437e-a79f-d4ed8b71cf52: no significant issues (review.log)
+PASS 44 original PNG dimensions/hashes: 320x568 and390x844, DPR1, Web, zh-CN.
+PASS 4 paired guide PNGs use identical recorded inventory for before/after.
+PASS 40 native Chromium input chain PNGs: original random loot, normal dawn, sow/grow/harvest or actual craft.
+PASS old screenshot matrix unchanged except new UI-037 batch/issue; read-only coverage baseline172/172 (coverage.log).
+PASS protected old natural-loop result SHA256 remains964230C5914271F326300CA2C0FE82122B87F43D3BF2111D5B2363A75089596D.
+Historical failures retained: new seed fixture overshot farm; new long native route exceeded5s wall budget. Corrected native alignment/segmentation only, original first-night assertions/budgets unchanged.
+Capture wrapper first paired invocation failed before launch because Tee-Object FilePath accepts a single string; corrected sequential log sinks. Owned empty D root cleaned; retry captured all4.
+Browser/server exit and exact owned D-root cleanup recorded for every successful/failed launched test.
+Not covered: physical phones/safe areas, full continuous natural three-night completion, new desktop/landscape image batch.
+Visual review: pending user/coordinator. Locally inspected paired320 before/after and390 after; automated checks do not grant visual approval.
+No main push, PR merge, workflow dispatch, Pages/CD, Tencent upload or server change.

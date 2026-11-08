@@ -1,0 +1,20 @@
+2026-11-08T14:00:58.912Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\webkit-2336\Playwright.exe --inspector-pipe --disable-accelerated-compositing --headless --no-startup-window
+2026-11-08T14:00:58.921Z pw:browser <launched> pid=90512
+DAWN_HANDOFF_FAILURE {"variant":"seed","viewport":{"width":390,"height":844},"attempt":1,"state":{"time":41.0259999999998,"cycle":30.587999999999788,"day":true,"nights":3,"paused":false,"over":false,"inv":{"wood":4,"stone":5,"gold":3,"wheat":1,"seed":1,"fence":2,"torch":0,"plot":0,"heart":0},"build":null,"crops":[],"drops":[],"player":{"x":542.9582809190188,"y":397.8485535181225,"dir":3},"target":{"x":552,"y":392,"tx":34,"ty":24,"kind":"farm"},"objective":"采集 麦 1/3，顺手补墙","guide":"走到金框空田，点「交互 E」播种。","summary":"当前目标","toast":"靠近工作台按 E 合成，靠近祭坛按 E 献祭。对着空田按 E 也能播种。","held":0,"details":false}}
+2026-11-08T14:02:32.871Z pw:browser [pid=90512] <gracefully close start>
+2026-11-08T14:02:32.932Z pw:browser [pid=90512] <process did exit: exitCode=0, signal=null>
+2026-11-08T14:02:32.932Z pw:browser [pid=90512] starting temporary directories cleanup
+2026-11-08T14:02:32.933Z pw:browser [pid=90512] finished temporary directories cleanup
+2026-11-08T14:02:32.933Z pw:browser [pid=90512] <gracefully close end>
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 30000ms exceeded.
+    at testDawnSupplyHandoff (D:\work\projects\cube-epoch\tests\dawn-supply-handoff.mjs:136:24)
+    at async file:///D:/work/projects/cube-epoch/[eval1]:1:183 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

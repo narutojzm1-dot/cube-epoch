@@ -871,6 +871,18 @@
       && campWalled() && !state.crops.size && !state.drops.some((d) => d.kind === "wheat" || d.kind === "seed");
   }
 
+  function wheatGuideBody() {
+    if (!state.day || !survivedNights() || state.inv.heart || state.inv.wheat >= NEED.wheat || !campWalled()
+      || state.inv.wood < NEED.wood || state.inv.stone < NEED.stone || state.inv.gold < NEED.gold) return "";
+    const target = currentTarget();
+    if (target.kind === "farm") return `走到金框空田，${touchLayout.matches ? "点「交互 E」" : "按 E"}播种。`;
+    if (target.kind === "crop") {
+      if ((state.crops.get(`${target.tx},${target.ty}`)?.stage || 0) < 2) return "麦苗还在长，成熟后再收。";
+      return `走到金框麦旁，${touchLayout.matches ? "按住「采集/攻击」" : "空格或按住左键"}收麦。`;
+    }
+    return "";
+  }
+
   function storedHeartHint() {
     if (canOffer()) return "方块之心已备好，去北边祭坛献祭。";
     if (!state.day) return survivedNights()
@@ -915,7 +927,8 @@
       return;
     }
     guideEl.classList.remove("compact");
-    guideTitle.textContent = needsNightWheatSupply() ? "当前目标" : step.title;
+    const wheatBody = step.id === "offer" ? wheatGuideBody() : "";
+    guideTitle.textContent = needsNightWheatSupply() || wheatBody ? "当前目标" : step.title;
     guideSummary.textContent = guideTitle.textContent;
     // 围营步按缺口/木料重写，GUIDE[2].body 仍留着当兜底
     const touchBody = {
@@ -925,6 +938,7 @@
       offer: "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
     };
     guideBody.textContent = needsNightWheatSupply() ? WHEAT_SUPPLY_HINT
+      : wheatBody ? wheatBody
       : step.id === "offer" && state.inv.heart > 0 ? storedHeartHint()
       : step.id === "offer" && canGuideHeartCraft() ? objectiveText()
       : step.id === "build" ? wallGuideBody()
@@ -941,6 +955,11 @@
     }
     if (needsNightWheatSupply()) {
       keysHintEl.textContent = "此刻：" + WHEAT_SUPPLY_HINT;
+      return;
+    }
+    const wheatBody = step?.id === "offer" ? wheatGuideBody() : "";
+    if (wheatBody) {
+      keysHintEl.textContent = "此刻：" + wheatBody;
       return;
     }
     if (!step) {

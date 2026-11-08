@@ -6,6 +6,7 @@ import { testMaterialFeedback, testHeartDelivery } from "./material-feedback.mjs
 import { testCropFeedback } from "./crop-feedback.mjs";
 import { testSeedlessCropGuidance } from "./seedless-crop-guidance.mjs";
 import { testExhaustedWheatSupply } from "./exhausted-wheat-supply.mjs";
+import { testDawnSupplyHandoff } from "./dawn-supply-handoff.mjs";
 import { testFarmerSkillFeedback } from "./farmer-skill-feedback.mjs";
 import { testPlantingFeedback } from "./planting-feedback.mjs";
 import { testAudioRecovery } from "./audio-recovery.mjs";
@@ -456,6 +457,7 @@ await testHeartDelivery(browser, origin);
 await testCropFeedback(browser, origin);
 await testSeedlessCropGuidance(browser, origin);
 await testExhaustedWheatSupply(browser, origin);
+await testDawnSupplyHandoff(browser, origin);
 await testFarmerSkillFeedback(browser, origin);
 await testPlantingFeedback(browser, origin);
 await testAudioRecovery(browser, origin);

@@ -1,0 +1,21 @@
+2026-11-08T14:03:44.215Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\webkit-2336\Playwright.exe --inspector-pipe --disable-accelerated-compositing --headless --no-startup-window
+2026-11-08T14:03:44.222Z pw:browser <launched> pid=52848
+DAWN_HANDOFF_FAILURE {"variant":"wheat","viewport":{"width":320,"height":568},"attempt":1,"state":{"time":14.14300000000004,"cycle":3.7619999999999947,"day":true,"nights":3,"paused":false,"over":false,"inv":{"wood":4,"stone":5,"gold":3,"wheat":3,"seed":0,"fence":2,"torch":0,"plot":0,"heart":0},"build":null,"crops":[],"drops":[],"player":{"x":404.0245227110749,"y":408,"dir":1},"target":{"x":392,"y":312,"kind":"bench"},"objective":"去工作台点「交互 E」合成方块之心","guide":"去工作台点「交互 E」合成方块之心","summary":"第五步：天亮献祭","toast":"天亮了。材料齐了就去工作台合成，再到祭坛。","held":0,"details":false}}
+2026-11-08T14:04:38.270Z pw:browser [pid=52848] <gracefully close start>
+2026-11-08T14:04:38.412Z pw:browser [pid=52848] <process did exit: exitCode=0, signal=null>
+2026-11-08T14:04:38.412Z pw:browser [pid=52848] starting temporary directories cleanup
+2026-11-08T14:04:38.413Z pw:browser [pid=52848] finished temporary directories cleanup
+2026-11-08T14:04:38.413Z pw:browser [pid=52848] <gracefully close end>
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 5000ms exceeded.
+    at hold (D:\work\projects\cube-epoch\tests\dawn-supply-handoff.mjs:69:30)
+    at async testDawnSupplyHandoff (D:\work\projects\cube-epoch\tests\dawn-supply-handoff.mjs:158:13)
+    at async file:///D:/work/projects/cube-epoch/[eval1]:1:183 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

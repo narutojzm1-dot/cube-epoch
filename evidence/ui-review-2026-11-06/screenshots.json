@@ -1,6 +1,17 @@
 {
   "supplemental_batches": [
     {
+      "id": "dawn-supply-handoff",
+      "base_sha": "1ad39a6a8d129ae182c98384434b4e020da7252d",
+      "index": "dawn-supply-handoff/INDEX.md",
+      "screenshots": "dawn-supply-handoff/screenshots.json",
+      "issue_ids": [
+        "UI-037"
+      ],
+      "status": "已截",
+      "visual_review": "44张320/390原图待审：40自然随机补给/跨晨/播收合成，4完全相同已拾种库存的指南复放配对；明示第三夜夹具，非自然三夜通关/实体设备"
+    },
+    {
       "id": "exhausted-wheat-supply",
       "base_sha": "a09aaa5de95fc7af473abb156fbb8a4aa9eaf600",
       "index": "exhausted-wheat-supply/INDEX.md",
@@ -303,6 +314,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-037",
+      "title": "夜间拾种后清晨目标空田，教程仍去工作台；播种/成熟同样不对齐",
+      "status": "仅三夜后缺麦而其他准备齐时复用当前播种/等待/收麦动作，44图待审",
+      "before": "dawn-supply-handoff before",
+      "after": "dawn-supply-handoff after"
+    },
     {
       "id": "UI-036",
       "title": "缺麦无种无苗，原地图与教程仍让去工作台合成",
