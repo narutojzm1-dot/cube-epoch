@@ -2071,7 +2071,9 @@
             : "第一夜：怪分波朝篝火来。站在墙后打。"
           : state.nights === 2
             ? `第二夜：共 ${state.wavesTotal} 波。蝙蝠会飞过栅栏。`
-            : `第 ${state.nights} 夜：金色立方来了，共 ${state.wavesTotal} 波。它更肉，站在墙后打。`, 3.2);
+            : touchLayout.matches
+              ? `第${state.nights}夜：金色立方，共${state.wavesTotal}波。面朝怪打；朝墙会拆墙。`
+              : `第 ${state.nights} 夜：金色立方来了，共 ${state.wavesTotal} 波。它更肉，站在墙后打。`, 3.2);
         beep(140, 0.16, "sawtooth", 0.05);
       } else {
         const extra = !campWalled()
