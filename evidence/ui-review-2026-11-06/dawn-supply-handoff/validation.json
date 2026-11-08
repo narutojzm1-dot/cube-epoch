@@ -1,0 +1,744 @@
+{
+  "raw_records": [
+    "before-37c84035.json",
+    "after-cebba2e9.json",
+    "paired-guide.json"
+  ],
+  "before": [
+    {
+      "variant": "seed",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "night_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 1,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "dawn_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 1,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "night_time": 0.3418999999642373,
+      "dawn_time": 10.300199999964242,
+      "night_cycle": 22.0835,
+      "dawn_cycle": 0.03339999999999964,
+      "night_target": {
+        "x": 360,
+        "y": 344,
+        "kind": "camp"
+      },
+      "dawn_target": {
+        "x": 552,
+        "y": 392,
+        "tx": 34,
+        "ty": 24,
+        "kind": "farm"
+      },
+      "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+      "selected_build": "fence",
+      "growing": {
+        "time": 11.100799999964229,
+        "cycle": 0.8340000000000004,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "crops": [
+          [
+            "34,24",
+            {
+              "stage": 0,
+              "grow": 0.06669999999999891
+            }
+          ]
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 402.30384093130306,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "objective": "采集 麦 1/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "summary": "第五步：天亮献祭",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "held": 0,
+        "details": true
+      },
+      "ripe_time": 26.079899999963917,
+      "harvested_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 2,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      }
+    },
+    {
+      "variant": "wheat",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "night_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "dawn_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "night_time": 0.3701999999940396,
+      "dawn_time": 10.345099999994043,
+      "night_cycle": 22.1168,
+      "dawn_cycle": 0.08339999999999964,
+      "night_target": {
+        "x": 360,
+        "y": 344,
+        "kind": "camp"
+      },
+      "dawn_target": {
+        "x": 392,
+        "y": 312,
+        "kind": "bench"
+      },
+      "pre_craft_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "crafted_inventory": {
+        "wood": 1,
+        "stone": 0,
+        "gold": 0,
+        "wheat": 0,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 1
+      },
+      "final_target": {
+        "x": 392,
+        "y": 104,
+        "kind": "altar"
+      }
+    },
+    {
+      "variant": "seed",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "night_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 2,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "dawn_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 2,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "night_time": 0.3276000000119209,
+      "dawn_time": 10.302400000011932,
+      "night_cycle": 22.0668,
+      "dawn_cycle": 0.033299999999999275,
+      "night_target": {
+        "x": 360,
+        "y": 344,
+        "kind": "camp"
+      },
+      "dawn_target": {
+        "x": 552,
+        "y": 392,
+        "tx": 34,
+        "ty": 24,
+        "kind": "farm"
+      },
+      "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+      "selected_build": "fence",
+      "growing": {
+        "time": 11.10310000001192,
+        "cycle": 0.8340000000000002,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 2,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "crops": [
+          [
+            "34,24",
+            {
+              "stage": 0,
+              "grow": 0.06670000000000073
+            }
+          ]
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 402.30278156757936,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "objective": "采集 麦 2/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "summary": "第五步：天亮献祭",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "held": 0,
+        "details": true
+      },
+      "ripe_time": 26.08220000001166,
+      "harvested_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      }
+    },
+    {
+      "variant": "wheat",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "night_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "dawn_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "night_time": 0.32750000000000007,
+      "dawn_time": 10.335800000000006,
+      "night_cycle": 22.0667,
+      "dawn_cycle": 0.06660000000000037,
+      "night_target": {
+        "x": 360,
+        "y": 344,
+        "kind": "camp"
+      },
+      "dawn_target": {
+        "x": 392,
+        "y": 312,
+        "kind": "bench"
+      },
+      "pre_craft_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "crafted_inventory": {
+        "wood": 1,
+        "stone": 0,
+        "gold": 0,
+        "wheat": 0,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 1
+      },
+      "final_target": {
+        "x": 392,
+        "y": 104,
+        "kind": "altar"
+      }
+    }
+  ],
+  "after": [
+    {
+      "variant": "seed",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "night_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 2,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "dawn_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 2,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "night_time": 0.3582000000178814,
+      "dawn_time": 10.299800000017889,
+      "night_cycle": 22.1,
+      "dawn_cycle": 0.03330000000000109,
+      "night_target": {
+        "x": 360,
+        "y": 344,
+        "kind": "camp"
+      },
+      "dawn_target": {
+        "x": 552,
+        "y": 392,
+        "tx": 34,
+        "ty": 24,
+        "kind": "farm"
+      },
+      "guide": "走到金框空田，点「交互 E」播种。",
+      "selected_build": "fence",
+      "growing": {
+        "time": 11.217200000017874,
+        "cycle": 0.9507000000000009,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "inv": {
+          "wood": 5,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 2,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "crops": [
+          [
+            "34,24",
+            {
+              "stage": 0,
+              "grow": 0.08339999999999964
+            }
+          ]
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 402.3124357829114,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "objective": "采集 麦 2/3，顺手补墙",
+        "guide": "麦苗还在长，成熟后再收。",
+        "summary": "当前目标",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "held": 0,
+        "details": true
+      },
+      "ripe_time": 26.179600000017597,
+      "harvested_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      }
+    },
+    {
+      "variant": "wheat",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "night_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "dawn_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "night_time": 0.39589999997615816,
+      "dawn_time": 10.387499999976153,
+      "night_cycle": 22.1001,
+      "dawn_cycle": 0.08339999999999964,
+      "night_target": {
+        "x": 360,
+        "y": 344,
+        "kind": "camp"
+      },
+      "dawn_target": {
+        "x": 392,
+        "y": 312,
+        "kind": "bench"
+      },
+      "pre_craft_inventory": {
+        "wood": 5,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "crafted_inventory": {
+        "wood": 1,
+        "stone": 0,
+        "gold": 0,
+        "wheat": 0,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 1
+      },
+      "final_target": {
+        "x": 392,
+        "y": 104,
+        "kind": "altar"
+      }
+    },
+    {
+      "variant": "seed",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "night_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 2,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "dawn_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 2,
+        "seed": 1,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "night_time": 0.3424999999761582,
+      "dawn_time": 10.30089999997616,
+      "night_cycle": 22.0835,
+      "dawn_cycle": 0.0335,
+      "night_target": {
+        "x": 360,
+        "y": 344,
+        "kind": "camp"
+      },
+      "dawn_target": {
+        "x": 552,
+        "y": 392,
+        "tx": 34,
+        "ty": 24,
+        "kind": "farm"
+      },
+      "guide": "走到金框空田，点「交互 E」播种。",
+      "selected_build": "fence",
+      "growing": {
+        "time": 11.234899999976145,
+        "cycle": 0.9675,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 2,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "build": null,
+        "crops": [
+          [
+            "34,24",
+            {
+              "stage": 0,
+              "grow": 0.08339999999999964
+            }
+          ]
+        ],
+        "drops": [],
+        "player": {
+          "x": 552,
+          "y": 402.3063645537465,
+          "dir": 3
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "crop"
+        },
+        "objective": "采集 麦 2/3，顺手补墙",
+        "guide": "麦苗还在长，成熟后再收。",
+        "summary": "当前目标",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "held": 0,
+        "details": true
+      },
+      "ripe_time": 26.197299999975886,
+      "harvested_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      }
+    },
+    {
+      "variant": "wheat",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "night_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "dawn_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "night_time": 0.3270999999701977,
+      "dawn_time": 10.368799999970186,
+      "night_cycle": 22.0668,
+      "dawn_cycle": 0.10010000000000037,
+      "night_target": {
+        "x": 360,
+        "y": 344,
+        "kind": "camp"
+      },
+      "dawn_target": {
+        "x": 392,
+        "y": 312,
+        "kind": "bench"
+      },
+      "pre_craft_inventory": {
+        "wood": 4,
+        "stone": 5,
+        "gold": 3,
+        "wheat": 3,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 0
+      },
+      "crafted_inventory": {
+        "wood": 0,
+        "stone": 0,
+        "gold": 0,
+        "wheat": 0,
+        "seed": 0,
+        "fence": 2,
+        "torch": 0,
+        "plot": 0,
+        "heart": 1
+      },
+      "final_target": {
+        "x": 392,
+        "y": 104,
+        "kind": "altar"
+      }
+    }
+  ],
+  "unmodified_random_attempts": {
+    "before": 11,
+    "after": 15,
+    "note": "One native kill per isolated attempt; all successful and unsuccessful samples retained. No RNG override or post-pickup stock clearing. Not a probability guarantee."
+  },
+  "source": "Fixed third-night completed-wave/wounded-zero-damage enemy, original exhausted terrain/empty-crop snapshot and initial wheat1/2 stocks; not full natural three-night play.",
+  "paired_source": "Exact before successful pickup stocks/position, fixed night-end1.5s then normal dawn and native summary tap; not a second natural loot acquisition.",
+  "regression": "WebKit/CI deterministic observed seed/wheat drop fixture, native approach then original pickup/dawn/growth/cost; touch long-hold keyboard fallback explicitly logged.",
+  "checks": {
+    "static": "static.log",
+    "targeted": "webkit-final.log",
+    "full_webkit": "e2e.log",
+    "independent_review": "review.log"
+  },
+  "failures": [
+    "webkit-targeted.log: native return overshot x542/y397, E faced outside farm; native within-cell thresholds/direction-only north turn and assertion added.",
+    "webkit-aligned.log: new long left hold exceeded5s wall while only3.76 engine seconds elapsed, x404; split into two native holds with unchanged per-hold5s budget.",
+    "No original first-night file/budget/assertion, product speed/timing/map, resource/drop probability, recipe or victory/save changes."
+  ],
+  "uncovered": [
+    "physical devices/safe areas",
+    "full continuous natural three-night win",
+    "new landscape/desktop image batch",
+    "user-approved visual review"
+  ]
+}

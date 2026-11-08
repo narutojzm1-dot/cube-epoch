@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-037 夜守补给到清晨播收指南
+
+[44张320/390原图](dawn-supply-handoff/INDEX.md) · [逐图源码/真实触点/画布](dawn-supply-handoff/screenshots.json) · [夜间补给、清晨、原播收与合成成本](dawn-supply-handoff/validation.json)。
+
+明确第三夜末波/缺麦/无苗前置，真实触控击杀拾原随机种或麦，正常跨清晨；拾种后金框已经空田，教程却去工作台。仅三夜后白天其他准备齐而缺麦的指南复用现有播种/等待/收麦动作，材料齐工作台与持心祭坛照旧；目标/顶栏/规则不变。40张自然输入链路及4张完全相同已拾种库存的复放配对图分开，不冒作自然三夜或实体设备。旧证据/dirty保留，视觉待用户/协调审查，不合并、不发布。
+
 ## 独立维护批次：UI-036 缺麦且无种无苗时的补给路径
 
 [54张当前320/390/桌面前后原图及54张夹具启动瞬态历史](exhausted-wheat-supply/INDEX.md) · [逐图源码/画布/输入](exhausted-wheat-supply/screenshots.json) · [真实耗尽形成、路线与夜怪概率样本](exhausted-wheat-supply/validation.json)。

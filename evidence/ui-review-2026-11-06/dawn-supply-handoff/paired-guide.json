@@ -1,0 +1,1024 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "paired-guide",
+      "state": "third-dawn picked-seed, exact recorded inventory match",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "phase": "before",
+      "language": "zh-CN",
+      "platform": "Web / Chromium",
+      "device_scale_factor": 1,
+      "ui_scale": "100%",
+      "build": {
+        "sha": "1ad39a6a8d129ae182c98384434b4e020da7252d",
+        "dirty": false,
+        "source_sha256": "456016569bcce24adc1432acec736e177555b4653452076db965ae044b7c35a3"
+      },
+      "source": "Replay of BEFORE successful native random seed pickup inventory/position; original night-to-day tick, not a new natural kill run",
+      "relative_image_path": "images/paired-guide--320x568--before.png",
+      "issue_ids": [
+        "UI-037"
+      ],
+      "status": "已截",
+      "visual_review": "待用户/协调审查",
+      "data": {
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "day": true,
+        "paused": false,
+        "time": 1.8293000000357607,
+        "cycle": 0.06670000000000004,
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "summary": "第五步：天亮献祭"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 246.8125,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 359.3125
+          },
+          "play-details": {
+            "x": 6,
+            "y": 192.8125,
+            "width": 308,
+            "height": 369.1875,
+            "right": 314,
+            "bottom": 562
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "天亮了。材料齐了就去工作台合成，再到祭坛。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "这一夜的波次结束，守到天亮",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "captured_at": "2026-11-08T14:28:49.928Z",
+      "inputs": [
+        {
+          "input": "native touchscreen tap",
+          "rect": {
+            "x": 8,
+            "y": 497.796875,
+            "width": 304,
+            "height": 44
+          }
+        }
+      ],
+      "repro_steps": [
+        "取before-37c84035.json对应视口真实拾种后的库存/位置，逐项原样复用",
+        "明确第三夜末1.5秒前置，原耗尽快照地形/四墙/空苗；之后无暂停或时钟/库存写入",
+        "正常跨清晨，真实点开指南；本段是相同库存前置复放，不冒称本段又自然打怪拾种"
+      ]
+    },
+    {
+      "screen_id": "paired-guide",
+      "state": "third-dawn picked-seed, exact recorded inventory match",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "phase": "after",
+      "language": "zh-CN",
+      "platform": "Web / Chromium",
+      "device_scale_factor": 1,
+      "ui_scale": "100%",
+      "build": {
+        "sha": "1ad39a6a8d129ae182c98384434b4e020da7252d",
+        "dirty": true,
+        "source_sha256": "8a11563f643d72a9ab41d5282b80a6e29b1cfb7e76704d21bd401b01c4df8f19"
+      },
+      "source": "Replay of BEFORE successful native random seed pickup inventory/position; original night-to-day tick, not a new natural kill run",
+      "relative_image_path": "images/paired-guide--320x568--after.png",
+      "issue_ids": [
+        "UI-037"
+      ],
+      "status": "已截",
+      "visual_review": "待用户/协调审查",
+      "data": {
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 1,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "day": true,
+        "paused": false,
+        "time": 1.8436000000119181,
+        "cycle": 0.08340000000000009,
+        "guide": "走到金框空田，点「交互 E」播种。",
+        "summary": "当前目标"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 246.8125,
+            "width": 288,
+            "height": 94.5,
+            "right": 304,
+            "bottom": 341.3125
+          },
+          "play-details": {
+            "x": 6,
+            "y": 192.8125,
+            "width": 308,
+            "height": 369.1875,
+            "right": 314,
+            "bottom": 562
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "天亮了。材料齐了就去工作台合成，再到祭坛。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "这一夜的波次结束，守到天亮",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "当前目标"
+      },
+      "captured_at": "2026-11-08T14:28:52.256Z",
+      "inputs": [
+        {
+          "input": "native touchscreen tap",
+          "rect": {
+            "x": 8,
+            "y": 497.796875,
+            "width": 304,
+            "height": 44
+          }
+        }
+      ],
+      "repro_steps": [
+        "取before-37c84035.json对应视口真实拾种后的库存/位置，逐项原样复用",
+        "明确第三夜末1.5秒前置，原耗尽快照地形/四墙/空苗；之后无暂停或时钟/库存写入",
+        "正常跨清晨，真实点开指南；本段是相同库存前置复放，不冒称本段又自然打怪拾种"
+      ]
+    },
+    {
+      "screen_id": "paired-guide",
+      "state": "third-dawn picked-seed, exact recorded inventory match",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "phase": "before",
+      "language": "zh-CN",
+      "platform": "Web / Chromium",
+      "device_scale_factor": 1,
+      "ui_scale": "100%",
+      "build": {
+        "sha": "1ad39a6a8d129ae182c98384434b4e020da7252d",
+        "dirty": false,
+        "source_sha256": "456016569bcce24adc1432acec736e177555b4653452076db965ae044b7c35a3"
+      },
+      "source": "Replay of BEFORE successful native random seed pickup inventory/position; original night-to-day tick, not a new natural kill run",
+      "relative_image_path": "images/paired-guide--390x844--before.png",
+      "issue_ids": [
+        "UI-037"
+      ],
+      "status": "已截",
+      "visual_review": "待用户/协调审查",
+      "data": {
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 2,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "day": true,
+        "paused": false,
+        "time": 1.8284999999761558,
+        "cycle": 0.06679999999999972,
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "summary": "第五步：天亮献祭"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 380.3125,
+            "width": 358,
+            "height": 112.5,
+            "right": 374,
+            "bottom": 492.8125
+          },
+          "play-details": {
+            "x": 6,
+            "y": 326.3125,
+            "width": 378,
+            "height": 511.6875,
+            "right": 384,
+            "bottom": 838
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "天亮了。材料齐了就去工作台合成，再到祭坛。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "这一夜的波次结束，守到天亮",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "captured_at": "2026-11-08T14:28:54.754Z",
+      "inputs": [
+        {
+          "input": "native touchscreen tap",
+          "rect": {
+            "x": 8,
+            "y": 539.796875,
+            "width": 374,
+            "height": 44
+          }
+        }
+      ],
+      "repro_steps": [
+        "取before-37c84035.json对应视口真实拾种后的库存/位置，逐项原样复用",
+        "明确第三夜末1.5秒前置，原耗尽快照地形/四墙/空苗；之后无暂停或时钟/库存写入",
+        "正常跨清晨，真实点开指南；本段是相同库存前置复放，不冒称本段又自然打怪拾种"
+      ]
+    },
+    {
+      "screen_id": "paired-guide",
+      "state": "third-dawn picked-seed, exact recorded inventory match",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "phase": "after",
+      "language": "zh-CN",
+      "platform": "Web / Chromium",
+      "device_scale_factor": 1,
+      "ui_scale": "100%",
+      "build": {
+        "sha": "1ad39a6a8d129ae182c98384434b4e020da7252d",
+        "dirty": true,
+        "source_sha256": "8a11563f643d72a9ab41d5282b80a6e29b1cfb7e76704d21bd401b01c4df8f19"
+      },
+      "source": "Replay of BEFORE successful native random seed pickup inventory/position; original night-to-day tick, not a new natural kill run",
+      "relative_image_path": "images/paired-guide--390x844--after.png",
+      "issue_ids": [
+        "UI-037"
+      ],
+      "status": "已截",
+      "visual_review": "待用户/协调审查",
+      "data": {
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 2,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "target": {
+          "x": 552,
+          "y": 392,
+          "tx": 34,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "day": true,
+        "paused": false,
+        "time": 1.8128000000059576,
+        "cycle": 0.06679999999999996,
+        "guide": "走到金框空田，点「交互 E」播种。",
+        "summary": "当前目标"
+      },
+      "metrics": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 844
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 378,
+            "height": 226.796875,
+            "right": 384,
+            "bottom": 321.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 60,
+            "right": 384,
+            "bottom": 387.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 327.796875,
+            "width": 378,
+            "height": 26,
+            "right": 384,
+            "bottom": 353.796875
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 398.3125,
+            "width": 358,
+            "height": 94.5,
+            "right": 374,
+            "bottom": 492.8125
+          },
+          "play-details": {
+            "x": 6,
+            "y": 344.3125,
+            "width": 378,
+            "height": 493.6875,
+            "right": 384,
+            "bottom": 838
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 393.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 489.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 441.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 393.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 437.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 441.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 485.796875,
+            "touch_action": "none",
+            "hit_target": false
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 489.796875,
+            "width": 230,
+            "height": 44,
+            "right": 384,
+            "bottom": 533.796875,
+            "touch_action": "none",
+            "hit_target": false
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "天亮了。材料齐了就去工作台合成，再到祭坛。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "这一夜的波次结束，守到天亮",
+            "hidden": true
+          }
+        ],
+        "details_open": true,
+        "guide_title": "当前目标"
+      },
+      "captured_at": "2026-11-08T14:28:57.042Z",
+      "inputs": [
+        {
+          "input": "native touchscreen tap",
+          "rect": {
+            "x": 8,
+            "y": 539.796875,
+            "width": 374,
+            "height": 44
+          }
+        }
+      ],
+      "repro_steps": [
+        "取before-37c84035.json对应视口真实拾种后的库存/位置，逐项原样复用",
+        "明确第三夜末1.5秒前置，原耗尽快照地形/四墙/空苗；之后无暂停或时钟/库存写入",
+        "正常跨清晨，真实点开指南；本段是相同库存前置复放，不冒称本段又自然打怪拾种"
+      ]
+    }
+  ]
+}
