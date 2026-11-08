@@ -377,6 +377,12 @@
 | victory | 祭坛交付成功结算与再玩一局 | phone-320x568 | fixture | [原图](images/victory--phone-320x568--d4fcb73d.png) | 已截 |
 | victory | 祭坛交付成功结算与再玩一局 | landscape-844x390 | fixture | [原图](images/victory--landscape-844x390--d4fcb73d.png) | 已截 |
 
+## UI-033 已可交付时的祭坛教程优先
+
+第三黎明、心1且营地东缺口1的真实触控复现：目标已指祭坛，教程/缺口黄框/黎明通知却要求补墙。复用既有可交付条件统一指引；主动选栅栏仍保留高亮和建造规则。
+
+本片[逐图 INDEX](altar-guide-priority/INDEX.md)、[screenshots.json](altar-guide-priority/screenshots.json)、[validation.json](altar-guide-priority/validation.json)：40张当前320/390/844/1280前后原图、4张初次部分取证历史；明示第三黎明前置，原土路真实走近，一次交互扣心到正常胜利，不是完整自然三夜跑，视觉待用户/协调审查。
+
 ## 不适用 / 未覆盖
 
 - 无英文切换、账号/存档页、独立设置面板、空列表界面；不得用伪造界面代替。

@@ -1,0 +1,4759 @@
+{
+  "before": {
+    "source": "b3cf5f3 Git baseline; validation-only native replay, separate actual input run; reuse valid20 photos from before-18491efe.json whose later manual-stock assertion failed",
+    "records": [
+      {
+        "id": "active-guide-delivery",
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "dawn": {
+          "time": 284.0120999999822,
+          "cycle": 0,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.0120999999822,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "ready": {
+          "time": 286.9979999999826,
+          "cycle": 2.985899999999999,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 286.9979999999826,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "guide": {
+          "time": 287.0312999999826,
+          "cycle": 3.019199999999999,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 287.0312999999826,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "arrived": {
+          "time": 290.53419999998334,
+          "cycle": 6.522100000000023,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 124.08959999999904
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "offered": {
+          "time": 290.5675999999834,
+          "cycle": 6.555500000000024,
+          "day": true,
+          "nights": 3,
+          "paused": true,
+          "win": true,
+          "over": true,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 122.81772799999902
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 376,
+            "y": 344,
+            "kind": "gap"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 237.5,
+            "y": 268.28125
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 160,
+            "y": 477.78125
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 270,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 272,
+            "y": 123
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 160,
+            "y": 519.796875
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 160,
+            "y": 216.8125
+          },
+          {
+            "action": "walk-north-start",
+            "type": "native touchStart/end",
+            "time": 287.0813999999826,
+            "player": {
+              "x": 392,
+              "y": 344
+            }
+          },
+          {
+            "action": "walk-north-release",
+            "time": 290.53419999998334,
+            "player": {
+              "x": 392,
+              "y": 124.08959999999904
+            }
+          },
+          {
+            "action": "#touch-interact",
+            "type": "native tap",
+            "x": 234,
+            "y": 421.796875
+          }
+        ]
+      },
+      {
+        "id": "no-heart",
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "actual": {
+          "time": 284.026700000006,
+          "cycle": 0.026700000005960418,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 376,
+            "y": 344,
+            "kind": "gap"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.026700000006,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "点背包「栏」，点发光格围营（还差 1 面）",
+          "prompt": "",
+          "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 237.5,
+            "y": 268.28125
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 160,
+            "y": 477.78125
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 270,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 272,
+            "y": 123
+          }
+        ]
+      },
+      {
+        "id": "early",
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "actual": {
+          "time": 284.026700000006,
+          "cycle": 0.026700000005960418,
+          "day": true,
+          "nights": 2,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 360,
+            "y": 344,
+            "kind": "camp"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.026700000006,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "先再守 1 夜，天亮才能献祭",
+          "prompt": "",
+          "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 237.5,
+            "y": 268.28125
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 160,
+            "y": 477.78125
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 270,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 272,
+            "y": 123
+          }
+        ]
+      },
+      {
+        "id": "night",
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "actual": {
+          "time": 284.0271,
+          "cycle": 0.02710000000000002,
+          "day": false,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 360,
+            "y": 344,
+            "kind": "camp"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.0271,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "night",
+          "guideSummary": "第四步：守住篝火",
+          "guideBody": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "守住篝火！怪从地图边缘朝营地来",
+          "prompt": "",
+          "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 237.5,
+            "y": 268.28125
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 160,
+            "y": 477.78125
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 270,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 272,
+            "y": 123
+          }
+        ]
+      },
+      {
+        "id": "skipped",
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "actual": {
+          "time": 284.02809999998806,
+          "cycle": 0.02809999998807916,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": true,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.02809999998806,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": null,
+          "guideSummary": "当前目标",
+          "guideBody": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "guideCompact": true,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 237.5,
+            "y": 434.390625
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 160,
+            "y": 477.78125
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 270,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 272,
+            "y": 123
+          }
+        ]
+      },
+      {
+        "id": "active-guide-delivery",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "dawn": {
+          "time": 284.0127,
+          "cycle": 0,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.0127,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "ready": {
+          "time": 286.9985000000002,
+          "cycle": 2.9857999999999985,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 286.9985000000002,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "guide": {
+          "time": 287.0817000000002,
+          "cycle": 3.068999999999998,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 287.0817000000002,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "arrived": {
+          "time": 290.61810000000065,
+          "cycle": 6.605400000000028,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 124.0767999999993
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "offered": {
+          "time": 290.63470000000063,
+          "cycle": 6.622000000000027,
+          "day": true,
+          "nights": 3,
+          "paused": true,
+          "win": true,
+          "over": true,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 123.33311999999933
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 376,
+            "y": 344,
+            "kind": "gap"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 290,
+            "y": 781.09375
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 195,
+            "y": 754.1875
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 340,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 342,
+            "y": 123
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 195,
+            "y": 561.796875
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 195,
+            "y": 350.3125
+          },
+          {
+            "action": "walk-north-start",
+            "type": "native touchStart/end",
+            "time": 287.16520000000014,
+            "player": {
+              "x": 392,
+              "y": 344
+            }
+          },
+          {
+            "action": "walk-north-release",
+            "time": 290.61810000000065,
+            "player": {
+              "x": 392,
+              "y": 124.0767999999993
+            }
+          },
+          {
+            "action": "#touch-interact",
+            "type": "native tap",
+            "x": 269,
+            "y": 463.796875
+          }
+        ]
+      },
+      {
+        "id": "active-guide-delivery",
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "dawn": {
+          "time": 284.011800000006,
+          "cycle": 0,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.011800000006,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "ready": {
+          "time": 286.9976000000062,
+          "cycle": 2.9857999999999967,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 286.9976000000062,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "guide": {
+          "time": 287.03090000000617,
+          "cycle": 3.019099999999997,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 287.03090000000617,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "arrived": {
+          "time": 290.5172000000066,
+          "cycle": 6.505400000000022,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 124.07679999999948
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "offered": {
+          "time": 290.5338000000066,
+          "cycle": 6.5220000000000224,
+          "day": true,
+          "nights": 3,
+          "paused": true,
+          "win": true,
+          "over": true,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 123.33311999999947
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 376,
+            "y": 344,
+            "kind": "gap"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 630.5,
+            "y": 356.296875
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 422,
+            "y": 316.59375
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 794,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 504,
+            "y": 82
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 422,
+            "y": 348
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 422,
+            "y": 154.5
+          },
+          {
+            "action": "walk-north-start",
+            "type": "native touchStart/end",
+            "time": 287.06420000000617,
+            "player": {
+              "x": 392,
+              "y": 344
+            }
+          },
+          {
+            "action": "walk-north-release",
+            "time": 290.5172000000066,
+            "player": {
+              "x": 392,
+              "y": 124.07679999999948
+            }
+          },
+          {
+            "action": "#touch-interact",
+            "type": "native tap",
+            "x": 772,
+            "y": 124
+          }
+        ]
+      },
+      {
+        "id": "active-guide-delivery",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "dawn": {
+          "time": 284.005500000006,
+          "cycle": 0,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.005500000006,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "按 1 选栅栏，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "ready": {
+          "time": 286.9914000000065,
+          "cycle": 2.985899999999996,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 286.9914000000065,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "按 1 选栅栏，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "guide": {
+          "time": 286.9914000000065,
+          "cycle": 2.985899999999996,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 286.9914000000065,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "按 1 选栅栏，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "arrived": {
+          "time": 290.42750000000717,
+          "cycle": 6.422000000000028,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 125.15199999999986
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "按 1 选栅栏，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "按 E献上方块之心",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "offered": {
+          "time": 290.42750000000717,
+          "cycle": 6.422000000000028,
+          "day": true,
+          "nights": 3,
+          "paused": true,
+          "win": true,
+          "over": true,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 125.15199999999986
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 376,
+            "y": 344,
+            "kind": "gap"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "按 1 选栅栏，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "按 E献上方块之心",
+          "toast": "天亮了。先把发光的缺口补上，再去凑材料。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native mouse click",
+            "x": 1053.25,
+            "y": 501.34375
+          },
+          {
+            "action": "#btn-start",
+            "type": "native mouse click",
+            "x": 640,
+            "y": 744.09375
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native mouse click",
+            "x": 1230,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native mouse click",
+            "x": 846,
+            "y": 380.09375
+          },
+          {
+            "action": "walk-north-start",
+            "type": "native ArrowUp down/up (WebKit touch fallback)",
+            "time": 286.9914000000065,
+            "player": {
+              "x": 392,
+              "y": 344
+            }
+          },
+          {
+            "action": "walk-north-release",
+            "time": 290.42750000000717,
+            "player": {
+              "x": 392,
+              "y": 125.15199999999986
+            }
+          },
+          {
+            "action": "interact",
+            "type": "native E key"
+          }
+        ]
+      },
+      {
+        "id": "manual-build",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "selected": {
+          "time": 284.0667,
+          "cycle": 0.06670000000000001,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": "fence",
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.0667,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "按 1 选栅栏，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "左键点空地放下栅栏",
+          "toast": "左键点空地/坏墙；按 0 取消。",
+          "held": 0
+        },
+        "placed": {
+          "time": 284.08340000000004,
+          "cycle": 0.0834,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 1,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": "fence",
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ],
+            [
+              "23,21",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "空格拆除栅栏",
+          "toast": "四边围好了。再砍两棵树，木头还要留给方块之心。",
+          "held": 0
+        },
+        "input": "native1 / native map mouse click",
+        "point": {
+          "x": 454.2,
+          "y": 331.796875
+        }
+      },
+      {
+        "id": "manual-build-wood",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh": {
+          "time": 284.07199999999403,
+          "cycle": 0.07199999999403954,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": "fence",
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.07199999999403,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "按 1 选栅栏，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "左键点空地放下栅栏",
+          "toast": "左键点空地/坏墙；按 0 取消。",
+          "held": 0
+        },
+        "paid": {
+          "time": 284.088599999994,
+          "cycle": 0.08859999999403953,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 3,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": "fence",
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ],
+            [
+              "23,21",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "空格拆除栅栏",
+          "toast": "四边围好了。再砍两棵树，木头还要留给方块之心。",
+          "held": 0
+        },
+        "input": "native1 / native map mouse click",
+        "point": {
+          "x": 454.2,
+          "y": 331.796875
+        }
+      },
+      {
+        "id": "win-extra-heart",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "won": {
+          "time": 284.0244000000179,
+          "cycle": 0.024400000017881382,
+          "day": true,
+          "nights": 3,
+          "paused": true,
+          "win": true,
+          "over": true,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 116
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "23,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "按 E献上方块之心",
+          "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native mouse click",
+            "x": 1053.25,
+            "y": 501.34375
+          },
+          {
+            "action": "#btn-start",
+            "type": "native mouse click",
+            "x": 640,
+            "y": 744.09375
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native mouse click",
+            "x": 1230,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native mouse click",
+            "x": 846,
+            "y": 380.09375
+          },
+          {
+            "action": "interact",
+            "type": "native E key"
+          }
+        ]
+      }
+    ]
+  },
+  "after": {
+    "source": "after-81347f55.json actual native photo/test run",
+    "records": [
+      {
+        "id": "active-guide-delivery",
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "dawn": {
+          "time": 284.0125000000059,
+          "cycle": 0,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "ready": {
+          "time": 286.9984000000068,
+          "cycle": 2.9858999999999982,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "guide": {
+          "time": 287.06510000000685,
+          "cycle": 3.0525999999999978,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "arrived": {
+          "time": 290.6013000000078,
+          "cycle": 6.588800000000031,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 124.08959999999932
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "offered": {
+          "time": 290.65150000000784,
+          "cycle": 6.639000000000032,
+          "day": true,
+          "nights": 3,
+          "paused": true,
+          "win": true,
+          "over": true,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 122.4466495999993
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 376,
+            "y": 344,
+            "kind": "gap"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 237.5,
+            "y": 268.28125
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 160,
+            "y": 477.78125
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 270,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 272,
+            "y": 123
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 160,
+            "y": 519.796875
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 160,
+            "y": 216.8125
+          },
+          {
+            "action": "walk-north-start",
+            "type": "native touchStart/end",
+            "time": 287.14850000000683,
+            "player": {
+              "x": 392,
+              "y": 344
+            }
+          },
+          {
+            "action": "walk-north-release",
+            "time": 290.6013000000078,
+            "player": {
+              "x": 392,
+              "y": 124.08959999999932
+            }
+          },
+          {
+            "action": "#touch-interact",
+            "type": "native tap",
+            "x": 234,
+            "y": 421.796875
+          }
+        ]
+      },
+      {
+        "id": "no-heart",
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "actual": {
+          "time": 284.02810000001193,
+          "cycle": 0.02810000001192088,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 376,
+            "y": 344,
+            "kind": "gap"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.02810000001193,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "点背包「栏」，点发光格围营（还差 1 面）",
+          "prompt": "",
+          "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 237.5,
+            "y": 434.390625
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 160,
+            "y": 477.78125
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 270,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 272,
+            "y": 123
+          }
+        ]
+      },
+      {
+        "id": "early",
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "actual": {
+          "time": 284.02670000001785,
+          "cycle": 0.026700000017881392,
+          "day": true,
+          "nights": 2,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 360,
+            "y": 344,
+            "kind": "camp"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.02670000001785,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "build",
+          "guideSummary": "第三步：围营地",
+          "guideBody": "点「栅栏」，直接用木头放到篝火旁发光格（还差 1 面），不用先合成。自己能穿过栅栏。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "先再守 1 夜，天亮才能献祭",
+          "prompt": "",
+          "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 237.5,
+            "y": 268.28125
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 160,
+            "y": 477.78125
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 270,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 272,
+            "y": 123
+          }
+        ]
+      },
+      {
+        "id": "night",
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "actual": {
+          "time": 284.02770000002386,
+          "cycle": 0.027700000023841882,
+          "day": false,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 360,
+            "y": 344,
+            "kind": "camp"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.02770000002386,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "night",
+          "guideSummary": "第四步：守住篝火",
+          "guideBody": "怪朝篝火来。面朝怪按住「采集/攻击」；朝墙会拆墙，先移到墙侧再打。缺口要补。第二夜蝙蝠飞墙，第三夜金色立方会来。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "守住篝火！怪从地图边缘朝营地来",
+          "prompt": "",
+          "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 237.5,
+            "y": 268.28125
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 160,
+            "y": 477.78125
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 270,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 272,
+            "y": 123
+          }
+        ]
+      },
+      {
+        "id": "skipped",
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "actual": {
+          "time": 284.02819999999406,
+          "cycle": 0.028199999994039444,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": true,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": null,
+          "guideSummary": "当前目标",
+          "guideBody": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "guideCompact": true,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "金框指着附近的树。按方向按钮走过去，按住「采集/攻击」砍。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 237.5,
+            "y": 434.390625
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 160,
+            "y": 477.78125
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 270,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 272,
+            "y": 123
+          }
+        ]
+      },
+      {
+        "id": "active-guide-delivery",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "dawn": {
+          "time": 284.01299999999407,
+          "cycle": 0,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "ready": {
+          "time": 286.9988999999946,
+          "cycle": 2.9858999999999964,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "guide": {
+          "time": 287.09889999999456,
+          "cycle": 3.0858999999999965,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "arrived": {
+          "time": 290.7019999999953,
+          "cycle": 6.689000000000021,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 123.01439999999916
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "offered": {
+          "time": 290.7853999999953,
+          "cycle": 6.772400000000023,
+          "day": true,
+          "nights": 3,
+          "paused": true,
+          "win": true,
+          "over": true,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 120.94281350399915
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 376,
+            "y": 344,
+            "kind": "gap"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 290,
+            "y": 781.09375
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 195,
+            "y": 754.1875
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 340,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 342,
+            "y": 123
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 195,
+            "y": 561.796875
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 195,
+            "y": 368.3125
+          },
+          {
+            "action": "walk-north-start",
+            "type": "native touchStart/end",
+            "time": 287.2156999999946,
+            "player": {
+              "x": 392,
+              "y": 344
+            }
+          },
+          {
+            "action": "walk-north-release",
+            "time": 290.7019999999953,
+            "player": {
+              "x": 392,
+              "y": 123.01439999999916
+            }
+          },
+          {
+            "action": "#touch-interact",
+            "type": "native tap",
+            "x": 269,
+            "y": 463.796875
+          }
+        ]
+      },
+      {
+        "id": "active-guide-delivery",
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "dawn": {
+          "time": 284.01270000001796,
+          "cycle": 0,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "ready": {
+          "time": 286.99860000001837,
+          "cycle": 2.9858999999999956,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "guide": {
+          "time": 287.0820000000184,
+          "cycle": 3.0692999999999957,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "arrived": {
+          "time": 290.6017000000188,
+          "cycle": 6.58900000000002,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 124.07679999999945
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "offered": {
+          "time": 290.6684000000188,
+          "cycle": 6.655700000000021,
+          "day": true,
+          "nights": 3,
+          "paused": true,
+          "win": true,
+          "over": true,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 122.18553215999945
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 376,
+            "y": 344,
+            "kind": "gap"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": false,
+          "details": false,
+          "objective": "天亮了。把方块之心送到北边祭坛（点「交互 E」）",
+          "prompt": "点「交互 E」献上方块之心",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native tap",
+            "x": 630.5,
+            "y": 178.296875
+          },
+          {
+            "action": "#btn-start",
+            "type": "native tap",
+            "x": 422,
+            "y": 316.59375
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native tap",
+            "x": 794,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native tap",
+            "x": 504,
+            "y": 82
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 422,
+            "y": 348
+          },
+          {
+            "action": "#play-details summary",
+            "type": "native tap",
+            "x": 422,
+            "y": 154.5
+          },
+          {
+            "action": "walk-north-start",
+            "type": "native touchStart/end",
+            "time": 287.14870000001844,
+            "player": {
+              "x": 392,
+              "y": 344
+            }
+          },
+          {
+            "action": "walk-north-release",
+            "time": 290.6017000000188,
+            "player": {
+              "x": 392,
+              "y": 124.07679999999945
+            }
+          },
+          {
+            "action": "#touch-interact",
+            "type": "native tap",
+            "x": 772,
+            "y": 124
+          }
+        ]
+      },
+      {
+        "id": "active-guide-delivery",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "dawn": {
+          "time": 284.005700000006,
+          "cycle": 0,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "ready": {
+          "time": 286.99150000000617,
+          "cycle": 2.985799999999997,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "guide": {
+          "time": 287.0415000000062,
+          "cycle": 3.035799999999997,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "arrived": {
+          "time": 290.5445000000067,
+          "cycle": 6.538800000000021,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 125.14560000000004
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "按 E献上方块之心",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "offered": {
+          "time": 290.61120000000665,
+          "cycle": 6.605500000000021,
+          "day": true,
+          "nights": 3,
+          "paused": true,
+          "win": true,
+          "over": true,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 0
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 123.25564928000007
+          },
+          "campHp": 100,
+          "canOffer": false,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 376,
+            "y": 344,
+            "kind": "gap"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "按 E献上方块之心",
+          "toast": "天亮了。可以去北边祭坛献祭了。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native mouse click",
+            "x": 1053.25,
+            "y": 501.34375
+          },
+          {
+            "action": "#btn-start",
+            "type": "native mouse click",
+            "x": 640,
+            "y": 744.09375
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native mouse click",
+            "x": 1230,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native mouse click",
+            "x": 846,
+            "y": 380.09375
+          },
+          {
+            "action": "walk-north-start",
+            "type": "native ArrowUp down/up (WebKit touch fallback)",
+            "time": 287.1082000000062,
+            "player": {
+              "x": 392,
+              "y": 344
+            }
+          },
+          {
+            "action": "walk-north-release",
+            "time": 290.5445000000067,
+            "player": {
+              "x": 392,
+              "y": 125.14560000000004
+            }
+          },
+          {
+            "action": "interact",
+            "type": "native E key"
+          }
+        ]
+      },
+      {
+        "id": "manual-build",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "selected": {
+          "time": 284.0544000000119,
+          "cycle": 0.05440000001192092,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": "fence",
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.0544000000119,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "左键点空地放下栅栏",
+          "toast": "左键点空地/坏墙；按 0 取消。",
+          "held": 0
+        },
+        "placed": {
+          "time": 284.0710000000119,
+          "cycle": 0.07100000001192092,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 1,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": "fence",
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ],
+            [
+              "23,21",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "空格拆除栅栏",
+          "toast": "四边围好了。再砍两棵树，木头还要留给方块之心。",
+          "held": 0
+        },
+        "input": "native1 / native map mouse click",
+        "point": {
+          "x": 454.2,
+          "y": 331.796875
+        }
+      },
+      {
+        "id": "manual-build-wood",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "fresh": {
+          "time": 284.0667,
+          "cycle": 0.06670000000000001,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": "fence",
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [
+            [
+              23,
+              21
+            ]
+          ],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [
+            {
+              "time": 284.0667,
+              "x": 137,
+              "y": 89
+            }
+          ],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "左键点空地放下栅栏",
+          "toast": "左键点空地/坏墙；按 0 取消。",
+          "held": 0
+        },
+        "paid": {
+          "time": 284.0833,
+          "cycle": 0.0833,
+          "day": true,
+          "nights": 3,
+          "paused": false,
+          "win": false,
+          "over": false,
+          "inv": {
+            "wood": 3,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 0,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": "fence",
+          "player": {
+            "x": 392,
+            "y": 344
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ],
+            [
+              "23,21",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "空格拆除栅栏",
+          "toast": "四边围好了。再砍两棵树，木头还要留给方块之心。",
+          "held": 0
+        },
+        "input": "native1 / native map mouse click",
+        "point": {
+          "x": 454.2,
+          "y": 331.796875
+        }
+      },
+      {
+        "id": "win-extra-heart",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "won": {
+          "time": 284.03340000000003,
+          "cycle": 0.03339999999999999,
+          "day": true,
+          "nights": 3,
+          "paused": true,
+          "win": true,
+          "over": true,
+          "inv": {
+            "wood": 4,
+            "stone": 0,
+            "gold": 0,
+            "wheat": 0,
+            "seed": 2,
+            "fence": 2,
+            "torch": 0,
+            "plot": 0,
+            "heart": 1
+          },
+          "skippedGuide": false,
+          "build": null,
+          "player": {
+            "x": 392,
+            "y": 116
+          },
+          "campHp": 100,
+          "canOffer": true,
+          "gaps": [],
+          "fenceHp": [
+            [
+              "22,20",
+              80
+            ],
+            [
+              "21,21",
+              80
+            ],
+            [
+              "23,21",
+              80
+            ],
+            [
+              "22,22",
+              80
+            ]
+          ],
+          "target": {
+            "x": 392,
+            "y": 104,
+            "kind": "altar"
+          },
+          "visibleGapPaint": [],
+          "guideStep": "offer",
+          "guideSummary": "第五步：天亮献祭",
+          "guideBody": "方块之心已备好，去北边祭坛献祭。",
+          "guideCompact": false,
+          "guideComplete": true,
+          "details": true,
+          "objective": "天亮了。把方块之心送到北边祭坛（按 E）",
+          "prompt": "按 E献上方块之心",
+          "toast": "金框指着附近的树。WASD 走过去，空格或按住左键砍。",
+          "held": 0
+        },
+        "inputs": [
+          {
+            "action": ".class-card[data-class=\"knight\"]",
+            "type": "native mouse click",
+            "x": 1053.25,
+            "y": 501.34375
+          },
+          {
+            "action": "#btn-start",
+            "type": "native mouse click",
+            "x": 640,
+            "y": 744.09375
+          },
+          {
+            "action": "#btn-skip-intro",
+            "type": "native mouse click",
+            "x": 1230,
+            "y": 30.5
+          },
+          {
+            "action": "#btn-skip-brief",
+            "type": "native mouse click",
+            "x": 846,
+            "y": 380.09375
+          },
+          {
+            "action": "interact",
+            "type": "native E key"
+          }
+        ]
+      }
+    ]
+  },
+  "before_photo_note": "Reuse valid20 originals from before-18491efe.json; all4 main offers photographed before later wrong manual-stock assertion failed. Corrected11-case replay separately recorded without recapturing."
+}
