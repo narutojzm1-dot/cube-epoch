@@ -1,0 +1,6 @@
+Independent ship-gate reviewer: altar-guide-priority-review (code-review agent).
+Scope: game.js, tests/e2e.mjs, tests/altar-guide-priority.mjs.
+Result: "No significant issues found in the reviewed changes."
+Reviewed shared canOffer priority, unchanged rules, actual gap painting observation,
+active fence highlight/costs, explicit pre-dawn fixture, native input and existing gates.
+Code review is not user/coordinator visual approval.

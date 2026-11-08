@@ -1,0 +1,47 @@
+UI-033 LOCAL VALIDATION
+Baseline b3cf5f382fec556f8db6e0ce1f01cc449d28984c; current photo product dirty=true.
+After three-file SHA256 28bc745e21115d9685dc55833f0cc45a0b5cf505a751650e136174c13ad24e86.
+Product change: shared canOffer() prioritizes existing offer guide/dawn text;
+automatic yellow camp gap suppressed only when already ready; explicit fence retains glow.
+No changes to canOffer/interact/win/build/wall/cost/generation/timing/save rules.
+
+Chromium baseline11 PASS: baseline-final.log / before-validation-6aa4da1d.json.
+Chromium after11 PASS: after.log / after-81347f55.json.
+320/390/844 native continuous CDP touch and taps;1280 native keyboard/mouse.
+Active tutorial retained, fixed third-night end283.85/cycle31.85; original world/path.
+No QA pause or post-setup state/action injection. Normal victory pauses by original rule.
+All4 native main paths walk >200worldpx from camp on original north path;
+one real interaction inside strict22 range delivers heart1->0/win=true.
+During walk all inventory,3wall HP/east gap,campHP unchanged.
+Before canOffer=true/target=altar but guide=build,visible actual yellow gap1,
+and dawn toast instructs repair. After guide=offer,automatic gap0,dawn altar text.
+Original no-heart/day2/night guide+gap preserved; skipped tutorial still compact.
+Explicit fence selection retains glow and real native placement:
+stored fence2->1 with wood unchanged; without stored fence knight wood4->3.
+Heart2 offer consumes1 and enters original paused victory with1 remaining.
+Existing altar strict22/plant-priority/refusal and gameplay checks retained in full suite.
+
+Syntax/STATIC_OK: static.log; full plain Windows WebKit E2E_OK: e2e.log.
+Full suite includes ALTAR_GUIDE_PRIORITY_OK webkit after11,
+FIRST_NIGHT_GUIDANCE_OK night1/2/3/4 and THIRD_NIGHT_WAVE_WINDOW_OK after8.
+Independent ship-gate code review: no significant issues, review.log.
+Actual original PNG40 current +4 partial historical: index-check.log / screenshots.json.
+Recorded coverage172/172,history305,supplemental919 includes this44;
+read-only reuse, not a current-build full-matrix recapture or visual approval.
+Old metadata unchanged after removing only UI-033/batch; protected old natural hash unchanged.
+
+Initial runner failures retained:
+before.log wrongly expected original victory paused=false;4 early320 images historical.
+before-final.log photographed all20 valid baseline main states, then a later manual
+regression wrongly expected wood-2 while original knight stocked fences consumed first.
+All20 original images reused; corrected separate baseline11 run recorded, no new before pictures.
+before-check.log wrongly expected underlying tutorial to become compact after victory;
+original victory pauses gameplay and leaves previous guide. Corrected to original win/pause/title.
+No product changes made to satisfy incorrect cost/victory expectations.
+Raw photo and validation replay inputs are separate actual runs, explicitly labelled.
+
+Temp/profile/cache paths verified own D:\.tmp\agents\cube-epoch\<run>; existing C browsers read-only.
+Owned browser PIDs exited and exact own roots removed, cleanup logs retained.
+All visual review remains pending user/coordinator. No complete natural three-night run or physical device test.
+PR25-29 and old diagnostics/candidates protected; no merge/Pages/Tencent/server operation.
+Post-push same-head Linux CI results kept separately; no result-only second commit.

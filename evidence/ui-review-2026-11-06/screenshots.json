@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "altar-guide-priority",
+      "base_sha": "b3cf5f382fec556f8db6e0ce1f01cc449d28984c",
+      "index": "altar-guide-priority/INDEX.md",
+      "screenshots": "altar-guide-priority/screenshots.json",
+      "issue_ids": ["UI-033"],
+      "status": "已截",
+      "visual_review": "当前40张四视口前后图及4张历史部分取证待审；保留教程/第三黎明前置、原土路真实触控走近与一次扣心胜利，非自然三夜通关；仅收已可交付时的补墙指引/自动高亮，主动建造保留"
+    },
+    {
       "id": "third-night-first-wave",
       "base_sha": "5d9342c783bb5b3020b8f8d67726cb38ae8a447a",
       "index": "third-night-first-wave/INDEX.md",
@@ -265,6 +274,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-033",
+      "title": "第三黎明已持心且可交付时，教程/自动缺口及黎明通知仍诱导回营补墙",
+      "status": "复用canOffer优先现有祭坛指引，主动选栅栏仍保留高亮，40张当前前后及4张历史原图待审",
+      "before": "altar-guide-priority before",
+      "after": "altar-guide-priority after"
+    },
     {
       "id": "UI-032",
       "title": "第三夜触屏入夜警告正常下一帧被首波覆盖，实际可读窗口不足",

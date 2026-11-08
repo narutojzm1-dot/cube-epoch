@@ -873,6 +873,7 @@
   function currentGuide() {
     if (!state || state.skippedGuide) return null;
     if (!state.day) return GUIDE[3];
+    if (canOffer() && !state.win) return GUIDE[4];
     if (!state.flags.moved) return GUIDE[0];
     if (!state.flags.chopped) return GUIDE[1];
     if (!campWalled()) return GUIDE[2];
@@ -2078,11 +2079,13 @@
               : `第 ${state.nights} 夜：金色立方来了，共 ${state.wavesTotal} 波。它更肉，站在墙后打。`, 3.2);
         beep(140, 0.16, "sawtooth", 0.05);
       } else {
-        const extra = !campWalled()
-          ? "先把发光的缺口补上，再去凑材料。"
-          : survivedNights()
-            ? (state.inv.heart ? "可以去北边祭坛献祭了。" : "材料齐了就去工作台合成，再到祭坛。")
-            : `还要再守 ${WIN_NIGHTS - state.nights} 夜。白天补墙、凑材料。`;
+        const extra = canOffer()
+          ? "可以去北边祭坛献祭了。"
+          : !campWalled()
+            ? "先把发光的缺口补上，再去凑材料。"
+            : survivedNights()
+              ? (state.inv.heart ? "可以去北边祭坛献祭了。" : "材料齐了就去工作台合成，再到祭坛。")
+              : `还要再守 ${WIN_NIGHTS - state.nights} 夜。白天补墙、凑材料。`;
         toast("天亮了。" + extra, 3);
         beep(620, 0.1, "square", 0.04);
         // 第一天过后恢复原来的白天长度
@@ -2618,7 +2621,7 @@
       ctx.fillText("祭坛 · 送到这里", state.altar.x - cam.x, state.altar.y - cam.y - 18);
     }
 
-    if (!campWalled() && (state.flags.chopped || state.build === "fence")) {
+    if (!campWalled() && (!canOffer() || state.build === "fence") && (state.flags.chopped || state.build === "fence")) {
       const pulse = 0.3 + 0.3 * Math.sin(state.time * 5);
       for (const [tx, ty] of campRing()) {
         if (tileAt(tx, ty) === T.FENCE) continue;

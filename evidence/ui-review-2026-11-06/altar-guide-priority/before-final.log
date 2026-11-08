@@ -1,0 +1,61 @@
+2026-11-08T08:03:43.278Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=D:\.tmp\agents\cube-epoch\altar-guide-before-final-781405de00fb4619ae5e60e318491efe\tmp\playwright_chromiumdev_profile-hTv1p8 --remote-debugging-pipe --no-startup-window
+2026-11-08T08:03:43.285Z pw:browser <launched> pid=65932
+2026-11-08T08:03:47.021Z pw:browser [pid=65932][err] [65932:56972:1108/160347.021:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+2026-11-08T08:04:12.056Z pw:browser [pid=65932][err] [65932:56972:1108/160412.056:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+2026-11-08T08:04:20.886Z pw:browser [pid=65932] <gracefully close start>
+2026-11-08T08:04:21.026Z pw:browser [pid=65932] <process did exit: exitCode=0, signal=null>
+2026-11-08T08:04:21.026Z pw:browser [pid=65932] starting temporary directories cleanup
+2026-11-08T08:04:21.033Z pw:browser [pid=65932] finished temporary directories cleanup
+2026-11-08T08:04:21.033Z pw:browser [pid=65932] <gracefully close end>
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
++   fence: 1,
+-   fence: 2,
+    gold: 0,
+    heart: 1,
+    plot: 0,
+    seed: 2,
+    stone: 0,
+    torch: 0,
+    wheat: 0,
++   wood: 4
+-   wood: 2
+  }
+
+    at testAltarGuidePriority (file:///D:/work/projects/cube-epoch/tests/altar-guide-priority.mjs:212:16)
+    at async file:///D:/work/projects/cube-epoch/tests/altar-guide-priority.mjs:234:9 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: {
+    wood: 4,
+    stone: 0,
+    gold: 0,
+    wheat: 0,
+    seed: 2,
+    fence: 1,
+    torch: 0,
+    plot: 0,
+    heart: 1
+  },
+  expected: {
+    wood: 2,
+    stone: 0,
+    gold: 0,
+    wheat: 0,
+    seed: 2,
+    fence: 2,
+    torch: 0,
+    plot: 0,
+    heart: 1
+  },
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1
