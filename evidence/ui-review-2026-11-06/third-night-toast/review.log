@@ -1,0 +1,21 @@
+Independent ship-gate review: third-night-review (code-review agent).
+Initial confirmed bug: later-night wait/read/screenshot races next RAF frame;
+startNightWaves initializes waveWait2.2 and updateEnemies begins wave next frame,
+overwriting dusk toast. Initial24 pictures retained as mismatched-frame history.
+
+Fix in test only: observer installed before explicit later-night preparation,
+pauses at mutation microtask after dusk frame; initial text/range/PNG match.
+QA pause declared in source/capture_setup/data.paused. Explicit resume occurs
+before real native demolition/rebuild/side attack. Night1 remains unpaused.
+Game wave timing, costs, rules and toast duration untouched.
+
+Same sync reviewer could not receive write_agent follow-up (tool limitation).
+Narrow follow-up independent reviewer: third-night-capture-fix-review.
+Result: "Fixed within the inspected scope. The observer pauses at the mutation
+microtask before the next wave-update frame, disconnects, and resolves; capture
+completes before explicit resume and native controls. Night 1 remains unpaused,
+and later-night preparation is labeled as a QA fixture.
+No high-confidence remaining bug found."
+
+No suggestion or product bug remaining in reviewed scope.
+This code review does not grant user/coordinator visual acceptance.

@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "third-night-toast",
+      "base_sha": "a14c0809415d4309998d7146e17d804ec154d899",
+      "index": "third-night-toast/INDEX.md",
+      "screenshots": "third-night-toast/screenshots.json",
+      "issue_ids": ["UI-031"],
+      "status": "已截",
+      "visual_review": "24张当前第3夜夹具前后图待审、24张读取/截图错帧历史图保留；QA仅暂停入夜帧取图，真实按压/补墙/侧移前恢复，非自然通关。第二夜/桌面/规则未改，未声称实体手机或全界面通过"
+    },
+    {
       "id": "first-night-wall-guidance",
       "base_sha": "af3a311a40ac5a70d2b65daffe4e36b004ef596c",
       "index": "first-night-wall-guidance/INDEX.md",
@@ -247,6 +256,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-031",
+      "title": "第三夜及以后触屏toast仍说站在墙后打，与朝墙拆墙分支冲突",
+      "status": "触屏短句保留金色立方/波数并告知面朝怪、朝墙拆墙；明示第3夜夹具24原图待协调审查",
+      "before": "third-night-toast before",
+      "after": "third-night-toast after"
+    },
     {
       "id": "UI-030",
       "title": "首夜站在墙后打的文字会引导触屏按住攻击拆自己的第一面栅栏",

@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-031 第三夜及以后触屏toast
+
+[24张同态前后原图与24张错帧历史图](third-night-toast/INDEX.md) · [逐图源码/真实画布/夹具暂停边界](third-night-toast/screenshots.json) · [真实触控与库存/墙](third-night-toast/validation.json)。
+
+仅第三夜及以后触屏入夜toast改为金色立方、波数、面朝怪/朝墙拆墙的短句。第二夜蝙蝠原文、桌面、原时序/波次/输入/规则不改。第3夜四视口明确夹具：入夜文字原下一帧即被首波通知替换，仅QA暂停该入夜帧取图、原生输入前恢复，不称自然通关。初次读取/截图错帧24图完整保留；旧普通三夜只读抽核，#25–27及诊断保留。新图待协调审查，不合并、不发布。
+
 ## 独立维护批次：UI-030 首夜触屏朝墙攻击的误导
 
 [68张当前前后原图与12张中间图](first-night-wall-guidance/INDEX.md) · [逐图源码/实际画布/原生输入](first-night-wall-guidance/screenshots.json) · [库存/缺口/自然首日时间](first-night-wall-guidance/validation.json)。

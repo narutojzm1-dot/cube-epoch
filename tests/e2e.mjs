@@ -465,6 +465,9 @@ await testTouchTitle(browser, origin);
 await testFirstWoodToast(browser, origin);
 await testFirstFence(browser, origin);
 await testFirstNightGuidance(browser, origin);
+await testFirstNightGuidance(browser, origin, { night: 2 });
+await testFirstNightGuidance(browser, origin, { night: 3 });
+await testFirstNightGuidance(browser, origin, { night: 4 });
 const canvasSnapshots = await testCanvasBlackArea(browser, origin, { enforce: true });
 assert.equal(canvasSnapshots.length, 29);
 assert.ok(canvasSnapshots.every((row) => row.relative_image_path.includes("--after--")),

@@ -1,0 +1,49 @@
+Parent: a14c0809415d4309998d7146e17d804ec154d899.
+After product bytes SHA256:
+832b19f5eff3a46e8ec9300aa116a9083473d92346f315725e7a297bd5e1a6c2.
+Product diff: third-and-later touch toast ternary only. Gold cube and wave count
+retained; face enemy/wall-demolition warning uses compact one-line wording.
+Second-night text, desktop literal, 3.2s argument, first-night guidance, costs,
+wave start/order/timing, controls, map and save behavior unchanged.
+
+PASS syntax: node --check game.js.
+PASS static: STATIC_OK (static-final.log).
+PASS full Windows WebKit: E2E_OK (e2e-final.log).
+PASS same shared helper nights1/2/3/4, four viewports each, in final full suite.
+PASS targeted WebKit16 cases (webkit-target.log).
+PASS Chromium native touch hold/release and tap on320/390/844, desktop keyboard
+and mouse1280: original wall demolition/refund1, native rebuilding cost2,
+side spell keeps wall/inventory and releases held controls.
+PASS atomic third-night before/after: original4 waves/32s, explicit QA capture
+pause in dusk microtask; all native-action snapshots resumed, not natural run.
+PASS first-screen controls>=44px; after gold/waves/action/wall text fully inside
+notice-feed; no CSS or map-area changes.
+PASS current24/history24 unique viewport PNG48, correct source bytes, inventory,
+restored gaps3, no page exceptions (index-check.log).
+PASS existing recorded coverage172/172, history305, supplemental843. Read-only
+coverage inventory, not a new-source whole-interface visual approval.
+PASS old UI metadata deep-equal after removing UI-031 additions; natural-loop
+protected hash unchanged (preservation.log).
+PASS PR25/26/27 OPEN at52195fc/af3a311/a14c080 (protected-pr logs).
+PASS independent review and narrow atomic-capture correction review (review.log).
+
+Retained attempts:
+- Initial before visibility assertion failed on old long toast; no PNG produced.
+- Initial before/after24 captures read dusk text but PNG showed next-frame wave
+  message; retained as historical mismatch, not current target-toast evidence.
+- Independent review confirmed waveWait2.2 -> beginWave next-frame race. Fixed
+  fixture capture only, not product timing, assertions or timeout budgets.
+- Initial full WebKit run timed out on unchanged/default first-night390 native
+  Space demolition before added night2/3/4 cases. Log retained (e2e.log);
+  precise cause not confirmed. No guessed product fix, timeout extension or
+  skipped gate. Added pre-attack diagnostics; targeted16 and final full suite
+  subsequently passed including unchanged first-night390.
+
+Historical ordinary a342ef0 night3/finish event and390 PNG read-only checked;
+not relabeled as current-source natural verification. Its original exit1 and
+partial-video limitations preserved. No new ordinary three-night run or real
+phone, and no new night2/4 screenshots; those states use input/text regression.
+All own D GUID temporary roots cleaned after browser close; existing C browser
+installation only read, no dependencies installed or new C temporary outputs.
+User/coordinator visual acceptance pending. No merge, main push or deployment.
+Same-head GitHub checks are recorded after branch push in separate local logs.
