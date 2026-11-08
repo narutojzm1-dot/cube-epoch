@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-032 第三夜首波正常运行的可读窗口
+
+[32张无暂停同态前后原图](third-night-first-wave/INDEX.md) · [真实持续/首波/触摸时间戳](third-night-first-wave/timing.json) · [逐图源码/真实画布/前置条件](third-night-first-wave/screenshots.json)。
+
+只在第三夜及以后首波触屏beginWave通知纳入面朝怪/朝墙拆墙短句，保留夜数/波次和原2.4秒预算。入夜前1.2秒的明确已过两夜前置，之后时钟、波生成、移动/施放均正常且无暂停；320/390/844真实触屏模拟、桌面抽验，首波实际约2.385秒可见，至少1.65秒后和触摸后仍完整。非自然整局；旧PR28暂停入夜取证原样保留，不冒作本片窗口证明。#25–28和诊断保留，待协调审图，不合并、不发布。
+
 ## 独立维护批次：UI-031 第三夜及以后触屏toast
 
 [24张同态前后原图与24张错帧历史图](third-night-toast/INDEX.md) · [逐图源码/真实画布/夹具暂停边界](third-night-toast/screenshots.json) · [真实触控与库存/墙](third-night-toast/validation.json)。

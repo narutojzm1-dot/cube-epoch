@@ -1,0 +1,22 @@
+2026-11-08T07:01:09.506Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=D:\.tmp\agents\cube-epoch\first-wave-before-final-ed72a298cedf4a48835b69ac90abe806\tmp\playwright_chromiumdev_profile-ErIShH --remote-debugging-pipe --no-startup-window
+2026-11-08T07:01:09.512Z pw:browser <launched> pid=72160
+2026-11-08T07:01:13.769Z pw:browser [pid=72160][err] [72160:60300:1108/150113.768:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+2026-11-08T07:01:13.770Z pw:browser [pid=72160][err] [72160:60300:1108/150113.770:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+2026-11-08T07:01:13.778Z pw:browser [pid=72160][err] [72160:60300:1108/150113.778:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: PHONE_REGISTRATION_ERROR
+2026-11-08T07:01:14.647Z pw:browser [pid=72160][err] [72160:60300:1108/150114.647:ERROR:google_apis\gcm\engine\mcs_client.cc:702]   Error code: 401  Error message: Authentication Failed: wrong_secret
+2026-11-08T07:01:14.648Z pw:browser [pid=72160][err] [72160:60300:1108/150114.647:ERROR:google_apis\gcm\engine\mcs_client.cc:704] Failed to log in to GCM, resetting connection.
+WAVE_WINDOW_CASE_OK before 320 3 1 2.385400000000001 2.385399999976158
+WAVE_WINDOW_CASE_OK before 390 3 1 2.385299999999999 2.384899999976158
+WAVE_WINDOW_CASE_OK before 844 3 1 2.3851999999999984 2.3846000000238416
+WAVE_WINDOW_CASE_OK before 1280 3 1 2.385399999999996 2.385
+WAVE_WINDOW_CASE_OK before 320 4 1 2.385299999999999 2.3847000000178813
+2026-11-08T07:01:37.692Z pw:browser [pid=72160][err] [72160:60300:1108/150137.692:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+WAVE_WINDOW_CASE_OK before 320 2 1 2.3853 2.384699999988079
+WAVE_WINDOW_CASE_OK before 320 1 1 2.3852000000000073 2.3846000000238416
+WAVE_WINDOW_CASE_OK before 320 3 2 2.3851999999999993 2.395800000011921
+THIRD_NIGHT_WAVE_WINDOW_OK before 8
+2026-11-08T07:01:52.564Z pw:browser [pid=72160] <gracefully close start>
+2026-11-08T07:01:52.701Z pw:browser [pid=72160] <process did exit: exitCode=0, signal=null>
+2026-11-08T07:01:52.702Z pw:browser [pid=72160] starting temporary directories cleanup
+2026-11-08T07:01:52.711Z pw:browser [pid=72160] finished temporary directories cleanup
+2026-11-08T07:01:52.711Z pw:browser [pid=72160] <gracefully close end>

@@ -1,0 +1,8 @@
+Independent ship-gate reviewer: first-wave-window-review (code-review agent).
+Scope: game.js beginWave touch-only first-wave condition; new unpaused
+tests/third-night-wave-window.mjs and e2e integration.
+Checked routing/timing scope, pre-dusk one-time fixture preparation, no later
+game-state writes or pause, native controls, DOM/RAF duration, image text
+consistency, desktop/front-two-night/later-wave negative cases and source proof.
+Result: "No significant issues found in the reviewed changes."
+Code review is not user/coordinator visual acceptance.
