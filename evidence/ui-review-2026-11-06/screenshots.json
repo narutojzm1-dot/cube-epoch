@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "seedless-crop-guidance",
+      "base_sha": "f652c884155ef060ce6505c33f41731080d4382b",
+      "index": "seedless-crop-guidance/INDEX.md",
+      "screenshots": "seedless-crop-guidance/screenshots.json",
+      "issue_ids": ["UI-035"],
+      "status": "已截",
+      "visual_review": "48张当前四视口前后图及6张执行器部分历史待审；固定白天缺麦/此前已收/四墙/局部空田前置，实际播种耗尽初始种子、正常两阶段成熟与采收，不称自然全采集/三夜通关"
+    },
+    {
       "id": "bench-guide-priority",
       "base_sha": "4cb347f9257fa3124528bf99d113f683da978417",
       "index": "bench-guide-priority/INDEX.md",
@@ -283,6 +292,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-035",
+      "title": "白天缺麦且种子0，存在未熟麦苗与空田时，金框仍指无法播种的空田",
+      "status": "仅种子门控空田目标并回退现有麦苗，沿现有等待/成熟收麦提示；48张当前及6张历史原图待审",
+      "before": "seedless-crop-guidance before",
+      "after": "seedless-crop-guidance after"
+    },
     {
       "id": "UI-034",
       "title": "第三黎明无心且配方齐全时，目标提示工作台而教程/地图缺口仍要求补墙",

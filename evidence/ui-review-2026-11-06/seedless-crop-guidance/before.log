@@ -1,0 +1,28 @@
+2026-11-08T09:59:49.934Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=D:\.tmp\agents\cube-epoch\seedless-crop-before-b958183c8c7a46e3b789e7c961485c09\tmp\playwright_chromiumdev_profile-Ar9KvN --remote-debugging-pipe --no-startup-window
+2026-11-08T09:59:49.940Z pw:browser <launched> pid=50084
+2026-11-08T09:59:51.639Z pw:browser [pid=50084] <gracefully close start>
+2026-11-08T09:59:51.753Z pw:browser [pid=50084] <process did exit: exitCode=0, signal=null>
+2026-11-08T09:59:51.753Z pw:browser [pid=50084] starting temporary directories cleanup
+2026-11-08T09:59:51.761Z pw:browser [pid=50084] finished temporary directories cleanup
+2026-11-08T09:59:51.761Z pw:browser [pid=50084] <gracefully close end>
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '点「交互 E」播种（要有种子）'
+- '麦苗还在长，成熟后再收。'
+
+    at testSeedlessCropGuidance (file:///D:/work/projects/cube-epoch/tests/seedless-crop-guidance.mjs:145:14)
+    at async file:///D:/work/projects/cube-epoch/tests/seedless-crop-guidance.mjs:202:9 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '点「交互 E」播种（要有种子）',
+  expected: '麦苗还在长，成熟后再收。',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

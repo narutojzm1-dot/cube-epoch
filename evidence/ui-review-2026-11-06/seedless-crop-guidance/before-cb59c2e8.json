@@ -1,0 +1,1622 @@
+{
+  "screenshots": [
+    {
+      "screen_id": "one-seed-left",
+      "state": "one-seed-left",
+      "phase": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "f652c884155ef060ce6505c33f41731080d4382b",
+        "dirty": false,
+        "source_sha256": "54b3a9a3b4f1ef6047698eb502c46bb898d951faa8390e93dea1a812cb38e359"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "source": "isolated daytime materials/location/prior-harvest fixture; normal starting seeds; real planting/movement and natural growth, no QA pause",
+      "relative_image_path": "images/one-seed-left--320x568--before--54b3a9a3--cb59c2e8.png",
+      "issue_ids": [
+        "UI-035"
+      ],
+      "status": "已截",
+      "visual_review": "待用户/协调逐图审查",
+      "captured_at": "2026-11-08T10:00:13.599Z",
+      "data": {
+        "time": 0.34359999997615814,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "win": false,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 2,
+          "seed": 1,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 488,
+          "y": 408,
+          "dir": 3
+        },
+        "build": null,
+        "crops": [
+          {
+            "key": "30,24",
+            "stage": 0,
+            "grow": 0.03339999999999997
+          }
+        ],
+        "farms": [
+          8,
+          7,
+          7
+        ],
+        "target": {
+          "x": 504,
+          "y": 392,
+          "tx": 31,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "gaps": [],
+        "fenceHp": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "campHp": 100,
+        "prompt": "麦苗还在长，成熟后再收。",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "objective": "采集 麦 2/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "held": 0,
+        "paint": [
+          {
+            "time": 0.34359999997615814,
+            "x": 166,
+            "y": 70,
+            "color": "rgba(255, 226, 122, 0.875)"
+          }
+        ]
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 337.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "播下了。长大后按住「采集/攻击」收。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "麦苗还在长，成熟后再收。",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "inputs": [
+        {
+          "action": "interact",
+          "input": "native touch tap",
+          "time": 0.26019999997615817,
+          "player": {
+            "x": 488,
+            "y": 408,
+            "dir": 3
+          }
+        }
+      ],
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始，保留教程；选角使用既有测试入口，不声称触屏选角证据",
+        "固定白天前置：已围四墙/采集标记、木4石5金3麦2心0，初始种子2未注入；玩家(488,408)面北",
+        "fixture将既有初始作物替换为空田（模拟此前已收）；局部草地和(30..32,24)三空田；不是完整自然采集或三夜跑",
+        "实际交互播种、触屏方向移动，再播一次耗尽2种子；空田交互失败，真实走回麦苗显示现有等待提示",
+        "不写作物阶段/生长/时钟，不暂停：自然经过7秒/8秒两阶段，成熟按住采集/攻击（桌面Space）收麦",
+        "观察原掉麦1/回种1，配方从差麦1到齐全；拍摄真实首屏、原生像素，保护用户存档"
+      ]
+    },
+    {
+      "screen_id": "seedless-at-sprout",
+      "state": "seedless-at-sprout",
+      "phase": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "f652c884155ef060ce6505c33f41731080d4382b",
+        "dirty": false,
+        "source_sha256": "54b3a9a3b4f1ef6047698eb502c46bb898d951faa8390e93dea1a812cb38e359"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "source": "isolated daytime materials/location/prior-harvest fixture; normal starting seeds; real planting/movement and natural growth, no QA pause",
+      "relative_image_path": "images/seedless-at-sprout--320x568--before--54b3a9a3--cb59c2e8.png",
+      "issue_ids": [
+        "UI-035"
+      ],
+      "status": "已截",
+      "visual_review": "待用户/协调逐图审查",
+      "captured_at": "2026-11-08T10:00:14.050Z",
+      "data": {
+        "time": 0.7939999999761582,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "win": false,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 2,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 505.82976000000014,
+          "y": 403.79175430399994,
+          "dir": 3
+        },
+        "build": null,
+        "crops": [
+          {
+            "key": "30,24",
+            "stage": 0,
+            "grow": 0.4838000000000001
+          },
+          {
+            "key": "31,24",
+            "stage": 0,
+            "grow": 0.03340000000000009
+          }
+        ],
+        "farms": [
+          8,
+          8,
+          7
+        ],
+        "target": {
+          "x": 520,
+          "y": 392,
+          "tx": 32,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "gaps": [],
+        "fenceHp": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "campHp": 100,
+        "prompt": "麦苗还在长，成熟后再收。",
+        "toast": "播下了。长大后按住「采集/攻击」收。",
+        "objective": "采集 麦 2/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "held": 0,
+        "paint": [
+          {
+            "time": 0.7939999999761582,
+            "x": 164.17023999999986,
+            "y": 74.20824569600006,
+            "color": "rgba(255, 226, 122, 0.45)"
+          }
+        ]
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 337.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "播下了。长大后按住「采集/攻击」收。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "麦苗还在长，成熟后再收。",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "inputs": [
+        {
+          "action": "interact",
+          "input": "native touch tap",
+          "time": 0.26019999997615817,
+          "player": {
+            "x": 488,
+            "y": 408,
+            "dir": 3
+          }
+        },
+        {
+          "action": "ArrowRight-start",
+          "input": "native CDP touchStart/end",
+          "time": 0.3768999999761581,
+          "player": {
+            "x": 488,
+            "y": 408,
+            "dir": 3
+          },
+          "rect": {
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowRight-release",
+          "input": "native CDP touchStart/end",
+          "time": 0.6604999999761582,
+          "player": {
+            "x": 505.08160000000015,
+            "y": 408,
+            "dir": 2
+          }
+        },
+        {
+          "action": "ArrowUp-start",
+          "input": "native CDP touchStart/end",
+          "time": 0.6604999999761582,
+          "player": {
+            "x": 505.08160000000015,
+            "y": 408,
+            "dir": 2
+          },
+          "rect": {
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowUp-release",
+          "input": "native CDP touchStart/end",
+          "time": 0.7105999999761582,
+          "player": {
+            "x": 505.82976000000014,
+            "y": 405.8624,
+            "dir": 3
+          }
+        },
+        {
+          "action": "interact",
+          "input": "native touch tap",
+          "time": 0.7105999999761582,
+          "player": {
+            "x": 505.82976000000014,
+            "y": 405.8624,
+            "dir": 3
+          }
+        }
+      ],
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始，保留教程；选角使用既有测试入口，不声称触屏选角证据",
+        "固定白天前置：已围四墙/采集标记、木4石5金3麦2心0，初始种子2未注入；玩家(488,408)面北",
+        "fixture将既有初始作物替换为空田（模拟此前已收）；局部草地和(30..32,24)三空田；不是完整自然采集或三夜跑",
+        "实际交互播种、触屏方向移动，再播一次耗尽2种子；空田交互失败，真实走回麦苗显示现有等待提示",
+        "不写作物阶段/生长/时钟，不暂停：自然经过7秒/8秒两阶段，成熟按住采集/攻击（桌面Space）收麦",
+        "观察原掉麦1/回种1，配方从差麦1到齐全；拍摄真实首屏、原生像素，保护用户存档"
+      ]
+    },
+    {
+      "screen_id": "empty-field-refusal",
+      "state": "empty-field-refusal",
+      "phase": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "f652c884155ef060ce6505c33f41731080d4382b",
+        "dirty": false,
+        "source_sha256": "54b3a9a3b4f1ef6047698eb502c46bb898d951faa8390e93dea1a812cb38e359"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "source": "isolated daytime materials/location/prior-harvest fixture; normal starting seeds; real planting/movement and natural growth, no QA pause",
+      "relative_image_path": "images/empty-field-refusal--320x568--before--54b3a9a3--cb59c2e8.png",
+      "issue_ids": [
+        "UI-035"
+      ],
+      "status": "已截",
+      "visual_review": "待用户/协调逐图审查",
+      "captured_at": "2026-11-08T10:00:14.484Z",
+      "data": {
+        "time": 1.2275999999761575,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "win": false,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 2,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 522.5862400000003,
+          "y": 399.30261868947196,
+          "dir": 3
+        },
+        "build": null,
+        "crops": [
+          {
+            "key": "30,24",
+            "stage": 0,
+            "grow": 0.9174000000000003
+          },
+          {
+            "key": "31,24",
+            "stage": 0,
+            "grow": 0.46699999999999997
+          }
+        ],
+        "farms": [
+          8,
+          8,
+          7
+        ],
+        "target": {
+          "x": 520,
+          "y": 392,
+          "tx": 32,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "gaps": [],
+        "fenceHp": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "campHp": 100,
+        "prompt": "点「交互 E」播种（要有种子）",
+        "toast": "没有种子了。收麦可以再拿到种子。",
+        "objective": "采集 麦 2/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "held": 0,
+        "paint": [
+          {
+            "time": 1.2275999999761575,
+            "x": 147.41375999999968,
+            "y": 78.69738131052804,
+            "color": "rgba(255, 226, 122, 0.875)"
+          }
+        ]
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 311.796875
+          },
+          "prompt": {
+            "x": 6,
+            "y": 311.796875,
+            "width": 308,
+            "height": 26,
+            "right": 314,
+            "bottom": 337.796875
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "没有种子了。收麦可以再拿到种子。",
+            "hidden": false
+          },
+          {
+            "id": "prompt",
+            "text": "点「交互 E」播种（要有种子）",
+            "hidden": false
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "inputs": [
+        {
+          "action": "interact",
+          "input": "native touch tap",
+          "time": 0.26019999997615817,
+          "player": {
+            "x": 488,
+            "y": 408,
+            "dir": 3
+          }
+        },
+        {
+          "action": "ArrowRight-start",
+          "input": "native CDP touchStart/end",
+          "time": 0.3768999999761581,
+          "player": {
+            "x": 488,
+            "y": 408,
+            "dir": 3
+          },
+          "rect": {
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowRight-release",
+          "input": "native CDP touchStart/end",
+          "time": 0.6604999999761582,
+          "player": {
+            "x": 505.08160000000015,
+            "y": 408,
+            "dir": 2
+          }
+        },
+        {
+          "action": "ArrowUp-start",
+          "input": "native CDP touchStart/end",
+          "time": 0.6604999999761582,
+          "player": {
+            "x": 505.08160000000015,
+            "y": 408,
+            "dir": 2
+          },
+          "rect": {
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowUp-release",
+          "input": "native CDP touchStart/end",
+          "time": 0.7105999999761582,
+          "player": {
+            "x": 505.82976000000014,
+            "y": 405.8624,
+            "dir": 3
+          }
+        },
+        {
+          "action": "interact",
+          "input": "native touch tap",
+          "time": 0.7105999999761582,
+          "player": {
+            "x": 505.82976000000014,
+            "y": 405.8624,
+            "dir": 3
+          }
+        },
+        {
+          "action": "ArrowRight-start",
+          "input": "native CDP touchStart/end",
+          "time": 0.8272999999761582,
+          "player": {
+            "x": 505.82976000000014,
+            "y": 403.57874373055995,
+            "dir": 3
+          },
+          "rect": {
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowRight-release",
+          "input": "native CDP touchStart/end",
+          "time": 1.0941999999761578,
+          "player": {
+            "x": 521.8425600000003,
+            "y": 403.51712953747193,
+            "dir": 2
+          }
+        },
+        {
+          "action": "ArrowUp-start",
+          "input": "native CDP touchStart/end",
+          "time": 1.0941999999761578,
+          "player": {
+            "x": 521.8425600000003,
+            "y": 403.51712953747193,
+            "dir": 2
+          },
+          "rect": {
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowUp-release",
+          "input": "native CDP touchStart/end",
+          "time": 1.1442999999761578,
+          "player": {
+            "x": 522.5862400000003,
+            "y": 401.3731295374719,
+            "dir": 3
+          }
+        },
+        {
+          "action": "interact",
+          "input": "native touch tap",
+          "time": 1.1442999999761578,
+          "player": {
+            "x": 522.5862400000003,
+            "y": 401.3731295374719,
+            "dir": 3
+          }
+        }
+      ],
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始，保留教程；选角使用既有测试入口，不声称触屏选角证据",
+        "固定白天前置：已围四墙/采集标记、木4石5金3麦2心0，初始种子2未注入；玩家(488,408)面北",
+        "fixture将既有初始作物替换为空田（模拟此前已收）；局部草地和(30..32,24)三空田；不是完整自然采集或三夜跑",
+        "实际交互播种、触屏方向移动，再播一次耗尽2种子；空田交互失败，真实走回麦苗显示现有等待提示",
+        "不写作物阶段/生长/时钟，不暂停：自然经过7秒/8秒两阶段，成熟按住采集/攻击（桌面Space）收麦",
+        "观察原掉麦1/回种1，配方从差麦1到齐全；拍摄真实首屏、原生像素，保护用户存档"
+      ]
+    },
+    {
+      "screen_id": "growing-wait",
+      "state": "growing-wait",
+      "phase": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "language": "zh-CN",
+      "build": {
+        "sha": "f652c884155ef060ce6505c33f41731080d4382b",
+        "dirty": false,
+        "source_sha256": "54b3a9a3b4f1ef6047698eb502c46bb898d951faa8390e93dea1a812cb38e359"
+      },
+      "platform": "Web / chromium",
+      "ui_scale": "100%",
+      "device_scale_factor": 1,
+      "source": "isolated daytime materials/location/prior-harvest fixture; normal starting seeds; real planting/movement and natural growth, no QA pause",
+      "relative_image_path": "images/growing-wait--320x568--before--54b3a9a3--cb59c2e8.png",
+      "issue_ids": [
+        "UI-035"
+      ],
+      "status": "已截",
+      "visual_review": "待用户/协调逐图审查",
+      "captured_at": "2026-11-08T10:00:21.058Z",
+      "data": {
+        "time": 7.79989999997619,
+        "day": true,
+        "nights": 3,
+        "paused": false,
+        "win": false,
+        "over": false,
+        "inv": {
+          "wood": 4,
+          "stone": 5,
+          "gold": 3,
+          "wheat": 2,
+          "seed": 0,
+          "fence": 2,
+          "torch": 0,
+          "plot": 0,
+          "heart": 0
+        },
+        "player": {
+          "x": 501.55648000000014,
+          "y": 394.4007361471113,
+          "dir": 3
+        },
+        "build": null,
+        "crops": [
+          {
+            "key": "30,24",
+            "stage": 1,
+            "grow": 0.4838000000000003
+          },
+          {
+            "key": "31,24",
+            "stage": 1,
+            "grow": 0.03340000000000055
+          }
+        ],
+        "farms": [
+          8,
+          8,
+          7
+        ],
+        "target": {
+          "x": 520,
+          "y": 392,
+          "tx": 32,
+          "ty": 24,
+          "kind": "farm"
+        },
+        "gaps": [],
+        "fenceHp": [
+          [
+            "22,20",
+            80
+          ],
+          [
+            "21,21",
+            80
+          ],
+          [
+            "23,21",
+            80
+          ],
+          [
+            "22,22",
+            80
+          ]
+        ],
+        "campHp": 100,
+        "prompt": "",
+        "toast": "没有种子了。收麦可以再拿到种子。",
+        "objective": "采集 麦 2/3，顺手补墙",
+        "guide": "凑齐材料在工作台点「交互 E」合成方块之心。撑过三夜，天亮后送到北边祭坛，再点交互。",
+        "held": 0,
+        "paint": [
+          {
+            "time": 7.79989999997619,
+            "x": 168.44351999999986,
+            "y": 83.59926385288873,
+            "color": "rgba(255, 226, 122, 0.745)"
+          }
+        ]
+      },
+      "metrics": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "document": {
+          "width": 320,
+          "height": 568
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rects": {
+          "game": {
+            "x": 6,
+            "y": 95,
+            "width": 308,
+            "height": 184.796875,
+            "right": 314,
+            "bottom": 279.796875
+          },
+          "wave-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "notice-feed": {
+            "x": 6,
+            "y": 285.796875,
+            "width": 308,
+            "height": 60,
+            "right": 314,
+            "bottom": 345.796875
+          },
+          "toast": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "prompt": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "build-banner": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "guide": {
+            "x": 16,
+            "y": 549.796875,
+            "width": 288,
+            "height": 112.5,
+            "right": 304,
+            "bottom": 662.296875
+          },
+          "play-details": {
+            "x": 6,
+            "y": 495.796875,
+            "width": 308,
+            "height": 48,
+            "right": 314,
+            "bottom": 543.796875
+          }
+        },
+        "buttons": [
+          {
+            "label": "↑",
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "←",
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 50,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "↓",
+            "x": 54,
+            "y": 447.796875,
+            "width": 44,
+            "height": 44,
+            "right": 98,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "→",
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44,
+            "right": 146,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "采集/攻击 按住 · 空格",
+            "x": 154,
+            "y": 351.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 395.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "交互 E 合成 / 播种 / 献祭",
+            "x": 154,
+            "y": 399.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 443.796875,
+            "touch_action": "none",
+            "hit_target": true
+          },
+          {
+            "label": "技能 Q 就绪",
+            "x": 154,
+            "y": 447.796875,
+            "width": 160,
+            "height": 44,
+            "right": 314,
+            "bottom": 491.796875,
+            "touch_action": "none",
+            "hit_target": true
+          }
+        ],
+        "canvas_backing": {
+          "width": 640,
+          "height": 384
+        },
+        "notice_text": [
+          {
+            "id": "toast",
+            "text": "没有种子了。收麦可以再拿到种子。",
+            "hidden": true
+          },
+          {
+            "id": "prompt",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "build-banner",
+            "text": "",
+            "hidden": true
+          },
+          {
+            "id": "wave-banner",
+            "text": "",
+            "hidden": true
+          }
+        ],
+        "details_open": false,
+        "guide_title": "第五步：天亮献祭"
+      },
+      "inputs": [
+        {
+          "action": "interact",
+          "input": "native touch tap",
+          "time": 0.26019999997615817,
+          "player": {
+            "x": 488,
+            "y": 408,
+            "dir": 3
+          }
+        },
+        {
+          "action": "ArrowRight-start",
+          "input": "native CDP touchStart/end",
+          "time": 0.3768999999761581,
+          "player": {
+            "x": 488,
+            "y": 408,
+            "dir": 3
+          },
+          "rect": {
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowRight-release",
+          "input": "native CDP touchStart/end",
+          "time": 0.6604999999761582,
+          "player": {
+            "x": 505.08160000000015,
+            "y": 408,
+            "dir": 2
+          }
+        },
+        {
+          "action": "ArrowUp-start",
+          "input": "native CDP touchStart/end",
+          "time": 0.6604999999761582,
+          "player": {
+            "x": 505.08160000000015,
+            "y": 408,
+            "dir": 2
+          },
+          "rect": {
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowUp-release",
+          "input": "native CDP touchStart/end",
+          "time": 0.7105999999761582,
+          "player": {
+            "x": 505.82976000000014,
+            "y": 405.8624,
+            "dir": 3
+          }
+        },
+        {
+          "action": "interact",
+          "input": "native touch tap",
+          "time": 0.7105999999761582,
+          "player": {
+            "x": 505.82976000000014,
+            "y": 405.8624,
+            "dir": 3
+          }
+        },
+        {
+          "action": "ArrowRight-start",
+          "input": "native CDP touchStart/end",
+          "time": 0.8272999999761582,
+          "player": {
+            "x": 505.82976000000014,
+            "y": 403.57874373055995,
+            "dir": 3
+          },
+          "rect": {
+            "x": 102,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowRight-release",
+          "input": "native CDP touchStart/end",
+          "time": 1.0941999999761578,
+          "player": {
+            "x": 521.8425600000003,
+            "y": 403.51712953747193,
+            "dir": 2
+          }
+        },
+        {
+          "action": "ArrowUp-start",
+          "input": "native CDP touchStart/end",
+          "time": 1.0941999999761578,
+          "player": {
+            "x": 521.8425600000003,
+            "y": 403.51712953747193,
+            "dir": 2
+          },
+          "rect": {
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowUp-release",
+          "input": "native CDP touchStart/end",
+          "time": 1.1442999999761578,
+          "player": {
+            "x": 522.5862400000003,
+            "y": 401.3731295374719,
+            "dir": 3
+          }
+        },
+        {
+          "action": "interact",
+          "input": "native touch tap",
+          "time": 1.1442999999761578,
+          "player": {
+            "x": 522.5862400000003,
+            "y": 401.3731295374719,
+            "dir": 3
+          }
+        },
+        {
+          "action": "ArrowLeft-start",
+          "input": "native CDP touchStart/end",
+          "time": 1.2609999999761574,
+          "player": {
+            "x": 522.5862400000003,
+            "y": 399.08885516243197,
+            "dir": 3
+          },
+          "rect": {
+            "x": 6,
+            "y": 399.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowLeft-release",
+          "input": "native CDP touchStart/end",
+          "time": 1.5945999999761562,
+          "player": {
+            "x": 502.3046400000001,
+            "y": 399.02724096934395,
+            "dir": 1
+          }
+        },
+        {
+          "action": "ArrowUp-start",
+          "input": "native CDP touchStart/end",
+          "time": 1.5945999999761562,
+          "player": {
+            "x": 502.3046400000001,
+            "y": 399.02724096934395,
+            "dir": 1
+          },
+          "rect": {
+            "x": 54,
+            "y": 351.796875,
+            "width": 44,
+            "height": 44
+          }
+        },
+        {
+          "action": "ArrowUp-release",
+          "input": "native CDP touchStart/end",
+          "time": 1.644599999976156,
+          "player": {
+            "x": 501.55648000000014,
+            "y": 396.89604096934397,
+            "dir": 3
+          }
+        }
+      ],
+      "repro_steps": [
+        "隔离新上下文，正常选骑士/开始，保留教程；选角使用既有测试入口，不声称触屏选角证据",
+        "固定白天前置：已围四墙/采集标记、木4石5金3麦2心0，初始种子2未注入；玩家(488,408)面北",
+        "fixture将既有初始作物替换为空田（模拟此前已收）；局部草地和(30..32,24)三空田；不是完整自然采集或三夜跑",
+        "实际交互播种、触屏方向移动，再播一次耗尽2种子；空田交互失败，真实走回麦苗显示现有等待提示",
+        "不写作物阶段/生长/时钟，不暂停：自然经过7秒/8秒两阶段，成熟按住采集/攻击（桌面Space）收麦",
+        "观察原掉麦1/回种1，配方从差麦1到齐全；拍摄真实首屏、原生像素，保护用户存档"
+      ]
+    }
+  ],
+  "records": []
+}

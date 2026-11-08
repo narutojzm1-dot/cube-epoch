@@ -1,5 +1,11 @@
 # Cube Epoch UI review · 2026-11-06
 
+## 独立维护批次：UI-035 缺麦且无种子时指向麦苗
+
+[48张当前同态前后原图及6张执行器部分历史](seedless-crop-guidance/INDEX.md) · [逐图源码/画布/输入](seedless-crop-guidance/screenshots.json) · [真实种植、自然成熟与采收](seedless-crop-guidance/validation.json)。
+
+白天真实播种用完初始2种子，原金框仍指无法播种的空田；仅在缺麦时以种子门控空田目标，再指已有未熟麦苗，走近复用现有等待提示。成熟麦、有种子、夜守、缺其他材料、围营、已有心优先保持。320/390/844真实触屏、1280键鼠，固定材料/地图位置/此前已收前置，非完整自然采集或三夜通关；生长、配方、资源和存档不改。视觉待用户/协调审查，保护#25–31及诊断，不合并、不发布。
+
 ## 独立维护批次：UI-032 第三夜首波正常运行的可读窗口
 
 [32张无暂停同态前后原图](third-night-first-wave/INDEX.md) · [真实持续/首波/触摸时间戳](third-night-first-wave/timing.json) · [逐图源码/真实画布/前置条件](third-night-first-wave/screenshots.json)。
