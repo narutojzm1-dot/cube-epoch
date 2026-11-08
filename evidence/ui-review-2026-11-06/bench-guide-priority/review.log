@@ -1,0 +1,6 @@
+Independent ship-gate reviewer: bench-guide-priority-review (code-review agent).
+Scope: game.js, tests/e2e.mjs, tests/altar-guide-priority.mjs against4cb347f.
+Result: "No significant issues found in the reviewed changes."
+Reviewed guidance-only readiness, altar priority, unchanged recipe/early-night/manual-building
+rules, native craft/offer route and reused default altar runner.
+Code review is not user/coordinator visual approval.

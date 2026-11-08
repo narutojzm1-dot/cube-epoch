@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "bench-guide-priority",
+      "base_sha": "4cb347f9257fa3124528bf99d113f683da978417",
+      "index": "bench-guide-priority/INDEX.md",
+      "screenshots": "bench-guide-priority/screenshots.json",
+      "issue_ids": ["UI-034"],
+      "status": "已截",
+      "visual_review": "56张当前四视口前后图及3张初次部分历史待审；明确第三黎明/原四类配方前置、真实到原工作台合成一次再到祭坛献一次，非自然通关；材料不足/前两夜/夜间/已有心和主动建墙保留"
+    },
+    {
       "id": "altar-guide-priority",
       "base_sha": "b3cf5f382fec556f8db6e0ce1f01cc449d28984c",
       "index": "altar-guide-priority/INDEX.md",
@@ -274,6 +283,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-034",
+      "title": "第三黎明无心且配方齐全时，目标提示工作台而教程/地图缺口仍要求补墙",
+      "status": "仅对齐三夜后备齐配方的工作台指引/自动高亮，已有心祭坛优先，56张当前及3张历史原图待审",
+      "before": "bench-guide-priority before",
+      "after": "bench-guide-priority after"
+    },
     {
       "id": "UI-033",
       "title": "第三黎明已持心且可交付时，教程/自动缺口及黎明通知仍诱导回营补墙",

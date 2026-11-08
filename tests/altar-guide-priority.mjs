@@ -11,16 +11,19 @@ import { inspect, assertFirstScreen } from "./layout-ui.mjs";
 const baseline = "b3cf5f382fec556f8db6e0ce1f01cc449d28984c";
 const out = join(ROOT, "evidence", "ui-review-2026-11-06", "altar-guide-priority");
 
-export async function testAltarGuidePriority(browser, origin, { before = false, capture = false } = {}) {
+export async function testAltarGuidePriority(browser, origin, { before = false, capture = false, craftingReady = false } = {}) {
+  const sourceBaseline = craftingReady ? "4cb347f9257fa3124528bf99d113f683da978417" : baseline;
+  const dir = craftingReady ? join(ROOT, "evidence", "ui-review-2026-11-06", "bench-guide-priority") : out;
+  const recipe = { wood: 4, stone: 5, gold: 3, wheat: 3 };
   const files = ["index.html", "style.css", "game.js"];
   const buffers = await Promise.all(files.map((f) => before
-    ? execFileSync("git", ["show", `${baseline}:${f}`]) : readFile(join(ROOT, f))));
-  const build = { sha: before ? baseline : execFileSync("git", ["rev-parse", "HEAD"]).toString().trim(),
+    ? execFileSync("git", ["show", `${sourceBaseline}:${f}`]) : readFile(join(ROOT, f))));
+  const build = { sha: before ? sourceBaseline : execFileSync("git", ["rev-parse", "HEAD"]).toString().trim(),
     dirty: !before && !!execFileSync("git", ["status", "--porcelain", "--", ...files]).toString().trim(),
     source_sha256: createHash("sha256").update(Buffer.concat(buffers)).digest("hex") };
   const phase = before ? "before" : "after", screenshots = [], records = [];
   const attempt = basename(process.env.CUBE_AGENT_RUN_ROOT || "check").slice(-8);
-  const manifest = join(out, `${phase}-${attempt}.json`);
+  const manifest = join(dir, `${phase}-${attempt}.json`);
   for (const mode of [{ width: 320, height: 568, touch: true }, { width: 390, height: 844, touch: true },
     { width: 844, height: 390, touch: true }, { width: 1280, height: 800, touch: false }]) {
     const viewport = { width: mode.width, height: mode.height };
@@ -92,7 +95,7 @@ export async function testAltarGuidePriority(browser, origin, { before = false, 
         const range = document.createRange(); range.selectNodeContents(document.getElementById("guide-body"));
         return { time: s.time, cycle: s.cycle, day: s.day, nights: s.nights, paused: s.paused,
           win: s.win, over: s.over, inv: { ...s.inv }, skippedGuide: s.skippedGuide, build: s.build,
-          player: { x: s.player.x, y: s.player.y }, campHp: s.campHp, canOffer: CUBE.canOffer(),
+          player: { x: s.player.x, y: s.player.y }, bench: { ...s.bench }, altar: { ...s.altar }, campHp: s.campHp, canOffer: CUBE.canOffer(),
           gaps: CUBE.campGaps(), fenceHp: [...s.fenceHp], target: CUBE.currentTarget(),
           visibleGapPaint: window.__gapPaint.filter((r) => r.time === s.time && r.x >= 0 && r.y >= 0 && r.x + 14 <= 320 && r.y + 14 <= 192),
           guideStep: document.querySelector("#guide-steps .now")?.dataset.step || null,
@@ -104,26 +107,29 @@ export async function testAltarGuidePriority(browser, origin, { before = false, 
           prompt: document.getElementById("prompt").textContent, toast: document.getElementById("toast").textContent,
           held: document.querySelectorAll("#touch-controls .held").length };
       });
-      const setup = async ({ dawn = false, day = true, nights = 3, heart = 1, skipped = false, complete = false, atAltar = false, storedFences = 2 } = {}) => {
+      const setup = async ({ dawn = false, day = true, nights = 3, heart = craftingReady ? 0 : 1,
+        skipped = false, complete = false, atAltar = false, atBench = false, storedFences = 2, materials = recipe } = {}) => {
         inputs.length = 0;
         await page.goto(origin);
         await page.evaluate(() => localStorage.removeItem("cube-epoch-seen"));
         for (const selector of ['.class-card[data-class="knight"]', "#btn-start", "#btn-skip-intro", "#btn-skip-brief"]) await activate(selector);
         await page.waitForSelector("#screen-game:not(.hidden)");
-        await page.evaluate(({ dawn, day, nights, heart, skipped, complete, atAltar, storedFences }) => {
+        await page.evaluate(({ dawn, day, nights, heart, skipped, complete, atAltar, atBench, storedFences, materials, craftingReady }) => {
           const s = CUBE.getState();
-          Object.assign(s.flags, { moved: true, chopped: true, gathered: true, built: true, crafted: true });
+          Object.assign(s.flags, { moved: true, chopped: true, gathered: true, built: true, crafted: !craftingReady });
           for (const [x, y] of [[22, 20], [21, 21], [23, 21], [22, 22]]) {
             s.tiles[y * 48 + x] = 12; s.fenceHp.set(`${x},${y}`, 80);
           }
           if (!complete) { s.tiles[21 * 48 + 23] = 1; s.fenceHp.delete("23,21"); }
           s.build = null; s.skippedGuide = skipped; s.inv.heart = heart; s.inv.wood = 4; s.inv.fence = storedFences;
+          if (craftingReady) Object.assign(s.inv, materials);
           s.day = dawn ? false : day; s.nights = nights; s.dayLen = 62; s.nightLen = 32;
           s.time = dawn ? 283.85 : 284; s.cycle = dawn ? 31.85 : 0;
           s.wave = s.wavesTotal = 4; s.toSpawn = 0; s.waveWait = 0; s.enemies = [];
-          s.player.x = s.altar.x; s.player.y = atAltar ? s.altar.y + 12 : s.camp.y;
+          s.player.x = atBench ? s.bench.x : s.altar.x;
+          s.player.y = atAltar ? s.altar.y + 12 : atBench ? s.bench.y - 12 : s.camp.y;
           s.player.vx = s.player.vy = 0; s.player.dir = 0;
-        }, { dawn, day, nights, heart, skipped, complete, atAltar, storedFences });
+        }, { dawn, day, nights, heart, skipped, complete, atAltar, atBench, storedFences, materials, craftingReady });
         await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
       };
       const shot = async (id, panel = false) => {
@@ -134,15 +140,17 @@ export async function testAltarGuidePriority(browser, origin, { before = false, 
         if (panel) assert.equal(data.guideComplete, true);
         if (capture) {
           const filename = `${id}--${mode.width}x${mode.height}--${phase}--${build.source_sha256.slice(0, 8)}--${attempt}.png`;
-          await mkdir(join(out, "images"), { recursive: true });
-          await page.screenshot({ path: join(out, "images", filename), fullPage: false });
+          await mkdir(join(dir, "images"), { recursive: true });
+          await page.screenshot({ path: join(dir, "images", filename), fullPage: false });
           screenshots.push({ screen_id: id, state: id, phase, viewport, language: "zh-CN", ui_scale: "100%", device_scale_factor: 1,
             build, platform: `Web / ${browser.browserType().name()}`, source: "isolated active-tutorial third-dawn fixture with three walls/east gap; original terrain/path, no QA pause; normal victory pause; not natural three-night survival",
-            relative_image_path: `images/${filename}`, issue_ids: ["UI-033"], status: "已截", visual_review: "待用户/协调逐图审查",
+            relative_image_path: `images/${filename}`, issue_ids: [craftingReady ? "UI-034" : "UI-033"], status: "已截", visual_review: "待用户/协调逐图审查",
             captured_at: new Date().toISOString(), data, metrics, inputs: [...inputs],
             repro_steps: ["原生选骑士/开始/跳过开场；保留教程",
-              "明确第三黎明前置：time283.85/cycle31.85/nightLen32、三夜已完成波次/空敌、木4/心1/骑士现成栅栏2、三面80HP墙/东缺口；玩家原土路x392,y344，其余生成地形/土路未改",
-              "正常跨黎明，等原toast结束；真实展开/关闭背包教程，沿原土路按住向北走到祭坛22px以内",
+              craftingReady ? "明确第三黎明前置：time283.85/cycle31.85/nightLen32、三夜完成第4波/空敌；心0，原配方木4石5金3麦3、骑士现成栅栏2；三面80HP墙/东缺口，玩家x392,y344，原地形/土路未改"
+                : "明确第三黎明前置：time283.85/cycle31.85/nightLen32、三夜已完成波次/空敌、木4/心1/骑士现成栅栏2、三面80HP墙/东缺口；玩家原土路x392,y344，其余生成地形/土路未改",
+              craftingReady ? "正常跨黎明/开关教程；沿原土路向北走近工作台(392,312)，交互一次扣原四类配方，再继续向北走到祭坛"
+                : "正常跨黎明，等原toast结束；真实展开/关闭背包教程，沿原土路按住向北走到祭坛22px以内",
               "真实触屏交互或桌面E，一次扣心到正常胜利；不为拍图主动暂停（胜利按原规则暂停），隔离上下文不读写用户存档"] });
           await writeFile(manifest, JSON.stringify({ screenshots, records }, null, 2) + "\n");
         }
@@ -152,52 +160,86 @@ export async function testAltarGuidePriority(browser, origin, { before = false, 
         if (mode.touch) await activate("#touch-interact");
         else { await page.locator("#game").focus(); await page.keyboard.press("e"); inputs.push({ action: "interact", type: "native E key" }); }
       };
+      const moveUntil = async (code, predicate, arg) => {
+        const start = await read(), r = await page.locator(`[data-hold="${code}"]`).boundingBox();
+        inputs.push({ action: `${code}-start`, type: cdp ? "native touchStart/end" : "native keyboard down/up (WebKit touch fallback)",
+          time: start.time, player: start.player });
+        if (cdp) {
+          assert.ok(r.width >= 44 && r.height >= 44);
+          await cdp.send("Input.dispatchTouchEvent", { type: "touchStart", touchPoints: [{ x: r.x + r.width / 2, y: r.y + r.height / 2, id: 1 }] });
+        } else { await page.locator("#game").focus(); await page.keyboard.down(code); }
+        try { await page.waitForFunction(predicate, arg); }
+        finally {
+          if (cdp) await cdp.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+          else await page.keyboard.up(code);
+        }
+        const released = await read();
+        inputs.push({ action: `${code}-release`, time: released.time, player: released.player });
+        return released;
+      };
       await setup({ dawn: true });
       await page.waitForFunction(() => CUBE.getState().day);
       const dawn = await shot("third-dawn");
-      assert.equal(dawn.canOffer, true); assert.equal(dawn.gaps.length, 1); assert.equal(dawn.skippedGuide, false);
-      assert.equal(dawn.target.kind, "altar"); assert.match(dawn.objective, /北边祭坛/);
+      assert.equal(dawn.canOffer, !craftingReady); assert.equal(dawn.gaps.length, 1); assert.equal(dawn.skippedGuide, false);
+      assert.equal(dawn.target.kind, craftingReady ? before ? "gap" : "bench" : "altar");
+      assert.match(dawn.objective, craftingReady ? /去工作台.*合成方块之心/ : /北边祭坛/);
       assert.equal(dawn.guideStep, before ? "build" : "offer");
-      assert.match(dawn.toast, before ? /先把发光的缺口补上/ : /可以去北边祭坛献祭/);
+      assert.match(dawn.toast, before ? /先把发光的缺口补上/ : craftingReady ? /材料齐了.*工作台合成/ : /可以去北边祭坛献祭/);
       assert.equal(dawn.visibleGapPaint.length, before ? 1 : 0);
       await page.waitForFunction(() => document.getElementById("toast").classList.contains("hidden"));
       const ready = await shot("ready-at-camp");
       if (!ready.details) await activate("#play-details summary");
       const guide = await shot("guide-expanded", true);
       assert.equal(guide.guideStep, before ? "build" : "offer");
-      assert.match(guide.guideBody, before ? /缺口|栅栏/ : /方块之心已备好.*北边祭坛/);
+      assert.match(guide.guideBody, before ? /缺口|栅栏/ : craftingReady ? /去工作台.*合成方块之心/ : /方块之心已备好.*北边祭坛/);
       if (mode.touch) await activate("#play-details summary");
-      const start = await read(), r = await page.locator('[data-hold="ArrowUp"]').boundingBox();
-      inputs.push({ action: "walk-north-start", type: cdp ? "native touchStart/end" : "native ArrowUp down/up (WebKit touch fallback)", time: start.time, player: start.player });
-      if (cdp) {
-        assert.ok(r.width >= 44 && r.height >= 44);
-        await cdp.send("Input.dispatchTouchEvent", { type: "touchStart", touchPoints: [{ x: r.x + r.width / 2, y: r.y + r.height / 2, id: 1 }] });
-      } else { await page.locator("#game").focus(); await page.keyboard.down("ArrowUp"); }
-      try { await page.waitForFunction(() => {
-        const s = CUBE.getState(); return Math.hypot(s.player.x - s.altar.x, s.player.y - s.altar.y) < 22;
-      }); } finally {
-        if (cdp) await cdp.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
-        else await page.keyboard.up("ArrowUp");
+      let benchReached = null, crafted = null;
+      if (craftingReady) {
+        await moveUntil("ArrowUp", () => {
+          const s = CUBE.getState(); return Math.hypot(s.player.x - s.bench.x, s.player.y - s.bench.y) < 22;
+        });
+        benchReached = await shot("bench-arrived");
+        assert.deepEqual(benchReached.inv, ready.inv);
+        await interact(); await page.waitForFunction(() => CUBE.getState().inv.heart === 1
+          && document.querySelector("#guide-steps .now")?.dataset.step === "offer");
+        crafted = await shot("heart-crafted");
+        assert.deepEqual(crafted.inv, { ...ready.inv, wood: 0, stone: 0, gold: 0, wheat: 0, heart: 1 });
+        assert.equal(crafted.target.kind, "altar"); assert.equal(crafted.guideStep, "offer");
       }
-      const released = await read();
-      inputs.push({ action: "walk-north-release", time: released.time, player: released.player });
+      await moveUntil("ArrowUp", () => {
+        const s = CUBE.getState(); return Math.hypot(s.player.x - s.altar.x, s.player.y - s.altar.y) < 22;
+      });
       const arrived = await shot("altar-arrived");
-      assert.ok(start.player.y - arrived.player.y > 200, "native walk must follow the unchanged world path from camp");
-      assert.equal(arrived.held, 0); assert.deepEqual(arrived.inv, ready.inv); assert.deepEqual(arrived.gaps, ready.gaps);
+      assert.ok(ready.player.y - arrived.player.y > 200, "native walk must follow the unchanged world path from camp");
+      assert.equal(arrived.held, 0); assert.deepEqual(arrived.inv, (crafted || ready).inv); assert.deepEqual(arrived.gaps, ready.gaps);
       assert.deepEqual(arrived.fenceHp, ready.fenceHp); assert.equal(arrived.campHp, ready.campHp);
       await interact(); await page.waitForFunction(() => CUBE.getState().win);
       const offered = await shot("victory");
-      assert.equal(offered.over, true); assert.deepEqual(offered.inv, { ...ready.inv, heart: 0 });
-      records.push({ id: "active-guide-delivery", viewport, dawn, ready, guide, arrived, offered, inputs: [...inputs] });
-      if (mode.width === 320) for (const c of [
+      assert.equal(offered.over, true); assert.deepEqual(offered.inv, { ...(crafted || ready).inv, heart: 0 });
+      records.push({ id: craftingReady ? "active-guide-craft-delivery" : "active-guide-delivery",
+        viewport, dawn, ready, guide, benchReached, crafted, arrived, offered, inputs: [...inputs] });
+      const negatives = craftingReady ? [
+        ...Object.keys(recipe).map((k) => ({ id: `missing-${k}`, materials: { ...recipe, [k]: recipe[k] - 1 }, step: "build", glow: 1, target: "gap" })),
+        { id: "early", nights: 2, step: "build", glow: 1, target: "gap" },
+        { id: "night", day: false, step: "night", glow: 1, target: "camp" },
+        { id: "owned-heart", heart: 1, atBench: true, step: "offer", glow: 0, target: "altar" },
+        { id: "skipped", skipped: true, step: null, glow: before ? 1 : 0, target: before ? "gap" : "bench" },
+      ] : [
         { id: "no-heart", heart: 0, step: "build", glow: 1 },
         { id: "early", nights: 2, step: "build", glow: 1 },
         { id: "night", day: false, step: "night", glow: 1 },
         { id: "skipped", skipped: true, step: null, glow: before ? 1 : 0 },
-      ]) {
+      ];
+      if (mode.width === 320) for (const c of negatives) {
         await setup(c); const actual = await read();
         assert.equal(actual.guideStep, c.step); assert.equal(actual.visibleGapPaint.length, c.glow);
-        records.push({ id: c.id, viewport, actual, inputs: [...inputs] });
+        if (craftingReady) assert.equal(actual.target.kind, c.target);
+        let continued = null;
+        if (c.id === "owned-heart") {
+          await interact(); continued = await read(); assert.deepEqual(continued.inv, actual.inv);
+          assert.equal(continued.target.kind, "altar");
+        }
+        records.push({ id: c.id, viewport, actual, continued, inputs: [...inputs] });
       }
       if (!mode.touch) {
         await setup(); await page.locator("#game").focus(); await page.keyboard.press("1");
@@ -232,7 +274,7 @@ export async function testAltarGuidePriority(browser, origin, { before = false, 
     } finally { await context.close(); }
   }
   if (capture) await writeFile(manifest, JSON.stringify({ screenshots, records }, null, 2) + "\n");
-  console.log("ALTAR_GUIDE_PRIORITY_OK", browser.browserType().name(), phase, records.length);
+  console.log(craftingReady ? "BENCH_GUIDE_PRIORITY_OK" : "ALTAR_GUIDE_PRIORITY_OK", browser.browserType().name(), phase, records.length);
   return records;
 }
 
@@ -240,6 +282,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const { server, origin } = await serve(), browser = await chromium.launch({
     executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE, headless: true,
   });
-  try { await testAltarGuidePriority(browser, origin, { before: process.argv.includes("--before"), capture: process.argv.includes("--capture") }); }
+  try { await testAltarGuidePriority(browser, origin, { before: process.argv.includes("--before"), capture: process.argv.includes("--capture"),
+    craftingReady: process.argv.includes("--crafting-ready") }); }
   finally { await browser.close(); await new Promise((resolve, reject) => server.close((error) => error ? reject(error) : resolve())); }
 }
