@@ -19,6 +19,7 @@ import { testTouchTitle, testFirstWoodToast } from "./touch-title.mjs";
 import { testFirstFence } from "./first-fence.mjs";
 import { testCanvasBlackArea } from "./canvas-black-area.mjs";
 import { testFirstNightGuidance } from "./first-night-guidance.mjs";
+import { testThirdNightWaveWindow } from "./third-night-wave-window.mjs";
 
 const { server, origin } = await serve();
 const browser = await launch();
@@ -468,6 +469,7 @@ await testFirstNightGuidance(browser, origin);
 await testFirstNightGuidance(browser, origin, { night: 2 });
 await testFirstNightGuidance(browser, origin, { night: 3 });
 await testFirstNightGuidance(browser, origin, { night: 4 });
+await testThirdNightWaveWindow(browser, origin);
 const canvasSnapshots = await testCanvasBlackArea(browser, origin, { enforce: true });
 assert.equal(canvasSnapshots.length, 29);
 assert.ok(canvasSnapshots.every((row) => row.relative_image_path.includes("--after--")),

@@ -1,6 +1,15 @@
 {
   "supplemental_batches": [
     {
+      "id": "third-night-first-wave",
+      "base_sha": "5d9342c783bb5b3020b8f8d67726cb38ae8a447a",
+      "index": "third-night-first-wave/INDEX.md",
+      "screenshots": "third-night-first-wave/screenshots.json",
+      "issue_ids": ["UI-032"],
+      "status": "已截",
+      "visual_review": "32张当前四视口前后图待审；明确入夜前两夜前置，准备后无暂停/计时写入，真实触屏/键鼠与约2.385秒首波可读窗口，非自然整局或实体手机"
+    },
+    {
       "id": "third-night-toast",
       "base_sha": "a14c0809415d4309998d7146e17d804ec154d899",
       "index": "third-night-toast/INDEX.md",
@@ -256,6 +265,13 @@
     "history 保留中间构建；部分早期归档元数据从原文件名恢复并明确标注缺失的旧 canvas 测量/精确注入参数。当前矩阵的 172 张图保留完整真实测量与复现步骤。"
   ],
   "issues": [
+    {
+      "id": "UI-032",
+      "title": "第三夜触屏入夜警告正常下一帧被首波覆盖，实际可读窗口不足",
+      "status": "纳入第三夜及以后首波现有触屏通知，原2.4秒预算/波节奏保留，32张无暂停原图与时间戳待协调审查",
+      "before": "third-night-first-wave before",
+      "after": "third-night-first-wave after"
+    },
     {
       "id": "UI-031",
       "title": "第三夜及以后触屏toast仍说站在墙后打，与朝墙拆墙分支冲突",

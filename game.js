@@ -1734,7 +1734,9 @@
     state.toSpawn = 3 + state.nights + state.wave;
     state.spawnAcc = 0;
     state.waveWait = 0;
-    toast(`第 ${state.nights} 夜 · 第 ${state.wave}/${state.wavesTotal} 波来了！`, 2.4);
+    toast(touchLayout.matches && state.nights >= 3 && state.wave === 1
+      ? `第${state.nights}夜·第${state.wave}/${state.wavesTotal}波来了！面朝怪打；朝墙会拆墙。`
+      : `第 ${state.nights} 夜 · 第 ${state.wave}/${state.wavesTotal} 波来了！`, 2.4);
     beep(180, 0.1, "sawtooth", 0.05);
   }
 

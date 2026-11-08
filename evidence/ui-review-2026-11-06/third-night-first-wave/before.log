@@ -1,0 +1,25 @@
+2026-11-08T07:00:36.476Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=D:\.tmp\agents\cube-epoch\first-wave-before-1e824fb49bae4705bfa95061997e4fee\tmp\playwright_chromiumdev_profile-9WU0Zm --remote-debugging-pipe --no-startup-window
+2026-11-08T07:00:36.483Z pw:browser <launched> pid=86328
+2026-11-08T07:00:40.561Z pw:browser [pid=86328][err] [86328:88204:1108/150040.561:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+2026-11-08T07:00:49.152Z pw:browser [pid=86328] <gracefully close start>
+2026-11-08T07:00:49.309Z pw:browser [pid=86328] <process did exit: exitCode=0, signal=null>
+2026-11-08T07:00:49.309Z pw:browser [pid=86328] starting temporary directories cleanup
+2026-11-08T07:00:49.319Z pw:browser [pid=86328] finished temporary directories cleanup
+2026-11-08T07:00:49.319Z pw:browser [pid=86328] <gracefully close end>
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: native title activation not reachable: #btn-skip-intro
+    at activate (file:///D:/work/projects/cube-epoch/tests/third-night-wave-window.mjs:75:16)
+    at async testThirdNightWaveWindow (file:///D:/work/projects/cube-epoch/tests/third-night-wave-window.mjs:134:37)
+    at async file:///D:/work/projects/cube-epoch/tests/third-night-wave-window.mjs:216:9 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: undefined,
+  operator: 'fail',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

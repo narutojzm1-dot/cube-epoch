@@ -1,0 +1,1244 @@
+{
+  "timing": [
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "dusk": {
+        "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "real_ms": 2498.7000000178814,
+        "frame_seconds": 1.1843000000000004,
+        "time": 252.0134999999939,
+        "cycle": 0,
+        "day": false,
+        "nights": 3,
+        "wave": 0,
+        "wavesTotal": 4,
+        "toSpawn": 0,
+        "paused": false
+      },
+      "first_wave": {
+        "text": "第 3 夜 · 第 1/4 波来了！",
+        "visible": true,
+        "real_ms": 2513.600000023842,
+        "frame_seconds": 1.2009000000000003,
+        "time": 252.0302999999939,
+        "cycle": 0.01679999999999973,
+        "day": false,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 7,
+        "paused": false
+      },
+      "dusk_to_wave_game_seconds": 0.016799999999989268,
+      "dusk_to_wave_wall_ms": 14.900000005960464,
+      "first_wave_frame_budget_seconds": 2.385400000000001,
+      "first_wave_wall_seconds": 2.385399999976158,
+      "warning_in_first_wave": false,
+      "late_readable": {
+        "real_ms": 4166.300000011921,
+        "time": 253.68159999999395,
+        "cycle": 1.6681000000000001,
+        "day": false,
+        "nights": 3,
+        "dayLen": 62,
+        "nightLen": 32,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 4,
+        "enemies": 3,
+        "paused": false,
+        "over": false,
+        "player": {
+          "x": 378,
+          "y": 381.5449594408014,
+          "dir": 0,
+          "mana": 8
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "toast": "第 3 夜 · 第 1/4 波来了！",
+        "visible": true,
+        "complete": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        },
+        "timeline": [
+          {
+            "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+            "visible": true,
+            "real_ms": 2498.7000000178814,
+            "frame_seconds": 1.1843000000000004,
+            "time": 252.0134999999939,
+            "cycle": 0,
+            "day": false,
+            "nights": 3,
+            "wave": 0,
+            "wavesTotal": 4,
+            "toSpawn": 0,
+            "paused": false
+          },
+          {
+            "text": "第 3 夜 · 第 1/4 波来了！",
+            "visible": true,
+            "real_ms": 2513.600000023842,
+            "frame_seconds": 1.2009000000000003,
+            "time": 252.0302999999939,
+            "cycle": 0.01679999999999973,
+            "day": false,
+            "nights": 3,
+            "wave": 1,
+            "wavesTotal": 4,
+            "toSpawn": 7,
+            "paused": false
+          }
+        ],
+        "pausedFrames": 0
+      },
+      "native_inputs": [
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 2566.9000000059605,
+            "game_seconds": 252.08029999999388
+          },
+          "end": {
+            "real_ms": 2951.9000000059605,
+            "game_seconds": 252.46389999999386
+          }
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 2954.5,
+            "game_seconds": 252.46389999999386
+          },
+          "end": {
+            "real_ms": 3000.9000000059605,
+            "game_seconds": 252.51389999999387
+          }
+        }
+      ],
+      "pause_frames": 0
+    },
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dusk": {
+        "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "real_ms": 1949.699999988079,
+        "frame_seconds": 1.1843,
+        "time": 252.01330000000553,
+        "cycle": 0,
+        "day": false,
+        "nights": 3,
+        "wave": 0,
+        "wavesTotal": 4,
+        "toSpawn": 0,
+        "paused": false
+      },
+      "first_wave": {
+        "text": "第 3 夜 · 第 1/4 波来了！",
+        "visible": true,
+        "real_ms": 1964.9000000059605,
+        "frame_seconds": 1.2009999999999998,
+        "time": 252.03000000000551,
+        "cycle": 0.01669999999999982,
+        "day": false,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 7,
+        "paused": false
+      },
+      "dusk_to_wave_game_seconds": 0.01669999999998595,
+      "dusk_to_wave_wall_ms": 15.200000017881393,
+      "first_wave_frame_budget_seconds": 2.385299999999999,
+      "first_wave_wall_seconds": 2.384899999976158,
+      "warning_in_first_wave": false,
+      "late_readable": {
+        "real_ms": 3617.699999988079,
+        "time": 253.6815000000055,
+        "cycle": 1.6682000000000001,
+        "day": false,
+        "nights": 3,
+        "dayLen": 62,
+        "nightLen": 32,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 4,
+        "enemies": 3,
+        "paused": false,
+        "over": false,
+        "player": {
+          "x": 378,
+          "y": 381.5469878709388,
+          "dir": 0,
+          "mana": 8
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "toast": "第 3 夜 · 第 1/4 波来了！",
+        "visible": true,
+        "complete": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        },
+        "timeline": [
+          {
+            "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+            "visible": true,
+            "real_ms": 1949.699999988079,
+            "frame_seconds": 1.1843,
+            "time": 252.01330000000553,
+            "cycle": 0,
+            "day": false,
+            "nights": 3,
+            "wave": 0,
+            "wavesTotal": 4,
+            "toSpawn": 0,
+            "paused": false
+          },
+          {
+            "text": "第 3 夜 · 第 1/4 波来了！",
+            "visible": true,
+            "real_ms": 1964.9000000059605,
+            "frame_seconds": 1.2009999999999998,
+            "time": 252.03000000000551,
+            "cycle": 0.01669999999999982,
+            "day": false,
+            "nights": 3,
+            "wave": 1,
+            "wavesTotal": 4,
+            "toSpawn": 7,
+            "paused": false
+          }
+        ],
+        "pausedFrames": 0
+      },
+      "native_inputs": [
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 2021.5,
+            "game_seconds": 252.08010000000547
+          },
+          "end": {
+            "real_ms": 2402.699999988079,
+            "game_seconds": 252.46380000000545
+          }
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 2405.0999999940395,
+            "game_seconds": 252.46380000000545
+          },
+          "end": {
+            "real_ms": 2450.9000000059605,
+            "game_seconds": 252.51380000000546
+          }
+        }
+      ],
+      "pause_frames": 0
+    },
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "dusk": {
+        "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "real_ms": 3552.4000000059605,
+        "frame_seconds": 1.1844000000000006,
+        "time": 252.01299999998815,
+        "cycle": 0,
+        "day": false,
+        "nights": 3,
+        "wave": 0,
+        "wavesTotal": 4,
+        "toSpawn": 0,
+        "paused": false
+      },
+      "first_wave": {
+        "text": "第 3 夜 · 第 1/4 波来了！",
+        "visible": true,
+        "real_ms": 3568.199999988079,
+        "frame_seconds": 1.201100000000001,
+        "time": 252.02959999998816,
+        "cycle": 0.01659999999999991,
+        "day": false,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 7,
+        "paused": false
+      },
+      "dusk_to_wave_game_seconds": 0.01660000000001105,
+      "dusk_to_wave_wall_ms": 15.799999982118607,
+      "first_wave_frame_budget_seconds": 2.3851999999999984,
+      "first_wave_wall_seconds": 2.3846000000238416,
+      "warning_in_first_wave": false,
+      "late_readable": {
+        "real_ms": 5220.300000011921,
+        "time": 253.68099999998802,
+        "cycle": 1.6679999999999993,
+        "day": false,
+        "nights": 3,
+        "dayLen": 62,
+        "nightLen": 32,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 4,
+        "enemies": 3,
+        "paused": false,
+        "over": false,
+        "player": {
+          "x": 378,
+          "y": 381.5438396182154,
+          "dir": 0,
+          "mana": 8
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "toast": "第 3 夜 · 第 1/4 波来了！",
+        "visible": true,
+        "complete": true,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "timeline": [
+          {
+            "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+            "visible": true,
+            "real_ms": 3552.4000000059605,
+            "frame_seconds": 1.1844000000000006,
+            "time": 252.01299999998815,
+            "cycle": 0,
+            "day": false,
+            "nights": 3,
+            "wave": 0,
+            "wavesTotal": 4,
+            "toSpawn": 0,
+            "paused": false
+          },
+          {
+            "text": "第 3 夜 · 第 1/4 波来了！",
+            "visible": true,
+            "real_ms": 3568.199999988079,
+            "frame_seconds": 1.201100000000001,
+            "time": 252.02959999998816,
+            "cycle": 0.01659999999999991,
+            "day": false,
+            "nights": 3,
+            "wave": 1,
+            "wavesTotal": 4,
+            "toSpawn": 7,
+            "paused": false
+          }
+        ],
+        "pausedFrames": 0
+      },
+      "native_inputs": [
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 3627.300000011921,
+            "game_seconds": 252.07959999998818
+          },
+          "end": {
+            "real_ms": 4005.800000011921,
+            "game_seconds": 252.46329999998815
+          }
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 4008.300000011921,
+            "game_seconds": 252.46329999998815
+          },
+          "end": {
+            "real_ms": 4053.4000000059605,
+            "game_seconds": 252.51329999998816
+          }
+        }
+      ],
+      "pause_frames": 0
+    },
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "dusk": {
+        "text": "第 3 夜：金色立方来了，共 4 波。它更肉，站在墙后打。",
+        "visible": true,
+        "real_ms": 1402.5999999940395,
+        "frame_seconds": 1.1841999999999997,
+        "time": 252.00689999998772,
+        "cycle": 0,
+        "day": false,
+        "nights": 3,
+        "wave": 0,
+        "wavesTotal": 4,
+        "toSpawn": 0,
+        "paused": false
+      },
+      "first_wave": {
+        "text": "第 3 夜 · 第 1/4 波来了！",
+        "visible": true,
+        "real_ms": 1417.4000000059605,
+        "frame_seconds": 1.2008999999999996,
+        "time": 252.0235999999877,
+        "cycle": 0.016700000000000045,
+        "day": false,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 7,
+        "paused": false
+      },
+      "dusk_to_wave_game_seconds": 0.01669999999998595,
+      "dusk_to_wave_wall_ms": 14.800000011920929,
+      "first_wave_frame_budget_seconds": 2.385399999999996,
+      "first_wave_wall_seconds": 2.385,
+      "warning_in_first_wave": false,
+      "late_readable": {
+        "real_ms": 3070.5999999940395,
+        "time": 253.67499999998748,
+        "cycle": 1.6681,
+        "day": false,
+        "nights": 3,
+        "dayLen": 62,
+        "nightLen": 32,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 4,
+        "enemies": 3,
+        "paused": false,
+        "over": false,
+        "player": {
+          "x": 378,
+          "y": 380.5724417470324,
+          "dir": 0,
+          "mana": 8
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "toast": "第 3 夜 · 第 1/4 波来了！",
+        "visible": true,
+        "complete": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        },
+        "timeline": [
+          {
+            "text": "第 3 夜：金色立方来了，共 4 波。它更肉，站在墙后打。",
+            "visible": true,
+            "real_ms": 1402.5999999940395,
+            "frame_seconds": 1.1841999999999997,
+            "time": 252.00689999998772,
+            "cycle": 0,
+            "day": false,
+            "nights": 3,
+            "wave": 0,
+            "wavesTotal": 4,
+            "toSpawn": 0,
+            "paused": false
+          },
+          {
+            "text": "第 3 夜 · 第 1/4 波来了！",
+            "visible": true,
+            "real_ms": 1417.4000000059605,
+            "frame_seconds": 1.2008999999999996,
+            "time": 252.0235999999877,
+            "cycle": 0.016700000000000045,
+            "day": false,
+            "nights": 3,
+            "wave": 1,
+            "wavesTotal": 4,
+            "toSpawn": 7,
+            "paused": false
+          }
+        ],
+        "pausedFrames": 0
+      },
+      "native_inputs": [
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up (WebKit hold fallback)",
+          "start": {
+            "real_ms": 1509.9000000059605,
+            "game_seconds": 252.10699999998766
+          },
+          "end": {
+            "real_ms": 1856.800000011921,
+            "game_seconds": 252.4572999999875
+          }
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up (WebKit hold fallback)",
+          "start": {
+            "real_ms": 1858.699999988079,
+            "game_seconds": 252.4572999999875
+          },
+          "end": {
+            "real_ms": 1868.9000000059605,
+            "game_seconds": 252.4738999999875
+          }
+        }
+      ],
+      "pause_frames": 0
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "dusk": {
+        "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "real_ms": 2516.300000011921,
+        "frame_seconds": 1.1842999999999997,
+        "time": 252.01409999998782,
+        "cycle": 0,
+        "day": false,
+        "nights": 3,
+        "wave": 0,
+        "wavesTotal": 4,
+        "toSpawn": 0,
+        "paused": false
+      },
+      "first_wave": {
+        "text": "第3夜·第1/4波来了！面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "real_ms": 2531.5,
+        "frame_seconds": 1.201,
+        "time": 252.0307999999878,
+        "cycle": 0.01669999999999982,
+        "day": false,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 7,
+        "paused": false
+      },
+      "dusk_to_wave_game_seconds": 0.01669999999998595,
+      "dusk_to_wave_wall_ms": 15.199999988079071,
+      "first_wave_frame_budget_seconds": 2.3853000000000004,
+      "first_wave_wall_seconds": 2.3852000000178815,
+      "warning_in_first_wave": true,
+      "late_readable": {
+        "real_ms": 4185,
+        "time": 253.68219999998783,
+        "cycle": 1.6680999999999993,
+        "day": false,
+        "nights": 3,
+        "dayLen": 62,
+        "nightLen": 32,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 4,
+        "enemies": 3,
+        "paused": false,
+        "over": false,
+        "player": {
+          "x": 378,
+          "y": 381.54458597845155,
+          "dir": 0,
+          "mana": 8
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "toast": "第3夜·第1/4波来了！面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "complete": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 308,
+          "height": 184.796875
+        },
+        "timeline": [
+          {
+            "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+            "visible": true,
+            "real_ms": 2516.300000011921,
+            "frame_seconds": 1.1842999999999997,
+            "time": 252.01409999998782,
+            "cycle": 0,
+            "day": false,
+            "nights": 3,
+            "wave": 0,
+            "wavesTotal": 4,
+            "toSpawn": 0,
+            "paused": false
+          },
+          {
+            "text": "第3夜·第1/4波来了！面朝怪打；朝墙会拆墙。",
+            "visible": true,
+            "real_ms": 2531.5,
+            "frame_seconds": 1.201,
+            "time": 252.0307999999878,
+            "cycle": 0.01669999999999982,
+            "day": false,
+            "nights": 3,
+            "wave": 1,
+            "wavesTotal": 4,
+            "toSpawn": 7,
+            "paused": false
+          }
+        ],
+        "pausedFrames": 0
+      },
+      "native_inputs": [
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 2586,
+            "game_seconds": 252.08079999998782
+          },
+          "end": {
+            "real_ms": 2969.300000011921,
+            "game_seconds": 252.46449999998788
+          }
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 2971.2000000178814,
+            "game_seconds": 252.46449999998788
+          },
+          "end": {
+            "real_ms": 3018.5,
+            "game_seconds": 252.5144999999879
+          }
+        }
+      ],
+      "pause_frames": 0
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dusk": {
+        "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "real_ms": 1927.5999999940395,
+        "frame_seconds": 1.1841999999999997,
+        "time": 252.01349999999968,
+        "cycle": 0,
+        "day": false,
+        "nights": 3,
+        "wave": 0,
+        "wavesTotal": 4,
+        "toSpawn": 0,
+        "paused": false
+      },
+      "first_wave": {
+        "text": "第3夜·第1/4波来了！面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "real_ms": 1943.0999999940395,
+        "frame_seconds": 1.2009999999999996,
+        "time": 252.0300999999997,
+        "cycle": 0.01659999999999991,
+        "day": false,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 7,
+        "paused": false
+      },
+      "dusk_to_wave_game_seconds": 0.01660000000001105,
+      "dusk_to_wave_wall_ms": 15.5,
+      "first_wave_frame_budget_seconds": 2.385299999999999,
+      "first_wave_wall_seconds": 2.384800000011921,
+      "warning_in_first_wave": true,
+      "late_readable": {
+        "real_ms": 3595.5999999940395,
+        "time": 253.68139999999974,
+        "cycle": 1.6678999999999995,
+        "day": false,
+        "nights": 3,
+        "dayLen": 62,
+        "nightLen": 32,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 4,
+        "enemies": 3,
+        "paused": false,
+        "over": false,
+        "player": {
+          "x": 378,
+          "y": 381.5413392569412,
+          "dir": 0,
+          "mana": 8
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "toast": "第3夜·第1/4波来了！面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "complete": true,
+        "held": 0,
+        "canvas": {
+          "x": 6,
+          "y": 95,
+          "width": 378,
+          "height": 226.796875
+        },
+        "timeline": [
+          {
+            "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+            "visible": true,
+            "real_ms": 1927.5999999940395,
+            "frame_seconds": 1.1841999999999997,
+            "time": 252.01349999999968,
+            "cycle": 0,
+            "day": false,
+            "nights": 3,
+            "wave": 0,
+            "wavesTotal": 4,
+            "toSpawn": 0,
+            "paused": false
+          },
+          {
+            "text": "第3夜·第1/4波来了！面朝怪打；朝墙会拆墙。",
+            "visible": true,
+            "real_ms": 1943.0999999940395,
+            "frame_seconds": 1.2009999999999996,
+            "time": 252.0300999999997,
+            "cycle": 0.01659999999999991,
+            "day": false,
+            "nights": 3,
+            "wave": 1,
+            "wavesTotal": 4,
+            "toSpawn": 7,
+            "paused": false
+          }
+        ],
+        "pausedFrames": 0
+      },
+      "native_inputs": [
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 1999.199999988079,
+            "game_seconds": 252.08019999999968
+          },
+          "end": {
+            "real_ms": 2379.7999999821186,
+            "game_seconds": 252.46389999999974
+          }
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 2381.5999999940395,
+            "game_seconds": 252.46389999999974
+          },
+          "end": {
+            "real_ms": 2428.9000000059605,
+            "game_seconds": 252.51379999999975
+          }
+        }
+      ],
+      "pause_frames": 0
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "dusk": {
+        "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "real_ms": 3845.2999999821186,
+        "frame_seconds": 1.1843999999999995,
+        "time": 252.013899999994,
+        "cycle": 0,
+        "day": false,
+        "nights": 3,
+        "wave": 0,
+        "wavesTotal": 4,
+        "toSpawn": 0,
+        "paused": false
+      },
+      "first_wave": {
+        "text": "第3夜·第1/4波来了！面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "real_ms": 3860.2999999821186,
+        "frame_seconds": 1.2009999999999998,
+        "time": 252.03049999999402,
+        "cycle": 0.01659999999999991,
+        "day": false,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 7,
+        "paused": false
+      },
+      "dusk_to_wave_game_seconds": 0.01660000000001105,
+      "dusk_to_wave_wall_ms": 15,
+      "first_wave_frame_budget_seconds": 2.3854000000000006,
+      "first_wave_wall_seconds": 2.3849000000059606,
+      "warning_in_first_wave": true,
+      "late_readable": {
+        "real_ms": 5512.5,
+        "time": 253.68189999999393,
+        "cycle": 1.667999999999999,
+        "day": false,
+        "nights": 3,
+        "dayLen": 62,
+        "nightLen": 32,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 4,
+        "enemies": 3,
+        "paused": false,
+        "over": false,
+        "player": {
+          "x": 378,
+          "y": 381.5390122005333,
+          "dir": 0,
+          "mana": 8
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "toast": "第3夜·第1/4波来了！面朝怪打；朝墙会拆墙。",
+        "visible": true,
+        "complete": true,
+        "held": 0,
+        "canvas": {
+          "x": 109.328125,
+          "y": 69,
+          "width": 333.328125,
+          "height": 199.984375
+        },
+        "timeline": [
+          {
+            "text": "第3夜：金色立方，共4波。面朝怪打；朝墙会拆墙。",
+            "visible": true,
+            "real_ms": 3845.2999999821186,
+            "frame_seconds": 1.1843999999999995,
+            "time": 252.013899999994,
+            "cycle": 0,
+            "day": false,
+            "nights": 3,
+            "wave": 0,
+            "wavesTotal": 4,
+            "toSpawn": 0,
+            "paused": false
+          },
+          {
+            "text": "第3夜·第1/4波来了！面朝怪打；朝墙会拆墙。",
+            "visible": true,
+            "real_ms": 3860.2999999821186,
+            "frame_seconds": 1.2009999999999998,
+            "time": 252.03049999999402,
+            "cycle": 0.01659999999999991,
+            "day": false,
+            "nights": 3,
+            "wave": 1,
+            "wavesTotal": 4,
+            "toSpawn": 7,
+            "paused": false
+          }
+        ],
+        "pausedFrames": 0
+      },
+      "native_inputs": [
+        {
+          "action": "ArrowDown",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 3915.5999999940395,
+            "game_seconds": 252.080699999994
+          },
+          "end": {
+            "real_ms": 4297,
+            "game_seconds": 252.46419999999407
+          }
+        },
+        {
+          "action": "Space",
+          "type": "native touch hold/release",
+          "start": {
+            "real_ms": 4298.9000000059605,
+            "game_seconds": 252.46419999999407
+          },
+          "end": {
+            "real_ms": 4346.4000000059605,
+            "game_seconds": 252.51429999999402
+          }
+        }
+      ],
+      "pause_frames": 0
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "dusk": {
+        "text": "第 3 夜：金色立方来了，共 4 波。它更肉，站在墙后打。",
+        "visible": true,
+        "real_ms": 1373.199999988079,
+        "frame_seconds": 1.1844000000000003,
+        "time": 252.00780000001157,
+        "cycle": 0,
+        "day": false,
+        "nights": 3,
+        "wave": 0,
+        "wavesTotal": 4,
+        "toSpawn": 0,
+        "paused": false
+      },
+      "first_wave": {
+        "text": "第 3 夜 · 第 1/4 波来了！",
+        "visible": true,
+        "real_ms": 1388,
+        "frame_seconds": 1.2010000000000003,
+        "time": 252.02450000001156,
+        "cycle": 0.016700000000000045,
+        "day": false,
+        "nights": 3,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 7,
+        "paused": false
+      },
+      "dusk_to_wave_game_seconds": 0.01669999999998595,
+      "dusk_to_wave_wall_ms": 14.800000011920929,
+      "first_wave_frame_budget_seconds": 2.385399999999996,
+      "first_wave_wall_seconds": 2.385,
+      "warning_in_first_wave": false,
+      "late_readable": {
+        "real_ms": 3040.0999999940395,
+        "time": 253.67590000001132,
+        "cycle": 1.6681,
+        "day": false,
+        "nights": 3,
+        "dayLen": 62,
+        "nightLen": 32,
+        "wave": 1,
+        "wavesTotal": 4,
+        "toSpawn": 4,
+        "enemies": 3,
+        "paused": false,
+        "over": false,
+        "player": {
+          "x": 378,
+          "y": 380.57537223737563,
+          "dir": 0,
+          "mana": 8
+        },
+        "inv": {
+          "wood": 4,
+          "stone": 0,
+          "gold": 0,
+          "wheat": 0,
+          "seed": 2,
+          "fence": 0,
+          "torch": 1,
+          "plot": 0,
+          "heart": 0
+        },
+        "wall": 12,
+        "gaps": [
+          [
+            22,
+            20
+          ],
+          [
+            21,
+            21
+          ],
+          [
+            23,
+            21
+          ]
+        ],
+        "toast": "第 3 夜 · 第 1/4 波来了！",
+        "visible": true,
+        "complete": true,
+        "held": 0,
+        "canvas": {
+          "x": 96,
+          "y": 109,
+          "width": 796,
+          "height": 477.59375
+        },
+        "timeline": [
+          {
+            "text": "第 3 夜：金色立方来了，共 4 波。它更肉，站在墙后打。",
+            "visible": true,
+            "real_ms": 1373.199999988079,
+            "frame_seconds": 1.1844000000000003,
+            "time": 252.00780000001157,
+            "cycle": 0,
+            "day": false,
+            "nights": 3,
+            "wave": 0,
+            "wavesTotal": 4,
+            "toSpawn": 0,
+            "paused": false
+          },
+          {
+            "text": "第 3 夜 · 第 1/4 波来了！",
+            "visible": true,
+            "real_ms": 1388,
+            "frame_seconds": 1.2010000000000003,
+            "time": 252.02450000001156,
+            "cycle": 0.016700000000000045,
+            "day": false,
+            "nights": 3,
+            "wave": 1,
+            "wavesTotal": 4,
+            "toSpawn": 7,
+            "paused": false
+          }
+        ],
+        "pausedFrames": 0
+      },
+      "native_inputs": [
+        {
+          "action": "ArrowDown",
+          "type": "native keyboard down/up (WebKit hold fallback)",
+          "start": {
+            "real_ms": 1458.0999999940395,
+            "game_seconds": 252.09130000001153
+          },
+          "end": {
+            "real_ms": 1809.8999999761581,
+            "game_seconds": 252.44180000001137
+          }
+        },
+        {
+          "action": "Space",
+          "type": "native keyboard down/up (WebKit hold fallback)",
+          "start": {
+            "real_ms": 1812.3999999761581,
+            "game_seconds": 252.44180000001137
+          },
+          "end": {
+            "real_ms": 1823.8999999761581,
+            "game_seconds": 252.45820000001137
+          }
+        }
+      ],
+      "pause_frames": 0
+    }
+  ]
+}

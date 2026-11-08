@@ -1,0 +1,40 @@
+UI-032 LOCAL CHECKS
+Product: only beginWave text for touchLayout.matches && nights>=3 && wave===1.
+Original 2.4s toast budget, wave/spawn assignments and gameplay/input rules unchanged.
+Capture source: HEAD 5d9342c; after product dirty=true, SHA256
+83c64262cdb601a3500b4a76edb7a451d048e6874ba08c056f85008df410aad3.
+
+Chromium before8/after8 PASS: before-final.log / after.log.
+Primary320/390/844 touch,1280 desktop; night4 positive, night1/2 and wave2 negative.
+One explicit pre-dusk fixture write; thereafter no game-state writes/pause.
+Normal transition: game250.8 to third dusk~252; wave1 next frame, toSpawn7, nightLen32.
+Warning real lifespan after: 320=2.3852s,390=2.3848s,844=2.3849s.
+After >=1.65s and native movement/cast: same complete visible toast.
+Original walls and building stock unchanged; held=0; pausedFrames=0.
+Original PNG32 PASS: index-check.log, validation.json, timing.json.
+Coverage PASS: recorded172/172 baseline,305 history,875 supplemental.
+This reuses unchanged recorded UI; not a new-build full-matrix capture.
+Old UI metadata and protected natural diagnostic byte hash unchanged: preservation.log.
+PR25-28 remain OPEN at52195fc/af3a311/a14c080/5d9342c: protected-pr*.log.
+
+Syntax and STATIC_OK: original local gate/static.log; final syntax audit logged separately.
+Complete Windows WebKit PASS: e2e-final.log, E2E_OK,
+FIRST_NIGHT_GUIDANCE_OK night1/2/3/4 and THIRD_NIGHT_WAVE_WINDOW_OK after8.
+Full suite rerun only adds read-only native key/focus/toggle logging via input-probe.mjs --full.
+All existing/new assertions retained; no extended timeout or skipped gate.
+Initial full suite FAILED in unchanged legacy first-night390 Space demolition,
+first-night-guidance.mjs:83/219: e2e.log. Setup wall12,paused=false,details=false.
+Separate read-only native input probe passed all4: input-probe.log.
+Observed successful390 close toggle at365ms, Space down368ms; failed-run event ordering
+not captured, so a toggle/resetInput race is NOT established or claimed fixed.
+Original failure retained; no unrelated product/input patch.
+Initial before runner failed before PNG because intro button was smaller than44px:
+before.log. Only runner positioning now respects existing height; core controls still44px.
+
+Independent code reviewer: no significant issues, review.log.
+Visual status: originals supplied; pending user/coordinator review, not auto-approved.
+Not a complete natural three-night run or physical-device validation.
+Own TEMP/TMP/TMPDIR/profile/caches verified D:\.tmp\agents\cube-epoch\<owned-run>.
+Existing C browser installation read-only, no install. Exact owned roots removed after browser exit.
+No main merge, Pages/Tencent publication or server change.
+Post-push same-SHA CI recorded separately; not included in capture source metadata.
