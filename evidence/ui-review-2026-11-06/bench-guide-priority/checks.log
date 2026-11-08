@@ -1,0 +1,44 @@
+UI-034: ready workbench guidance alignment
+
+Reproduction: fixed third-dawn prerequisite, tutorial retained, heart=0,
+wood=4 stone=5 gold=3 wheat=3, camp east wall missing.
+Before: objective points to bench while tutorial/target/drawn yellow gap/dawn
+toast still request wall repair. Native touch can already craft and offer.
+After: only guidance priority and automatic gap highlight are aligned.
+Actual craft/offer eligibility, costs, walls, input, timing and saves unchanged.
+
+PASS before-final.log: 15 cases, 28 original screenshots.
+PASS after.log: 15 workbench cases plus original 11 altar cases.
+PASS static.log: node --check game.js; node tests/static.mjs.
+PASS review.log: independent code review, no significant findings.
+PASS index-check.log: 56 current screenshots plus 3 historical partial captures.
+PASS preservation.log: prior root index data and protected diagnostic preserved.
+PASS coverage.log: existing coverage reused; not a new full-matrix capture.
+
+e2e.log: first full plain Windows WebKit run FAILED in unchanged first-night
+390 re-placement tapWall wait. Both altar 11 and workbench 15 cases passed
+before that failure. Failure cause was not established; no input/timeout
+or first-night rule was changed.
+e2e-final.log: original complete assertions rerun with read-only native
+key/pointer/toggle observation PASS / E2E_OK. Original altar 11, new bench 15,
+first-night night1/2/3/4 and third-night wave window 8 all passed.
+This successful rerun does not establish or fix the first failure's cause.
+Original assertions, input and timeout budgets were retained.
+
+Historical before.log: initial executor incorrectly assumed bench location
+and moved right/down. Original map bench=392,312 and altar=392,104 verified;
+executor corrected to original northbound path. Product/map not altered,
+timeouts not extended and assertions not skipped. Three partial images retained.
+
+Successful paths: native touch 320/390/844; desktop keyboard/mouse 1280.
+Original recipe charged exactly 4 wood, 5 stone, 3 gold, 3 wheat;
+heart 0->1->0, exactly two native interactions, victory.
+Stock fences/seeds and walls unchanged. Explicit manual fence selection retains
+gap feedback and original stored-fence-first / knight 1-wood cost.
+WebKit sustained movement uses documented keyboard fallback, interactions tap.
+
+Fixed prerequisite is NOT a complete natural three-night playthrough.
+No physical Android/iOS, operating-system gestures or safe-area validation.
+Visual review remains pending user/coordinator; automated checks are not approval.
+No merge, Pages, Tencent Cloud publication or server change.
+Dedicated D-drive environment and per-run process cleanup logs retained.

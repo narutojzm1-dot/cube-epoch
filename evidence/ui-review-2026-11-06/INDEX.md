@@ -383,6 +383,12 @@
 
 本片[逐图 INDEX](altar-guide-priority/INDEX.md)、[screenshots.json](altar-guide-priority/screenshots.json)、[validation.json](altar-guide-priority/validation.json)：40张当前320/390/844/1280前后原图、4张初次部分取证历史；明示第三黎明前置，原土路真实走近，一次交互扣心到正常胜利，不是完整自然三夜跑，视觉待用户/协调审查。
 
+## UI-034 三夜后备齐材料的工作台指引
+
+心0、原配方木4石5金3麦3齐全且营地缺墙1，顶部目标工作台而教程/地图仍补墙。仅对齐三夜后白天已备齐的工作台提示与自动缺口，已有心祭坛优先、主动建墙/缺料/前两夜/夜间照旧。
+
+[本片 INDEX](bench-guide-priority/INDEX.md)、[screenshots.json](bench-guide-priority/screenshots.json)、[validation.json](bench-guide-priority/validation.json)：56张当前320/390/844/1280同态前后图，另3张初次部分历史；固定第三黎明前置，真实沿原土路到工作台一次扣原配方，再到祭坛一次扣心胜利。不是自然三夜通关，视觉待用户/协调审查。
+
 ## 不适用 / 未覆盖
 
 - 无英文切换、账号/存档页、独立设置面板、空列表界面；不得用伪造界面代替。

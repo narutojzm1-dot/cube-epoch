@@ -1,0 +1,22 @@
+2026-11-08T09:02:20.039Z pw:browser <launching> C:\Users\jiangzengming\AppData\Local\ms-playwright\chromium-1234\chrome-win64\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=D:\.tmp\agents\cube-epoch\bench-guide-before-697951d5a5da4836aeeedca75706d858\tmp\playwright_chromiumdev_profile-HFieoR --remote-debugging-pipe --no-startup-window
+2026-11-08T09:02:20.045Z pw:browser <launched> pid=95824
+2026-11-08T09:02:23.757Z pw:browser [pid=95824][err] [95824:85964:1108/170223.756:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+2026-11-08T09:02:47.545Z pw:browser [pid=95824][err] [95824:85964:1108/170247.545:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+2026-11-08T09:02:54.813Z pw:browser [pid=95824] <gracefully close start>
+2026-11-08T09:02:54.948Z pw:browser [pid=95824] <process did exit: exitCode=0, signal=null>
+2026-11-08T09:02:54.948Z pw:browser [pid=95824] starting temporary directories cleanup
+2026-11-08T09:02:54.956Z pw:browser [pid=95824] finished temporary directories cleanup
+2026-11-08T09:02:54.956Z pw:browser [pid=95824] <gracefully close end>
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 30000ms exceeded.
+    at moveUntil (D:\work\projects\cube-epoch\tests\altar-guide-priority.mjs:171:26)
+    at async testAltarGuidePriority (D:\work\projects\cube-epoch\tests\altar-guide-priority.mjs:199:9)
+    at async file:///D:/work/projects/cube-epoch/tests/altar-guide-priority.mjs:298:9 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.1

@@ -463,6 +463,7 @@ await testBuildGuidance(browser, origin);
 await testBuildCombatFeedback(browser, origin);
 await testAltarArrival(browser, origin);
 await testAltarGuidePriority(browser, origin);
+await testAltarGuidePriority(browser, origin, { craftingReady: true });
 await testVictoryRestart(browser, origin);
 await testTouchTitle(browser, origin);
 await testFirstWoodToast(browser, origin);
